@@ -1,0 +1,147 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Galatee.Structure
+{
+    public class CsGL_Interface
+    {
+        public string STATUS { get; set; }
+        public Nullable<long> LEDGER_ID { get; set; }
+        public System.DateTime ACCOUNTING_DATE { get; set; }
+        public string CURRENCY_CODE { get; set; }
+        public System.DateTime DATE_CREATED { get; set; }
+        public long CREATED_BY { get; set; }
+        public string ACTUAL_FLAG { get; set; }
+        public string USER_JE_CATEGORY_NAME { get; set; }
+        public string USER_JE_SOURCE_NAME { get; set; }
+        public Nullable<System.DateTime> CURRENCY_CONVERSION_DATE { get; set; }
+        public Nullable<decimal> ENCUMBRANCE_TYPE_ID { get; set; }
+        public Nullable<decimal> BUDGET_VERSION_ID { get; set; }
+        public string USER_CURRENCY_CONVERSION_TYPE { get; set; }
+        public Nullable<decimal> CURRENCY_CONVERSION_RATE { get; set; }
+        public string AVERAGE_JOURNAL_FLAG { get; set; }
+        public string ORIGINATING_BAL_SEG_VALUE { get; set; }
+        public string SEGMENT1 { get; set; }
+        public string SEGMENT2 { get; set; }
+        public string SEGMENT3 { get; set; }
+        public string SEGMENT4 { get; set; }
+        public string SEGMENT5 { get; set; }
+        public string SEGMENT6 { get; set; }
+        public string SEGMENT7 { get; set; }
+        public string SEGMENT8 { get; set; }
+        public string SEGMENT9 { get; set; }
+        public string SEGMENT10 { get; set; }
+        public string SEGMENT11 { get; set; }
+        public string SEGMENT12 { get; set; }
+        public string SEGMENT13 { get; set; }
+        public string SEGMENT14 { get; set; }
+        public string SEGMENT15 { get; set; }
+        public string SEGMENT16 { get; set; }
+        public string SEGMENT17 { get; set; }
+        public string SEGMENT18 { get; set; }
+        public string SEGMENT19 { get; set; }
+        public string SEGMENT20 { get; set; }
+        public string SEGMENT21 { get; set; }
+        public string SEGMENT22 { get; set; }
+        public string SEGMENT23 { get; set; }
+        public string SEGMENT24 { get; set; }
+        public string SEGMENT25 { get; set; }
+        public string SEGMENT26 { get; set; }
+        public string SEGMENT27 { get; set; }
+        public string SEGMENT28 { get; set; }
+        public string SEGMENT29 { get; set; }
+        public string SEGMENT30 { get; set; }
+        public Nullable<decimal> ENTERED_DR { get; set; }
+        public Nullable<decimal> ENTERED_CR { get; set; }
+        public Nullable<decimal> ACCOUNTED_DR { get; set; }
+        public Nullable<decimal> ACCOUNTED_CR { get; set; }
+        public Nullable<System.DateTime> TRANSACTION_DATE { get; set; }
+        public string REFERENCE1 { get; set; }
+        public string REFERENCE2 { get; set; }
+        public string REFERENCE3 { get; set; }
+        public string REFERENCE4 { get; set; }
+        public string REFERENCE5 { get; set; }
+        public string REFERENCE6 { get; set; }
+        public string REFERENCE7 { get; set; }
+        public string REFERENCE8 { get; set; }
+        public string REFERENCE9 { get; set; }
+        public string REFERENCE10 { get; set; }
+        public string REFERENCE11 { get; set; }
+        public string REFERENCE12 { get; set; }
+        public string REFERENCE13 { get; set; }
+        public string REFERENCE14 { get; set; }
+        public string REFERENCE15 { get; set; }
+        public string REFERENCE16 { get; set; }
+        public string REFERENCE17 { get; set; }
+        public string REFERENCE18 { get; set; }
+        public string REFERENCE19 { get; set; }
+        public string REFERENCE20 { get; set; }
+        public string REFERENCE21 { get; set; }
+        public string REFERENCE22 { get; set; }
+        public string REFERENCE23 { get; set; }
+        public string REFERENCE24 { get; set; }
+        public string REFERENCE25 { get; set; }
+        public string REFERENCE26 { get; set; }
+        public string REFERENCE27 { get; set; }
+        public string REFERENCE28 { get; set; }
+        public string REFERENCE29 { get; set; }
+        public string REFERENCE30 { get; set; }
+        public Nullable<long> JE_BATCH_ID { get; set; }
+        public string PERIOD_NAME { get; set; }
+        public Nullable<long> JE_HEADER_ID { get; set; }
+        public Nullable<long> JE_LINE_NUM { get; set; }
+        public Nullable<long> CHART_OF_ACCOUNTS_ID { get; set; }
+        public string FUNCTIONAL_CURRENCY_CODE { get; set; }
+        public Nullable<long> CODE_COMBINATION_ID { get; set; }
+        public Nullable<System.DateTime> DATE_CREATED_IN_GL { get; set; }
+        public string WARNING_CODE { get; set; }
+        public string STATUS_DESCRIPTION { get; set; }
+        public Nullable<decimal> STAT_AMOUNT { get; set; }
+        public Nullable<long> GROUP_ID { get; set; }
+        public Nullable<long> REQUEST_ID { get; set; }
+        public Nullable<decimal> SUBLEDGER_DOC_SEQUENCE_ID { get; set; }
+        public Nullable<decimal> SUBLEDGER_DOC_SEQUENCE_VALUE { get; set; }
+        public string ATTRIBUTE1 { get; set; }
+        public string ATTRIBUTE2 { get; set; }
+        public Nullable<decimal> GL_SL_LINK_ID { get; set; }
+        public string GL_SL_LINK_TABLE { get; set; }
+        public string ATTRIBUTE3 { get; set; }
+        public string ATTRIBUTE4 { get; set; }
+        public string ATTRIBUTE5 { get; set; }
+        public string ATTRIBUTE6 { get; set; }
+        public string ATTRIBUTE7 { get; set; }
+        public string ATTRIBUTE8 { get; set; }
+        public string ATTRIBUTE9 { get; set; }
+        public string ATTRIBUTE10 { get; set; }
+        public string ATTRIBUTE11 { get; set; }
+        public string ATTRIBUTE12 { get; set; }
+        public string ATTRIBUTE13 { get; set; }
+        public string ATTRIBUTE14 { get; set; }
+        public string ATTRIBUTE15 { get; set; }
+        public string ATTRIBUTE16 { get; set; }
+        public string ATTRIBUTE17 { get; set; }
+        public string ATTRIBUTE18 { get; set; }
+        public string ATTRIBUTE19 { get; set; }
+        public string ATTRIBUTE20 { get; set; }
+        public string CONTEXT { get; set; }
+        public string CONTEXT2 { get; set; }
+        public Nullable<System.DateTime> INVOICE_DATE { get; set; }
+        public string TAX_CODE { get; set; }
+        public string INVOICE_IDENTIFIER { get; set; }
+        public Nullable<decimal> INVOICE_AMOUNT { get; set; }
+        public string CONTEXT3 { get; set; }
+        public string USSGL_TRANSACTION_CODE { get; set; }
+        public string DESCR_FLEX_ERROR_MESSAGE { get; set; }
+        public string JGZZ_RECON_REF { get; set; }
+        public Nullable<System.DateTime> REFERENCE_DATE { get; set; }
+        public Nullable<long> SET_OF_BOOKS_ID { get; set; }
+        public string BALANCING_SEGMENT_VALUE { get; set; }
+        public string MANAGEMENT_SEGMENT_VALUE { get; set; }
+        public string FUNDS_RESERVED_FLAG { get; set; }
+        public Nullable<long> CODE_COMBINATION_ID_INTERIM { get; set; }
+    }
+}

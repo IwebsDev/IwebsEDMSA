@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d8d452fd-1436-46ea-a7ce-31d121413257" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1818/SIG/SigService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SigService.xsd" MetadataType="Schema" ID="c5f741c3-4c42-4a08-a58e-34eb9740869b" SourceId="1" SourceUrl="http://localhost:1818/SIG/SigService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SigService1.xsd" MetadataType="Schema" ID="5e856f45-3f96-41d6-8eb2-fee30a53fae6" SourceId="1" SourceUrl="http://localhost:1818/SIG/SigService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SigService2.xsd" MetadataType="Schema" ID="6b922125-cd5a-47c8-a3e5-6d344235a270" SourceId="1" SourceUrl="http://localhost:1818/SIG/SigService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SigService.disco" MetadataType="Disco" ID="3fa65273-3566-48c6-bf89-8c64830eedf8" SourceId="1" SourceUrl="http://localhost:1818/SIG/SigService.svc?disco" />
+    <MetadataFile FileName="SigService.wsdl" MetadataType="Wsdl" ID="4c21e38d-11c7-4b3e-9443-189ef8f97836" SourceId="1" SourceUrl="http://localhost:1818/SIG/SigService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,37 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Workflow.UcWKFSelectEtape"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           Width="562.541" Height="337.961" 
+           Title="Selectionner une étape pour affecter la demande" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <sc:GroupBox Header="Liste des élements de la base de données" FontSize="12" x:Name="Gbo_ListeDevis" IsEnabled="True" VerticalAlignment="Stretch" >
+            <Grid>
+                <sdk:DataGrid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False" x:Name="dtgrdParametre"
+                          ItemsSource="{Binding DonnesDatagrid}" ScrollViewer.HorizontalScrollBarVisibility="Visible" AllowDrop="False" 
+                          DataContext="{Binding}" SelectionMode="Extended" SelectionChanged="dtgrdParametre_SelectionChanged" LoadingRow="dtgrdParametre_LoadingRow" Margin="0,0,0,51">
+                    <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Binding="{Binding ORDRE, Mode=TwoWay}" Header="Ordre" Width="Auto" IsReadOnly="True" />
+                        <sdk:DataGridTextColumn Binding="{Binding LIBELLEETAPE, Mode=TwoWay}" Header="Nom de l'étape" Width="Auto" IsReadOnly="True" />
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+                <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,160,0,0" VerticalAlignment="Top" Width="85" Content="Justificatifs : "/>
+                <TextBox x:Name="TxtJustificatif" HorizontalAlignment="Left" Height="28" Margin="100,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="413" Background="LightBlue" TextChanged="TxtJustificatif_TextChanged" />
+
+            </Grid>
+        </sc:GroupBox>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" IsEnabled="False" Content="Valider" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="120,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" IsIndeterminate="True"/>
+        <sdk:Label x:Name="LblChargement" Content="Action en cours ..." HorizontalAlignment="Left" Height="19" Grid.Row="1" VerticalAlignment="Top" Width="120" Margin="0,11,0,0"/>
+    </Grid>
+</controls:ChildWindow>

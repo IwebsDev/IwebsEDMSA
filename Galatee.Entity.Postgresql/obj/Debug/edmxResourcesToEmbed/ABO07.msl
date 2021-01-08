@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABO07ModelStoreContainer" CdmEntityContainer="ABO07Entities">
+    <EntitySetMapping Name="CENTFAC">
+      <EntityTypeMapping TypeName="ABO07Model.CENTFAC">
+        <MappingFragment StoreEntitySet="CENTFAC">
+          <ScalarProperty Name="LOTRI" ColumnName="LOTRI" />
+          <ScalarProperty Name="JET" ColumnName="JET" />
+          <ScalarProperty Name="CENTRE" ColumnName="CENTRE" />
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="ORDRE" ColumnName="ORDRE" />
+          <ScalarProperty Name="DENABON" ColumnName="DENABON" />
+          <ScalarProperty Name="NOMABON" ColumnName="NOMABON" />
+          <ScalarProperty Name="DENMAND" ColumnName="DENMAND" />
+          <ScalarProperty Name="NOMMAND" ColumnName="NOMMAND" />
+          <ScalarProperty Name="ADRMAND1" ColumnName="ADRMAND1" />
+          <ScalarProperty Name="ADRMAND2" ColumnName="ADRMAND2" />
+          <ScalarProperty Name="CPOS" ColumnName="CPOS" />
+          <ScalarProperty Name="BUREAU" ColumnName="BUREAU" />
+          <ScalarProperty Name="BANQUE" ColumnName="BANQUE" />
+          <ScalarProperty Name="GUICHET" ColumnName="GUICHET" />
+          <ScalarProperty Name="COMPTE" ColumnName="COMPTE" />
+          <ScalarProperty Name="RIB" ColumnName="RIB" />
+          <ScalarProperty Name="CODCONSO" ColumnName="CODCONSO" />
+          <ScalarProperty Name="CATEGORIECLIENT" ColumnName="CATEGORIECLIENT" />
+          <ScalarProperty Name="REGROUPEMENT" ColumnName="REGROUPEMENT" />
+          <ScalarProperty Name="REGEDIT" ColumnName="REGEDIT" />
+          <ScalarProperty Name="AG" ColumnName="AG" />
+          <ScalarProperty Name="COMMUNE" ColumnName="COMMUNE" />
+          <ScalarProperty Name="QUARTIER" ColumnName="QUARTIER" />
+          <ScalarProperty Name="RUE" ColumnName="RUE" />
+          <ScalarProperty Name="NOMRUE" ColumnName="NOMRUE" />
+          <ScalarProperty Name="NUMRUE" ColumnName="NUMRUE" />
+          <ScalarProperty Name="COMPRUE" ColumnName="COMPRUE" />
+          <ScalarProperty Name="ETAGE" ColumnName="ETAGE" />
+          <ScalarProperty Name="PORTE" ColumnName="PORTE" />
+          <ScalarProperty Name="CADR" ColumnName="CADR" />
+          <ScalarProperty Name="TOURNEE" ColumnName="TOURNEE" />
+          <ScalarProperty Name="ORDTOUR" ColumnName="ORDTOUR" />
+          <ScalarProperty Name="NBFAC" ColumnName="NBFAC" />
+          <ScalarProperty Name="FACTURE" ColumnName="FACTURE" />
+          <ScalarProperty Name="MES" ColumnName="MES" />
+          <ScalarProperty Name="TOTFHT" ColumnName="TOTFHT" />
+          <ScalarProperty Name="TOTFTAX" ColumnName="TOTFTAX" />
+          <ScalarProperty Name="TOTFTTC" ColumnName="TOTFTTC" />
+          <ScalarProperty Name="TOPE" ColumnName="TOPE" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="EXIG" ColumnName="EXIG" />
+          <ScalarProperty Name="COPER" ColumnName="COPER" />
+          <ScalarProperty Name="MODEPAIEMENT" ColumnName="MODEPAIEMENT" />
+          <ScalarProperty Name="ANCIENREPORT" ColumnName="ANCIENREPORT" />
+          <ScalarProperty Name="TOTALNONARRONDI" ColumnName="TOTALNONARRONDI" />
+          <ScalarProperty Name="LIENFAC" ColumnName="LIENFAC" />
+          <ScalarProperty Name="SECTEUR" ColumnName="SECTEUR" />
+          <ScalarProperty Name="DRESABON" ColumnName="DRESABON" />
+          <ScalarProperty Name="REFERENCEATM" ColumnName="REFERENCEATM" />
+          <ScalarProperty Name="CODEPROFIL" ColumnName="CODEPROFIL" />
+          <ScalarProperty Name="DFAC" ColumnName="DFAC" />
+          <ScalarProperty Name="USERCREATION" ColumnName="USERCREATION" />
+          <ScalarProperty Name="DATECREATION" ColumnName="DATECREATION" />
+          <ScalarProperty Name="USERMODIFICATION" ColumnName="USERMODIFICATION" />
+          <ScalarProperty Name="DATEMODIFICATION" ColumnName="DATEMODIFICATION" />
+          <ScalarProperty Name="PK_ID" ColumnName="PK_ID" />
+          <ScalarProperty Name="FK_IDCENTRE" ColumnName="FK_IDCENTRE" />
+          <ScalarProperty Name="FK_IDREGROUPEMENT" ColumnName="FK_IDREGROUPEMENT" />
+          <ScalarProperty Name="FK_IDCODECONSOMMATEUR" ColumnName="FK_IDCODECONSOMMATEUR" />
+          <ScalarProperty Name="FK_IDCATEGORIECLIENT" ColumnName="FK_IDCATEGORIECLIENT" />
+          <ScalarProperty Name="FK_IDMODEPAIEMENT" ColumnName="FK_IDMODEPAIEMENT" />
+          <ScalarProperty Name="FK_IDTOURNEE" ColumnName="FK_IDTOURNEE" />
+          <ScalarProperty Name="FK_IDCOMMUNE" ColumnName="FK_IDCOMMUNE" />
+          <ScalarProperty Name="FK_IDCOPER" ColumnName="FK_IDCOPER" />
+          <ScalarProperty Name="FK_IDSECTEUR" ColumnName="FK_IDSECTEUR" />
+          <ScalarProperty Name="FK_IDQUARTIER" ColumnName="FK_IDQUARTIER" />
+          <ScalarProperty Name="FK_IDRUE" ColumnName="FK_IDRUE" />
+          <ScalarProperty Name="ISFACTUREEMAIL" ColumnName="ISFACTUREEMAIL" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ISFACTURESMS" ColumnName="ISFACTURESMS" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="FK_IDCLIENT" ColumnName="FK_IDCLIENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPROFAC">
+      <EntityTypeMapping TypeName="ABO07Model.CPROFAC">
+        <MappingFragment StoreEntitySet="CPROFAC">
+          <ScalarProperty Name="LOTRI" ColumnName="LOTRI" />
+          <ScalarProperty Name="JET" ColumnName="JET" />
+          <ScalarProperty Name="TOURNEE" ColumnName="TOURNEE" />
+          <ScalarProperty Name="ORDTOUR" ColumnName="ORDTOUR" />
+          <ScalarProperty Name="CENTRE" ColumnName="CENTRE" />
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="ORDRE" ColumnName="ORDRE" />
+          <ScalarProperty Name="FACTURE" ColumnName="FACTURE" />
+          <ScalarProperty Name="TYPECOMPTAGE" ColumnName="TYPECOMPTAGE" />
+          <ScalarProperty Name="PRODUIT" ColumnName="PRODUIT" />
+          <ScalarProperty Name="COMPTEUR" ColumnName="COMPTEUR" />
+          <ScalarProperty Name="REGLAGECOMPTEUR" ColumnName="REGLAGECOMPTEUR" />
+          <ScalarProperty Name="COEFLECT" ColumnName="COEFLECT" />
+          <ScalarProperty Name="POINT" ColumnName="POINT" />
+          <ScalarProperty Name="PUISSANCE" ColumnName="PUISSANCE" />
+          <ScalarProperty Name="DERPERF" ColumnName="DERPERF" />
+          <ScalarProperty Name="DERPERFN" ColumnName="DERPERFN" />
+          <ScalarProperty Name="REGCONSO" ColumnName="REGCONSO" />
+          <ScalarProperty Name="REGFAC" ColumnName="REGFAC" />
+          <ScalarProperty Name="TFAC" ColumnName="TFAC" />
+          <ScalarProperty Name="LIENRED" ColumnName="LIENRED" />
+          <ScalarProperty Name="CONSOFAC" ColumnName="CONSOFAC" />
+          <ScalarProperty Name="DATEEVT" ColumnName="DATEEVT" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="AINDEX" ColumnName="AINDEX" />
+          <ScalarProperty Name="NINDEX" ColumnName="NINDEX" />
+          <ScalarProperty Name="CAS" ColumnName="CAS" />
+          <ScalarProperty Name="CONSO" ColumnName="CONSO" />
+          <ScalarProperty Name="TOTPROHT" ColumnName="TOTPROHT" />
+          <ScalarProperty Name="TOTPROTAX" ColumnName="TOTPROTAX" />
+          <ScalarProperty Name="TOTPROTTC" ColumnName="TOTPROTTC" />
+          <ScalarProperty Name="ADERPERF" ColumnName="ADERPERF" />
+          <ScalarProperty Name="ADERPERFN" ColumnName="ADERPERFN" />
+          <ScalarProperty Name="REGIMPUTE" ColumnName="REGIMPUTE" />
+          <ScalarProperty Name="TYPECOMPTEUR" ColumnName="TYPECOMPTEUR" />
+          <ScalarProperty Name="REGROU" ColumnName="REGROU" />
+          <ScalarProperty Name="DEVPRE" ColumnName="DEVPRE" />
+          <ScalarProperty Name="NBREDTOT" ColumnName="NBREDTOT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="LIENFAC" ColumnName="LIENFAC" />
+          <ScalarProperty Name="EVENEMENT" ColumnName="EVENEMENT" />
+          <ScalarProperty Name="TOPANNUL" ColumnName="TOPANNUL" />
+          <ScalarProperty Name="PUISSANCEINSTALLEE" ColumnName="PUISSANCEINSTALLEE" />
+          <ScalarProperty Name="COEFCOMPTAGE" ColumnName="COEFCOMPTAGE" />
+          <ScalarProperty Name="BRANCHEMENT" ColumnName="BRANCHEMENT" />
+          <ScalarProperty Name="COEFK1" ColumnName="COEFK1" />
+          <ScalarProperty Name="COEFK2" ColumnName="COEFK2" />
+          <ScalarProperty Name="PERTESACTIVES" ColumnName="PERTESACTIVES" />
+          <ScalarProperty Name="PERTESREACTIVES" ColumnName="PERTESREACTIVES" />
+          <ScalarProperty Name="COEFFAC" ColumnName="COEFFAC" />
+          <ScalarProperty Name="USERCREATION" ColumnName="USERCREATION" />
+          <ScalarProperty Name="DATECREATION" ColumnName="DATECREATION" />
+          <ScalarProperty Name="USERMODIFICATION" ColumnName="USERMODIFICATION" />
+          <ScalarProperty Name="DATEMODIFICATION" ColumnName="DATEMODIFICATION" />
+          <ScalarProperty Name="PK_ID" ColumnName="PK_ID" />
+          <ScalarProperty Name="FK_IDCENTFAC" ColumnName="FK_IDCENTFAC" />
+          <ScalarProperty Name="FK_IDEVENEMENT" ColumnName="FK_IDEVENEMENT" />
+          <ScalarProperty Name="FK_IDTYPECOMPTEUR" ColumnName="FK_IDTYPECOMPTEUR" />
+          <ScalarProperty Name="FK_IDTYPECOMPTAGE" ColumnName="FK_IDTYPECOMPTAGE" />
+          <ScalarProperty Name="FK_IDREGLAGECOMPTEUR" ColumnName="FK_IDREGLAGECOMPTEUR" />
+          <ScalarProperty Name="FK_IDTOURNEE" ColumnName="FK_IDTOURNEE" />
+          <ScalarProperty Name="FK_IDPRODUIT" ColumnName="FK_IDPRODUIT" />
+          <ScalarProperty Name="FK_IDCAS" ColumnName="FK_IDCAS" />
+          <ScalarProperty Name="FK_IDCENTRE" ColumnName="FK_IDCENTRE" />
+          <ScalarProperty Name="FK_IDABON" ColumnName="FK_IDABON" />
+          <ScalarProperty Name="DEBUTEXONERATIONTVA" ColumnName="DEBUTEXONERATIONTVA" />
+          <ScalarProperty Name="FINEXONERATIONTVA" ColumnName="FINEXONERATIONTVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CREDFAC">
+      <EntityTypeMapping TypeName="ABO07Model.CREDFAC">
+        <MappingFragment StoreEntitySet="CREDFAC">
+          <ScalarProperty Name="LOTRI" ColumnName="LOTRI" />
+          <ScalarProperty Name="JET" ColumnName="JET" />
+          <ScalarProperty Name="CENTRE" ColumnName="CENTRE" />
+          <ScalarProperty Name="CLIENT" ColumnName="CLIENT" />
+          <ScalarProperty Name="ORDRE" ColumnName="ORDRE" />
+          <ScalarProperty Name="FACTURE" ColumnName="FACTURE" />
+          <ScalarProperty Name="LIENRED" ColumnName="LIENRED" />
+          <ScalarProperty Name="REDEVANCE" ColumnName="REDEVANCE" />
+          <ScalarProperty Name="TRANCHE" ColumnName="TRANCHE" />
+          <ScalarProperty Name="ORDRED" ColumnName="ORDRED" />
+          <ScalarProperty Name="QUANTITE" ColumnName="QUANTITE" />
+          <ScalarProperty Name="UNITE" ColumnName="UNITE" />
+          <ScalarProperty Name="BARPRIX" ColumnName="BARPRIX" />
+          <ScalarProperty Name="TAXE" ColumnName="TAXE" />
+          <ScalarProperty Name="CTAX" ColumnName="CTAX" />
+          <ScalarProperty Name="DAPP" ColumnName="DAPP" />
+          <ScalarProperty Name="CRITERE" ColumnName="CRITERE" />
+          <ScalarProperty Name="VARIANTE" ColumnName="VARIANTE" />
+          <ScalarProperty Name="TOTREDHT" ColumnName="TOTREDHT" />
+          <ScalarProperty Name="TOTREDTAX" ColumnName="TOTREDTAX" />
+          <ScalarProperty Name="TOTREDTTC" ColumnName="TOTREDTTC" />
+          <ScalarProperty Name="PARAM1" ColumnName="PARAM1" />
+          <ScalarProperty Name="PARAM2" ColumnName="PARAM2" />
+          <ScalarProperty Name="PARAM3" ColumnName="PARAM3" />
+          <ScalarProperty Name="PARAM4" ColumnName="PARAM4" />
+          <ScalarProperty Name="PARAM5" ColumnName="PARAM5" />
+          <ScalarProperty Name="PARAM6" ColumnName="PARAM6" />
+          <ScalarProperty Name="NBJOUR" ColumnName="NBJOUR" />
+          <ScalarProperty Name="DEBUTAPPLICATION" ColumnName="DEBUTAPPLICATION" />
+          <ScalarProperty Name="FINAPPLICATION" ColumnName="FINAPPLICATION" />
+          <ScalarProperty Name="LIENFAC" ColumnName="LIENFAC" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="PRODUIT" ColumnName="PRODUIT" />
+          <ScalarProperty Name="FORMULE" ColumnName="FORMULE" />
+          <ScalarProperty Name="TOPANNUL" ColumnName="TOPANNUL" />
+          <ScalarProperty Name="BARBORNEDEBUT" ColumnName="BARBORNEDEBUT" />
+          <ScalarProperty Name="BARBORNEFIN" ColumnName="BARBORNEFIN" />
+          <ScalarProperty Name="QUANTITEMAXIMALE" ColumnName="QUANTITEMAXIMALE" />
+          <ScalarProperty Name="USERCREATION" ColumnName="USERCREATION" />
+          <ScalarProperty Name="DATECREATION" ColumnName="DATECREATION" />
+          <ScalarProperty Name="USERMODIFICATION" ColumnName="USERMODIFICATION" />
+          <ScalarProperty Name="DATEMODIFICATION" ColumnName="DATEMODIFICATION" />
+          <ScalarProperty Name="FK_IDCENTFAC" ColumnName="FK_IDCENTFAC" />
+          <ScalarProperty Name="FK_IDCENTRE" ColumnName="FK_IDCENTRE" />
+          <ScalarProperty Name="FK_IDABON" ColumnName="FK_IDABON" />
+          <ScalarProperty Name="FK_IDPRODUIT" ColumnName="FK_IDPRODUIT" />
+          <ScalarProperty Name="FK_IDREDEVANCE" ColumnName="FK_IDREDEVANCE" />
+          <ScalarProperty Name="PK_ID" ColumnName="PK_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

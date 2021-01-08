@@ -1,0 +1,52 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+      xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"       
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" x:Class="Galatee.Silverlight.Devis.UcSaisiCompteur"       
+    Width="728" Height="441.687" 
+           Title="Saisie de compteur" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="-5,7,-3,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sc:GroupBox Header="Scelles des Compteurs" Margin="10,0,10,144" Name="Gbo_InformationDevis" IsEnabled="True" Height="185" VerticalAlignment="Bottom" />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="42,60,0,0" VerticalAlignment="Top" Width="120" Content="Etat Compteur"/>
+        <TextBox x:Name="txt_ANNEEFAB" HorizontalAlignment="Left" Height="23" Margin="180,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="42,116,0,0" VerticalAlignment="Top" Width="120" Content="Année de Frabrication"/>
+        <ComboBox x:Name="Cbo_Etat_cmpt" HorizontalAlignment="Left" Margin="180,60,0,0" VerticalAlignment="Top" Width="156" Height="23"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="389,33,0,0" VerticalAlignment="Top" Width="76" Content="Calibre"/>
+        <ComboBox x:Name="Cbo_Marque" HorizontalAlignment="Left" Margin="517,59,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.517,0.05" Height="23" SelectionChanged="Cbo_Marque_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="389,59,0,0" VerticalAlignment="Top" Width="76" Content="Marque"/>
+        <ComboBox x:Name="Cbo_Diametre" HorizontalAlignment="Left" Margin="517,33,0,0" VerticalAlignment="Top" Width="156" Height="23" />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="42,142,0,0" VerticalAlignment="Top" Width="106" Content="Type de Compteur"/>
+        <ComboBox x:Name="Cbo_typeCmpt" HorizontalAlignment="Left" Margin="180,142,0,0" VerticalAlignment="Top" Width="156" Height="23" SelectionChanged="Cbo_typeCmpt_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="389,86,0,0" VerticalAlignment="Top" Width="64" Content="Modele"/>
+        <ComboBox x:Name="Cbo_Modele" HorizontalAlignment="Left" Margin="517,86,0,0" VerticalAlignment="Top" Width="156" Height="23" SelectionChanged="Cbo_Modele_SelectionChanged" />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="103" Height="23" HorizontalAlignment="Right" Margin="0,7,29,5" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="108" Height="23" HorizontalAlignment="Right" Margin="0,7,137,5" Grid.Row="1" />
+        <TextBox x:Name="txt_Cadran" HorizontalAlignment="Left" Height="23" Margin="517,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="389,116,0,0" VerticalAlignment="Top" Width="114" Content="Cadran"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="42,33,0,0" VerticalAlignment="Top" Width="82" Content="Produit"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="42,87,0,0" VerticalAlignment="Top" Width="120" Content="Numéro Compteur"/>
+        <TextBox x:Name="txt_NumCpteur" HorizontalAlignment="Left" Height="23" Margin="180,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <sdk:DataGrid x:Name="dtg_CompteurSaisie" HorizontalAlignment="Left" Height="84" Margin="10,222,0,0" VerticalAlignment="Top" Width="696" AutoGenerateColumns="False" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Numero_Compteur}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True"  Header="Numéro de compteur " IsReadOnly="False" MaxWidth="Infinity" MinWidth="90" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEETATCOMPTEUR}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True"  Header="Etat compteur" IsReadOnly="False" MaxWidth="Infinity" MinWidth="100" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEMARQUE}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True"  Header="Marque" IsReadOnly="False" MaxWidth="Infinity" MinWidth="90" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding CADRAN}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True"  Header="Cadran" IsReadOnly="False" MaxWidth="Infinity" MinWidth="90" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding ANNEEFAB}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True"  Header="Année" IsReadOnly="False" MaxWidth="Infinity" MinWidth="90" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox x:Name="txt_CodeProduit" IsReadOnly="True"  HorizontalAlignment="Left" Height="23" Margin="180,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <Button x:Name="btn_Ajouter" Content="Ajouter"  Width="156" Height="23" HorizontalAlignment="Right" Margin="0,190,40,116" Click="btn_Ajouter_Click" />
+
+    </Grid>
+</sdk:ChildWindow>

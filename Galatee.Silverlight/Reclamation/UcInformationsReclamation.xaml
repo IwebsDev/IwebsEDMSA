@@ -1,0 +1,87 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Accueil.UcInformationsReclamation"
+           xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    Width="727" Height="590" 
+           Title="Informations Reclamation" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="4,-48,0,3">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sc:GroupBox Header=" Informations sur le client " Margin="0,0,0,178" x:Name="Gbo_InformationsClient" IsEnabled="True" Height="261" VerticalAlignment="Bottom" >
+        </sc:GroupBox>
+        <sc:GroupBox Header="Pièce jointe " Margin="1,0,0,96" x:Name="Gbo_InformationsServiceEmetteur_Copy" IsEnabled="True" Height="87" VerticalAlignment="Bottom" />
+
+        <sdk:Label Content="Adresse :" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="88" Margin="365,219,0,0"/>
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" VerticalAlignment="Top" />
+        <sdk:Label Content="Nom et prénom :" HorizontalAlignment="Left" Height="22" Margin="19,139,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox  x:Name="Txt_Nom"  Background="LightBlue"  HorizontalAlignment="Left" Height="23" Margin="133,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"/>
+        <sdk:Label Content="Portable" HorizontalAlignment="Left" Height="22" Margin="19,164,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="Txt_Portable"  Background="LightBlue"   HorizontalAlignment="Left" Height="23" Margin="133,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212"/>
+        <sdk:Label Content="Fixe" HorizontalAlignment="Left" Height="22" Margin="19,189,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="Txt_NumeroFixe" HorizontalAlignment="Left" Height="23" Margin="133,188,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="212"/>
+        <TextBox x:Name="Txt_Adress" HorizontalAlignment="Left" Height="23" Margin="478,218,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184"/>
+        <sdk:Label Content="Date d'ouverture :" HorizontalAlignment="Left" Height="22" Margin="19,214,0,0" VerticalAlignment="Top" Width="99"/>
+        <sdk:DatePicker x:Name="Dtp_DateOuverture" HorizontalAlignment="Left" Height="22" Margin="133,214,0,0" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.288,0.409"/>
+        <sdk:Label Content="Type réclamation :" HorizontalAlignment="Left" Height="17" Margin="21,240,0,0" VerticalAlignment="Top" Width="104"/>
+        <ComboBox x:Name="Cbo_TypeReclamation"  HorizontalAlignment="Left" Margin="133,239,0,0" VerticalAlignment="Top" Width="212"/>
+        <TextBox x:Name="Txt_Email" HorizontalAlignment="Left" Height="23" Margin="478,243,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184"/>
+        <sdk:Label Content="E-mail :" HorizontalAlignment="Left" Height="22" Margin="365,244,0,0" VerticalAlignment="Top" Width="75"/>
+        <CheckBox Content="Client EDM" x:Name="Chk_EstClient" HorizontalAlignment="Left" Margin="19,117,0,0" VerticalAlignment="Top" Checked="Chk_EstClient_Checked" Unchecked="Chk_EstClient_Checked"/>
+        <Button  x:Name="Btn_RechercherClient" Content="Rechercher Client" HorizontalAlignment="Left" Margin="133,112,0,0" VerticalAlignment="Top" Width="154" Click="NewButton_Click"  IsEnabled="False"  />
+        <sdk:Label Content="Objet :" HorizontalAlignment="Left" Height="22" Margin="19,262,0,0" VerticalAlignment="Top" Width="73"/>
+        <sdk:Label Content="Observation :" Visibility="Collapsed" HorizontalAlignment="Left" Height="28" Margin="365,238,0,0" VerticalAlignment="Top" Width="100"/>
+        <!--/////////////////////////////////situation geographique/////////////////-->
+        <sdk:Label Content="Date rendez-vous :" HorizontalAlignment="Left" Height="23" Margin="364,273,0,0" VerticalAlignment="Top" Width="105"/>
+        <sdk:DatePicker x:Name="Dtp_DateRendezVous" Background="LightBlue" HorizontalAlignment="Left" Height="23" Margin="478,273,0,0" VerticalAlignment="Top" Width="184"/>
+
+        <sc:GroupBox Header="  Informations sur le service émetteur" Margin="1,0,0,44" x:Name="Gbo_InformationsServiceEmetteur" IsEnabled="True" Height="52" VerticalAlignment="Bottom" />
+
+        <sdk:Label Content="Etablir par :" HorizontalAlignment="Left" Height="23" Margin="19,450,0,0" VerticalAlignment="Top" Width="90"/>
+        <TextBox  x:Name="Txt_EtablirPar" HorizontalAlignment="Left" Height="23" Margin="120,450,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="202"/>
+        <sdk:Label Content="Date de retour souhaitable :" HorizontalAlignment="Left" Height="23" Margin="367,450,0,0" VerticalAlignment="Top" Width="158"/>
+        <sdk:DatePicker x:Name="Dtp_DateretourSouhaite"  Background="LightBlue"   HorizontalAlignment="Left" Height="23" Margin="536,450,0,0" VerticalAlignment="Top" Width="151"/>
+
+        <sc:GroupBox Header="  Mode de reception  " Margin="1,0,0,440" x:Name="Gbo_ModeReception" IsEnabled="True" Height="45" VerticalAlignment="Bottom" />
+
+        <ComboBox x:Name="Cbo_ModeReception" HorizontalAlignment="Left" Margin="120,61,0,0" VerticalAlignment="Top" Width="263" Height="24"/>
+        <TextBox x:Name="Txt_Object" HorizontalAlignment="Left" Height="74" Margin="133,262,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="Txt_Observation" HorizontalAlignment="Left" Height="87" Visibility="Collapsed" Margin="478,239,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184"/>
+        <sdk:Label Content="Client :" HorizontalAlignment="Left" Height="22" Margin="365,169,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.58,2.5"/>
+        <TextBox  x:Name="Txt_Client" HorizontalAlignment="Left" Height="23" Margin="478,168,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" IsReadOnly="True"/>
+        <Button  x:Name="Btn_RechercherReclamation" Content="Recherche Reclamation" HorizontalAlignment="Left" Height="29" Margin="499,105,0,0" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.491,-0.05"  IsEnabled="False" Click="NewButton1_Click"/>
+        <CheckBox x:Name="Chk_EstReclamation" Content="Réouverture d'une demande " HorizontalAlignment="Left" Height="16" Margin="305,111,0,0" VerticalAlignment="Top" Width="175" RenderTransformOrigin="-1.189,6.125" Checked="Chk_EstReclamation_Checked"  Unchecked="Chk_EstReclamation_Checked"/>
+        <sdk:Label Content="Ordre"  HorizontalAlignment="Left" Height="18" Margin="365,196,0,0" VerticalAlignment="Top" Width="66"/>
+        <TextBox x:Name="Txt_Ordre" HorizontalAlignment="Left" Height="23" Margin="478,193,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" IsReadOnly="True"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Type " Height="20" VerticalAlignment="Top" Width="64" Margin="15,363,0,0"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="cbo_typedoc" Margin="54,366,0,0" VerticalAlignment="Top" Width="135"/>
+        <sdk:DataGrid x:Name="dgListePiece" CurrentCellChanged="dgListePiece_CurrentCellChanged"  HorizontalAlignment="Left" Height="64" Margin="361,366,0,0" VerticalAlignment="Top" Width="326" AutoGenerateColumns="False"  SelectionMode="Single"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Type Pièce" Binding="{Binding NOMDOCUMENT, Mode=TwoWay}" />
+                <sdk:DataGridTemplateColumn Header="Pièce">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <HyperlinkButton Content="Voir la pièce" FontWeight="Bold"  x:Name="hyperlinkButtonPropScannee_" Click="hyperlinkButtonPropScannee__Click" Tag="{Binding CONTENU, Mode=TwoWay}"  />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Ajouter" HorizontalAlignment="Left" x:Name="btn_ajoutpiece" VerticalAlignment="Top" Width="115"  Margin="207,365,0,0" Click="Button_Click_1"/>
+        <Button Content="Supprimer " HorizontalAlignment="Left" x:Name="btn_supprimerpiece" VerticalAlignment="Top"  Width="116" Margin="207,392,0,0" Click="Button_Click_2"/>
+        <Button Content="Groupe destinataire" x:Name="btn_GroupeValidation" HorizontalAlignment="Left" Margin="7,497,0,0" VerticalAlignment="Top" Width="122" Click="btn_GroupeValidation_Click_1"/>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,496,209,0" x:Name="txt_GroupeValidation" VerticalAlignment="Top" Width="356" IsReadOnly="True" />
+        <sdk:Label Content="Centre :" HorizontalAlignment="Left" Height="22" Margin="364,141,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox  x:Name="Txt_Centre"   HorizontalAlignment="Left" Height="23" Margin="478,140,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="184" IsReadOnly="True" />
+        <sdk:Label Content="Numero demande :" x:Name="lbl_numdem" HorizontalAlignment="Left" Height="22" Margin="388,61,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.58,2.5"/>
+        <TextBox  x:Name="Txt_NumDemande" HorizontalAlignment="Left" Height="23" Margin="499,61,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="163" IsReadOnly="True"/>
+        <sdk:Label x:Name="labMotif" HorizontalAlignment="Left" Content="Motif rejet" Height="28" VerticalAlignment="Top" Width="120" Margin="11,3,0,0" Grid.Row="1"/>
+        <TextBox x:Name="Txt_MotifRejet" Foreground="Red" FontStyle="Italic" HorizontalAlignment="Left" Height="34" Margin="135,526,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355" Grid.RowSpan="2"/>
+
+    </Grid>
+</controls:ChildWindow>

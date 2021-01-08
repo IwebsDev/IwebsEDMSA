@@ -1,0 +1,44 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Facturation.FrmSuivieFacturation"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="778" Height="435" 
+           Title="FrmSuivieFacturation" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Header="Type d'édition" Height="56" VerticalAlignment="Top" />
+        <Controls:GroupBox FontWeight="SemiBold" Header="Détail de la facturation" Height="269" VerticalAlignment="Top" Margin="0,56,0,0" />
+        
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:DataGrid HorizontalAlignment="Left" Name="dtg_Action" AutoGenerateColumns="False"  Height="240" Margin="10,75,0,0" VerticalAlignment="Top" Width="730">
+            <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn Binding="{Binding LOT}" CanUserSort="True" CanUserReorder="True"  Header="Lot" IsReadOnly="False" MaxWidth="200" MinWidth="90"  Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding JET}" CanUserSort="True" CanUserReorder="True"   Header="Jet" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding PERIODE}" CanUserSort="True" CanUserReorder="True" Header="Période" MinWidth="50" IsReadOnly="False" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding ACTION1}" CanUserSort="True" CanUserReorder="True" Header="Action" MinWidth="190" IsReadOnly="False" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding DATE1,Converter={StaticResource DateTimeConverter}}" CanUserSort="True" MinWidth="90" CanUserReorder="True"  Header="Date" IsReadOnly="False"  Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding NOMBRE1}" CanUserSort="True" CanUserReorder="True" Header="Nombre" MinWidth="90" IsReadOnly="False" MaxWidth="Infinity"  SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding NOMBRE2}" CanUserSort="True" CanUserReorder="True" Header="Quantité" MinWidth="100" IsReadOnly="False" MaxWidth="Infinity"  SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT1,Converter={StaticResource DecimalConverter}}" MinWidth="100" CanUserSort="True" CanUserReorder="True"  Header="Montant" IsReadOnly="False" MaxWidth="Infinity"  SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Lot" Click="btn_batch_Click_1" Height="25" HorizontalAlignment="Left" Margin="39,17,0,0" x:Name="btn_batch" VerticalAlignment="Top" Width="88" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,19,0,0" x:Name="Txt_NumBatch" VerticalAlignment="Top" Width="164" Background="LightBlue" TextChanged="Txt_NumBatch_TextChanged" />
+        <Button Content="Rechercher" Height="25" HorizontalAlignment="Left" Margin="435,17,0,0" x:Name="btn_Rechercher" VerticalAlignment="Top" Width="88" Click="btn_Rechercher_Click" />
+       
+    </Grid>
+</sdk:ChildWindow>

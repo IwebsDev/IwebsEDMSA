@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdministrationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdministrationService_saveProfilHabilitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveProfilHabilitation" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveProfilHabilitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveProfilHabilitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveProfilHabilitation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUpdateUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveUserProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveUserProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfilCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveUserProfilCentre" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfilCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveUserProfilCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_saveUserProfilCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCsModuleAdmMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsModuleAdmMenu" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCsModuleAdmMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsModuleAdmMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCsModuleAdmMenu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCentreDuProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCentreDuProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCentreDuProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCentreDuProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneCentreDuProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUserPerimetre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUserPerimetre" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUserPerimetre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUserPerimetreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllUserPerimetre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeDesModule" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeDesModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesModule_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesMenusProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeDesMenusProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesMenusProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeDesMenusProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetListeDesMenusProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:MenusSelectByFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenusSelectByFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_HabilitationSelectByMetierModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitationSelectByMetierModule" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_HabilitationSelectByMetierModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitationSelectByMetierModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_HabilitationSelectByMetierModule_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionModuleDeFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionModuleDeFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionModuleDeFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionModuleDeFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionModuleDeFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionProfilFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionProfilFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionProfilFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionProfilFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionProfilFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllProfilUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllProfilUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllProfilUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllProfilUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeAllProfilUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilByFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilByFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilByID" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilByID_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneBdConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBdConfig" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneBdConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBdConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneBdConfig_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneTa_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTa" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneTa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneTa_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SetActifStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetActifStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SetActifStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetActifStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SetActifStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetActifStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActifStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetActifStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActifStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetActifStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllStrategieSecurite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStrategieSecurite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllStrategieSecurite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStrategieSecuriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllStrategieSecurite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionHabilitationProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionHabilitationProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionHabilitationProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionHabilitationProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionHabilitationProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRole" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllRole_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleProgram_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleProgram" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleProgram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleProgram_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleDeFonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleDeFonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleDeFonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllModuleDeFonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneAllModuleDeFonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAssocitedToMenuByMenuID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssocitedToMenuByMenuID" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAssocitedToMenuByMenuID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssocitedToMenuByMenuIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAssocitedToMenuByMenuID_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSite" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllSite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeDesCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesCentre" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeDesCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListeDesCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetByLoginName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetByLoginName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetByLoginName_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdateUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUserByGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserByGuid" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUserByGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserByGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteUserByGuid_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SELECT_All_Fonction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SELECT_All_Fonction" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SELECT_All_Fonction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SELECT_All_FonctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SELECT_All_Fonction_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ProgramSelectAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProgramSelectAll" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ProgramSelectAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProgramSelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ProgramSelectAll_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q40:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListePoste_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePoste" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListePoste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePosteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneListePoste_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q41:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertPoste_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPoste" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertPoste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPosteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertPoste_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q42:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdatePoste_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePoste" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdatePoste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePosteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_UpdatePoste_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q43:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePassword" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePassword_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q44:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriqueConnection" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriqueConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnection_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q45:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SynchroniseDonneeAD_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchroniseDonneeAD" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SynchroniseDonneeAD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchroniseDonneeADResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SynchroniseDonneeAD_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q46:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ChargeListeDesAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeListeDesAgents" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ChargeListeDesAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeListeDesAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ChargeListeDesAgents_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q47:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportFichier_InputMessage">
+    <wsdl:part name="parameters" element="tns:MisaAjourImportFichier" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportFichier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MisaAjourImportFichierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportFichier_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q48:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SuppressImportFichier_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuppressImportFichier" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SuppressImportFichier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuppressImportFichierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SuppressImportFichier_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q49:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportFichier_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportFichier" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportFichier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportFichierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportFichier_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q50:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ExexcImporterFichier_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExexcImporterFichier" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ExexcImporterFichier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExexcImporterFichierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ExexcImporterFichier_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q51:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportColonne_InputMessage">
+    <wsdl:part name="parameters" element="tns:MisaAjourImportColonne" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportColonne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MisaAjourImportColonneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MisaAjourImportColonne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q52:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportColonne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportColonne" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportColonne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportColonneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetImportColonne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q53:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteColonne_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColonne" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteColonne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColonneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteColonne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q54:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImportFichierColonne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportFichierColonne" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImportFichierColonne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportFichierColonneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImportFichierColonne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q55:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ImportDepuisBaseDeDonnee_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDepuisBaseDeDonnee" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ImportDepuisBaseDeDonnee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDepuisBaseDeDonneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_ImportDepuisBaseDeDonnee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q56:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImport" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetAllImport_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q57:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetSQLDatabaseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSQLDatabaseList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetSQLDatabaseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSQLDatabaseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetSQLDatabaseList_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q58:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetProviderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviderList" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetProviderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_GetProviderList_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q59:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadRequest_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q60:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SaveAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAgent" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SaveAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_SaveAgent_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q61:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadAgentBaseDistante_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAgentBaseDistante" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadAgentBaseDistante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAgentBaseDistanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_LoadAgentBaseDistante_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q62:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_TestBaseDistante_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestBaseDistante" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_TestBaseDistante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestBaseDistanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_TestBaseDistante_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q63:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:MenusSelectByProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenusSelectByProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_MenusSelectByProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q64:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFonctionProfilCentre" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFonctionProfilCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q65:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFonctionProfilMenu" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFonctionProfilMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneFonctionProfilMenu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q66:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionMutation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionMutation" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionMutation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionMutationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_InsertionMutation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q67:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProfilUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneProfilUtilisateur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q68:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswords_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePasswords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePasswordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswords_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q69:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteListUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteListUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteListUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteListUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_DeleteListUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q70:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnectionfromListUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriqueConnectionfromListUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnectionfromListUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriqueConnectionfromListUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriqueConnectionfromListUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q71:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswordFromListUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePasswordFromListUser" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswordFromListUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneHistoriquePasswordFromListUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministrationService_RetourneHistoriquePasswordFromListUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q72:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IAdministrationService">
+    <wsdl:operation name="saveProfilHabilitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/saveProfilHabilitation" message="tns:IAdministrationService_saveProfilHabilitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/saveProfilHabilitationResponse" message="tns:IAdministrationService_saveProfilHabilitation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/saveProfilHabilitationErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_saveProfilHabilitation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertUpdateUser" message="tns:IAdministrationService_InsertUpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertUpdateUserResponse" message="tns:IAdministrationService_InsertUpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertUpdateUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertUpdateUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveUserProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfil" message="tns:IAdministrationService_saveUserProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfilResponse" message="tns:IAdministrationService_saveUserProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfilErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_saveUserProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveUserProfilCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfilCentre" message="tns:IAdministrationService_saveUserProfilCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfilCentreResponse" message="tns:IAdministrationService_saveUserProfilCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/saveUserProfilCentreErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_saveUserProfilCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsModuleAdmMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCsModuleAdmMenu" message="tns:IAdministrationService_RetourneCsModuleAdmMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCsModuleAdmMenuResponse" message="tns:IAdministrationService_RetourneCsModuleAdmMenu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCsModuleAdmMenuErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneCsModuleAdmMenu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCentreDuProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCentreDuProfil" message="tns:IAdministrationService_RetourneCentreDuProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCentreDuProfilResponse" message="tns:IAdministrationService_RetourneCentreDuProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneCentreDuProfilErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneCentreDuProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUser" message="tns:IAdministrationService_RetourneListeAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUserResponse" message="tns:IAdministrationService_RetourneListeAllUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneListeAllUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUserPerimetre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUserPerimetre" message="tns:IAdministrationService_RetourneListeAllUserPerimetre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUserPerimetreResponse" message="tns:IAdministrationService_RetourneListeAllUserPerimetre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllUserPerimetreErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneListeAllUserPerimetre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDesModule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesModule" message="tns:IAdministrationService_GetListeDesModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesModuleResponse" message="tns:IAdministrationService_GetListeDesModule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesModuleErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetListeDesModule_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDesMenusProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesMenusProfil" message="tns:IAdministrationService_GetListeDesMenusProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesMenusProfilResponse" message="tns:IAdministrationService_GetListeDesMenusProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetListeDesMenusProfilErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetListeDesMenusProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleFonction" message="tns:IAdministrationService_RetourneAllModuleFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleFonctionResponse" message="tns:IAdministrationService_RetourneAllModuleFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneAllModuleFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MenusSelectByFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByFonction" message="tns:IAdministrationService_MenusSelectByFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByFonctionResponse" message="tns:IAdministrationService_MenusSelectByFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_MenusSelectByFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitationSelectByMetierModule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/HabilitationSelectByMetierModule" message="tns:IAdministrationService_HabilitationSelectByMetierModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/HabilitationSelectByMetierModuleResponse" message="tns:IAdministrationService_HabilitationSelectByMetierModule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/HabilitationSelectByMetierModuleErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_HabilitationSelectByMetierModule_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionModuleDeFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertionModuleDeFonction" message="tns:IAdministrationService_InsertionModuleDeFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertionModuleDeFonctionResponse" message="tns:IAdministrationService_InsertionModuleDeFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertionModuleDeFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertionModuleDeFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionProfilFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertionProfilFonction" message="tns:IAdministrationService_InsertionProfilFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertionProfilFonctionResponse" message="tns:IAdministrationService_InsertionProfilFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertionProfilFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertionProfilFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllProfilUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllProfilUser" message="tns:IAdministrationService_RetourneListeAllProfilUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllProfilUserResponse" message="tns:IAdministrationService_RetourneListeAllProfilUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeAllProfilUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneListeAllProfilUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilByFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByFonction" message="tns:IAdministrationService_RetourneProfilByFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByFonctionResponse" message="tns:IAdministrationService_RetourneProfilByFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneProfilByFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByID" message="tns:IAdministrationService_RetourneProfilByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByIDResponse" message="tns:IAdministrationService_RetourneProfilByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilByIDErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneProfilByID_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBdConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneBdConfig" message="tns:IAdministrationService_RetourneBdConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneBdConfigResponse" message="tns:IAdministrationService_RetourneBdConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneBdConfigErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneBdConfig_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneTa" message="tns:IAdministrationService_RetourneTa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneTaResponse" message="tns:IAdministrationService_RetourneTa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneTaErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneTa_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/UpdateStrategieSecurite" message="tns:IAdministrationService_UpdateStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/UpdateStrategieSecuriteResponse" message="tns:IAdministrationService_UpdateStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/UpdateStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_UpdateStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertStrategieSecurite" message="tns:IAdministrationService_InsertStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertStrategieSecuriteResponse" message="tns:IAdministrationService_InsertStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/DeleteStrategieSecurite" message="tns:IAdministrationService_DeleteStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/DeleteStrategieSecuriteResponse" message="tns:IAdministrationService_DeleteStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/DeleteStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_DeleteStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetActifStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/SetActifStrategieSecurite" message="tns:IAdministrationService_SetActifStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/SetActifStrategieSecuriteResponse" message="tns:IAdministrationService_SetActifStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/SetActifStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_SetActifStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActifStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetActifStrategieSecurite" message="tns:IAdministrationService_GetActifStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetActifStrategieSecuriteResponse" message="tns:IAdministrationService_GetActifStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetActifStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetActifStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStrategieSecurite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAllStrategieSecurite" message="tns:IAdministrationService_GetAllStrategieSecurite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAllStrategieSecuriteResponse" message="tns:IAdministrationService_GetAllStrategieSecurite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAllStrategieSecuriteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAllStrategieSecurite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionHabilitationProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertionHabilitationProfil" message="tns:IAdministrationService_InsertionHabilitationProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertionHabilitationProfilResponse" message="tns:IAdministrationService_InsertionHabilitationProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertionHabilitationProfilErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertionHabilitationProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAllRole" message="tns:IAdministrationService_GetAllRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAllRoleResponse" message="tns:IAdministrationService_GetAllRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAllRoleErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAllRole_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleProgram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleProgram" message="tns:IAdministrationService_RetourneAllModuleProgram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleProgramResponse" message="tns:IAdministrationService_RetourneAllModuleProgram_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleProgramErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneAllModuleProgram_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleDeFonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleDeFonction" message="tns:IAdministrationService_RetourneAllModuleDeFonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleDeFonctionResponse" message="tns:IAdministrationService_RetourneAllModuleDeFonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneAllModuleDeFonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneAllModuleDeFonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssocitedToMenuByMenuID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAssocitedToMenuByMenuID" message="tns:IAdministrationService_GetAssocitedToMenuByMenuID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAssocitedToMenuByMenuIDResponse" message="tns:IAdministrationService_GetAssocitedToMenuByMenuID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAssocitedToMenuByMenuIDErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAssocitedToMenuByMenuID_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAllSite" message="tns:IAdministrationService_GetAllSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAllSiteResponse" message="tns:IAdministrationService_GetAllSite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAllSiteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAllSite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeDesCentre" message="tns:IAdministrationService_RetourneListeDesCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeDesCentreResponse" message="tns:IAdministrationService_RetourneListeDesCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListeDesCentreErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneListeDesCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByLoginName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetByLoginName" message="tns:IAdministrationService_GetByLoginName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetByLoginNameResponse" message="tns:IAdministrationService_GetByLoginName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetByLoginNameErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetByLoginName_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/UpdateUser" message="tns:IAdministrationService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/UpdateUserResponse" message="tns:IAdministrationService_UpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/UpdateUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_UpdateUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertUser" message="tns:IAdministrationService_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertUserResponse" message="tns:IAdministrationService_InsertUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUser" message="tns:IAdministrationService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUserResponse" message="tns:IAdministrationService_DeleteUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_DeleteUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByGuid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUserByGuid" message="tns:IAdministrationService_DeleteUserByGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUserByGuidResponse" message="tns:IAdministrationService_DeleteUserByGuid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/DeleteUserByGuidErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_DeleteUserByGuid_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SELECT_All_Fonction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/SELECT_All_Fonction" message="tns:IAdministrationService_SELECT_All_Fonction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/SELECT_All_FonctionResponse" message="tns:IAdministrationService_SELECT_All_Fonction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/SELECT_All_FonctionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_SELECT_All_Fonction_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProgramSelectAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/ProgramSelectAll" message="tns:IAdministrationService_ProgramSelectAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/ProgramSelectAllResponse" message="tns:IAdministrationService_ProgramSelectAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/ProgramSelectAllErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_ProgramSelectAll_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePoste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListePoste" message="tns:IAdministrationService_RetourneListePoste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListePosteResponse" message="tns:IAdministrationService_RetourneListePoste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneListePosteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneListePoste_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertPoste" message="tns:IAdministrationService_InsertPoste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertPosteResponse" message="tns:IAdministrationService_InsertPoste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertPosteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertPoste_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/UpdatePoste" message="tns:IAdministrationService_UpdatePoste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/UpdatePosteResponse" message="tns:IAdministrationService_UpdatePoste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/UpdatePosteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_UpdatePoste_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePassword" message="tns:IAdministrationService_RetourneHistoriquePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordResponse" message="tns:IAdministrationService_RetourneHistoriquePassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneHistoriquePassword_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriqueConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnection" message="tns:IAdministrationService_RetourneHistoriqueConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionResponse" message="tns:IAdministrationService_RetourneHistoriqueConnection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneHistoriqueConnection_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchroniseDonneeAD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/SynchroniseDonneeAD" message="tns:IAdministrationService_SynchroniseDonneeAD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/SynchroniseDonneeADResponse" message="tns:IAdministrationService_SynchroniseDonneeAD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/SynchroniseDonneeADErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_SynchroniseDonneeAD_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeListeDesAgents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/ChargeListeDesAgents" message="tns:IAdministrationService_ChargeListeDesAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/ChargeListeDesAgentsResponse" message="tns:IAdministrationService_ChargeListeDesAgents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/ChargeListeDesAgentsErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_ChargeListeDesAgents_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MisaAjourImportFichier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportFichier" message="tns:IAdministrationService_MisaAjourImportFichier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportFichierResponse" message="tns:IAdministrationService_MisaAjourImportFichier_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportFichierErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_MisaAjourImportFichier_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppressImportFichier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/SuppressImportFichier" message="tns:IAdministrationService_SuppressImportFichier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/SuppressImportFichierResponse" message="tns:IAdministrationService_SuppressImportFichier_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/SuppressImportFichierErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_SuppressImportFichier_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportFichier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetImportFichier" message="tns:IAdministrationService_GetImportFichier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetImportFichierResponse" message="tns:IAdministrationService_GetImportFichier_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetImportFichierErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetImportFichier_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExexcImporterFichier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/ExexcImporterFichier" message="tns:IAdministrationService_ExexcImporterFichier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/ExexcImporterFichierResponse" message="tns:IAdministrationService_ExexcImporterFichier_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/ExexcImporterFichierErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_ExexcImporterFichier_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MisaAjourImportColonne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportColonne" message="tns:IAdministrationService_MisaAjourImportColonne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportColonneResponse" message="tns:IAdministrationService_MisaAjourImportColonne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/MisaAjourImportColonneErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_MisaAjourImportColonne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportColonne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetImportColonne" message="tns:IAdministrationService_GetImportColonne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetImportColonneResponse" message="tns:IAdministrationService_GetImportColonne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetImportColonneErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetImportColonne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColonne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/DeleteColonne" message="tns:IAdministrationService_DeleteColonne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/DeleteColonneResponse" message="tns:IAdministrationService_DeleteColonne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/DeleteColonneErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_DeleteColonne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportFichierColonne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImportFichierColonne" message="tns:IAdministrationService_GetAllImportFichierColonne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImportFichierColonneResponse" message="tns:IAdministrationService_GetAllImportFichierColonne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImportFichierColonneErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAllImportFichierColonne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportDepuisBaseDeDonnee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/ImportDepuisBaseDeDonnee" message="tns:IAdministrationService_ImportDepuisBaseDeDonnee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/ImportDepuisBaseDeDonneeResponse" message="tns:IAdministrationService_ImportDepuisBaseDeDonnee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/ImportDepuisBaseDeDonneeErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_ImportDepuisBaseDeDonnee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImport" message="tns:IAdministrationService_GetAllImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImportResponse" message="tns:IAdministrationService_GetAllImport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetAllImportErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetAllImport_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSQLDatabaseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetSQLDatabaseList" message="tns:IAdministrationService_GetSQLDatabaseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetSQLDatabaseListResponse" message="tns:IAdministrationService_GetSQLDatabaseList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetSQLDatabaseListErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetSQLDatabaseList_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/GetProviderList" message="tns:IAdministrationService_GetProviderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/GetProviderListResponse" message="tns:IAdministrationService_GetProviderList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/GetProviderListErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_GetProviderList_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/LoadRequest" message="tns:IAdministrationService_LoadRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/LoadRequestResponse" message="tns:IAdministrationService_LoadRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/LoadRequestErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_LoadRequest_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/SaveAgent" message="tns:IAdministrationService_SaveAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/SaveAgentResponse" message="tns:IAdministrationService_SaveAgent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/SaveAgentErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_SaveAgent_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAgentBaseDistante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/LoadAgentBaseDistante" message="tns:IAdministrationService_LoadAgentBaseDistante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/LoadAgentBaseDistanteResponse" message="tns:IAdministrationService_LoadAgentBaseDistante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/LoadAgentBaseDistanteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_LoadAgentBaseDistante_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestBaseDistante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/TestBaseDistante" message="tns:IAdministrationService_TestBaseDistante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/TestBaseDistanteResponse" message="tns:IAdministrationService_TestBaseDistante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/TestBaseDistanteErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_TestBaseDistante_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MenusSelectByProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByProfil" message="tns:IAdministrationService_MenusSelectByProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByProfilResponse" message="tns:IAdministrationService_MenusSelectByProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/MenusSelectByProfilErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_MenusSelectByProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFonctionProfilCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilCentre" message="tns:IAdministrationService_RetourneFonctionProfilCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilCentreResponse" message="tns:IAdministrationService_RetourneFonctionProfilCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilCentreErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneFonctionProfilCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFonctionProfilMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilMenu" message="tns:IAdministrationService_RetourneFonctionProfilMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilMenuResponse" message="tns:IAdministrationService_RetourneFonctionProfilMenu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneFonctionProfilMenuErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneFonctionProfilMenu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionMutation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/InsertionMutation" message="tns:IAdministrationService_InsertionMutation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/InsertionMutationResponse" message="tns:IAdministrationService_InsertionMutation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/InsertionMutationErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_InsertionMutation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilUtilisateur" message="tns:IAdministrationService_RetourneProfilUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilUtilisateurResponse" message="tns:IAdministrationService_RetourneProfilUtilisateur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneProfilUtilisateurErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneProfilUtilisateur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePasswords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswords" message="tns:IAdministrationService_RetourneHistoriquePasswords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordsResponse" message="tns:IAdministrationService_RetourneHistoriquePasswords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordsErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneHistoriquePasswords_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteListUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/DeleteListUser" message="tns:IAdministrationService_DeleteListUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/DeleteListUserResponse" message="tns:IAdministrationService_DeleteListUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/DeleteListUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_DeleteListUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriqueConnectionfromListUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionfromListUser" message="tns:IAdministrationService_RetourneHistoriqueConnectionfromListUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionfromListUserResponse" message="tns:IAdministrationService_RetourneHistoriqueConnectionfromListUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionfromListUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneHistoriqueConnectionfromListUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePasswordFromListUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordFromListUser" message="tns:IAdministrationService_RetourneHistoriquePasswordFromListUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordFromListUserResponse" message="tns:IAdministrationService_RetourneHistoriquePasswordFromListUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordFromListUserErrorsFault" name="ErrorsFault" message="tns:IAdministrationService_RetourneHistoriquePasswordFromListUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdministrationService" type="tns:IAdministrationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="saveProfilHabilitation">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/saveProfilHabilitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertUpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveUserProfil">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/saveUserProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveUserProfilCentre">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/saveUserProfilCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsModuleAdmMenu">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneCsModuleAdmMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCentreDuProfil">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneCentreDuProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneListeAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUserPerimetre">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneListeAllUserPerimetre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDesModule">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetListeDesModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeDesMenusProfil">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetListeDesMenusProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneAllModuleFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MenusSelectByFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/MenusSelectByFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitationSelectByMetierModule">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/HabilitationSelectByMetierModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionModuleDeFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertionModuleDeFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionProfilFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertionProfilFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllProfilUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneListeAllProfilUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilByFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneProfilByFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilByID">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneProfilByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBdConfig">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneBdConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTa">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneTa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/UpdateStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/DeleteStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetActifStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/SetActifStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActifStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetActifStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStrategieSecurite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAllStrategieSecurite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionHabilitationProfil">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertionHabilitationProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRole">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAllRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleProgram">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneAllModuleProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllModuleDeFonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneAllModuleDeFonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssocitedToMenuByMenuID">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAssocitedToMenuByMenuID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSite">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAllSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesCentre">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneListeDesCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetByLoginName">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByGuid">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/DeleteUserByGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SELECT_All_Fonction">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/SELECT_All_Fonction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramSelectAll">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/ProgramSelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePoste">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneListePoste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoste">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertPoste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoste">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/UpdatePoste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePassword">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneHistoriquePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriqueConnection">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SynchroniseDonneeAD">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/SynchroniseDonneeAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeListeDesAgents">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/ChargeListeDesAgents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MisaAjourImportFichier">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/MisaAjourImportFichier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuppressImportFichier">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/SuppressImportFichier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportFichier">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetImportFichier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExexcImporterFichier">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/ExexcImporterFichier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MisaAjourImportColonne">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/MisaAjourImportColonne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImportColonne">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetImportColonne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColonne">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/DeleteColonne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportFichierColonne">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAllImportFichierColonne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDepuisBaseDeDonnee">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/ImportDepuisBaseDeDonnee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImport">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetAllImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSQLDatabaseList">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetSQLDatabaseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviderList">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/GetProviderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRequest">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/LoadRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAgent">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/SaveAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAgentBaseDistante">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/LoadAgentBaseDistante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestBaseDistante">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/TestBaseDistante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MenusSelectByProfil">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/MenusSelectByProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFonctionProfilCentre">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneFonctionProfilCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFonctionProfilMenu">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneFonctionProfilMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionMutation">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/InsertionMutation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProfilUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneProfilUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePasswords">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteListUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/DeleteListUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriqueConnectionfromListUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneHistoriqueConnectionfromListUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneHistoriquePasswordFromListUser">
+      <soap:operation soapAction="http://tempuri.org/IAdministrationService/RetourneHistoriquePasswordFromListUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdministrationService">
+    <wsdl:port name="BasicHttpBinding_IAdministrationService" binding="tns:BasicHttpBinding_IAdministrationService">
+      <soap:address location="http://localhost:1818/Administration/AdministrationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

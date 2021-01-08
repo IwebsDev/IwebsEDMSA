@@ -1,0 +1,52 @@
+﻿<sdk:ChildWindow Loaded="ChildWindow_Loaded"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes;assembly=Galatee.Silverlight"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+                 x:Class="Galatee.Silverlight.InterfaceComptable.FrmPure"
+           Width="740" Height="445" 
+           Title="Exportation des écritures comptables"
+           OverlayBrush="Transparent" >
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2,0,-2,10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="740,6,0,0" VerticalAlignment="Top" Width="200" IsIndeterminate="True" Grid.Row="1"/>
+        <Controls:GroupBox FontWeight="SemiBold" x:Name="groupBox2_Copy" Margin="291,0,10,3" Header="Période " RenderTransformOrigin="0.5,0.5" Height="327" VerticalAlignment="Bottom" />
+        <Controls:GroupBox FontWeight="SemiBold" x:Name="groupBox" Margin="10,0,430,0" Header=" Critere" RenderTransformOrigin="0.5,0.5" Height="332" VerticalAlignment="Bottom" />
+
+        <ComboBox x:Name="CmbSite" HorizontalAlignment="Left" Margin="84,116,0,0" VerticalAlignment="Top" Width="179" SelectionChanged="CmbSite_SelectionChanged" IsEnabled="False"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="499,122,0,0" VerticalAlignment="Top" Width="27" Content="DU"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="499,167,0,0" VerticalAlignment="Top" Width="22" Content="AU"/>
+        <RadioButton x:Name="RdbDate" GroupName="Periode" Content="Date" HorizontalAlignment="Left" Margin="350,202,0,0" VerticalAlignment="Top" Checked="RdbDate_Checked"/>
+        <RadioButton x:Name="RdbIntervalle" GroupName="Periode" Content="Intervalle" HorizontalAlignment="Left" Margin="350,141,0,0" VerticalAlignment="Top" Width="81" Checked="RdbIntervalle_Checked"/>
+        <sdk:Label HorizontalAlignment="Left" Height="15" Margin="18,116,0,0" VerticalAlignment="Top" Width="59" Content="Sites"/>
+        <sdk:Label HorizontalAlignment="Left" Height="21" Margin="18,168,0,0" VerticalAlignment="Top" Width="55" Content="Caisse(s)"/>
+        <sdk:DatePicker x:Name="dtpDateDebut" HorizontalAlignment="Left" Height="23" Margin="535,120,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:DatePicker x:Name="dtpDateFin" HorizontalAlignment="Left" Height="23" Margin="535,166,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="CmbCaisse" HorizontalAlignment="Left" Margin="84,168,0,0" VerticalAlignment="Top" Width="180" Height="21" IsEnabled="False" SelectionChanged="CmbCaisse_SelectionChanged"/>
+        <sdk:DatePicker x:Name="dtpDateCaisse" HorizontalAlignment="Left" Height="23" Margin="535,199,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" IsEnabled="False" x:Name="cmbCentre" VerticalAlignment="Top" Width="180" Margin="84,141,0,0" SelectionChanged="cmbCentre_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="63" Margin="18,143,0,0" Content="Centre"/>
+        <Button Content="Operation" IsEnabled="False"  x:Name="btnOpertaion" HorizontalAlignment="Left" Margin="22,224,0,82" Width="241" Click="btnOpertaion_Click"/>
+        <ComboBox x:Name="CmbOperation" HorizontalAlignment="Left" Margin="23,263,0,0" VerticalAlignment="Top" Width="241"/>
+        <RadioButton x:Name="rdbEncaisse" Content="Encaissement" GroupName="Critere"  HorizontalAlignment="Left" Margin="18,31,0,0" VerticalAlignment="Top" FontSize="15" Foreground="#FFB93333" Width="141" Checked="rdbEncaisse_Checked"/>
+        <RadioButton x:Name="rdbFacture" Content="Vente" GroupName="Critere" HorizontalAlignment="Left" Margin="18,59,0,0" VerticalAlignment="Top" FontSize="15" Foreground="#FFB21E1E" Width="141" Checked="rdbDecaisse_Checked"/>
+        <RadioButton x:Name="rdbDecaissement" Content="Décaissement" GroupName="Critere" HorizontalAlignment="Left" Margin="18,87,0,0" VerticalAlignment="Top" FontSize="15" Foreground="#FFB21E1E" Width="141" Checked="rdbDeCaissement_Checked"/>
+        <CheckBox Content="Toutes les caisse" x:Name="Chk_TouteCaisse" IsEnabled="False"  HorizontalAlignment="Left" Width="172" Margin="84,194,0,116"/>
+        <CheckBox Content="MT" x:Name="Chk_Mt"  HorizontalAlignment="Left" Width="108" Margin="23,301,0,10" Checked="Chk_Mt_Checked"/>
+        <CheckBox Content="BT" x:Name="Chk_Bt"  HorizontalAlignment="Left" Width="128" Margin="136,301,0,10"/>
+        <Button Content="Purger"  x:Name="btnPurger" HorizontalAlignment="Left" Margin="329,2,0,0" Width="173"  Click="btnPurger_Click" Grid.Row="1"/>
+        <Button Content="Fermer"  x:Name="btnFermer" HorizontalAlignment="Left" Margin="507,0,0,0" Width="173" Grid.Row="1" />
+    </Grid>
+</sdk:ChildWindow>

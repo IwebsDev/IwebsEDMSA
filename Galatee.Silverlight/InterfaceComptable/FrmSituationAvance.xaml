@@ -1,0 +1,101 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Classes="clr-namespace:Galatee.Silverlight.Classes" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.InterfaceComptable.FrmSituationAvance"
+           Width="1148.5" Height="655.5" 
+           Title="FrmSituationAvance">
+    <controls:ChildWindow.Resources>
+        <Classes:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Classes:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <controls:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </controls:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" x:Name="groupBox2_Copy" Margin="0,0,846,10" RenderTransformOrigin="0.5,0.5" Height="526" VerticalAlignment="Bottom" Header=" Critère" Foreground="#FFE22323" >
+            <controls:DatePicker HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="120" Margin="83,127,0,0"/>
+        </Controls:GroupBox>
+
+        <ComboBox x:Name="CmbSite" HorizontalAlignment="Left" Margin="91,54,0,0" VerticalAlignment="Top" Width="179" SelectionChanged="CmbSite_SelectionChanged" IsEnabled="False"/>
+        <!--<CheckBox x:Name="ChkEncaissement" Content="Tous les encaissements" HorizontalAlignment="Left" Margin="5,192,0,0" VerticalAlignment="Top" Checked="ChkEncaissement_Checked"/>-->
+        <sdk:Label HorizontalAlignment="Left" Height="15" Margin="10,54,0,0" VerticalAlignment="Top" Width="68" Content="Sites"/>
+        <ComboBox HorizontalAlignment="Left" IsEnabled="False" x:Name="cmbCentre" VerticalAlignment="Top" Width="180" Margin="90,88,0,0" SelectionChanged="cmbCentre_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="71" Margin="10,90,0,0" Content="Produit"/>
+        <ComboBox HorizontalAlignment="Left" IsEnabled="False" x:Name="cmbCentre_Copy" VerticalAlignment="Top" Width="179" Margin="91,120,0,0" SelectionChanged="cmbCentre_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="72" Margin="10,122,0,0" Content="Catégorie"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="82" Margin="6,161,0,0" Content="Date d'arrêté"/>
+        <Button Content="Lancer" x:Name="ValiderButton" HorizontalAlignment="Left"  Click="OKButton_Click" Margin="279,10,0,3" Width="126" Grid.Row="1"/>
+        <Button Content="Editer" x:Name="GenererButton" HorizontalAlignment="Left"  Click="GenererButton_Click" Margin="408,10,0,0" VerticalAlignment="Top" Width="108" Height="22" Grid.Row="1"/>
+        <Button Content="Quiter" x:Name="EditerButton" HorizontalAlignment="Left"  Click="EditButton_Click" Margin="994,10,0,3" Width="108" Grid.Row="1"/>
+        <controls:TabControl HorizontalAlignment="Left" Height="530" Margin="275,0,0,0" VerticalAlignment="Top" Width="840">
+            <controls:TabItem x:Name="TBOperationClient" Header="Situation des avances sur consommation des clients actifs" Margin="0,0,3,-3" Height="21" VerticalAlignment="Bottom">
+                <Grid Margin="0,0,-17,0">
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="458" HorizontalAlignment="Left" 
+    					x:Name="DTOperationClientele" VerticalAlignment="Top" Width="835" >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="Code opération" Binding="{Binding LIBCOURT}" MinWidth="10"/>
+                            <sdk:DataGridTextColumn Header="Libelle opération" Binding="{Binding LIBELLE}" MinWidth="10"/>
+                            <sdk:DataGridTextColumn Header="Date" Binding="{Binding DATECREATION, Converter={StaticResource DateTimeConverter}}" MinWidth="10" Width="90" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Centre" Binding="{Binding CENTRE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Client" Binding="{Binding CLIENT}" MinWidth="10" Width="90" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Ordre" Binding="{Binding ORDRE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Montant" Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}" MinWidth="10" Width="90" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:Label HorizontalAlignment="Left" Content="Débit" Height="17" Margin="10,471,0,0" VerticalAlignment="Top" Width="61"/>
+                    <TextBox HorizontalAlignment="Left" x:Name="txt_total" IsReadOnly="True" Foreground="Green"  FontSize="14" Height="23" Margin="76,468,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="222"/>
+                </Grid>
+            </controls:TabItem>
+            <controls:TabItem x:Name="TBEcritureComptable" Header="Situation globale des avances sur consommations des clients actifs" Margin="-1,0,-23,-2" Height="20" VerticalAlignment="Bottom">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="424" HorizontalAlignment="Left" Margin="0,10,0,0" 
+    					x:Name="DTEcritureComptableFacture" VerticalAlignment="Top" Width="818" >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="Site" Binding="{Binding SITE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="False"/>
+                            <sdk:DataGridTextColumn Header="Opération" Binding="{Binding LIBELLEOPERATION}" MinWidth="10" Width="150" CanUserReorder="True" CanUserSort="True" IsReadOnly="False"/>
+                            <sdk:DataGridTextColumn Header="Date" Binding="{Binding DATECREATION, Converter={StaticResource DateTimeConverter}}" MinWidth="10" Width="90" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Activite" Binding="{Binding ACTIVITE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="False"/>
+                            <sdk:DataGridTextColumn Header="Compte" Binding="{Binding COMPTE}" MinWidth="10" Width="80" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="CI" Binding="{Binding CENTREIMPUTATION}" MinWidth="10" Width="80" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Filliere" Binding="{Binding FILIERE}" MinWidth="10" Width="80" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Sous compte" Binding="{Binding SOUSCOMPTE}" MinWidth="10" Width="110" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Loc" Binding="{Binding LOC}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Débit" Binding="{Binding DEBIT, Converter={StaticResource DecimalConverter}}" MinWidth="10" Width="100" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Crédit" Binding="{Binding CREDIT, Converter={StaticResource DecimalConverter}}" MinWidth="10" Width="100" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Caisse" Binding="{Binding CAISSE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="False"/>
+
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:Label HorizontalAlignment="Left" Content="Débit" Height="17" Margin="23,476,0,0" VerticalAlignment="Top" Width="61"/>
+                    <sdk:Label HorizontalAlignment="Left" Content="Crédit" Height="17" Margin="371,476,0,0" VerticalAlignment="Top" Width="61"/>
+                    <TextBox HorizontalAlignment="Left" x:Name="txt_Debit" IsReadOnly="True" Foreground="Green"  FontSize="14" Height="23" Margin="89,473,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" x:Name="txt_Credit" IsReadOnly="True" Foreground="Green" FontSize="14"  Height="23" Margin="452,473,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                </Grid>
+
+            </controls:TabItem>
+
+
+
+            <!--<sdk:TabItem x:Name="TBEcritureErronnees" Header="ECRITURES ERRONNEES" Margin="0,0,3,1" Height="20" VerticalAlignment="Bottom">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="358" HorizontalAlignment="Left" Margin="10,10,0,0" 
+                		x:Name="DTEcritureErronees" VerticalAlignment="Top" Width="663" >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Header="Origine" Binding="{Binding ORIGINE}" MinWidth="10" Width="60" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Numero caisse" Binding="{Binding CAISSE}" MinWidth="10" Width="110" CanUserReorder="True" CanUserSort="True" IsReadOnly="False"/>
+                            <sdk:DataGridTextColumn Header="Compte" Binding="{Binding COMPTGENE}" MinWidth="10" Width="80" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Date" Binding="{Binding DATECAISSE, Converter={StaticResource DateTimeConverter}}" MinWidth="10" Width="90" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                            <sdk:DataGridTextColumn Header="Debit" Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}" MinWidth="10" Width="100" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+
+            </sdk:TabItem>-->
+        </controls:TabControl>
+    </Grid>
+</controls:ChildWindow>

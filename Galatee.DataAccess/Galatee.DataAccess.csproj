@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6125D49C-FE80-4F58-8B20-66E49CBBDB97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galatee.DataAccess</RootNamespace>
+    <AssemblyName>Galatee.DataAccess</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Galatee.Dll\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\Galatee.Dll\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="INOVA.GALATEE.SECURITY">
+      <HintPath>..\Galatee.Dll\INOVA.GALATEE.SECURITY.dll</HintPath>
+    </Reference>
+    <Reference Include="ISF.Common">
+      <HintPath>..\Galatee.Dll\ISF.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Rpnt\Common\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Galatee.Dll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\INOVA\ISF\Microsoft.VisualStudio.DebuggerVisualizers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil\DBAccueil.cs" />
+    <Compile Include="Administration\DBAdmMenu.cs" />
+    <Compile Include="Administration\DBAdmUserSynchroBD.cs" />
+    <Compile Include="Administration\DbImportFichier.cs" />
+    <Compile Include="Administration\DBModule.cs" />
+    <Compile Include="Administration\DBProfils.cs" />
+    <Compile Include="Administration\DBSecurity.cs" />
+    <Compile Include="Administration\DBAdmRoles.cs" />
+    <Compile Include="Administration\DBAdmUsers.cs" />
+    <Compile Include="Administration\DBUserHabilitation.cs" />
+    <Compile Include="Caisse\DBAuthentification.cs" />
+    <Compile Include="cContext.cs" />
+    <Compile Include="Caisse\DBEncaissement.cs" />
+    <Compile Include="Commons\CommonDAL.cs" />
+    <Compile Include="Commons\Transaction.cs" />
+    <Compile Include="ConditionChecker.cs" />
+    <Compile Include="DBBase.cs" />
+    <Compile Include="DBEditionEncaissement.cs" />
+    <Compile Include="Devis\DBCONTROLETRAVAUX.cs" />
+    <Compile Include="Devis\DBELEMENTSDEVIS.cs" />
+    <Compile Include="Devis\DBFOURNITURE.cs" />
+    <Compile Include="Devis\DBINTERVENTIONPLANNIFIEE.cs" />
+    <Compile Include="Devis\DBTRAVAUXDEVIS.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="Errors.cs" />
+    <Compile Include="Eservice\DBEservice.cs" />
+    <Compile Include="Facturation\CsLaDufactureClient.cs" />
+    <Compile Include="Facturation\DBCalcul.cs" />
+    <Compile Include="Facturation\DBIndex.cs" />
+    <Compile Include="Fraude\DBFRAUDE.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Habilitation\DBHabilitationProfil.cs" />
+    <Compile Include="Habilitation\DBModuleDeFonction.cs" />
+    <Compile Include="InterfaceComptable\DbInterfaceComptable.cs" />
+    <Compile Include="Mobiles\DBMobiles.cs" />
+    <Compile Include="Parametrage\DB_PosteSource.cs" />
+    <Compile Include="Parametrage\DBPARAMETRECOUPURESGC.cs" />
+    <Compile Include="Parametrage\DB_CALIBRECOMPTEUR.cs" />
+    <Compile Include="Parametrage\DB_ACTIVITECOULEUR.cs" />
+    <Compile Include="Parametrage\DB_ACTIVITE.cs" />
+    <Compile Include="Parametrage\DB_COULEUR.cs" />
+    <Compile Include="Parametrage\DB_MODEL.cs" />
+    <Compile Include="Parametrage\DB_MARQUE_MODEL.cs" />
+    <Compile Include="Parametrage\DBMATERIEL.cs" />
+    <Compile Include="Parametrage\DB_NOTIFICATION.cs" />
+    <Compile Include="Parametrage\DBTYPECOMPTAGE.cs" />
+    <Compile Include="Parametrage\DBTYPEDETAXE.cs" />
+    <Compile Include="Parametrage\DBSECTEUR.cs" />
+    <Compile Include="Parametrage\DBAJUFIN.cs" />
+    <Compile Include="Parametrage\DBMONNAIE.cs" />
+    <Compile Include="Parametrage\DBREDEVANCE.cs" />
+    <Compile Include="Parametrage\DBSTATUTJURIDIQUE.cs" />
+    <Compile Include="Parametrage\DBTYPECLIENT.cs" />
+    <Compile Include="Parametrage\DBTYPEDEMANDE.cs" />
+    <Compile Include="Parametrage\DBTYPEMESSAGE.cs" />
+    <Compile Include="Parametrage\DBAPPLICATIONTAXE.cs" />
+    <Compile Include="Parametrage\DBETATCOMPTEUR.cs" />
+    <Compile Include="Parametrage\DBMOIS.cs" />
+    <Compile Include="Parametrage\DBUNITECOMPTAGE.cs" />
+    <Compile Include="Parametrage\DBNIVEAUTARIF.cs" />
+    <Compile Include="Parametrage\DBMODECALCUL.cs" />
+    <Compile Include="Parametrage\DBRECHERCHETARIF.cs" />
+    <Compile Include="Parametrage\DBPERIODICITEFACTURATION.cs" />
+    <Compile Include="Parametrage\DBENTREPRISE.cs" />
+    <Compile Include="Parametrage\DBMarqueCompteur.cs" />
+    <Compile Include="Parametrage\DBAPPAREILS.cs" />
+    <Compile Include="Devis\DBAPPAREILSDEVIS.cs" />
+    <Compile Include="Devis\DBCLIENT.cs" />
+    <Compile Include="Devis\DBDEMANDEDEVIS.cs" />
+    <Compile Include="Devis\DBDEPOSIT.cs" />
+    <Compile Include="Devis\DBDEVIS.cs" />
+    <Compile Include="Devis\DBDevisManagement.cs" />
+    <Compile Include="Devis\DBDEVISPIA.cs" />
+    <Compile Include="Devis\DBDOCUMENTSCANNE.cs" />
+    <Compile Include="Devis\DBService.cs" />
+    <Compile Include="Devis\DBSUIVIDEVIS.cs" />
+    <Compile Include="Interface\DBCompta.cs" />
+    <Compile Include="Parametrage\DBCTAX.cs" />
+    <Compile Include="Parametrage\DBUSAGE.cs" />
+    <Compile Include="Parametrage\DB_APPAREILS.cs" />
+    <Compile Include="Parametrage\DB_CAISSE.cs" />
+    <Compile Include="Parametrage\DB_Commune.cs" />
+    <Compile Include="Parametrage\DB_Coper.cs" />
+    <Compile Include="Parametrage\DB_CoperDemande.cs" />
+    <Compile Include="Parametrage\DB_CoutCoper.cs" />
+    <Compile Include="Parametrage\DB_Fourniture.cs" />
+    <Compile Include="Parametrage\DB_QUARTIER.cs" />
+    <Compile Include="Parametrage\DBFonction.cs" />
+    <Compile Include="Parametrage\DBETAPEDEVIS.cs" />
+    <Compile Include="Parametrage\DBPIECEIDENTITE.cs" />
+    <Compile Include="Parametrage\DBTacheDevis.cs" />
+    <Compile Include="Parametrage\DBTYPEDEVIS.cs" />
+    <Compile Include="Facturation\DbFacturation.cs" />
+    <Compile Include="Parametrage\DB_Site.cs" />
+    <Compile Include="Parametrage\DB_Centre.cs" />
+    <Compile Include="Parametrage\DB_TDEM1.cs" />
+    <Compile Include="Parametrage\DB_TypeCentre.cs" />
+    <Compile Include="Parametrage\DB_REGEXO.cs" />
+    <Compile Include="Parametrage\DB_REGCLI.cs" />
+    <Compile Include="Parametrage\DB_PARAMABONUTILISE.cs" />
+    <Compile Include="Parametrage\DB_DOMBANC.cs" />
+    <Compile Include="Parametrage\DB_NumeroInstallation.cs" />
+    <Compile Include="Parametrage\DB_LibelleTop.cs" />
+    <Compile Include="Parametrage\DB_PosteTransformation.cs" />
+    <Compile Include="Parametrage\DB_CodeDepart.cs" />
+    <Compile Include="Parametrage\DB_CelluleDuSiege.cs" />
+    <Compile Include="Parametrage\DB_Nationalite.cs" />
+    <Compile Include="Parametrage\DB_CategorieBranchement.cs" />
+    <Compile Include="Parametrage\DB_Consommateur.cs" />
+    <Compile Include="Parametrage\DB_CategorieClient.cs" />
+    <Compile Include="Parametrage\DB_Proprietaire.cs" />
+    <Compile Include="Parametrage\DB_ParametresEvenement.cs" />
+    <Compile Include="Parametrage\DB_ParametresGeneraux.cs" />
+    <Compile Include="Parametrage\DB_Denomination.cs" />
+    <Compile Include="Parametrage\DB_Produit.cs" />
+    <Compile Include="Parametrage\DB_BANQUES.cs" />
+    <Compile Include="Parametrage\DB_CASIND.cs" />
+    <Compile Include="Parametrage\DB_COMMON.cs" />
+    <Compile Include="Parametrage\DbBase.cs" />
+    <Compile Include="Parametrage\DB_DEMCOUT.cs" />
+    <Compile Include="Parametrage\DB_REGLAGECOMPTEUR.cs" />
+    <Compile Include="Parametrage\DB_FORFAIT.cs" />
+    <Compile Include="Parametrage\DB_INIT.cs" />
+    <Compile Include="Parametrage\DB_PUISSANCE.cs" />
+    <Compile Include="Parametrage\DB_REGROU.cs" />
+    <Compile Include="Parametrage\DB_RUES.cs" />
+    <Compile Include="Parametrage\DB_TARIF.cs" />
+    <Compile Include="Parametrage\DB_TCOMPT.cs" />
+    <Compile Include="Parametrage\DB_WORKFLOW.cs" />
+    <Compile Include="Reclamation\DBRECLAMATION.cs" />
+    <Compile Include="Recouvrement\DBClientAccess.cs" />
+    <Compile Include="Recouvrement\DBMoratoires.cs" />
+    <Compile Include="Habilitation\DBHabilitationMenuModule.cs" />
+    <Compile Include="Habilitation\DBHabilitationModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parametrage\DB_TA0.cs" />
+    <Compile Include="Reports\DBReports.cs" />
+    <Compile Include="Rpnt\DBCAMPAGNE.cs" />
+    <Compile Include="Scelles\DbScelles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="Recouvrement\TAB300Access.cs" />
+    <Compile Include="SIG\DBSig.cs" />
+    <Compile Include="SqlCeCommand.cs" />
+    <Compile Include="Tarification\DbTarification.cs" />
+    <Compile Include="TransactionManager.cs" />
+    <Compile Include="WorkFlow\DbWorkFlow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Rpnt\vssver.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Galatee.Entity.Postgresql\Galatee.Entity.Model.csproj">
+      <Project>{f8eb6e94-c9b7-4cd7-bced-97615c41044f}</Project>
+      <Name>Galatee.Entity.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Galatee.Structure\Galatee.Structure.csproj">
+      <Project>{16d759ee-71cb-42b0-b9ea-13eacfd7dd01}</Project>
+      <Name>Galatee.Structure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Galatee.Tools\Galatee.Tools.csproj">
+      <Project>{74a2f81d-19cd-4b78-a3de-6cff91eb18d0}</Project>
+      <Name>Galatee.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,79 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Recouvrement.CreationLotManuelle"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+            xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library"
+            xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+    Style="{StaticResource ChildWindowGalatee}" OverlayBrush="Transparent"
+           Width="776" Height="603.194" 
+           Title="Affectation de lot">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox  Header="Info Générale" Background="WhiteSmoke" HorizontalAlignment="Left" Height="108" Margin="10,26,0,0" VerticalAlignment="Top" Width="728"/>
+        <Controls:GroupBox  Header="Critère du lot de contrôle" Background="WhiteSmoke" HorizontalAlignment="Left" Height="346" Margin="10,139,0,0" VerticalAlignment="Top" Width="728"/>
+        <!--<Controls:GroupBox  Header="Population du lot" Background="WhiteSmoke" HorizontalAlignment="Left" Height="252" Margin="20,270,0,0" VerticalAlignment="Top" Width="710"/>-->
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="20,43,0,0" Content="Lot :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="20,71,0,0" Content="Date de création :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="77" Margin="428,95,0,0" Content="Agent création :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="77" Margin="428,67,0,0" Content="Statut :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="77" Margin="428,39,0,0" Content="Campagne :"/>
+        <TextBox x:Name="tbx_lib_lot" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Margin="123,39,0,0"/>
+        <TextBox IsReadOnly="True" x:Name="tbx_date_creat_lot" Text="{Binding DateCreation, Converter={StaticResource DateTimeConverter}, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Margin="123,67,0,0"/>
+        <TextBox x:Name="tbx_libele_Camp" Text="{Binding Libelle_Campagne,Mode=TwoWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="510,39,0,0"/>
+        <TextBox IsReadOnly="True" x:Name="tbx_statu" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="510,67,0,0"/>
+        <TextBox IsReadOnly="True" x:Name="tbx_createur" Text="{Binding MatriculeAgentCreation,Mode=TwoWay}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Margin="510,95,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="20,172,0,0" Content="Type de client :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="20,200,0,0" Content="Type tarif :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="20,228,0,0" Content="Type compteur :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="385,172,0,0" Content="Groupe facture :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="385,200,0,0" Content="Tournée :" Visibility="Collapsed"/>
+        <Button Content="Raffraichir liste clients éligible" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="25,173,0,0" Click="Button_Click_1"/>
+        <!--<sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="291" Margin="31,454,0,0" Content="Nombre d'élément non affectés de la Campagne :"/>-->
+        <!--<sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="291" Margin="31,482,0,0" Content="Nombre d'éléments éligibles selon critères :"/>-->
+        <!--<sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="532,454,0,0" Content="Population du lot :"/>-->
+        <!--<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Margin="308,450,0,0"/>-->
+        <!--<TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Margin="308,478,0,0"/>-->
+        <!--<TextBox Text="{Binding ElementName=dg_population_lot,Path=Items.Count,Mode=TwoWay}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Margin="657,450,0,0"/>-->
+        <sdk:DataGrid HorizontalAlignment="Left" AutoGenerateColumns="False"  x:Name="dg_pop_non_affecte" Height="239" VerticalAlignment="Top" Width="311" Margin="25,205,0,0" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ref branchement" Width="Auto" Binding="{Binding Path=Contrat_ID}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom prénoms" Width="Auto" Binding="{Binding Path=Nom}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" Binding="{Binding Path=Libelle_Centre}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dg_population_lot" HorizontalAlignment="Left" Height="239" VerticalAlignment="Top" Width="335" Margin="385,205,0,0" AutoGenerateColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ref branchement" Width="Auto" Binding="{Binding Path=Contrat_ID}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom prénoms" Width="Auto" Binding="{Binding Path=Nom}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" Binding="{Binding Path=Libelle_Centre}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <!--<Button Content="...." HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Margin="356,96,0,0"/>-->
+        <!--<Button Content="...." HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="713,96,0,0"/>-->
+        <ComboBox x:Name="cbxtypeclient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="140,170,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxtarif" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="140,197,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxcompteur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="140,222,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxgropfacture" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="496,170,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxtournee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Margin="496,201,0,0" Visibility="Collapsed"/>
+        <Button Content=">>" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="350,331,0,0" Click="Button_Click_2"/>
+        <Button x:Name="btn_load_brt_in_lot" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="350,382,0,0" Click="btn_load_brt_in_lot_Click_1"/>
+        <sdk:Label Content="Agent controleur" HorizontalAlignment="Left" Height="22" Margin="22,100,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="123,100,0,0" VerticalAlignment="Top" Width="43" x:Name="btn_AgtRecepteur"  Click="btn_AgtRecepteur_Click" RenderTransformOrigin="0.5,0.5" />
+        <TextBox x:Name="txtAgt_Recepteur" HorizontalAlignment="Left" Height="23" Margin="171,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60" Background="LightBlue" IsReadOnly="False" TextChanged="txtAgt_Recepteur_TextChanged" />
+        <TextBox x:Name="txt_LibelleAgentRecepteur" HorizontalAlignment="Left" Height="23" Margin="236,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" IsReadOnly="True"/>
+    </Grid>
+</controls:ChildWindow>

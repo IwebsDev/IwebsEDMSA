@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Caisse.FrmFondDeCaisse"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+          
+    Width="555" Height="277" 
+           Title="Fond de caisse" Style="{StaticResource ChildWindowGalatee}" OverlayBrush="{x:Null}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox  Header="Caisse" Background="Transparent" HorizontalAlignment="Left" Height="147" VerticalAlignment="Top" Width="517" Grid.ColumnSpan="2" Margin="0,2,0,0"/>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Grid.Column="1" />
+        <sdk:Label x:Name="lbl_NumCaisse" HorizontalAlignment="Left" Height="19" Margin="10,30,0,0" VerticalAlignment="Top" Width="120" Content="Numero caisse"/>
+        <sdk:Label x:Name="lbl_fondCaisseActuel" HorizontalAlignment="Left" Height="19" Margin="10,60,0,0" VerticalAlignment="Top" Width="144" Content="Fond de caisse actuel"/>
+        <sdk:Label x:Name="lbl_NouveauFondCaisse" HorizontalAlignment="Left" Height="21" Margin="10,87,0,0" VerticalAlignment="Top" Width="144" Content="Nouveau fond caisse"/>
+        <ComboBox x:Name="cbo_MoisComptable" HorizontalAlignment="Left" Margin="0,115,0,0" VerticalAlignment="Top" Width="222" Grid.Column="1" Height="21"/>
+        <sdk:Label x:Name="lbl_MoisComptable" HorizontalAlignment="Left" Height="21" Margin="10,114,0,0" VerticalAlignment="Top" Width="120" Content="Mois comptable"/>
+        <TextBox x:Name="txtNumCaisse" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="0,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" TextChanged="txtNumCaisse_TextChanged"/>
+        <TextBox x:Name="txtFondActuel" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="0,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" RenderTransformOrigin="0.528,3.04"/>
+        <TextBox x:Name="txtFondNouveau" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="0,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" RenderTransformOrigin="0.528,3.04"/>
+    </Grid>
+</controls:ChildWindow>

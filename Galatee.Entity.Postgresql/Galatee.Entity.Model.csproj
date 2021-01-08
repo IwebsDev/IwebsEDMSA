@@ -1,0 +1,1395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8EB6E94-C9B7-4CD7-BCED-97615C41044F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galatee.Entity.Model</RootNamespace>
+    <AssemblyName>Galatee.Entity.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Galatee.Dll\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="INOVA.GALATEE.SECURITY">
+      <HintPath>..\Galatee.Dll\INOVA.GALATEE.SECURITY.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABO07.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABO07.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABO07.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABO07.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABO07.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABO07.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ABON.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil\AccueilProcedures.cs" />
+    <Compile Include="ACTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIONFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIONSURCOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIONSURDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ActiviteCouleur.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVITEE_ORGANE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVITEE_TERRAIN.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMHISTORIQUECONNECTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMHISTORIQUEPASSWORD.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\AdminProcedures.cs" />
+    <Compile Include="Administration\AdminProceduresSynchroBD.cs" />
+    <Compile Include="Administration\ImportFichierProcedure.cs" />
+    <Compile Include="ADMINISTRATION_INSTITUT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMMENU.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="admScelle.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMSTATUSCOMPTE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMSTRATEGIESECURITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMUTILISATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AFFECTATIONDEMANDEUSER.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AFFECTATIONGESTIONAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AffectationScelle.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AG.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCEBANQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AGENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AJUFIN.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ANNUL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ANOMALIEFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APPAREILRECENSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APPAREILS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APPAREILSDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APPAREILSUTILISE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APPLICATIONTAXE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARRETE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUDITION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUTRECLIENTPRECONTENCIEUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BANQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BRT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAISSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CALIBRECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMPAGNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMPAGNEGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMPAGNEPRECONTENTIEUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMPAGNESGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CANALISATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CASIND.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIEBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIECLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIECLIENT_TYPECLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIECLIENT_USAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CELLULEDUSIEGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTFAC.cs">
+      <DependentUpon>ABO07.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTREAFFECTATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTREDUPOSTESOURCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTREDUPOSTETRANSFORMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTREDUPROFIL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CODECONSOMMATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CODECONTROLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMENTAIRE_REJET.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMUNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMUNEGROUPEDEPANNAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_BANQUECENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_CENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_COMPTE_SPECIFIQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_ECRITURECOMPTABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_OPERATIONCOMPTABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTA_TYPE_COMPTE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPTEURFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONDITIONBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionStringConfiguration.cs" />
+    <Compile Include="Common\CommonProcedures.cs" />
+    <Compile Include="Caisse\CaisseProcedures.cs" />
+    <Compile Include="conso2017.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONSOMMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTENANTCRITERETARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLETRAVAUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COPER.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COPEROD.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COPIE_DMD_CIRCUIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COPIE_DMD_CONDITIONBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COUTDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CPROFAC.cs">
+      <DependentUpon>ABO07.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CREDFAC.cs">
+      <DependentUpon>ABO07.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTARCOMP.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTARCOMPPARPERIODE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DABON.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DADMINISTRATION_INSTITUT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAG.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DANNOTATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA1CTARCOMP.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAUTORISATIONCAISSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBRT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DCANALISATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DCLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DCOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DECHARGEPRECONTENSIEUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DECISIONFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEFPARAMABON.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEMANDEANNULATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEMANDE_WORFKLOW.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DENOMINATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DENONCIATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPANNAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTHTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetailAffectationScelle.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILCAMPAGNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILCAMPAGNEGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILCAMPAGNEPRENCONTENTIEUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILCAMPAGNESGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILLOT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILMANDATEMENTGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILMORATOIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILPAIEMENTCAMPAGNEGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILparPRESTATIONEDM.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILparPRESTATIONREMBOURSABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILparREGULARISATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILparTRANCHE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILTARIFFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILTARIFFACTURATION1.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEVENEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Devis\DevisProcedures.cs" />
+    <Compile Include="DINFOPROPRIETAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOCUMENTSCANNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOCUMENTSCANNETemp.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOMBANC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DORDRETRAVAIL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DPERSONNEPHYSIQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSCELLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSOCIETEPRIVE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTRANSFERT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EchecIsole.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ELEMENTACHATTIMBRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ELEMENTDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElementsDeCampagneBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTREPRISE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Eservice\EserviceProcedure.cs" />
+    <Compile Include="ETAPE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETAPEDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETATCOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EVENEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Facturation\FacturationMiseAJourProcedure.cs" />
+    <Compile Include="Facturation\FacturationProcedure.cs" />
+    <Compile Include="FACTUREFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAC_ENTFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAC_PROFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAC_REDFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FERMABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FONCTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fonctions\FonctionCaisse.cs" />
+    <Compile Include="FORFAIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FOURNITURE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRAISTIMBRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRAIXPARICIPATIONDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\CENTRE.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\CLIENT.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\DENONCIATEUR.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\ETAPEFRAUDE.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\Fraude.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fraude.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\FRAUDE.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\Fraude.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fraude.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\Fraude1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fraude\FraudeProcedure.cs" />
+    <Compile Include="Fraude\SOURCECONTROLE.cs">
+      <DependentUpon>Fraude.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FREQUENCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GALADB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GALADB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GALADB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GALADB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GALADB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GEOGES.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_GROUPE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_GROUPE_AFFECTE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_MODE_COMMUNICATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_PANNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_TYPE_RECLAMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_TYPE_VEHICULE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRC_VEHICULE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUPERECLAMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUPE_VALIDATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUPPROGRAM.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HABILITATIONCAISSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Habilitation\AuthentProcedures.cs" />
+    <Compile Include="HISTORIQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORIQUE_CONNECTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORTCOLONNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INDEXCAMPAGNE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INDEXCAMPAGNESGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Index\IndexProcedures.cs" />
+    <Compile Include="INFOPROPRIETAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceComptable\InterfaceComptableProcedure.cs" />
+    <Compile Include="Interfaces\InterfaceProcedures.cs" />
+    <Compile Include="INTERVENTIONPLANNIFIEE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JOURNAL_DEMANDE_WORKFLOW.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LCLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LCLIENTFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIBELLEACTIONFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIBELLETOP.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIENREDEVANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOCALISATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOTCOMPTECLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOTRI.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAGASINVIRTUEL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAGASINVIRTUEL_Save.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MANDATEMENTGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARQUECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARQUEDISJONCTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARQUETRANSFORMATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARQUE_MODELE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATERIELBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATERIELDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAUVAISPAYEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MENUSDUPROFIL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESSAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobiles\MobileProcedures.cs" />
+    <Compile Include="MODEAPPLICATIONTARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODECALCUL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODELE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEPAIEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODERECEPTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEREG.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODULE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODULESDEFONCTION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOISDEJAFACTURES.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MONNAIE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MORATOIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOTIFCHEQUEIMPAYE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOYENDENONCIATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NATGEN.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NATIONALITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NIVEAUTARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOTIFICATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NUMEROINSTALLATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OBSERVATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPENINGDAY.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPERATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORGANEFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORGANE_SCELLABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORIGINELOT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAGERI.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAGISOL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAIEMENTCAMPAGNEGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMABONUTILISE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMETRAGEIMPORT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrage\ParamProcedureWfl.cs" />
+    <Compile Include="Parametrage\ParamProcedure.cs" />
+    <Compile Include="PARAMETREBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMETRECOUPURESGC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMETREEVENEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMETRESGENERAUX.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARAMETRESMTP.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAYEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERIODICITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONNEPHYSIQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHASECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PIECEIDENTITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSE_SCELLE_DEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTECLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTESOURCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTETRANSFORMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTATAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTATIONEDM.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTATIONREMBOURSABLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUITCENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROFIL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROFILSUTILISATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROGRAM.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROGRAMMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROGRAMMATION1.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PROPRIETAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PUISSANCEINSTALLEE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PUISSANCEPARREGLAGECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PUISSANCESOUSCRITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUALITEEXPERT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUARTIER.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RAFFECTATIONETAPEWORKFLOW.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_GroupeReclamation.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_ModeReception.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_Reclamation.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_StatutReclamation.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_TypeReclamation.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RCL_Validation.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RECHERCHETARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RECLAMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reclamation\ReclamationProcedure.cs" />
+    <Compile Include="Recouvrement\RecouvProcedures.cs" />
+    <Compile Include="REDEVANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REDFAC.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefActivite.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefCouleurlot.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefEtatCompteur.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefFournisseurs.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefMethodesDeDetectionClientsBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefMotif.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefOrigineScelle.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefProvenance.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefStatus.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefStatusLotScelle.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefStatutLotMagasinGeneral.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REGEXO.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REGLAGECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REGROUPEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REGULARISATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REJET_DE_TRAITEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RELANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RELEVEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RENVOI_REJET.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportsProcedures.cs" />
+    <Compile Include="REVERSEMENTCAISSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHABILITATIONGROUPEVALIDATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rpnt\ConnectionStringConfiguration.cs" />
+    <Compile Include="Rpnt\RpntProcedures.cs" />
+    <Compile Include="RUBRIQUEDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RUBRIQUEDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RUES.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RWORFKLOWCENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCELLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scelles.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scelles\ScellesProcedure.cs" />
+    <Compile Include="SECTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SECTEURACTIVITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIG\SIGProcedures.cs" />
+    <Compile Include="SITE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SMS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SOCIETEPRIVE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORTIEAUTREMATERIEL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORTIECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORTIECOMPTEUR_Save.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORTIEMATERIEL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SOURCECONTROLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUSDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUTCOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUTJURIQUE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUTRECLAMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATUTTRANSFERT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUIVIDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABLETRAVAIL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TARIFFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tarification\TarificationProcedure.cs" />
+    <Compile Include="TAXCOMP.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAXE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbCampagnesControleBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbCompteurBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbDetailRemiseScelles.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbDetailRetourScelles.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbElementsLotDeControleBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbLot.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbLotMagasinGeneral.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbLotsDeControleBTA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbParametres.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRemiseScelles.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbRetourScelles.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempDoublons.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOURNEE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOURNEEPIA.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOURNEERELEVEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRAITEMENT_FICHIER.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANCHEFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANCHEREDEVANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSCAISB.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSCAISBFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSCAISSE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSCAISSEFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSFERT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSFERTTemp.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSFORMATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRAVAUXDEVIS.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEACTIONDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEBRANCHEMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEBRANCHEMENTPARPRODUIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECLIENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECOMPTAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECOMPTEURCOMPTAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECONTROLE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPECOUPURE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEDISJONCTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEDISJONCTEURPARCALIBRECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEDOCUMENT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEFACTURATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEFRAUDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPELIENPRODUIT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPELIENREDEVANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPELOT.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEMATERIEL.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEMESSAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPENOTIFICATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPERECLAMATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEREDEVANCE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETARIFPARCATEGORIE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETARIFPARREGLAGECOMPTEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETAXE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETIMBRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPETRANSFORMATEUR.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UNITECOMPTAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USAGE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VALIDATION.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VARIABLETARIF.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VARIANTE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwCONFIGURATIONWORKFLOWCENTRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_DASHBORDDEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_JOURNAL_DEMANDE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_OPERATION_FORMULAIRE.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WORKFLOW.cs">
+      <DependentUpon>GALADB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ABO07.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ABO07.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ABO07.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ABO07.edmx</DependentUpon>
+      <LastGenOutput>ABO07.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ABO07.edmx.diagram">
+      <DependentUpon>ABO07.edmx</DependentUpon>
+    </None>
+    <None Include="ABO07.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ABO07.edmx</DependentUpon>
+      <LastGenOutput>ABO07.cs</LastGenOutput>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Fraude\Fraude.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fraude.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Fraude\Fraude.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fraude.edmx</DependentUpon>
+      <LastGenOutput>Fraude.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Fraude\Fraude.edmx.diagram">
+      <DependentUpon>Fraude.edmx</DependentUpon>
+    </None>
+    <None Include="Fraude\Fraude.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fraude.edmx</DependentUpon>
+      <LastGenOutput>Fraude1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="GALADB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GALADB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GALADB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GALADB.edmx</DependentUpon>
+      <LastGenOutput>GALADB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="GALADB.edmx.diagram">
+      <DependentUpon>GALADB.edmx</DependentUpon>
+    </None>
+    <None Include="GALADB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GALADB.edmx</DependentUpon>
+      <LastGenOutput>GALADB.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ABO07Entities.datasource" />
+    <None Include="Properties\DataSources\galadbEntities.datasource" />
+    <None Include="Properties\DataSources\galadbEntities11.datasource" />
+    <None Include="Rpnt\vssver.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Galatee.Security\Galatee.Security.csproj">
+      <Project>{cd7b4752-8eb7-415c-b8c0-7257a91e4f6a}</Project>
+      <Name>Galatee.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Galatee.Structure\Galatee.Structure.csproj">
+      <Project>{16d759ee-71cb-42b0-b9ea-13eacfd7dd01}</Project>
+      <Name>Galatee.Structure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Galatee.Tools\Galatee.Tools.csproj">
+      <Project>{74a2f81d-19cd-4b78-a3de-6cff91eb18d0}</Project>
+      <Name>Galatee.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GALADB.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

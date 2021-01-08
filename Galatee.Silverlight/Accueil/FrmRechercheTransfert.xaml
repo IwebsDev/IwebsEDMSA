@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Accueil.FrmRechercheTransfert"
+           Width="735.94" Height="429.806" 
+           Title="RechercheTransfert" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,306,0,26" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,306,79,26" />
+        <sdk:Label Content="Type de transfert" HorizontalAlignment="Left" Height="28" Margin="30,30,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cboCoper" HorizontalAlignment="Left" Margin="150,28,0,0" VerticalAlignment="Top" Width="207"/>
+
+        <sdk:DataGrid x:Name="dgDemande" Margin="10,76,10,68" AutoGenerateColumns="False" SelectionChanged="dgDemande_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NUMERO DEMANDE" Width="Auto" Binding="{Binding Path=NUMDEM}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CENTRE" Width="Auto" Binding="{Binding Path=CENTRE}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CLIENT" Width="Auto" Binding="{Binding Path=CLIENT}"/>
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <Button Content="Rechercher" HorizontalAlignment="Left" Margin="376,27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+    </Grid>
+</controls:ChildWindow>

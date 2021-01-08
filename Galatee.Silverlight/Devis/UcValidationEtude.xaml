@@ -1,0 +1,119 @@
+﻿<sdk:ChildWindow
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+             xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+             xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+           x:Class="Galatee.Silverlight.Devis.UcValidationEtude"
+           Width="1043" Height="730" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}"
+           Title="Etude de dossier" Closed="ChildWindow_Closed" Loaded="ChildWindow_Loaded" >
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <toolkit:ContextMenuService.ContextMenu>
+            <toolkit:ContextMenu x:Name="MenuContextuel" Opened="MenuContextuel_Opened">
+                <toolkit:MenuItem x:Name="MenuContextuelAjouter" Header="Etablir" Icon="" Click="Ajouter_Click" />
+                <toolkit:MenuItem x:Name="MenuContextuelSupprimer" Header="Modifier" Click="Supprimer_Click" />
+            </toolkit:ContextMenu>
+        </toolkit:ContextMenuService.ContextMenu>
+        <my:GroupBox Header="Informations sur le devis" Margin="0,0,0,544" x:Name="Gbo_InformationAccount" IsEnabled="True" />
+        <my:GroupBox Header="Elément du Devis" Margin="-2,76,2,0" x:Name="Gbo_InformationDevis" IsEnabled="True" />
+        <TextBox Height="23" Margin="96,17,566,580" MaxLength="19" x:Name="Txt_NumDevis" IsReadOnly="True"/>
+        <sdk:Label Content="Demande" Margin="10,17,850,580" x:Name="lab_AmountOfDeposit" />
+        <TextBox IsReadOnly="True" Margin="0,17,202,580" x:Name="Txt_TypeDevis" Width="359" HorizontalAlignment="Right" />
+        <TextBox Height="23" IsReadOnly="True" Margin="96,45,566,552" x:Name="Txt_Distance" RenderTransformOrigin="1.281,1.5" />
+        <sdk:Label Content="Décision" Height="19" HorizontalAlignment="Left" Margin="10,24,688,449" x:Name="lab_Decision" VerticalAlignment="Top" Width="71" Visibility="Collapsed" />
+        <CheckBox Content="Dossier Complet" Height="21" HorizontalAlignment="Right" Margin="0,154,556,0" x:Name="Chk_DossierComplet" VerticalAlignment="Top" Width="125" Visibility="Collapsed" />
+        <CheckBox Content="Dossier imcomplet" Height="21" HorizontalAlignment="Left" Margin="259,154,0,0" x:Name="Chk_DossierImcomplet" VerticalAlignment="Top" Width="135" Visibility="Collapsed" />
+
+        <sdk:Label Content="Distance" Margin="10,46,851,554" x:Name="label1" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="114" Height="23" HorizontalAlignment="Right" Margin="0,9,26,3" Grid.Row="1" />
+        <Button x:Name="BtnTransmettre" Content="Transmettre" Click="OKButton_Click" Height="23" Margin="541,12,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="75" Visibility="Collapsed" />
+        <Button x:Name="OKButton" Content="Suivant" Click="OKButton_Click" Height="23" Margin="754,9,0,3" Grid.Row="1" HorizontalAlignment="Left" Width="114" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="187" HorizontalAlignment="Left" Margin="5,93,0,0" x:Name="dataGridElementDevis"  GridLinesVisibility="None" VerticalAlignment="Top" Width="907" IsReadOnly="True" SelectionChanged="dataGridElementDevis_SelectionChanged">
+            <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn Binding="{Binding DESIGNATION, Mode=TwoWay}" Header="Désignation" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="270" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITE, Mode=TwoWay}" Header="Quantité" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_FOURNITURE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="PU Fourniture" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_POSE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="PU Pose" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTHT,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="H T " CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTAXE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="TVA" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTTC,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="TTC" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTemplateColumn Width="100"  IsReadOnly="True" Header=" En pose"   >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_enPose" IsChecked ="{Binding IsPose}"  Checked="chk_enPose_Checked" Unchecked="chk_enPose_Unchecked"
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Width="100" IsReadOnly="True" Header=" PM" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_enPM" IsChecked ="{Binding ISPM}" Checked="chk_enPM_checked" Unchecked="chk_enPM_Unchecked" 
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Ajouter" Height="24" HorizontalAlignment="Left" Margin="917,101,0,0" x:Name="Btn_Ajouter" VerticalAlignment="Top" Width="88" Click="Btn_Ajouter_Click" />
+        <Button Content="Supprimer" Height="23" HorizontalAlignment="Left" Margin="917,130,0,0" x:Name="Btn_Supprimer" VerticalAlignment="Top" Width="88" IsEnabled="False" Click="Btn_Supprimer_Click" />
+        <Button Content="Transmettre" Height="23" Margin="0,12,160,0" x:Name="button2" Grid.Row="1" HorizontalAlignment="Right" Width="75" Visibility="Collapsed"/>
+        <TextBox Height="23" IsReadOnly="True" Margin="141,522,709,75" MaxLength="19" x:Name="Txt_MontantTotalBranchement" Foreground="Red" FontSize="13" FontStretch="UltraCondensed"  />
+        <sdk:Label Content="Total branchement" Margin="17,523,879,78" x:Name="Lab_TotalMontant" RenderTransformOrigin="0.5,0.5" />
+        <RadioButton Content="En fourniture  et pose" Name="Rdb_Fourniture" HorizontalAlignment="Left" Margin="463,51,0,0" VerticalAlignment="Top" Checked="Rdb_Fourniture_Checked"/>
+        <RadioButton Content="En prestation" Name="Rdb_Prestation" HorizontalAlignment="Left" Margin="680,52,0,0" VerticalAlignment="Top" Checked="Rdb_Prestation_Checked" Unchecked="Rdb_Prestation_Unchecked"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="192" HorizontalAlignment="Left" Margin="6,320,0,0" x:Name="dataGridElementDevisBranchement"  GridLinesVisibility="None" VerticalAlignment="Top" Width="906" IsReadOnly="True" SelectionChanged="dataGridElementDevis_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DESIGNATION, Mode=TwoWay}" Header="Désignation" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="270" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITE, Mode=TwoWay}" Header="Quantité" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_FOURNITURE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="Fourniture" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_POSE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="Pose" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTHT,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="H T " CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTAXE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="TVA" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTTC,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="TTC" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTemplateColumn Width="100"  IsReadOnly="True" Header=" En pose"  Visibility="Collapsed"  >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_enPose" IsChecked ="{Binding IsPose}"  Checked="chk_enPose_Checked" Unchecked="chk_enPose_Unchecked"
+        						VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTemplateColumn Width="100" IsReadOnly="True" Header=" En fourniture" Visibility="Collapsed" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_enFourniture" IsChecked ="{Binding IsFourniture}" Checked="chk_enFourniture_Checked" Unchecked="chk_enFourniture_Unchecked" 
+        						VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox Height="23" IsReadOnly="True" Margin="74,292,788,305" MaxLength="19" x:Name="Txt_MontantTotalExtensionHT" Foreground="Red" FontSize="13" FontStretch="UltraCondensed"  />
+        <sdk:Label Content="Total HT" Margin="13,294,934,307" x:Name="Lab_TotalMontant_Copy" RenderTransformOrigin="0.5,0.5" />
+        <TextBox Height="23" IsReadOnly="True" Margin="621,523,203,74" MaxLength="19" x:Name="Txt_MontantTotalG" Foreground="Red" FontSize="13" FontStretch="UltraCondensed"  />
+        <sdk:Label Content="Total devis " Margin="527,526,399,75" x:Name="Lab_TotalMontant_Copy1" RenderTransformOrigin="0.5,0.5" />
+        <TextBox Height="23" IsReadOnly="True" Margin="326,292,536,305" MaxLength="19" x:Name="Txt_MontantTotalExtensionTaxe" Foreground="Red" FontSize="13" FontStretch="UltraCondensed"  />
+        <sdk:Label Content="Total Taxe" Margin="245,294,694,307" x:Name="Lab_TotalMontant_Copy2" RenderTransformOrigin="0.5,0.5" />
+        <TextBox Height="23" IsReadOnly="True" Margin="604,292,258,305" MaxLength="19" x:Name="Txt_MontantTotalExtensionTTC" Foreground="Red" FontSize="13" FontStretch="UltraCondensed"  />
+        <sdk:Label Content="Total TTC" Margin="525,294,411,307" x:Name="Lab_TotalMontant_Copy3" RenderTransformOrigin="0.5,0.5" />
+        <Button x:Name="btn_Imprimer" Content="Imprimer le dévis" Click="btn_Imprimer_Click" Height="23" Margin="635,10,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="114" VerticalAlignment="Top" />
+        <TextBox IsReadOnly="True" Margin="141,552,202,10" Foreground="Red" FontStyle="Italic"  FontWeight="Bold" MaxLength="19" x:Name="txtMotif" FontSize="13"    Visibility="Collapsed"  />
+        <sdk:Label Content="Motif rejet" Margin="17,562,879,39" x:Name="lblMotif" RenderTransformOrigin="0.5,0.5"  Visibility="Collapsed"/>
+
+    </Grid>
+</sdk:ChildWindow>

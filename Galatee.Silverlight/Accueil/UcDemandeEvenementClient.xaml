@@ -1,0 +1,65 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Accueil.UcDemandeEvenementClient"
+    mc:Ignorable="d"
+    d:DesignHeight="448" d:DesignWidth="563" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White" Height="Auto" Width="Auto" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Grid.Column="1" Height="85" HorizontalAlignment="Left" Margin="4,10,0,0" x:Name="dataGrid1" VerticalAlignment="Top" Width="419" SelectionChanged="dataGrid1_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Point" Binding="{Binding POINT}"  IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" MinWidth="20" />
+                <sdk:DataGridTextColumn Header="Compteur" Binding="{Binding INFOCOMPTEUR}"  IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" MinWidth="100" />
+                <sdk:DataGridTextColumn Header="Index" Binding="{Binding INDEXEVT}"  IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" MinWidth="100" />
+                <sdk:DataGridTextColumn Header="Conso" Binding="{Binding CONSO}"  IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" MinWidth="100" />
+                <sdk:DataGridTextColumn Header="Etat" Binding="{Binding LIBELLEETATCOMPTEUR}"  IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" MinWidth="60" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Controls:GroupBox FontWeight="SemiBold" Header="Information dernière facturation" Margin="4,95,0,259" x:Name="groupBox1_Copy1" />
+        <Controls:GroupBox FontWeight="SemiBold" Header="Evénement à facturer" Margin="4,194,0,118" x:Name="groupBox1_Copy" />
+        <Controls:GroupBox FontWeight="SemiBold" Header="Autres" Margin="284,335,0,9" x:Name="groupBox1_Copy2" />
+        <Controls:GroupBox FontWeight="SemiBold" Header="Etat compteur" Margin="4,335,282,9" x:Name="groupBox1_Copy3" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="483,10,0,0" x:Name="Txt_PeriodeEnCour" VerticalAlignment="Top" Width="76" Background="LightBlue"  TextChanged="Txt_PeriodeEnCour_TextChanged" />
+        <Button Content="Detail compteur" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="429,68,0,0" x:Name="btn_DetailCompteur" VerticalAlignment="Top" Width="116" />
+        <sdk:Label Content="Période" Height="23" HorizontalAlignment="Left" Margin="428,10,0,0" x:Name="label1" VerticalAlignment="Top" Width="55" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="479,119,0,0" x:Name="Txt_periodeFactureN" VerticalAlignment="Top" Width="73" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,120,0,0" x:Name="Txt_periodeFactureF" VerticalAlignment="Top" Width="81" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,144,0,0" x:Name="Txt_IndexFacture" VerticalAlignment="Top" Width="81" IsReadOnly="True" />
+        <sdk:Label Content="Cas de relève" Height="23" HorizontalAlignment="Left" Margin="386,144,0,0" x:Name="label3" VerticalAlignment="Top" Width="87" />
+        <sdk:Label Content="Periode normalement factureé" Height="23" HorizontalAlignment="Left" Margin="294,120,0,0" x:Name="label4" VerticalAlignment="Top" Width="176" />
+        <sdk:Label Content="Periode facturée" Height="23" HorizontalAlignment="Left" Margin="10,122,0,0" x:Name="label6" VerticalAlignment="Top" Width="102" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="422,216,0,0" x:Name="Txt_DateRelEncour" VerticalAlignment="Top" Width="120" Background="LightBlue" TextChanged="Txt_DateRelEncour_TextChanged" />
+        <sdk:Label Content="Date de relève" Height="23" HorizontalAlignment="Left" Margin="328,218,0,0" x:Name="label7" VerticalAlignment="Top" Width="88" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="422,241,0,0" x:Name="Txt_CasEnCour" VerticalAlignment="Top" Width="69" Background="LightBlue" TextChanged="Txt_CasEnCour_TextChanged" />
+        <sdk:Label Content="Cas" Height="23" HorizontalAlignment="Left" Margin="367,245,0,0" x:Name="label8" VerticalAlignment="Top" Width="34" />
+        <sdk:Label Content="Consommation" Height="23" Margin="160,219,0,0" x:Name="label9" VerticalAlignment="Top" HorizontalAlignment="Left" Width="89" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,217,0,0" x:Name="Txt_IndexSaisi" VerticalAlignment="Top" Width="80" TextChanged="Txt_IndexSaisi_TextChanged" Background="LightBlue" LostFocus="Txt_IndexSaisi_LostFocus" />
+        <sdk:Label Content="Index" Height="19" HorizontalAlignment="Left" Margin="14,219,0,0" x:Name="label10" VerticalAlignment="Top" Width="54" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="497,242,0,0" x:Name="btn_cas" VerticalAlignment="Top" Width="46" Click="btn_cas_Click" />
+        <CheckBox Content="Cocher si facturation totale (Sinon:Consomation unique) " Height="16" HorizontalAlignment="Left" Margin="21,262,0,0" x:Name="checkBox1" VerticalAlignment="Top" Unchecked="checkBox1_Unchecked" Checked="checkBox1_Checked" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="308,288,0,0" x:Name="Txt_IndexNouv" VerticalAlignment="Top" Width="80" IsReadOnly="True" />
+        <sdk:Label Content="Nouvel index" Height="23" HorizontalAlignment="Left" Margin="224,292,0,0" x:Name="label11" VerticalAlignment="Top" Width="78" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="123,288,0,0" x:Name="Txt_IndexAnc" VerticalAlignment="Top" Width="80" IsReadOnly="True" />
+        <sdk:Label Content="Ancien index" Height="23" HorizontalAlignment="Left" Margin="32,293,0,0" x:Name="label12" VerticalAlignment="Top" Width="88" />
+        <RadioButton Content="Non" Height="16" HorizontalAlignment="Left" Margin="52,405,0,0" x:Name="rdb_PasRetraitCompteur" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="452,348,0,0" x:Name="Txt_Quantite" VerticalAlignment="Top" Width="80"  />
+        <sdk:Label Content="Quantité déja facturée" Height="23" HorizontalAlignment="Left" Margin="311,350,0,0" x:Name="label13" VerticalAlignment="Top" Width="135" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="452,374,0,0" x:Name="Txt_DebutPeriode" VerticalAlignment="Top" Width="80" Background="LightBlue" IsReadOnly="True" />
+        <sdk:Label Content="Date début de période" HorizontalAlignment="Left" Margin="311,374,0,54" x:Name="label14" Width="138" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="452,399,0,0" x:Name="Txt_FinPeriode" VerticalAlignment="Top" Width="80" Background="LightBlue" IsReadOnly="True" />
+        <sdk:Label Content="Date de fin de période" Height="23" HorizontalAlignment="Left" Margin="311,401,0,0" x:Name="label15" VerticalAlignment="Top" Width="138" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="479,143,0,0" x:Name="Txt_CasFacture" VerticalAlignment="Top" Width="73" IsReadOnly="True" />
+        <sdk:Label Content="Consommation" Height="23" Margin="197,145,282,0" x:Name="label16" VerticalAlignment="Top" />
+        <RadioButton Content="Oui" Height="16" HorizontalAlignment="Left" Margin="52,363,0,0" x:Name="rdb_RetraitCompteur" VerticalAlignment="Top" />
+        <sdk:Label Content="Index" Height="18" HorizontalAlignment="Left" Margin="12,148,0,0" x:Name="label5" VerticalAlignment="Top" Width="93" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="251,216,0,0" x:Name="Txt_ConsoEnCours" VerticalAlignment="Top" Width="49" HorizontalContentAlignment="Left" LostFocus="Txt_ConsoEnCours_LostFocus" Background="LightBlue" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="292,144,0,0" x:Name="Txt_ConsoFacture" VerticalAlignment="Top" Width="75" IsReadOnly="True" />
+        <sdk:Label HorizontalAlignment="Left" Height="16" Margin="465,38,0,0" VerticalAlignment="Top" Width="57" Content="mm/aaaa"/>
+
+    </Grid>
+</UserControl>

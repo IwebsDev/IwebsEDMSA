@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Galatee.Structure.Scelle" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galatee.Structure.Scelle" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Devis/DevisService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCsScelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsScelle" nillable="true" type="tns:CsScelle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsScelle" nillable="true" type="tns:ArrayOfCsScelle" />
+  <xs:complexType name="CsScelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Couleur_Scelle" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DateDePose" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDeRupture" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Date_creation_scelle" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Exploitation_Origine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exploitation_appartenance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Scelle" type="ser:guid" />
+      <xs:element minOccurs="0" name="NUM_SCELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero_Scelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origine_scelle" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Reference_OrganeOuBranchementOuRaccordement_Scelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeOrganeScelle" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="lot_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provenance_Scelle_ID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsScelle" nillable="true" type="tns:CsScelle" />
+</xs:schema>

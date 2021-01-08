@@ -1,0 +1,2461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Devis/DevisService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+  <xs:import schemaLocation="http://localhost:1818/Devis/DevisService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:1818/Devis/DevisService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure.Scelle" />
+  <xs:import schemaLocation="http://localhost:1818/Devis/DevisService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="RetourneNature">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneNatureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneNatureResult" nillable="true" type="q1:ArrayOfCsNatureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDenominationAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDenominationAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeDenominationAllResult" nillable="true" type="q2:ArrayOfCsDenomination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDiametreCompteur">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDiametreCompteurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDiametreCompteurResult" nillable="true" type="q3:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneToutMarque">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneToutMarqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneToutMarqueResult" nillable="true" type="q4:ArrayOfCsMarqueCompteur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerTypeResult" nillable="true" type="q5:ArrayOfCsTcompteur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesRueDesSecteur">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesRueDesSecteurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLesRueDesSecteurResult" nillable="true" type="q6:ArrayOfCsRues" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeTaxe">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeTaxeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeTaxeResult" nillable="true" type="q7:ArrayOfCsCtax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppareilByDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumDevis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppareilByDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAppareilByDevisResult" nillable="true" type="q8:ArrayOfObjAPPAREILSDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTypeDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTypeDevisResult" nillable="true" type="q9:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTacheDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTacheDevisResult" nillable="true" type="q10:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheSuivante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTacheSuivante" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheSuivanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTacheSuivanteResult" nillable="true" type="q11:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheRejet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTacheRejet" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheRejetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTacheRejetResult" nillable="true" type="q12:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheSaut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTacheSaut" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheSautResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTacheSautResult" nillable="true" type="q13:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheIntermediaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTacheIntermediaire" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTacheIntermediaireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTacheIntermediaireResult" nillable="true" type="q14:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevisCodeProduitIdTache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTypeDevis" type="xs:int" />
+        <xs:element minOccurs="0" name="IdProduit" type="xs:int" />
+        <xs:element minOccurs="0" name="idTacheCourante" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevisCodeProduitIdTacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTypeDevisCodeProduitIdTacheResult" nillable="true" type="q15:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevisNumEtape">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTypeDevis" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="numEtape" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdTypeDevisNumEtapeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdTypeDevisNumEtapeResult" nillable="true" type="q16:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByMenuID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMenuID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByMenuIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByMenuIDResult" nillable="true" type="q17:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSuivante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q18:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSuivanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeSuivanteResult" nillable="true" type="q19:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeInit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q20:CsDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeInitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeInitResult" nillable="true" type="q21:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSuivante_">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q22:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSuivante_Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeSuivante_Result" nillable="true" type="q23:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeIntermediaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q24:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeIntermediaireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeIntermediaireResult" nillable="true" type="q25:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeRejet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q26:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeRejetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeRejetResult" nillable="true" type="q27:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSaut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q28:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeSautResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeSautResult" nillable="true" type="q29:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeAnnulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="devis" nillable="true" type="q30:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeAnnulationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeAnnulationResult" nillable="true" type="q31:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllFonction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllFonctionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllFonctionResult" nillable="true" type="q32:ArrayOfCsFonction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFonctionByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodeFonction" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFonctionByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectFonctionByCodeResult" nillable="true" type="q33:CsFonction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCommune">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCommuneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllCommuneResult" nillable="true" type="q34:ArrayOfCsCommune" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllQuartier">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllQuartierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllQuartierResult" nillable="true" type="q35:ArrayOfCsQuartier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllQuartierByCommune">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pCommune" nillable="true" type="q36:CsCommune" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllQuartierByCommuneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllQuartierByCommuneResult" nillable="true" type="q37:ArrayOfCsQuartier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllRues">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllRuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllRuesResult" nillable="true" type="q38:ArrayOfCsRues" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllRuesByCommune">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pCommune" nillable="true" type="q39:CsCommune" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllRuesByCommuneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllRuesByCommuneResult" nillable="true" type="q40:ArrayOfCsRues" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacomp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllDiacompResult" nillable="true" type="q41:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByCentre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCentre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllDiacompByCentreResult" nillable="true" type="q42:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByCentreIdProduitId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCentreId" type="xs:int" />
+        <xs:element minOccurs="0" name="pProduitId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByCentreIdProduitIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllDiacompByCentreIdProduitIdResult" nillable="true" type="q43:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByProduit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pProduit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDiacompByProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllDiacompByProduitResult" nillable="true" type="q44:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppareilByCodeAppareil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodeAppareil" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppareilByCodeAppareilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAppareilByCodeAppareilResult" nillable="true" type="q45:ObjAPPAREILS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppareil">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppareilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllAppareilResult" nillable="true" type="q46:ArrayOfObjAPPAREILS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllTypeClientResult" nillable="true" type="q47:ArrayOfCsTypeClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllUsageResult" nillable="true" type="q48:ArrayOfCsUsage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStatutJuridique">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStatutJuridiqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllStatutJuridiqueResult" nillable="true" type="q49:ArrayOfCsStatutJuridique" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisIdEtape">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="num" type="xs:int" />
+        <xs:element minOccurs="0" name="etape" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisIdEtapeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetSuiviDevisByDevisIdEtapeResult" nillable="true" type="q50:ObjSUIVIDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pCriteresDevis" nillable="true" type="q51:CsCriteresDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetSuiviDevisByDevisIdResult" nillable="true" type="q52:ArrayOfObjSUIVIDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisIdProduitIdEtape">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="num" type="xs:int" />
+        <xs:element minOccurs="0" name="pProduit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pIdEtape" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuiviDevisByDevisIdProduitIdEtapeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetSuiviDevisByDevisIdProduitIdEtapeResult" nillable="true" type="q53:ObjSUIVIDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDepot">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDepotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDepotResult" nillable="true" type="q54:ArrayOfObjDEPOSIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByNumDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numDevis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByNumDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SearchByNumDevisResult" nillable="true" type="q55:ObjDEPOSIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByReceipt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="receipt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByReceiptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SearchByReceiptResult" nillable="true" type="q56:ArrayOfObjDEPOSIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentScanneById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="pId" type="q57:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentScanneByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDocumentScanneByIdResult" nillable="true" type="q58:ObjDOCUMENTSCANNE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisPiaByDevisIdOrdre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="ordre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisPiaByDevisIdOrdreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisPiaByDevisIdOrdreResult" nillable="true" type="q59:ObjDEVISPIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisPiaById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisPiaByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisPiaByIdResult" nillable="true" type="q60:ObjDEVISPIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFournituresByCodeProduitByIdTypeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodeProduit" type="xs:int" />
+        <xs:element minOccurs="0" name="pIdTypeDevis" type="xs:int" />
+        <xs:element minOccurs="0" name="pDiametre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFournituresByCodeProduitByIdTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectFournituresByCodeProduitByIdTypeDevisResult" nillable="true" type="q61:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFournituresByNumFourniture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumFourniture" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFournituresByNumFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectFournituresByNumFournitureResult" nillable="true" type="q62:ObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFourniture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q63:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteFournitureResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFourniture">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllFournitureResult" nillable="true" type="q64:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFournitureByIdTypeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTypeDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFournitureByIdTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetFournitureByIdTypeDevisResult" nillable="true" type="q65:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFournitureByNumFourniture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numFourniture" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFournitureByNumFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetFournitureByNumFournitureResult" nillable="true" type="q66:ObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFourniture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q67:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertFournitureResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFourniture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q68:ArrayOfObjFOURNITURE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFournitureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateFournitureResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUnElementsDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q69:ObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUnElementsDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUnElementsDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUneListeElementsDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q70:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUneListeElementsDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUneListeElementsDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnElementsDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q71:ObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnElementsDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUnElementsDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUneListeElementsDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q72:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUneListeElementsDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUneListeElementsDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUnElementsDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q73:ObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUnElementsDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUnElementsDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateElementsDevisRemisEnStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lElements" nillable="true" type="q74:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateElementsDevisRemisEnStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateElementsDevisRemisEnStockResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateElementsDevisValide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lElements" nillable="true" type="q75:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateElementsDevisValideResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateElementsDevisValideResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisByDevisId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="ordre" type="xs:int" />
+        <xs:element minOccurs="0" name="isSummary" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisByDevisIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectElementsDevisByDevisIdResult" nillable="true" type="q76:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisConsommeByDevisId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="ordre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisConsommeByDevisIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectElementsDevisConsommeByDevisIdResult" nillable="true" type="q77:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisByDevisIdForValidationRemiseStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="ordre" type="xs:int" />
+        <xs:element minOccurs="0" name="isSummary" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectElementsDevisByDevisIdForValidationRemiseStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectElementsDevisByDevisIdForValidationRemiseStockResult" nillable="true" type="q78:ArrayOfObjELEMENTDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrInsertElementsDeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entityCollection" nillable="true" type="q79:ArrayOfObjELEMENTDEVIS" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pAgent" nillable="true" type="q80:ObjMATRICULE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrInsertElementsDeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrInsertElementsDeDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCtax">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCtaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllCtaxResult" nillable="true" type="q81:ArrayOfCsCtax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCtaxByCENTRECTAXDEBUTAPPLICATION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q82:CsCtax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCtaxByCENTRECTAXDEBUTAPPLICATIONResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetCtaxByCENTRECTAXDEBUTAPPLICATIONResult" nillable="true" type="q83:CsCtax" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllBanque">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllBanqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllBanqueResult" nillable="true" type="q84:ArrayOfaBanque" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllMarqueCompteur">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllMarqueCompteurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllMarqueCompteurResult" nillable="true" type="q85:ArrayOfCsMarqueCompteur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllTcompt">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllTcomptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllTcomptResult" nillable="true" type="q86:ArrayOfCsTcompteur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByResponsable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMatricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByResponsableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetByResponsableResult" nillable="true" type="q87:ArrayOfCsInterventionPlannifiee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTravaux">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="Ordre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTravauxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectTravauxResult" nillable="true" type="q88:ObjTRAVAUXDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectControles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="Ordre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectControlesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectControlesResult" nillable="true" type="q89:CsControleTravaux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertControl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="controle" nillable="true" type="q90:CsControleTravaux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertControlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertControlResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Updatecontroles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="controle" nillable="true" type="q91:CsControleTravaux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatecontrolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatecontrolesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuissanceParProduit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pProduit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuissanceParProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetPuissanceParProduitResult" nillable="true" type="q92:ArrayOfCsPuissance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuissanceParProduitId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pProduitId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPuissanceParProduitIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetPuissanceParProduitIdResult" nillable="true" type="q93:ArrayOfCsPuissance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntreprise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q94:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntrepriseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEntrepriseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntreprise">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntrepriseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllEntrepriseResult" nillable="true" type="q95:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntrepriseById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q96:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntrepriseByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEntrepriseByIdResult" nillable="true" type="q97:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEntreprise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q98:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEntrepriseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertEntrepriseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntreprise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q99:CsEntreprise" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntrepriseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEntrepriseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerPuissance">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerPuissanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerPuissanceResult" nillable="true" type="q100:ArrayOfCsPuissance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerPuissanceDiametre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerPuissanceDiametreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerPuissanceDiametreResult" nillable="true" type="q101:ArrayOfCsPuissance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesBrancheDesCommune">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesBrancheDesCommuneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLesBrancheDesCommuneResult" nillable="true" type="q102:ArrayOfCsCommune" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesQartiersDesCommune">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesQartiersDesCommuneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLesQartiersDesCommuneResult" nillable="true" type="q103:ArrayOfCsQuartier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesSecteursDesQuartier">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesSecteursDesQuartierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLesSecteursDesQuartierResult" nillable="true" type="q104:ArrayOfCsSecteur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesTourneesDesSecteur">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLesTourneesDesSecteurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLesTourneesDesSecteurResult" nillable="true" type="q105:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesProduit">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesProduitResult" nillable="true" type="q106:ArrayOfCsProduit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCategorie">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCategorieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCategorieResult" nillable="true" type="q107:ArrayOfCsCategorieClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTypeDocument">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTypeDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerTypeDocumentResult" nillable="true" type="q108:ArrayOfCsTypeDOCUMENTSCANNE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCategorieClient_TypeClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCategorieClient_TypeClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerCategorieClient_TypeClientResult" nillable="true" type="q109:ArrayOfCsCATEGORIECLIENT_TYPECLIENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerNatureClient_TypeClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerNatureClient_TypeClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerNatureClient_TypeClientResult" nillable="true" type="q110:ArrayOfCsNATURECLIENT_TYPECLIENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerUsage_NatureClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerUsage_NatureClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerUsage_NatureClientResult" nillable="true" type="q111:ArrayOfCsUSAGE_NATURECLIENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCategorieClient_Usage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCategorieClient_UsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerCategorieClient_UsageResult" nillable="true" type="q112:ArrayOfCsCATEGORIECLIENT_USAGE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemplirProprietaire">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemplirProprietaireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RemplirProprietaireResult" nillable="true" type="q113:ArrayOfCsProprietaire" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListeOrganeScellable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FK_IDTDEM" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListeOrganeScellableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LoadListeOrganeScellableResult" nillable="true" type="q114:ArrayOfCsOrganeScellable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListerganeScelleDemande">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FK_IDTDEM" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListerganeScelleDemandeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LoadListerganeScelleDemandeResult" nillable="true" type="q115:ArrayOfCsOrganeScelleDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListeScelle">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadListeScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Galatee.Structure.Scelle" minOccurs="0" name="LoadListeScelleResult" nillable="true" type="q116:ArrayOfCsScelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClotureValiderDemande">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaDemannde" nillable="true" type="q117:CsDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClotureValiderDemandeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClotureValiderDemandeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeActivite">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeActiviteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeActiviteResult" nillable="true" type="q118:ArrayOfCsActivite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeCouleurScelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Activite_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeCouleurScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeCouleurScelleResult" nillable="true" type="q119:ArrayOfCsCouleur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDemandeScelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fk_dem" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDemandeScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeDemandeScelleResult" nillable="true" type="q120:ArrayOfCsDscelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeScelle">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeScelleResult" nillable="true" type="q121:ArrayOfCsLotScelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDemandeScelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lademande" nillable="true" type="q122:CsDemandeBase" />
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="dscelle" nillable="true" type="q123:CsDscelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDemandeScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDemandeScelleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAffectionScelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_lademande" type="xs:int" />
+        <xs:element minOccurs="0" name="IdUser" type="xs:int" />
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstLotScelle" nillable="true" type="q124:ArrayOfCsLotScelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAffectionScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertAffectionScelleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDetailAffectationScelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdDemande" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDetailAffectationScelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeDetailAffectationScelleResult" nillable="true" type="q125:ArrayOfCsDetailAffectationScelle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidationReception">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeScelle" nillable="true" type="q126:ArrayOfCsDetailAffectationScelle" />
+        <xs:element minOccurs="0" name="MatriculAgent" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidationReceptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidationReceptionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdEtapeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdEtapeDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdEtapeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdEtapeDevisResult" nillable="true" type="q127:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumDevis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByNumDevisResult" nillable="true" type="q128:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByDevisId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByDevisIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByDevisIdResult" nillable="true" type="q129:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDevis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllDevisResult" nillable="true" type="q130:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCentre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByCentreResult" nillable="true" type="q131:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idSchema" type="q132:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdSchemaResult" nillable="true" type="q133:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdOwnerShip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idOwnerShip" type="q134:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdOwnerShipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdOwnerShipResult" nillable="true" type="q135:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdManuscrit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idManuscrit" type="q136:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdManuscritResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdManuscritResult" nillable="true" type="q137:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdPieceIdentite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPieceIdentite" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdPieceIdentiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdPieceIdentiteResult" nillable="true" type="q138:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCodeProduit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeProduit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCodeProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByCodeProduitResult" nillable="true" type="q139:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisBySite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="site" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisBySiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisBySiteResult" nillable="true" type="q140:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdTypeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTypeDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIdTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIdTypeDevisResult" nillable="true" type="q141:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIsAnalysed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isAnalysed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByIsAnalysedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByIsAnalysedResult" nillable="true" type="q142:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCodeProduitIdTypeDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeProduit" type="xs:int" />
+        <xs:element minOccurs="0" name="idTypeDevis" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByCodeProduitIdTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByCodeProduitIdTypeDevisResult" nillable="true" type="q143:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDemandeDevisForUpdateOrConsult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pCriteresDevis" nillable="true" type="q144:CsCriteresDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDemandeDevisForUpdateOrConsultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDemandeDevisForUpdateOrConsultResult" nillable="true" type="q145:CsInformationsDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisDemandeDepositAppareilsAutorisationPreuveEtapeSuivante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pCriteresDevis" nillable="true" type="q146:CsCriteresDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisDemandeDepositAppareilsAutorisationPreuveEtapeSuivanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisDemandeDepositAppareilsAutorisationPreuveEtapeSuivanteResult" nillable="true" type="q147:CsInformationsDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDevisValidationFinale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="entity" nillable="true" type="q148:ObjDEVIS" />
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lElements" nillable="true" type="q149:ArrayOfObjELEMENTDEVIS" />
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="agent" nillable="true" type="q150:ObjMATRICULE" />
+        <xs:element minOccurs="0" name="idEtapeSuivi" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDevisValidationFinaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDevisValidationFinaleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumEtape">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumEtape" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumEtapeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByNumEtapeResult" nillable="true" type="q151:ArrayOfCsDemandeBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumIdDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumEtape" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByNumIdDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByNumIdDevisResult" nillable="true" type="q152:CsDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByRefBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RefBranch" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisByRefBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisByRefBranchResult" nillable="true" type="q153:CsDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderDemande">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaDemannde" nillable="true" type="q154:CsDemande" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderDemandeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderDemandeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepartitionDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCategory" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="pProduit" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="pAnnee" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepartitionDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetRepartitionDevisResult" nillable="true" type="q155:ArrayOfaRepartition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountPaid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="oDevis" nillable="true" type="q156:ObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountPaidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAmountPaidResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonDeSortie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="pIsSummary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pMatricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonDeSortieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectDevisPourBonDeSortieResult" nillable="true" type="q157:ArrayOfCsEtatBonDeSortie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumDevis" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="pIsSummary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pMatricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q158="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q158:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonDeSortie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="pIsSummary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pMatricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q159="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q159:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonDeSortieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisPourBonDeSortieResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonTravaux">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q160="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q160:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonTravauxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisPourBonTravauxResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonTravaux">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonTravauxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectDevisPourBonTravauxResult" nillable="true" type="q161:ArrayOfCsEtatBonTravaux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourProcesVerbal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q162="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q162:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourProcesVerbalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisPourProcesVerbalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourProcesVerbal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourProcesVerbalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectDevisPourProcesVerbalResult" nillable="true" type="q163:ArrayOfCsEtatProcesVerbal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonControle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q164="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q164:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonControleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisPourBonControleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonControle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pOrdre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonControleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectDevisPourBonControleResult" nillable="true" type="q165:ArrayOfCsEtatProcesVerbal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonRemboursement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pComment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRefund" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q166="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q166:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisPourBonRemboursementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisPourBonRemboursementResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonRemboursement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDevisId" type="xs:int" />
+        <xs:element minOccurs="0" name="pComment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRefund" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDevisPourBonRemboursementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectDevisPourBonRemboursementResult" nillable="true" type="q167:ArrayOfCsEtatBonRemboursement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisAEncaisser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q168="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q168:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pListeDevis" nillable="true" type="q169:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisAEncaisserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisAEncaisserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDevisAEncaisser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDevisAEncaisserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDevisAEncaisserResult" nillable="true" type="q170:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDevisBranchementAFinaliser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDevisBranchementAFinaliserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDevisBranchementAFinaliserResult" nillable="true" type="q171:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisBranchementAFinaliser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q172="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDictionary" nillable="true" type="q172:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pListeDevis" nillable="true" type="q173:ArrayOfObjDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerDevisBranchementAFinaliserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditerDevisBranchementAFinaliserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisAndEtapeDevisByNumDevis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNumeroDevis" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevisAndEtapeDevisByNumDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDevisAndEtapeDevisByNumDevisResult" nillable="true" type="q174:CsInformationsDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditionDevis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditionDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EditionDevisResult" nillable="true" type="q175:CsEditionDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDemandeDevisById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDemandeDevisId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDemandeDevisByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDemandeDevisByIdResult" nillable="true" type="q176:ObjDEMANDEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchListClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="produit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchListClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SearchListClientResult" nillable="true" type="q177:ArrayOfcClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="produit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SearchClientResult" nillable="true" type="q178:cClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdFonctionMatriculeNom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdFonction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMatriculeAgent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNomAgent" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdFonctionMatriculeNomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetUserByIdFonctionMatriculeNomResult" nillable="true" type="q179:ArrayOfCsUtilisateur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDenomination">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllDenominationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllDenominationResult" nillable="true" type="q180:ArrayOfCsDenomination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllProduit">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllProduitResult" nillable="true" type="q181:ArrayOfCsProduit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProduitByProduitId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pProduitId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProduitByProduitIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectProduitByProduitIdResult" nillable="true" type="q182:CsProduit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCategorieClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCategorieClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllCategorieClientResult" nillable="true" type="q183:ArrayOfCsCategorieClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllParametresGeneraux">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllParametresGenerauxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllParametresGenerauxResult" nillable="true" type="q184:ArrayOfCsParametresGeneraux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectParametresGenerauxByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectParametresGenerauxByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectParametresGenerauxByCodeResult" nillable="true" type="q185:CsParametresGeneraux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParametresDistance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMaxi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSeuil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMaxiSubvention" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParametresDistanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetParametresDistanceResult" nillable="true" type="q186:CsCriteresDevis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllNationalite">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllNationaliteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllNationaliteResult" nillable="true" type="q187:ArrayOfCsNationalite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCentre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllCentreResult" nillable="true" type="q188:ArrayOfCsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCentreByIdSiteIdCentre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdSite" type="xs:int" />
+        <xs:element minOccurs="0" name="pIdCentre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCentreByIdSiteIdCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectCentreByIdSiteIdCentreResult" nillable="true" type="q189:CsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCentreBySiteId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCentreBySiteIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectCentreBySiteIdResult" nillable="true" type="q190:ArrayOfCsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllSites">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllSitesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllSitesResult" nillable="true" type="q191:ArrayOfCsSite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllTypeCentre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllTypeCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SelectAllTypeCentreResult" nillable="true" type="q192:ArrayOfCsTypeCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeDevisById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeDevisByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetTypeDevisByIdResult" nillable="true" type="q193:ObjTYPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeDevisByProduitId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdProduit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypeDevisByProduitIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetTypeDevisByProduitIdResult" nillable="true" type="q194:ArrayOfObjTYPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeDevis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllTypeDevisResult" nillable="true" type="q195:ArrayOfObjTYPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeDemande">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTypeDemandeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllTypeDemandeResult" nillable="true" type="q196:ArrayOfCsTdem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTacheDevisById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTacheDevisByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetTacheDevisByIdResult" nillable="true" type="q197:ObjTACHEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTacheDevis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTacheDevisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllTacheDevisResult" nillable="true" type="q198:ArrayOfObjTACHEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPieceIdentiteById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPieceIdentiteByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetPieceIdentiteByIdResult" nillable="true" type="q199:ObjPIECEIDENTITE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPieceIdentite">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPieceIdentiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllPieceIdentiteResult" nillable="true" type="q200:ArrayOfObjPIECEIDENTITE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByIdResult" nillable="true" type="q201:ObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByCodeProduit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeProduit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtapeDevisByCodeProduitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetEtapeDevisByCodeProduitResult" nillable="true" type="q202:ArrayOfObjETAPEDEVIS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

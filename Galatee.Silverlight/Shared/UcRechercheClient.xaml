@@ -1,0 +1,112 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Shared.UcRechercheClient"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+            xmlns:m="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl"
+           xmlns:mCore="clr-namespace:Microsoft.Maps.MapControl.Core;assembly=Microsoft.Maps.MapControl"
+           xmlns:local="clr-namespace:Galatee.Silverlight.SIG"
+           xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+           Width="449" Height="611" 
+           Title="Recherche Client" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded"
+                      xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" OverlayBrush="Transparent" 
+                      xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="8,2,2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" Margin="0,-3,0,473" x:Name="groupBox1_Copy" Header="Option de recherche" />
+        <my:GroupBox FontWeight="SemiBold" Margin="0,63,0,247" x:Name="groupBox1" Header="Critère de recherche" />
+
+        <StackPanel Height="29" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stackPanel1" Orientation="Horizontal" VerticalAlignment="Top" Width="389">
+            <!--<RadioButton  Content="{Binding Path=AccueilAppLangue.rdb_byclient, Source={StaticResource localisation}}" FontSize="12" GroupName="paymode" Height="16" IsChecked="True" Margin="2,2,2,2" Name="Rdb_Client" Width="78" HorizontalAlignment="Left" />-->
+            <RadioButton  Content="Par Client" FontSize="12" GroupName="paymode" Height="16" IsChecked="True" Margin="2,2,2,2" Name="Rdb_Client" Width="100" HorizontalAlignment="Left" Checked="Rdb_Client_Checked" />
+            <!--<RadioButton Content="{Binding Path=AccueilAppLangue.rdb_byzone, Source={StaticResource localisation}}" FontSize="12" GroupName="paymode" Height="16" Margin="2,2,2,2" Name="Rdb_Zone" Width="82" Checked="Rdb_Zone_Checked" />-->
+            <RadioButton Content="Par Tournée" FontSize="12" GroupName="paymode" Height="20" Margin="2,5,2,2" Name="Rdb_Zone" Width="100" Checked="Rdb_Zone_Checked" />
+            <!--<RadioButton  Content="{Binding Path=AccueilAppLangue.rdb_bymeter, Source={StaticResource localisation}}" FontSize="12" GroupName="paymode" Height="16" Margin="2,2,2,2" Name="Rdb_Meter" Width="111" Checked="Rdb_Meter_Checked" />-->
+            <RadioButton  Content="Par Compteur" FontSize="12" GroupName="paymode" Height="16" Margin="2,2,2,2" Name="Rdb_Meter" Width="120" Checked="Rdb_Meter_Checked" />
+            <!--<RadioButton  Content="{Binding Path=AccueilAppLangue.rdb_bystreet_addr, Source={StaticResource localisation}}" FontSize="12" GroupName="paymode" Height="16" Margin="9,2,2,2" Name="Rdb_StreetAdresse" Width="96" HorizontalAlignment="Right" Checked="Rdb_StreetAdresse_Checked" HorizontalContentAlignment="Center" />-->
+        </StackPanel>
+        <StackPanel Height="29" HorizontalAlignment="Left" Margin="10,34,0,0" Name="stackPanel21" Orientation="Horizontal" VerticalAlignment="Top" Width="389">
+            <RadioButton  Content="Par adresse géographique" FontSize="12" GroupName="paymode" Height="16" IsChecked="True" Margin="2,2,2,2" Name="Rdb_StreetAdresse" Width="180" HorizontalAlignment="Left" Checked="Rdb_Client_Checked" />
+            <RadioButton Content="Par adresse électrique" FontSize="12" GroupName="paymode" Height="20" Margin="2,5,2,2" Name="Rdb_AdresseElectrique" Width="190" Checked="Rdb_Zone_Checked" />
+        </StackPanel>
+        <StackPanel Height="208" HorizontalAlignment="Left" Margin="0,77,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="389">
+            <StackPanel Height="28" x:Name="stackPanel4_Copy" Width="388" Orientation="Horizontal" Margin="1,0,0,0">
+                <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+                <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="17" x:Name="label16" Width="70" Content="Site" Margin="0,6,0,5" />
+                <TextBox Height="23" x:Name="Txt_CodeSite" Width="52" Margin="2,3,2,2" TextChanged="Txt_CodeSite_TextChanged"  />
+                <Button Content="..." Height="23" x:Name="btn_Site" Width="26" Margin="2,3,2,2" Click="btn_Site_Click"  />
+                <TextBox Height="23" x:Name="Txt_LibelleSite" Width="205" IsReadOnly="True" Margin="0,3,0,2" />
+            </StackPanel>
+            <StackPanel Height="28" x:Name="stackPanel4" Width="388" Orientation="Horizontal">
+                <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="17" x:Name="label1" Width="70" Content="Centre" Margin="0,6,0,5" />
+                <TextBox Height="23" x:Name="Txt_CodeCentre" Width="52" Margin="2,3,2,2" TextChanged="Txt_CodeCentre_TextChanged" />
+                <Button Content="..." Height="23" x:Name="btn_Centre" Width="26" Margin="2,3,2,2" Click="btn_Centre_Click" />
+                <TextBox Height="23" x:Name="Txt_LibelleCentre" Width="205" IsReadOnly="True" Margin="0,3,0,2" />
+            </StackPanel>
+            <StackPanel Height="28" x:Name="stackPanel5" Width="387" Orientation="Horizontal">
+                <!--<sdk:Label Height="28" Name="label2" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_route, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="28" x:Name="label2" Width="70" Content="Ref Client" />
+                <TextBox Height="23" x:Name="Txt_Client" Width="120" Margin="2,3,2,2" LostFocus="Txt_Client_LostFocus" />
+                <!--<sdk:Label Height="28" Name="label3" Width="43" Content="{Binding Path=AccueilAppLangue.lbl_service, Source={StaticResource localisation}}" Margin="1" />-->
+                <sdk:Label Height="28" x:Name="label3" Width="43" Content="Produit" Margin="1,1,1,-1" />
+                <TextBox Height="23" x:Name="Txt_CodeProduit" Width="28" Margin="2,3,2,2" TextChanged="Txt_CodeProduit_TextChanged" />
+                <Button Content="..." Height="23" x:Name="btn_Produit" Width="35" Click="btn_Produit_Click" Margin="0,3,0,2" />
+                <TextBox Height="23" x:Name="Txt_LibelleProduit" Width="77" IsReadOnly="True" Margin="0,3,0,2" />
+            </StackPanel>
+            <StackPanel Height="25" x:Name="stackPanel6" Width="404" Orientation="Horizontal">
+                <!--<sdk:Label Height="28" Name="label4" Width="72" Content="{Binding Path=AccueilAppLangue.lbl_Ordre, Source={StaticResource localisation}}" Margin="0,-2,0,-1" />-->
+                <sdk:Label Height="28" x:Name="label4" Width="72" Content="Ordre" Margin="0,-2,0,-1" />
+                <TextBox Height="23" x:Name="Txt_Ordre" Width="120" Margin="0,1" />
+            </StackPanel>
+            <StackPanel Height="25" x:Name="stackPanel7" Width="404" Orientation="Horizontal">
+                <!--<sdk:Label Height="28" Name="label5" Width="72" Content="{Binding Path=AccueilAppLangue.lbl_name, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="28" x:Name="label5" Width="72" Content="Nom" Margin="0,0,0,-3" />
+                <TextBox Height="23" x:Name="Txt_NomClient" Width="290" Margin="0,1" />
+            </StackPanel>
+            <StackPanel Height="25" x:Name="stackPanel8" Width="404" Orientation="Horizontal">
+                <!--<sdk:Label Height="28" Name="label6" Width="72" Content="{Binding Path=AccueilAppLangue.lbl_zone, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="28" x:Name="label6" Width="72" Content="Tournée" Margin="0,0,0,-3" />
+                <TextBox Height="23" x:Name="Txt_Zone" Width="120" Margin="0,1" />
+            </StackPanel>
+            <StackPanel Height="25" x:Name="stackPanel9" Width="404" Orientation="Horizontal">
+                <sdk:Label Height="28" x:Name="label7" Width="72" Content="Ordre tourné " Margin="0,0,0,-3" />
+                <TextBox Height="23" x:Name="Txt_Sequence" Width="120" Margin="0,1" />
+            </StackPanel>
+            <StackPanel Height="25" x:Name="stackPanel10" Width="404" Orientation="Horizontal" Margin="0,0,-15,0">
+                <!--<sdk:Label Height="28" Name="label8" Width="72" Content="{Binding Path=AccueilAppLangue.lbl_meter, Source={StaticResource localisation}}" />-->
+                <!--<sdk:Label Height="28" Name="label8" Width="72" Content="{Binding Path=AccueilAppLangue.lbl_meter, Source={StaticResource localisation}}" />-->
+                <sdk:Label Height="28" x:Name="label8" Width="72" Content="Compteur" Margin="0,0,0,-3" />
+                <TextBox Height="23" x:Name="Txt_Compteur" Width="120" Margin="0,1" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Height="205" HorizontalAlignment="Left" Margin="0,331,0,0" Name="stackPanel3" VerticalAlignment="Top" Width="410" Orientation="Vertical">
+            <sdk:DataGrid AutoGenerateColumns="False" Height="172" Name="dataGrid1"  IsReadOnly="True">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Binding="{Binding CENTRE}" Width="Auto" />
+                    <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Binding="{Binding CLIENT}" Width="Auto" />
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre" Binding="{Binding ORDRE}" Width="Auto" />
+                    <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Binding="{Binding NOMABON}"  Width="Auto" MinWidth="150" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+            <StackPanel Height="30" x:Name="stackPanel11" Width="404" Orientation="Horizontal" Margin="3,0,3,5">
+                <Button Content="Ok" Height="23" x:Name="Valider" Width="75" Margin="0,4,0,3" Click="Valider_Click" />
+                <Button Content="Quitter" Height="23" x:Name="Quit" Width="75" Margin="0,4,0,3" />
+                <sdk:DataPager Height="26" x:Name="datapager" PageSize="25" Width="250" Margin="2" />
+            </StackPanel>
+        </StackPanel>
+        <!--<Button Content="{Binding Path=AccueilAppLangue.btn_search, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Right" Margin="0,229,692,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />-->
+        <Button Content="Recherche" Height="23" HorizontalAlignment="Right" Margin="0,294,9,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <!--<Button Content="{Binding Path=AccueilAppLangue.btn_clear, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Left" Margin="180,229,0,0" Name="btn_ClearField" VerticalAlignment="Top" Width="99" Click="btn_ClearField_Click" />-->
+        <Button Content="Initialiser" Height="23" HorizontalAlignment="Left" Margin="216,294,0,0" Name="btn_ClearField" VerticalAlignment="Top" Width="99" Click="btn_ClearField_Click" />
+        <!--<sdk:Label HorizontalAlignment="Left" Name="lbl_site" Content="Site " Height="28" Margin="10,47,0,0" VerticalAlignment="Top" Width="57"/>-->
+        <!--<TextBox HorizontalAlignment="Left" x:Name="Txt_CodeSite" Height="26" Margin="83,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="51"/>-->
+        <!--<Button Content="..." HorizontalAlignment="Left" Name="btn_Site" Margin="139,47,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="Button_Click_1"/>-->
+        <!--<TextBox HorizontalAlignment="Left" x:Name="Txt_LibelleSite"  Height="26"  IsReadOnly="True" Margin="167,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="205"/>-->
+    </Grid>
+</controls:ChildWindow>

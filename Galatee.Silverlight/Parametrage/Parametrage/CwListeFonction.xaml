@@ -1,0 +1,49 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Parametrage.CwListeFonction"
+           Width="692" Height="475" OverlayBrush="Transparent"
+           Title="Profils utilisateur">
+    <controls:ChildWindow.Resources>
+        <behaviors:CheckboxConverterInteger x:Key="CheckConverters"/>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Liste des élements existant dans la table" HorizontalAlignment="Left" VerticalAlignment="Top" Height="399" Width="662">
+            <sdk:DataGrid HorizontalAlignment="Left" Height="373" VerticalAlignment="Top" Width="652" Margin="0,0,-2,-2" Name="dtgrdParametre" AutoGenerateColumns="False" IsReadOnly="True">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn Binding="{Binding CODE,Mode=TwoWay}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Code" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                    <sdk:DataGridTextColumn Binding="{Binding ROLENAME,Mode=TwoWay}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Libelle" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                    <sdk:DataGridTextColumn Binding="{Binding ROLEDISPLAYNAME,Mode=TwoWay}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Description" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                    <sdk:DataGridTemplateColumn Header="Est Administrateur">
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding ESTADMIN,Mode=TwoWay}"
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" 
+                                      HorizontalContentAlignment="Center" IsEnabled="False"/>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                </sdk:DataGrid.Columns>
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu x:Name="MenuContextuel" Opened="MenuContextuel_Opened">
+                        <toolkit:MenuItem x:Name="MenuContextuelCreer" Header="Créer" Icon="" Click="Creer_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelConsulter" Header="Consulter" Click="Consulter_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelEditer" Header="Editer" Click="Editer_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelModifier" Header="Modifier" Click="Modifier_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelSupprimer" Header="Supprimer" Click="Supprimer_Click" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+            </sdk:DataGrid>
+        </Controls:GroupBox>
+    </Grid>
+</controls:ChildWindow>

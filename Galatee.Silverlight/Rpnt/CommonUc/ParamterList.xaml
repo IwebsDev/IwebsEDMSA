@@ -1,0 +1,19 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Rpnt.CommonUc.ParamterList"
+    mc:Ignorable="d" Width="473" Height="127">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <sdk:DataGrid x:Name="dg_param_mth"  ItemsSource="{Binding PARAMETTRES}" HorizontalAlignment="Left" Height="106" Margin="10,10,-64,0" VerticalAlignment="Top" Width="454" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libelle" Width="Auto" Binding="{Binding LIBELLEPARAMETRE}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Description" Width="Auto" Binding="{Binding DESCRIPTION}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+    </Grid>
+</UserControl>

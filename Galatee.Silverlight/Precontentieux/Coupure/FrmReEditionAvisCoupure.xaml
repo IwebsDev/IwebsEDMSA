@@ -1,0 +1,54 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           x:Class="Galatee.Silverlight.Recouvrement.FrmReEditionAvisCoupure"
+           Width="589" Height="524" OverlayBrush="Transparent"
+           Title="Réedition avis de coupure">
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="0,10,0,-2">
+        <Controls:GroupBox Header="Reédition des campagnes" Height="180" IsEnabled="False" Margin="2,0,10,0" x:Name="groupBox1" VerticalAlignment="Top" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="8,416,0,0" VerticalAlignment="Top" Width="314" IsIndeterminate="True"/>
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="95" Height="23" HorizontalAlignment="Right" Margin="0,416,12,6" />
+        <Button x:Name="OKButton" Content="Imprimer" Click="OKButton_Click" Width="88" Height="23" HorizontalAlignment="Right" Margin="0,416,112,6" IsEnabled="False" />
+        <sdk:Label Content="Agence " Height="20" HorizontalAlignment="Left" Margin="27,50,0,0" x:Name="lblMatFrom" VerticalAlignment="Top" Width="94" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,50,360,0" x:Name="txtCentre" VerticalAlignment="Top" Width="85" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="224" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="2,185,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="551" SelectionChanged="lvwResultat_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding IDCOUPURE}" CanUserReorder="True" CanUserSort="True" Header="N° Campagne" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserSort="True" Header="Montant initial" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding AGENTPIA}" CanUserReorder="True" CanUserSort="True" Header="AgentPia" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,50,147,0" x:Name="cmbCentre" VerticalAlignment="Top" Width="208" SelectionChanged="cmbCentre_SelectionChanged" />
+        <sdk:Label Content="Numéro  " HorizontalAlignment="Left" Margin="25,71,0,421" x:Name="label1" Width="87" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="120,75,0,0" x:Name="txtCampagne" VerticalAlignment="Top" Width="299" />
+        <sdk:Label Content="Agent PIA " Height="20" HorizontalAlignment="Left" Margin="27,104,0,0" x:Name="label2" VerticalAlignment="Top" Width="86" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,100,360,0" x:Name="txtAgent" VerticalAlignment="Top" Width="85" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,100,146,0" x:Name="cmbAgent" VerticalAlignment="Top" Width="208" SelectionChanged="cmbAgent_SelectionChanged" />
+        <sdk:Label Content="Date campagne" Height="20" HorizontalAlignment="Left" Margin="26,130,0,0" x:Name="label3" VerticalAlignment="Top" Width="95" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="120,126,0,0" x:Name="dtpDate" VerticalAlignment="Top" Width="119" />
+        <Button Content="Reinitialiser" Height="23" HorizontalAlignment="Right" Margin="0,148,52,274" x:Name="btnreset" Width="90" Click="btnReinitialiser_Click" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="328,148,0,0" x:Name="btnsearch" Width="90" Click="btnsearch_Click" VerticalAlignment="Top" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,416,85,13" x:Name="btnOk" Width="75"  Visibility="Collapsed" Click="btnOk_Click"/>
+        <sdk:Label Content="Site " Height="20" HorizontalAlignment="Left" Margin="26,25,0,0" x:Name="lblMatFrom_Copy" VerticalAlignment="Top" Width="86" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,22,360,0" x:Name="txtSite" VerticalAlignment="Top" Width="85" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,22,147,0" x:Name="cmbSite" VerticalAlignment="Top" Width="208" SelectionChanged="cmbSite_SelectionChanged_1" />
+        <RadioButton x:Name="Rdb_Detail" Content="Détails" HorizontalAlignment="Left" Margin="120,151,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Rdb_Liste" Content="Liste" HorizontalAlignment="Left" Margin="210,151,0,0" VerticalAlignment="Top" Width="84"/>
+        <sdk:Label Content="Numéro  " Height="20" HorizontalAlignment="Left" Margin="25,76,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="96" />
+    </Grid>
+</sdk:ChildWindow>

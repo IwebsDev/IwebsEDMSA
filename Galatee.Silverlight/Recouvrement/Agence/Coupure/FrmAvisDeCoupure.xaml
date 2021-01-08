@@ -1,0 +1,79 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Recouvrement.FrmAvisDeCoupure"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+            xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement" 
+           Width="636" Height="590.701" 
+           Title="Edition avis de coupure" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" OverlayBrush="Transparent" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls">
+    <controls:ChildWindow.Resources>
+        <lang:ResourceLocaliser x:Key="localisation"></lang:ResourceLocaliser>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2,10,1,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <my:GroupBox Header="Critère d'édition" Height="38" IsEnabled="False" Margin="22,423,348,0" x:Name="groupBox1_Copy" VerticalAlignment="Top" />
+        <my:GroupBox Header="Critère de selection de facture" Height="170" IsEnabled="False" Margin="0,301,10,0" x:Name="groupBoxy" VerticalAlignment="Top" />
+
+        <my:GroupBox Header="Mode de sélection client" Height="296" IsEnabled="False" Margin="2,0,10,0" Name="groupBox1" VerticalAlignment="Top" />
+        <sdk:Label Content="Peride" HorizontalAlignment="Left" x:Name="label1" VerticalAlignment="Top" Width="66" Margin="424,350,0,0" RenderTransformOrigin="0.576,0.438" />
+
+        <!--<StackPanel HorizontalAlignment="Left" Height="41" Margin="66,366,0,0" VerticalAlignment="Top" Width="530">-->
+        <RadioButton Content="{Binding Path=RecouvrementAppLangue.rdbtnDetail, Source={StaticResource localisation}}" FontSize="11" GroupName="paymode2" Margin="43,437,495,48" Name="rdbtDetail" Checked="rdbtDetail_Checked" RenderTransformOrigin="0.5,0.5" />
+        <RadioButton Content="{Binding Path=RecouvrementAppLangue.rdbtnList, Source={StaticResource localisation}}" FontSize="11" GroupName="paymode1" Height="21" IsChecked="True" Margin="136,440,364,0" Name="rdbtnList" VerticalAlignment="Top" Checked="rdbtnList_Checked_1" />
+        <!--</StackPanel>--> 
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="11,477,0,0" VerticalAlignment="Top" Width="286" IsIndeterminate="True"/>
+
+        <Button x:Name="bntPrinting" Content="Imprimer" Click="OKButton_Click" Width="142" Height="23" HorizontalAlignment="Right" Margin="0,476,151,10" />
+        <Button IsEnabled="False"  Content="{Binding Path=RecouvrementAppLangue.bntCentre, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Left" Margin="13,46,0,0" Name="btnCentre" VerticalAlignment="Top" Width="118" Click="btnCentre_Click" />
+        <Button IsEnabled="False" Content="{Binding Path=RecouvrementAppLangue.bntzone, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Left" Margin="12,102,0,0" Name="btnzone" VerticalAlignment="Top" Width="119" Click="btnzone_Click" RenderTransformOrigin="0.541,-1.13" />
+        <Button IsEnabled="False" Content="{Binding Path=RecouvrementAppLangue.bntCreditController, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Left" Margin="12,75,0,0" Name="btnController" VerticalAlignment="Top" Width="119" Click="btnController_Click" />
+        <TextBox Height="23" Width="62" HorizontalAlignment="Left" IsReadOnly="True" Margin="137,46,0,0" x:Name="Txt_Centre" VerticalAlignment="Top"  />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,46,195,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="212" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,75,410,0" x:Name="Txt_AgentRecourvrement" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.333,0.595" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,75,195,0" x:Name="Txt_LibelleAgentRecouvrement" VerticalAlignment="Top" Width="212" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="136,214,0,0" x:Name="txt_OrdreTourneeDebut" VerticalAlignment="Top" Width="114" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,214,195,0" x:Name="txt_OrdreTourneeFin" VerticalAlignment="Top" Width="109" />
+        <sdk:Label Content="{Binding Path=RecouvrementAppLangue.lblDueDate, Source={StaticResource localisation}}" Height="20" HorizontalAlignment="Left" Margin="34,322,0,0" Name="label3" VerticalAlignment="Top" Width="141" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Right" Margin="0,319,305,0" Background="LightBlue"  Name="dtpDate" VerticalAlignment="Top" Width="124" />
+        <RadioButton Content="Montant minimum" FontSize="12" GroupName="paymode" Margin="22,399,434,89" x:Name="Rdb_NombreFactureMontant" Checked="Rdb_NombreFactureMontant_Checked_1" Unchecked="Rdb_NombreFactureMontant_Unchecked" />
+        <RadioButton Content="Montant minimum " FontSize="12" GroupName="paymode" Height="22" Margin="22,373,434,0" x:Name="Rdb_MontantGlobal" VerticalAlignment="Top" Checked="Rdb_MontantGlobal_Checked_1" Unchecked="Rdb_MontantGlobal_Unchecked" />
+        <RadioButton Content="Montant minimum" FontSize="12" GroupName="paymode" Margin="22,346,0,140" x:Name="Rdb_facturePeriode" HorizontalAlignment="Left" Width="158" Checked="Rdb_facturePeriode_Checked_1" Unchecked="Rdb_facturePeriode_Unchecked_1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Background="LightBlue"  IsReadOnly="False" Margin="180,372,0,0" x:Name="Txt_MontantGlobal" VerticalAlignment="Top" Width="124" />
+        <TextBox Height="23" HorizontalAlignment="Right" Background="LightBlue"  IsReadOnly="False" Margin="0,346,305,0" x:Name="Txt_MontantPeriode" VerticalAlignment="Top" Width="124" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Background="LightBlue"  Margin="0,397,31,0" x:Name="Txt_NombreFactureMontant" VerticalAlignment="Top" Width="83" />
+        <TextBox Height="23" HorizontalAlignment="Right"  Background="LightBlue" IsReadOnly="False" Margin="0,343,31,0" x:Name="Txt_Periode" VerticalAlignment="Top" Width="83" />
+        <sdk:Label Content="Nombre de facture" Height="20" HorizontalAlignment="Left" Margin="380,399,0,0" Name="label2" VerticalAlignment="Top" Width="110" />
+        <TextBox Height="23" HorizontalAlignment="Right" Background="LightBlue"  IsReadOnly="False" Margin="0,398,305,0" Name="Txt_MontantFacture" VerticalAlignment="Top" Width="124" />
+
+        <CheckBox Content="{Binding Path=RecouvrementAppLangue.ckcboxExclTeminated, Source={StaticResource localisation}}" Height="16" HorizontalAlignment="Right" Margin="0,269,336,0" Name="Chk_ExclusResil" VerticalAlignment="Top" Width="229" />
+        <CheckBox Content="{Binding Path=RecouvrementAppLangue.ckcboxExclGroupeAbon, Source={StaticResource localisation}}" Height="16" HorizontalAlignment="Right" Margin="0,269,168,0" Name="Chk_ExclutRegr" VerticalAlignment="Top" />
+        <sdk:Label Content="Total client à afficher" Height="20" HorizontalAlignment="Left" Margin="10,241,0,0" Name="label4" VerticalAlignment="Top" Width="118" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,241,391,0" Name="txtnbreSubscr" VerticalAlignment="Top" Width="81" />
+        <sdk:Label Content="Ordre sur la tournée" Height="20" HorizontalAlignment="Left" Margin="11,215,0,0" Name="lblMatFrom" VerticalAlignment="Top" Width="123" />
+        <sdk:Label Content="A" Height="20" HorizontalAlignment="Right" Margin="0,217,328,0" Name="lblMatTo" VerticalAlignment="Top" Width="26" />
+        <Button IsEnabled="False" Content="{Binding RecouvrementAppLangue.bntcategorie, Source={StaticResource localisation}}" Height="23" HorizontalAlignment="Left" Margin="12,130,0,0"  x:Name="btnCategorie" VerticalAlignment="Top" Width="119" Click="btnCategorie_Click" />
+        <Button Name="btn_CodeConso" IsEnabled="False"  Content="Code consommateur" HorizontalAlignment="Left" Height="24" Margin="12,157,0,0" VerticalAlignment="Top" Width="119" Click="btnCodeConso_Click"/>
+        <Button IsEnabled="False"  Content="Site" Height="23" HorizontalAlignment="Left" Margin="13,17,0,0" x:Name="btnSite" VerticalAlignment="Top" Width="118" Click="btnSite_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="137,17,0,0" x:Name="Txt_Site" VerticalAlignment="Top" Width="61" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,17,195,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="212" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="137,103,0,0" Name="txt_codetourne" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="277"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="137,130,0,0" Name="txt_CodeCategorie" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="277"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="137,157,0,0" Name="txt_CodeConsomateur" TextWrapping="Wrap" Text="" IsReadOnly="True"  VerticalAlignment="Top" Width="277"/>
+        <Button Content="Fermer" HorizontalAlignment="Left" Margin="463,477,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click_1"/>
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="136,187,0,0" x:Name="txtFirstRoute_Copy" VerticalAlignment="Top" Width="114" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,187,195,0" x:Name="txtLastRoute_Copy" VerticalAlignment="Top" Width="109" />
+        <sdk:Label Content="Identifiant abonné" Height="20" HorizontalAlignment="Left" Margin="11,188,0,0" x:Name="lblMatFrom_Copy" VerticalAlignment="Top" Width="123" />
+        <sdk:Label Content="A" Height="20" HorizontalAlignment="Right" Margin="0,190,328,0" x:Name="lblMatTo_Copy" VerticalAlignment="Top" Width="26" />
+        <sdk:Label Content="ET" HorizontalAlignment="Left" x:Name="label1_Copy" VerticalAlignment="Top" Width="40" Margin="316,350,0,0" RenderTransformOrigin="0.576,0.438" />
+        <sdk:Label Content="ET" HorizontalAlignment="Left" x:Name="label1_Copy1" VerticalAlignment="Top" Width="40" Margin="316,399,0,0" RenderTransformOrigin="0.576,0.438" />
+    </Grid>
+</controls:ChildWindow>

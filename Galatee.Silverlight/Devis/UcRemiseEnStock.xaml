@@ -1,0 +1,40 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcRemiseEnStock"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="566" Height="360" OverlayBrush="Transparent" 
+           Title="Retour matériel en stock" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" 
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes" AllowDrop="False">
+    <controls:ChildWindow.Resources>
+        <behaviors:BoolConverter x:Key="CheckConverters"/>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="BtnAnnuler" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="BtnOk" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <Button Content="Sélection totale" Height="23" HorizontalAlignment="Right" Margin="0,12,160,0" Name="BtnSelectionTotal" Width="100" Grid.Row="1" Click="BtnSelectionTotal_Click" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="249" HorizontalAlignment="Left" Name="dataGridElementDevis" VerticalAlignment="Top" Width="537" CellEditEnded="dataGridElementDevis_CellEditEnded" PreparingCellForEdit="dataGridElementDevis_PreparingCellForEdit">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Header="Remise" Visibility="Collapsed">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding REMISE,Mode=TwoWay,Converter={StaticResource CheckConverters}}"
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" 
+                                      HorizontalContentAlignment="Center" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="Désignation" IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" Binding="{Binding DESIGNATION,Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Quantité" IsReadOnly="True" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" Binding="{Binding QUANTITE,Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Quantité à remettre" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" Binding="{Binding QUANTITEREMISENSTOCK,Mode=TwoWay}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

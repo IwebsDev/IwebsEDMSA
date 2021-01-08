@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthentInitializeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthentInitializeService_LireLicence_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireLicence" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LireLicence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireLicenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LireLicence_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GenereLicence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenereLicence" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GenereLicence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenereLicenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GenereLicence_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeAbo07Connexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EcrireFichierDeAbo07Connexion" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeAbo07Connexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EcrireFichierDeAbo07ConnexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeAbo07Connexion_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeGaladbConnexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EcrireFichierDeGaladbConnexion" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeGaladbConnexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EcrireFichierDeGaladbConnexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_EcrireFichierDeGaladbConnexion_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetStrategieSecuriteActif_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrategieSecuriteActif" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetStrategieSecuriteActif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrategieSecuriteActifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetStrategieSecuriteActif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_SaveFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFile" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_SaveFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_SaveFile_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_InputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseInferieurPeriodeAvertissemnt" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseInferieurPeriodeAvertissemntResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeValidite_InputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseInferieurPeriodeValidite" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeValidite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseInferieurPeriodeValiditeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_LicenseInferieurPeriodeValidite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumProcedureStockee_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumProcedureStockee" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumProcedureStockee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumProcedureStockeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumProcedureStockee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuRole" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuRole_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuProfil" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetMenuDuProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetListeModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeModule" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetListeModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListeModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetListeModule_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_UpdateUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneInfoMatriculeConnecte_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoMatriculeConnecte" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneInfoMatriculeConnecte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoMatriculeConnecteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneInfoMatriculeConnecte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumereWrapper_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumereWrapper" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumereWrapper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumereWrapperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_returnEnumereWrapper_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneListImprante_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListImprante" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneListImprante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListImpranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_RetourneListImprante_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_PrintReceipt_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintReceipt" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_PrintReceipt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_PrintReceipt_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_getDefaultPrinter_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDefaultPrinter" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_getDefaultPrinter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDefaultPrinterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetByLoginName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetByLoginName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_GetByLoginName_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_TraceDeConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TraceDeConnection" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_TraceDeConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TraceDeConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthentInitializeService_TraceDeConnection_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthentInitializeService">
+    <wsdl:operation name="LireLicence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/LireLicence" message="tns:IAuthentInitializeService_LireLicence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/LireLicenceResponse" message="tns:IAuthentInitializeService_LireLicence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/LireLicenceErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_LireLicence_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenereLicence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GenereLicence" message="tns:IAuthentInitializeService_GenereLicence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GenereLicenceResponse" message="tns:IAuthentInitializeService_GenereLicence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GenereLicenceErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GenereLicence_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EcrireFichierDeAbo07Connexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeAbo07Connexion" message="tns:IAuthentInitializeService_EcrireFichierDeAbo07Connexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeAbo07ConnexionResponse" message="tns:IAuthentInitializeService_EcrireFichierDeAbo07Connexion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeAbo07ConnexionErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_EcrireFichierDeAbo07Connexion_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EcrireFichierDeGaladbConnexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeGaladbConnexion" message="tns:IAuthentInitializeService_EcrireFichierDeGaladbConnexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeGaladbConnexionResponse" message="tns:IAuthentInitializeService_EcrireFichierDeGaladbConnexion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeGaladbConnexionErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_EcrireFichierDeGaladbConnexion_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrategieSecuriteActif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetStrategieSecuriteActif" message="tns:IAuthentInitializeService_GetStrategieSecuriteActif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetStrategieSecuriteActifResponse" message="tns:IAuthentInitializeService_GetStrategieSecuriteActif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetStrategieSecuriteActifErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GetStrategieSecuriteActif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/SaveFile" message="tns:IAuthentInitializeService_SaveFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/SaveFileResponse" message="tns:IAuthentInitializeService_SaveFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/SaveFileErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_SaveFile_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LicenseInferieurPeriodeAvertissemnt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeAvertissemnt" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeAvertissemntResponse" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeAvertissemntErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeAvertissemnt_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LicenseInferieurPeriodeValidite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeValidite" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeValidite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeValiditeResponse" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeValidite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeValiditeErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_LicenseInferieurPeriodeValidite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumProcedureStockee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumProcedureStockee" message="tns:IAuthentInitializeService_returnEnumProcedureStockee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumProcedureStockeeResponse" message="tns:IAuthentInitializeService_returnEnumProcedureStockee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumProcedureStockeeErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_returnEnumProcedureStockee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuRole" message="tns:IAuthentInitializeService_GetMenuDuRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuRoleResponse" message="tns:IAuthentInitializeService_GetMenuDuRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuRoleErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GetMenuDuRole_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuProfil" message="tns:IAuthentInitializeService_GetMenuDuProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuProfilResponse" message="tns:IAuthentInitializeService_GetMenuDuProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetMenuDuProfilErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GetMenuDuProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListeModule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetListeModule" message="tns:IAuthentInitializeService_GetListeModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetListeModuleResponse" message="tns:IAuthentInitializeService_GetListeModule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetListeModuleErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GetListeModule_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/UpdateUser" message="tns:IAuthentInitializeService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/UpdateUserResponse" message="tns:IAuthentInitializeService_UpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/UpdateUserErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_UpdateUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoMatriculeConnecte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneInfoMatriculeConnecte" message="tns:IAuthentInitializeService_RetourneInfoMatriculeConnecte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneInfoMatriculeConnecteResponse" message="tns:IAuthentInitializeService_RetourneInfoMatriculeConnecte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneInfoMatriculeConnecteErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_RetourneInfoMatriculeConnecte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumereWrapper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumereWrapper" message="tns:IAuthentInitializeService_returnEnumereWrapper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumereWrapperResponse" message="tns:IAuthentInitializeService_returnEnumereWrapper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/returnEnumereWrapperErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_returnEnumereWrapper_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListImprante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneListImprante" message="tns:IAuthentInitializeService_RetourneListImprante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneListImpranteResponse" message="tns:IAuthentInitializeService_RetourneListImprante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/RetourneListImpranteErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_RetourneListImprante_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintReceipt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/PrintReceipt" message="tns:IAuthentInitializeService_PrintReceipt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/PrintReceiptResponse" message="tns:IAuthentInitializeService_PrintReceipt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/PrintReceiptErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_PrintReceipt_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDefaultPrinter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/getDefaultPrinter" message="tns:IAuthentInitializeService_getDefaultPrinter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/getDefaultPrinterResponse" message="tns:IAuthentInitializeService_getDefaultPrinter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByLoginName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetByLoginName" message="tns:IAuthentInitializeService_GetByLoginName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetByLoginNameResponse" message="tns:IAuthentInitializeService_GetByLoginName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/GetByLoginNameErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_GetByLoginName_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TraceDeConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthentInitializeService/TraceDeConnection" message="tns:IAuthentInitializeService_TraceDeConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthentInitializeService/TraceDeConnectionResponse" message="tns:IAuthentInitializeService_TraceDeConnection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAuthentInitializeService/TraceDeConnectionErrorsFault" name="ErrorsFault" message="tns:IAuthentInitializeService_TraceDeConnection_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuthentInitializeService" type="tns:IAuthentInitializeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LireLicence">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/LireLicence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenereLicence">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GenereLicence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EcrireFichierDeAbo07Connexion">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeAbo07Connexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EcrireFichierDeGaladbConnexion">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/EcrireFichierDeGaladbConnexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrategieSecuriteActif">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GetStrategieSecuriteActif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFile">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/SaveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LicenseInferieurPeriodeAvertissemnt">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeAvertissemnt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LicenseInferieurPeriodeValidite">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/LicenseInferieurPeriodeValidite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumProcedureStockee">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/returnEnumProcedureStockee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuRole">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GetMenuDuRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuProfil">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GetMenuDuProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetListeModule">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GetListeModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoMatriculeConnecte">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/RetourneInfoMatriculeConnecte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumereWrapper">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/returnEnumereWrapper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListImprante">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/RetourneListImprante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PrintReceipt">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/PrintReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDefaultPrinter">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/getDefaultPrinter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByLoginName">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/GetByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TraceDeConnection">
+      <soap:operation soapAction="http://tempuri.org/IAuthentInitializeService/TraceDeConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthentInitializeService">
+    <wsdl:port name="BasicHttpBinding_IAuthentInitializeService" binding="tns:BasicHttpBinding_IAuthentInitializeService">
+      <soap:address location="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

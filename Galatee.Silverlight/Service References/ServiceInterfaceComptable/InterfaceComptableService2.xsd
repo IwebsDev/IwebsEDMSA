@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+  <xs:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="RetourneListeDeSite">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDeSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeDeSiteResult" nillable="true" type="q1:ArrayOfCsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCaisse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCaisseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCaisseResult" nillable="true" type="q2:ArrayOfCsCaisse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCodeOperation">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCodeOperationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCodeOperationResult" nillable="true" type="q3:ArrayOfCsCoper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFichierComptable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEcriture" nillable="true" type="q4:ArrayOfCsComptabilisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFichierComptableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetourneFichierComptableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBalanceAgee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Datefin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBalanceAgeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneBalanceAgeeResult" nillable="true" type="q5:ArrayOfCsBalance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBalanceAuxilliaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Datefin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBalanceAuxilliaireResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneBalanceAuxilliaireResult" nillable="true" type="q6:ArrayOfCsBalance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAllOperationByCritere">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdCentre" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstIdcaisse" nillable="true" type="q7:ArrayOfint" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OperationSelect" nillable="true" type="q8:ArrayOfstring" />
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAllOperationByCritereResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneAllOperationByCritereResult" nillable="true" type="q9:ArrayOfCsComptabilisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Retournefacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesOperationCpt" nillable="true" type="q10:ArrayOfCsOperationComptable" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdCentre" nillable="true" type="q11:ArrayOfint" />
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetournefactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RetournefactureResult" nillable="true" type="q12:ArrayOfKeyValueOfArrayOfCsComptabilisationArrayOfCsEcritureComptableb6rPkRsK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEncaissement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesOperationCpt" nillable="true" type="q13:ArrayOfCsOperationComptable" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstCaisse" nillable="true" type="q14:ArrayOfCsCaisse" />
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEncaissementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RetourneEncaissementResult" nillable="true" type="q15:ArrayOfKeyValueOfArrayOfCsComptabilisationArrayOfCsEcritureComptableb6rPkRsK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneMiseAJourGrandCompte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="OperationCpt" nillable="true" type="q16:CsOperationComptable" />
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneMiseAJourGrandCompteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RetourneMiseAJourGrandCompteResult" nillable="true" type="q17:ArrayOfKeyValueOfArrayOfCsComptabilisationArrayOfCsEcritureComptableb6rPkRsK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEtatMiseAJourGrandCompte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEtatMiseAJourGrandCompteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneEtatMiseAJourGrandCompteResult" nillable="true" type="q18:ArrayOfCsComptabilisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneDEncaissement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesOperationCpt" nillable="true" type="q19:ArrayOfCsOperationComptable" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstCaisse" nillable="true" type="q20:ArrayOfCsCaisse" />
+        <xs:element minOccurs="0" name="DateCaisseDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateCaisseFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneDEncaissementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RetourneDEncaissementResult" nillable="true" type="q21:ArrayOfKeyValueOfArrayOfCsComptabilisationArrayOfCsEcritureComptableb6rPkRsK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurgeComptabilisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IdOpertation" nillable="true" type="q22:ArrayOfint" />
+        <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateFin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurgeComptabilisationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurgeComptabilisationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAvanceSurConsomation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsResilier" type="xs:boolean" />
+        <xs:element minOccurs="0" name="DateDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateFin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAvanceSurConsomationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneAvanceSurConsomationResult" nillable="true" type="q23:ArrayOfCsLclient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneProvision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCateg" nillable="true" type="q24:ArrayOfstring" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstProd" nillable="true" type="q25:ArrayOfstring" />
+        <xs:element minOccurs="0" name="DateDebut" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateFin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneProvisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneProvisionResult" nillable="true" type="q26:ArrayOfCsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneTypeFacture">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneTypeFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneTypeFactureResult" nillable="true" type="q27:ArrayOfCsTypeFactureComptable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCompteSpecifique">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCompteSpecifiqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCompteSpecifiqueResult" nillable="true" type="q28:ArrayOfCsCompteSpecifique" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneTypeCompte">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneTypeCompteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneTypeCompteResult" nillable="true" type="q29:ArrayOfCsTypeCompte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneOperationComptable">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneOperationComptableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneOperationComptableResult" nillable="true" type="q30:ArrayOfCsOperationComptable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOperationExiste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LigneComptable" nillable="true" type="q31:ArrayOfCsEcritureComptable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsOperationExisteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="IsOperationExisteResult" nillable="true" type="q32:ArrayOfCsEcritureComptable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertionLigneComptableGenerer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LigneComptable" nillable="true" type="q33:ArrayOfCsEcritureComptable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertionLigneComptableGenererResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertionLigneComptableGenererResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBanqueCentre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneBanqueCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneBanqueCentreResult" nillable="true" type="q34:ArrayOfCsBanqueCompte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneParamCentre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneParamCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneParamCentreResult" nillable="true" type="q35:ArrayOfCsCentreCompte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

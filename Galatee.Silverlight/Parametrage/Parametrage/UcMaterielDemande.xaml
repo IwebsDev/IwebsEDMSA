@@ -1,0 +1,31 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+    xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+    x:Class="Galatee.Silverlight.Parametrage.UcMaterielDemande"
+           Width="616.761" Height="286" OverlayBrush="Transparent"
+           Title="Matériel devis" AllowDrop="False" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="2,10,-14,-5" Width="605" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Informations matériel" x:Name="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="160" Width="584"/>
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="2,190,0,0" x:Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" Grid.Row="1" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="17,28,0,0" x:Name="lab_Code" VerticalAlignment="Top" Width="77" Content="Code " />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,27,324,0" x:Name="Txt_Code" VerticalAlignment="Top" Width="136" MaxLength="6" TabIndex="1" TextChanged="On_TextChanged" />
+        <sdk:Label Content="Libellé " Height="23" HorizontalAlignment="Left" Margin="17,62,0,0" x:Name="lab_Libelle" VerticalAlignment="Top" Width="108" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,62,242,0" MaxLength="100" x:Name="Txt_Libelle" VerticalAlignment="Top" Width="219" BorderThickness="2" TabIndex="2" DataContext="{Binding}" TextChanged="On_TextChanged" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="428,177,0,5" x:Name="btnOk" TabIndex="3" Width="75" Click="BtnOK_Click" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="509,177,0,5" x:Name="Btn_Reinitialiser" TabIndex="3" Width="75" Click="Btn_Annuler_Click" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="17,95,0,0" x:Name="lab_Code_Copy" VerticalAlignment="Top" Width="103" Content="Coût de fourniture" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,90,324,0" x:Name="Txt_CoutFourniture" VerticalAlignment="Top" Width="136"  TabIndex="3" TextChanged="On_TextChanged" />
+        <sdk:Label Height="18" HorizontalAlignment="Left" Margin="17,123,0,0" x:Name="lab_Code_Copy1" VerticalAlignment="Top" Width="103" Content="Coût de pose" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,119,324,0" x:Name="Txt_CoutPose" VerticalAlignment="Top" Width="136"  TabIndex="4" TextChanged="On_TextChanged" />
+    </Grid>
+</sdk:ChildWindow>

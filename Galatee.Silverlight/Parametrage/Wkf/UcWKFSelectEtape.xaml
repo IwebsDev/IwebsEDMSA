@@ -1,0 +1,60 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Parametrage.UcWKFSelectEtape"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           Width="456.12" Height="523" 
+           Title="Choisir une étape" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Configuration de l'étape" Name="GroupBox" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Top" Width="424" Height="240">
+            <Grid>
+                <sdk:Label HorizontalAlignment="Left" Content="Etape :" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+                <sdk:Label HorizontalAlignment="Left" Content="Etape Précédente :" Height="28" Margin="10,43,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox HorizontalAlignment="Left" Name="cmbEtape" Margin="130,8,0,0" VerticalAlignment="Top" Width="265" SelectionChanged="cmbEtape_SelectionChanged"/>
+                <sdk:Label x:Name="lblCondition" HorizontalAlignment="Left" Content="Condition :" Height="28" Margin="10,76,0,0" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" IsEnabled="False" Name="txtCondition" Height="23" Margin="130,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265"/>
+                <sdk:Label HorizontalAlignment="Left" Content="Groupe Validation :" Height="28" Margin="10,184,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox HorizontalAlignment="Left" x:Name="cmbGroupeValidation" Margin="130,182,0,0" VerticalAlignment="Top" Width="265"/>
+                <TextBox HorizontalAlignment="Left" IsEnabled="False" x:Name="txtEtapePrecedente" Height="23" Margin="130,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265"/>
+                <HyperlinkButton Name="HPLSupprime" Content="Supprimer la condition" HorizontalAlignment="Left" Height="24" Margin="130,101,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click"/>
+                <sdk:Label x:Name="lblCondition_Copy" HorizontalAlignment="Left" Content="Délai 'exécution :" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtDelai" Height="23" Margin="130,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="88"/>
+                <sdk:Label x:Name="lblCondition_Copy1" HorizontalAlignment="Left" Content="Jour(s)" Height="28" Margin="223,129,0,0" VerticalAlignment="Top" Width="120"/>
+            </Grid>
+        </Controls:GroupBox>
+        <Controls:GroupBox Header="Liste étapes de rejet" Name="GroupBoxdtGrid" HorizontalAlignment="Left" Margin="0,245,0,0" VerticalAlignment="Top" Width="428" Height="168">
+            <Grid>
+             <sdk:DataGrid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False" 
+			    x:Name="dtgrdParametre"  ItemsSource="{Binding SecondedonnesDatagrid}" Margin="0,0,0,25">
+                <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" Header="Libellé" Width="Auto" IsReadOnly="True" />
+                </sdk:DataGrid.Columns>
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu x:Name="MenuContextuel" Opened="MenuContextuel_Opened">
+                        <toolkit:MenuItem x:Name="MenuContextuelCreerEtape" Header="Ajouter une étape" Icon="" Click="MenuContextuelCreerEtape_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelModifier" Header="Modifier" Click="Modifier_Click"  />
+                        <toolkit:MenuItem x:Name="MenuContextuelSupprimer" Header="Supprimer" Click="Supprimer_Click" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+
+                <i:Interaction.Behaviors>
+                    <behaviors:DataGridDoubleClickBehavior DoubleClick="dtgrdParametre_DoubleClick"/>
+                    <behaviors:DataGridContexMenuBehavior />
+                </i:Interaction.Behaviors>
+            </sdk:DataGrid>
+                <Button Content="Supprimer" Name="BtnSuppRejet" HorizontalAlignment="Left" Margin="341,118,0,0" VerticalAlignment="Top" Width="75" Click="BtnSuppRejet_Click"/>
+                <Button Content="Ajouter" Name="BtnAjouterRejet" HorizontalAlignment="Left" Margin="261,118,0,0" VerticalAlignment="Top" Width="75" Click="BtnAjouterRejet_Click"/>
+            </Grid>
+        </Controls:GroupBox>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

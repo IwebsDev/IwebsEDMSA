@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Galatee.Structure" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CsClientRechercher">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ADRESSEELECTRIQUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVANCE" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLIENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FACTURE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FK_IDABON" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDCENTRE" type="xs:int" />
+          <xs:element minOccurs="0" name="LATITUDE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LONGITUDE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LOT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMABON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMCOMPTEUR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ORDRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptionRecherche" type="xs:int" />
+          <xs:element minOccurs="0" name="PERIODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="POINT" type="xs:int" />
+          <xs:element minOccurs="0" name="PORTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRODUIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEQUENCE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOURNEE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsClientRechercher" nillable="true" type="tns:CsClientRechercher" />
+  <xs:complexType name="CsPrint">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="CsPrint" nillable="true" type="tns:CsPrint" />
+  <xs:complexType name="ArrayOfCsAbonneCarte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsAbonneCarte" nillable="true" type="tns:CsAbonneCarte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsAbonneCarte" nillable="true" type="tns:ArrayOfCsAbonneCarte" />
+  <xs:complexType name="CsAbonneCarte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomAbonne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsAbonneCarte" nillable="true" type="tns:CsAbonneCarte" />
+</xs:schema>

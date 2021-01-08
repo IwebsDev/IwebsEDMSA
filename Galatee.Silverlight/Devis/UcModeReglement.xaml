@@ -1,0 +1,26 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcModeReglement"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="409" Height="229" OverlayBrush="Transparent" 
+           Title="Choix du lieu de paiement" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <my:GroupBox Height="119" HorizontalAlignment="Left" Name="groupBox1" VerticalAlignment="Top" Width="376" />
+        <sdk:Label Height="22" HorizontalAlignment="Left" Margin="10,6,0,0" Name="label1" VerticalAlignment="Top" Width="82" Content="Devis :" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="153,5,0,0" Name="Txt_NumDevis" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+        <sdk:Label Content="Lieu de paiement :" Height="22" HorizontalAlignment="Left" Margin="10,34,0,0" Name="label2" VerticalAlignment="Top" Width="116" />
+        <RadioButton Content="Agence " Height="16" HorizontalAlignment="Left" Margin="153,33,0,0" Name="Rdb_Agence" VerticalAlignment="Top" IsChecked="True" Checked="Rdb_Agence_Checked" Click="Rdb_Agence_Click" />
+        <RadioButton Content="Banque" Height="16" HorizontalAlignment="Left" Margin="278,34,0,0" Name="Rdb_Banque" VerticalAlignment="Top" Checked="Rdb_Banque_Checked" Click="Rdb_Banque_Click" />
+        <sdk:Label Content="Banque :" Height="22" HorizontalAlignment="Left" Margin="12,62,0,0" Name="lab_Banque" VerticalAlignment="Top" Width="116" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="153,58,0,0" Name="Cbo_Banque" VerticalAlignment="Top" Width="213" SelectionChanged="Cbo_Banque_SelectionChanged" />
+        <sdk:Label Content="Numéro de compte :" Height="22" HorizontalAlignment="Left" Margin="10,90,0,0" Name="lab_NumCompte" VerticalAlignment="Top" Width="135" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="153,87,0,0" Name="Txt_NumeroDeCompte" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Tarification.FrmListeRedevance"
+           Width="729" Height="397" 
+           Title="Redevance" Style="{StaticResource ChildWindowGalatee}" OverlayBrush="Transparent" Closing="ChildWindow_Closing_1" >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click"   Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6" Grid.Row="1" />
+        <Button x:Name="NewButton" Content="Nouveau" Click="NewButton_Click"  Width="75" Height="23" HorizontalAlignment="Right" Margin="0,0,616,6" Grid.Row="1" VerticalAlignment="Bottom" />
+        <Button x:Name="ViewButton" Content="Consulter" Click="ViewButton_Click"   Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6,456,6" Grid.Row="1" />
+        <Button x:Name="UpdateButton" Content="Modifier" Click="UpdateButton_Click"  Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6,536,6" Grid.Row="1" />
+        <!--<Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />-->
+        <sdk:DataGrid Name="dgListeRedevence"  HorizontalAlignment="Left" Height="248" Margin="10,10,0,0" VerticalAlignment="Top" Width="681" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" MouseRightButtonDown="dgListeRedevence_MouseRightButtonDown" MouseRightButtonUp="dgListeRedevence_MouseRightButtonUp"  LoadingRow="dgListeRedevence_LoadingRow" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Path=CODE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CODE" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding Path=LIBELLE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="LIBELLE" Width="Auto" />
+                <!--<sdk:DataGridTextColumn Binding="{Binding Path=LIBELLECENTRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="LIBELLE CENTRE" Width="Auto" />-->
+                <sdk:DataGridTextColumn Binding="{Binding Path=LIBELLEPRODUIT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="LIBELLE PRODUIT" Width="Auto" />
+                <!--<sdk:DataGridTextColumn Binding="{Binding Path=NATURECLI}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NATURE CLIENT" Width="Auto" />-->
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="10,258,0,0" PageSize="10" VerticalAlignment="Top" Width="681"/>
+        <Button x:Name="DeleteButton" Content="Surpprimer" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="248,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click" Height="23"/>
+    </Grid>
+</controls:ChildWindow>

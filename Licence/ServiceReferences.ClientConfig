@@ -1,0 +1,18 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IAuthentInitializeService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAuthentInitializeService"
+                contract="ServiceAuthenInitialize.IAuthentInitializeService"
+                name="BasicHttpBinding_IAuthentInitializeService" />
+        </client>
+    </system.serviceModel>
+</configuration>

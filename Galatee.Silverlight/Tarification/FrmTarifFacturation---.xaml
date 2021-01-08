@@ -1,0 +1,97 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Tarification.FrmTarifFacturation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+           Width="791" Height="567" OverlayBrush="Transparent" 
+           Title="Tarif" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,0,337" x:Name="groupBox1_Copy1" Header="Info Générale"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,254,0,23" x:Name="groupBox1_Copy2" Header="Detail tarif" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"  >
+            <Controls:GroupBox FontWeight="SemiBold" Margin="-7,-156,-6,211" x:Name="groupBox1_Copy3" Header="Info Supplementaire" RenderTransformOrigin="0.5,0.5"  />
+
+        </Controls:GroupBox>
+        <Button Content="Ajouter"   x:Name="btn_ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Click="btn_ajouter_Click_1" Margin="538,278,0,0"/>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="118" Margin="428,172,0,0" Content="Fin d'applivcation  "/>
+
+        <!--<StackPanel Height="28" x:Name="stackPanel4" Width="384" Orientation="Horizontal" HorizontalAlignment="Left" Margin="33,57,0,246">-->
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <!--<sdk:Label Height="17" x:Name="label1" Width="54" Content="Centre" Margin="0,6,0,5" />-->
+        <!--<TextBox Height="23" x:Name="Txt_CodeCentre" Width="68" Margin="2,3,2,2" TextChanged="Txt_CodeCentre_TextChanged" Text="{Binding CODECENTRE, Mode=TwoWay}" />-->
+        <!--<Button Content="..." Height="23" x:Name="btn_Centre" Width="26" Margin="2,3,2,2" Click="btn_Centre_Click" />-->
+        <!--<TextBox Height="23" x:Name="Txt_LibelleCentre" Width="205" Text="{Binding LIBELLECENTRE, Mode=TwoWay}" IsReadOnly="True" Margin="0,3,0,0" VerticalAlignment="Top" />-->
+        <!--</StackPanel>-->
+        <StackPanel Height="28" x:Name="stackPanel5" Orientation="Horizontal" Margin="18.69,45.501,246.47,383.498" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+     
+            <sdk:Label Height="28" x:Name="label3" Width="53" Content="Produit" Margin="1,1,1,-1" />
+            <TextBox Height="23" x:Name="Txt_CodeProduit" Width="64" Margin="2,3,2,2" TextChanged="Txt_CodeProduit_TextChanged" />
+            <Button Content="..." Height="23" x:Name="btn_Produit" Width="35" Click="btn_Produit_Click" Margin="0,3,0,2" />
+            <TextBox Height="23" x:Name="Txt_LibelleProduit" Width="202" IsReadOnly="True" Margin="0,3,0,2" />
+        </StackPanel>
+        <StackPanel Height="28" x:Name="stackPanel_TypeLien" Orientation="Horizontal" Margin="382.691,44.68,-7.468,384.319" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            
+            <sdk:Label Height="28" x:Name="label3_" Width="63" Content="    Taxe " Margin="1,1,1,-1" />
+            <TextBox Height="23" x:Name="Txt_CodeTaxe" Width="66" Margin="2,3,2,2" TextChanged="Txt_CodeTaxe_TextChanged"  Text="{Binding PARAM2, Mode=TwoWay}"/>
+            <Button Content="..." Height="23" x:Name="btn_Taxe"   Width="30" Click="btn_Taxe_Click" Margin="0,3,0,2" />
+            <TextBox Height="23" x:Name="Txt_LibelleTaxe" Text="{Binding TYPELIEN, Mode=TwoWay}" Width="206" IsReadOnly="True" Margin="0,3,0,2"  />
+        </StackPanel>
+        <StackPanel Height="28" x:Name="stackPanel_TypeRed" Orientation="Horizontal" Margin="8.69,16.331,249.482,412.668" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+             
+            <sdk:Label Height="28" x:Name="label3__" Width="63" Content="   Centre " Margin="1,1,1,-1" />
+            <TextBox Height="23" x:Name="Txt_CodeCentre" Width="66" Margin="2,3,2,2" TextChanged="Txt_CodeCentre_TextChanged"  Text="{Binding PARAM1, Mode=TwoWay}"/>
+            <Button Content="..." Height="23" x:Name="btn_Centre1" Width="30" Click="btn_Centre_Click"  Margin="0,3,0,2" />
+            <TextBox Height="23" x:Name="Txt_LibelleCentre" Text="{Binding NATURECLI, Mode=TwoWay}" Width="206" IsReadOnly="True" Margin="0,3,0,2"  />
+        </StackPanel>
+        <StackPanel Height="28" x:Name="stackPanel_UniteComptage" Orientation="Horizontal" Margin="383.691,16.722,5.424,412.277" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+             
+            <sdk:Label Height="28" x:Name="label3_UniteComptage" Width="63" Content="    Unite " Margin="1,1,1,-1" />
+            <TextBox Height="23" x:Name="Txt_CodeUniteComptage" Width="66" Margin="2,3,2,2" TextChanged="Txt_CodeUniteComptage_TextChanged"  Text="{Binding PARAM2, Mode=TwoWay}"/>
+            <Button Content="..." Height="23" x:Name="btn_UniteComptage"   Width="30" Click="btn_UniteComptage_Click" Margin="0,3,0,2" />
+            <TextBox Height="23" x:Name="Txt_LibelleUniteComptage" Text="{Binding TYPELIEN, Mode=TwoWay}" Width="206" IsReadOnly="True" Margin="0,3,0,2"  />
+        </StackPanel>
+        <StackPanel Height="28" x:Name="stackPanel_Commune" Orientation="Horizontal" Margin="8.691,75.68,0,353.319" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalAlignment="Left" Width="387.777">
+          
+            <sdk:Label Height="28" x:Name="label3_Commune" Width="63" Content="Commune" Margin="1,1,1,-1" />
+            <TextBox Height="23" x:Name="Txt_CodeCommune" Width="66" Margin="2,3,2,2" TextChanged="Txt_CodeCommune_TextChanged"  Text="{Binding PARAM2, Mode=TwoWay}"/>
+            <Button Content="..." Height="23" x:Name="btn_Commune"   Width="30" Click="btn_Commune_Click" Margin="0,3,0,2" />
+            <TextBox Height="23" x:Name="Txt_LibelleCommune" Text="{Binding TYPELIEN, Mode=TwoWay}" Width="206" IsReadOnly="True" Margin="0,3,0,2"  />
+        </StackPanel>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="58" Margin="41,281,0,0" Content="Quantitée"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_tranche" Height="23" TextWrapping="Wrap" Text="{Binding SelectedItem.LIBELLE, Mode=OneWay, ElementName=dgListeRedevence}" VerticalAlignment="Top" Width="112" Margin="104,277,0,0" TextChanged="txt_tranche_TextChanged"/>
+        <Button Content="Editer" x:Name="btn_editer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="609,277,0,0" Click="btn_editer_Click_1"/>
+        <Button Content="Supprimer"   x:Name="btn_supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Margin="684,277,0,0" Click="btn_supprimer_Click_1"/>
+        <sdk:DataGrid Name="dgListeRedevence" ItemsSource="{Binding }"  HorizontalAlignment="Left" Height="118" Margin="10,304,0,0" VerticalAlignment="Top" Width="743" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="dgListeRedevence_SelectionChanged"  >
+            <sdk:DataGrid.Columns>
+                <!--<sdk:DataGridTextColumn Binding="{Binding Path=NUMEROTRANCHE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NUMERO TRANCHE" Width="Auto" />-->
+                <sdk:DataGridTextColumn Binding="{Binding Path=PRIXUNITAIRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PRIX UNITAIRE" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding Path=QTEANNUELMAXI}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="QUANTITEE ANNUEL MAXI" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="10,428,0,0" PageSize="10" VerticalAlignment="Top" Width="743"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Content="Code Region" Margin="20,144,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Content="Code SRegion" Margin="20,172,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Content="Periode début" Margin="20,200,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="20,226,0,0" Content="Periode fin"  VerticalAlignment="Top" Width="120"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="Debut d'application" VerticalAlignment="Top" Width="120" Margin="426,144,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding SREGION,Mode=TwoWay}" VerticalAlignment="Top" Width="171" Margin="145,168,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding REGION,Mode=TwoWay}" VerticalAlignment="Top" Width="171" Margin="145,144,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding PERDEB,Mode=TwoWay}" VerticalAlignment="Top" Width="171" Margin="145,196,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding PERFIN,Mode= TwoWay}" VerticalAlignment="Top" Width="171" Margin="145,224,0,0"/>
+        <sdk:DatePicker HorizontalAlignment="Left" Text="{Binding DEBUTAPPLICATION,Mode=TwoWay}" Height="23" VerticalAlignment="Top" Width="202" Margin="551,140,0,0"/>
+        <sdk:DatePicker HorizontalAlignment="Left" Text="{Binding FINAPPLICATION,Mode=TwoWay}" Height="23" VerticalAlignment="Top" Width="202" Margin="551,168,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Content="Forvol" Width="120" Margin="428,200,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding FORFVAL,Mode=TwoWay}" VerticalAlignment="Top" Width="200" Margin="551,196,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Content="Montant " Width="120" Margin="426,226,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding MONTANTANNUEL,Mode=TwoWay}" VerticalAlignment="Top" Width="200" Margin="551,224,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="Prix" VerticalAlignment="Top" Width="81" Margin="259,281,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" x:Name="txt_Prix" VerticalAlignment="Top" Width="120" Margin="295,278,0,0"/>
+    </Grid>
+</controls:ChildWindow>

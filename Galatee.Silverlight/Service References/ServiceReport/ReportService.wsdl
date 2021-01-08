@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReportService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Report/ReportService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Report/ReportService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Report/ReportService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Report/ReportService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1818/Report/ReportService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReportService_ReturneAnnulationFactureTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAnnulationFactureTop" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAnnulationFactureTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAnnulationFactureTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAnnulationFactureTop_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerDsLesDelais" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerDsLesDelaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerDsLesDelais_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerDsLesDelais_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerDsLesDelais__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerHorsDelais" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerHorsDelaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerHorsDelais_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisTerminerHorsDelais_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisTerminerHorsDelais__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserDsDelais" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserDsDelaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserDsDelais_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserDsDelais_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserDsDelais__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserHorsDelais" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserHorsDelaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserHorsDelais_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserHorsDelais_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiserHorsDelais__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiser" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiser_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTravauxRealiser_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTravauxRealiser__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeParType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeParType" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeParType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeParTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeParType_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturnecompteursDisponiblesEnMagasin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnecompteursDisponiblesEnMagasin" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturnecompteursDisponiblesEnMagasin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnecompteursDisponiblesEnMagasinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturnecompteursDisponiblesEnMagasin_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneListeDesImpayes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneListeDesImpayes" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneListeDesImpayes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneListeDesImpayesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneListeDesImpayes_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisPayeEnInstanceDeLiaison" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisPayeEnInstanceDeLiaisonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisPayeEnInstanceDeLiaison_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDevisPayeEnInstanceDeLiaison_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDevisPayeEnInstanceDeLiaison__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeEnAttenteDeRealisation" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeEnAttenteDeRealisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeEnAttenteDeRealisation_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneDemandeEnAttenteDeRealisation_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneDemandeEnAttenteDeRealisation__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneRegistreDemande" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneRegistreDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande__InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneRegistreDemande_" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande__OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneRegistreDemande_Response" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneRegistreDemande__ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVentePeriodeAnnee_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVentePeriodeAnnee" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVentePeriodeAnnee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVentePeriodeAnneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVentePeriodeAnnee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneNombreMoyenDeFacturation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneNombreMoyenDeFacturation" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneNombreMoyenDeFacturation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneNombreMoyenDeFacturationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneNombreMoyenDeFacturation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVenteCummule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVenteCummule" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVenteCummule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVenteCummuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVenteCummule_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneConsNull_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneConsNull" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneConsNull_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneConsNullResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneConsNull_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneActionFacturation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneActionFacturation" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneActionFacturation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneActionFacturationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneActionFacturation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompteurParProduit" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompteurParProduitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduit_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduitPeriode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompteurParProduitPeriode" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduitPeriode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompteurParProduitPeriodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompteurParProduitPeriode_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFactureIsole_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneFactureIsole" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFactureIsole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneFactureIsoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFactureIsole_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAnnulationFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAnnulationFacture" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAnnulationFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAnnulationFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAnnulationFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisEmis_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisEmis" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisEmis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisEmisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisEmis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisCoupeType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisCoupeType" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisCoupeType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisCoupeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisCoupeType_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneMontant_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneMontant" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneMontant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneMontantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneMontant_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisRepose_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisRepose" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisRepose_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvisReposeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvisRepose_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneClientResilieSuiteCampagne_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientResilieSuiteCampagne" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneClientResilieSuiteCampagne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientResilieSuiteCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneClientResilieSuiteCampagne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeRecouvrement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeRecouvrement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeRecouvrement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeRecouvrementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeRecouvrement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_MontantPaiementPreavis_InputMessage">
+    <wsdl:part name="parameters" element="tns:MontantPaiementPreavis" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_MontantPaiementPreavis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MontantPaiementPreavisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_MontantPaiementPreavis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneGestionnaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneGestionnaire" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneGestionnaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneGestionnaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneGestionnaire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePreavisPreavis_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListePreavisPreavis" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePreavisPreavis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListePreavisPreavisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePreavisPreavis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListeMandatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeMandatement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListeMandatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeMandatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListeMandatement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q40:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePaiementMandatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListePaiementMandatement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePaiementMandatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListePaiementMandatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ListePaiementMandatement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q41:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeMandatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeMandatement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeMandatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxDeMandatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxDeMandatement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q42:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxPaiement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxPaiement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxPaiement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTauxPaiementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_RetourneTauxPaiement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q43:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEmissionProduitRegroupement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEmissionProduitRegroupement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEmissionProduitRegroupement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEmissionProduitRegroupementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEmissionProduitRegroupement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q44:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvanceSurConso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvanceSurConso" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvanceSurConso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneAvanceSurConsoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneAvanceSurConso_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q45:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementReversement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementReversement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementReversement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementReversementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementReversement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q46:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementModePaiement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementModePaiement" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementModePaiement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementModePaiementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementModePaiement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q47:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVente" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneVenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneVente_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q48:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeSansAchatPeriode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneClientPrepayeSansAchatPeriode" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeSansAchatPeriode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneClientPrepayeSansAchatPeriodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeSansAchatPeriode_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q49:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeJamaisAchat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneClientPrepayeJamaisAchat" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeJamaisAchat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneClientPrepayeJamaisAchatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneClientPrepayeJamaisAchat_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q50:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompabilisationRecap_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompabilisationRecap" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompabilisationRecap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneCompabilisationRecapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneCompabilisationRecap_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q51:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatistique_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneStatistique" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatistique_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneStatistiqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatistique_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q52:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ChargerRedevance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerRedevance" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ChargerRedevance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerRedevanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ChargerRedevance_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q53:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatiqueDesVente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneStatiqueDesVente" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatiqueDesVente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneStatiqueDesVenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneStatiqueDesVente_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q54:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFichierPersonnel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneFichierPersonnel" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFichierPersonnel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneFichierPersonnelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneFichierPersonnel_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q55:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementParMoisComptable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementParMoisComptable" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementParMoisComptable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneEncaissementParMoisComptableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneEncaissementParMoisComptable_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q56:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTourneePIA_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTourneePIA" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTourneePIA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturneTourneePIAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportService_ReturneTourneePIA_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q57:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IReportService">
+    <wsdl:operation name="ReturneAnnulationFactureTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFactureTop" message="tns:IReportService_ReturneAnnulationFactureTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFactureTopResponse" message="tns:IReportService_ReturneAnnulationFactureTop_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFactureTopErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAnnulationFactureTop_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerDsLesDelais">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais" message="tns:IReportService_ReturneDevisTerminerDsLesDelais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelaisResponse" message="tns:IReportService_ReturneDevisTerminerDsLesDelais_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelaisErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisTerminerDsLesDelais_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerDsLesDelais_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais_" message="tns:IReportService_ReturneDevisTerminerDsLesDelais__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais_Response" message="tns:IReportService_ReturneDevisTerminerDsLesDelais__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisTerminerDsLesDelais__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerHorsDelais">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais" message="tns:IReportService_ReturneDevisTerminerHorsDelais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelaisResponse" message="tns:IReportService_ReturneDevisTerminerHorsDelais_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelaisErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisTerminerHorsDelais_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerHorsDelais_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais_" message="tns:IReportService_ReturneDevisTerminerHorsDelais__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais_Response" message="tns:IReportService_ReturneDevisTerminerHorsDelais__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisTerminerHorsDelais__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserDsDelais">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais" message="tns:IReportService_ReturneTravauxRealiserDsDelais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelaisResponse" message="tns:IReportService_ReturneTravauxRealiserDsDelais_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelaisErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiserDsDelais_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserDsDelais_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais_" message="tns:IReportService_ReturneTravauxRealiserDsDelais__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais_Response" message="tns:IReportService_ReturneTravauxRealiserDsDelais__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiserDsDelais__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserHorsDelais">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais" message="tns:IReportService_ReturneTravauxRealiserHorsDelais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelaisResponse" message="tns:IReportService_ReturneTravauxRealiserHorsDelais_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelaisErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiserHorsDelais_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserHorsDelais_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais_" message="tns:IReportService_ReturneTravauxRealiserHorsDelais__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais_Response" message="tns:IReportService_ReturneTravauxRealiserHorsDelais__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiserHorsDelais__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiser" message="tns:IReportService_ReturneTravauxRealiser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserResponse" message="tns:IReportService_ReturneTravauxRealiser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiserErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiser_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiser_" message="tns:IReportService_ReturneTravauxRealiser__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiser_Response" message="tns:IReportService_ReturneTravauxRealiser__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTravauxRealiser_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTravauxRealiser__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeParType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeParType" message="tns:IReportService_ReturneDemandeParType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeParTypeResponse" message="tns:IReportService_ReturneDemandeParType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeParTypeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDemandeParType_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnecompteursDisponiblesEnMagasin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturnecompteursDisponiblesEnMagasin" message="tns:IReportService_ReturnecompteursDisponiblesEnMagasin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturnecompteursDisponiblesEnMagasinResponse" message="tns:IReportService_ReturnecompteursDisponiblesEnMagasin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturnecompteursDisponiblesEnMagasinErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturnecompteursDisponiblesEnMagasin_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneListeDesImpayes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneListeDesImpayes" message="tns:IReportService_ReturneListeDesImpayes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneListeDesImpayesResponse" message="tns:IReportService_ReturneListeDesImpayes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneListeDesImpayesErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneListeDesImpayes_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisPayeEnInstanceDeLiaison">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaisonResponse" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaisonErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisPayeEnInstanceDeLiaison_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison_" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison_Response" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDevisPayeEnInstanceDeLiaison__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeEnAttenteDeRealisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisationResponse" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisationErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeEnAttenteDeRealisation_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation_" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation_Response" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneDemandeEnAttenteDeRealisation__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneRegistreDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemande" message="tns:IReportService_ReturneRegistreDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemandeResponse" message="tns:IReportService_ReturneRegistreDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemandeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneRegistreDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneRegistreDemande_">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemande_" message="tns:IReportService_ReturneRegistreDemande__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemande_Response" message="tns:IReportService_ReturneRegistreDemande__OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneRegistreDemande_ErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneRegistreDemande__ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVentePeriodeAnnee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneVentePeriodeAnnee" message="tns:IReportService_ReturneVentePeriodeAnnee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneVentePeriodeAnneeResponse" message="tns:IReportService_ReturneVentePeriodeAnnee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneVentePeriodeAnneeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneVentePeriodeAnnee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneNombreMoyenDeFacturation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneNombreMoyenDeFacturation" message="tns:IReportService_ReturneNombreMoyenDeFacturation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneNombreMoyenDeFacturationResponse" message="tns:IReportService_ReturneNombreMoyenDeFacturation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneNombreMoyenDeFacturationErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneNombreMoyenDeFacturation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVenteCummule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneVenteCummule" message="tns:IReportService_ReturneVenteCummule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneVenteCummuleResponse" message="tns:IReportService_ReturneVenteCummule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneVenteCummuleErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneVenteCummule_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneConsNull">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneConsNull" message="tns:IReportService_ReturneConsNull_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneConsNullResponse" message="tns:IReportService_ReturneConsNull_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneConsNullErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneConsNull_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneActionFacturation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneActionFacturation" message="tns:IReportService_ReturneActionFacturation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneActionFacturationResponse" message="tns:IReportService_ReturneActionFacturation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneActionFacturationErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneActionFacturation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompteurParProduit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduit" message="tns:IReportService_ReturneCompteurParProduit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduitResponse" message="tns:IReportService_ReturneCompteurParProduit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduitErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneCompteurParProduit_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompteurParProduitPeriode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduitPeriode" message="tns:IReportService_ReturneCompteurParProduitPeriode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduitPeriodeResponse" message="tns:IReportService_ReturneCompteurParProduitPeriode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneCompteurParProduitPeriodeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneCompteurParProduitPeriode_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneFactureIsole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneFactureIsole" message="tns:IReportService_ReturneFactureIsole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneFactureIsoleResponse" message="tns:IReportService_ReturneFactureIsole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneFactureIsoleErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneFactureIsole_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAnnulationFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFacture" message="tns:IReportService_ReturneAnnulationFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFactureResponse" message="tns:IReportService_ReturneAnnulationFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAnnulationFactureErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAnnulationFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisEmis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAvisEmis" message="tns:IReportService_ReturneAvisEmis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAvisEmisResponse" message="tns:IReportService_ReturneAvisEmis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAvisEmisErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAvisEmis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisCoupeType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAvisCoupeType" message="tns:IReportService_ReturneAvisCoupeType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAvisCoupeTypeResponse" message="tns:IReportService_ReturneAvisCoupeType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAvisCoupeTypeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAvisCoupeType_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneMontant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneMontant" message="tns:IReportService_ReturneMontant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneMontantResponse" message="tns:IReportService_ReturneMontant_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneMontantErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneMontant_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisRepose">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAvisRepose" message="tns:IReportService_ReturneAvisRepose_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAvisReposeResponse" message="tns:IReportService_ReturneAvisRepose_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAvisReposeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAvisRepose_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientResilieSuiteCampagne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneClientResilieSuiteCampagne" message="tns:IReportService_RetourneClientResilieSuiteCampagne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneClientResilieSuiteCampagneResponse" message="tns:IReportService_RetourneClientResilieSuiteCampagne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneClientResilieSuiteCampagneErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneClientResilieSuiteCampagne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeRecouvrement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeRecouvrement" message="tns:IReportService_RetourneTauxDeRecouvrement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeRecouvrementResponse" message="tns:IReportService_RetourneTauxDeRecouvrement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeRecouvrementErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneTauxDeRecouvrement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeEncaissement" message="tns:IReportService_RetourneTauxDeEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeEncaissementResponse" message="tns:IReportService_RetourneTauxDeEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeEncaissementErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneTauxDeEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MontantPaiementPreavis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/MontantPaiementPreavis" message="tns:IReportService_MontantPaiementPreavis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/MontantPaiementPreavisResponse" message="tns:IReportService_MontantPaiementPreavis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/MontantPaiementPreavisErrorsFault" name="ErrorsFault" message="tns:IReportService_MontantPaiementPreavis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneGestionnaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneGestionnaire" message="tns:IReportService_RetourneGestionnaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneGestionnaireResponse" message="tns:IReportService_RetourneGestionnaire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneGestionnaireErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneGestionnaire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListePreavisPreavis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ListePreavisPreavis" message="tns:IReportService_ListePreavisPreavis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ListePreavisPreavisResponse" message="tns:IReportService_ListePreavisPreavis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ListePreavisPreavisErrorsFault" name="ErrorsFault" message="tns:IReportService_ListePreavisPreavis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeMandatement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ListeMandatement" message="tns:IReportService_ListeMandatement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ListeMandatementResponse" message="tns:IReportService_ListeMandatement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ListeMandatementErrorsFault" name="ErrorsFault" message="tns:IReportService_ListeMandatement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListePaiementMandatement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ListePaiementMandatement" message="tns:IReportService_ListePaiementMandatement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ListePaiementMandatementResponse" message="tns:IReportService_ListePaiementMandatement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ListePaiementMandatementErrorsFault" name="ErrorsFault" message="tns:IReportService_ListePaiementMandatement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeMandatement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeMandatement" message="tns:IReportService_RetourneTauxDeMandatement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeMandatementResponse" message="tns:IReportService_RetourneTauxDeMandatement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneTauxDeMandatementErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneTauxDeMandatement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxPaiement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/RetourneTauxPaiement" message="tns:IReportService_RetourneTauxPaiement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/RetourneTauxPaiementResponse" message="tns:IReportService_RetourneTauxPaiement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/RetourneTauxPaiementErrorsFault" name="ErrorsFault" message="tns:IReportService_RetourneTauxPaiement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEmissionProduitRegroupement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneEmissionProduitRegroupement" message="tns:IReportService_ReturneEmissionProduitRegroupement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneEmissionProduitRegroupementResponse" message="tns:IReportService_ReturneEmissionProduitRegroupement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneEmissionProduitRegroupementErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneEmissionProduitRegroupement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvanceSurConso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneAvanceSurConso" message="tns:IReportService_ReturneAvanceSurConso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneAvanceSurConsoResponse" message="tns:IReportService_ReturneAvanceSurConso_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneAvanceSurConsoErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneAvanceSurConso_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementReversement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementReversement" message="tns:IReportService_ReturneEncaissementReversement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementReversementResponse" message="tns:IReportService_ReturneEncaissementReversement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementReversementErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneEncaissementReversement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementModePaiement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementModePaiement" message="tns:IReportService_ReturneEncaissementModePaiement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementModePaiementResponse" message="tns:IReportService_ReturneEncaissementModePaiement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementModePaiementErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneEncaissementModePaiement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneVente" message="tns:IReportService_ReturneVente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneVenteResponse" message="tns:IReportService_ReturneVente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneVenteErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneVente_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneClientPrepayeSansAchatPeriode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeSansAchatPeriode" message="tns:IReportService_ReturneClientPrepayeSansAchatPeriode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeSansAchatPeriodeResponse" message="tns:IReportService_ReturneClientPrepayeSansAchatPeriode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeSansAchatPeriodeErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneClientPrepayeSansAchatPeriode_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneClientPrepayeJamaisAchat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeJamaisAchat" message="tns:IReportService_ReturneClientPrepayeJamaisAchat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeJamaisAchatResponse" message="tns:IReportService_ReturneClientPrepayeJamaisAchat_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneClientPrepayeJamaisAchatErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneClientPrepayeJamaisAchat_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompabilisationRecap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneCompabilisationRecap" message="tns:IReportService_ReturneCompabilisationRecap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneCompabilisationRecapResponse" message="tns:IReportService_ReturneCompabilisationRecap_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneCompabilisationRecapErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneCompabilisationRecap_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneStatistique">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneStatistique" message="tns:IReportService_ReturneStatistique_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneStatistiqueResponse" message="tns:IReportService_ReturneStatistique_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneStatistiqueErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneStatistique_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerRedevance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ChargerRedevance" message="tns:IReportService_ChargerRedevance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ChargerRedevanceResponse" message="tns:IReportService_ChargerRedevance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ChargerRedevanceErrorsFault" name="ErrorsFault" message="tns:IReportService_ChargerRedevance_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneStatiqueDesVente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneStatiqueDesVente" message="tns:IReportService_ReturneStatiqueDesVente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneStatiqueDesVenteResponse" message="tns:IReportService_ReturneStatiqueDesVente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneStatiqueDesVenteErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneStatiqueDesVente_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneFichierPersonnel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneFichierPersonnel" message="tns:IReportService_ReturneFichierPersonnel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneFichierPersonnelResponse" message="tns:IReportService_ReturneFichierPersonnel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneFichierPersonnelErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneFichierPersonnel_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementParMoisComptable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementParMoisComptable" message="tns:IReportService_ReturneEncaissementParMoisComptable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementParMoisComptableResponse" message="tns:IReportService_ReturneEncaissementParMoisComptable_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneEncaissementParMoisComptableErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneEncaissementParMoisComptable_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTourneePIA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportService/ReturneTourneePIA" message="tns:IReportService_ReturneTourneePIA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportService/ReturneTourneePIAResponse" message="tns:IReportService_ReturneTourneePIA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReportService/ReturneTourneePIAErrorsFault" name="ErrorsFault" message="tns:IReportService_ReturneTourneePIA_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReportService" type="tns:IReportService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReturneAnnulationFactureTop">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAnnulationFactureTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerDsLesDelais">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerDsLesDelais_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisTerminerDsLesDelais_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerHorsDelais">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisTerminerHorsDelais_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisTerminerHorsDelais_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserDsDelais">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserDsDelais_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiserDsDelais_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserHorsDelais">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiserHorsDelais_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiserHorsDelais_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiser">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTravauxRealiser_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTravauxRealiser_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeParType">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDemandeParType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnecompteursDisponiblesEnMagasin">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturnecompteursDisponiblesEnMagasin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneListeDesImpayes">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneListeDesImpayes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisPayeEnInstanceDeLiaison">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDevisPayeEnInstanceDeLiaison_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDevisPayeEnInstanceDeLiaison_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeEnAttenteDeRealisation">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneDemandeEnAttenteDeRealisation_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneDemandeEnAttenteDeRealisation_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneRegistreDemande">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneRegistreDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneRegistreDemande_">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneRegistreDemande_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVentePeriodeAnnee">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneVentePeriodeAnnee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneNombreMoyenDeFacturation">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneNombreMoyenDeFacturation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVenteCummule">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneVenteCummule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneConsNull">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneConsNull" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneActionFacturation">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneActionFacturation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompteurParProduit">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneCompteurParProduit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompteurParProduitPeriode">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneCompteurParProduitPeriode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneFactureIsole">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneFactureIsole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAnnulationFacture">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAnnulationFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisEmis">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAvisEmis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisCoupeType">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAvisCoupeType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneMontant">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneMontant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvisRepose">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAvisRepose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientResilieSuiteCampagne">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneClientResilieSuiteCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeRecouvrement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneTauxDeRecouvrement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeEncaissement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneTauxDeEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MontantPaiementPreavis">
+      <soap:operation soapAction="http://tempuri.org/IReportService/MontantPaiementPreavis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneGestionnaire">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneGestionnaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListePreavisPreavis">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ListePreavisPreavis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeMandatement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ListeMandatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListePaiementMandatement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ListePaiementMandatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxDeMandatement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneTauxDeMandatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTauxPaiement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/RetourneTauxPaiement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEmissionProduitRegroupement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneEmissionProduitRegroupement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneAvanceSurConso">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneAvanceSurConso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementReversement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneEncaissementReversement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementModePaiement">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneEncaissementModePaiement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneVente">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneVente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneClientPrepayeSansAchatPeriode">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneClientPrepayeSansAchatPeriode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneClientPrepayeJamaisAchat">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneClientPrepayeJamaisAchat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneCompabilisationRecap">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneCompabilisationRecap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneStatistique">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneStatistique" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerRedevance">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ChargerRedevance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneStatiqueDesVente">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneStatiqueDesVente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneFichierPersonnel">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneFichierPersonnel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneEncaissementParMoisComptable">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneEncaissementParMoisComptable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturneTourneePIA">
+      <soap:operation soapAction="http://tempuri.org/IReportService/ReturneTourneePIA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportService">
+    <wsdl:port name="BasicHttpBinding_IReportService" binding="tns:BasicHttpBinding_IReportService">
+      <soap:address location="http://localhost:1818/Report/ReportService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

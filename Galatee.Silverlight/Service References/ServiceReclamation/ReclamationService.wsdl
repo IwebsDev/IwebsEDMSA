@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReclamationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReclamationService_GetAllReclamations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReclamations" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllReclamations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReclamationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllModeReception_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllModeReception" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllModeReception_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllModeReceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranch" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCentre" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_SearchClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchClient" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_SearchClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetClientInformations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInformations" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetClientInformations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInformationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllComplaintType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComplaintType" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllComplaintType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComplaintTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllZone" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetAllZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetDiameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiameters" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetDiameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetCanalisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCanalisation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_GetCanalisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCanalisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_InsertReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_InsertReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_UpdateReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_UpdateReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirNumeroFiche_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirNumeroFiche" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirNumeroFiche_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirNumeroFicheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_InsertFichierJoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFichierJoint" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_InsertFichierJoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFichierJointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ChercherAgents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChercherAgents" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ChercherAgents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChercherAgentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirListeFonctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirListeFonctions" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirListeFonctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirListeFonctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirReclamationParCritere_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirReclamationParCritere" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationService_ObtenirReclamationParCritere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenirReclamationParCritereResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReclamationService">
+    <wsdl:operation name="GetAllReclamations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllReclamations" message="tns:IReclamationService_GetAllReclamations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllReclamationsResponse" message="tns:IReclamationService_GetAllReclamations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllModeReception">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllModeReception" message="tns:IReclamationService_GetAllModeReception_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllModeReceptionResponse" message="tns:IReclamationService_GetAllModeReception_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllBranch" message="tns:IReclamationService_GetAllBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllBranchResponse" message="tns:IReclamationService_GetAllBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllCentre" message="tns:IReclamationService_GetAllCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllCentreResponse" message="tns:IReclamationService_GetAllCentre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/SearchClient" message="tns:IReclamationService_SearchClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/SearchClientResponse" message="tns:IReclamationService_SearchClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInformations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetClientInformations" message="tns:IReclamationService_GetClientInformations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetClientInformationsResponse" message="tns:IReclamationService_GetClientInformations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComplaintType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllComplaintType" message="tns:IReclamationService_GetAllComplaintType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllComplaintTypeResponse" message="tns:IReclamationService_GetAllComplaintType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllZone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetAllZone" message="tns:IReclamationService_GetAllZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetAllZoneResponse" message="tns:IReclamationService_GetAllZone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetDiameters" message="tns:IReclamationService_GetDiameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetDiametersResponse" message="tns:IReclamationService_GetDiameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCanalisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/GetCanalisation" message="tns:IReclamationService_GetCanalisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/GetCanalisationResponse" message="tns:IReclamationService_GetCanalisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/InsertReclamation" message="tns:IReclamationService_InsertReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/InsertReclamationResponse" message="tns:IReclamationService_InsertReclamation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/UpdateReclamation" message="tns:IReclamationService_UpdateReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/UpdateReclamationResponse" message="tns:IReclamationService_UpdateReclamation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirNumeroFiche">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/ObtenirNumeroFiche" message="tns:IReclamationService_ObtenirNumeroFiche_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/ObtenirNumeroFicheResponse" message="tns:IReclamationService_ObtenirNumeroFiche_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFichierJoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/InsertFichierJoint" message="tns:IReclamationService_InsertFichierJoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/InsertFichierJointResponse" message="tns:IReclamationService_InsertFichierJoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChercherAgents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/ChercherAgents" message="tns:IReclamationService_ChercherAgents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/ChercherAgentsResponse" message="tns:IReclamationService_ChercherAgents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirListeFonctions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/ObtenirListeFonctions" message="tns:IReclamationService_ObtenirListeFonctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/ObtenirListeFonctionsResponse" message="tns:IReclamationService_ObtenirListeFonctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirReclamationParCritere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationService/ObtenirReclamationParCritere" message="tns:IReclamationService_ObtenirReclamationParCritere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationService/ObtenirReclamationParCritereResponse" message="tns:IReclamationService_ObtenirReclamationParCritere_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReclamationService" type="tns:IReclamationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllReclamations">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllReclamations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllModeReception">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllModeReception" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBranch">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCentre">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchClient">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/SearchClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInformations">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetClientInformations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComplaintType">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllComplaintType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllZone">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetAllZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiameters">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetDiameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCanalisation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/GetCanalisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/InsertReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/UpdateReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirNumeroFiche">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/ObtenirNumeroFiche" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFichierJoint">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/InsertFichierJoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChercherAgents">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/ChercherAgents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirListeFonctions">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/ObtenirListeFonctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenirReclamationParCritere">
+      <soap:operation soapAction="http://tempuri.org/IReclamationService/ObtenirReclamationParCritere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReclamationService">
+    <wsdl:port name="BasicHttpBinding_IReclamationService" binding="tns:BasicHttpBinding_IReclamationService">
+      <soap:address location="http://localhost:1818/Reclamation/ReclamationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

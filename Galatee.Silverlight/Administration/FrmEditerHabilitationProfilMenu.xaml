@@ -1,0 +1,69 @@
+﻿<controls:ChildWindow Title="Hablilitaion par profil" x:Class="Galatee.Silverlight.Administration.FrmEditerHabilitationProfilMenu"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:HierarchicalOptions_Models="clr-namespace:Galatee.Silverlight.Library.Models;assembly=Galatee.Silverlight.Library" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           Width="442" Height="169" 
+           OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}" Margin="0,2,0,-2" >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.Resources>
+            <DataTemplate x:Key="headerTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox IsChecked="{Binding Check, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding Name}"/>
+                </StackPanel>
+            </DataTemplate>
+            <!--<HierarchicalOptions_Models:DesignTimeData x:Key="DesignTimeDataSource"/>-->
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate10">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate9" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate10}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate8" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate9}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate7" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate8}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate6" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate7}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate5" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate6}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate4" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate5}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate3" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate4}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate2" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate3}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate2}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="True"/>
+            </sdk:HierarchicalDataTemplate>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="711*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*" />
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="1,-1,0,1" x:Name="groupBox1_Copy" Grid.ColumnSpan="2" Header="Choix du role" />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,4,13,1" Grid.Column="1" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,4,92,1" Grid.Column="1" Grid.Row="1"  />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="69,22,0,0" x:Name="cbo_profile" VerticalAlignment="Top" 
+                  Width="261"  Grid.Column="1" SelectionChanged="cbo_profile_SelectionChanged" />
+        <sdk:Label Content="Job title :" Height="20" HorizontalAlignment="Left" Margin="18,-524,0,570" x:Name="lbl_title" VerticalAlignment="Bottom" Width="69" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Profil " Height="20" HorizontalAlignment="Left" Margin="0,22,0,0" x:Name="lbl_jobtitle" VerticalAlignment="Top" Width="69" Grid.Column="1" />
+
+    </Grid>
+</controls:ChildWindow>

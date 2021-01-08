@@ -1,0 +1,124 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+    x:Class="Galatee.Silverlight.Devis.UcProcesVerbalEtalonnage"
+           Width="945" Height="667.254" OverlayBrush="Transparent" 
+           Title="Saisie du procès verbal" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox  Header="Information travaux" Height="164" HorizontalAlignment="Left" x:Name="groupBox2_Copy" VerticalAlignment="Top" Width="917" />
+
+        <sdk:TabControl HorizontalAlignment="Left"     x:Name="tabC_Onglet"  Height="388" VerticalAlignment="Top" Width="917" Margin="0,169,0,0" >
+            <sdk:TabItem Header="Information Compteur">
+                <Grid>
+                    <sdk:Label Content="Periode de pose" Height="21" HorizontalAlignment="Left" Margin="10,3,0,0" x:Name="label14_Copy" VerticalAlignment="Top" Width="126" />
+                    <sdk:Label Content="Periode de dépose" Height="21" HorizontalAlignment="Left" Margin="10,176,0,0" x:Name="label14_Copy1" VerticalAlignment="Top" Width="126" />
+                    <sdk:Label Content="(MM/AAAA)" Height="21" HorizontalAlignment="Left" Margin="263,176,0,0" x:Name="label14_Copy2" VerticalAlignment="Top" Width="126" />
+                    <sdk:Label Content="(MM/AAAA)" Height="21" HorizontalAlignment="Left" Margin="263,3,0,0" x:Name="label14_Copy3" VerticalAlignment="Top" Width="126" />
+                    <sdk:DataGrid x:Name="dg_compteur"   HorizontalAlignment="Left" Height="146" Margin="10,28,0,0" VerticalAlignment="Top" Width="885" AutoGenerateColumns="False" IsReadOnly="False" SelectionMode="Single" SelectionChanged="dg_compteur_SelectionChanged"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding NUMERO}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMPTEUR" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLEREGLAGECOMPTEUR}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CALIBRE" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLEMARQUE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="MARQUE" Width="Auto" />
+
+                            <sdk:DataGridTemplateColumn Header="DATE POSE">
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <sdk:DatePicker Height="Auto" HorizontalAlignment="Left" SelectedDate="{Binding DATEPOSE}" SelectedDateChanged="DtpPose_SelectedDateChanged_1"  x:Name="DtpPose" VerticalAlignment="Top" Width="Auto"  CalendarClosed="DtpDebutTravaux_CalendarClosed" />
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+
+                            <sdk:DataGridTextColumn Binding="{Binding INDEXEVT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="INDEX" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding COMMENTAIRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMMENTAIRE" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button Content="Modifier compteur selectioné" Visibility="Collapsed" HorizontalAlignment="Left" Margin="586,64,0,0" VerticalAlignment="Top" Width="186" Click="Button_Click_1"/>
+                    <sdk:DataGrid x:Name="dg_AncienCompteur"   HorizontalAlignment="Left" Height="139" Margin="10,202,0,0" VerticalAlignment="Top" Width="885" AutoGenerateColumns="False" IsReadOnly="False" SelectionMode="Single" SelectionChanged="dg_compteur_SelectionChanged"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding NUMERO}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMPTEUR" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLEREGLAGECOMPTEUR}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CALIBRE" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLEMARQUE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="MARQUE" Width="Auto" />
+                            <sdk:DataGridTemplateColumn Header="DATE DEPOSE">
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <sdk:DatePicker  HorizontalAlignment="Left" SelectedDate="{Binding DATEDEPOSE}" SelectedDateChanged="DtpDePose_SelectedDateChanged_1"  x:Name="DtpDePose" VerticalAlignment="Top" Width="Auto"  CalendarClosed="DtpDebutTravaux_CalendarClosed" />
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+                            <sdk:DataGridTextColumn Binding="{Binding INDEXEVT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="INDEX" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding COMMENTAIRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMMENTAIRE" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="134,3,0,0" x:Name="TxtperiodePose" VerticalAlignment="Top" Width="124" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="134,176,0,0" x:Name="TxtperiodeDepose" VerticalAlignment="Top" Width="124" />
+                    <!--<my:GroupBox Height="170" Header="Nouveau compteur" HorizontalAlignment="Left" Margin="10,1,0,0" x:Name="groupBox2_Copy5" VerticalAlignment="Top" Width="895" />-->
+                </Grid>
+            </sdk:TabItem>
+
+            <sdk:TabItem Header="Information de pose" Name="tabitemScelle">
+                <Grid x:Name="LayoutRoot1" Margin="2,2,2,-59">                   
+                    <sdk:DataGrid x:Name="dg_composantScellable" ItemsSource="{Binding DETAILCAMPAGNEGC_, Mode=TwoWay}"  HorizontalAlignment="Left" Height="249" Margin="9,37,0,0" VerticalAlignment="Top" Width="165" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMPOSANT SCELLABLE" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <HyperlinkButton Content="Joindre le certificat de scellage" FontWeight="Bold" Name="lnkLetter"  Margin="202,291,461,98" Click="lnkLetter_Click"  />
+
+                    <my:GroupBox Height="343" Header="Actions de scellage" HorizontalAlignment="Left" Margin="181,0,0,55" x:Name="groupBox2_Copy3" VerticalAlignment="Bottom" Width="710" />
+                    <my:GroupBox Height="343" Header="Liste Composant scellable" HorizontalAlignment="Left" Margin="2,0,0,55" x:Name="groupBox2_Copy2" VerticalAlignment="Bottom" Width="174" />
+                    <RadioButton Content="Aucun Action" HorizontalAlignment="Left" x:Name="rbt_AuneAction" VerticalAlignment="Top" Margin="263,42,0,0" Width="101" Checked="rbt_AuneAction_Checked"/>
+                    <RadioButton Content="Rupture Simple" HorizontalAlignment="Left" x:Name="rbt_RuptureSimple" VerticalAlignment="Top" Margin="362,42,0,0" Width="118" Checked="rbt_RuptureSimple_Checked" Unchecked="rbt_RuptureSimple_Unchecked_1" />
+                    <RadioButton Content="Nouveau  scellé" HorizontalAlignment="Left" x:Name="rbt_NouveauScelle" VerticalAlignment="Top" Margin="477,42,0,0" Width="119" Checked="rbt_NouveauScelle_Checked_1" Unchecked="rbt_NouveauScelle_Unchecked_1"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="653,43,0,0" VerticalAlignment="Top" Width="35" x:Name="btn_ListScelle" IsEnabled="False" Click="btn_ListScelle_Click"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_NumScelleRompu" IsReadOnly="True" Margin="190,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="71"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="588,42,0,0" x:Name="txt_NumNouveauScelle" IsReadOnly="True" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60"/>
+                    <Button Content="Valider scellage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118"  Margin="738,81,0,0" x:Name="btn_Ajout" Click="btn_Ajout_Click"/>
+                    <sdk:Label HorizontalAlignment="Left" Height="28" Margin="693,44,0,0" VerticalAlignment="Top" Content="Nombre de scellé" Width="109"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" HorizontalContentAlignment="Center"  Margin="793,44,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" x:Name="txt_NombreScelle" IsEnabled="False" Width="30"/>
+                    <sdk:DataGrid x:Name="dg_Scellage" ItemsSource="{Binding DETAILCAMPAGNEGC_, Mode=TwoWay}"  HorizontalAlignment="Left" Height="209" Margin="190,77,0,0" VerticalAlignment="Top" Width="543" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding NUM_SCELLE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NUMERO SCELLE" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding LIBELLEORGANE_SCELLABLE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="LIBELLE ORGANE SCELLABLE" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding NOMBRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NOMBRE" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button Content="Supprimer scellage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118"  Margin="738,108,0,0" x:Name="btn_Supprimer" Click="btn_Supprimer_Click_1"/>
+
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="129" Height="23" HorizontalAlignment="Right" Margin="0,9,6,3" Grid.Row="1" />
+        <sdk:Label Content="Numéro devis" Height="21" HorizontalAlignment="Left" Margin="15,27,0,0" x:Name="label1" VerticalAlignment="Top" Width="98" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="143,26,0,0" x:Name="Txt_NumeroDevis" VerticalAlignment="Top" Width="175" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="143,53,0,0" x:Name="DtpDebutTravaux" VerticalAlignment="Top" Width="175" SelectedDateChanged="DtpDebutTravaux_SelectedDateChanged" CalendarClosed="DtpDebutTravaux_CalendarClosed" />
+        <sdk:Label Content="Début travaux" Height="21" HorizontalAlignment="Left" Margin="15,57,0,0" x:Name="label2" VerticalAlignment="Top" Width="98" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="143,80,0,0" x:Name="DtpFinTravaux" VerticalAlignment="Top" Width="175" SelectedDateChanged="DtpFinTravaux_SelectedDateChanged" CalendarClosed="DtpFinTravaux_CalendarClosed" />
+        <sdk:Label Content="Fin travaux" Height="21" HorizontalAlignment="Left" Margin="15,83,0,0" x:Name="label3" VerticalAlignment="Top" Width="98" />
+        <sdk:Label Content="Numéro GPS" Height="21" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="18,108,0,0" x:Name="label15" VerticalAlignment="Top" Width="126" />
+        <Library:NumericTextBox Height="23" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="143,107,0,0" x:Name="TxtNumeroGps" VerticalAlignment="Top" Width="175" />
+        <sdk:Label Content="Branchement proche" Height="21" HorizontalAlignment="Left" Margin="460,28,0,0" x:Name="label11" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="592,27,0,0" x:Name="TxtBranchementProche" VerticalAlignment="Top" Width="172" />
+        <!--<sdk:Label Content="Poteau" Height="21" HorizontalAlignment="Left" Margin="460,56,0,0" x:Name="label12" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="592,55,0,0" x:Name="TxtPoteau" VerticalAlignment="Top" Width="172" />-->
+        <sdk:Label Content="Adresse" Height="21" HorizontalAlignment="Left" Margin="460,56,0,0" x:Name="label13" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="592,55,0,0" x:Name="TxtAdresse" VerticalAlignment="Top" Width="172" />
+        <sdk:Label Content="Catégorie" Height="21" HorizontalAlignment="Left" Margin="460,84,0,0" x:Name="label14" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="592,83,0,0" x:Name="TxtCategorie" VerticalAlignment="Top" Width="172" />
+
+        <Button x:Name="btn_Transmetre" Content="Transmettre"  Width="125" Height="23" HorizontalAlignment="Right" Margin="0,10,137,0" Grid.Row="1" Click="btn_Transmetre_Click" VerticalAlignment="Top" />
+        <Button x:Name="btn_Rejeter" Content="Rejeter"  Width="125" Height="23" HorizontalAlignment="Right" Margin="0,10,264,2" Grid.Row="1" Click="btn_Rejeter_Click" />
+        <RadioButton x:Name="Chk_AvecChangementCompteur" Content="Avec changement de compteur" HorizontalAlignment="Left" Margin="52,113,0,0" VerticalAlignment="Top" Checked="Chk_AvecChangementCompteur_Checked"/>
+        <RadioButton Content="Sans changement de compteur" HorizontalAlignment="Left" Margin="52,135,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked_1"/>
+
+
+
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABO07Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ABO07ModelStoreContainer">
+    <EntitySet Name="CENTFAC" EntityType="ABO07Model.Store.CENTFAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CPROFAC" EntityType="ABO07Model.Store.CPROFAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CREDFAC" EntityType="ABO07Model.Store.CREDFAC" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CPROFAC_CENTFAC" Association="ABO07Model.Store.FK_CPROFAC_CENTFAC">
+      <End Role="CENTFAC" EntitySet="CENTFAC" />
+      <End Role="CPROFAC" EntitySet="CPROFAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREDFAC_CENTFAC" Association="ABO07Model.Store.FK_CREDFAC_CENTFAC">
+      <End Role="CENTFAC" EntitySet="CENTFAC" />
+      <End Role="CREDFAC" EntitySet="CREDFAC" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CENTFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="JET" Type="varchar" MaxLength="2" />
+    <Property Name="CENTRE" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="CLIENT" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ORDRE" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="DENABON" Type="varchar" MaxLength="6" />
+    <Property Name="NOMABON" Type="varchar" MaxLength="63" />
+    <Property Name="DENMAND" Type="varchar" MaxLength="2" />
+    <Property Name="NOMMAND" Type="varchar" MaxLength="30" />
+    <Property Name="ADRMAND1" Type="varchar" MaxLength="30" />
+    <Property Name="ADRMAND2" Type="varchar" MaxLength="30" />
+    <Property Name="CPOS" Type="varchar" MaxLength="8" />
+    <Property Name="BUREAU" Type="varchar" MaxLength="25" />
+    <Property Name="BANQUE" Type="varchar" MaxLength="6" />
+    <Property Name="GUICHET" Type="varchar" MaxLength="6" />
+    <Property Name="COMPTE" Type="varchar" MaxLength="20" />
+    <Property Name="RIB" Type="varchar" MaxLength="2" />
+    <Property Name="CODCONSO" Type="varchar" MaxLength="4" />
+    <Property Name="CATEGORIECLIENT" Type="varchar" MaxLength="2" />
+    <Property Name="REGROUPEMENT" Type="varchar" MaxLength="10" />
+    <Property Name="REGEDIT" Type="varchar" MaxLength="4" />
+    <Property Name="AG" Type="varchar" MaxLength="20" />
+    <Property Name="COMMUNE" Type="varchar" MaxLength="5" />
+    <Property Name="QUARTIER" Type="varchar" MaxLength="5" />
+    <Property Name="RUE" Type="varchar" MaxLength="5" />
+    <Property Name="NOMRUE" Type="varchar" MaxLength="35" />
+    <Property Name="NUMRUE" Type="varchar" MaxLength="6" />
+    <Property Name="COMPRUE" Type="varchar" MaxLength="6" />
+    <Property Name="ETAGE" Type="varchar" MaxLength="2" />
+    <Property Name="PORTE" Type="varchar" MaxLength="5" />
+    <Property Name="CADR" Type="varchar" MaxLength="30" />
+    <Property Name="TOURNEE" Type="varchar" MaxLength="15" />
+    <Property Name="ORDTOUR" Type="varchar" MaxLength="15" />
+    <Property Name="NBFAC" Type="varchar" MaxLength="11" />
+    <Property Name="FACTURE" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="MES" Type="varchar" MaxLength="3" />
+    <Property Name="TOTFHT" Type="numeric" Precision="30" Scale="6" />
+    <Property Name="TOTFTAX" Type="numeric" Precision="30" Scale="6" />
+    <Property Name="TOTFTTC" Type="numeric" Precision="30" Scale="6" />
+    <Property Name="TOPE" Type="varchar" MaxLength="3" />
+    <Property Name="PERIODE" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="EXIG" Type="int" />
+    <Property Name="COPER" Type="varchar" MaxLength="3" />
+    <Property Name="MODEPAIEMENT" Type="varchar" MaxLength="1" />
+    <Property Name="ANCIENREPORT" Type="numeric" Precision="30" Scale="6" />
+    <Property Name="TOTALNONARRONDI" Type="numeric" Precision="30" Scale="6" />
+    <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+    <Property Name="SECTEUR" Type="varchar" MaxLength="5" />
+    <Property Name="DRESABON" Type="datetime" />
+    <Property Name="REFERENCEATM" Type="varchar" MaxLength="7" />
+    <Property Name="CODEPROFIL" Type="varchar" MaxLength="2" />
+    <Property Name="DFAC" Type="datetime" />
+    <Property Name="USERCREATION" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DATECREATION" Type="datetime" Nullable="false" />
+    <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+    <Property Name="DATEMODIFICATION" Type="datetime" />
+    <Property Name="PK_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FK_IDCENTRE" Type="int" Nullable="false" />
+    <Property Name="FK_IDREGROUPEMENT" Type="int" />
+    <Property Name="FK_IDCODECONSOMMATEUR" Type="int" />
+    <Property Name="FK_IDCATEGORIECLIENT" Type="int" />
+    <Property Name="FK_IDMODEPAIEMENT" Type="int" />
+    <Property Name="FK_IDTOURNEE" Type="int" />
+    <Property Name="FK_IDCOMMUNE" Type="int" />
+    <Property Name="FK_IDCOPER" Type="int" />
+    <Property Name="FK_IDSECTEUR" Type="int" />
+    <Property Name="FK_IDQUARTIER" Type="int" />
+    <Property Name="FK_IDRUE" Type="int" />
+    <Property Name="ISFACTUREEMAIL" Type="bit" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="25" />
+    <Property Name="ISFACTURESMS" Type="bit" />
+    <Property Name="TELEPHONE" Type="nvarchar" MaxLength="16" />
+    <Property Name="FK_IDCLIENT" Type="int" />
+  </EntityType>
+  <EntityType Name="CPROFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="JET" Type="varchar" MaxLength="2" />
+    <Property Name="TOURNEE" Type="varchar" MaxLength="15" />
+    <Property Name="ORDTOUR" Type="varchar" MaxLength="15" />
+    <Property Name="CENTRE" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="CLIENT" Type="varchar" MaxLength="20" />
+    <Property Name="ORDRE" Type="varchar" MaxLength="2" />
+    <Property Name="FACTURE" Type="varchar" MaxLength="6" />
+    <Property Name="TYPECOMPTAGE" Type="varchar" MaxLength="1" />
+    <Property Name="PRODUIT" Type="varchar" MaxLength="2" />
+    <Property Name="COMPTEUR" Type="varchar" MaxLength="20" />
+    <Property Name="REGLAGECOMPTEUR" Type="varchar" MaxLength="3" />
+    <Property Name="COEFLECT" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="POINT" Type="int" />
+    <Property Name="PUISSANCE" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="DERPERF" Type="varchar" MaxLength="6" />
+    <Property Name="DERPERFN" Type="varchar" MaxLength="6" />
+    <Property Name="REGCONSO" Type="int" />
+    <Property Name="REGFAC" Type="int" />
+    <Property Name="TFAC" Type="varchar" MaxLength="1" />
+    <Property Name="LIENRED" Type="int" />
+    <Property Name="CONSOFAC" Type="int" />
+    <Property Name="DATEEVT" Type="datetime" />
+    <Property Name="PERIODE" Type="varchar" MaxLength="6" />
+    <Property Name="AINDEX" Type="int" />
+    <Property Name="NINDEX" Type="int" />
+    <Property Name="CAS" Type="varchar" MaxLength="2" />
+    <Property Name="CONSO" Type="int" />
+    <Property Name="TOTPROHT" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="TOTPROTAX" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="TOTPROTTC" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="ADERPERF" Type="varchar" MaxLength="6" />
+    <Property Name="ADERPERFN" Type="varchar" MaxLength="6" />
+    <Property Name="REGIMPUTE" Type="int" />
+    <Property Name="TYPECOMPTEUR" Type="varchar" MaxLength="1" />
+    <Property Name="REGROU" Type="varchar" MaxLength="3" />
+    <Property Name="DEVPRE" Type="datetime" />
+    <Property Name="NBREDTOT" Type="int" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+    <Property Name="EVENEMENT" Type="int" />
+    <Property Name="TOPANNUL" Type="int" />
+    <Property Name="PUISSANCEINSTALLEE" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="COEFCOMPTAGE" Type="int" />
+    <Property Name="BRANCHEMENT" Type="varchar" MaxLength="14" />
+    <Property Name="COEFK1" Type="numeric" Precision="11" Scale="5" />
+    <Property Name="COEFK2" Type="numeric" Precision="11" Scale="5" />
+    <Property Name="PERTESACTIVES" Type="numeric" Precision="11" Scale="5" />
+    <Property Name="PERTESREACTIVES" Type="numeric" Precision="11" Scale="5" />
+    <Property Name="COEFFAC" Type="int" />
+    <Property Name="USERCREATION" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DATECREATION" Type="datetime" Nullable="false" />
+    <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+    <Property Name="DATEMODIFICATION" Type="datetime" />
+    <Property Name="PK_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FK_IDCENTFAC" Type="int" Nullable="false" />
+    <Property Name="FK_IDEVENEMENT" Type="int" />
+    <Property Name="FK_IDTYPECOMPTEUR" Type="int" />
+    <Property Name="FK_IDTYPECOMPTAGE" Type="int" />
+    <Property Name="FK_IDREGLAGECOMPTEUR" Type="int" />
+    <Property Name="FK_IDTOURNEE" Type="int" />
+    <Property Name="FK_IDPRODUIT" Type="int" />
+    <Property Name="FK_IDCAS" Type="int" />
+    <Property Name="FK_IDCENTRE" Type="int" Nullable="false" />
+    <Property Name="FK_IDABON" Type="int" Nullable="false" />
+    <Property Name="DEBUTEXONERATIONTVA" Type="varchar" MaxLength="6" />
+    <Property Name="FINEXONERATIONTVA" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="CREDFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="JET" Type="varchar" MaxLength="2" />
+    <Property Name="CENTRE" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="CLIENT" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ORDRE" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="FACTURE" Type="varchar" MaxLength="6" />
+    <Property Name="LIENRED" Type="int" />
+    <Property Name="REDEVANCE" Type="varchar" MaxLength="2" />
+    <Property Name="TRANCHE" Type="varchar" MaxLength="2" />
+    <Property Name="ORDRED" Type="varchar" MaxLength="2" />
+    <Property Name="QUANTITE" Type="int" />
+    <Property Name="UNITE" Type="varchar" MaxLength="2" />
+    <Property Name="BARPRIX" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="TAXE" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="CTAX" Type="varchar" MaxLength="2" />
+    <Property Name="DAPP" Type="datetime" />
+    <Property Name="CRITERE" Type="varchar" MaxLength="6" />
+    <Property Name="VARIANTE" Type="int" />
+    <Property Name="TOTREDHT" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="TOTREDTAX" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="TOTREDTTC" Type="numeric" Precision="38" Scale="10" />
+    <Property Name="PARAM1" Type="varchar" MaxLength="30" />
+    <Property Name="PARAM2" Type="varchar" MaxLength="30" />
+    <Property Name="PARAM3" Type="varchar" MaxLength="30" />
+    <Property Name="PARAM4" Type="varchar" MaxLength="30" />
+    <Property Name="PARAM5" Type="varchar" MaxLength="30" />
+    <Property Name="PARAM6" Type="varchar" MaxLength="30" />
+    <Property Name="NBJOUR" Type="int" />
+    <Property Name="DEBUTAPPLICATION" Type="datetime" />
+    <Property Name="FINAPPLICATION" Type="datetime" />
+    <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+    <Property Name="PERIODE" Type="varchar" MaxLength="6" />
+    <Property Name="PRODUIT" Type="varchar" MaxLength="2" />
+    <Property Name="FORMULE" Type="varchar" MaxLength="6" />
+    <Property Name="TOPANNUL" Type="int" />
+    <Property Name="BARBORNEDEBUT" Type="int" />
+    <Property Name="BARBORNEFIN" Type="int" />
+    <Property Name="QUANTITEMAXIMALE" Type="int" />
+    <Property Name="USERCREATION" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DATECREATION" Type="datetime" Nullable="false" />
+    <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+    <Property Name="DATEMODIFICATION" Type="datetime" />
+    <Property Name="FK_IDCENTFAC" Type="int" Nullable="false" />
+    <Property Name="FK_IDCENTRE" Type="int" Nullable="false" />
+    <Property Name="FK_IDABON" Type="int" Nullable="false" />
+    <Property Name="FK_IDPRODUIT" Type="int" Nullable="false" />
+    <Property Name="FK_IDREDEVANCE" Type="int" />
+    <Property Name="PK_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <Association Name="FK_CPROFAC_CENTFAC">
+    <End Role="CENTFAC" Type="ABO07Model.Store.CENTFAC" Multiplicity="1" />
+    <End Role="CPROFAC" Type="ABO07Model.Store.CPROFAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTFAC">
+        <PropertyRef Name="PK_ID" />
+      </Principal>
+      <Dependent Role="CPROFAC">
+        <PropertyRef Name="FK_IDCENTFAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREDFAC_CENTFAC">
+    <End Role="CENTFAC" Type="ABO07Model.Store.CENTFAC" Multiplicity="1" />
+    <End Role="CREDFAC" Type="ABO07Model.Store.CREDFAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTFAC">
+        <PropertyRef Name="PK_ID" />
+      </Principal>
+      <Dependent Role="CREDFAC">
+        <PropertyRef Name="FK_IDCENTFAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'ABO07.dbo._REJET_CENTFAC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="_REJET_CENTFAC">
+        <Property Name="CENTRE" Type="varchar" MaxLength="3" />
+        <Property Name="CLIENT" Type="varchar" MaxLength="20" />
+        <Property Name="ORDRE" Type="varchar" MaxLength="2" />
+        <Property Name="FACTURE" Type="varchar" MaxLength="6" />
+        <Property Name="PERIODE" Type="varchar" MaxLength="6" />
+        <Property Name="REGROUPEMENT" Type="varchar" MaxLength="10" />
+        <Property Name="CODCONSO" Type="varchar" MaxLength="4" />
+        <Property Name="CATEGORIECLIENT" Type="varchar" MaxLength="2" />
+        <Property Name="DFAC" Type="datetime" />
+        <Property Name="TOTFTAX" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOTFHT" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOTENC" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOURNEE" Type="varchar" MaxLength="16" />
+        <Property Name="MOISCOMPTA" Type="varchar" MaxLength="6" />
+        <Property Name="COMMUNE" Type="varchar" MaxLength="5" />
+        <Property Name="DATEENC" Type="datetime" />
+        <Property Name="TYPEENC" Type="varchar" MaxLength="2" />
+        <Property Name="LOTRI" Type="varchar" MaxLength="8" />
+        <Property Name="COPER" Type="varchar" MaxLength="3" />
+        <Property Name="MODEP" Type="varchar" MaxLength="1" />
+        <Property Name="ANCIENREPORT" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOTFTTC" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+        <Property Name="SECTEUR" Type="varchar" MaxLength="5" />
+        <Property Name="QUARTIER" Type="varchar" MaxLength="5" />
+        <Property Name="ORDTOUR" Type="varchar" MaxLength="15" />
+        <Property Name="NOMABON" Type="varchar" MaxLength="63" />
+        <Property Name="CODERUE" Type="varchar" MaxLength="5" />
+        <Property Name="NOMRUE" Type="varchar" MaxLength="35" />
+        <Property Name="DRESABON" Type="datetime" />
+        <Property Name="DATEFLAG" Type="datetime" />
+        <Property Name="USERCREATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATECREATION" Type="datetime" />
+        <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATEMODIFICATION" Type="datetime" />
+        <Property Name="FK_IDCENTRE" Type="int" />
+        <Property Name="FK_IDABON" Type="int" />
+        <Property Name="FK_IDRECLI" Type="int" />
+        <Property Name="FK_IDCODECONSOMMATEUR" Type="int" />
+        <Property Name="FK_IDCATEGORIECLIENT" Type="int" />
+        <Property Name="FK_IDMODEPAIEMENT" Type="int" />
+        <Property Name="FK_IDTOURNEE" Type="int" />
+        <Property Name="FK_IDCOMMUNE" Type="int" />
+        <Property Name="FK_IDCOPER" Type="int" />
+        <Property Name="FK_IDSECTEUR" Type="int" />
+        <Property Name="FK_IDQUARTIER" Type="int" />
+        <Property Name="FK_IDRUE" Type="int" />
+        <Property Name="ISFACTUREEMAIL" Type="bit" />
+        <Property Name="EMAIL" Type="nvarchar" MaxLength="25" />
+        <Property Name="ISFACTURESMS" Type="bit" />
+        <Property Name="TELEPHONE" Type="nvarchar" MaxLength="16" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'ABO07.dbo._REJET_CPROFAC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="_REJET_CPROFAC">
+        <Property Name="CENTRE" Type="varchar" MaxLength="3" />
+        <Property Name="CLIENT" Type="varchar" MaxLength="20" />
+        <Property Name="ORDRE" Type="varchar" MaxLength="2" />
+        <Property Name="FACTURE" Type="varchar" MaxLength="6" />
+        <Property Name="PERIODE" Type="varchar" MaxLength="6" />
+        <Property Name="PRODUIT" Type="varchar" MaxLength="2" />
+        <Property Name="POINT" Type="int" />
+        <Property Name="REGLAGECOMPTEUR" Type="varchar" MaxLength="3" />
+        <Property Name="CONSO" Type="int" />
+        <Property Name="CONSOFAC" Type="int" />
+        <Property Name="TOTPROTAX" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOTPROHT" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOTPROENC" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TFAC" Type="varchar" MaxLength="1" />
+        <Property Name="LIENRED" Type="int" />
+        <Property Name="CAS" Type="varchar" MaxLength="2" />
+        <Property Name="CUMPER" Type="int" />
+        <Property Name="REGIMPUTE" Type="int" />
+        <Property Name="REGROU" Type="varchar" MaxLength="3" />
+        <Property Name="TCOMPT" Type="varchar" MaxLength="1" />
+        <Property Name="TARIF" Type="varchar" MaxLength="2" />
+        <Property Name="STATUTCOMPTEUR" Type="varchar" MaxLength="1" />
+        <Property Name="DEVPRE" Type="datetime" />
+        <Property Name="DEV" Type="datetime" />
+        <Property Name="AINDEX" Type="int" />
+        <Property Name="NINDEX" Type="int" />
+        <Property Name="COMPTEUR" Type="varchar" MaxLength="20" />
+        <Property Name="DERPERF" Type="varchar" MaxLength="6" />
+        <Property Name="DERPERFN" Type="varchar" MaxLength="6" />
+        <Property Name="ADERPERF" Type="varchar" MaxLength="6" />
+        <Property Name="ADERPERFN" Type="varchar" MaxLength="6" />
+        <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+        <Property Name="EVENEMENT" Type="int" />
+        <Property Name="TOPANNUL" Type="int" />
+        <Property Name="MOISCOMPTA" Type="varchar" MaxLength="6" />
+        <Property Name="PUISSANCE" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="PUISSANCEINSTALLEE" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="COEFCOMPTAGE" Type="int" />
+        <Property Name="BRANCHEMENT" Type="varchar" MaxLength="14" />
+        <Property Name="COEFLECT" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="COEFK1" Type="decimal" Precision="11" Scale="5" />
+        <Property Name="COEFK2" Type="decimal" Precision="11" Scale="5" />
+        <Property Name="PERTESACTIVES" Type="decimal" Precision="11" Scale="5" />
+        <Property Name="PERTESREACTIVES" Type="decimal" Precision="11" Scale="5" />
+        <Property Name="COEFFAC" Type="int" />
+        <Property Name="USERCREATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATECREATION" Type="datetime" />
+        <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATEMODIFICATION" Type="datetime" />
+        <Property Name="FK_IDCENTFAC" Type="int" />
+        <Property Name="FK_IDCENTRE" Type="int" />
+        <Property Name="FK_IDABON" Type="int" />
+        <Property Name="FK_IDPRODUIT" Type="int" />
+        <Property Name="FK_IDCAS" Type="int" />
+        <Property Name="FK_IDCOMPTEUR" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'ABO07.dbo._REJET_CREDFAC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="_REJET_CREDFAC">
+        <Property Name="CENTRE" Type="varchar" MaxLength="3" />
+        <Property Name="CLIENT" Type="varchar" MaxLength="20" />
+        <Property Name="ORDRE" Type="varchar" MaxLength="2" />
+        <Property Name="FACTURE" Type="varchar" MaxLength="6" />
+        <Property Name="PRODUIT" Type="varchar" MaxLength="2" />
+        <Property Name="POINT" Type="int" />
+        <Property Name="REDEVANCE" Type="varchar" MaxLength="2" />
+        <Property Name="CTAX" Type="varchar" MaxLength="2" />
+        <Property Name="TRANCHE" Type="varchar" MaxLength="2" />
+        <Property Name="QUANTITE" Type="int" />
+        <Property Name="REDHT" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="REDTAXE" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="REDENC" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="PERIODE" Type="varchar" MaxLength="6" />
+        <Property Name="LIENRED" Type="int" />
+        <Property Name="UNITE" Type="varchar" MaxLength="2" />
+        <Property Name="ORDRED" Type="varchar" MaxLength="2" />
+        <Property Name="DAPP" Type="datetime" />
+        <Property Name="CRITERE" Type="varchar" MaxLength="6" />
+        <Property Name="VARIANTE" Type="int" />
+        <Property Name="FORMULE" Type="varchar" MaxLength="6" />
+        <Property Name="PARAM1" Type="varchar" MaxLength="30" />
+        <Property Name="PARAM2" Type="varchar" MaxLength="30" />
+        <Property Name="PARAM3" Type="varchar" MaxLength="30" />
+        <Property Name="PARAM4" Type="varchar" MaxLength="30" />
+        <Property Name="PARAM5" Type="varchar" MaxLength="30" />
+        <Property Name="PARAM6" Type="varchar" MaxLength="30" />
+        <Property Name="NBJOUR" Type="int" />
+        <Property Name="DEBUTAPPLICATION" Type="datetime" />
+        <Property Name="FINAPPLICATION" Type="datetime" />
+        <Property Name="LIENFAC" Type="varchar" MaxLength="6" />
+        <Property Name="BARPRIX" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TAXE" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="TOPANNUL" Type="int" />
+        <Property Name="MOISCOMPTA" Type="varchar" MaxLength="6" />
+        <Property Name="PUISSANCE" Type="decimal" Precision="38" Scale="10" />
+        <Property Name="BARBORNEDEBUT" Type="int" />
+        <Property Name="BARBORNEFIN" Type="int" />
+        <Property Name="USERCREATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATECREATION" Type="datetime" />
+        <Property Name="USERMODIFICATION" Type="varchar" MaxLength="20" />
+        <Property Name="DATEMODIFICATION" Type="datetime" />
+        <Property Name="FK_IDCENTFAC" Type="int" />
+        <Property Name="FK_IDCENTRE" Type="int" />
+        <Property Name="FK_IDABON" Type="int" />
+        <Property Name="FK_IDPRODUIT" Type="int" />
+        <Property Name="FK_IDREDEVANCE" Type="int" />
+      </EntityType>-->
+</Schema>

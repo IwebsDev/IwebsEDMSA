@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16D759EE-71CB-42B0-B9EA-13EACFD7DD01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galatee.Structure</RootNamespace>
+    <AssemblyName>Galatee.Structure</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ISF.Common">
+      <HintPath>..\Galatee.Dll\ISF.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\INOVA\ISF\Microsoft.VisualStudio.DebuggerVisualizers.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aBanque.cs" />
+    <Compile Include="aCampagne.cs" />
+    <Compile Include="aCritere.cs" />
+    <Compile Include="aDisconnection.cs" />
+    <Compile Include="ADUser.cs" />
+    <Compile Include="aImportFichier.cs" />
+    <Compile Include="CsMapperElementAchatTimbre.cs" />
+    <Compile Include="CsMapperLclientCoupure.cs" />
+    <Compile Include="CsComparaisonFacture.cs" />
+    <Compile Include="CsDonnesStatistiqueDemande.cs" />
+    <Compile Include="CsImageFile.cs" />
+    <Compile Include="CsLotComptClient.cs" />
+    <Compile Include="CsMapperTransfert.cs" />
+    <Compile Include="CsMapperTranscaisB.cs" />
+    <Compile Include="CsParametreCoupureSGC.cs" />
+    <Compile Include="CsFichierPersonnel.cs" />
+    <Compile Include="CsGL_Interface.cs" />
+    <Compile Include="CsGroupeDepannageCommune.cs" />
+    <Compile Include="CsMapperCampagne.cs" />
+    <Compile Include="CsMapperDetailCampagne.cs" />
+    <Compile Include="CsMapperEntfac.cs" />
+    <Compile Include="CsMapperEvenement.cs" />
+    <Compile Include="CsMapperProFac.cs" />
+    <Compile Include="CsMapperRedFac.cs" />
+    <Compile Include="CsPrecontentieuxDechargement.cs" />
+    <Compile Include="CsPrecontentieuxAutreClient.cs" />
+    <Compile Include="CsRubriqueDevis.cs" />
+    <Compile Include="CsStatFact.cs" />
+    <Compile Include="CsStatFactRecap.cs" />
+    <Compile Include="CsStatistiqueTravaux_Brt_Ext.cs" />
+    <Compile Include="CsStatutTransfert.cs" />
+    <Compile Include="CsTransfert.cs" />
+    <Compile Include="CsVehicule.cs" />
+    <Compile Include="CsTypePanne.cs" />
+    <Compile Include="CsModeCommunication.cs" />
+    <Compile Include="csDepannage.cs" />
+    <Compile Include="CsDetailCampagnePrecontentieux.cs" />
+    <Compile Include="CsTarifClient.cs" />
+    <Compile Include="CsContrat.cs" />
+    <Compile Include="CsDtransfert.cs" />
+    <Compile Include="CsReglageCompteur.cs" />
+    <Compile Include="CsTypeTarif.cs" />
+    <Compile Include="CsWpfGeneric.cs" />
+    <Compile Include="Dico.cs" />
+    <Compile Include="Fraude\CsActionSurCompteur.cs" />
+    <Compile Include="Fraude\CsAppareilRecenseFrd.cs" />
+    <Compile Include="Fraude\CsAppareilUtiliserFrd.cs" />
+    <Compile Include="Fraude\CsAuditionFraude.cs" />
+    <Compile Include="Fraude\CsClientFraude.cs" />
+    <Compile Include="Fraude\CsCompteurFraude.cs" />
+    <Compile Include="Fraude\CsConsommationFrd.cs" />
+    <Compile Include="Fraude\CsControle.cs" />
+    <Compile Include="Fraude\CsControleur.cs" />
+    <Compile Include="Fraude\CsDecisionfrd.cs" />
+    <Compile Include="Fraude\CsDemandeFraude.cs" />
+    <Compile Include="Fraude\CsDenonciateur.cs" />
+    <Compile Include="Fraude\CsDetailParPresentationEdm.cs" />
+    <Compile Include="Fraude\CsDETAILparPRESTATIONREMBOURSABLE.cs" />
+    <Compile Include="Fraude\CsDETAILparREGULARISATION.cs" />
+    <Compile Include="Fraude\CsDETAILparTRANCHE.cs" />
+    <Compile Include="Fraude\CsDFraude.cs" />
+    <Compile Include="Fraude\CsEditionFactureFd.cs" />
+    <Compile Include="Fraude\CsEditionFactureFraude.cs" />
+    <Compile Include="Fraude\CsFactureFraude.cs" />
+    <Compile Include="Fraude\CsFraude.cs" />
+    <Compile Include="Fraude\CsMArqueDisjoncteur.cs" />
+    <Compile Include="Fraude\CsMoisDejaFactures.cs" />
+    <Compile Include="Fraude\CsMoyenDenomciation.cs" />
+    <Compile Include="Fraude\CsOrganeFraude.cs" />
+    <Compile Include="Fraude\CsPhaseCompteur.cs" />
+    <Compile Include="Fraude\CsPrestastionEdm.cs" />
+    <Compile Include="Fraude\CsPrestationRemboursable.cs" />
+    <Compile Include="Fraude\CsQualiteExpert.cs" />
+    <Compile Include="Fraude\CsRegularisation.cs" />
+    <Compile Include="Fraude\CsSourceControle.cs" />
+    <Compile Include="Fraude\CsTrancheFraude.cs" />
+    <Compile Include="Fraude\CsTypeFraude.cs" />
+    <Compile Include="InterfaceComptable\CsBalance.cs" />
+    <Compile Include="InterfaceComptable\CsBalanceAgee.cs" />
+    <Compile Include="InterfaceComptable\CsBanqueCompte.cs" />
+    <Compile Include="InterfaceComptable\CsCentreCompte.cs" />
+    <Compile Include="InterfaceComptable\CsComptabilisation.cs" />
+    <Compile Include="InterfaceComptable\CsLiaisonCompteur.cs" />
+    <Compile Include="InterfaceComptable\CsOperationComptable.cs" />
+    <Compile Include="InterfaceComptable\CsCompteSpecifique.cs" />
+    <Compile Include="InterfaceComptable\CsCoper_Type_Compte.cs" />
+    <Compile Include="InterfaceComptable\CsEcritureComptable.cs" />
+    <Compile Include="InterfaceComptable\CsLigneComptable.cs" />
+    <Compile Include="InterfaceComptable\CsOperator.cs" />
+    <Compile Include="InterfaceComptable\CsTypeCompte.cs" />
+    <Compile Include="InterfaceComptable\CsTypeFactureComptable.cs" />
+    <Compile Include="IsAppartienGv.cs" />
+    <Compile Include="CsMaterielDemande.cs" />
+    <Compile Include="CsParametreSMTP.cs" />
+    <Compile Include="CsTypeNotification.cs" />
+    <Compile Include="CsNotificaton.cs" />
+    <Compile Include="CsAnnotation.cs" />
+    <Compile Include="CsFactureBrut.cs" />
+    <Compile Include="CsAvisDeCoupureClient.cs" />
+    <Compile Include="CsCriterecampagne.cs" />
+    <Compile Include="CsMois.cs" />
+    <Compile Include="CsObservation.cs" />
+    <Compile Include="CsCtarcompparperiode.cs" />
+    <Compile Include="CsDetailPaiementGc.cs" />
+    <Compile Include="CsOrdreTravail.cs" />
+    <Compile Include="CsInfoDemande.cs" />
+    <Compile Include="CsPaiementGc.cs" />
+    <Compile Include="CsPosteSource.cs" />
+    <Compile Include="CsCritere.cs" />
+    <Compile Include="CsMotifChequeImpaye.cs" />
+    <Compile Include="Reclamation\CsDemandeReclamation.cs" />
+    <Compile Include="Reclamation\CsModeReceptionRcl.cs" />
+    <Compile Include="Reclamation\CsReclamationRcl.cs" />
+    <Compile Include="Reclamation\CsStatutReclamationRcl.cs" />
+    <Compile Include="Reclamation\CsRclValidation.cs" />
+    <Compile Include="Reclamation\cStatistiqueReclamation.cs" />
+    <Compile Include="Reclamation\CsTypeReclamationRcl.cs" />
+    <Compile Include="Rpnt\CsAbonneBTA.cs" />
+    <Compile Include="Rpnt\CsAbonneHTA.cs" />
+    <Compile Include="Rpnt\CsAbonneHTAAvecRaccordement.cs" />
+    <Compile Include="Rpnt\CsAbonnesBTAControle.cs" />
+    <Compile Include="Rpnt\CsAbonnesHTAControle.cs" />
+    <Compile Include="Rpnt\CsAllConsosHTA_DesClientsAvecPAAvecNonConforme.cs" />
+    <Compile Include="Rpnt\CsAnomaliesDetecteesBTA.cs" />
+    <Compile Include="Rpnt\CsAnomaliesDetecteesHTADTO.cs" />
+    <Compile Include="Rpnt\CsAUDIT.cs" />
+    <Compile Include="Rpnt\CsBordereauControlesPostFraudeBTA.cs" />
+    <Compile Include="Rpnt\CsBordereauControlesPostFraudeHTA.cs" />
+    <Compile Include="Rpnt\CsCampagneHTAAccessiblesParlUO.cs" />
+    <Compile Include="Rpnt\CsCampagnesBTAAccessiblesParLUO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rpnt\CsClient.cs" />
+    <Compile Include="Rpnt\CsClientsBTAEnAnomalie.cs" />
+    <Compile Include="Rpnt\CsClientsBTAEnFraude.cs" />
+    <Compile Include="Rpnt\CsClientsHTAAvecPSNonConformeAuTC.cs" />
+    <Compile Include="Rpnt\CsClientsHTAEnAnomalie.cs" />
+    <Compile Include="Rpnt\CsClientsHTAEnFraude.cs" />
+    <Compile Include="Rpnt\CsCONNEXIONACTIVE.cs" />
+    <Compile Include="Rpnt\CsConsoBTA_ElementDeCampagneBTA.cs" />
+    <Compile Include="Rpnt\CsConsoBTA_HistoriqueBETDTO.cs" />
+    <Compile Include="Rpnt\CsConsoHTA_ElementDeCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsConsosHTAAvecPANonConformeATC.cs" />
+    <Compile Include="Rpnt\CsConsosHTAAvecTrancheHoraireNulle.cs" />
+    <Compile Include="Rpnt\CsConstatFraudeBTA_Huissier.cs" />
+    <Compile Include="Rpnt\CsConstatFraudeHTA_Huissier.cs" />
+    <Compile Include="Rpnt\CsDateDerniereSynchroParExploitation.cs" />
+    <Compile Include="Rpnt\CsEditionCRHTANonSaisi.cs" />
+    <Compile Include="Rpnt\CsEditionCRNonSaisi.cs" />
+    <Compile Include="Rpnt\CsElementsDeCampagneBTA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rpnt\CsElementsDeCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsElementsLotDeControleCampagneBTA.cs" />
+    <Compile Include="Rpnt\CsElementsLotDeControleCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsEtatBranchementsBTAControle.cs" />
+    <Compile Include="Rpnt\CsEtatRaccordementsControle.cs" />
+    <Compile Include="Rpnt\CsEVOLUTIONBASE.cs" />
+    <Compile Include="Rpnt\CsGroupeDeFacturation.cs" />
+    <Compile Include="Rpnt\CsHabilitationUser.cs" />
+    <Compile Include="Rpnt\CsHistoAnomaliesParClientsBTA.cs" />
+    <Compile Include="Rpnt\CsHistoAnomaliesParClientsHTA.cs" />
+    <Compile Include="Rpnt\CsHistoControlesBTAEnCampagne.cs" />
+    <Compile Include="Rpnt\CsHistoControlesBTAIsole.cs" />
+    <Compile Include="Rpnt\CsHistoControlesHTAEnCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsHistoControlesHTAIsole.cs" />
+    <Compile Include="Rpnt\CsHistoriqueCFIsole.cs" />
+    <Compile Include="Rpnt\CsHistoriqueConstatFraudeHTA.cs" />
+    <Compile Include="Rpnt\CsHistoriqueCRHTAIsole.cs" />
+    <Compile Include="Rpnt\CsHistoriqueCRIsole.cs" />
+    <Compile Include="Rpnt\CsHistoriqueDesBET.cs" />
+    <Compile Include="Rpnt\CsHistoriqueInterventionsBTA.cs" />
+    <Compile Include="Rpnt\CsHistoriqueInterventionsHTA.cs" />
+    <Compile Include="Rpnt\CsLigneABAQUE_ChoixTC.cs" />
+    <Compile Include="Rpnt\CsListeAnomaliesBTADetectee.cs" />
+    <Compile Include="Rpnt\CsListeAnomaliesHTADetectee.cs" />
+    <Compile Include="Rpnt\CsListeAZsParUOParExploitation.cs" />
+    <Compile Include="Rpnt\CsListeControlesPostFraudeBTAEchus.cs" />
+    <Compile Include="Rpnt\CsListeControlesPostFraudeHTAEchus.cs" />
+    <Compile Include="Rpnt\CsMenusAffectesAuRole.cs" />
+    <Compile Include="Rpnt\CsNbreAnomaliesBTADetecteesParType.cs" />
+    <Compile Include="Rpnt\CsNbreAnomaliesHTADetecteesParType.cs" />
+    <Compile Include="Rpnt\CsNbreElementsNonSaisisParLotDeControleBTAEditeNonTermine.cs" />
+    <Compile Include="Rpnt\CsNbreElementsNonSaisisParLotDeControleHTAEditeNonTermine.cs" />
+    <Compile Include="Rpnt\CsNomsMachineAudite.cs" />
+    <Compile Include="Rpnt\CsParametrageSynchroAutomatiqueCodeSite.cs" />
+    <Compile Include="Rpnt\CsParametrageSynchroAutomatiqueDelUO.cs" />
+    <Compile Include="Rpnt\CsPeriodeFacturationLaPlusRecentePourLesBET.cs" />
+    <Compile Include="Rpnt\CsRechercheBranchementBTA.cs" />
+    <Compile Include="Rpnt\CsRechercheDesClientsBTAAControler.cs" />
+    <Compile Include="Rpnt\CsRechercheDesClientsHTAAControler.cs" />
+    <Compile Include="Rpnt\CsRechercheRaccordementHTA.cs" />
+    <Compile Include="Rpnt\CsREFABAQUE_CHOIXTC.cs" />
+    <Compile Include="Rpnt\CsREFANOMALIESFACTURATION.cs" />
+    <Compile Include="Rpnt\CsREFCODECONSOMMATION.cs" />
+    <Compile Include="Rpnt\CsREFDONNEESDEREFERENCE.cs" />
+    <Compile Include="Rpnt\CsREFEXPLOITATION.cs" />
+    <Compile Include="Rpnt\CsREFFAMILLEANOMALIEBTA.cs" />
+    <Compile Include="Rpnt\CsREFFAMILLEANOMALIEHTA.cs" />
+    <Compile Include="Rpnt\CsREFLIGNEABAQUE_CHOIXTC.cs" />
+    <Compile Include="Rpnt\CsREFMETHODEDEDETECTIONCLIENTSBTA.cs" />
+    <Compile Include="Rpnt\CsREFMETHODEDEDETECTIONCLIENTSHTA.cs" />
+    <Compile Include="Rpnt\CsRefMethodesDeDetectionClientsBTA.cs" />
+    <Compile Include="Rpnt\CsREFNIVEAUDETENSIONHTA.cs" />
+    <Compile Include="Rpnt\CsREFNIVEAUUNITEORGANISATIONNELLE.cs" />
+    <Compile Include="Rpnt\CsREFSIEGEANOMALIE.cs" />
+    <Compile Include="Rpnt\CsREFTYPEABONNE.cs" />
+    <Compile Include="Rpnt\CsREFTYPEANOMALIEBTA.cs" />
+    <Compile Include="Rpnt\CsREFTYPEANOMALIEHTA.cs" />
+    <Compile Include="Rpnt\CsREFTYPECOMPTAGEHTA.cs" />
+    <Compile Include="Rpnt\CsREFTYPETARIF.cs" />
+    <Compile Include="Rpnt\CsREFTYPETARIF_HTA.cs" />
+    <Compile Include="Rpnt\CsREFUNITEORGANISATIONNELLE.cs" />
+    <Compile Include="Rpnt\CsREFUSAGEABONNEMENT.cs" />
+    <Compile Include="Rpnt\CsREF_ABAQUECHOIXTC_TYPECOMPTAGEHTA.cs" />
+    <Compile Include="Rpnt\CsStatistiqueAnomaliesParSiege.cs" />
+    <Compile Include="Rpnt\CsStatistiquesBET.cs" />
+    <Compile Include="Rpnt\CsStatistiquesBETParAZEtParCodeAnomalie.cs" />
+    <Compile Include="Rpnt\CsStatistiquesCampagneBTA.cs" />
+    <Compile Include="Rpnt\CsStatistiquesCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsStatistiquesDesBETNonTraite.cs" />
+    <Compile Include="Rpnt\CsStatistiquesDeTraitementDesBET.cs" />
+    <Compile Include="Rpnt\CsStatistiquesElementsLotDeControleDeCampagneBTA.cs" />
+    <Compile Include="Rpnt\CsStatistiquesElementsLotDeControleDeCampagneHTA.cs" />
+    <Compile Include="Rpnt\CsSYNCHROENCOUR.cs" />
+    <Compile Include="Rpnt\CsSYNCHRONISATION_QUEUE.cs" />
+    <Compile Include="Rpnt\CsTBANOMALIESDETECTEESBTA.cs" />
+    <Compile Include="Rpnt\CsTBANOMALIESDETECTEESHTA.cs" />
+    <Compile Include="Rpnt\CsTBBET.cs" />
+    <Compile Include="Rpnt\CsTBBRANCHEMENT.cs" />
+    <Compile Include="Rpnt\CsTBCAMPAGNECONTROLEBTA.cs" />
+    <Compile Include="Rpnt\CsTBCAMPAGNECONTROLEBTAPLUS.cs" />
+    <Compile Include="Rpnt\CsTBCAMPAGNECONTROLEHTA.cs" />
+    <Compile Include="Rpnt\CsTBCOMPTEURBTA.cs" />
+    <Compile Include="Rpnt\CsTBCOMPTEURHTA.cs" />
+    <Compile Include="Rpnt\CsTBCOMPTEURIDENTIFIANTTECHNIQUE.cs" />
+    <Compile Include="Rpnt\CsTBCONSOMMATIONBTA.cs" />
+    <Compile Include="Rpnt\CsTBCONSOMMATIONHTA.cs" />
+    <Compile Include="Rpnt\CsTBCONSTATFRAUDEBTA.cs" />
+    <Compile Include="Rpnt\CsTBCONSTATFRAUDEHTA.cs" />
+    <Compile Include="Rpnt\CsTBCONSTATHUISSIER.cs" />
+    <Compile Include="Rpnt\CsTBCONSTATHUISSIERHTA.cs" />
+    <Compile Include="Rpnt\CsTBCONTRATBTA.cs" />
+    <Compile Include="Rpnt\CsTBCONTRATHTA.cs" />
+    <Compile Include="Rpnt\CsTBELEMENTLOTDECONTROLEBTA.cs" />
+    <Compile Include="Rpnt\CsTBELEMENTLOTDECONTROLEHTA.cs" />
+    <Compile Include="Rpnt\CsTBELEMENTPRESELECTIONCAMPAGNEBTA.cs" />
+    <Compile Include="Rpnt\CsTBELEMENTPRESELECTIONCAMPAGNEHTA.cs" />
+    <Compile Include="Rpnt\CstbElementsLotDeControleBTA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rpnt\CsTBENSEMBLETECHNIQUE.cs" />
+    <Compile Include="Rpnt\CsTBHISTORIQUECONSTATDEFRAUDEBTAISOLE.cs" />
+    <Compile Include="Rpnt\CsTBHISTORIQUECONSTATDEFRAUDEHTA.cs" />
+    <Compile Include="Rpnt\CsTBHISTORIQUECRHTAISOLE.cs" />
+    <Compile Include="Rpnt\CsTBHISTORIQUECRISOLE.cs" />
+    <Compile Include="Rpnt\CsTBHUISSIER.cs" />
+    <Compile Include="Rpnt\CsTBHUISSIEREXPLOITATIONINTERVENTION.cs" />
+    <Compile Include="Rpnt\CsTBIMAGE.cs" />
+    <Compile Include="Rpnt\CsTBLOTDECONTROLEBTA.cs" />
+    <Compile Include="Rpnt\CsTBLOTDECONTROLEHTA.cs" />
+    <Compile Include="Rpnt\CstbLotsDeControleBTA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rpnt\CsTBMethodeDedectectionClientsBTA_PARAMETRE.cs" />
+    <Compile Include="Rpnt\CsTBPARAMETRAGESYNCHROAUTOMATIQUE.cs" />
+    <Compile Include="Rpnt\CsTBPARAMETRE.cs" />
+    <Compile Include="Rpnt\CstbParametres.cs" />
+    <Compile Include="Rpnt\CsTBQUALIFICATIONFRAUDE.cs" />
+    <Compile Include="Rpnt\CsTBQUALIFICATIONFRAUDEHTA.cs" />
+    <Compile Include="Rpnt\CsTBRACCORDEMENT.cs" />
+    <Compile Include="Rpnt\CsTBRESULTATCONTROLEBTA.cs" />
+    <Compile Include="Rpnt\CsTBRESULTATCONTROLEHTA.cs" />
+    <Compile Include="Rpnt\CsTBSYNCHRONISATION.cs" />
+    <Compile Include="Rpnt\CsTBTIERSCLIENT.cs" />
+    <Compile Include="Rpnt\CsTBTOURNEE.cs" />
+    <Compile Include="Rpnt\CsTBVALEURPARAMETREDECIMAL.cs" />
+    <Compile Include="Rpnt\CsTBVALEURPARAMETREINT.cs" />
+    <Compile Include="Rpnt\CsTBVALEURPAREMETRECHAINE.cs" />
+    <Compile Include="Rpnt\CsTourneeAccessiblesParlUO.cs" />
+    <Compile Include="Rpnt\CsValeursParametre.cs" />
+    <Compile Include="Rpnt\ViewModels\ViewModelGestionClientBTA.cs" />
+    <Compile Include="Scelle\CsMapperAffectationScelle.cs" />
+    <Compile Include="Scelle\CsMapperDetailAffectationScelle.cs" />
+    <Compile Include="Scelle\CsMapperScelles.cs" />
+    <Compile Include="Scelle\CsScellageCompteur.cs" />
+    <Compile Include="Scelle\CsActivite.cs" />
+    <Compile Include="CsAffectationScelle.cs" />
+    <Compile Include="Scelle\CsCouleurActivite.cs" />
+    <Compile Include="CsDetailAffectationScelle.cs" />
+    <Compile Include="CsDscelle.cs" />
+    <Compile Include="CsEditionDevis.cs" />
+    <Compile Include="CsElementAchatTimbre.cs" />
+    <Compile Include="CsGroupe.cs" />
+    <Compile Include="CsLotScelle.cs" />
+    <Compile Include="CsProgarmmation.cs" />
+    <Compile Include="CsRenvoiRejet.cs" />
+    <Compile Include="CsSortieAutreMateriel.cs" />
+    <Compile Include="CsSortieMateriel.cs" />
+    <Compile Include="CsTypeTimbre.cs" />
+    <Compile Include="CsDiametreBranchement.cs" />
+    <Compile Include="CsOrganeScellable.cs" />
+    <Compile Include="CsOrganeScelleDemande.cs" />
+    <Compile Include="CsTypeTaxe.cs" />
+    <Compile Include="CsAction.cs" />
+    <Compile Include="CsAffectationGestionnaire.cs" />
+    <Compile Include="CsCampagneGc.cs" />
+    <Compile Include="CsCATEGORIECLIENT_TYPECLIENT.cs" />
+    <Compile Include="CsCATEGORIECLIENT_USAGE.cs" />
+    <Compile Include="CsDetailCampagneGc.cs" />
+    <Compile Include="CsDetailMandatementGc.cs" />
+    <Compile Include="CsFactureClientRegrouper.cs" />
+    <Compile Include="CsAdministration_Institut.cs" />
+    <Compile Include="CsAnnomalie.cs" />
+    <Compile Include="CsFacturation.cs" />
+    <Compile Include="CsFactureClientMt.cs" />
+    <Compile Include="CsAffectationDemandeUser.cs" />
+    <Compile Include="CsCentreProfil.cs" />
+    <Compile Include="CsAdmMenu.cs" />
+    <Compile Include="CsCentreDuProfil.cs" />
+    <Compile Include="CsCommentaireRejet.cs" />
+    <Compile Include="CsCondition.cs" />
+    <Compile Include="CsCopieDmdCircuit.cs" />
+    <Compile Include="CsCopieDmdConditionBranchement.cs" />
+    <Compile Include="CsDemandeWorkflow.cs" />
+    <Compile Include="CsEtape.cs" />
+    <Compile Include="CsFormulaire.cs" />
+    <Compile Include="CsFraixParticipation.cs" />
+    <Compile Include="CsGroupeValidation.cs" />
+    <Compile Include="CsHabilitationCentreProfil.cs" />
+    <Compile Include="CsHabilitationMenu.cs" />
+    <Compile Include="CsHabilitationMetier.cs" />
+    <Compile Include="CsInfoProprietaire.cs" />
+    <Compile Include="CsJournalDemandeWorkflow.cs" />
+    <Compile Include="CsMandatementGc.cs" />
+    <Compile Include="CsMenuDuProfil.cs" />
+    <Compile Include="CsModule.cs" />
+    <Compile Include="CsModuleAdmMenu.cs" />
+    <Compile Include="CsModuleDeFonction.cs" />
+    <Compile Include="CsNATURECLIENT_TYPECLIENT.cs" />
+    <Compile Include="CsOperation.cs" />
+    <Compile Include="CsOperationFormulaire.cs" />
+    <Compile Include="CsPersonePhysique.cs" />
+    <Compile Include="CsProfil.cs" />
+    <Compile Include="CsQtFacMt.cs" />
+    <Compile Include="CsCritereLot.cs" />
+    <Compile Include="CsContenantCritere.cs" />
+    <Compile Include="CsContenantCritereTarif.cs" />
+    <Compile Include="CsCtarComp.cs" />
+    <Compile Include="CsDetailTarifFacturation.cs" />
+    <Compile Include="CsLienRedevence.cs" />
+    <Compile Include="CsModeApplicationTarif.cs" />
+    <Compile Include="CsModuleDuRole.cs" />
+    <Compile Include="CsRAffectationEtapeWorkflow.cs" />
+    <Compile Include="CsReversementCaisse.cs" />
+    <Compile Include="CsDetailTarifAnnuel.cs" />
+    <Compile Include="CsDemandeReversement.cs" />
+    <Compile Include="CsAgent.cs" />
+    <Compile Include="CsRHabilitationGrouveValidation.cs" />
+    <Compile Include="CsRole.cs" />
+    <Compile Include="CsRWorkflow.cs" />
+    <Compile Include="CsSocietePrive.cs" />
+    <Compile Include="CsStatus.cs" />
+    <Compile Include="CsStatutJuridique.cs" />
+    <Compile Include="CsTableDeTravail.cs" />
+    <Compile Include="CsTarifFacturation.cs" />
+    <Compile Include="CsTrancheRedevence.cs" />
+    <Compile Include="CsTypeClient.cs" />
+    <Compile Include="CsTypeCoupure.cs" />
+    <Compile Include="CsDetailCampagne.cs" />
+    <Compile Include="CsTypeComptage.cs" />
+    <Compile Include="CsLePayeur.cs" />
+    <Compile Include="CsPayeur.cs" />
+    <Compile Include="CsBanque.cs" />
+    <Compile Include="CsHistoriquePassword.cs" />
+    <Compile Include="CsHabilitationCaisse.cs" />
+    <Compile Include="CsCAMPAGNE.cs" />
+    <Compile Include="Scelle\CsDetailInterventionCache.cs" />
+    <Compile Include="CsDepart.cs" />
+    <Compile Include="CsCaisse.cs" />
+    <Compile Include="CsChaineConnexion.cs" />
+    <Compile Include="CsFraisTimbre.cs" />
+    <Compile Include="CsPoste.cs" />
+    <Compile Include="CsMobile.cs" />
+    <Compile Include="CsMobileInit.cs" />
+    <Compile Include="CsSaisiHorsLot.cs" />
+    <Compile Include="CsSaisiIndexIndividuel.cs" />
+    <Compile Include="CsSecteur.cs" />
+    <Compile Include="CsSms.cs" />
+    <Compile Include="CsTranscaisse.cs" />
+    <Compile Include="CsDonneeSite.cs" />
+    <Compile Include="CsTaxcomp.cs" />
+    <Compile Include="CsLibruaction.cs" />
+    <Compile Include="CsActionFacturation.cs" />
+    <Compile Include="CsSaisiInexCoupure.cs" />
+    <Compile Include="CsMonnaie.cs" />
+    <Compile Include="CsAjufin.cs" />
+    <Compile Include="CsIndexObjects.cs" />
+    <Compile Include="CsCompteClient.cs" />
+    <Compile Include="CsAvisCoupureEdition.cs" />
+    <Compile Include="CsLafactureClient.cs" />
+    <Compile Include="CsTypeLienProduit.cs" />
+    <Compile Include="CsTypeMessage.cs" />
+    <Compile Include="CsApplicationTaxe.cs" />
+    <Compile Include="CsEtatCompteur.cs" />
+    <Compile Include="CsTypeLienRedevence.cs" />
+    <Compile Include="CsTypeRedevence.cs" />
+    <Compile Include="CsUniteComptage.cs" />
+    <Compile Include="CsNiveauTarif.cs" />
+    <Compile Include="CsModeCalcul.cs" />
+    <Compile Include="CsPeriodiciteFacturation.cs" />
+    <Compile Include="CsRechercheTarif.cs" />
+    <Compile Include="CsRecouvrement.cs" />
+    <Compile Include="CsSaisieDeMasse.cs" />
+    <Compile Include="CsEncaissement.cs" />
+    <Compile Include="CsOrigineLot.cs" />
+    <Compile Include="CsCodeControle.cs" />
+    <Compile Include="CsComptDispo.cs" />
+    <Compile Include="CsClasseurClient.cs" />
+    <Compile Include="CsTableReference.cs" />
+    <Compile Include="CsAbonneCarte.cs" />
+    <Compile Include="CsDemandeBase.cs" />
+    <Compile Include="CsDemandeDetailCout.cs" />
+    <Compile Include="CsEntreprise.cs" />
+    <Compile Include="CsEtapeReclamation.cs" />
+    <Compile Include="CsModepaiement.cs" />
+    <Compile Include="CsReglementRecu.cs" />
+    <Compile Include="CsCadran.cs" />
+    <Compile Include="CsCoutDemande.cs" />
+    <Compile Include="CsCoutCoper.cs" />
+    <Compile Include="CsTypeBranchement.cs" />
+    <Compile Include="CsMaterielBranchement.cs" />
+    <Compile Include="CsCodeTaxeApplication.cs" />
+    <Compile Include="CsFrequence.cs" />
+    <Compile Include="CsFermable.cs" />
+    <Compile Include="CsNatureClient.cs" />
+    <Compile Include="CsCodeConsomateur.cs" />
+    <Compile Include="CsCoutPuissance.cs" />
+    <Compile Include="CsDemCoutParametre.cs" />
+    <Compile Include="CsDirecteur.cs" />
+    <Compile Include="CsMontantParCoper.cs" />
+    <Compile Include="CsRue.cs" />
+    <Compile Include="CsStatFacturation.cs" />
+    <Compile Include="CsControleTravaux.cs" />
+    <Compile Include="CsRedevance.cs" />
+    <Compile Include="CsInfoAbonFact.cs" />
+    <Compile Include="CsMarqueCompteur.cs" />
+    <Compile Include="CsProduitFacture.cs" />
+    <Compile Include="CsRedevanceFacture.cs" />
+    <Compile Include="CsSpeSite.cs" />
+    <Compile Include="CsDataBase.cs" />
+    <Compile Include="CsCommune.cs" />
+    <Compile Include="CsComptable.cs" />
+    <Compile Include="CsCompteCritere.cs" />
+    <Compile Include="CsCorrespondance.cs" />
+    <Compile Include="CsFactureClient.cs" />
+    <Compile Include="CsFonction.cs" />
+    <Compile Include="CsJournal.cs" />
+    <Compile Include="CsNature.cs" />
+    <Compile Include="CsParametre.cs" />
+    <Compile Include="CsSchema.cs" />
+    <Compile Include="CsStatutReclamation.cs" />
+    <Compile Include="CsTarifs.cs" />
+    <Compile Include="CsUsage.cs" />
+    <Compile Include="CsUSAGE_NATURECLIENT.cs" />
+    <Compile Include="CsVariableDeTarification.cs" />
+    <Compile Include="CsTarifAnnuel.cs" />
+    <Compile Include="CsEntfac.cs" />
+    <Compile Include="CsCRedfact.cs" />
+    <Compile Include="CsAppareils.cs" />
+    <Compile Include="CsEtapeDevis.cs" />
+    <Compile Include="CsFourniture.cs" />
+    <Compile Include="CsPrestataire.cs" />
+    <Compile Include="CsTypeDevis.cs" />
+    <Compile Include="CsDefParamAbon.cs" />
+    <Compile Include="CsEnteteFacture.cs" />
+    <Compile Include="CsTacheDevis.cs" />
+    <Compile Include="CsTypeCentre.cs" />
+    <Compile Include="CsRegCli.cs" />
+    <Compile Include="CsRegExo.cs" />
+    <Compile Include="CsParamAbonUtilise.cs" />
+    <Compile Include="CsDomBanc.cs" />
+    <Compile Include="CsNumeroInstallation.cs" />
+    <Compile Include="CsLibelleTop.cs" />
+    <Compile Include="CsPosteTransformation.cs" />
+    <Compile Include="CsCodeDepart.cs" />
+    <Compile Include="CsCelluleDuSiege.cs" />
+    <Compile Include="CsStrategieSecurite.cs" />
+    <Compile Include="CsNationalite.cs" />
+    <Compile Include="CsCategorieClient.cs" />
+    <Compile Include="CsConsommateur.cs" />
+    <Compile Include="CsParametreEvenement.cs" />
+    <Compile Include="CsParametreGeneraux.cs" />
+    <Compile Include="CsProprietaire.cs" />
+    <Compile Include="CsDenomination.cs" />
+    <Compile Include="CsParametreBranchement.cs" />
+    <Compile Include="CsCompteur.cs" />
+    <Compile Include="CsEncaissementHorsLigne.cs" />
+    <Compile Include="CsEnvoiMail.cs" />
+    <Compile Include="CsMailFacture.cs" />
+    <Compile Include="CsTdem.cs" />
+    <Compile Include="CsProgramMenu.cs" />
+    <Compile Include="CsReleveur.cs" />
+    <Compile Include="CsAdmRoles.cs" />
+    <Compile Include="CsArrete.cs" />
+    <Compile Include="CsDeclarationTVA.cs" />
+    <Compile Include="CsPageri.cs" />
+    <Compile Include="CsCodeLibelle.cs" />
+    <Compile Include="CsClientRechercher.cs" />
+    <Compile Include="CsHistorique.cs" />
+    <Compile Include="CsCprofac.cs" />
+    <Compile Include="CsEnregRI.cs" />
+    <Compile Include="CsSales.cs" />
+    <Compile Include="CsTournee.cs" />
+    <Compile Include="CsClientLotri.cs" />
+    <Compile Include="CImprimante.cs" />
+    <Compile Include="CsConnexion.cs" />
+    <Compile Include="CsLibelle.cs" />
+    <Compile Include="CsFichierJoint.cs" />
+    <Compile Include="CsLotri.cs" />
+    <Compile Include="CsNatgen.cs" />
+    <Compile Include="CsCentre.cs" />
+    <Compile Include="CsDetailLot.cs" />
+    <Compile Include="CsLotCompteClient.cs" />
+    <Compile Include="CsModeReception.cs" />
+    <Compile Include="CsTypeLot.cs" />
+    <Compile Include="CsForfait.cs" />
+    <Compile Include="CsReclamation.cs" />
+    <Compile Include="CsTarifUnitaire.cs" />
+    <Compile Include="CsPuissance.cs" />
+    <Compile Include="CsTcompteur.cs" />
+    <Compile Include="CsRegrou.cs" />
+    <Compile Include="CsBrtplus.cs" />
+    <Compile Include="CsCanalisationplus.cs" />
+    <Compile Include="CsCtax.cs" />
+    <Compile Include="CsInit.cs" />
+    <Compile Include="CsCalibreCompteur.cs" />
+    <Compile Include="CsLclient.cs" />
+    <Compile Include="CsPagisol.cs" />
+    <Compile Include="CsCasind.cs" />
+    <Compile Include="CsDevis.cs" />
+    <Compile Include="CsPoliceDispo.cs" />
+    <Compile Include="CsBrt.cs" />
+    <Compile Include="CsEvenement.cs" />
+    <Compile Include="CsCanalisation.cs" />
+    <Compile Include="CsAg.cs" />
+    <Compile Include="CsAbon.cs" />
+    <Compile Include="CsEtapeDemande.cs" />
+    <Compile Include="CsDemCout.cs" />
+    <Compile Include="CsDemande.cs" />
+    <Compile Include="CsDesktopGroup.cs" />
+    <Compile Include="CsDesktopItem.cs" />
+    <Compile Include="CsGroupProgram.cs" />
+    <Compile Include="CsHabilitationProgram.cs" />
+    <Compile Include="CsProduit.cs" />
+    <Compile Include="CsDetailMoratoire.cs" />
+    <Compile Include="CsProgram.cs" />
+    <Compile Include="CsRexo.cs" />
+    <Compile Include="CsTypeReclamation.cs" />
+    <Compile Include="CsUtilisateur.cs" />
+    <Compile Include="CsValidation.cs" />
+    <Compile Include="CsVariableTarif.cs" />
+    <Compile Include="CsVwConfigurationWorkflowCentre.cs" />
+    <Compile Include="CsVwDashboardDemande.cs" />
+    <Compile Include="CsVwJournalDemande.cs" />
+    <Compile Include="CsWorkflow.cs" />
+    <Compile Include="CsTdemCout.cs" />
+    <Compile Include="CustumEclairagePublic.cs" />
+    <Compile Include="FRAISTIMB.cs" />
+    <Compile Include="Mobiles\ABON.cs" />
+    <Compile Include="Mobiles\CASIND.cs" />
+    <Compile Include="Mobiles\EVENEMENT.cs" />
+    <Compile Include="Mobiles\PAGERI.cs" />
+    <Compile Include="Mobiles\MODULE.cs" />
+    <Compile Include="Mobiles\RELEVEUR.cs" />
+    <Compile Include="Mobiles\CsMobileManager.cs" />
+    <Compile Include="Scelle\CsCompteurBta.cs" />
+    <Compile Include="Scelle\CsLotMagasinGeneral.cs" />
+    <Compile Include="Scelle\CsMarque_Modele.cs" />
+    <Compile Include="Scelle\CsMotifsScelle.cs" />
+    <Compile Include="Scelle\CsPoseScelle.cs" />
+    <Compile Include="Scelle\CsADMUTILISATEUR.cs" />
+    <Compile Include="Scelle\CsBranchement.cs" />
+    <Compile Include="Scelle\CsCouleurScelle.cs" />
+    <Compile Include="Scelle\CsDetailInterventionCapotMoteur.cs" />
+    <Compile Include="Scelle\CsDetailInterventionCCP.cs" />
+    <Compile Include="Scelle\CsDetailInterventionDijoncteur.cs" />
+    <Compile Include="Scelle\CsDetailInterventionGrille.cs" />
+    <Compile Include="Scelle\CsDetailInterventionTableau.cs" />
+    <Compile Include="Scelle\CsIntervention.cs" />
+    <Compile Include="Scelle\CsMotif.cs" />
+    <Compile Include="Scelle\CsOrigineScelle.cs" />
+    <Compile Include="Scelle\CsProvenanceScelle.cs" />
+    <Compile Include="Scelle\CsRechercheCompteur.cs" />
+    <Compile Include="Scelle\CsRefEtatCompteur.cs" />
+    <Compile Include="Scelle\CsRefFournisseurs.cs" />
+    <Compile Include="Scelle\CsRefMotif.cs" />
+    <Compile Include="Scelle\CsRefOrigineScelle.cs" />
+    <Compile Include="Scelle\CsRefStatutsScelles.cs" />
+    <Compile Include="Scelle\CsRemiseScelleByAg.cs" />
+    <Compile Include="Scelle\CsRemiseScelles.cs" />
+    <Compile Include="Scelle\CsRetourScelles.cs" />
+    <Compile Include="Scelle\CsScelle.cs" />
+    <Compile Include="Scelle\CstbDetailRemiseScelles.cs" />
+    <Compile Include="Scelle\CstbLot.cs" />
+    <Compile Include="Scelle\CstbRemiseScelles.cs" />
+    <Compile Include="Scelle\CsTypeReceptionScelle.cs" />
+    <Compile Include="Structure Devis\CCaracteristique.cs" />
+    <Compile Include="Structure Devis\cClient.cs" />
+    <Compile Include="Structure Devis\CsCriteresDevis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structure Devis\CsQuartier.cs" />
+    <Compile Include="CsRues.cs" />
+    <Compile Include="Structure Devis\CsTypeDOCUMENTSCANNE.cs" />
+    <Compile Include="Structure Devis\cTa.cs" />
+    <Compile Include="EnumereWrap.cs" />
+    <Compile Include="CsUserConnecte.cs" />
+    <Compile Include="CsCoper.cs" />
+    <Compile Include="CsOpenningDay.cs" />
+    <Compile Include="CsSite.cs" />
+    <Compile Include="CsReglementDiffCashCheck.cs" />
+    <Compile Include="CsEtatCaisse.cs" />
+    <Compile Include="CsMoratoire.cs" />
+    <Compile Include="CsModereg.cs" />
+    <Compile Include="CsOpenDay.cs" />
+    <Compile Include="CsReglement.cs" />
+    <Compile Include="CsFacture.cs" />
+    <Compile Include="CsClient.cs" />
+    <Compile Include="CsCodeRegroupement.cs" />
+    <Compile Include="CSMenuGalatee.cs" />
+    <Compile Include="CsTa.cs" />
+    <Compile Include="CParametre.cs" />
+    <Compile Include="Encodeur.cs" />
+    <Compile Include="Enumere.cs" />
+    <Compile Include="EnumProcedureStockee.cs" />
+    <Compile Include="Monitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure Devis\CsEtatDevis.cs" />
+    <Compile Include="Structure Devis\CsEtatProcesVerbal.cs" />
+    <Compile Include="Structure Devis\CsInformationsDevis.cs" />
+    <Compile Include="Structure Devis\CsInterventionPlannifiee.cs" />
+    <Compile Include="Structure Devis\ObjAPPAREILS.cs" />
+    <Compile Include="Structure Devis\ObjAPPAREILSDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjCONTROLETRAVAUX.cs" />
+    <Compile Include="Structure Devis\ObjDEMANDEDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjDEPOSIT.cs" />
+    <Compile Include="Structure Devis\ObjDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjDEVISPIA.cs" />
+    <Compile Include="Structure Devis\ObjDIRECTEUR.cs" />
+    <Compile Include="Structure Devis\ObjDOCUMENTSCANNE.cs" />
+    <Compile Include="Structure Devis\ObjELEMENTDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjETAPEDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjFonction.cs" />
+    <Compile Include="Structure Devis\ObjFOURNITURE.cs" />
+    <Compile Include="Structure Devis\ObjMaterielConsomme.cs" />
+    <Compile Include="Structure Devis\ObjMATRICULE.cs" />
+    <Compile Include="Structure Devis\ObjPIECEIDENTITE.cs" />
+    <Compile Include="Structure Devis\ObjPRESTATAIRE.cs" />
+    <Compile Include="Structure Devis\objProduit.cs" />
+    <Compile Include="Structure Devis\ObjSITE.cs" />
+    <Compile Include="Structure Devis\ObjSUIVIDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjTACHEDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjTRAVAUXDEVIS.cs" />
+    <Compile Include="Structure Devis\ObjTYPEDEVIS.cs" />
+    <Compile Include="testClassPost.cs" />
+    <Compile Include="testClassResponseelement.cs" />
+    <Compile Include="TreeNodes.cs" />
+    <Compile Include="Utilities\MappingFieldAttribute.cs" />
+    <Compile Include="Utilities\Utilitaires.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

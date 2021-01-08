@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Reclamation/ReclamationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+  <xs:element name="GetAllReclamations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="agent" nillable="true" type="q1:CsUserConnecte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllReclamationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllReclamationsResult" nillable="true" type="q2:ArrayOfCsReclamation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllModeReception">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllModeReceptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllModeReceptionResult" nillable="true" type="q3:ArrayOfCsModeReception" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBranch">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllBranchResult" nillable="true" type="q4:ArrayOfCsTa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCentre">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllCentreResult" nillable="true" type="q5:ArrayOfCsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NomAbonne" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NumAbonne" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RefCompteur" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="SearchClientResult" nillable="true" type="q6:ArrayOfCsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInformations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="client" nillable="true" type="q7:CsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInformationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetClientInformationsResult" nillable="true" type="q8:ArrayOfCsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllComplaintType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllComplaintTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllComplaintTypeResult" nillable="true" type="q9:ArrayOfCsReclamation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllZone">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllZoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetAllZoneResult" nillable="true" type="q10:ArrayOfCsZone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiameters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdProduit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetDiametersResult" nillable="true" type="q11:ArrayOfCsDiacomp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCanalisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCanalisationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="GetCanalisationResult" nillable="true" type="q12:ArrayOfCsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertReclamation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="reclamation" nillable="true" type="q13:CsReclamation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertReclamationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertReclamationResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReclamation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="reclamation" nillable="true" type="q14:CsReclamation" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="fichierJoint" nillable="true" type="q15:CsFichierJoint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateReclamationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateReclamationResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirNumeroFiche">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirNumeroFicheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenirNumeroFicheResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFichierJoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="fichier" nillable="true" type="q16:CsFichierJoint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFichierJointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertFichierJointResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChercherAgents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fonction" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChercherAgentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChercherAgentsResult" nillable="true" type="q17:ArrayOfCUtilisateur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirListeFonctions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirListeFonctionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ObtenirListeFonctionsResult" nillable="true" type="q18:ArrayOfCsTa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirReclamationParCritere">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateOpening" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="reqNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="custName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenirReclamationParCritereResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ObtenirReclamationParCritereResult" nillable="true" type="q19:ArrayOfCsReclamation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,117 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Accueil.FrmAjustementSaisie"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="862" Height="509" 
+           Title="Saisie de masse" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           Loaded="ChildWindow_Loaded" mc:Ignorable="d" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+                      
+                      
+                      >
+    <controls:ChildWindow.Resources>
+            <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+            <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:TabControl Height="396" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="833" SelectionChanged="tabControl1_SelectionChanged">
+            <sdk:TabItem Header="Creation de lot" Name="ogl_creation" IsSelected="False">
+
+                <Grid>
+                    <!--<my:GroupBox FontWeight="SemiBold" Margin="0,2,12,10" x:Name="groupBox5" Header="Caractéristique client" />-->
+                    <my:GroupBox FontWeight="SemiBold" Margin="0,0,0,10" x:Name="groupBox5" Header="Caractéristique du lot" />
+
+
+
+                    <ComboBox Height="23" Margin="179,101,430,235" Name="cbo_TypeBatch" Width="212" SelectionChanged="cbo_TypeBatch_SelectionChanged"/>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="179,127,0,0" Name="Txt_NumeroBatch" VerticalAlignment="Top" Width="134" Background="LightBlue" LostFocus="Txt_NumeroBatch_LostFocus" />
+                    <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="179,153,0,0" Name="dtp_DateCreationLot" VerticalAlignment="Top" Width="134" Background="LightBlue"  />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,179,508,0" Name="Txt_MontantOnglet1" VerticalAlignment="Top" Width="134" />
+                    <sdk:Label Content="Type de lot" Height="21" HorizontalAlignment="Left" Margin="44,102,0,0" Name="lbl_TypeBatch" VerticalAlignment="Top" Width="107" />
+                    <sdk:Label Content="Numero lot" HorizontalAlignment="Left" Margin="44,128,0,211" Name="lbl_Numlot1" Width="106" />
+                    <sdk:Label Content="Date" Height="23" HorizontalAlignment="Left" Margin="44,153,0,0" Name="lbl_datebatch1" VerticalAlignment="Top" Width="132" />
+                    <sdk:Label Content="Montant" Height="17" HorizontalAlignment="Left" Margin="44,185,0,0" Name="lbl_montant1" VerticalAlignment="Top" Width="92" />
+                    <sdk:Label Height="17" x:Name="label16" Content="Site" Margin="44,50,707,292" />
+                    <TextBox Height="23" x:Name="Txt_CodeSite" Width="52" Margin="179,47,590,289" TextChanged="Txt_CodeSite_TextChanged"  />
+                    <Button Content="..." x:Name="btn_Site" Margin="236,48,554,290" Click="btn_Site_Click"  />
+                    <TextBox Height="23" x:Name="Txt_LibelleSite" Width="205" IsReadOnly="True" Margin="272,47,344,289" />
+                    <sdk:Label Height="17" x:Name="label1" Content="Centre" Margin="44,75,707,267" />
+                    <TextBox Height="23" x:Name="Txt_CodeCentre" Width="52" Margin="179,72,590,264" TextChanged="Txt_CodeCentre_TextChanged" />
+                    <Button Content="..." x:Name="btn_Centre" Margin="236,72,554,264" Click="btn_Centre_Click" />
+                    <TextBox Height="23" x:Name="Txt_LibelleCentre" IsReadOnly="True" Margin="272,73,344,263" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Saisie de detail" Name="ogl_SaisieDetail">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="261,20,0,0" Name="Txt_Origine" VerticalAlignment="Top" Width="214" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="499,20,0,0" Name="Txt_Numlot2" VerticalAlignment="Top" Width="127" />
+                    <sdk:Label Content="Origine" Height="20" HorizontalAlignment="Left" Margin="261,-1,0,0" Name="lbl_Origine" VerticalAlignment="Top" Width="56" />
+                    <sdk:Label Content="Numero lot " Height="20" HorizontalAlignment="Left" Margin="499,-1,0,0" Name="lbl_NumBatch" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="14,65,0,0" Name="Txt_BatchDate" VerticalAlignment="Top" Width="214" />
+                    <sdk:Label Content="Date lot" Height="20" HorizontalAlignment="Left" Margin="14,44,0,0" Name="lbl_DateBatch" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="261,65,0,0" Name="Txt_BatchAmount" VerticalAlignment="Top" Width="214" />
+                    <sdk:Label Content="Montant lot" Height="20" HorizontalAlignment="Left" Margin="261,44,0,0" Name="lbl_MontantBatch" VerticalAlignment="Top" Width="203" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="499,65,0,0" Name="Txt_NombreClientBatch" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Content="Nombre de Lignes" Height="20" HorizontalAlignment="Left" Margin="499,44,0,0" Name="lbl_NbrLigneDetails" VerticalAlignment="Top" Width="138" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="662,65,0,0" Name="Txt_MontantCourant" VerticalAlignment="Top" Width="100" />
+                    <sdk:Label Content="Detail Montant" Height="20" HorizontalAlignment="Left" Margin="662,44,0,0" Name="lbl_DetailMontant" VerticalAlignment="Top" Width="115" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,292,0,0" Name="Cbo_Centre" VerticalAlignment="Top" Width="120" SelectionChanged="Cbo_Centre_SelectionChanged" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="148,292,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="182" TextChanged="Txt_Client_TextChanged" LostFocus="Txt_Client_LostFocus" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="331,292,0,0" Name="Txt_Ordre" VerticalAlignment="Top" Width="45" TextChanged="Txt_Ordre_TextChanged" LostFocus="Txt_Ordre_LostFocus" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="378,292,0,0" Name="Txt_refem" VerticalAlignment="Top" Width="56" TextChanged="Txt_refem_TextChanged" LostFocus="Txt_refem_LostFocus" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="436,292,0,0" Name="Txt_Ndoc" VerticalAlignment="Top" Width="72" LostFocus="Txt_Ndoc_LostFocus" TextChanged="Txt_Ndoc_TextChanged" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="511,292,0,0" Name="Txt_Coper" VerticalAlignment="Top" Width="45" IsReadOnly="True" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="558,292,0,0" Name="Txt_Type" VerticalAlignment="Top" Width="55" IsReadOnly="True" />
+                    <sdk:DatePicker Background="LightBlue" Height="23" HorizontalAlignment="Right" Margin="0,292,82,0" Name="dtp_DateSaisiDetail" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Content="Centre" Height="24" HorizontalAlignment="Left" Margin="13,278,0,0" Name="lbl_CentreClient" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Content="Client " Height="20" HorizontalAlignment="Left" Margin="148,277,0,0" Name="lbl_client" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Content="Ordre " Height="22" HorizontalAlignment="Left" Margin="331,275,0,0" Name="lbl_ordre" VerticalAlignment="Top" Width="45" />
+                    <sdk:Label Content="Periode " Height="22" HorizontalAlignment="Left" Margin="377,276,0,0" Name="lbl_periode" VerticalAlignment="Top" Width="57" />
+                    <sdk:Label Content="Facture " Height="22" HorizontalAlignment="Right" Margin="0,276,341,0" Name="lbl_NumFact" VerticalAlignment="Top" Width="48" />
+                    <sdk:Label Content="Code " Height="24" HorizontalAlignment="Left" Margin="511,276,0,0" Name="lbl_coper" VerticalAlignment="Top" Width="45" />
+                    <sdk:Label Content="Type " HorizontalAlignment="Left" Margin="558,276,0,0" Name="lbl_type" VerticalAlignment="Top" Width="55" />
+                    <sdk:Label Content="Date Saisie" Height="26" HorizontalAlignment="Left" Margin="620,276,0,0" Name="lbl_datesaisie" VerticalAlignment="Top" Width="93" />
+                    <sdk:DatePicker Height="23" HorizontalAlignment="Right" Margin="0,332,689,0" Name="dtp_DateExigible" VerticalAlignment="Top" Width="120" />
+                    <sdk:Label Content="Date Exigibilité " Height="17" HorizontalAlignment="Left" Margin="13,315,0,0" Name="lbl_dateExigible" VerticalAlignment="Top" Width="93" />
+                    <TextBox Background="LightBlue" Height="23" HorizontalAlignment="Left" Margin="148,332,0,0" Name="Txt_Montant" VerticalAlignment="Top" Width="182" LostFocus="Txt_Montant_LostFocus" />
+                    <sdk:Label Content="Montant " Height="20" HorizontalAlignment="Left" Margin="148,317,0,0" Name="lbl_Montant" VerticalAlignment="Top" Width="120" />
+                    <Button Content="Nouveau" Height="23" HorizontalAlignment="Left" Margin="359,332,0,0" Name="Btn_Nouveau" VerticalAlignment="Top" Width="75" Click="Btn_Nouveau_Click" />
+                    <Button Content="Ajouter" Height="23" HorizontalAlignment="Left" Margin="481,332,0,0" Name="btn_Ajouter" VerticalAlignment="Top" Width="75" Click="btn_Ajouter_Click" />
+                    <Button Content="Modifier" Height="23" HorizontalAlignment="Left" Margin="562,332,0,0" Name="btn_modifier" VerticalAlignment="Top" Width="75" />
+                    <Button Content="Supprimer" Height="23" HorizontalAlignment="Left" Margin="648,331,0,0" Name="Btn_Delete" VerticalAlignment="Top" Width="75" Click="Btn_Delete_Click" />
+                    <sdk:DataGrid AutoGenerateColumns="False" Height="176" HorizontalAlignment="Left" Margin="6,94,0,0" Name="Dtg_ListeDetail" VerticalAlignment="Top" Width="809" SelectionChanged="Dtg_ListeDetail_SelectionChanged">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding CENTRE}" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding CLIENT}" CanUserResize="True" CanUserSort="True" Header="Client" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding ORDRE}" CanUserResize="True" CanUserSort="True" Header="Ordre" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding REFEM}" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding NDOC}" CanUserResize="True" CanUserSort="True" Header="Numero Facture" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding COPER}" CanUserResize="True" CanUserSort="True" Header="Code Operation" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding NATURE}" CanUserResize="True" CanUserSort="True" Header="Type" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding DATEPIECE,Converter={StaticResource DateTimeConverter}}" CanUserResize="True" CanUserSort="True" Header="Date piece" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding DATESAISIE,Converter={StaticResource DateTimeConverter}}" CanUserResize="True" CanUserSort="True" Header="Date Saisie" Width="Auto" />
+                            <sdk:DataGridTextColumn CanUserReorder="True" Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserResize="True" CanUserSort="True" Header="Montant" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button Content="Recherche" Height="23" HorizontalAlignment="Left" Margin="743,292,0,0" Name="btn_Rechercher" VerticalAlignment="Top" Width="72" Click="btn_Rechercher_Click" />
+                    <sdk:Label Content="Mois" Height="20" HorizontalAlignment="Center" Margin="314,0,425,0" Name="lbl_Mois" VerticalAlignment="Top" Width="82" HorizontalContentAlignment="Left" />
+                    <sdk:Label Content="Annee" Height="20" HorizontalAlignment="Center" Margin="419,0,346,0" Name="lbl_Annee" VerticalAlignment="Top" Width="56" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,35 @@
+﻿<sdk:ChildWindow x:Class="Galatee.Silverlight.Parametrage.FrmCompteSpecifique"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+           Width="393" Height="254" OverlayBrush="Transparent" 
+           Title="Compte Spécifique" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="10,6,0,4" x:Name="groupBox1_Copy1" Header="Info  de Type compte"  />
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Height="23" VerticalAlignment="Top" />
+        <sdk:Label HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="68" Margin="33,39,0,0" Content="Code "/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_code" Height="23" TextWrapping="Wrap" Text="{Binding CODE, Mode=TwoWay}" VerticalAlignment="Top" Width="56" Margin="101,38,0,0" TextChanged="TextBox_TextChanged_1"/>
+
+        <!--<StackPanel Height="28" x:Name="stackPanel4" Width="384" Orientation="Horizontal" HorizontalAlignment="Left" Margin="33,57,0,246">-->
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <!--<sdk:Label Height="17" x:Name="label1" Width="54" Content="Centre" Margin="0,6,0,5" />-->
+        <!--<TextBox Height="23" x:Name="Txt_CodeCentre" Width="68" Margin="2,3,2,2" TextChanged="Txt_CodeCentre_TextChanged" Text="{Binding CODECENTRE, Mode=TwoWay}" />-->
+        <!--<Button Content="..." Height="23" x:Name="btn_Centre" Width="26" Margin="2,3,2,2" Click="btn_Centre_Click" />-->
+        <!--<TextBox Height="23" x:Name="Txt_LibelleCentre" Width="205" Text="{Binding LIBELLECENTRE, Mode=TwoWay}" IsReadOnly="True" Margin="0,3,0,0" VerticalAlignment="Top" />-->
+        <!--</StackPanel>-->
+
+        <sdk:Label HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="54" Margin="33,69,0,0" Content="Libelle"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_libelle" Height="23" TextWrapping="Wrap" Text="{Binding LIBELLE, Mode=TwoWay}" VerticalAlignment="Top" Width="177" Margin="101,65,0,0" TextChanged="txt_libelle_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="78" Margin="23,96,0,0" Content="Champ Filtre"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_champ_Filtre" Height="23" TextWrapping="Wrap" Text="{Binding VALEURFILTRE, Mode=TwoWay}" VerticalAlignment="Top" Width="177" Margin="101,93,0,0" />
+        <CheckBox Content="En Debit ?" x:Name="chbx_Direction" IsChecked="{Binding DC,Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,42,0,0" Width="105"/>
+    </Grid>
+</sdk:ChildWindow>

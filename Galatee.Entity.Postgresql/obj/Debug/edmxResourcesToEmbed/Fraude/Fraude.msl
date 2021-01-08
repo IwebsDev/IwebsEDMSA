@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FRAUDEModelStoreContainer" CdmEntityContainer="FRAUDES_Entities">
+    <EntitySetMapping Name="CENTRE">
+      <EntityTypeMapping TypeName="FRAUDEModel.CENTRE">
+        <MappingFragment StoreEntitySet="CENTRE">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT">
+      <EntityTypeMapping TypeName="FRAUDEModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Centre" ColumnName="Centre" />
+          <ScalarProperty Name="Client1" ColumnName="Client" />
+          <ScalarProperty Name="Ordre" ColumnName="Ordre" />
+          <ScalarProperty Name="IdentificationUnique" ColumnName="IdentificationUnique" />
+          <ScalarProperty Name="Nomabon" ColumnName="Nomabon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Commune" ColumnName="Commune" />
+          <ScalarProperty Name="Quartier" ColumnName="Quartier" />
+          <ScalarProperty Name="Rue" ColumnName="Rue" />
+          <ScalarProperty Name="Porte" ColumnName="Porte" />
+          <ScalarProperty Name="Tournee" ColumnName="Tournee" />
+          <ScalarProperty Name="OrdreTournee" ColumnName="OrdreTournee" />
+          <ScalarProperty Name="Secteur" ColumnName="Secteur" />
+          <ScalarProperty Name="ContratAbonnement" ColumnName="ContratAbonnement" />
+          <ScalarProperty Name="DateContratAbonnement" ColumnName="DateContratAbonnement" />
+          <ScalarProperty Name="ContratBranchement" ColumnName="ContratBranchement" />
+          <ScalarProperty Name="DateContratBranchement" ColumnName="DateContratBranchement" />
+          <ScalarProperty Name="Puissance" ColumnName="Puissance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DENONCIATEUR">
+      <EntityTypeMapping TypeName="FRAUDEModel.DENONCIATEUR">
+        <MappingFragment StoreEntitySet="DENONCIATEUR">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Centre" ColumnName="Centre" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="LienAvecAbonne" ColumnName="LienAvecAbonne" />
+          <ScalarProperty Name="DateDenonciation" ColumnName="DateDenonciation" />
+          <ScalarProperty Name="IdMoyenDenonciation" ColumnName="IdMoyenDenonciation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ETAPEFRAUDE">
+      <EntityTypeMapping TypeName="FRAUDEModel.ETAPEFRAUDE">
+        <MappingFragment StoreEntitySet="ETAPEFRAUDE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumEtape" ColumnName="NumEtape" />
+          <ScalarProperty Name="IdTache" ColumnName="IdTache" />
+          <ScalarProperty Name="IdFonction" ColumnName="IdFonction" />
+          <ScalarProperty Name="DelaiExecutionEtape" ColumnName="DelaiExecutionEtape" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRAUDE">
+      <EntityTypeMapping TypeName="FRAUDEModel.FRAUDE">
+        <MappingFragment StoreEntitySet="FRAUDE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAbonne" ColumnName="IdAbonne" />
+          <ScalarProperty Name="IdDenonciateur" ColumnName="IdDenonciateur" />
+          <ScalarProperty Name="IdSource" ColumnName="IdSource" />
+          <ScalarProperty Name="IdDecisionFraude" ColumnName="IdDecisionFraude" />
+          <ScalarProperty Name="IsConvocationRespectee" ColumnName="IsConvocationRespectee" />
+          <ScalarProperty Name="IsFraudeConfirmee" ColumnName="IsFraudeConfirmee" />
+          <ScalarProperty Name="MontantCaution" ColumnName="MontantCaution" />
+          <ScalarProperty Name="DateReclamation" ColumnName="DateReclamation" />
+          <ScalarProperty Name="MotifReclamation" ColumnName="MotifReclamation" />
+          <ScalarProperty Name="IdEtape" ColumnName="IdEtape" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="DateEtape" ColumnName="DateEtape" />
+          <ScalarProperty Name="FicheTraitement" ColumnName="FicheTraitement" />
+          <ScalarProperty Name="Ordre" ColumnName="Ordre" />
+          <ScalarProperty Name="BordereauTransmission" ColumnName="BordereauTransmission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOURCECONTROLE">
+      <EntityTypeMapping TypeName="FRAUDEModel.SOURCECONTROLE">
+        <MappingFragment StoreEntitySet="SOURCECONTROLE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spx_FicheTraitement_Select" FunctionName="FRAUDEModel.Store.spx_FicheTraitement_Select" />
+  </EntityContainerMapping>
+</Mapping>

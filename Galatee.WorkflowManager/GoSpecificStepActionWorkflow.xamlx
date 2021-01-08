@@ -1,0 +1,191 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="GoSpecificStepActionWorkflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="GoSpecificStepActionWorkflow"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:gw="clr-namespace:Galatee.WorkflowManager;assembly=Galatee.WorkflowLibrary"
+ xmlns:gw1="clr-namespace:Galatee.WorkflowManager;assembly=Galatee.WorkflowManager"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID1">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+        <x:String>Galatee.WorkflowManager</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID2">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.DataAccess</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Entity.Model</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Structure</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowLibrary</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowManager</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="x:Int32" Name="m_FKIDCentre" />
+      <p1:Variable x:TypeArguments="s:Guid" Name="m_FKIDEtape" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CodeDemande" />
+      <p1:Variable x:TypeArguments="gw:CODEACTION" Name="m_CodeAction" />
+      <p1:Variable x:TypeArguments="gw:RESULTACTION" Name="m_ResultatAction" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_Commentaire" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_Response" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_MatriculeUser" />
+    </p1:Sequence.Variables>
+    <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="GoToSpecificStep" ServiceContractName="p:IService">
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer>
+          <RequestReplyCorrelationInitializer.CorrelationHandle>
+            <p1:InArgument x:TypeArguments="CorrelationHandle">
+              <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+            </p1:InArgument>
+          </RequestReplyCorrelationInitializer.CorrelationHandle>
+        </RequestReplyCorrelationInitializer>
+      </Receive.CorrelationInitializers>
+      <ReceiveParametersContent>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="CodeDemande">
+          <mca:CSharpReference x:TypeArguments="x:String">m_CodeDemande</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="gw:CODEACTION" x:Key="CodeAction">
+          <mca:CSharpReference x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="Commentaire">
+          <mca:CSharpReference x:TypeArguments="x:String">m_Commentaire</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="MatriculeUser">
+          <mca:CSharpReference x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="s:Guid" x:Key="IDEtape">
+          <mca:CSharpReference x:TypeArguments="s:Guid">m_FKIDEtape</mca:CSharpReference>
+        </p1:OutArgument>
+      </ReceiveParametersContent>
+    </Receive>
+    <gw1:CodeActivityGoToSpecificStep sap2010:WorkflowViewState.IdRef="CodeActivityGoToSpecificStep_1">
+      <gw1:CodeActivityGoToSpecificStep.CodeAction>
+        <p1:InArgument x:TypeArguments="gw:CODEACTION">
+          <mca:CSharpValue x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpValue>
+        </p1:InArgument>
+      </gw1:CodeActivityGoToSpecificStep.CodeAction>
+      <gw1:CodeActivityGoToSpecificStep.CodeDemande>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+        </p1:InArgument>
+      </gw1:CodeActivityGoToSpecificStep.CodeDemande>
+      <gw1:CodeActivityGoToSpecificStep.Commentaire>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_Commentaire</mca:CSharpValue>
+        </p1:InArgument>
+      </gw1:CodeActivityGoToSpecificStep.Commentaire>
+      <gw1:CodeActivityGoToSpecificStep.FKIDEtape>
+        <p1:InArgument x:TypeArguments="s:Guid">
+          <mca:CSharpValue x:TypeArguments="s:Guid">m_FKIDEtape</mca:CSharpValue>
+        </p1:InArgument>
+      </gw1:CodeActivityGoToSpecificStep.FKIDEtape>
+      <gw1:CodeActivityGoToSpecificStep.Matricule>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+        </p1:InArgument>
+      </gw1:CodeActivityGoToSpecificStep.Matricule>
+      <gw1:CodeActivityGoToSpecificStep.MessageErreur>
+        <p1:OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw1:CodeActivityGoToSpecificStep.MessageErreur>
+      <gw1:CodeActivityGoToSpecificStep.Result>
+        <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+          <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw1:CodeActivityGoToSpecificStep.Result>
+    </gw1:CodeActivityGoToSpecificStep>
+    <p1:If sap2010:WorkflowViewState.IdRef="If_1">
+      <p1:If.Condition>
+        <p1:InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean">m_ResultatAction == RESULTACTION.ERREURINCONNUE</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:If.Condition>
+      <p1:If.Then>
+        <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+          <p1:Assign.To>
+            <p1:OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+            </p1:OutArgument>
+          </p1:Assign.To>
+          <p1:Assign.Value>
+            <p1:InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">"ERR : " + m_Response</mca:CSharpValue>
+            </p1:InArgument>
+          </p1:Assign.Value>
+        </p1:Assign>
+      </p1:If.Then>
+      <p1:If.Else>
+        <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+          <p1:Assign.To>
+            <p1:OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+            </p1:OutArgument>
+          </p1:Assign.To>
+          <p1:Assign.Value>
+            <p1:InArgument x:TypeArguments="x:String">L'opération a été effectuée avec succès</p1:InArgument>
+          </p1:Assign.Value>
+        </p1:Assign>
+      </p1:If.Else>
+    </p1:If>
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+      <SendMessageContent DeclaredMessageType="x:Object">
+        <p1:InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object">m_Response</mca:CSharpValue>
+        </p1:InArgument>
+      </SendMessageContent>
+    </SendReply>
+    <sads:DebugSymbol.Symbol>d4YBRzpcUHJvamV0c1xQcm9qZXRzIElOT1ZBXEdBTEFURUUgKElXRUJTKSB2OVxHQUxBVEVFIFdFQl9HZW5lcmlxdWUgLTIwMDgyMDE0XEdhbGF0ZWUuV29ya2Zsb3dNYW5hZ2VyXEdvU3BlY2lmaWNTdGVwQWN0aW9uV29ya2Zsb3cueGFtbHgaEAOsAREBAUIFXQ8ClAFeBYIBKAFNgwEFowENASGkAQWqAREBAlcLV2ACxwFaC1paAr0BUQtRYgKzAVQLVF4CqQFOC05eAp8BRw9HXAKVAWELYVoCigF1C3VYAoABegt6WwF2fwt/aAFscAtwUgFiawtrVgFYZgtmVgFOhgELhgF5ASKKAQmVARUBOJgBCaEBFQEspwELpwFTAQOSAQ+SAWIBQ40BD40BXwE5nwE3nwFeATebAQ+bAV8BLQ==</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="509,86" />
+      <sap2010:ViewStateData Id="CodeActivityGoToSpecificStep_1" sap:VirtualizedContainerService.HintSize="509,22" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="509,212" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="509,86" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="531,650">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="561,720" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

@@ -1,0 +1,62 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+            xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Galatee.Silverlight.Recouvrement.FrmAvisDeCoupureSGC"
+           Width="644" Height="314" 
+           Title="Edition avis de coupure" OverlayBrush="Transparent">
+    <sdk:ChildWindow.Resources>
+        <lang:ResourceLocaliser x:Key="localisation"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2,10,1,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <my:GroupBox Header="Mode de sélection client" Height="116" IsEnabled="False" Margin="2,-5,0,0" x:Name="groupBox1" VerticalAlignment="Top" />
+        <my:GroupBox Header="Mode de sélection des factures" IsEnabled="False" Margin="1,111,-1,35" x:Name="groupBox3"  />
+        <!--</StackPanel>-->
+        <sdk:Label Content="{Binding RecouvrementAppLangue.lblDueDate, Source={StaticResource localisation}}" Height="20" HorizontalAlignment="Left" Margin="20,134,0,0" x:Name="label3" VerticalAlignment="Top" Width="141" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Right" Margin="0,133,389,0" Background="LightBlue"  x:Name="dtpDate" VerticalAlignment="Top" Width="124" />
+        <TextBox Height="23" HorizontalAlignment="Right" Background="LightBlue"  IsReadOnly="False" Margin="0,163,389,0" x:Name="Txt_MontantExigible" VerticalAlignment="Top" Width="124" />
+        <ComboBox HorizontalAlignment="Left" Margin="209,27,0,0" VerticalAlignment="Top" Width="353" Height="24" x:Name="Cbo_Regcli"/>
+        <Button x:Name="btn_Regroupement" IsEnabled="False"  Content="Regroupement" HorizontalAlignment="Left" Height="24" Margin="28,24,0,0" VerticalAlignment="Top" Width="168" Click="btn_Regroupement_Click"/>
+        <RadioButton Content="Montant" FontSize="12" GroupName="paymode" Margin="10,163,0,46" x:Name="Rdb_facturePeriode_Copy" HorizontalAlignment="Left" Width="89" Checked="Rdb_facturePeriode_Checked_1" Unchecked="Rdb_facturePeriode_Unchecked_1" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="28,202,0,0" VerticalAlignment="Top" Width="356" IsIndeterminate="True"/>
+        <Button x:Name="bntPrinting" Content="Editer" Click="OKButton_Click" Width="194" Height="23" HorizontalAlignment="Right" Margin="0,202,10,7" />
+        <CheckBox Content="Par abonnement" x:Name="chk_ParAbonnement" HorizontalAlignment="Left" Margin="494,133,-1,0" VerticalAlignment="Top" Height="25" Width="124"/>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="96,53,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="49" Content="Centre"   />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="154,53,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="42" Click="btn_Centre_Click"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="209,53,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="353" IsReadOnly="True"  />
+        <sdk:Label x:Name="label2" Content="Ref Client" Margin="96,81,421,130" />
+        <TextBox Height="23" x:Name="Txt_Client" Width="120" Margin="209,79,288,130" />
+        <sdk:Label x:Name="label4" Content="Ordre" Margin="348.065,82.006,198.935,132" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+            <sdk:Label.RenderTransform>
+                <CompositeTransform Rotation="-0.168"/>
+            </sdk:Label.RenderTransform>
+        </sdk:Label>
+        <TextBox Height="23" x:Name="Txt_Ordre" Margin="423,79,142,130" />
+        <CheckBox Content="Exclure les résiliés" x:Name="chk_ResilierExclus" HorizontalAlignment="Left" Margin="494,163,-1,0" VerticalAlignment="Top" Height="25" Width="124"/>
+        <TextBox Height="23" HorizontalAlignment="Right"  IsReadOnly="False" Margin="0,133,142,0" x:Name="Txt_DateDebut" VerticalAlignment="Top" Width="89" />
+        <TextBox Height="23" HorizontalAlignment="Right"  IsReadOnly="False" Margin="0,163,142,0" x:Name="Txt_DateFin" VerticalAlignment="Top" Width="89" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="246,133,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="135" Content="Période fin(mm/aaaa)"   />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="233,165,0,0" x:Name="lbl_Centre_Copy1" VerticalAlignment="Top" Width="148" Content="Période debut(mm/aaaa)"   />
+
+        <!--<StackPanel HorizontalAlignment="Left" Height="41" Margin="66,366,0,0" VerticalAlignment="Top" Width="530">-->
+        <!--</StackPanel>-->
+
+        <!--<StackPanel HorizontalAlignment="Left" Height="41" Margin="66,366,0,0" VerticalAlignment="Top" Width="530">-->
+        <!--</StackPanel>-->
+        <!--<TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,79,268,0" x:Name="txtCategorie" VerticalAlignment="Top" Width="273" TextChanged="txtCategorie_TextChanged" />-->
+        <!--  <my:GroupBox Header="Critères" Height="213" IsEnabled="True" Margin="4,1,12,0" Name="Gbo_InformationDevis" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <my:GroupBox Header="Mode de sélection" Height="108" IsEnabled="False" Margin="328.309,48,15,0" Name="groupBox1" VerticalAlignment="Top" Grid.Column="1" />-->
+    </Grid>
+</sdk:ChildWindow>

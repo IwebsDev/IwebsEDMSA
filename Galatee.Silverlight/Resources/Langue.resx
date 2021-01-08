@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bntAll" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="bntDelete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="bntListCustomer" xml:space="preserve">
+    <value>Listez les clients</value>
+  </data>
+  <data name="bntnothing" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="btnAbort" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="btnGroupingCode" xml:space="preserve">
+    <value>Payment groupe</value>
+  </data>
+  <data name="btnPayment" xml:space="preserve">
+    <value>Paiement</value>
+  </data>
+  <data name="btnReference" xml:space="preserve">
+    <value>Reference Client</value>
+  </data>
+  <data name="btnReset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Recherche </value>
+  </data>
+  <data name="ckcboxMultiplePay" xml:space="preserve">
+    <value>Payment multiple</value>
+  </data>
+  <data name="ckcboxTerminated" xml:space="preserve">
+    <value>Résilié</value>
+  </data>
+  <data name="lblAgentPia" xml:space="preserve">
+    <value>Agent PIA :</value>
+  </data>
+  <data name="lblbank" xml:space="preserve">
+    <value>Liste des banques </value>
+  </data>
+  <data name="lblCentre" xml:space="preserve">
+    <value>Centre </value>
+  </data>
+  <data name="lblCheckNumber" xml:space="preserve">
+    <value>Numero de checque </value>
+  </data>
+  <data name="lblCurrentbalance" xml:space="preserve">
+    <value>Solde courant </value>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>Date </value>
+  </data>
+  <data name="lblDateCampagne" xml:space="preserve">
+    <value>Date de Tournée </value>
+  </data>
+  <data name="lblDeposit" xml:space="preserve">
+    <value>Versement </value>
+  </data>
+  <data name="lblReference" xml:space="preserve">
+    <value>Référence client </value>
+  </data>
+  <data name="lblSelectedCustomer" xml:space="preserve">
+    <value>Clients Selectionnés </value>
+  </data>
+  <data name="lblTotalDue" xml:space="preserve">
+    <value> Solde avant paiement </value>
+  </data>
+  <data name="lblTotalsettle" xml:space="preserve">
+    <value>Total à régler </value>
+  </data>
+  <data name="Non" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Oui" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="Ajout" xml:space="preserve">
+    <value>Ajout</value>
+  </data>
+  <data name="Consultation" xml:space="preserve">
+    <value>Consultation</value>
+  </data>
+  <data name="ContextMenuChangePassword" xml:space="preserve">
+    <value>Initialiser mot de passe</value>
+  </data>
+  <data name="ContextMenuConsult" xml:space="preserve">
+    <value>Consulter</value>
+  </data>
+  <data name="ContextMenuCreate" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="ContextMenuDelete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="ContextMenuModify" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="ContextMenuSearch" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Suppression</value>
+  </data>
+  <data name="Réinitialiser" xml:space="preserve">
+    <value>Réinitialiser mot de passe</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Modification</value>
+  </data>
+  <data name="Recherche" xml:space="preserve">
+    <value>Recherche</value>
+  </data>
+  <data name="ConfirmationTitle" xml:space="preserve">
+    <value>Confirmation !</value>
+  </data>
+  <data name="updateError" xml:space="preserve">
+    <value>Error de mise à jour</value>
+  </data>
+  <data name="updateSuccess" xml:space="preserve">
+    <value>La mise à jour a été effectué avec succès </value>
+  </data>
+  <data name="errorTitle" xml:space="preserve">
+    <value>Erreur </value>
+  </data>
+  <data name="dg_matricule" xml:space="preserve">
+    <value>Matricule</value>
+  </data>
+  <data name="dg_jobtitle" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="dg_loginName" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="dg_nomprenom" xml:space="preserve">
+    <value>Nom et Prenom(s)</value>
+  </data>
+  <data name="dg_statuscompte" xml:space="preserve">
+    <value>Statut compte</value>
+  </data>
+  <data name="informationTitle" xml:space="preserve">
+    <value>Informations !</value>
+  </data>
+  <data name="msgNodata" xml:space="preserve">
+    <value>Aucune données retournées</value>
+  </data>
+  <data name="insertSuccess" xml:space="preserve">
+    <value>L'insertion a été effectué avec succès</value>
+  </data>
+  <data name="AucuneModificationIhm" xml:space="preserve">
+    <value>Aucune modification apportée à l'interface</value>
+  </data>
+  <data name="demandeDeSuppression" xml:space="preserve">
+    <value>Voulez vous supprimer l'élément sélectionné ?</value>
+  </data>
+  <data name="suppressionSuccess" xml:space="preserve">
+    <value>La suppression a été effectué avec succès</value>
+  </data>
+  <data name="activateeSuccess" xml:space="preserve">
+    <value>Activation terminée avec succès</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Activation</value>
+  </data>
+  <data name="ContextMenuActivate" xml:space="preserve">
+    <value>Rendre cette stratége active</value>
+  </data>
+  <data name="demandedActivation" xml:space="preserve">
+    <value>Voulez vous activer la politique de sécurité sélectionnée ?</value>
+  </data>
+  <data name="demandeSuppressionSecurity" xml:space="preserve">
+    <value>Voulez vous supprimer la politique de sécurité sélectionnée ?</value>
+  </data>
+  <data name="wcf_error" xml:space="preserve">
+    <value>Erreur survenue lors du traitement serveur . Réessayer svp!</value>
+  </data>
+  <data name="wcf_no_profile_module" xml:space="preserve">
+    <value>Aucun module n'est habilité pour le profil utilisateur. Contactez l'administrateur svp !</value>
+  </data>
+  <data name="wcf_no_user_found" xml:space="preserve">
+    <value>Aucun utilisateur ne correspond au données de connexion !</value>
+  </data>
+  <data name="confirmPrintSuccess" xml:space="preserve">
+    <value>Impression terminée</value>
+  </data>
+  <data name="Nothing_Data" xml:space="preserve">
+    <value>Aucune données retourné</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="msg_DataHandlingError" xml:space="preserve">
+    <value>Erreur dans le traitement des méthode de dectection :</value>
+  </data>
+  <data name="msg_WaitingLoadData" xml:space="preserve">
+    <value>Recuperation des données en cour ...</value>
+  </data>
+  <data name="gbo_RechercheMontant" xml:space="preserve">
+    <value>Recherche par montant</value>
+  </data>
+  <data name="gbo_RechercheNom" xml:space="preserve">
+    <value>Recherche par nom</value>
+  </data>
+  <data name="gbo_RechercheNumFact" xml:space="preserve">
+    <value>Recherche par numéro de facture</value>
+  </data>
+  <data name="gbo_RechercheRefClient" xml:space="preserve">
+    <value>Recherche par reférence </value>
+  </data>
+  <data name="lbl_Nom" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="lbl_RechercheClient" xml:space="preserve">
+    <value>Recherche de client</value>
+  </data>
+  <data name="msgAgentDelete" xml:space="preserve">
+    <value>Votre compte n'est plus actif .
+Veuillez contacter l'administrateur</value>
+  </data>
+  <data name="ConfirmationModifMotDePasse" xml:space="preserve">
+    <value>Votre mot de passe a été modifié avec  succès</value>
+  </data>
+  <data name="ContextMenuMuter" xml:space="preserve">
+    <value>Muter</value>
+  </data>
+  <data name="Muter" xml:space="preserve">
+    <value>Muter</value>
+  </data>
+  <data name="MsgImpossibleDeSupprimerMor" xml:space="preserve">
+    <value>L'annulation rendra exigible les autres echéances non réglés.
+Voulez-vous continuer ?</value>
+  </data>
+  <data name="MsgUpdateMoratoire" xml:space="preserve">
+    <value>Imposible de supprimer ce moratoire car il existe déja un paiement.
+Toutes les échéance sont déja èxigible .</value>
+  </data>
+  <data name="msgFermetureEcran" xml:space="preserve">
+    <value>Voulez vous fermer ?</value>
+  </data>
+</root>

@@ -1,0 +1,31 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Parametrage.UcRegExo"
+           Width="596" Height="242" OverlayBrush="Transparent"
+           Title="Exonération Regroupement Client" AllowDrop="False" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid  x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="132" Margin="0,0,5,-13">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+        <sdk:Label Content="Centre :" Height="28" HorizontalAlignment="Left" Margin="10,2,0,0" x:Name="lab_Centre" VerticalAlignment="Top" Width="57" />
+        <sdk:Label Content="Produit :" Height="28" HorizontalAlignment="Left" Margin="44,2,0,0" x:Name="lab_Produit" VerticalAlignment="Top" Width="56" Grid.Column="2" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="14,103,0,6" x:Name="btnOk" TabIndex="5" Width="75" Click="BtnOK_Click" Grid.Column="3" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="95,103,0,6" x:Name="Btn_Annuler" TabIndex="6" Width="75" Click="Btn_Annuler_Click" Grid.Column="3" />
+        <sdk:Label Content="Regroupement :" Height="28" HorizontalAlignment="Left" Margin="10,31,0,0" x:Name="lab_Regroupement" VerticalAlignment="Top" Width="99" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,2,14,0" x:Name="Cbo_Produit" TabIndex="2" VerticalAlignment="Top" Width="166" SelectionChanged="OnComboBox_SelectionChanged" Grid.ColumnSpan="2" Grid.Column="2" />
+        <sdk:Label Content="Traitement :" Height="28" HorizontalAlignment="Left" Margin="10,60,0,0" x:Name="lab_Traitement" VerticalAlignment="Top" Width="91" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,60,104,0" MaxLength="1" x:Name="Txt_Traitement" TabIndex="7" VerticalAlignment="Top" Width="69" Grid.Column="1" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,2,70,0" x:Name="Cbo_Centre" TabIndex="2" VerticalAlignment="Top" Width="215" SelectionChanged="OnComboBox_SelectionChanged" Grid.Column="1" Grid.ColumnSpan="2" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,31,70,0" x:Name="Cbo_Regroupement" TabIndex="2" VerticalAlignment="Top" Width="215" SelectionChanged="OnComboBox_SelectionChanged" Grid.Column="1" Grid.ColumnSpan="2" />
+        <CheckBox Content="Avance" Height="28" HorizontalAlignment="Left" Margin="51,30,0,0" x:Name="Chk_Avance" VerticalAlignment="Top" Width="69" Grid.ColumnSpan="2" Grid.Column="2" />
+        <CheckBox Content="Dossier" Height="28" HorizontalAlignment="Left" Margin="14,30,0,0" x:Name="Chk_Dossier" VerticalAlignment="Top" Width="69" Grid.Column="3" />
+        <CheckBox Content="Police" Height="28" HorizontalAlignment="Left" Margin="90,30,0,0" x:Name="Chk_Police" VerticalAlignment="Top" Width="69" Grid.Column="3" />
+        <Controls:GroupBox Header="Informations Consommateur" Name="GroupBox" HorizontalAlignment="Left" Width="567" Margin="0,-25,0,34" Grid.ColumnSpan="4"/>
+    </Grid>
+</sdk:ChildWindow>

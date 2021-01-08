@@ -1,0 +1,24 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.MainView.UcConnectionStringConfiguration"
+           Width="434" Height="259" OverlayBrush="Transparent"
+           Title="Configuration de la chaîne de connection" Style="{StaticResource ChildWindowGalatee}" Loaded="ChildWindow_Loaded">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" IsEnabled="False" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="105" Content="Nom du Serveur :" Margin="5,19,0,0"/>
+        <TextBox MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="110,19,0,0" TextWrapping="Wrap" Name="TxtNomServeur" VerticalAlignment="Top" Width="286" TextChanged="TxtNomServeur_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="105" Content="Nom de la BD :" Margin="5,52,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="105" Content="Type SGBD :" Margin="5,77,0,0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="110,77,0,0" VerticalAlignment="Top" Width="286" Name="CboTypeBd" SelectionChanged="CboTypeBd_SelectionChanged"/>
+        <TextBox MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="110,49,0,0" TextWrapping="Wrap" Name="TxtNomBd" VerticalAlignment="Top" Width="286" TextChanged="TxtNomBd_TextChanged"/>
+        <Button IsEnabled="False" Name="BtnTestConnexion" Content="Tester la connexion" HorizontalAlignment="Left" Margin="242,117,0,0" VerticalAlignment="Top" Width="154" Click="BtnTestConnexion_Click"/>
+    </Grid>
+</controls:ChildWindow>

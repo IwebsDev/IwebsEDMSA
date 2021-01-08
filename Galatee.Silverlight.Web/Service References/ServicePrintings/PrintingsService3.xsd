@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Galatee.Structure.Rpnt" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galatee.Structure.Rpnt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCsElementsDeCampagneBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsElementsDeCampagneBTA" nillable="true" type="tns:CsElementsDeCampagneBTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsElementsDeCampagneBTA" nillable="true" type="tns:ArrayOfCsElementsDeCampagneBTA" />
+  <xs:complexType name="CsElementsDeCampagneBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Campagne_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Contrat_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DateCreation" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSelection" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ElementsDeCampagneBTA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Libelle_Centre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MatriculeAgentControleur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MatriculeAgentCreation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceClient" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsElementsDeCampagneBTA" nillable="true" type="tns:CsElementsDeCampagneBTA" />
+  <xs:complexType name="ArrayOfCstbLotsDeControleBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CstbLotsDeControleBTA" nillable="true" type="tns:CstbLotsDeControleBTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCstbLotsDeControleBTA" nillable="true" type="tns:ArrayOfCstbLotsDeControleBTA" />
+  <xs:complexType name="CstbLotsDeControleBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Campagne_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Critere_GroupeDeFacturation" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Critere_IdTournee" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Critere_TypeClient" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Critere_TypeCompteur" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Critere_TypeTarif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFermeture" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Libelle_Lot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListElementLot" nillable="true" type="tns:ArrayOfCstbElementsLotDeControleBTA" />
+      <xs:element minOccurs="0" name="Lot_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MatriculeAgentControleur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MatriculeAgentCreation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NbreElementsDuLot" type="xs:int" />
+      <xs:element minOccurs="0" name="StatutLot_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CstbLotsDeControleBTA" nillable="true" type="tns:CstbLotsDeControleBTA" />
+  <xs:complexType name="ArrayOfCstbElementsLotDeControleBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CstbElementsLotDeControleBTA" nillable="true" type="tns:CstbElementsLotDeControleBTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCstbElementsLotDeControleBTA" nillable="true" type="tns:ArrayOfCstbElementsLotDeControleBTA" />
+  <xs:complexType name="CstbElementsLotDeControleBTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="C_MChuteConso_ConsoEnChute_PerAA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="C_MChuteConso_ConsoEnChute_PerMM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="C_MChuteConso_ConsoEnChute_Valeur" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="C_MChuteConso_ConsoPrecedente_PerAA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="C_MChuteConso_ConsoPrecedente_PerMM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="C_MConsoFaible_ConsoJournaliereAttendue" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="C_MConsoFaible_ConsommationFacturee" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="C_MConsoFaible_NbreJoursDeConso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Contrat_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateAffectationLot" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSelection" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Debut_PerAA" type="xs:int" />
+      <xs:element minOccurs="0" name="Debut_PerMM" type="xs:int" />
+      <xs:element minOccurs="0" name="Difference" type="xs:double" />
+      <xs:element minOccurs="0" name="Fin_PerAA" type="xs:int" />
+      <xs:element minOccurs="0" name="Fin_PerMM" type="xs:int" />
+      <xs:element minOccurs="0" name="Lot_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Methode_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultatControle_ID" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CstbElementsLotDeControleBTA" nillable="true" type="tns:CstbElementsLotDeControleBTA" />
+</xs:schema>

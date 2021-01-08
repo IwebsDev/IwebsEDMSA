@@ -1,0 +1,74 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+           x:Class="Galatee.Silverlight.Devis.UcListeDesignationMT"
+           Width="1104" Height="719"  OverlayBrush="Transparent"
+           Title="Eléments de devis" Closed="ChildWindow_Closed" Loaded="ChildWindow_Loaded">
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider le devis" Click="OKButton_Click" Width="139" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" VerticalAlignment="Top" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="237" HorizontalAlignment="Left" x:Name="dataGridElementDevis" VerticalAlignment="Top"  GridLinesVisibility="None"  
+                      MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp" 
+                      IsReadOnly="True"  Width="841" 
+                      KeyDown="dataGridElementDevis_KeyDown" 
+                      LoadingRow="dgMyDataGrid_LoadingRow"
+                      Margin="0,58,0,0">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE}" IsReadOnly="True"  CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Header="Désignation" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_FOURNITURE,Converter={StaticResource DecimalConverter}}"   CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire fourn" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_POSE,Converter={StaticResource DecimalConverter}}"   CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire pose" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE, Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Controls:GroupBox Margin="0,0,0,556" x:Name="Gbo_InformationAccount" IsEnabled="True" Header="Critères de recherche de materiel" />
+        <TextBox x:Name="txt_LibelleMateriel" HorizontalAlignment="Left" Height="23" Margin="560,18,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="251" TextChanged="txt_LibelleMateriel_TextChanged"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" x:Name="dataGridElementDevisFinal" VerticalAlignment="Top"  GridLinesVisibility="None"  Width="1066"  KeyDown="dataGridElementDevis_KeyDown" Margin="0,300,0,0">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" MinWidth="210" Header="Désignation" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Quantité" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_FOURNITURE,Converter={StaticResource DecimalConverter}}"   CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire fourn" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_POSE,Converter={StaticResource DecimalConverter}}"   CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire pose" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE, Converter={StaticResource DecimalConverter}, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Prix unitaire" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTHT, Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Foreground="Green"  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant ht" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTAXE, Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Foreground="Green"  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant taxe" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTTC, Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Foreground="Green" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant TTC" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Rétirer" HorizontalAlignment="Left" Margin="10,585,0,0" VerticalAlignment="Top" Name="Btn_Retirer" Width="122" Click="Btn_Retirer_Click"/>
+        <CheckBox Content="Devis d'extension" Visibility="Collapsed"  Name="Chk_Extension" HorizontalAlignment="Left" Margin="913,19,0,0" VerticalAlignment="Top"/>
+        <sdk:Label x:Name="label4" Content="Type de matériel" Margin="80,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" Height="19" />
+        <ComboBox x:Name="Cbo_TypeMateriel" Margin="189,18,624,568" SelectionChanged="Cbo_TypeMateriel_SelectionChanged" />
+        <sdk:Label x:Name="label4_Copy" Content="Materiel" Margin="492,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68" Height="19" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="235" HorizontalAlignment="Left"  MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp1" x:Name="dataGridRubriqueDevis"  VerticalAlignment="Top"  GridLinesVisibility="None" IsReadOnly="false" Width="220" Margin="846,60,0,0">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding IsSelect, Mode=TwoWay}"  
+        						VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True"  MinWidth="10" Header="Désignation" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox x:Name="txt_MontantTotalDevis" IsReadOnly="True" Foreground="Green"  HorizontalAlignment="Left" Height="23" Margin="590,584,0,0" TextWrapping="Wrap"   VerticalAlignment="Top" Width="251" TextChanged="txt_LibelleMateriel_TextChanged"/>
+        <sdk:Label x:Name="label4_Copy1" Content="Montant devis" Margin="399,584,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="186" Height="19" />
+    </Grid>
+</sdk:ChildWindow>

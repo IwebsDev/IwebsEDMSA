@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FRAUDEModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FRAUDES_Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CENTRE" EntityType="FRAUDEModel.CENTRE" />
+    <EntitySet Name="CLIENT" EntityType="FRAUDEModel.CLIENT" />
+    <EntitySet Name="DENONCIATEUR" EntityType="FRAUDEModel.DENONCIATEUR" />
+    <EntitySet Name="ETAPEFRAUDE" EntityType="FRAUDEModel.ETAPEFRAUDE" />
+    <EntitySet Name="FRAUDE" EntityType="FRAUDEModel.FRAUDE" />
+    <EntitySet Name="SOURCECONTROLE" EntityType="FRAUDEModel.SOURCECONTROLE" />
+    <AssociationSet Name="FK_Abonne_CENTRE" Association="FRAUDEModel.FK_Abonne_CENTRE">
+      <End Role="CENTRE" EntitySet="CENTRE" />
+      <End Role="CLIENT" EntitySet="CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Denonciateur_CENTRE" Association="FRAUDEModel.FK_Denonciateur_CENTRE">
+      <End Role="CENTRE" EntitySet="CENTRE" />
+      <End Role="DENONCIATEUR" EntitySet="DENONCIATEUR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRAUDE_Abonne" Association="FRAUDEModel.FK_FRAUDE_Abonne">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="FRAUDE" EntitySet="FRAUDE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRAUDE_Denonciateur" Association="FRAUDEModel.FK_FRAUDE_Denonciateur">
+      <End Role="DENONCIATEUR" EntitySet="DENONCIATEUR" />
+      <End Role="FRAUDE" EntitySet="FRAUDE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRAUDE_ETAPEFRAUDE" Association="FRAUDEModel.FK_FRAUDE_ETAPEFRAUDE">
+      <End Role="ETAPEFRAUDE" EntitySet="ETAPEFRAUDE" />
+      <End Role="FRAUDE" EntitySet="FRAUDE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRAUDE_SourceControle" Association="FRAUDEModel.FK_FRAUDE_SourceControle">
+      <End Role="SOURCECONTROLE" EntitySet="SOURCECONTROLE" />
+      <End Role="FRAUDE" EntitySet="FRAUDE" />
+    </AssociationSet>
+    <FunctionImport Name="spx_FicheTraitement_Select" ReturnType="Collection(String)" />
+  </EntityContainer>
+  <EntityType Name="CENTRE">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="63" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CLIENT" Relationship="FRAUDEModel.FK_Abonne_CENTRE" FromRole="CENTRE" ToRole="CLIENT" />
+    <NavigationProperty Name="DENONCIATEUR" Relationship="FRAUDEModel.FK_Denonciateur_CENTRE" FromRole="CENTRE" ToRole="DENONCIATEUR" />
+  </EntityType>
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Site" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Centre" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Client1" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="Ordre" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="IdentificationUnique" Type="String" MaxLength="31" Unicode="false" FixedLength="false" />
+    <Property Name="Nomabon" Type="String" Nullable="false" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="31" Unicode="false" FixedLength="false" />
+    <Property Name="Commune" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Quartier" Type="String" MaxLength="31" Unicode="false" FixedLength="false" />
+    <Property Name="Rue" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Porte" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Tournee" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="OrdreTournee" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Secteur" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ContratAbonnement" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="DateContratAbonnement" Type="DateTime" Precision="3" />
+    <Property Name="ContratBranchement" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="DateContratBranchement" Type="DateTime" Precision="3" />
+    <Property Name="Puissance" Type="Decimal" Precision="38" Scale="10" />
+    <NavigationProperty Name="CENTRE1" Relationship="FRAUDEModel.FK_Abonne_CENTRE" FromRole="CLIENT" ToRole="CENTRE" />
+    <NavigationProperty Name="FRAUDE" Relationship="FRAUDEModel.FK_FRAUDE_Abonne" FromRole="CLIENT" ToRole="FRAUDE" />
+  </EntityType>
+  <EntityType Name="DENONCIATEUR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="Centre" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Contact" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="LienAvecAbonne" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="DateDenonciation" Type="DateTime" Precision="3" />
+    <Property Name="IdMoyenDenonciation" Type="Byte" />
+    <NavigationProperty Name="CENTRE1" Relationship="FRAUDEModel.FK_Denonciateur_CENTRE" FromRole="DENONCIATEUR" ToRole="CENTRE" />
+    <NavigationProperty Name="FRAUDE" Relationship="FRAUDEModel.FK_FRAUDE_Denonciateur" FromRole="DENONCIATEUR" ToRole="FRAUDE" />
+  </EntityType>
+  <EntityType Name="ETAPEFRAUDE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NumEtape" Type="Int32" Nullable="false" />
+    <Property Name="IdTache" Type="Int32" Nullable="false" />
+    <Property Name="IdFonction" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="DelaiExecutionEtape" Type="Byte" />
+    <NavigationProperty Name="FRAUDE" Relationship="FRAUDEModel.FK_FRAUDE_ETAPEFRAUDE" FromRole="ETAPEFRAUDE" ToRole="FRAUDE" />
+  </EntityType>
+  <EntityType Name="FRAUDE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="IdAbonne" Type="Guid" Nullable="false" />
+    <Property Name="IdDenonciateur" Type="Guid" />
+    <Property Name="IdSource" Type="Byte" Nullable="false" />
+    <Property Name="IdDecisionFraude" Type="Byte" />
+    <Property Name="IsConvocationRespectee" Type="Boolean" />
+    <Property Name="IsFraudeConfirmee" Type="Boolean" />
+    <Property Name="MontantCaution" Type="Single" />
+    <Property Name="DateReclamation" Type="DateTime" Precision="3" />
+    <Property Name="MotifReclamation" Type="String" MaxLength="127" Unicode="false" FixedLength="false" />
+    <Property Name="IdEtape" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateEtape" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FicheTraitement" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="Ordre" Type="Byte" Nullable="false" />
+    <Property Name="BordereauTransmission" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CLIENT" Relationship="FRAUDEModel.FK_FRAUDE_Abonne" FromRole="FRAUDE" ToRole="CLIENT" />
+    <NavigationProperty Name="DENONCIATEUR" Relationship="FRAUDEModel.FK_FRAUDE_Denonciateur" FromRole="FRAUDE" ToRole="DENONCIATEUR" />
+    <NavigationProperty Name="ETAPEFRAUDE" Relationship="FRAUDEModel.FK_FRAUDE_ETAPEFRAUDE" FromRole="FRAUDE" ToRole="ETAPEFRAUDE" />
+    <NavigationProperty Name="SOURCECONTROLE" Relationship="FRAUDEModel.FK_FRAUDE_SourceControle" FromRole="FRAUDE" ToRole="SOURCECONTROLE" />
+  </EntityType>
+  <EntityType Name="SOURCECONTROLE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="String" Nullable="false" MaxLength="63" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="FRAUDE" Relationship="FRAUDEModel.FK_FRAUDE_SourceControle" FromRole="SOURCECONTROLE" ToRole="FRAUDE" />
+  </EntityType>
+  <Association Name="FK_Abonne_CENTRE">
+    <End Role="CENTRE" Type="FRAUDEModel.CENTRE" Multiplicity="0..1" />
+    <End Role="CLIENT" Type="FRAUDEModel.CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTRE">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="CLIENT">
+        <PropertyRef Name="Centre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Denonciateur_CENTRE">
+    <End Role="CENTRE" Type="FRAUDEModel.CENTRE" Multiplicity="0..1" />
+    <End Role="DENONCIATEUR" Type="FRAUDEModel.DENONCIATEUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTRE">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DENONCIATEUR">
+        <PropertyRef Name="Centre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRAUDE_Abonne">
+    <End Role="CLIENT" Type="FRAUDEModel.CLIENT" Multiplicity="1" />
+    <End Role="FRAUDE" Type="FRAUDEModel.FRAUDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FRAUDE">
+        <PropertyRef Name="IdAbonne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRAUDE_Denonciateur">
+    <End Role="DENONCIATEUR" Type="FRAUDEModel.DENONCIATEUR" Multiplicity="0..1" />
+    <End Role="FRAUDE" Type="FRAUDEModel.FRAUDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DENONCIATEUR">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FRAUDE">
+        <PropertyRef Name="IdDenonciateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRAUDE_ETAPEFRAUDE">
+    <End Role="ETAPEFRAUDE" Type="FRAUDEModel.ETAPEFRAUDE" Multiplicity="1" />
+    <End Role="FRAUDE" Type="FRAUDEModel.FRAUDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ETAPEFRAUDE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FRAUDE">
+        <PropertyRef Name="IdEtape" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRAUDE_SourceControle">
+    <End Role="SOURCECONTROLE" Type="FRAUDEModel.SOURCECONTROLE" Multiplicity="1" />
+    <End Role="FRAUDE" Type="FRAUDEModel.FRAUDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOURCECONTROLE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FRAUDE">
+        <PropertyRef Name="IdSource" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,61 @@
+<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+            xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+            x:Class="Galatee.Silverlight.Recouvrement.FrmSaiseMandatement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+           Width="985" Height="572"  
+           Title="Mandatement" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,644,326" x:Name="groupBox1_Copy2" Header="Saisi des informations du mandatement" RenderTransformOrigin="0.5,0.5"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="333,0,22,369" x:Name="groupBox1_Copy" Header="Informations campagne" RenderTransformOrigin="0.5,0.5"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,141,22,28" x:Name="groupBox1_Copy1" Header="Factures de la campagne " RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"  />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:DataGrid x:Name="dg_Campagne"   HorizontalAlignment="Left" Height="54" Margin="344,15,0,0" VerticalAlignment="Top" Width="557" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding NUMEROCAMPAGNE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Campagne" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding REGROUPEMENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Code" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEREGROUPEMENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libelle" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dg_facture" SelectionChanged="dg_facture_SelectionChanged"  ItemsSource="{Binding SelectedItem.DETAILCAMPAGNEGC_, ElementName=dg_Campagne}"  HorizontalAlignment="Left" Height="247" Margin="15,160,0,0" VerticalAlignment="Top" Width="886" AutoGenerateColumns="False"  SelectionMode="Extended" CellEditEnding="dg_facture_CellEditEnding" CellEditEnded="dg_facture_CellEditEnded"  >
+            <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn Binding="{Binding NOM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom client" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding PERIODE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Facture" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTHT ,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant Facture HT" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTVA ,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant TVA" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT ,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant TTC" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Ajouter facture hors campagne" HorizontalAlignment="Left" Margin="82,439,0,0" VerticalAlignment="Top" Width="324" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left"  Height="23" Margin="155,82,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122"  x:Name="txt_Numdeataire" TextChanged="txt_Numdeataire_TextChanged" LostFocus="txt_Numdeataire_LostFocus"/>
+        <sdk:Label Content="Mandat" HorizontalAlignment="Left" Height="23" Margin="25,82,0,0" VerticalAlignment="Top" Width="125"/>
+
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="726,410,0,0" TextWrapping="Wrap" x:Name="txt_Montant_Mandatement" Text="" VerticalAlignment="Top" Width="175" Visibility="Collapsed"/>
+        <sdk:Label Content="Totale mandatement"  HorizontalAlignment="Left" Height="23" Margin="596,409,0,0" VerticalAlignment="Top" Width="115" Visibility="Collapsed"/>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="15,406,0,0" PageSize="10" VerticalAlignment="Top" Width="576" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="155,59,0,0" Visibility="Collapsed" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" x:Name="txt_MontantMandatement" TextChanged="txt_MontantMandatement_TextChanged"/>
+        <sdk:Label Content="Montant mandatement" Visibility="Collapsed"  HorizontalAlignment="Left" Height="23" Margin="25,59,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Width="75" Margin="723,12,0,1" Grid.Row="1" Click="Button_Click_1"/>
+        <TextBox HorizontalAlignment="Left"  x:Name="txt_BE" Height="23" Margin="155,51,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" TextChanged="txt_BE_TextChanged" LostFocus="txt_BE_LostFocus" />
+        <sdk:Label Content="Bordereau d'envoi" HorizontalAlignment="Left" Height="23" Margin="25,53,0,0" VerticalAlignment="Top" Width="125"/>
+        <TextBox HorizontalAlignment="Left"  x:Name="txt_CF" Height="23" Margin="155,20,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" TextChanged="txt_CF_TextChanged" LostFocus="txt_CF_LostFocus"  />
+        <sdk:Label Content="Code fonctionnel" HorizontalAlignment="Left" Height="23" Margin="25,23,0,0" VerticalAlignment="Top" Width="125"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="25,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="252" IsReadOnly="True"  x:Name="txt_Numdeataire_Finale"/>
+    </Grid>
+</sdk:ChildWindow>

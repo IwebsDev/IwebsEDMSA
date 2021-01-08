@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_clear" xml:space="preserve">
+    <value>Effacer champs</value>
+  </data>
+  <data name="btn_quit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="btn_search" xml:space="preserve">
+    <value>Recherche</value>
+  </data>
+  <data name="ErrorMsgOnInvokingService" xml:space="preserve">
+    <value>L'invocation du service distant a échouée ! \n Réessayer svp.</value>
+  </data>
+  <data name="ErrorMsgTitleOnInvokingService" xml:space="preserve">
+    <value>Erreur </value>
+  </data>
+  <data name="lbl_center" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="lbl_client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="lbl_client_categ" xml:space="preserve">
+    <value>Catégorie client</value>
+  </data>
+  <data name="lbl_client_grp" xml:space="preserve">
+    <value>Client groupé</value>
+  </data>
+  <data name="lbl_client_type" xml:space="preserve">
+    <value>Type de client</value>
+  </data>
+  <data name="lbl_consum_code" xml:space="preserve">
+    <value>Code consommateur</value>
+  </data>
+  <data name="lbl_meter" xml:space="preserve">
+    <value>Compteur</value>
+  </data>
+  <data name="lbl_meth_paymnt" xml:space="preserve">
+    <value>Moyen de paiement</value>
+  </data>
+  <data name="lbl_name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="lbl_nationty" xml:space="preserve">
+    <value>Nationalité</value>
+  </data>
+  <data name="lbl_remind_code" xml:space="preserve">
+    <value>Code rappel</value>
+  </data>
+  <data name="lbl_route" xml:space="preserve">
+    <value>Référence</value>
+  </data>
+  <data name="lbl_sequence" xml:space="preserve">
+    <value>Ordre tournée</value>
+  </data>
+  <data name="lbl_service" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="lbl_tel" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="lbl_userID" xml:space="preserve">
+    <value>ID utilisateur</value>
+  </data>
+  <data name="lbl_zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="rdb_byclient" xml:space="preserve">
+    <value>Par client</value>
+  </data>
+  <data name="rdb_bymeter" xml:space="preserve">
+    <value>Par compteur</value>
+  </data>
+  <data name="rdb_bystreet_addr" xml:space="preserve">
+    <value>Par adresse</value>
+  </data>
+  <data name="rdb_byzone" xml:space="preserve">
+    <value>Par zone</value>
+  </data>
+  <data name="rdb_landlord" xml:space="preserve">
+    <value>Propriétaire</value>
+  </data>
+  <data name="rdb_tenant" xml:space="preserve">
+    <value>Locataire</value>
+  </data>
+  <data name="NoDataMsg" xml:space="preserve">
+    <value>Aucune données trouvées</value>
+  </data>
+  <data name="btn_reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="dg_cashier" xml:space="preserve">
+    <value>Caissiere</value>
+  </data>
+  <data name="dg_keyedby" xml:space="preserve">
+    <value>Editée par </value>
+  </data>
+  <data name="dg_openby" xml:space="preserve">
+    <value>Ouvert par </value>
+  </data>
+  <data name="dg_openOn" xml:space="preserve">
+    <value>Date d'ouverture</value>
+  </data>
+  <data name="dg_payday" xml:space="preserve">
+    <value>Date de payement</value>
+  </data>
+  <data name="dg_raisonOuverture" xml:space="preserve">
+    <value>Raisons de l'ouverture</value>
+  </data>
+  <data name="lbl_cashier" xml:space="preserve">
+    <value>Caissiere </value>
+  </data>
+  <data name="lbl_keyedby" xml:space="preserve">
+    <value>Editée par :</value>
+  </data>
+  <data name="lbl_Openby" xml:space="preserve">
+    <value>Ouvert par :</value>
+  </data>
+  <data name="lbl_openday" xml:space="preserve">
+    <value>Date de l'ouverture :</value>
+  </data>
+  <data name="lbl_paymday" xml:space="preserve">
+    <value>Date du payement </value>
+  </data>
+  <data name="lbl_status" xml:space="preserve">
+    <value>Status :</value>
+  </data>
+  <data name="rdb_direct" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="rdb_manual" xml:space="preserve">
+    <value>Manuel</value>
+  </data>
+  <data name="dg_amountpaid" xml:space="preserve">
+    <value>Montant payé</value>
+  </data>
+  <data name="dg_cancelReason" xml:space="preserve">
+    <value>Raison de suppression</value>
+  </data>
+  <data name="dg_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="dg_route" xml:space="preserve">
+    <value>Reférence</value>
+  </data>
+  <data name="msg_error_title" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="preview_error_smg" xml:space="preserve">
+    <value>Echec survenue lors du traitement du rapport</value>
+  </data>
+  <data name="btn_Save" xml:space="preserve">
+    <value>Enregister</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="lbl_adresse" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="lbl_ApplicationTax" xml:space="preserve">
+    <value>Application de taxe</value>
+  </data>
+  <data name="lbl_Avance" xml:space="preserve">
+    <value>Avance</value>
+  </data>
+  <data name="lbl_CodePostal" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="lbl_Codification" xml:space="preserve">
+    <value>Codification</value>
+  </data>
+  <data name="lbl_CoeficienFact" xml:space="preserve">
+    <value>Coéficient de facturation</value>
+  </data>
+  <data name="lbl_Commune" xml:space="preserve">
+    <value>Commune</value>
+  </data>
+  <data name="lbl_Complement" xml:space="preserve">
+    <value>Complément</value>
+  </data>
+  <data name="lbl_DateAbonnement" xml:space="preserve">
+    <value>Date abonnement</value>
+  </data>
+  <data name="lbl_DateRacordement" xml:space="preserve">
+    <value>Date racordement</value>
+  </data>
+  <data name="lbl_DateResiliation" xml:space="preserve">
+    <value>Date résiliation</value>
+  </data>
+  <data name="lbl_Depart" xml:space="preserve">
+    <value>Depart</value>
+  </data>
+  <data name="lbl_diametre" xml:space="preserve">
+    <value>Calibre</value>
+  </data>
+  <data name="lbl_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lbl_Etage" xml:space="preserve">
+    <value>Etage</value>
+  </data>
+  <data name="lbl_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="lbl_Forfait" xml:space="preserve">
+    <value>Forfait</value>
+  </data>
+  <data name="lbl_ForfaitPersonaliseAnnuel" xml:space="preserve">
+    <value>Forfait personalisé annuel</value>
+  </data>
+  <data name="lbl_latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="lbl_longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="lbl_LongueurBrt" xml:space="preserve">
+    <value>Longueur du branchement</value>
+  </data>
+  <data name="lbl_Lot" xml:space="preserve">
+    <value>Parcelle</value>
+  </data>
+  <data name="lbl_materiel" xml:space="preserve">
+    <value>Matériel utilisé</value>
+  </data>
+  <data name="lbl_MoisFact" xml:space="preserve">
+    <value>Mois de facturation</value>
+  </data>
+  <data name="lbl_MoisReleve" xml:space="preserve">
+    <value>Mois de relève </value>
+  </data>
+  <data name="lbl_NoeudFinal" xml:space="preserve">
+    <value>Noeud final</value>
+  </data>
+  <data name="lbl_NombrePoint" xml:space="preserve">
+    <value>Nombre de point</value>
+  </data>
+  <data name="lbl_NomProprietaire" xml:space="preserve">
+    <value>Nom propriétaire</value>
+  </data>
+  <data name="lbl_Non" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="lbl_Numdemande" xml:space="preserve">
+    <value>Demande</value>
+  </data>
+  <data name="lbl_Numdevis" xml:space="preserve">
+    <value>Devis</value>
+  </data>
+  <data name="lbl_NumeroPoste" xml:space="preserve">
+    <value>Poste</value>
+  </data>
+  <data name="lbl_NumRue" xml:space="preserve">
+    <value>Numéro rue</value>
+  </data>
+  <data name="lbl_Ordre" xml:space="preserve">
+    <value>Ordre</value>
+  </data>
+  <data name="lbl_Oui" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="lbl_Periodicite" xml:space="preserve">
+    <value>Périodicité de facturation</value>
+  </data>
+  <data name="lbl_PuissanceSouscrite" xml:space="preserve">
+    <value>Puissance souscrite</value>
+  </data>
+  <data name="lbl_PuissanceUtilise" xml:space="preserve">
+    <value>Puissance installée</value>
+  </data>
+  <data name="lbl_Quartier" xml:space="preserve">
+    <value>Quartier</value>
+  </data>
+  <data name="lbl_QuartierDuPoste" xml:space="preserve">
+    <value>Quartier du poste</value>
+  </data>
+  <data name="lbl_RegroupementCompteur" xml:space="preserve">
+    <value>Regroupement compteur</value>
+  </data>
+  <data name="lbl_Reseau" xml:space="preserve">
+    <value>Réseau</value>
+  </data>
+  <data name="lbl_Ristourne" xml:space="preserve">
+    <value>Ristourne</value>
+  </data>
+  <data name="lbl_Rue" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="lbl_Secteur" xml:space="preserve">
+    <value>Secteur</value>
+  </data>
+  <data name="lbl_Tarif" xml:space="preserve">
+    <value>Tarif</value>
+  </data>
+  <data name="lbl_Telephone" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="lbl_Tournee" xml:space="preserve">
+    <value>Tournée</value>
+  </data>
+  <data name="OKButton" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="lbl_annee" xml:space="preserve">
+    <value>Année</value>
+  </data>
+  <data name="lbl_AnneFabrication" xml:space="preserve">
+    <value>Année de fabrication</value>
+  </data>
+  <data name="lbl_categoie" xml:space="preserve">
+    <value>Catégorie</value>
+  </data>
+  <data name="lbl_Codebar" xml:space="preserve">
+    <value>Code bar</value>
+  </data>
+  <data name="lbl_CodeRegroupement" xml:space="preserve">
+    <value>Regroupement</value>
+  </data>
+  <data name="lbl_CodeRelance" xml:space="preserve">
+    <value>Relance</value>
+  </data>
+  <data name="lbl_coper" xml:space="preserve">
+    <value>Code operation</value>
+  </data>
+  <data name="lbl_Date" xml:space="preserve">
+    <value>Date relève</value>
+  </data>
+  <data name="lbl_DateAvance" xml:space="preserve">
+    <value>Date avance</value>
+  </data>
+  <data name="lbl_DateBatch" xml:space="preserve">
+    <value>Date lot</value>
+  </data>
+  <data name="lbl_dateExigible" xml:space="preserve">
+    <value>Date exigible</value>
+  </data>
+  <data name="lbl_DateFermeture" xml:space="preserve">
+    <value>Date fermeture</value>
+  </data>
+  <data name="lbl_dateSaisie" xml:space="preserve">
+    <value>Date de saisie</value>
+  </data>
+  <data name="lbl_denom" xml:space="preserve">
+    <value>Denomination</value>
+  </data>
+  <data name="lbl_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="lbl_Localisation" xml:space="preserve">
+    <value>Localisation</value>
+  </data>
+  <data name="lbl_Marque" xml:space="preserve">
+    <value>Marque</value>
+  </data>
+  <data name="lbl_ModePayement" xml:space="preserve">
+    <value>Mode de paiement</value>
+  </data>
+  <data name="lbl_Mois" xml:space="preserve">
+    <value>Mois</value>
+  </data>
+  <data name="lbl_MoisComptable" xml:space="preserve">
+    <value>Mois comptable</value>
+  </data>
+  <data name="lbl_Montant" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="lbl_MontantBatch" xml:space="preserve">
+    <value>Montant du lot</value>
+  </data>
+  <data name="lbl_MontantDetailBatch" xml:space="preserve">
+    <value>Montant du detail</value>
+  </data>
+  <data name="lbl_Nationnalite" xml:space="preserve">
+    <value>Nationalité</value>
+  </data>
+  <data name="lbl_NbreLigneDetail" xml:space="preserve">
+    <value>Nombre de ligne detail</value>
+  </data>
+  <data name="lbl_NumBatch" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="lbl_NumCaisse" xml:space="preserve">
+    <value>Caisse</value>
+  </data>
+  <data name="lbl_NumeroCompteur" xml:space="preserve">
+    <value>Numéro Compteur</value>
+  </data>
+  <data name="lbl_NumFact" xml:space="preserve">
+    <value>Facture</value>
+  </data>
+  <data name="lbl_Origine" xml:space="preserve">
+    <value>Origne</value>
+  </data>
+  <data name="lbl_periode" xml:space="preserve">
+    <value>Période</value>
+  </data>
+  <data name="lbl_type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lbl_TypeBatch" xml:space="preserve">
+    <value>Type Ajustement</value>
+  </data>
+  <data name="rdb_EnService" xml:space="preserve">
+    <value>En service</value>
+  </data>
+  <data name="rdb_HorsService" xml:space="preserve">
+    <value>Hors service</value>
+  </data>
+  <data name="btn_ajouter" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="btn_modifier" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="btn_supprimer" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="En_Cours" xml:space="preserve">
+    <value>Patienter operation en cours ........</value>
+  </data>
+  <data name="OKButtonNext" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="tab_Branchement" xml:space="preserve">
+    <value>Branchement</value>
+  </data>
+  <data name="tab_infoAbonnement" xml:space="preserve">
+    <value>Abonnement</value>
+  </data>
+  <data name="tab_infoClient" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="tab_infoCompteClient" xml:space="preserve">
+    <value>Compte client</value>
+  </data>
+  <data name="tab_infoCompteur" xml:space="preserve">
+    <value>Compteur</value>
+  </data>
+  <data name="tab_infoLocation" xml:space="preserve">
+    <value>Localisation</value>
+  </data>
+  <data name="MsgExistBrt" xml:space="preserve">
+    <value>Il existe déja un branchement sur ce point</value>
+  </data>
+  <data name="MsgClientValider" xml:space="preserve">
+    <value>Client mise a jour </value>
+  </data>
+  <data name="lib_Statut_EnAttente" xml:space="preserve">
+    <value>En attente</value>
+  </data>
+  <data name="lib_Statut_EnCaisse" xml:space="preserve">
+    <value>En caisse</value>
+  </data>
+  <data name="lib_Statut_terminer" xml:space="preserve">
+    <value>Terminé</value>
+  </data>
+  <data name="lbl_demandeTerminer" xml:space="preserve">
+    <value>Demande déja terminée</value>
+  </data>
+  <data name="lbl_produit" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="MsgAbonnementExist" xml:space="preserve">
+    <value>Il existe déja un abonnement sur ce point</value>
+  </data>
+  <data name="MsgInextBrt" xml:space="preserve">
+    <value>Le branchement est inexistant sur ce point</value>
+  </data>
+  <data name="MsgAbonneResilié" xml:space="preserve">
+    <value>Abonné résilié operation impossible</value>
+  </data>
+  <data name="MsgOperationTerminee" xml:space="preserve">
+    <value>Mise a jour terminée</value>
+  </data>
+  <data name="lbl_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="lbl_CoefMultiplication" xml:space="preserve">
+    <value>Coéficien de multiplication</value>
+  </data>
+  <data name="lbl_Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="lbl_Nature" xml:space="preserve">
+    <value>Nature</value>
+  </data>
+  <data name="lbl_Operateur" xml:space="preserve">
+    <value>Opérateur</value>
+  </data>
+  <data name="lbl_RecuOuBatch" xml:space="preserve">
+    <value>Recu / Batch</value>
+  </data>
+  <data name="lbl_Subventioner" xml:space="preserve">
+    <value>Subventioné</value>
+  </data>
+  <data name="lbl_DateEncaissement" xml:space="preserve">
+    <value>Date Encaissement</value>
+  </data>
+  <data name="MsgOperationValider" xml:space="preserve">
+    <value>Opération validée</value>
+  </data>
+  <data name="btn_nouveau" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="lbl_CompteClient" xml:space="preserve">
+    <value>Compte client</value>
+  </data>
+  <data name="lbl_CompteRejeter" xml:space="preserve">
+    <value>Compte rejetés</value>
+  </data>
+  <data name="lbl_erreur" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="lbl_listebatch" xml:space="preserve">
+    <value>Liste des lots</value>
+  </data>
+  <data name="lbl_transaction" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="lbl_BatchRejete" xml:space="preserve">
+    <value>Lot rejeté</value>
+  </data>
+  <data name="lbl_Menu" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="MsgChampOblige" xml:space="preserve">
+    <value>Remplir les champs obligés</value>
+  </data>
+  <data name="MsgFactureNonTrouve" xml:space="preserve">
+    <value>Facture non trouvée</value>
+  </data>
+  <data name="MsgFactureExiste" xml:space="preserve">
+    <value>La facture existe deja dans la liste</value>
+  </data>
+  <data name="lbl_NomMere" xml:space="preserve">
+    <value>Nom de la mère</value>
+  </data>
+  <data name="lbl_NomPere" xml:space="preserve">
+    <value>Nom du père</value>
+  </data>
+  <data name="lbl_NumPieceId" xml:space="preserve">
+    <value>Numéro de pièce d'identité</value>
+  </data>
+  <data name="btn_DetailReleve" xml:space="preserve">
+    <value>Détail reléve</value>
+  </data>
+  <data name="btn_Duplication" xml:space="preserve">
+    <value>Duplication</value>
+  </data>
+  <data name="btn_PlusInfo" xml:space="preserve">
+    <value>Plus d'info</value>
+  </data>
+  <data name="btn_PremierReleve" xml:space="preserve">
+    <value>Première reléve</value>
+  </data>
+  <data name="Msg_PassageEnCaisse" xml:space="preserve">
+    <value>Passage en caisse</value>
+  </data>
+  <data name="MsgTourneNonTrouvee" xml:space="preserve">
+    <value>Tournée inexistente </value>
+  </data>
+  <data name="Msg_CommuneNonTrouve" xml:space="preserve">
+    <value>Commune non trouvée</value>
+  </data>
+  <data name="Msg_QuartierNonTrouve" xml:space="preserve">
+    <value>Quartier non trouvée</value>
+  </data>
+  <data name="lbl_autresInfo" xml:space="preserve">
+    <value>Autres renseignements</value>
+  </data>
+  <data name="lbl_ListeCategorie" xml:space="preserve">
+    <value>Liste des catégories</value>
+  </data>
+  <data name="lbl_ListeCentre" xml:space="preserve">
+    <value>Liste des centres</value>
+  </data>
+  <data name="lbl_ListeCodeConso" xml:space="preserve">
+    <value>Liste des code consommateur</value>
+  </data>
+  <data name="lbl_ListeProduit" xml:space="preserve">
+    <value>Liste des produits</value>
+  </data>
+  <data name="MsgEltInexistent" xml:space="preserve">
+    <value>L'élément saisi inexistant</value>
+  </data>
+  <data name="lbl_ListeCommune" xml:space="preserve">
+    <value>Liste des communes</value>
+  </data>
+  <data name="lbl_ListeQuartiers" xml:space="preserve">
+    <value>Liste des quartiers</value>
+  </data>
+  <data name="Msg_DateInvalide" xml:space="preserve">
+    <value>Date saisie invalide</value>
+  </data>
+  <data name="Msg_DevisRegle" xml:space="preserve">
+    <value>Devis deja regle</value>
+  </data>
+  <data name="Msg_Incoherence" xml:space="preserve">
+    <value>Incoherence</value>
+  </data>
+  <data name="lbl_ListeDiametre" xml:space="preserve">
+    <value>Liste des diamètres</value>
+  </data>
+  <data name="lbl_ListeFrequence" xml:space="preserve">
+    <value>Liste des fréquences</value>
+  </data>
+  <data name="lbl_ListeMateriel" xml:space="preserve">
+    <value>Liste des materiaux</value>
+  </data>
+  <data name="lbl_ListeMois" xml:space="preserve">
+    <value>Liste des mois</value>
+  </data>
+  <data name="msgErreurChargementDonnees" xml:space="preserve">
+    <value>Erreur lors du chargement des données</value>
+  </data>
+  <data name="Msg_LeClientEstEnFacturation" xml:space="preserve">
+    <value>Opération impossible 
+car une facturation est en cours</value>
+  </data>
+  <data name="MsgCoutDemandeNonParametre" xml:space="preserve">
+    <value>Paramatérage du coût absent pour ce type de demande</value>
+  </data>
+  <data name="Msg_BranchementDejaFerme" xml:space="preserve">
+    <value>Branchement déja fermé</value>
+  </data>
+  <data name="Msg_BranchementNonFerme" xml:space="preserve">
+    <value>Branchement non fermé</value>
+  </data>
+  <data name="MsgDemandeNonTrouve" xml:space="preserve">
+    <value>Demande non trouvée</value>
+  </data>
+  <data name="MsgDateInvalide" xml:space="preserve">
+    <value>Date invalide</value>
+  </data>
+  <data name="lbl_Recherche" xml:space="preserve">
+    <value>Recherche demande</value>
+  </data>
+  <data name="lbl_InfoAbonnement" xml:space="preserve">
+    <value>Information abonnement</value>
+  </data>
+  <data name="lbl_InfoClient" xml:space="preserve">
+    <value>Information client</value>
+  </data>
+  <data name="lbl_ListeDesRues" xml:space="preserve">
+    <value>Liste des rues</value>
+  </data>
+  <data name="lbl_ListeDesSecteurs" xml:space="preserve">
+    <value>Liste des secteurs</value>
+  </data>
+  <data name="Msg_DateFinInferieurDateDebut" xml:space="preserve">
+    <value>La date saisie est inférieure à la date dernier évènement.
+Voulez vous continuer???</value>
+  </data>
+  <data name="Msg_InfoEnCourDeChargement" xml:space="preserve">
+    <value>Info en en cour de chargement...</value>
+  </data>
+  <data name="MsgAucuneModif" xml:space="preserve">
+    <value>Aucune modification effectuée, la demande ne sera pas sauvegardée.</value>
+  </data>
+  <data name="Data_Loading" xml:space="preserve">
+    <value>Veuillez patienter pendant le chargement des données ...</value>
+  </data>
+  <data name="MsgRequestSaved" xml:space="preserve">
+    <value>Demande enregistrer avec succès</value>
+  </data>
+  <data name="lbl_cadran" xml:space="preserve">
+    <value>Cadran</value>
+  </data>
+  <data name="lbl_Compteur" xml:space="preserve">
+    <value>Compteur</value>
+  </data>
+  <data name="lbl_Point" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="lbl_totalCreditHT" xml:space="preserve">
+    <value>Total HT</value>
+  </data>
+  <data name="lbl_totalCreditTTC" xml:space="preserve">
+    <value>Total TTC</value>
+  </data>
+  <data name="lbl_totalCreditTVA" xml:space="preserve">
+    <value>Total TVA</value>
+  </data>
+  <data name="lbl_totalDebitHT" xml:space="preserve">
+    <value>Total HT</value>
+  </data>
+  <data name="lbl_totalDebitTTC" xml:space="preserve">
+    <value>Total TTC</value>
+  </data>
+  <data name="lbl_totalDebitTVA" xml:space="preserve">
+    <value>Total TVA</value>
+  </data>
+  <data name="lbl_TypeCompteur" xml:space="preserve">
+    <value>Tpe de compteur</value>
+  </data>
+  <data name="btn_Domiciliation" xml:space="preserve">
+    <value>Domiciliation</value>
+  </data>
+  <data name="btn_Transformer" xml:space="preserve">
+    <value>Transformer...</value>
+  </data>
+  <data name="chk_AvantCompteur" xml:space="preserve">
+    <value>Avant compteur</value>
+  </data>
+  <data name="lbl_autreInfo" xml:space="preserve">
+    <value>Autres Infos</value>
+  </data>
+  <data name="lbl_AutreInfoRue" xml:space="preserve">
+    <value>Autre info</value>
+  </data>
+  <data name="lbl_Calibre" xml:space="preserve">
+    <value>Calibre</value>
+  </data>
+  <data name="lbl_CodeConsomateur" xml:space="preserve">
+    <value>Consommateur</value>
+  </data>
+  <data name="lbl_codeZip" xml:space="preserve">
+    <value>Code zipé</value>
+  </data>
+  <data name="lbl_consommation" xml:space="preserve">
+    <value>Consommation</value>
+  </data>
+  <data name="lbl_dateConnexion" xml:space="preserve">
+    <value>Date de connexion</value>
+  </data>
+  <data name="lbl_DureeConnexion" xml:space="preserve">
+    <value>Durée de connexion</value>
+  </data>
+  <data name="lbl_MaterielUtilise" xml:space="preserve">
+    <value>Matériel utilisé</value>
+  </data>
+  <data name="lbl_Nom" xml:space="preserve">
+    <value>Noms</value>
+  </data>
+  <data name="lbl_NomAgent" xml:space="preserve">
+    <value>Nom agent</value>
+  </data>
+  <data name="lbl_NumeroDemande" xml:space="preserve">
+    <value>Numéro demande</value>
+  </data>
+  <data name="lbl_Numerofact" xml:space="preserve">
+    <value>Numéro de facture</value>
+  </data>
+  <data name="lbl_NumeroUnite" xml:space="preserve">
+    <value>N° d'unité</value>
+  </data>
+  <data name="lbl_Segment" xml:space="preserve">
+    <value>Segment</value>
+  </data>
+  <data name="lbl_Sommefixe" xml:space="preserve">
+    <value>Somme fixe</value>
+  </data>
+  <data name="lbl_titre" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+  <data name="rdb_Owner" xml:space="preserve">
+    <value>Propriétaire</value>
+  </data>
+  <data name="btn_DetailClient" xml:space="preserve">
+    <value>Details client</value>
+  </data>
+  <data name="Chk_AbonnementSeul" xml:space="preserve">
+    <value>Abonnement seul</value>
+  </data>
+  <data name="chk_Branchement" xml:space="preserve">
+    <value>Branchement</value>
+  </data>
+  <data name="chk_branchementAbonnement" xml:space="preserve">
+    <value>Branchement et abonnement</value>
+  </data>
+  <data name="Chk_chtcpt" xml:space="preserve">
+    <value>Changement de compteur</value>
+  </data>
+  <data name="Chk_Depannage" xml:space="preserve">
+    <value>Depannage</value>
+  </data>
+  <data name="chk_depose" xml:space="preserve">
+    <value>Etalonnage</value>
+  </data>
+  <data name="chk_EnAttente" xml:space="preserve">
+    <value>En Attente</value>
+  </data>
+  <data name="chk_EnCaisse" xml:space="preserve">
+    <value>En Caisse</value>
+  </data>
+  <data name="chk_FactureIsole" xml:space="preserve">
+    <value>Facture isolé</value>
+  </data>
+  <data name="chk_frtbrt" xml:space="preserve">
+    <value>Fermeture de branchement</value>
+  </data>
+  <data name="chk_Ouverturebrt" xml:space="preserve">
+    <value>Ouverture de branchement</value>
+  </data>
+  <data name="chk_PoseCpt" xml:space="preserve">
+    <value>Pose compteur</value>
+  </data>
+  <data name="Chk_Reabonnement" xml:space="preserve">
+    <value>Réabonnement</value>
+  </data>
+  <data name="chk_resiliation" xml:space="preserve">
+    <value>Résiliation abonnement</value>
+  </data>
+  <data name="chk_Terminer" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="lbl_AncienneConsult" xml:space="preserve">
+    <value>Ancienne consultation</value>
+  </data>
+  <data name="lbl_Batch" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="lbl_Caisse" xml:space="preserve">
+    <value>Caisse</value>
+  </data>
+  <data name="lbl_Controle" xml:space="preserve">
+    <value>Contrôle</value>
+  </data>
+  <data name="lbl_DateDemande" xml:space="preserve">
+    <value>Date de demande</value>
+  </data>
+  <data name="lbl_DateDemandeEntree" xml:space="preserve">
+    <value>Date de demande entrée</value>
+  </data>
+  <data name="lbl_DateDevis" xml:space="preserve">
+    <value>Date de devis entrée</value>
+  </data>
+  <data name="lbl_DateExecution" xml:space="preserve">
+    <value>Date d'execution entrée</value>
+  </data>
+  <data name="lbl_DateRDV" xml:space="preserve">
+    <value>Date de rendez-vous entrée</value>
+  </data>
+  <data name="lbl_Demande" xml:space="preserve">
+    <value>Demande</value>
+  </data>
+  <data name="lbl_DemandeEntree" xml:space="preserve">
+    <value>Demande entrée</value>
+  </data>
+  <data name="lbl_EtDemandeEntree" xml:space="preserve">
+    <value>Et</value>
+  </data>
+  <data name="lbl_NouvelleConsult" xml:space="preserve">
+    <value>Nouvelle consultation</value>
+  </data>
+  <data name="lbl_Parametre" xml:space="preserve">
+    <value>Paramètre</value>
+  </data>
+  <data name="dg_dateCreation" xml:space="preserve">
+    <value>Date creation</value>
+  </data>
+  <data name="lbl_numEvent" xml:space="preserve">
+    <value>Evenement</value>
+  </data>
+  <data name="msglotExit" xml:space="preserve">
+    <value>Ce lot existe déja</value>
+  </data>
+  <data name="msglotNonTrouve" xml:space="preserve">
+    <value>Lot non existant</value>
+  </data>
+  <data name="msg_error_Maj" xml:space="preserve">
+    <value>Erreur lors de la mise à jours</value>
+  </data>
+  <data name="lib_Statut_Rejeter" xml:space="preserve">
+    <value>Rejéter</value>
+  </data>
+  <data name="lib_Statut_DejaEncCaisse" xml:space="preserve">
+    <value>Encaissée</value>
+  </data>
+  <data name="msgSuppressionFichier" xml:space="preserve">
+    <value>Voulez vous supprimer la fichier joint ?</value>
+  </data>
+  <data name="msgAucunfichier" xml:space="preserve">
+    <value>Aucun fichier joint</value>
+  </data>
+  <data name="msgVoirPiecejointe" xml:space="preserve">
+    <value>Voir la pièce jointe</value>
+  </data>
+  <data name="msgFacturationEnCours" xml:space="preserve">
+    <value>Demande impossible ,facturation en cours</value>
+  </data>
+  <data name="lbl_EtatCompteActif" xml:space="preserve">
+    <value>Actif</value>
+  </data>
+  <data name="lbl_EtatCompteDepose" xml:space="preserve">
+    <value>Deposé</value>
+  </data>
+  <data name="msgCompteurDejaActif" xml:space="preserve">
+    <value>Compteur déja actif</value>
+  </data>
+  <data name="msgCompteurDejaDepose" xml:space="preserve">
+    <value>Compteur déja deposé</value>
+  </data>
+  <data name="msgCadranIndeterminer" xml:space="preserve">
+    <value>Impossible de déterminer la consommation 
+Cadran compteur indeterminé</value>
+  </data>
+  <data name="Msg_ModificationFacture" xml:space="preserve">
+    <value>Vous avez modifier la consommation calculée.
+     Voulez-vous continuer?</value>
+  </data>
+  <data name="msgCompteurIndisponible" xml:space="preserve">
+    <value>Aucun compteur trouvé</value>
+  </data>
+  <data name="lbl_ListePoste" xml:space="preserve">
+    <value>Liste des postes </value>
+  </data>
+  <data name="lbl_TypeBranchement" xml:space="preserve">
+    <value>Type de branchement</value>
+  </data>
+  <data name="lbl_TypeComptage" xml:space="preserve">
+    <value>Type de comptage</value>
+  </data>
+  <data name="Msg_LeClientEvenementNonSaisie" xml:space="preserve">
+    <value>Un evenement non saisi existe. Si vous continuer il sera supprimé</value>
+  </data>
+  <data name="MsgCentreIncorect" xml:space="preserve">
+    <value>Le centre saisi est incorrect</value>
+  </data>
+  <data name="msgLotIsole" xml:space="preserve">
+    <value>Opération terminée
+Prochaine etape : Calcul =&gt; Mise a jour du lot</value>
+  </data>
+  <data name="MsgSaisirCompteurMT" xml:space="preserve">
+    <value>Veuillez saisir tous les compteurs</value>
+  </data>
+  <data name="Msg_AbonnemtInexistant" xml:space="preserve">
+    <value>Abonné inexistant</value>
+  </data>
+  <data name="lbl_OrdreTourne" xml:space="preserve">
+    <value>Ordre tournée</value>
+  </data>
+</root>

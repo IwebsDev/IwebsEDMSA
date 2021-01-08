@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABO07Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ABO07Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CENTFAC" EntityType="ABO07Model.CENTFAC" />
+    <EntitySet Name="CPROFAC" EntityType="ABO07Model.CPROFAC" />
+    <EntitySet Name="CREDFAC" EntityType="ABO07Model.CREDFAC" />
+    <AssociationSet Name="FK_CPROFAC_CENTFAC" Association="ABO07Model.FK_CPROFAC_CENTFAC">
+      <End Role="CENTFAC" EntitySet="CENTFAC" />
+      <End Role="CPROFAC" EntitySet="CPROFAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CREDFAC_CENTFAC" Association="ABO07Model.FK_CREDFAC_CENTFAC">
+      <End Role="CENTFAC" EntitySet="CENTFAC" />
+      <End Role="CREDFAC" EntitySet="CREDFAC" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CENTFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="JET" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="CENTRE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CLIENT" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ORDRE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="DENABON" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="NOMABON" Type="String" MaxLength="63" Unicode="false" FixedLength="false" />
+    <Property Name="DENMAND" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="NOMMAND" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ADRMAND1" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ADRMAND2" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CPOS" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="BUREAU" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="BANQUE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="GUICHET" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="COMPTE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="RIB" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="CODCONSO" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="CATEGORIECLIENT" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="REGROUPEMENT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="REGEDIT" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="AG" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="COMMUNE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="QUARTIER" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="RUE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="NOMRUE" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+    <Property Name="NUMRUE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="COMPRUE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="ETAGE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PORTE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="CADR" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="TOURNEE" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ORDTOUR" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="NBFAC" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="FACTURE" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="MES" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TOTFHT" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="TOTFTAX" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="TOTFTTC" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="TOPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="PERIODE" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="EXIG" Type="Int32" />
+    <Property Name="COPER" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="MODEPAIEMENT" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="ANCIENREPORT" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="TOTALNONARRONDI" Type="Decimal" Precision="30" Scale="6" />
+    <Property Name="LIENFAC" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="SECTEUR" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DRESABON" Type="DateTime" Precision="3" />
+    <Property Name="REFERENCEATM" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="CODEPROFIL" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="DFAC" Type="DateTime" Precision="3" />
+    <Property Name="USERCREATION" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATECREATION" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USERMODIFICATION" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATEMODIFICATION" Type="DateTime" Precision="3" />
+    <Property Name="PK_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_IDCENTRE" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDREGROUPEMENT" Type="Int32" />
+    <Property Name="FK_IDCODECONSOMMATEUR" Type="Int32" />
+    <Property Name="FK_IDCATEGORIECLIENT" Type="Int32" />
+    <Property Name="FK_IDMODEPAIEMENT" Type="Int32" />
+    <Property Name="FK_IDTOURNEE" Type="Int32" />
+    <Property Name="FK_IDCOMMUNE" Type="Int32" />
+    <Property Name="FK_IDCOPER" Type="Int32" />
+    <Property Name="FK_IDSECTEUR" Type="Int32" />
+    <Property Name="FK_IDQUARTIER" Type="Int32" />
+    <Property Name="FK_IDRUE" Type="Int32" />
+    <Property Name="ISFACTUREEMAIL" Type="Boolean" />
+    <Property Name="EMAIL" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="ISFACTURESMS" Type="Boolean" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="FK_IDCLIENT" Type="Int32" />
+    <NavigationProperty Name="CPROFAC" Relationship="ABO07Model.FK_CPROFAC_CENTFAC" FromRole="CENTFAC" ToRole="CPROFAC" />
+    <NavigationProperty Name="CREDFAC" Relationship="ABO07Model.FK_CREDFAC_CENTFAC" FromRole="CENTFAC" ToRole="CREDFAC" />
+  </EntityType>
+  <EntityType Name="CPROFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="JET" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TOURNEE" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ORDTOUR" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="CENTRE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CLIENT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ORDRE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="FACTURE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TYPECOMPTAGE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="PRODUIT" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="COMPTEUR" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REGLAGECOMPTEUR" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="COEFLECT" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="POINT" Type="Int32" />
+    <Property Name="PUISSANCE" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="DERPERF" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="DERPERFN" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="REGCONSO" Type="Int32" />
+    <Property Name="REGFAC" Type="Int32" />
+    <Property Name="TFAC" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="LIENRED" Type="Int32" />
+    <Property Name="CONSOFAC" Type="Int32" />
+    <Property Name="DATEEVT" Type="DateTime" Precision="3" />
+    <Property Name="PERIODE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="AINDEX" Type="Int32" />
+    <Property Name="NINDEX" Type="Int32" />
+    <Property Name="CAS" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="CONSO" Type="Int32" />
+    <Property Name="TOTPROHT" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="TOTPROTAX" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="TOTPROTTC" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="ADERPERF" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="ADERPERFN" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="REGIMPUTE" Type="Int32" />
+    <Property Name="TYPECOMPTEUR" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="REGROU" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="DEVPRE" Type="DateTime" Precision="3" />
+    <Property Name="NBREDTOT" Type="Int32" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="LIENFAC" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="EVENEMENT" Type="Int32" />
+    <Property Name="TOPANNUL" Type="Int32" />
+    <Property Name="PUISSANCEINSTALLEE" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="COEFCOMPTAGE" Type="Int32" />
+    <Property Name="BRANCHEMENT" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="COEFK1" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="COEFK2" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="PERTESACTIVES" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="PERTESREACTIVES" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="COEFFAC" Type="Int32" />
+    <Property Name="USERCREATION" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATECREATION" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USERMODIFICATION" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATEMODIFICATION" Type="DateTime" Precision="3" />
+    <Property Name="PK_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_IDCENTFAC" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDEVENEMENT" Type="Int32" />
+    <Property Name="FK_IDTYPECOMPTEUR" Type="Int32" />
+    <Property Name="FK_IDTYPECOMPTAGE" Type="Int32" />
+    <Property Name="FK_IDREGLAGECOMPTEUR" Type="Int32" />
+    <Property Name="FK_IDTOURNEE" Type="Int32" />
+    <Property Name="FK_IDPRODUIT" Type="Int32" />
+    <Property Name="FK_IDCAS" Type="Int32" />
+    <Property Name="FK_IDCENTRE" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDABON" Type="Int32" Nullable="false" />
+    <Property Name="DEBUTEXONERATIONTVA" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="FINEXONERATIONTVA" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CENTFAC" Relationship="ABO07Model.FK_CPROFAC_CENTFAC" FromRole="CPROFAC" ToRole="CENTFAC" />
+  </EntityType>
+  <EntityType Name="CREDFAC">
+    <Key>
+      <PropertyRef Name="PK_ID" />
+    </Key>
+    <Property Name="LOTRI" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="JET" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="CENTRE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="CLIENT" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ORDRE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="FACTURE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="LIENRED" Type="Int32" />
+    <Property Name="REDEVANCE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TRANCHE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ORDRED" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="QUANTITE" Type="Int32" />
+    <Property Name="UNITE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="BARPRIX" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="TAXE" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="CTAX" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="DAPP" Type="DateTime" Precision="3" />
+    <Property Name="CRITERE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="VARIANTE" Type="Int32" />
+    <Property Name="TOTREDHT" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="TOTREDTAX" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="TOTREDTTC" Type="Decimal" Precision="38" Scale="10" />
+    <Property Name="PARAM1" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PARAM2" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PARAM3" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PARAM4" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PARAM5" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PARAM6" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="NBJOUR" Type="Int32" />
+    <Property Name="DEBUTAPPLICATION" Type="DateTime" Precision="3" />
+    <Property Name="FINAPPLICATION" Type="DateTime" Precision="3" />
+    <Property Name="LIENFAC" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="PERIODE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="PRODUIT" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="FORMULE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TOPANNUL" Type="Int32" />
+    <Property Name="BARBORNEDEBUT" Type="Int32" />
+    <Property Name="BARBORNEFIN" Type="Int32" />
+    <Property Name="QUANTITEMAXIMALE" Type="Int32" />
+    <Property Name="USERCREATION" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATECREATION" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USERMODIFICATION" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATEMODIFICATION" Type="DateTime" Precision="3" />
+    <Property Name="FK_IDCENTFAC" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDCENTRE" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDABON" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDPRODUIT" Type="Int32" Nullable="false" />
+    <Property Name="FK_IDREDEVANCE" Type="Int32" />
+    <Property Name="PK_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="CENTFAC" Relationship="ABO07Model.FK_CREDFAC_CENTFAC" FromRole="CREDFAC" ToRole="CENTFAC" />
+  </EntityType>
+  <Association Name="FK_CPROFAC_CENTFAC">
+    <End Role="CENTFAC" Type="ABO07Model.CENTFAC" Multiplicity="1" />
+    <End Role="CPROFAC" Type="ABO07Model.CPROFAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTFAC">
+        <PropertyRef Name="PK_ID" />
+      </Principal>
+      <Dependent Role="CPROFAC">
+        <PropertyRef Name="FK_IDCENTFAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CREDFAC_CENTFAC">
+    <End Role="CENTFAC" Type="ABO07Model.CENTFAC" Multiplicity="1" />
+    <End Role="CREDFAC" Type="ABO07Model.CREDFAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CENTFAC">
+        <PropertyRef Name="PK_ID" />
+      </Principal>
+      <Dependent Role="CREDFAC">
+        <PropertyRef Name="FK_IDCENTFAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

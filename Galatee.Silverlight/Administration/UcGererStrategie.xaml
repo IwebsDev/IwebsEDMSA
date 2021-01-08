@@ -1,0 +1,56 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Administration.UcGererStrategie"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="962.343" Height="383.935" 
+           Title="UcGererStrategie" OverlayBrush="Transparent" 
+                      xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+                      xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+                      xmlns:my1="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+                      Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="10,4,3,3" Height="306">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" Header="Paramètre du mot de passe" Height="276" Margin="464,0,0,30" x:Name="groupBox1_Copy" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="461" />
+
+        <my:GroupBox FontWeight="SemiBold" Header="Paramètre du compte" Height="276" Margin="0,0,466,30" Name="groupBox2" VerticalAlignment="Bottom" />
+        <CheckBox Content="Active" Height="16" HorizontalAlignment="Left" Margin="11,246,0,0" Name="ckstatusStrat" VerticalAlignment="Top" Width="413" />
+        <Button x:Name="Btn_Cancel" Content="Fermer" Click="CancelButton_Click" Width="78" Height="23" HorizontalAlignment="Right" Margin="0,281,15,2" />
+        <Button x:Name="Btn_OK" Content="OK" Click="OKButton_Click" Width="83" Height="23" HorizontalAlignment="Left" Margin="703,281,0,2" />
+        <sdk:Label Content="label :" Height="20" HorizontalAlignment="Left" Margin="10,34,0,0" Name="lbl_label" VerticalAlignment="Top" Width="281" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="308,31,0,0" Name="txt_strayegy" VerticalAlignment="Top" Width="139" />
+        <sdk:Label Content="Minimum password time limit (day) :" Height="20" HorizontalAlignment="Left" Margin="472,32,0,0" Name="lbl_minpwdlimit" VerticalAlignment="Top" Width="408" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,61,481,0" Name="txt_locksession2" VerticalAlignment="Top" Width="71" />
+        <sdk:Label Content="+" Height="20" HorizontalAlignment="Left" Margin="354,60,0,0" Name="lbl_pwd" VerticalAlignment="Top" Width="22" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,59,576,0" Name="txt_locksession1" VerticalAlignment="Top" Width="41" KeyDown="txt_locksession1_KeyDown" />
+        <sdk:Label Content="LockedSession" Height="20" HorizontalAlignment="Left" Margin="10,60,0,0" Name="lbl_locksession" VerticalAlignment="Top" Width="281" />
+        <sdk:Label Content="Minimum password length :" Height="20" HorizontalAlignment="Left" Margin="472,90,0,0" Name="lbl_minlenght" VerticalAlignment="Top" Width="408" />
+        <sdk:Label Content="Maximum password time limit (day) :" Height="20" Margin="472,61,45,0" Name="lbl_maxpwdlimit" VerticalAlignment="Top" />
+        <sdk:Label Content="Standby session time(minute) :" Height="20" HorizontalAlignment="Left" Margin="10,120,0,0" Name="lbl_standby" VerticalAlignment="Top" Width="395" />
+        <CheckBox Content="Reversible password encryption" Height="16" HorizontalAlignment="Left" Margin="11,222,0,0" Name="ckcreversible" VerticalAlignment="Top" Width="433" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Left" Margin="407,119,0,0" Name="NumUpDown_standby" VerticalAlignment="Top" Width="40" />
+        <sdk:Label Content="Set the locking account counter after(minute) :" Height="20" HorizontalAlignment="Left" Margin="10,176,0,0" Name="lbl_lockingcounter" VerticalAlignment="Top" Width="395" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,174,477,0" Name="NumUpDown_lockingcounter" VerticalAlignment="Top" Width="40" />
+        <sdk:Label Content="Locking account time(minute) :" Height="20" HorizontalAlignment="Left" Margin="10,147,0,0" Name="lbl_LockedAccont" VerticalAlignment="Top" Width="395" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Left" Margin="407,147,0,0" Name="NumUpDown_LockedAccont" VerticalAlignment="Top" Width="40" />
+        <CheckBox Content="Login and user name must not be same " Height="16" HorizontalAlignment="Left" Margin="11,201,0,0" Name="chck_login_username" VerticalAlignment="Top" Width="437"/>
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,31,6,0" Name="NumUpDown_minpwdlimit" VerticalAlignment="Top" Width="39" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,60,6,0" Name="NumUpDown_maxpwdlimit" VerticalAlignment="Top" Width="39" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,146,6,0" Name="NumUpDown_uppercase" VerticalAlignment="Top" Width="39" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,118,6,0" Name="NumUpDown_connexfail" VerticalAlignment="Top" Width="39" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,90,6,0" Name="NumUpDown_minlenght" VerticalAlignment="Top" Width="39" />
+        <sdk:Label Content="Maximum connection failure:" Height="20" HorizontalAlignment="Left" Margin="472,120,0,0" Name="lbl_connexfail" VerticalAlignment="Top" Width="408" />
+        <sdk:Label Content="Minimum number of upper-case letters in password:" Height="20" HorizontalAlignment="Left" Margin="472,147,0,0" Name="lbl_uppercase" VerticalAlignment="Top" Width="408" />
+        <sdk:Label Content="Minimum number of lower-case letters in password:" Height="20" HorizontalAlignment="Left" Margin="472,175,0,0" Name="lbl_lowercase" VerticalAlignment="Top" Width="408" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,175,6,0" Name="NumUpDown_lowercase" VerticalAlignment="Top" Width="39" />
+        <sdk:Label Content="Minimum number of digit in password (0..9)" Height="20" HorizontalAlignment="Left" Margin="472,202,0,0" Name="lbl_digit" VerticalAlignment="Top" Width="408" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,203,6,0" Name="NumUpDown_digit" VerticalAlignment="Top" Width="39" />
+        <sdk:Label Content="Minimum number of special characters in password :" Height="20" HorizontalAlignment="Left" Margin="472,231,0,0" Name="lbl_specialchar" VerticalAlignment="Top" Width="408" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Right" Margin="0,231,6,0" Name="NumUpDown_specialchar" VerticalAlignment="Top" Width="39" />
+        <sdk:Label Content="Number of saved password :" Height="20" HorizontalAlignment="Left" Margin="10,93,0,0" Name="lbl_saved" VerticalAlignment="Top" Width="395" />
+        <toolkit:NumericUpDown Height="22" HorizontalAlignment="Left" Margin="407,93,0,0" Name="NumUpDown_saved" VerticalAlignment="Top" Width="40" />
+    </Grid>
+</controls:ChildWindow>

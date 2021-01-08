@@ -1,0 +1,56 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+          xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+    xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Parametrage.UcListFourniture"
+    
+    Width="975.134" Height="494.03" Title="Liste de Fourniture" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox x:Name="GboCoutCoper" Header="Fourniture par demande" HorizontalAlignment="Left" VerticalAlignment="Top" Height="94" Width="947" Margin="0,3,0,0"/>
+        <Button x:Name="btnDelete" Content="Supprimer" Click="btnDelete_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,17,2" Grid.Row="1" />
+        <Button x:Name="btnPrint" Content="Imprimer" Click="btnPrint_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,9,96,3" Grid.Row="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" 
+			Margin="4,102,0,0" x:Name="dtgrdParametre" Width="937"  ItemsSource="{Binding DonnesDatagrid}"
+			ScrollViewer.HorizontalScrollBarVisibility="Visible" AllowDrop="False" DataContext="{Binding}"  SelectionMode="Extended" SelectionChanged="dtgrdParametre_SelectionChanged"  MouseRightButtonDown="dtgrdParametre_MouseRightButtonDown" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding CODE, Mode=TwoWay}" Header="Code" Width="100" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEPRODUIT, Mode=TwoWay}" Header="PRODUIT" Width="150" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLETYPEDEMANDE, Mode=TwoWay}" Header="TYPE DE DEMANDE" Width="150" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" Header="LIBELLE" Width="150" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITY, Mode=TwoWay}" Header="QUANTITE" Width="90" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_POSE, Mode=TwoWay,Converter={StaticResource DecimalConverter}}" Header="COUT DE POSE" Width="150" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding COUTUNITAIRE_FOURNITURE, Mode=TwoWay,Converter={StaticResource DecimalConverter}}" Header="COUT DE FOURNITURE"  Width="150" IsReadOnly="True" />
+
+            </sdk:DataGrid.Columns>
+            <i:Interaction.Behaviors>
+                <behaviors:DataGridDoubleClickBehavior DoubleClick="dtgrdParametre_DoubleClick"/>
+                <behaviors:DataGridContexMenuBehavior />
+            </i:Interaction.Behaviors>
+        </sdk:DataGrid>
+        <sdk:Label Content="TYPE DEMANDE" HorizontalAlignment="Left" Height="23" Margin="38,63,0,0" VerticalAlignment="Top" Width="110"/>
+        <ComboBox x:Name="CboTypeDevis" HorizontalAlignment="Left" Height="26" Margin="158,58,0,0" VerticalAlignment="Top" Width="188" SelectionChanged="CboTypeDevis_SelectionChanged"/>
+        <sdk:Label Content="PRODUIT" HorizontalAlignment="Left" Height="23" Margin="38,32,0,0" VerticalAlignment="Top" Width="105"/>
+        <ComboBox x:Name="CboProduit" HorizontalAlignment="Left" Height="25" Margin="158,29,0,0" VerticalAlignment="Top" Width="188" SelectionChanged="CboProduit_SelectionChanged"/>
+        <Button Content="Nouveau" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,5,0,0" Click="Creer_Click" Grid.Row="1"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,5,0,0" Click="Modifier_Click" Grid.Row="1"/>
+        <Button Content="Consulter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,5,0,0" Click="Consulter_Click" Grid.Row="1"/>
+
+
+    </Grid>
+</sdk:ChildWindow>

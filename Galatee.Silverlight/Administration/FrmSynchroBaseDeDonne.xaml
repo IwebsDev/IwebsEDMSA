@@ -1,0 +1,46 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Administration.FrmSynchroBaseDeDonne"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="475" Height="513" 
+           Title="Synchronisation par base de données" Style="{StaticResource ChildWindowGalatee}">
+
+    <Grid x:Name="LayoutRoot0" >
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <!--<RowDefinition Height="Auto" />-->
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,110,0,248" x:Name="groupBox2" Header="Sécurité"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,199,0,152" x:Name="groupBox1" Header="Paramettre Base de donnée"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,20,0,337" x:Name="groupBox3" Header="Paramettre Server"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,290,0,43" x:Name="groupBox4" Header="Requette"  />
+
+        <Button x:Name="button1" Content="Refreche" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="323,45,0,0" Click="button1_Click"/>
+        <ComboBox x:Name="cmbProvider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="216" Margin="97,45,0,0" SelectionChanged="cmbProvider_SelectionChanged"/>
+        <!--<ComboBox x:Name="cmbServers" HorizontalAlignment="Left" VerticalAlignment="Top" Width="301" Margin="97,157,0,0" SelectionChanged="cmbServers_SelectionChanged" />-->
+        <!--<Button x:Name="btnFindServers" Content="Refreche" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="413,157,0,0" Click="btnFindServers_Click"/>-->
+        <!--<CheckBox x:Name="chkUseWindowsSecurity" Content="Utiliser la sécurite" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,243,0,0" Width="135" Checked="chkUseWindowsSecurity_Checked" />-->
+        <sdk:Label HorizontalAlignment="Left" Content="Nom d'utilsateur " Height="28" VerticalAlignment="Top" Width="108" Margin="25,130,0,0"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260" Margin="138,126,0,0" TextChanged="txtUserName_TextChanged"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260" Margin="138,163,0,0" TextChanged="txtPassword_TextChanged"/>
+        <!--<CheckBox x:Name="chkBlankPassAllowed" Content="Sans Mot de passe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,295,0,0" Width="148"/>-->
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="Mot de passe" VerticalAlignment="Top" Width="120" Margin="25,163,0,0"/>
+        <Button x:Name="btnTestConnection" Content="Tester la connection" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="272,257,0,0" Click="btnTestConnection_Click"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="Providers" VerticalAlignment="Top" Width="73" Margin="25,43,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="Serveurs" VerticalAlignment="Top" Width="73" Margin="23,76,0,0"/>
+        <!--<ComboBox x:Name="cmbDatabases" HorizontalAlignment="Left" Margin="117,426,0,0" VerticalAlignment="Top" Width="280" GotFocus="cmbDatabases_GotFocus"/>
+                    <Button Content="Refreche" x:Name="btnFindDatabases" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="421,426,0,0"/>-->
+        <sdk:Label HorizontalAlignment="Left" Content="Base de données" Height="28" VerticalAlignment="Top" Width="109" Margin="22,226,0,0"/>
+        <!--<Button Content="Mettre à jour la chaine" x:Name="btnFinish" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="354,524,0,-65" Height="24" Click="btnFinish_Click"/>-->
+        <TextBox HorizontalAlignment="Left" x:Name="txtSereverName" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Margin="98,72,0,0" TextChanged="txtSereverName_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txtDataBase" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" Margin="145,226,0,0" TextChanged="txtDataBase_TextChanged"/>
+        <Button x:Name="CancelButton_Copy" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,409,24,10" />
+        <Button x:Name="OKButton" Content="Valider configuration" Click="OKButton_Click" Width="156" Height="23" HorizontalAlignment="Right" Margin="0,409,104,10" />
+        <TextBox x:Name="txt_requette" HorizontalAlignment="Left" Height="78" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" Margin="25,312,0,0"/>
+        <!--<Button Content="Charger données depuis base distante" HorizontalAlignment="Left" VerticalAlignment="Top" Width="231" Margin="857,223,0,0" Click="Button_Click"/>-->
+
+    </Grid>
+
+</controls:ChildWindow>

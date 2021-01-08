@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Workflow" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Workflow/Workflow.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Workflow/Workflow.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Workflow/Workflow.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Workflow/Workflow.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1818/Workflow/Workflow.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkflow_InsererMaDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererMaDemande" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_InsererMaDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererMaDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_InsererMaDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_InsererMaDemandeToGroupeValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererMaDemandeToGroupeValidation" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_InsererMaDemandeToGroupeValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererMaDemandeToGroupeValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_InsererMaDemandeToGroupeValidation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurDemande" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_AllerALEtape_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllerALEtape" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_AllerALEtape_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllerALEtapeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_AllerALEtape_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurPlusieursDemandes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurPlusieursDemandes" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurPlusieursDemandes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurPlusieursDemandesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurPlusieursDemandes_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemandeParPkIDLigne_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurDemandeParPkIDLigne" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemandeParPkIDLigne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuterActionSurDemandeParPkIDLigneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_ExecuterActionSurDemandeParPkIDLigne_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_VerifierConditionDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifierConditionDemande" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_VerifierConditionDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifierConditionDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_VerifierConditionDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParOperationId_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecupererInfoDemandeParOperationId" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParOperationId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecupererInfoDemandeParOperationIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParOperationId_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParCodeTDem_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecupererInfoDemandeParCodeTDem" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParCodeTDem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecupererInfoDemandeParCodeTDemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_RecupererInfoDemandeParCodeTDem_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationMail" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMail_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMailDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationMailDemande" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMailDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificationMailDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflow_NotificationMailDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkflow">
+    <wsdl:operation name="InsererMaDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemande" message="tns:IWorkflow_InsererMaDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemandeResponse" message="tns:IWorkflow_InsererMaDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemandeErrorsFault" name="ErrorsFault" message="tns:IWorkflow_InsererMaDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererMaDemandeToGroupeValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemandeToGroupeValidation" message="tns:IWorkflow_InsererMaDemandeToGroupeValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemandeToGroupeValidationResponse" message="tns:IWorkflow_InsererMaDemandeToGroupeValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/InsererMaDemandeToGroupeValidationErrorsFault" name="ErrorsFault" message="tns:IWorkflow_InsererMaDemandeToGroupeValidation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemande" message="tns:IWorkflow_ExecuterActionSurDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeResponse" message="tns:IWorkflow_ExecuterActionSurDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeErrorsFault" name="ErrorsFault" message="tns:IWorkflow_ExecuterActionSurDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllerALEtape">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/AllerALEtape" message="tns:IWorkflow_AllerALEtape_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/AllerALEtapeResponse" message="tns:IWorkflow_AllerALEtape_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/AllerALEtapeErrorsFault" name="ErrorsFault" message="tns:IWorkflow_AllerALEtape_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurPlusieursDemandes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurPlusieursDemandes" message="tns:IWorkflow_ExecuterActionSurPlusieursDemandes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurPlusieursDemandesResponse" message="tns:IWorkflow_ExecuterActionSurPlusieursDemandes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurPlusieursDemandesErrorsFault" name="ErrorsFault" message="tns:IWorkflow_ExecuterActionSurPlusieursDemandes_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurDemandeParPkIDLigne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeParPkIDLigne" message="tns:IWorkflow_ExecuterActionSurDemandeParPkIDLigne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeParPkIDLigneResponse" message="tns:IWorkflow_ExecuterActionSurDemandeParPkIDLigne_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeParPkIDLigneErrorsFault" name="ErrorsFault" message="tns:IWorkflow_ExecuterActionSurDemandeParPkIDLigne_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifierConditionDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/VerifierConditionDemande" message="tns:IWorkflow_VerifierConditionDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/VerifierConditionDemandeResponse" message="tns:IWorkflow_VerifierConditionDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/VerifierConditionDemandeErrorsFault" name="ErrorsFault" message="tns:IWorkflow_VerifierConditionDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecupererInfoDemandeParOperationId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParOperationId" message="tns:IWorkflow_RecupererInfoDemandeParOperationId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParOperationIdResponse" message="tns:IWorkflow_RecupererInfoDemandeParOperationId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParOperationIdErrorsFault" name="ErrorsFault" message="tns:IWorkflow_RecupererInfoDemandeParOperationId_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecupererInfoDemandeParCodeTDem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParCodeTDem" message="tns:IWorkflow_RecupererInfoDemandeParCodeTDem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParCodeTDemResponse" message="tns:IWorkflow_RecupererInfoDemandeParCodeTDem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/RecupererInfoDemandeParCodeTDemErrorsFault" name="ErrorsFault" message="tns:IWorkflow_RecupererInfoDemandeParCodeTDem_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/NotificationMail" message="tns:IWorkflow_NotificationMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/NotificationMailResponse" message="tns:IWorkflow_NotificationMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/NotificationMailErrorsFault" name="ErrorsFault" message="tns:IWorkflow_NotificationMail_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationMailDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflow/NotificationMailDemande" message="tns:IWorkflow_NotificationMailDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflow/NotificationMailDemandeResponse" message="tns:IWorkflow_NotificationMailDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IWorkflow/NotificationMailDemandeErrorsFault" name="ErrorsFault" message="tns:IWorkflow_NotificationMailDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWorkflow" type="tns:IWorkflow">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsererMaDemande">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/InsererMaDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsererMaDemandeToGroupeValidation">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/InsererMaDemandeToGroupeValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurDemande">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/ExecuterActionSurDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AllerALEtape">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/AllerALEtape" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurPlusieursDemandes">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/ExecuterActionSurPlusieursDemandes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuterActionSurDemandeParPkIDLigne">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/ExecuterActionSurDemandeParPkIDLigne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifierConditionDemande">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/VerifierConditionDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecupererInfoDemandeParOperationId">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/RecupererInfoDemandeParOperationId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecupererInfoDemandeParCodeTDem">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/RecupererInfoDemandeParCodeTDem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationMail">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/NotificationMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationMailDemande">
+      <soap:operation soapAction="http://tempuri.org/IWorkflow/NotificationMailDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Workflow">
+    <wsdl:port name="BasicHttpBinding_IWorkflow" binding="tns:BasicHttpBinding_IWorkflow">
+      <soap:address location="http://localhost:1818/Workflow/Workflow.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

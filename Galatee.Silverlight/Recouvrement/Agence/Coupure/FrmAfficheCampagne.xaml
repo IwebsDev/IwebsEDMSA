@@ -1,0 +1,39 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+    x:Class="Galatee.Silverlight.Recouvrement.FrmAfficheCampagne"
+           Width="1127" Height="518" 
+           Title="Suivi de campagne" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="114" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Imprimer" Click="OKButton_Click" Width="119" Height="23" HorizontalAlignment="Right" Margin="0,12,119,0" Grid.Row="1" />
+        <Button x:Name="ExportFile" Content="Exporter" Click="ExportFile_Click_1" Width="119" Height="23" HorizontalAlignment="Right" Margin="0,12,243,0" Grid.Row="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="388" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="dataGrid1" VerticalAlignment="Top" Width="1079" IsReadOnly="True" GridLinesVisibility="None" RowBackground="{x:Null}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Campagne" Binding="{Binding IDCOUPURE}" Width="Auto"   MinWidth="50" FontWeight="Normal" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Binding="{Binding CLIENT}" Width="Auto"   MinWidth="50" FontWeight="Normal" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Binding="{Binding NOMABON}" Width="Auto"   MinWidth="130" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Rue" Binding="{Binding RUE}" Width="Auto"  MinWidth="70" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Porte" Binding="{Binding PORTE}" Width="Auto"  MinWidth="80" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Compteur" Binding="{Binding COMPTEUR}" Width="Auto"  MinWidth="65" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Tournée" Binding="{Binding TOURNEE}" Width="Auto"  MinWidth="65" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nbre fact" Binding="{Binding NOMBREFACTURE}" Width="Auto"  MinWidth="65" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant fact" Binding="{Binding SOLDEDUE,Converter={StaticResource DecimalConverter}}" Width="Auto"  MinWidth="65" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant payé" Binding="{Binding MONTANTEREGLE,Converter={StaticResource DecimalConverter}}" Width="Auto"  MinWidth="65" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

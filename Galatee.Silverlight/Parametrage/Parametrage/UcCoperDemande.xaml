@@ -1,0 +1,42 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+     xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+      xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    x:Class="Galatee.Silverlight.Parametrage.UcCoperDemande"
+           Width="774.731" Height="334.361" 
+           Title="UcCoperDemande" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Name="GboCoutCoper" Header="Coper Demande" HorizontalAlignment="Left" VerticalAlignment="Top" Height="221" Width="747" Margin="0,3,0,0"/>
+
+        <Button x:Name="BtnAnnuler" Content="Fermer" Click="BtnAnnuler_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Grid.Column="2" />
+        <Button x:Name="BtnOk" Content="OK" Click="BtnOk_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Grid.Column="2" />
+
+
+        <ComboBox  SelectionChanged="CboSite_SelectionChanged" x:Name="CboSite" HorizontalAlignment="Left" Height="28" Margin="132,30,0,0" VerticalAlignment="Top" Width="206"  />
+        <ComboBox   SelectionChanged="CboProduit_SelectionChanged" x:Name="CboProduit" HorizontalAlignment="Left" Height="28" Margin="513,68,0,0" VerticalAlignment="Top" Width="203"/>
+        <ComboBox SelectionChanged="CboTDEM_SelectionChanged" x:Name="CboTDEM" HorizontalAlignment="Left" Height="28" Margin="132,68,0,0" VerticalAlignment="Top" Width="206"/>
+        <ComboBox  SelectionChanged="OnComboSelectionChanged" x:Name="CboCoper" HorizontalAlignment="Left" Height="28" Margin="513,104,0,0" VerticalAlignment="Top" Width="203"/>
+        <ComboBox  SelectionChanged="OnComboSelectionChanged" x:Name="CboTAXE" HorizontalAlignment="Left" Height="28" Margin="131,140,0,0" VerticalAlignment="Top" Width="207" />
+        <TextBox TabIndex="1" HorizontalAlignment="Left" Height="25" Margin="518,186,0,0" TextWrapping="Wrap" x:Name="Txt_Montant"  VerticalAlignment="Top" Width="198" TextChanged="On_TextChanged" />
+        <CheckBox x:Name="CheckAuto" Content="AUTOMATIQUE" HorizontalAlignment="Left" Height="20" Margin="101,194,0,0" VerticalAlignment="Top" Width="125"/>
+        <sdk:Label HorizontalAlignment="Left" Height="25" Margin="27,32,0,0" VerticalAlignment="Top" Width="65" Content="SITE"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="27,145,0,0" VerticalAlignment="Top" Width="99" Content="TAXE"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="27,72,0,0" VerticalAlignment="Top" Width="100" Content="TYPEDEMANDE"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="410,71,0,0" VerticalAlignment="Top" Width="77" Content="PRODUIT"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="410,189,0,0" VerticalAlignment="Top" Width="82" Content="MONTANT"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="410,108,0,0" VerticalAlignment="Top" Width="77" Content="COPER"/>
+        <CheckBox x:Name="CheckObl"  Content="OBLIGATOIRE" HorizontalAlignment="Left" Height="20" Margin="241,194,0,0" VerticalAlignment="Top" Width="125" />
+        <ComboBox SelectionChanged="OnComboSelectionChanged" x:Name="CboCATEG" HorizontalAlignment="Left" Height="28" Margin="132,104,0,0" VerticalAlignment="Top" Width="206"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="27,108,0,0" VerticalAlignment="Top" Width="100" Content="CATEGORIE "/>
+        <ComboBox SelectionChanged="OnComboSelectionChanged" x:Name="CboDIAMETRE" HorizontalAlignment="Left" Height="28" Margin="515,140,0,0" VerticalAlignment="Top" Width="201"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="410,144,0,0" VerticalAlignment="Top" Width="100" Content="CALIBRE "/>
+        <ComboBox  SelectionChanged="CboCentre_SelectionChanged" x:Name="CboCentre" HorizontalAlignment="Left" Height="28" Margin="513,30,0,0" VerticalAlignment="Top" Width="203"  />
+        <sdk:Label HorizontalAlignment="Left" Height="25" Margin="410,32,0,0" VerticalAlignment="Top" Width="65" Content="CENTRE"/>
+    </Grid>
+</sdk:ChildWindow>

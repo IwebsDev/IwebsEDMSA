@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TarificationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Tarification/TarificationService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Tarification/TarificationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Tarification/TarificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Tarification/TarificationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITarificationService_SaveRechercheTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRechercheTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveRechercheTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRechercheTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveRechercheTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRechercheTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllRechercheTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRechercheTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllRechercheTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRechercheTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllContenantCritereTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllContenantCritereTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllContenantCritereTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllContenantCritereTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllContenantCritereTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveRedevance_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRedevance" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveRedevance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRedevanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveRedevance_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRedevance_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllRedevance" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRedevance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllRedevanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllRedevance_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeRedevance_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeRedevance" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeRedevance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeRedevanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeRedevance_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienRedevance_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeLienRedevance" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienRedevance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeLienRedevanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienRedevance_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienProduit_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeLienProduit" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienProduit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTypeLienProduitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTypeLienProduit_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CheickCodeRedevanceExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheickCodeRedevanceExist" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CheickCodeRedevanceExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheickCodeRedevanceExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CheickCodeRedevanceExist_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllVariableTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllVariableTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllVariableTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllVariableTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllVariableTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeCalcule_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllModeCalcule" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeCalcule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllModeCalculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeCalcule_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeApplicationTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllModeApplicationTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeApplicationTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllModeApplicationTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllModeApplicationTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveVariableTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVariableTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveVariableTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVariableTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveVariableTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTarifFacturation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTarifFacturation" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTarifFacturation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllTarifFacturationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllTarifFacturation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllDetailTarifFacturation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllDetailTarifFacturation" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllDetailTarifFacturation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllDetailTarifFacturationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllDetailTarifFacturation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveTarifFacturation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTarifFacturation" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveTarifFacturation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTarifFacturationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_SaveTarifFacturation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CreateTarif_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTarif" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CreateTarif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTarifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_CreateTarif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_DuplicationTarifVersCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:DuplicationTarifVersCentre" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_DuplicationTarifVersCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DuplicationTarifVersCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_DuplicationTarifVersCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllUniteComptage_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllUniteComptage" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllUniteComptage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllUniteComptageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadAllUniteComptage_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadTarifGenerer_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTarifGenerer" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadTarifGenerer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadTarifGenererResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITarificationService_LoadTarifGenerer_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="ITarificationService">
+    <wsdl:operation name="SaveRechercheTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/SaveRechercheTarif" message="tns:ITarificationService_SaveRechercheTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/SaveRechercheTarifResponse" message="tns:ITarificationService_SaveRechercheTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/SaveRechercheTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_SaveRechercheTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRechercheTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRechercheTarif" message="tns:ITarificationService_LoadAllRechercheTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRechercheTarifResponse" message="tns:ITarificationService_LoadAllRechercheTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRechercheTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllRechercheTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllContenantCritereTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllContenantCritereTarif" message="tns:ITarificationService_LoadAllContenantCritereTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllContenantCritereTarifResponse" message="tns:ITarificationService_LoadAllContenantCritereTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllContenantCritereTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllContenantCritereTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRedevance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/SaveRedevance" message="tns:ITarificationService_SaveRedevance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/SaveRedevanceResponse" message="tns:ITarificationService_SaveRedevance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/SaveRedevanceErrorsFault" name="ErrorsFault" message="tns:ITarificationService_SaveRedevance_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRedevance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRedevance" message="tns:ITarificationService_LoadAllRedevance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRedevanceResponse" message="tns:ITarificationService_LoadAllRedevance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllRedevanceErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllRedevance_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeRedevance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeRedevance" message="tns:ITarificationService_LoadAllTypeRedevance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeRedevanceResponse" message="tns:ITarificationService_LoadAllTypeRedevance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeRedevanceErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllTypeRedevance_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeLienRedevance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienRedevance" message="tns:ITarificationService_LoadAllTypeLienRedevance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienRedevanceResponse" message="tns:ITarificationService_LoadAllTypeLienRedevance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienRedevanceErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllTypeLienRedevance_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeLienProduit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienProduit" message="tns:ITarificationService_LoadAllTypeLienProduit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienProduitResponse" message="tns:ITarificationService_LoadAllTypeLienProduit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTypeLienProduitErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllTypeLienProduit_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheickCodeRedevanceExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/CheickCodeRedevanceExist" message="tns:ITarificationService_CheickCodeRedevanceExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/CheickCodeRedevanceExistResponse" message="tns:ITarificationService_CheickCodeRedevanceExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/CheickCodeRedevanceExistErrorsFault" name="ErrorsFault" message="tns:ITarificationService_CheickCodeRedevanceExist_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllVariableTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllVariableTarif" message="tns:ITarificationService_LoadAllVariableTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllVariableTarifResponse" message="tns:ITarificationService_LoadAllVariableTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllVariableTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllVariableTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllModeCalcule">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeCalcule" message="tns:ITarificationService_LoadAllModeCalcule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeCalculeResponse" message="tns:ITarificationService_LoadAllModeCalcule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeCalculeErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllModeCalcule_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllModeApplicationTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeApplicationTarif" message="tns:ITarificationService_LoadAllModeApplicationTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeApplicationTarifResponse" message="tns:ITarificationService_LoadAllModeApplicationTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllModeApplicationTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllModeApplicationTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveVariableTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/SaveVariableTarif" message="tns:ITarificationService_SaveVariableTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/SaveVariableTarifResponse" message="tns:ITarificationService_SaveVariableTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/SaveVariableTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_SaveVariableTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTarifFacturation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTarifFacturation" message="tns:ITarificationService_LoadAllTarifFacturation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTarifFacturationResponse" message="tns:ITarificationService_LoadAllTarifFacturation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllTarifFacturationErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllTarifFacturation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllDetailTarifFacturation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllDetailTarifFacturation" message="tns:ITarificationService_LoadAllDetailTarifFacturation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllDetailTarifFacturationResponse" message="tns:ITarificationService_LoadAllDetailTarifFacturation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllDetailTarifFacturationErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllDetailTarifFacturation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTarifFacturation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/SaveTarifFacturation" message="tns:ITarificationService_SaveTarifFacturation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/SaveTarifFacturationResponse" message="tns:ITarificationService_SaveTarifFacturation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/SaveTarifFacturationErrorsFault" name="ErrorsFault" message="tns:ITarificationService_SaveTarifFacturation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTarif">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/CreateTarif" message="tns:ITarificationService_CreateTarif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/CreateTarifResponse" message="tns:ITarificationService_CreateTarif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/CreateTarifErrorsFault" name="ErrorsFault" message="tns:ITarificationService_CreateTarif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DuplicationTarifVersCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/DuplicationTarifVersCentre" message="tns:ITarificationService_DuplicationTarifVersCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/DuplicationTarifVersCentreResponse" message="tns:ITarificationService_DuplicationTarifVersCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/DuplicationTarifVersCentreErrorsFault" name="ErrorsFault" message="tns:ITarificationService_DuplicationTarifVersCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllUniteComptage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadAllUniteComptage" message="tns:ITarificationService_LoadAllUniteComptage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadAllUniteComptageResponse" message="tns:ITarificationService_LoadAllUniteComptage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadAllUniteComptageErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadAllUniteComptage_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTarifGenerer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITarificationService/LoadTarifGenerer" message="tns:ITarificationService_LoadTarifGenerer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITarificationService/LoadTarifGenererResponse" message="tns:ITarificationService_LoadTarifGenerer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITarificationService/LoadTarifGenererErrorsFault" name="ErrorsFault" message="tns:ITarificationService_LoadTarifGenerer_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITarificationService" type="tns:ITarificationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveRechercheTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/SaveRechercheTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRechercheTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllRechercheTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllContenantCritereTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllContenantCritereTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRedevance">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/SaveRedevance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRedevance">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllRedevance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeRedevance">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllTypeRedevance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeLienRedevance">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllTypeLienRedevance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTypeLienProduit">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllTypeLienProduit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheickCodeRedevanceExist">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/CheickCodeRedevanceExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllVariableTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllVariableTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllModeCalcule">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllModeCalcule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllModeApplicationTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllModeApplicationTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveVariableTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/SaveVariableTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllTarifFacturation">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllTarifFacturation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllDetailTarifFacturation">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllDetailTarifFacturation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTarifFacturation">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/SaveTarifFacturation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTarif">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/CreateTarif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DuplicationTarifVersCentre">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/DuplicationTarifVersCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllUniteComptage">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadAllUniteComptage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTarifGenerer">
+      <soap:operation soapAction="http://tempuri.org/ITarificationService/LoadTarifGenerer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TarificationService">
+    <wsdl:port name="BasicHttpBinding_ITarificationService" binding="tns:BasicHttpBinding_ITarificationService">
+      <soap:address location="http://localhost:1818/Tarification/TarificationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

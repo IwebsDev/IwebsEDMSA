@@ -1,0 +1,17 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.DialogResult"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="347" Height="Auto" 
+           Title="DialogResult" OverlayBrush="Transparent">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="auto" Width="327">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,6,8,8" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Left" Margin="155,6,0,8" Grid.Row="1" />
+            <TextBlock Height="Auto" Name="Message" Text="" Width="301" TextWrapping="Wrap" />
+    </Grid>
+</controls:ChildWindow>

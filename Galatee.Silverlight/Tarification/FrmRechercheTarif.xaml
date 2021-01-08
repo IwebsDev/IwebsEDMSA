@@ -1,0 +1,36 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Galatee.Silverlight.Tarification.FrmRechercheTarif"
+           Width="549.288" Height="383.432" OverlayBrush="Transparent" 
+           Title="Recherche tarif" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="10,2,0,202" x:Name="groupBox1_Copy1" Header="Information de redevance"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="10,75,0,4" x:Name="groupBox1_Copy2" Header="Table Associé" RenderTransformOrigin="0.5,0.5"  />
+        <Button Content="Ajouter" x:Name="btn_ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Click="btn_ajouter_Click_1" Margin="367,98,0,0"/>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" VerticalAlignment="Top" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="52" Margin="33,36,0,0" Content="Code "/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_code" Height="23" TextWrapping="Wrap" Text="{Binding CODE, Mode=TwoWay}" VerticalAlignment="Top" Width="66" Margin="90,29,0,0" TextChanged="TextBox_TextChanged_1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" Margin="180,34,0,0" Content="Libelle"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_libelle" Height="23" TextWrapping="Wrap" Text="{Binding LIBELLE, Mode=TwoWay}" VerticalAlignment="Top" Width="177" Margin="248,29,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="37" Margin="102,101,0,0" Content="Table "/>
+        <!--<Button Content="Editer" x:Name="btn_editer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="380,97,0,0" Click="btn_editer_Click_1"/>-->
+        <Button Content="Supprimer" x:Name="btn_supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Margin="444,98,0,0" Click="btn_supprimer_Click_1"/>
+        <sdk:DataGrid Name="dgListeRedevence" ItemsSource="{Binding CTARCOMP, Mode=TwoWay}"  HorizontalAlignment="Left" Height="118" Margin="19,125,0,0" VerticalAlignment="Top" Width="492" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Path=ORDRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="ORDRE" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding Path=LIBELLECONTENANTCRITERETARIF}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CONTENANT CRITERE TARIF" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="19,243,0,0" PageSize="10" VerticalAlignment="Top" Width="492"/>
+        <ComboBox x:Name="CboTable" HorizontalAlignment="Left" Margin="144,98,0,0" VerticalAlignment="Top" Width="193"/>
+    </Grid>
+</sdk:ChildWindow>

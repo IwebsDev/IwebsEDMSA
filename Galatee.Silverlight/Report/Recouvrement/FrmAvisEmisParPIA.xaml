@@ -1,0 +1,42 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Recouvrement="clr-namespace:Galatee.Silverlight.Resources.Recouvrement" 
+           x:Class="Galatee.Silverlight.Report.FrmAvisEmisParPIA"
+           Width="710" Height="255" 
+           Title="FrmDevisValide">
+    <sdk:ChildWindow.Resources>
+        <Recouvrement:ResourceLocaliser x:Key="localisation"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,6,0,32" x:Name="groupBox1_Copy3" Header="Critères" Grid.RowSpan="2" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="98" Height="23" HorizontalAlignment="Right" Margin="0,8,4,4" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Afficher" Click="OKButton_Click" Width="98" Height="23" HorizontalAlignment="Right" Margin="0,8,109,0" Grid.Row="1" VerticalAlignment="Top" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="10,29,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="75" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="139,27,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="219" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="91,0,0,97" x:Name="btn_Site" VerticalAlignment="Bottom" Width="43" Click="btn_Site_Click" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="10,55,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="79" Content="Centre" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="91,54,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="43" Click="btn_Centre_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="139,54,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="219" IsReadOnly="True" />
+        <sdk:DatePicker x:Name="dtp_DateDebut" HorizontalAlignment="Left" Height="23" Margin="475,27,0,0" VerticalAlignment="Top" Width="194"/>
+        <sdk:DatePicker x:Name="dtp_DateFin" HorizontalAlignment="Left" Height="23" Margin="475,55,0,0" VerticalAlignment="Top" Width="194"/>
+        <sdk:Label Height="21" HorizontalAlignment="Left" Margin="393,29,0,0" x:Name="lbl_Centre_Copy3" VerticalAlignment="Top" Width="79" Content="Date debut" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="393,57,0,0" x:Name="lbl_Centre_Copy4" VerticalAlignment="Top" Width="82" Content="Date fin" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="10,82,0,0" x:Name="lbl_Centre_Copy1" VerticalAlignment="Top" Width="79" Content="Agent PIA" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="91,82,0,0" x:Name="btn_AgentPia" VerticalAlignment="Top" Width="43" Click="btnController_Click" />
+        <CheckBox Content="Recap" Name="chk_Recap" HorizontalAlignment="Left" Margin="475,111,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Détails" Name="chk_Detail"  HorizontalAlignment="Left" Margin="580,111,0,0" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="40,8,0,0" VerticalAlignment="Top" Width="231" IsIndeterminate="True" Grid.Row="1"/>
+        <ComboBox HorizontalAlignment="Left" Margin="139,82,0,0" VerticalAlignment="Top" Width="219" Height="24" x:Name="Cbo_AgentPIA"/>
+    </Grid>
+</sdk:ChildWindow>

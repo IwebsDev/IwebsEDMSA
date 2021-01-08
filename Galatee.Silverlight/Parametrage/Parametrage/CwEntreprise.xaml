@@ -1,0 +1,46 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Parametrage.CwEntreprise"
+           Width="640" Height="520" OverlayBrush="Transparent" 
+           Title="Informations entreprise" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label Content="Nom :" HorizontalAlignment="Left" Height="18" Margin="6,10,0,0" VerticalAlignment="Top" Width="53"/>
+        <TextBox Name="TxtNom" HorizontalAlignment="Left" Height="23" Margin="132,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" MaxLength="100" TextChanged="OnTextChanged" />
+        <sdk:Label Content="Sigle :" HorizontalAlignment="Left" Height="18" Margin="373,10,0,0" VerticalAlignment="Top" Width="44"/>
+        <TextBox Name="TxtSigle" HorizontalAlignment="Left" Height="23" Margin="422,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" MaxLength="20" TextChanged="OnTextChanged"/>
+        <sdk:Label Content="Slogan :" HorizontalAlignment="Left" Height="18" Margin="6,38,0,0" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TxtSlogan" HorizontalAlignment="Left" Height="55" Margin="132,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="255"/>
+        <sdk:Label Content="Adresse principale :" HorizontalAlignment="Left" Height="18" Margin="6,102,0,0" VerticalAlignment="Top" Width="121" />
+        <TextBox x:Name="TxtAdressePrincipale" HorizontalAlignment="Left" Height="23" Margin="132,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100" TextChanged="OnTextChanged"/>
+        <sdk:Label Content="Adresse secondaire :" HorizontalAlignment="Left" Height="18" Margin="6,129,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtAdresseSecondaire" HorizontalAlignment="Left" Height="23" Margin="132,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100"/>
+        <sdk:Label Content="Tel principale :" HorizontalAlignment="Left" Height="18" Margin="6,158,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtTelPrincipale" HorizontalAlignment="Left" Height="23" Margin="132,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" MaxLength="20" TextChanged="OnTextChanged"/>
+        <sdk:Label Content="Tel secondaire :" HorizontalAlignment="Left" Height="18" Margin="311,158,0,0" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="TxtTelSecondaire" HorizontalAlignment="Left" Height="23" Margin="410,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" MaxLength="20"/>
+        <sdk:Label Content="Fax principale :" HorizontalAlignment="Left" Height="18" Margin="6,186,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtFaxPrincipale" HorizontalAlignment="Left" Height="23" Margin="132,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" MaxLength="20"/>
+        <sdk:Label Content="Fax secondaire :" HorizontalAlignment="Left" Height="18" Margin="311,186,0,0" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="TxtFaxSecondaire" HorizontalAlignment="Left" Height="23" Margin="410,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" MaxLength="20"/>
+        <sdk:Label Content="E-mail principale :" HorizontalAlignment="Left" Height="18" Margin="6,218,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtEmailPrincipale" HorizontalAlignment="Left" Height="23" Margin="132,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100" TextChanged="OnTextChanged"/>
+        <sdk:Label Content="E-mail secondaire :" HorizontalAlignment="Left" Height="18" Margin="6,245,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtEmailSecondaire" HorizontalAlignment="Left" Height="23" Margin="132,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100"/>
+        <sdk:Label Content="Activité :" HorizontalAlignment="Left" Height="18" Margin="6,270,0,0" VerticalAlignment="Top" Width="53"/>
+        <TextBox x:Name="TxtActivite" HorizontalAlignment="Left" Height="55" Margin="132,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="255"/>
+        <sdk:Label Content="Pays :" HorizontalAlignment="Left" Height="18" Margin="6,334,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtPays" HorizontalAlignment="Left" Height="23" Margin="132,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100" TextChanged="OnTextChanged"/>
+        <sdk:Label Content="Site Web :" HorizontalAlignment="Left" Height="18" Margin="6,361,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="TxtSiteWeb" HorizontalAlignment="Left" Height="23" Margin="132,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" MaxLength="100"/>
+        <HyperlinkButton Name="HypLinkLogo" Content="Logo" HorizontalAlignment="Center" Margin="505,10,5,0" VerticalAlignment="Top" Width="102" Height="18" Click="HypLinkLogo_Click" />
+    </Grid>
+</controls:ChildWindow>

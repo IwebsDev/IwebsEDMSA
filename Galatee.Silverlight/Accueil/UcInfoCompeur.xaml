@@ -1,0 +1,66 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Accueil.UcInfoCompeur"
+           Width="523" Height="484.619" 
+           Title="Information supplémentaire sur compteur " Style="{StaticResource ChildWindowGalatee}" OverlayBrush="{x:Null}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label x:Name="lbl_NumeroBranchement" HorizontalAlignment="Left" Height="20" Margin="21,10,0,0" VerticalAlignment="Top" Width="127" Content="Numéro branchement"/>
+        <sdk:Label x:Name="lbl_OrdreReleve" HorizontalAlignment="Left" Height="20" Margin="321,10,0,0" VerticalAlignment="Top" Width="79" Content="Ordre releve"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="153,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="417,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="71"/>
+        <sdk:Label x:Name="lbl_Moyen" HorizontalAlignment="Left" Height="20" Margin="34,46,0,0" VerticalAlignment="Top" Width="64" Content="Moyen"/>
+        <sdk:Label x:Name="lbl_Maximum" HorizontalAlignment="Left" Height="20" Margin="350,46,0,0" VerticalAlignment="Top" Width="62" Content="Maximum"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="103,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="417,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="71"/>
+        <sdk:Label x:Name="lbl_Minimum" HorizontalAlignment="Left" Height="20" Margin="192,46,0,0" VerticalAlignment="Top" Width="59" Content="Minimum"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="256,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="71"/>
+        <sdk:Label x:Name="lbl_plombage" HorizontalAlignment="Left" Height="20" Margin="18,95,0,0" VerticalAlignment="Top" Width="95" Content="Plombage"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,91,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="207,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_Fonctionnement" HorizontalAlignment="Left" Height="20" Margin="18,120,0,0" VerticalAlignment="Top" Width="100" Content="Fonctionement"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,116,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="207,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_Commune" HorizontalAlignment="Left" Height="20" Margin="18,157,0,0" VerticalAlignment="Top" Width="95" Content="Commune"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,153,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="207,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_Quartier" HorizontalAlignment="Left" Height="20" Margin="18,182,0,0" VerticalAlignment="Top" Width="95" Content="Quartier"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,178,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="207,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_Secteur" HorizontalAlignment="Left" Height="20" Margin="18,207,0,0" VerticalAlignment="Top" Width="95" Content="Secteur"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,203,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" 
+                 Margin="207,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_Rue" HorizontalAlignment="Left" Height="20" Margin="18,232,0,0" VerticalAlignment="Top" Width="95" Content="Rue"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="118,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="165,228,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="207,229,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <sdk:Label x:Name="lbl_NumRue" HorizontalAlignment="Left" Height="20" Margin="21,271,0,0" VerticalAlignment="Top" Width="97" Content="Numero rue"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="130,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72"/>
+        <sdk:Label x:Name="lbl_ComplementRue" HorizontalAlignment="Left" Height="20" Margin="212,272,0,0" VerticalAlignment="Top" Width="94" Content="Complement rue"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="321,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+        <sdk:Label x:Name="lbl_Etage" HorizontalAlignment="Left" Height="20" Margin="21,296,0,0" VerticalAlignment="Top" Width="97" Content="Etage "/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="130,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72"/>
+        <sdk:Label x:Name="lbl_Porte" HorizontalAlignment="Left" Height="20" Margin="212,297,0,0" VerticalAlignment="Top" Width="94" Content="Porte"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="321,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+        <sdk:Label x:Name="lbl_Complement" HorizontalAlignment="Left" Height="20" Margin="21,321,0,0" VerticalAlignment="Top" Width="97" Content="Complement"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="130,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="346"/>
+        <sdk:Label x:Name="lbl_Parcelle" HorizontalAlignment="Left" Height="20" Margin="21,346,0,0" VerticalAlignment="Top" Width="97" Content="Parcelle"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="130,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="72"/>
+        <sdk:Label x:Name="lbl_CodePostale" HorizontalAlignment="Left" Height="20" Margin="212,347,0,0" VerticalAlignment="Top" Width="94" Content="Code postal"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="321,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+    </Grid>
+</controls:ChildWindow>

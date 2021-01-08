@@ -1,0 +1,80 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Recouvrement.AffecteClientCampagne"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           Style="{StaticResource ChildWindowGalatee}" OverlayBrush="Transparent"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           Width="1084.657" Height="683" 
+           Title="AffecteClientCampagne">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox  Header="Sélection de centre" Background="WhiteSmoke" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" VerticalAlignment="Top" Width="1037"/>
+        <Controls:GroupBox  Header="Méthode de selection des client à controler" Background="WhiteSmoke" HorizontalAlignment="Left" Height="72" Margin="10,69,0,0" VerticalAlignment="Top" Width="1037"/>
+        <Controls:GroupBox  Header="Critères Selection Client" Background="WhiteSmoke" HorizontalAlignment="Left" Height="428" Margin="10,146,0,0" VerticalAlignment="Top" Width="1037" Grid.RowSpan="2"/>
+        <Controls:GroupBox  Header="Selection Client" Background="WhiteSmoke" HorizontalAlignment="Left" Height="348" Margin="10,209,0,0" VerticalAlignment="Top" Width="1037">
+        </Controls:GroupBox>
+        <!--<Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,680,20,122" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,680,100,122" />-->
+        <!--<sdk:Label x:Name="lblTypeContrat" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="319,34,0,0" Content="Type Contrat :"/>
+        <TextBox x:Name="txttypecontrat" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Margin="425,34,0,0"/>-->
+        <ComboBox x:Name="cbxmethrech" HorizontalAlignment="Left" VerticalAlignment="Top" Width="338" Margin="211,97,0,0" SelectionChanged="cbxmethrech_SelectionChanged"/>
+        <sdk:Label x:Name="lblmethrech" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="134" Margin="72,100,0,0" Content="Methpde de recherche :"/>
+        <sdk:DataGrid x:Name="dgparam" HorizontalAlignment="Left" Height="29" Visibility="Collapsed"  VerticalAlignment="Top" Width="1007" Margin="20,112,0,0" AutoGenerateColumns="False">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="LIBELLE" Width="Auto" Binding="{Binding Path=LibelleParametre}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="DESCRIPTION" Width="Auto" Binding="{Binding Path=Description}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="VALEUR" Width="Auto" Binding="{Binding Path=ValeurGlobaleInt}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <ComboBox x:Name="cbxtypeclient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="135,175,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxcompteur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="135,205,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxtarif" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Margin="390,175,0,0" Visibility="Collapsed"/>
+        <ComboBox x:Name="cbxagetzone" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Margin="390,205,0,0" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="115" Margin="20,176,0,0" Content="Catergorie :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="110" Margin="20,205,0,0" Content="Calibre compteur :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="93" Margin="297,175,0,0" Content="Tarif :" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="88" Margin="297,209,0,0" Content="Agent de zone :" Visibility="Collapsed"/>
+        <!--<CheckBox Content="Ne pas prendre en compte les clients dont le derniers controle date d'il ya au moin :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,319,0,0" Width="489"/>-->
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="145" Margin="65,172,0,0" Content="Période début (AAAAMM):"/>
+        <Button x:Name="bntLoadClient" Content="Actualiser le selection" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="395,174,0,0" Click="bntLoadClient_Click"/>
+
+        <toolkit:DataGridDragDropTarget   HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="484" Margin="563,242,0,0"   AllowedSourceEffects="Copy" Drop="DataGridDragDropTarget_Drop_2"  >
+            <sdk:DataGrid x:Name="dgclientselectionne" Height="302" Width="478" AutoGenerateColumns="False">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="REFCLIENT" Width="Auto" Binding="{Binding Path=REFCLIENT}" />
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NOMABON" Width="Auto" Binding="{Binding Path=NOMABON}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CONSO" Width="Auto" Binding="{Binding Path=CODECONSO}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CENTRE" Width="Auto" Binding="{Binding Path=CENTRE}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMPTEUR" Width="Auto" Binding="{Binding Path=COMPTEUR}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="TELEPHONE" Width="Auto" Binding="{Binding Path=TELEPHONE}"/>
+                </sdk:DataGrid.Columns>
+
+            </sdk:DataGrid>
+        </toolkit:DataGridDragDropTarget>
+        <toolkit:DataGridDragDropTarget  HorizontalAlignment="Left" Height="327" VerticalAlignment="Top" Width="478" Margin="10,230,0,0" AllowedSourceEffects="Copy" >
+            <sdk:DataGrid x:Name="dgClientEligible" Height="299" Width="470" AutoGenerateColumns="False">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="REFCLIENT" Width="Auto" Binding="{Binding Path=REFCLIENT}" />
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="NOMABON" Width="Auto" Binding="{Binding Path=NOMABON}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CONSO" Width="Auto" Binding="{Binding Path=CODECONSO}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CENTRE" Width="Auto" Binding="{Binding Path=CENTRE}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="COMPTEUR" Width="Auto" Binding="{Binding Path=COMPTEUR}"/>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="TELEPHONE" Width="Auto" Binding="{Binding Path=TELEPHONE}"/>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </toolkit:DataGridDragDropTarget>
+        <Button Content=">>" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="493,424,0,0" Click="Button_Click_1"/>
+        <Button x:Name="Decharger" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="493,465,0,0" Click="Button_Click_2" Height="21"/>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,7,0,5" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,7,79,5" Grid.Row="1" />
+        <sdk:Label x:Name="label3" Content="Centre" Width="56" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="65,35,0,0" />
+        <TextBox Height="23" x:Name="txtCentre" Width="47" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" TextChanged="txtCentre_TextChanged" Margin="159,31,0,0"  />
+        <ComboBox x:Name="Cbo_Centre" Width="234" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="211,31,0,0" SelectionChanged="Cbo_Centre_SelectionChanged"  Height="23" />
+        <TextBox HorizontalAlignment="Left" Height="23" Name="txt_Periode" Margin="215,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134"/>
+    </Grid>
+</controls:ChildWindow>

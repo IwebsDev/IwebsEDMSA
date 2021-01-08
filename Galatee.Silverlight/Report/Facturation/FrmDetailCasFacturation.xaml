@@ -1,0 +1,39 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           x:Class="Galatee.Silverlight.Report.FrmDetailCasFacturation"
+           Width="1080" Height="565.31" 
+           Title="Détails des cas facturés" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="209" HorizontalAlignment="Right" Margin="0,451,0,4" />
+        <Button x:Name="OKButton" Content="Imprimer" Click="OKButton_Click" Width="179" HorizontalAlignment="Right" Margin="0,451,245,4" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="445" HorizontalAlignment="Left" x:Name="dataGrid1" VerticalAlignment="Top" Width="1042">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Centre" Binding="{Binding CENTRE}"  Width="Auto" MaxWidth="50" MinWidth="45" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Binding="{Binding CLIENT}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre" Binding="{Binding ORDRE}"  Width="Auto" MaxWidth="35" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Période" Binding="{Binding PERIODE}"  Width="Auto" MaxWidth="80" MinWidth="80" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Binding="{Binding NOMABON}"  Width="Auto" MaxWidth="200" MinWidth="200" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Cas" Binding="{Binding CAS}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Tournée" Binding="{Binding TOURNEE}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre tournée" Binding="{Binding ORDTOUR}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Rue" Binding="{Binding RUE}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Porte" Binding="{Binding PORTE}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Conso Rel" Binding="{Binding CONSO}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Conso Fac" Binding="{Binding CONSOFAC}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}"  Width="Auto" MaxWidth="80" MinWidth="35" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

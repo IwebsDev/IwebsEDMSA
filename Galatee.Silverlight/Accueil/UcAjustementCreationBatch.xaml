@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Galatee.Silverlight.Accueil.UcAjustementCreationBatch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="268" d:DesignWidth="726" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="UserControl_Loaded">
+    
+    <Grid x:Name="LayoutRoot" Background="White" Width="710" Height="254">
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="138,14,0,0" Name="cbo_TypeBatch" VerticalAlignment="Top" Width="212" SelectionChanged="cbo_TypeBatch_SelectionChanged" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="138,39,0,0" Name="Cbo_Origine" VerticalAlignment="Top" Width="212" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,63,0,0" Name="Txt_NumeroBatch" VerticalAlignment="Top" Width="120" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="89,114,0,0" Name="button1" VerticalAlignment="Top" Width="32" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="138,113,0,0" Name="Txt_CodeControle" VerticalAlignment="Top" Width="212" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="532,40,0,0" Name="Cbo_MoisComptable" VerticalAlignment="Top" Width="134" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="534,68,0,0" Name="datePicker1" VerticalAlignment="Top" Width="134" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="532,111,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Type de batch" Height="28" HorizontalAlignment="Left" Margin="11,16,0,0" Name="lbl_TypeBatch" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Origine" Height="28" HorizontalAlignment="Left" Margin="11,39,0,0" Name="lbl_Origine" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Numero Batch" Height="28" HorizontalAlignment="Left" Margin="11,65,0,0" Name="lbl_NumBatch" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Caisse" Height="28" HorizontalAlignment="Left" Margin="11,92,0,0" Name="lbl_Caisse" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Controle" Height="28" HorizontalAlignment="Left" Margin="11,117,0,0" Name="lbl_Controle" VerticalAlignment="Top" Width="94" />
+        <sdk:Label Content="Date Batch" Height="28" HorizontalAlignment="Left" Margin="386,72,0,0" Name="lbl_DateBatch" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Mois Comptable" Height="28" HorizontalAlignment="Left" Margin="386,43,0,0" Name="lbl_MoisCompta" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Montant" Height="19" HorizontalAlignment="Left" Margin="386,115,0,0" Name="lbl_Montant" VerticalAlignment="Top" Width="120" />
+        <Button Content="Autres informations" Height="23" HorizontalAlignment="Left" Margin="386,10,0,0" Name="btn_AutreInfo" VerticalAlignment="Top" Width="130" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="532,10,0,0" Name="textBox4" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,88,0,0" Name="Txt_NumCaisse" VerticalAlignment="Top" Width="94" />
+    </Grid>
+</UserControl>

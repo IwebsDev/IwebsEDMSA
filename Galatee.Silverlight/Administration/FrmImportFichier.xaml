@@ -1,0 +1,40 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Administration.FrmImportFichier"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources"
+            xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+            Width="523" Height="529.164" 
+           Title="Import de fichier" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2,2,2,38">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox x:Name="gb2_Copy1" Background="Transparent"  HorizontalAlignment="Left" Height="111" Margin="10,0,0,0" VerticalAlignment="Top" Width="485" Header="Description" />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,10,-33" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="19,27,0,0" VerticalAlignment="Top" Width="120" Content="Titre de l'import"/>
+        <Controls:GroupBox x:Name="gb2_Copy" Background="WhiteSmoke" HorizontalAlignment="Left" Height="250" Margin="10,116,0,0" VerticalAlignment="Top" Width="485" Header="Paramétrage" />
+        <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="44" Margin="121,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="19,55,0,0" VerticalAlignment="Top" Width="120" Content="Description"/>
+        <sdk:Label x:Name="lblRepert" HorizontalAlignment="Left" Height="28" Margin="30,304,0,0" VerticalAlignment="Top" Width="120" Content="Répertoire du fichier"/>
+        <sdk:Label x:Name="lblFichier" HorizontalAlignment="Left" Height="28" Margin="30,332,0,0" VerticalAlignment="Top" Width="120" Content="Fichier à importer"/>
+        <TextBox x:Name="txtProc" HorizontalAlignment="Left" IsEnabled="False"  Height="99" Margin="30,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"/>
+        <TextBox x:Name="txtRepert" HorizontalAlignment="Left" Height="23" Margin="201,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <TextBox x:Name="txtFichier" HorizontalAlignment="Left" Height="23" Margin="201,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <Button x:Name="btnStructure" Content="Définition de la structure du fichier" HorizontalAlignment="Left" Margin="264,384,0,0" VerticalAlignment="Top" Width="219" Click="btnStructure_Click_1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="19,384,0,0" VerticalAlignment="Top" Width="120" Content="Nombre de colonnes:" />
+        <TextBox x:Name="txtNbCol"  HorizontalAlignment="Left" Height="23" Margin="144,383,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" IsReadOnly="true"/>
+        <TextBox x:Name="txtTitre" HorizontalAlignment="Left" Height="23" Margin="119,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364"/>
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,102,-33" Grid.Row="1" />
+        <CheckBox x:Name="ChkProcedure" Content="Utiliser procédure stockée " IsEnabled="False"  HorizontalAlignment="Left" Margin="30,150,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="chkb_Fichier" Content="Fichier" GroupName="TypeConnection"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,278,0,0" Checked="chkb_Fichier_Checked"/>
+        <RadioButton x:Name="chkb_BaseDeDonnee" Content="Base de donnée" IsEnabled="False"  GroupName="TypeConnection" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="256,278,0,0" Checked="chkb_BaseDeDonnee_Checked"/>
+        <Button x:Name="btn_Config_Bd" Visibility="Collapsed" Click="btn_Config_Bd_Click" Content="Configuration Base de données distante" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228" Margin="122,312,0,0"/>
+    </Grid>
+</controls:ChildWindow>

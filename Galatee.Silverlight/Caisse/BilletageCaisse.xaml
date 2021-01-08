@@ -1,0 +1,34 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Classes="clr-namespace:Galatee.Silverlight.Classes" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Caisse.BilletageCaisse"
+           Width="566" Height="321" 
+           Title="BilletageCaisse" Margin="-6,0,6,0">
+    
+    <controls:ChildWindow.Resources>
+        <Classes:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Classes:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <controls:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </controls:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="163" HorizontalAlignment="Left" Margin="10,10,0,0"  IsTabStop="True" FontSize="12" TabIndex="1"
+    		x:Name="Lsv_Monaie" VerticalAlignment="Top" Width="518" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn  Header="Libelle" Binding="{Binding LIBELLE}" MinWidth="150" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Valeur" Binding="{Binding VALEUR,Converter={StaticResource DecimalConverter}}" MinWidth="120" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="408,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="246,177,0,0" VerticalAlignment="Top" Content=" Total èspece encaissé" Width="157"/>
+    </Grid>
+</controls:ChildWindow>

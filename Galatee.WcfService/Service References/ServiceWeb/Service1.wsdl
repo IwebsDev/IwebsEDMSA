@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1818/Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_RetourneEtatDeCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatDeCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneEtatDeCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatDeCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneEtatDeCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDetailMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDetailMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDetailMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDetailMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDetailMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementDuRecu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementDuRecu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementDuRecu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementDuRecuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementDuRecu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsererEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsererEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsererEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumeroRecu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumeroRecu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumeroRecu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumeroRecuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumeroRecu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AnnuleEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnnuleEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AnnuleEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnnuleEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AnnuleEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDemande" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSite" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeSite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneModeRegDiffDeUnDeux_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneModeRegDiffDeUnDeux" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneModeRegDiffDeUnDeux_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneModeRegDiffDeUnDeuxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneModeRegDiffDeUnDeux_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLeDevis_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLeDevis" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLeDevis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLeDevisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLeDevis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourDevis_InputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourDevis" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourDevis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourDevisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourDevis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseOuverteALaDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseOuverteALaDemande" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseOuverteALaDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseOuverteALaDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseOuverteALaDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseDejaSaisie_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseDejaSaisie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseDejaSaisie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseDejaSaisieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieCaisseDejaSaisie_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MiseAJourMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeCoperOD_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeCoperOD" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeCoperOD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeCoperODResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDeCoperOD_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeTa58_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTa58" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeTa58_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTa58Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeTa58_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListeCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListeCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListeCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMenuDuRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuRole" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMenuDuRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuDuRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMenuDuRole_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListImprante_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListImprante" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListImprante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListImpranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListImprante_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumereWrapper_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumereWrapper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumereWrapper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumereWrapperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumereWrapper_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_launchPrinting_InputMessage">
+    <wsdl:part name="parameters" element="tns:launchPrinting" />
+  </wsdl:message>
+  <wsdl:message name="IService1_launchPrinting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:launchPrintingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_launchPrinting_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumere_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumere" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnEnumereResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnEnumere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ContextExecution_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContextExecution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ContextExecution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContextExecutionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ContextExecution_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneInfoMatriculeConnecte_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoMatriculeConnecte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneInfoMatriculeConnecte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoMatriculeConnecteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneInfoMatriculeConnecte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerMenuEtSousMenu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerMenuEtSousMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenuDuProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerMenuEtSousMenuDuProfil" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenuDuProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerMenuEtSousMenuDuProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerMenuEtSousMenuDuProfil_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerListeCodeRegroupement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeCodeRegroupement" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerListeCodeRegroupement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeCodeRegroupementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChargerListeCodeRegroupement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieEtatCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieEtatCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieEtatCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieEtatCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifieEtatCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExist" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExist_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestClientExists_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFacture" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesClientsReg_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesClientsReg" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesClientsReg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesClientsRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesClientsReg_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesCaissiere_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesCaissiere" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesCaissiere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesCaissiereResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesCaissiere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesNonCaissiere_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesNonCaissiere" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesNonCaissiere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesNonCaissiereResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListeDesNonCaissiere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValideOuvertureCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValideOuvertureCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValideOuvertureCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValideOuvertureCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValideOuvertureCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesBanques_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesBanques" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesBanques_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesBanquesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListeDesBanques_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q40:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClosureOfCashRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClosureOfCashRegister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClosureOfCashRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClosureOfCashRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClosureOfCashRegister_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q41:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementPourAnnulation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementPourAnnulation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementPourAnnulation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementPourAnnulationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneListePaiementPourAnnulation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q42:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q43:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisseList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneRecuDeCaisseList_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q44:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumFactureNaf_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumFactureNaf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumFactureNaf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumFactureNafResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneNumFactureNaf_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q45:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLigneNaf_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLigneNaf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLigneNaf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLigneNafResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetourneLigneNaf_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q46:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="RetourneEtatDeCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneEtatDeCaisse" message="tns:IService1_RetourneEtatDeCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneEtatDeCaisseResponse" message="tns:IService1_RetourneEtatDeCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneEtatDeCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneEtatDeCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeMoratoire" message="tns:IService1_RetourneListeMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeMoratoireResponse" message="tns:IService1_RetourneListeMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeMoratoireErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDetailMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneDetailMoratoire" message="tns:IService1_RetourneDetailMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneDetailMoratoireResponse" message="tns:IService1_RetourneDetailMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneDetailMoratoireErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneDetailMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementDuRecu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementDuRecu" message="tns:IService1_RetourneListePaiementDuRecu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementDuRecuResponse" message="tns:IService1_RetourneListePaiementDuRecu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementDuRecuErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListePaiementDuRecu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsererEncaissement" message="tns:IService1_InsererEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsererEncaissementResponse" message="tns:IService1_InsererEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/InsererEncaissementErrorsFault" name="ErrorsFault" message="tns:IService1_InsererEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumeroRecu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneNumeroRecu" message="tns:IService1_RetourneNumeroRecu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneNumeroRecuResponse" message="tns:IService1_RetourneNumeroRecu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneNumeroRecuErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneNumeroRecu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnnuleEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AnnuleEncaissement" message="tns:IService1_AnnuleEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AnnuleEncaissementResponse" message="tns:IService1_AnnuleEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/AnnuleEncaissementErrorsFault" name="ErrorsFault" message="tns:IService1_AnnuleEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneDemande" message="tns:IService1_RetourneDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneDemandeResponse" message="tns:IService1_RetourneDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneDemandeErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeDeSite" message="tns:IService1_RetourneListeDeSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeDeSiteResponse" message="tns:IService1_RetourneListeDeSite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeDeSiteErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeDeSite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneModeRegDiffDeUnDeux">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneModeRegDiffDeUnDeux" message="tns:IService1_RetourneModeRegDiffDeUnDeux_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneModeRegDiffDeUnDeuxResponse" message="tns:IService1_RetourneModeRegDiffDeUnDeux_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneModeRegDiffDeUnDeuxErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneModeRegDiffDeUnDeux_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLeDevis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneLeDevis" message="tns:IService1_RetourneLeDevis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneLeDevisResponse" message="tns:IService1_RetourneLeDevis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneLeDevisErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneLeDevis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourDevis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MiseAJourDevis" message="tns:IService1_MiseAJourDevis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MiseAJourDevisResponse" message="tns:IService1_MiseAJourDevis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/MiseAJourDevisErrorsFault" name="ErrorsFault" message="tns:IService1_MiseAJourDevis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseOuverteALaDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerifieCaisseOuverteALaDemande" message="tns:IService1_VerifieCaisseOuverteALaDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerifieCaisseOuverteALaDemandeResponse" message="tns:IService1_VerifieCaisseOuverteALaDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/VerifieCaisseOuverteALaDemandeErrorsFault" name="ErrorsFault" message="tns:IService1_VerifieCaisseOuverteALaDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseDejaSaisie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerifieCaisseDejaSaisie" message="tns:IService1_VerifieCaisseDejaSaisie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerifieCaisseDejaSaisieResponse" message="tns:IService1_VerifieCaisseDejaSaisie_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/VerifieCaisseDejaSaisieErrorsFault" name="ErrorsFault" message="tns:IService1_VerifieCaisseDejaSaisie_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MiseAJourMoratoire" message="tns:IService1_MiseAJourMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MiseAJourMoratoireResponse" message="tns:IService1_MiseAJourMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/MiseAJourMoratoireErrorsFault" name="ErrorsFault" message="tns:IService1_MiseAJourMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeCoperOD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeDeCoperOD" message="tns:IService1_RetourneListeDeCoperOD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeDeCoperODResponse" message="tns:IService1_RetourneListeDeCoperOD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeDeCoperODErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeDeCoperOD_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTa58">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeTa58" message="tns:IService1_RetourneListeTa58_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeTa58Response" message="tns:IService1_RetourneListeTa58_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeTa58ErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeTa58_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListeCaisse" message="tns:IService1_ListeCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListeCaisseResponse" message="tns:IService1_ListeCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ListeCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_ListeCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetDataErrorsFault" name="ErrorsFault" message="tns:IService1_GetData_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMenuDuRole" message="tns:IService1_GetMenuDuRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMenuDuRoleResponse" message="tns:IService1_GetMenuDuRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetMenuDuRoleErrorsFault" name="ErrorsFault" message="tns:IService1_GetMenuDuRole_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListImprante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListImprante" message="tns:IService1_RetourneListImprante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListImpranteResponse" message="tns:IService1_RetourneListImprante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListImpranteErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListImprante_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumereWrapper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/returnEnumereWrapper" message="tns:IService1_returnEnumereWrapper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/returnEnumereWrapperResponse" message="tns:IService1_returnEnumereWrapper_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/returnEnumereWrapperErrorsFault" name="ErrorsFault" message="tns:IService1_returnEnumereWrapper_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="launchPrinting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/launchPrinting" message="tns:IService1_launchPrinting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/launchPrintingResponse" message="tns:IService1_launchPrinting_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/launchPrintingErrorsFault" name="ErrorsFault" message="tns:IService1_launchPrinting_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/returnEnumere" message="tns:IService1_returnEnumere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/returnEnumereResponse" message="tns:IService1_returnEnumere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/returnEnumereErrorsFault" name="ErrorsFault" message="tns:IService1_returnEnumere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContextExecution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ContextExecution" message="tns:IService1_ContextExecution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ContextExecutionResponse" message="tns:IService1_ContextExecution_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ContextExecutionErrorsFault" name="ErrorsFault" message="tns:IService1_ContextExecution_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractErrorsFault" name="ErrorsFault" message="tns:IService1_GetDataUsingDataContract_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoMatriculeConnecte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneInfoMatriculeConnecte" message="tns:IService1_RetourneInfoMatriculeConnecte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneInfoMatriculeConnecteResponse" message="tns:IService1_RetourneInfoMatriculeConnecte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneInfoMatriculeConnecteErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneInfoMatriculeConnecte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerMenuEtSousMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenu" message="tns:IService1_ChargerMenuEtSousMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenuResponse" message="tns:IService1_ChargerMenuEtSousMenu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenuErrorsFault" name="ErrorsFault" message="tns:IService1_ChargerMenuEtSousMenu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerMenuEtSousMenuDuProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenuDuProfil" message="tns:IService1_ChargerMenuEtSousMenuDuProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenuDuProfilResponse" message="tns:IService1_ChargerMenuEtSousMenuDuProfil_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ChargerMenuEtSousMenuDuProfilErrorsFault" name="ErrorsFault" message="tns:IService1_ChargerMenuEtSousMenuDuProfil_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeCodeRegroupement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChargerListeCodeRegroupement" message="tns:IService1_ChargerListeCodeRegroupement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChargerListeCodeRegroupementResponse" message="tns:IService1_ChargerListeCodeRegroupement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ChargerListeCodeRegroupementErrorsFault" name="ErrorsFault" message="tns:IService1_ChargerListeCodeRegroupement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieEtatCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerifieEtatCaisse" message="tns:IService1_VerifieEtatCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerifieEtatCaisseResponse" message="tns:IService1_VerifieEtatCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/VerifieEtatCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_VerifieEtatCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TestClientExist" message="tns:IService1_TestClientExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TestClientExistResponse" message="tns:IService1_TestClientExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/TestClientExistErrorsFault" name="ErrorsFault" message="tns:IService1_TestClientExist_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TestClientExists" message="tns:IService1_TestClientExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TestClientExistsResponse" message="tns:IService1_TestClientExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/TestClientExistsErrorsFault" name="ErrorsFault" message="tns:IService1_TestClientExists_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneNumCaisse" message="tns:IService1_RetourneNumCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneNumCaisseResponse" message="tns:IService1_RetourneNumCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneNumCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneNumCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeFacture" message="tns:IService1_RetourneListeFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeFactureResponse" message="tns:IService1_RetourneListeFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeFactureErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesClientsReg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeDesClientsReg" message="tns:IService1_RetourneListeDesClientsReg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeDesClientsRegResponse" message="tns:IService1_RetourneListeDesClientsReg_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeDesClientsRegErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeDesClientsReg_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesCaissiere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListeDesCaissiere" message="tns:IService1_getListeDesCaissiere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListeDesCaissiereResponse" message="tns:IService1_getListeDesCaissiere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/getListeDesCaissiereErrorsFault" name="ErrorsFault" message="tns:IService1_getListeDesCaissiere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesNonCaissiere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListeDesNonCaissiere" message="tns:IService1_getListeDesNonCaissiere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListeDesNonCaissiereResponse" message="tns:IService1_getListeDesNonCaissiere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/getListeDesNonCaissiereErrorsFault" name="ErrorsFault" message="tns:IService1_getListeDesNonCaissiere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValideOuvertureCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ValideOuvertureCaisse" message="tns:IService1_ValideOuvertureCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ValideOuvertureCaisseResponse" message="tns:IService1_ValideOuvertureCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ValideOuvertureCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_ValideOuvertureCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesBanques">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListeDesBanques" message="tns:IService1_RetourneListeDesBanques_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListeDesBanquesResponse" message="tns:IService1_RetourneListeDesBanques_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListeDesBanquesErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListeDesBanques_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosureOfCashRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ClosureOfCashRegister" message="tns:IService1_ClosureOfCashRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ClosureOfCashRegisterResponse" message="tns:IService1_ClosureOfCashRegister_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/ClosureOfCashRegisterErrorsFault" name="ErrorsFault" message="tns:IService1_ClosureOfCashRegister_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementPourAnnulation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementPourAnnulation" message="tns:IService1_RetourneListePaiementPourAnnulation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementPourAnnulationResponse" message="tns:IService1_RetourneListePaiementPourAnnulation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneListePaiementPourAnnulationErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneListePaiementPourAnnulation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisse" message="tns:IService1_RetourneRecuDeCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisseResponse" message="tns:IService1_RetourneRecuDeCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisseErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneRecuDeCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisseList" message="tns:IService1_RetourneRecuDeCaisseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisseListResponse" message="tns:IService1_RetourneRecuDeCaisseList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneRecuDeCaisseListErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneRecuDeCaisseList_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumFactureNaf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneNumFactureNaf" message="tns:IService1_RetourneNumFactureNaf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneNumFactureNafResponse" message="tns:IService1_RetourneNumFactureNaf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneNumFactureNafErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneNumFactureNaf_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLigneNaf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetourneLigneNaf" message="tns:IService1_RetourneLigneNaf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetourneLigneNafResponse" message="tns:IService1_RetourneLigneNaf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService1/RetourneLigneNafErrorsFault" name="ErrorsFault" message="tns:IService1_RetourneLigneNaf_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetourneEtatDeCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneEtatDeCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeMoratoire">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDetailMoratoire">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneDetailMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementDuRecu">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListePaiementDuRecu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsererEncaissement">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsererEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumeroRecu">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneNumeroRecu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnnuleEncaissement">
+      <soap:operation soapAction="http://tempuri.org/IService1/AnnuleEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDemande">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeSite">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeDeSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneModeRegDiffDeUnDeux">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneModeRegDiffDeUnDeux" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLeDevis">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneLeDevis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourDevis">
+      <soap:operation soapAction="http://tempuri.org/IService1/MiseAJourDevis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseOuverteALaDemande">
+      <soap:operation soapAction="http://tempuri.org/IService1/VerifieCaisseOuverteALaDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseDejaSaisie">
+      <soap:operation soapAction="http://tempuri.org/IService1/VerifieCaisseDejaSaisie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourMoratoire">
+      <soap:operation soapAction="http://tempuri.org/IService1/MiseAJourMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeCoperOD">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeDeCoperOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTa58">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeTa58" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListeCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuDuRole">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMenuDuRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListImprante">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListImprante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumereWrapper">
+      <soap:operation soapAction="http://tempuri.org/IService1/returnEnumereWrapper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="launchPrinting">
+      <soap:operation soapAction="http://tempuri.org/IService1/launchPrinting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="returnEnumere">
+      <soap:operation soapAction="http://tempuri.org/IService1/returnEnumere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ContextExecution">
+      <soap:operation soapAction="http://tempuri.org/IService1/ContextExecution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoMatriculeConnecte">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneInfoMatriculeConnecte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerMenuEtSousMenu">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChargerMenuEtSousMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerMenuEtSousMenuDuProfil">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChargerMenuEtSousMenuDuProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeCodeRegroupement">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChargerListeCodeRegroupement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieEtatCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/VerifieEtatCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExist">
+      <soap:operation soapAction="http://tempuri.org/IService1/TestClientExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExists">
+      <soap:operation soapAction="http://tempuri.org/IService1/TestClientExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneNumCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFacture">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesClientsReg">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeDesClientsReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesCaissiere">
+      <soap:operation soapAction="http://tempuri.org/IService1/getListeDesCaissiere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesNonCaissiere">
+      <soap:operation soapAction="http://tempuri.org/IService1/getListeDesNonCaissiere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValideOuvertureCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/ValideOuvertureCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesBanques">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListeDesBanques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosureOfCashRegister">
+      <soap:operation soapAction="http://tempuri.org/IService1/ClosureOfCashRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementPourAnnulation">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneListePaiementPourAnnulation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisse">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneRecuDeCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisseList">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneRecuDeCaisseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumFactureNaf">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneNumFactureNaf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLigneNaf">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetourneLigneNaf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:1818/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

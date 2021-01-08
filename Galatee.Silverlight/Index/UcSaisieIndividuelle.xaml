@@ -1,0 +1,97 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.UcSaisieIndividuelle"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="727.372" Height="521" 
+           Title="Saisie individuelle d'index" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2" Width="697">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,8,5,4" Grid.Row="1" />
+        <Button x:Name="btn_Valider" Content="Valider" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,8,85,4" Grid.Row="1" />
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox1_Copy" Margin="0,0,0,359"  />
+
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,10,364">
+                <Border BorderBrush="Transparent" BorderThickness="0" Height="19" Margin="-1,-2,-1,0" Name="border17" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <sdk:Label Content="Batch" Height="18" Name="label10" Width="44" />
+                </Border>
+                <sdk:Label Height="17" HorizontalAlignment="Left" Margin="83,-1,0,0" Name="label1" VerticalAlignment="Top" Width="47" Content="Centre" />
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="2,16,0,0" Name="border1" VerticalAlignment="Top" Width="62">
+                    <sdk:Label Height="22" Name="lb_Batch" Width="62" />
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="65,16,0,0" Name="border2" VerticalAlignment="Top" Width="65">
+                    <sdk:Label Height="22" Name="lb_Centre" Width="62" />
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="131,16,0,0" Name="border3" VerticalAlignment="Top" Width="234">
+                    <sdk:Label Height="21" Name="lb_Releveur" Width="231" />
+                </Border>
+                <sdk:Label Content="Releveur" Height="17" HorizontalAlignment="Left" Margin="230,-2,0,0" Name="label4" VerticalAlignment="Top" Width="89" />
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="367,16,0,0" Name="border4" VerticalAlignment="Top" Width="140">
+                    <sdk:Label Height="22" Name="lb_Client" Width="135" />
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="508,16,0,0" Name="border5" VerticalAlignment="Top" Width="71">
+                    <sdk:Label Height="18" Name="lb_Produit" Width="67" />
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Height="22" HorizontalAlignment="Left" Margin="580,16,0,0" Name="border6" VerticalAlignment="Top" Width="50">
+                    <sdk:Label Height="18" Name="lb_point" Width="46" />
+                </Border>
+                <sdk:Label Height="19" HorizontalAlignment="Center" Margin="375,-1,164,0" Name="label3" VerticalAlignment="Top" Width="120" Content="Adresse" />
+                <sdk:Label Height="20" HorizontalAlignment="Center" Margin="504,0,90,0" Name="label2" VerticalAlignment="Top" Width="64" Content="Produit" HorizontalContentAlignment="Left" />
+                <sdk:Label Height="20" HorizontalAlignment="Left" Margin="582,0,0,0" Name="label5" VerticalAlignment="Top" Width="29" Content="Point" />
+            </Grid>
+       
+        <sdk:DataGrid AutoGenerateColumns="False" Height="179" HorizontalAlignment="Left" 
+                      Margin="0,146,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="692" IsReadOnly="True" 
+                      SelectionChanged="dataGrid1_SelectionChanged" LoadingRow="dataGrid1_LoadingRow_1" >              
+                      
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding DATEEVT,Converter={StaticResource DateTimeConverter}}" CanUserResize="False" CanUserSort="False" IsReadOnly="True" Width="Auto" MaxWidth="90" MinWidth="90" Header="Date saisie" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding PERIODE}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="65" MinWidth="65" Header="Periode" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding DIAMETRE}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="80" MinWidth="80" Header="Diametre" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding COMPTEUR}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="120" MinWidth="120" Header="Compteur" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding INDEXEVT}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="90" MinWidth="90" Header="Index" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding CAS}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="50" MinWidth="50" Header="Cas" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding CONSO}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="70" MinWidth="60" Header="Conso" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding CONSOSAISIE}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="80" MinWidth="70" Header="Conso saisie" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding ENQUETE}"  CanUserResize="False" CanUserSort="False" Width="Auto" MaxWidth="50" MinWidth="50" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox1" Margin="0,52,0,270" Header="Evenement précédent" />
+
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="25,77,0,0" Name="label6" VerticalAlignment="Top" Width="99" Content="Periode" />
+        <sdk:Label Content="Libelle cas" Height="20" HorizontalAlignment="Left" Margin="25,107,0,0" Name="label7" VerticalAlignment="Top" Width="99" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="142,104,0,0" Name="Txt_CasLibelle" VerticalAlignment="Top" Width="417" IsReadOnly="True" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="143,75,0,0" Name="Txt_periodePrec" VerticalAlignment="Top" Width="107" IsReadOnly="True" />
+        <sdk:Label Content="Index" Height="20" HorizontalAlignment="Left" Margin="267,77,0,0" Name="label8" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="322,75,0,0" Name="Txt_ReadingPrec" VerticalAlignment="Top" Width="107" IsReadOnly="True" />
+        <sdk:Label Content="Coefficient" Height="20" HorizontalAlignment="Left" Margin="438,77,0,0" Name="label9" VerticalAlignment="Top" Width="74" />
+        
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="508,75,0,0" Name="txt_coef" VerticalAlignment="Top" Width="51" IsReadOnly="True" />
+
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox2" Margin="0,330,0,29" Header="Evenement " Grid.RowSpan="2" />
+
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="79,348,0,0" Name="Txt_DateEvt" VerticalAlignment="Top" Width="112" IsTabStop="True" TabIndex="0" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="243,379,0,0" Name="Txt_periode" Visibility="Collapsed"  VerticalAlignment="Top" Width="104"  />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="243,348,0,0" Name="Txt_IndexEvt" GotFocus="Txt_IndexEvt_GotFocus_1"  VerticalAlignment="Top" Width="104" IsTabStop="True" TabIndex="2"  TextChanged="Txt_IndexEvt_TextChanged" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="564,346,0,0" Name="Txt_Consomation" VerticalAlignment="Top" Width="77" IsTabStop="True" TabIndex="3" TextChanged="Txt_ConsoSaisie_TextChanged"  />
+        <Button Content="Creer" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="11,6,0,0" Name="btn_creation" VerticalAlignment="Top" Width="75" Click="btn_creation_Click" />
+        <Button Content="Supprimer" Height="23" HorizontalAlignment="Right" Margin="0,6,531,0" Name="btn_supprime" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="btn_supprime_Click" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="388,348,0,0" Name="Txt_CasIndex" VerticalAlignment="Top" Width="53" TextChanged="Txt_CasIndex_TextChanged" IsTabStop="True" TabIndex="1"  />
+        <sdk:Label HorizontalAlignment="Left" Height="24" Margin="10,344,0,0" Content="Date" VerticalAlignment="Top" Width="70"/>
+        <sdk:Label HorizontalAlignment="Left" Height="24" Margin="196,348,0,0" Content="Index" VerticalAlignment="Top" Width="42"/>
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="79,380,0,0" x:Name="txt_NumCpt" VerticalAlignment="Top" Width="112" IsReadOnly="True"  />
+        <sdk:Label HorizontalAlignment="Left" Height="24" Margin="11,379,0,0" Content="Compteur" VerticalAlignment="Top" Width="63"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="352,350,0,0" Content="Cas" VerticalAlignment="Top" Width="31"/>
+        <sdk:Label HorizontalAlignment="Left" Height="24" Margin="467,348,0,0" Content="Consommation" VerticalAlignment="Top" Width="92"/>
+        <sdk:Label HorizontalAlignment="Left" Height="24" Margin="196,379,0,0" Name="lbl_Periode" Content="Période" Visibility="Collapsed"  VerticalAlignment="Top" Width="42"/>
+    </Grid>
+</controls:ChildWindow>

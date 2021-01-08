@@ -1,0 +1,45 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.FrmIndexListeDesCas"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+            xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="516.765" Height="507" 
+           Title="Liste des cas" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" OverlayBrush="Transparent" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox1" Margin="-2,0,2,240" RenderTransformOrigin="0.5,0.5" />
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox2" Margin="-2,355,2,4" RenderTransformOrigin="0.5,0.5" />
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <CheckBox Content="Enquetable" Height="16" HorizontalAlignment="Left" Margin="18,78,0,0" Name="Chk_Enquete" VerticalAlignment="Top" Width="151" />
+        <CheckBox Content="Confirmés" Height="16" HorizontalAlignment="Left" Margin="18,99,0,0" Name="Chk_Confirme" VerticalAlignment="Top" Width="151" />
+        <CheckBox Content="Non enquetable" Height="16" HorizontalAlignment="Left" Margin="169,76,0,0" Name="chk_NonEnquetable" VerticalAlignment="Top" Width="151" />
+        
+        <sdk:DataGrid AutoGenerateColumns="False" Height="225" HorizontalAlignment="Left" Margin="0,125,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="487" SelectionChanged="dataGrid1_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Cas" 
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Cas" Binding="{Binding CODE}"  Width="Auto" MaxWidth="100" MinWidth="100" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Reference" Binding="{Binding LIBELLE}"  Width="Auto" MaxWidth="300" MinWidth="300" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Tout" Height="22" HorizontalAlignment="Left" Margin="18,365,0,0" Name="button4" VerticalAlignment="Top" Width="82" />
+        <Button Content="Rien" Height="22" HorizontalAlignment="Right" Margin="0,366,295,0" Name="button5" VerticalAlignment="Top" Width="84" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="391,97,0,0" Name="btn_Recherche" VerticalAlignment="Top" Width="75" Click="btn_Recherche_Click" />
+        <Button Content="Lot" Click="btn_batch_Click_1" Height="25" HorizontalAlignment="Left" Margin="18,7,0,0" x:Name="btn_batch" VerticalAlignment="Top" Width="87" />
+        <Button Content="Tourne"   Height="25" HorizontalAlignment="Left" Margin="18,37,0,0" x:Name="btn_Tournee" VerticalAlignment="Top" Width="87" Click="btn_tournee_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,9,0,0" x:Name="Txt_NumBatch" VerticalAlignment="Top" Width="191" Background="LightBlue" TextChanged="Txt_NumBatch_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,38,282,0" x:Name="Txt_zone" VerticalAlignment="Top" Width="97" TextChanged="Txt_zone_TextChanged" />
+        <sdk:Label x:Name="lbl_Centre" HorizontalAlignment="Left" Height="20" Margin="229,41,0,0" VerticalAlignment="Top" Width="237"/>
+    </Grid>
+</controls:ChildWindow>

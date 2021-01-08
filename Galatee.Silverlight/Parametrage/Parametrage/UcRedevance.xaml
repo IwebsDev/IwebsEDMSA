@@ -1,0 +1,52 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+    xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" x:Class="Galatee.Silverlight.Parametrage.UcRedevance"
+           Width="699" Height="290" OverlayBrush="Transparent"
+           Title="Redevance" AllowDrop="False" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="0,10,-3,-9" Height="207" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="117*" />
+            <ColumnDefinition Width="394*"/>
+            <ColumnDefinition Width="164*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="173" />
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+        <sdk:Label Content="Libellé :" Height="23" HorizontalAlignment="Left" Margin="144,43,0,0" x:Name="lab_Libelle" VerticalAlignment="Top" Width="47" Grid.Column="1" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,42,7,0" MaxLength="30" x:Name="Txt_Libelle" VerticalAlignment="Top" Width="358" BorderThickness="2" TabIndex="2" DataContext="{Binding}" TextChanged="On_TextChanged" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Controls:GroupBox Name="GboCodeDepart" Header="Informations" HorizontalAlignment="Left" VerticalAlignment="Top" Height="183" Width="675" Grid.ColumnSpan="3" Margin="0,-10,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="1,13,0,0" VerticalAlignment="Top" Width="57" Content="Centre" />
+        <ComboBox HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="197" Height="26" x:Name="CboCentre" SelectionChanged="OnComboSelectionChanged" Grid.ColumnSpan="2"/>
+        <sdk:Label HorizontalAlignment="Left" Height="19" Margin="143,14,0,0" VerticalAlignment="Top" Width="57" Content="Prodiut" Grid.Column="1" />
+        <ComboBox HorizontalAlignment="Left" Margin="197,10,0,0" VerticalAlignment="Top" Width="203" Height="26" x:Name="CboProduit" SelectionChanged="OnComboSelectionChanged" Grid.Column="1" Grid.ColumnSpan="2" />
+        <sdk:Label Height="25" Margin="13,13,0,0" x:Name="lab_Code" VerticalAlignment="Top" Content="Redevance :" HorizontalAlignment="Left" Width="78" Grid.Column="2" />
+        <Library:NumericTextBox Height="23" HorizontalAlignment="Right" Margin="0,12,7,0" x:Name="Txt_Redevance"  VerticalAlignment="Top" Width="61" MaxLength="2" TabIndex="1" TextChanged="On_TextChanged" Grid.Column="2" />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="3,42,0,0" VerticalAlignment="Top" Width="54" Content="Tranche" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="58,41,0,0" TextWrapping="Wrap" MaxLength="1"  VerticalAlignment="Top" Width="197" Name="TxtTranche" Grid.ColumnSpan="2"/>
+        <Button Content="OK" HorizontalAlignment="Right" IsEnabled="True" Margin="0,5,7,-29" x:Name="btnOk" TabIndex="3" Width="75" Click="BtnOK_Click" Grid.Row="1" Grid.Column="2" />
+        <Button Content="Annuler" IsEnabled="True" Margin="390,5,87,-29" x:Name="Btn_Reinitialiser" TabIndex="3" Click="Btn_Annuler_Click" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="1,74,0,0" VerticalAlignment="Top" Width="57" Content="Client" />
+        <ComboBox HorizontalAlignment="Left" Margin="58,71,0,0" VerticalAlignment="Top" Width="197" Height="26" x:Name="CboNatureClient" Grid.ColumnSpan="2"/>
+        <CheckBox Content="Exonérée" HorizontalAlignment="Left" Margin="4,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.267,0.294" Width="81" Name="ChkExoneree"/>
+        <CheckBox Content="Editable" HorizontalAlignment="Left" Margin="108,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.267,0.294" Width="95" Name="ChkEditable" Grid.ColumnSpan="2"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="146,72,0,0" VerticalAlignment="Top" Width="112" Content="Lien de redevance" Grid.Column="1" />
+        <ComboBox HorizontalAlignment="Left" Margin="265,69,0,0" VerticalAlignment="Top" Width="286" Height="26" x:Name="CboLienRedevance" Grid.Column="1" Grid.ColumnSpan="2" />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="86,102,0,0" VerticalAlignment="Top" Width="73" Content="Paramètre 1" Grid.Column="1" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="168,101,0,0" TextWrapping="Wrap" MaxLength="1" VerticalAlignment="Top" Width="65" Name="TxtParametre1" Grid.Column="1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="246,102,0,0" VerticalAlignment="Top" Width="77" Content="Paramètre 2" Grid.Column="1" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="332,101,0,0" TextWrapping="Wrap" MaxLength="1" VerticalAlignment="Top" Width="65" Name="TxtParametre2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="12,103,0,0" VerticalAlignment="Top" Width="75" Content="Paramètre 3" Grid.Column="2" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="92,102,0,0" TextWrapping="Wrap" MaxLength="1"  VerticalAlignment="Top" Width="65" Name="TxtParametre3" Grid.Column="2"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="8,129,0,0" VerticalAlignment="Top" Width="73" Content="Paramètre 4" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,128,0,0" TextWrapping="Wrap" MaxLength="1" VerticalAlignment="Top" Width="65" Name="TxtParametre4" Grid.ColumnSpan="2"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="86,129,0,0" VerticalAlignment="Top" Width="77" Content="Paramètre 5" Grid.Column="1" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="168,129,0,0" TextWrapping="Wrap" MaxLength="1" VerticalAlignment="Top" Width="65" Name="TxtParametre5" Grid.Column="1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="247,129,0,0" VerticalAlignment="Top" Width="75" Content="Paramètre 6" Grid.Column="1" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="332,129,0,0" TextWrapping="Wrap" MaxLength="1" VerticalAlignment="Top" Width="65" Name="TxtParametre6" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</sdk:ChildWindow>

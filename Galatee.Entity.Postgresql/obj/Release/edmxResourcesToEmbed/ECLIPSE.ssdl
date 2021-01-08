@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="12.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AGR" EntityType="Model.Store.AGR" store:Type="Tables" Schema="SYSTEM" />
+    <EntitySet Name="GL_INTERFACE" EntityType="Model.Store.GL_INTERFACE" store:Type="Tables" store:Schema="SYSTEM" store:Name="GL_INTERFACE">
+      <DefiningQuery>SELECT 
+      "GL_INTERFACE"."STATUS" AS "STATUS", 
+      "GL_INTERFACE"."LEDGER_ID" AS "LEDGER_ID", 
+      "GL_INTERFACE"."ACCOUNTING_DATE" AS "ACCOUNTING_DATE", 
+      "GL_INTERFACE"."CURRENCY_CODE" AS "CURRENCY_CODE", 
+      "GL_INTERFACE"."DATE_CREATED" AS "DATE_CREATED", 
+      "GL_INTERFACE"."CREATED_BY" AS "CREATED_BY", 
+      "GL_INTERFACE"."ACTUAL_FLAG" AS "ACTUAL_FLAG", 
+      "GL_INTERFACE"."USER_JE_CATEGORY_NAME" AS "USER_JE_CATEGORY_NAME", 
+      "GL_INTERFACE"."USER_JE_SOURCE_NAME" AS "USER_JE_SOURCE_NAME", 
+      "GL_INTERFACE"."CURRENCY_CONVERSION_DATE" AS "CURRENCY_CONVERSION_DATE", 
+      "GL_INTERFACE"."ENCUMBRANCE_TYPE_ID" AS "ENCUMBRANCE_TYPE_ID", 
+      "GL_INTERFACE"."BUDGET_VERSION_ID" AS "BUDGET_VERSION_ID", 
+      "GL_INTERFACE"."USER_CURRENCY_CONVERSION_TYPE" AS "USER_CURRENCY_CONVERSION_TYPE", 
+      "GL_INTERFACE"."CURRENCY_CONVERSION_RATE" AS "CURRENCY_CONVERSION_RATE", 
+      "GL_INTERFACE"."AVERAGE_JOURNAL_FLAG" AS "AVERAGE_JOURNAL_FLAG", 
+      "GL_INTERFACE"."ORIGINATING_BAL_SEG_VALUE" AS "ORIGINATING_BAL_SEG_VALUE", 
+      "GL_INTERFACE"."SEGMENT1" AS "SEGMENT1", 
+      "GL_INTERFACE"."SEGMENT2" AS "SEGMENT2", 
+      "GL_INTERFACE"."SEGMENT3" AS "SEGMENT3", 
+      "GL_INTERFACE"."SEGMENT4" AS "SEGMENT4", 
+      "GL_INTERFACE"."SEGMENT5" AS "SEGMENT5", 
+      "GL_INTERFACE"."SEGMENT6" AS "SEGMENT6", 
+      "GL_INTERFACE"."SEGMENT7" AS "SEGMENT7", 
+      "GL_INTERFACE"."SEGMENT8" AS "SEGMENT8", 
+      "GL_INTERFACE"."SEGMENT9" AS "SEGMENT9", 
+      "GL_INTERFACE"."SEGMENT10" AS "SEGMENT10", 
+      "GL_INTERFACE"."SEGMENT11" AS "SEGMENT11", 
+      "GL_INTERFACE"."SEGMENT12" AS "SEGMENT12", 
+      "GL_INTERFACE"."SEGMENT13" AS "SEGMENT13", 
+      "GL_INTERFACE"."SEGMENT14" AS "SEGMENT14", 
+      "GL_INTERFACE"."SEGMENT15" AS "SEGMENT15", 
+      "GL_INTERFACE"."SEGMENT16" AS "SEGMENT16", 
+      "GL_INTERFACE"."SEGMENT17" AS "SEGMENT17", 
+      "GL_INTERFACE"."SEGMENT18" AS "SEGMENT18", 
+      "GL_INTERFACE"."SEGMENT19" AS "SEGMENT19", 
+      "GL_INTERFACE"."SEGMENT20" AS "SEGMENT20", 
+      "GL_INTERFACE"."SEGMENT21" AS "SEGMENT21", 
+      "GL_INTERFACE"."SEGMENT22" AS "SEGMENT22", 
+      "GL_INTERFACE"."SEGMENT23" AS "SEGMENT23", 
+      "GL_INTERFACE"."SEGMENT24" AS "SEGMENT24", 
+      "GL_INTERFACE"."SEGMENT25" AS "SEGMENT25", 
+      "GL_INTERFACE"."SEGMENT26" AS "SEGMENT26", 
+      "GL_INTERFACE"."SEGMENT27" AS "SEGMENT27", 
+      "GL_INTERFACE"."SEGMENT28" AS "SEGMENT28", 
+      "GL_INTERFACE"."SEGMENT29" AS "SEGMENT29", 
+      "GL_INTERFACE"."SEGMENT30" AS "SEGMENT30", 
+      "GL_INTERFACE"."ENTERED_DR" AS "ENTERED_DR", 
+      "GL_INTERFACE"."ENTERED_CR" AS "ENTERED_CR", 
+      "GL_INTERFACE"."ACCOUNTED_DR" AS "ACCOUNTED_DR", 
+      "GL_INTERFACE"."ACCOUNTED_CR" AS "ACCOUNTED_CR", 
+      "GL_INTERFACE"."TRANSACTION_DATE" AS "TRANSACTION_DATE", 
+      "GL_INTERFACE"."REFERENCE1" AS "REFERENCE1", 
+      "GL_INTERFACE"."REFERENCE2" AS "REFERENCE2", 
+      "GL_INTERFACE"."REFERENCE3" AS "REFERENCE3", 
+      "GL_INTERFACE"."REFERENCE4" AS "REFERENCE4", 
+      "GL_INTERFACE"."REFERENCE5" AS "REFERENCE5", 
+      "GL_INTERFACE"."REFERENCE6" AS "REFERENCE6", 
+      "GL_INTERFACE"."REFERENCE7" AS "REFERENCE7", 
+      "GL_INTERFACE"."REFERENCE8" AS "REFERENCE8", 
+      "GL_INTERFACE"."REFERENCE9" AS "REFERENCE9", 
+      "GL_INTERFACE"."REFERENCE10" AS "REFERENCE10", 
+      "GL_INTERFACE"."REFERENCE11" AS "REFERENCE11", 
+      "GL_INTERFACE"."REFERENCE12" AS "REFERENCE12", 
+      "GL_INTERFACE"."REFERENCE13" AS "REFERENCE13", 
+      "GL_INTERFACE"."REFERENCE14" AS "REFERENCE14", 
+      "GL_INTERFACE"."REFERENCE15" AS "REFERENCE15", 
+      "GL_INTERFACE"."REFERENCE16" AS "REFERENCE16", 
+      "GL_INTERFACE"."REFERENCE17" AS "REFERENCE17", 
+      "GL_INTERFACE"."REFERENCE18" AS "REFERENCE18", 
+      "GL_INTERFACE"."REFERENCE19" AS "REFERENCE19", 
+      "GL_INTERFACE"."REFERENCE20" AS "REFERENCE20", 
+      "GL_INTERFACE"."REFERENCE21" AS "REFERENCE21", 
+      "GL_INTERFACE"."REFERENCE22" AS "REFERENCE22", 
+      "GL_INTERFACE"."REFERENCE23" AS "REFERENCE23", 
+      "GL_INTERFACE"."REFERENCE24" AS "REFERENCE24", 
+      "GL_INTERFACE"."REFERENCE25" AS "REFERENCE25", 
+      "GL_INTERFACE"."REFERENCE26" AS "REFERENCE26", 
+      "GL_INTERFACE"."REFERENCE27" AS "REFERENCE27", 
+      "GL_INTERFACE"."REFERENCE28" AS "REFERENCE28", 
+      "GL_INTERFACE"."REFERENCE29" AS "REFERENCE29", 
+      "GL_INTERFACE"."REFERENCE30" AS "REFERENCE30", 
+      "GL_INTERFACE"."JE_BATCH_ID" AS "JE_BATCH_ID", 
+      "GL_INTERFACE"."PERIOD_NAME" AS "PERIOD_NAME", 
+      "GL_INTERFACE"."JE_HEADER_ID" AS "JE_HEADER_ID", 
+      "GL_INTERFACE"."JE_LINE_NUM" AS "JE_LINE_NUM", 
+      "GL_INTERFACE"."CHART_OF_ACCOUNTS_ID" AS "CHART_OF_ACCOUNTS_ID", 
+      "GL_INTERFACE"."FUNCTIONAL_CURRENCY_CODE" AS "FUNCTIONAL_CURRENCY_CODE", 
+      "GL_INTERFACE"."CODE_COMBINATION_ID" AS "CODE_COMBINATION_ID", 
+      "GL_INTERFACE"."DATE_CREATED_IN_GL" AS "DATE_CREATED_IN_GL", 
+      "GL_INTERFACE"."WARNING_CODE" AS "WARNING_CODE", 
+      "GL_INTERFACE"."STATUS_DESCRIPTION" AS "STATUS_DESCRIPTION", 
+      "GL_INTERFACE"."STAT_AMOUNT" AS "STAT_AMOUNT", 
+      "GL_INTERFACE"."GROUP_ID" AS "GROUP_ID", 
+      "GL_INTERFACE"."REQUEST_ID" AS "REQUEST_ID", 
+      "GL_INTERFACE"."SUBLEDGER_DOC_SEQUENCE_ID" AS "SUBLEDGER_DOC_SEQUENCE_ID", 
+      "GL_INTERFACE"."SUBLEDGER_DOC_SEQUENCE_VALUE" AS "SUBLEDGER_DOC_SEQUENCE_VALUE", 
+      "GL_INTERFACE"."ATTRIBUTE1" AS "ATTRIBUTE1", 
+      "GL_INTERFACE"."ATTRIBUTE2" AS "ATTRIBUTE2", 
+      "GL_INTERFACE"."GL_SL_LINK_ID" AS "GL_SL_LINK_ID", 
+      "GL_INTERFACE"."GL_SL_LINK_TABLE" AS "GL_SL_LINK_TABLE", 
+      "GL_INTERFACE"."ATTRIBUTE3" AS "ATTRIBUTE3", 
+      "GL_INTERFACE"."ATTRIBUTE4" AS "ATTRIBUTE4", 
+      "GL_INTERFACE"."ATTRIBUTE5" AS "ATTRIBUTE5", 
+      "GL_INTERFACE"."ATTRIBUTE6" AS "ATTRIBUTE6", 
+      "GL_INTERFACE"."ATTRIBUTE7" AS "ATTRIBUTE7", 
+      "GL_INTERFACE"."ATTRIBUTE8" AS "ATTRIBUTE8", 
+      "GL_INTERFACE"."ATTRIBUTE9" AS "ATTRIBUTE9", 
+      "GL_INTERFACE"."ATTRIBUTE10" AS "ATTRIBUTE10", 
+      "GL_INTERFACE"."ATTRIBUTE11" AS "ATTRIBUTE11", 
+      "GL_INTERFACE"."ATTRIBUTE12" AS "ATTRIBUTE12", 
+      "GL_INTERFACE"."ATTRIBUTE13" AS "ATTRIBUTE13", 
+      "GL_INTERFACE"."ATTRIBUTE14" AS "ATTRIBUTE14", 
+      "GL_INTERFACE"."ATTRIBUTE15" AS "ATTRIBUTE15", 
+      "GL_INTERFACE"."ATTRIBUTE16" AS "ATTRIBUTE16", 
+      "GL_INTERFACE"."ATTRIBUTE17" AS "ATTRIBUTE17", 
+      "GL_INTERFACE"."ATTRIBUTE18" AS "ATTRIBUTE18", 
+      "GL_INTERFACE"."ATTRIBUTE19" AS "ATTRIBUTE19", 
+      "GL_INTERFACE"."ATTRIBUTE20" AS "ATTRIBUTE20", 
+      "GL_INTERFACE"."CONTEXT" AS "CONTEXT", 
+      "GL_INTERFACE"."CONTEXT2" AS "CONTEXT2", 
+      "GL_INTERFACE"."INVOICE_DATE" AS "INVOICE_DATE", 
+      "GL_INTERFACE"."TAX_CODE" AS "TAX_CODE", 
+      "GL_INTERFACE"."INVOICE_IDENTIFIER" AS "INVOICE_IDENTIFIER", 
+      "GL_INTERFACE"."INVOICE_AMOUNT" AS "INVOICE_AMOUNT", 
+      "GL_INTERFACE"."CONTEXT3" AS "CONTEXT3", 
+      "GL_INTERFACE"."USSGL_TRANSACTION_CODE" AS "USSGL_TRANSACTION_CODE", 
+      "GL_INTERFACE"."DESCR_FLEX_ERROR_MESSAGE" AS "DESCR_FLEX_ERROR_MESSAGE", 
+      "GL_INTERFACE"."JGZZ_RECON_REF" AS "JGZZ_RECON_REF", 
+      "GL_INTERFACE"."REFERENCE_DATE" AS "REFERENCE_DATE", 
+      "GL_INTERFACE"."SET_OF_BOOKS_ID" AS "SET_OF_BOOKS_ID", 
+      "GL_INTERFACE"."BALANCING_SEGMENT_VALUE" AS "BALANCING_SEGMENT_VALUE", 
+      "GL_INTERFACE"."MANAGEMENT_SEGMENT_VALUE" AS "MANAGEMENT_SEGMENT_VALUE", 
+      "GL_INTERFACE"."FUNDS_RESERVED_FLAG" AS "FUNDS_RESERVED_FLAG", 
+      "GL_INTERFACE"."CODE_COMBINATION_ID_INTERIM" AS "CODE_COMBINATION_ID_INTERIM"
+      FROM "SYSTEM"."GL_INTERFACE" "GL_INTERFACE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LEGAL_ENTITY" EntityType="Model.Store.LEGAL_ENTITY" store:Type="Tables" Schema="SYSTEM" />
+    <EntitySet Name="LOCATION" EntityType="Model.Store.LOCATION" store:Type="Tables" Schema="SYSTEM" />
+    <EntitySet Name="METER" EntityType="Model.Store.METER" store:Type="Tables" store:Schema="SYSTEM" store:Name="METER">
+      <DefiningQuery>SELECT 
+      "METER"."METER_ID" AS "METER_ID", 
+      "METER"."METER_TYPE_ID" AS "METER_TYPE_ID", 
+      "METER"."MRL_ID" AS "MRL_ID", 
+      "METER"."METER_STATUS_ID" AS "METER_STATUS_ID", 
+      "METER"."MSNO" AS "MSNO", 
+      "METER"."TKTYPE_ID" AS "TKTYPE_ID", 
+      "METER"."TRF_ID" AS "TRF_ID", 
+      "METER"."SG_ID" AS "SG_ID", 
+      "METER"."COST" AS "COST", 
+      "METER"."RES_ID" AS "RES_ID", 
+      "METER"."UTIL_ID" AS "UTIL_ID", 
+      "METER"."CREATED" AS "CREATED", 
+      "METER"."LOCATION_ID" AS "LOCATION_ID", 
+      "METER"."ENCRYPTION_TYPE_ID" AS "ENCRYPTION_TYPE_ID", 
+      "METER"."MANUFACTURER_ID" AS "MANUFACTURER_ID", 
+      "METER"."RDP_ID" AS "RDP_ID", 
+      "METER"."ODOMETER" AS "ODOMETER", 
+      "METER"."SEAL_TYPE_ID" AS "SEAL_TYPE_ID", 
+      "METER"."SEAL_REF" AS "SEAL_REF", 
+      "METER"."INST_DATE" AS "INST_DATE", 
+      "METER"."DISCONN_DATE" AS "DISCONN_DATE", 
+      "METER"."STATUS_DATE" AS "STATUS_DATE", 
+      "METER"."REMOVAL_DATE" AS "REMOVAL_DATE", 
+      "METER"."GENERAL_NOTE" AS "GENERAL_NOTE", 
+      "METER"."INST_LEGAL_ENTITY_ID" AS "INST_LEGAL_ENTITY_ID", 
+      "METER"."DISCONN_LEGAL_ENTITY_ID" AS "DISCONN_LEGAL_ENTITY_ID", 
+      "METER"."REMOVAL_LEGAL_ENTITY_ID" AS "REMOVAL_LEGAL_ENTITY_ID", 
+      "METER"."ISSUE_DATE" AS "ISSUE_DATE", 
+      "METER"."ISSUE_LEGAL_ENTITY_ID" AS "ISSUE_LEGAL_ENTITY_ID", 
+      "METER"."RECEIPT_DATE" AS "RECEIPT_DATE", 
+      "METER"."STATUS_LEGAL_ENTITY_ID" AS "STATUS_LEGAL_ENTITY_ID", 
+      "METER"."STATUS_NOTE" AS "STATUS_NOTE", 
+      "METER"."MOD_TS" AS "MOD_TS", 
+      "METER"."SECURITY_CODE" AS "SECURITY_CODE", 
+      "METER"."CHANGE_DATE" AS "CHANGE_DATE", 
+      "METER"."RESP_OPERATOR_ID" AS "RESP_OPERATOR_ID", 
+      "METER"."TASK_ID" AS "TASK_ID", 
+      "METER"."MEASURE_TYPE_ID" AS "MEASURE_TYPE_ID", 
+      "METER"."TRF_TS" AS "TRF_TS", 
+      "METER"."SG_TS" AS "SG_TS", 
+      "METER"."JOB_NUMBER" AS "JOB_NUMBER", 
+      "METER"."TRANSFORMER" AS "TRANSFORMER", 
+      "METER"."PHASE" AS "PHASE", 
+      "METER"."AMR_PROTOCOL_ID" AS "AMR_PROTOCOL_ID", 
+      "METER"."AMR_COMMS_METHOD_ID" AS "AMR_COMMS_METHOD_ID", 
+      "METER"."AMR_COMMS_ADDRESS" AS "AMR_COMMS_ADDRESS", 
+      "METER"."AMR_DEVICE_ADDRESS" AS "AMR_DEVICE_ADDRESS", 
+      "METER"."AMR_PASSWORD" AS "AMR_PASSWORD", 
+      "METER"."AMR_UTILITY_ASSET_NO" AS "AMR_UTILITY_ASSET_NO", 
+      "METER"."AMR_SCALING_ID" AS "AMR_SCALING_ID", 
+      "METER"."AMR_LAST_PROG_TS" AS "AMR_LAST_PROG_TS", 
+      "METER"."AMR_RATE_CHANNEL" AS "AMR_RATE_CHANNEL", 
+      "METER"."AMR_AUTH_LEVEL" AS "AMR_AUTH_LEVEL", 
+      "METER"."AMR_CLIENT_TYPE" AS "AMR_CLIENT_TYPE", 
+      "METER"."AMR_PROF_INTERVAL" AS "AMR_PROF_INTERVAL", 
+      "METER"."STATUS_CATEGORY_ID" AS "STATUS_CATEGORY_ID", 
+      "METER"."AREA_CODE" AS "AREA_CODE", 
+      "METER"."PROJECT_ID" AS "PROJECT_ID", 
+      "METER"."MANUFACTURER_BOX_NO" AS "MANUFACTURER_BOX_NO", 
+      "METER"."CSE_AREA_CODE_ID" AS "CSE_AREA_CODE_ID", 
+      "METER"."METER_RDP_THRESHOLD_ID" AS "METER_RDP_THRESHOLD_ID", 
+      "METER"."METER_SW_VERSION" AS "METER_SW_VERSION", 
+      "METER"."METER_TAKE_ON_COMPLETE" AS "METER_TAKE_ON_COMPLETE", 
+      "METER"."BATCH_NO" AS "BATCH_NO", 
+      "METER"."VOTE_NO" AS "VOTE_NO"
+      FROM "SYSTEM"."METER" "METER"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RDP" EntityType="Model.Store.RDP" store:Type="Tables" Schema="SYSTEM" />
+  </EntityContainer>
+  <EntityType Name="AGR">
+    <Key>
+      <PropertyRef Name="AGR_ID" />
+    </Key>
+    <Property Name="AGR_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="AGR_TYPE_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="CREATED" Type="date" Nullable="false" />
+    <Property Name="DOC" Type="date" Nullable="false" />
+    <Property Name="DOT" Type="date" />
+    <Property Name="DEPOSIT" Type="number" Precision="19" Scale="4" />
+    <Property Name="LEGAL_ENTITY_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="AREF" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="AGR_STATUS_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="CREDIT_LIMIT" Type="number" Precision="19" Scale="4" />
+    <Property Name="UTIL_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="LIABILITY_TYPE_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="MOD_TS" Type="date" />
+    <Property Name="TASK_ID" Type="number" Precision="15" />
+    <Property Name="CHANGE_DATE" Type="date" />
+    <Property Name="RESP_OPERATOR_ID" Type="number" Precision="15" />
+    <Property Name="SERVICE_BALANCE" Type="number" Precision="19" Scale="4" />
+    <Property Name="GLO_MESSAGE_ID" Type="number" Precision="15" />
+    <Property Name="GLO_MESSAGE_TS" Type="date" />
+    <Property Name="ACCEPT_CHEQUES" Type="number" Precision="1" />
+    <Property Name="CREDIT_CONTROL_VALUE" Type="number" Precision="19" Scale="4" />
+    <Property Name="CREDIT_CONTROLLED" Type="number" Precision="1" />
+    <Property Name="CREDIT_CONTROLLED_DATE" Type="date" />
+    <Property Name="VENDOR_COMM_PERC" Type="number" Precision="5" Scale="2" />
+    <Property Name="UTIL_DIVISION_ID" Type="number" Precision="15" />
+    <Property Name="ALERT_PERIOD" Type="number" Precision="15" />
+    <Property Name="CUSTOMER_TAKE_ON_COMPLETE" Type="number" Precision="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSTEM.GL_INTERFACE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="GL_INTERFACE">
+    <Key>
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="ACCOUNTING_DATE" />
+      <PropertyRef Name="CURRENCY_CODE" />
+      <PropertyRef Name="DATE_CREATED" />
+      <PropertyRef Name="CREATED_BY" />
+      <PropertyRef Name="ACTUAL_FLAG" />
+      <PropertyRef Name="USER_JE_CATEGORY_NAME" />
+      <PropertyRef Name="USER_JE_SOURCE_NAME" />
+    </Key>
+    <Property Name="STATUS" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="LEDGER_ID" Type="number" Precision="15" />
+    <Property Name="ACCOUNTING_DATE" Type="date" Nullable="false" />
+    <Property Name="CURRENCY_CODE" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="DATE_CREATED" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="number" Nullable="false" Precision="15" />
+    <Property Name="ACTUAL_FLAG" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="USER_JE_CATEGORY_NAME" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="USER_JE_SOURCE_NAME" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="CURRENCY_CONVERSION_DATE" Type="date" />
+    <Property Name="ENCUMBRANCE_TYPE_ID" Type="number" />
+    <Property Name="BUDGET_VERSION_ID" Type="number" />
+    <Property Name="USER_CURRENCY_CONVERSION_TYPE" Type="varchar2" MaxLength="30" />
+    <Property Name="CURRENCY_CONVERSION_RATE" Type="number" />
+    <Property Name="AVERAGE_JOURNAL_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="ORIGINATING_BAL_SEG_VALUE" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT1" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT2" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT3" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT4" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT5" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT6" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT7" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT8" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT9" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT10" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT11" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT12" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT13" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT14" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT15" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT16" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT17" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT18" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT19" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT20" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT21" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT22" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT23" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT24" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT25" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT26" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT27" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT28" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT29" Type="varchar2" MaxLength="25" />
+    <Property Name="SEGMENT30" Type="varchar2" MaxLength="25" />
+    <Property Name="ENTERED_DR" Type="number" />
+    <Property Name="ENTERED_CR" Type="number" />
+    <Property Name="ACCOUNTED_DR" Type="number" />
+    <Property Name="ACCOUNTED_CR" Type="number" />
+    <Property Name="TRANSACTION_DATE" Type="date" />
+    <Property Name="REFERENCE1" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE2" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE3" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE4" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE5" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE6" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE7" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE8" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE9" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE10" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE11" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE12" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE13" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE14" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE15" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE16" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE17" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE18" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE19" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE20" Type="varchar2" MaxLength="100" />
+    <Property Name="REFERENCE21" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE22" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE23" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE24" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE25" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE26" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE27" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE28" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE29" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE30" Type="varchar2" MaxLength="240" />
+    <Property Name="JE_BATCH_ID" Type="number" Precision="15" />
+    <Property Name="PERIOD_NAME" Type="varchar2" MaxLength="15" />
+    <Property Name="JE_HEADER_ID" Type="number" Precision="15" />
+    <Property Name="JE_LINE_NUM" Type="number" Precision="15" />
+    <Property Name="CHART_OF_ACCOUNTS_ID" Type="number" Precision="15" />
+    <Property Name="FUNCTIONAL_CURRENCY_CODE" Type="varchar2" MaxLength="15" />
+    <Property Name="CODE_COMBINATION_ID" Type="number" Precision="15" />
+    <Property Name="DATE_CREATED_IN_GL" Type="date" />
+    <Property Name="WARNING_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="STATUS_DESCRIPTION" Type="varchar2" MaxLength="240" />
+    <Property Name="STAT_AMOUNT" Type="number" />
+    <Property Name="GROUP_ID" Type="number" Precision="15" />
+    <Property Name="REQUEST_ID" Type="number" Precision="15" />
+    <Property Name="SUBLEDGER_DOC_SEQUENCE_ID" Type="number" />
+    <Property Name="SUBLEDGER_DOC_SEQUENCE_VALUE" Type="number" />
+    <Property Name="ATTRIBUTE1" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE2" Type="varchar2" MaxLength="150" />
+    <Property Name="GL_SL_LINK_ID" Type="number" />
+    <Property Name="GL_SL_LINK_TABLE" Type="varchar2" MaxLength="30" />
+    <Property Name="ATTRIBUTE3" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE4" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE5" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE6" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE7" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE8" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE9" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE10" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE11" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE12" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE13" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE14" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE15" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE16" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE17" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE18" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE19" Type="varchar2" MaxLength="150" />
+    <Property Name="ATTRIBUTE20" Type="varchar2" MaxLength="150" />
+    <Property Name="CONTEXT" Type="varchar2" MaxLength="150" />
+    <Property Name="CONTEXT2" Type="varchar2" MaxLength="150" />
+    <Property Name="INVOICE_DATE" Type="date" />
+    <Property Name="TAX_CODE" Type="varchar2" MaxLength="15" />
+    <Property Name="INVOICE_IDENTIFIER" Type="varchar2" MaxLength="20" />
+    <Property Name="INVOICE_AMOUNT" Type="number" />
+    <Property Name="CONTEXT3" Type="varchar2" MaxLength="150" />
+    <Property Name="USSGL_TRANSACTION_CODE" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCR_FLEX_ERROR_MESSAGE" Type="varchar2" MaxLength="240" />
+    <Property Name="JGZZ_RECON_REF" Type="varchar2" MaxLength="240" />
+    <Property Name="REFERENCE_DATE" Type="date" />
+    <Property Name="SET_OF_BOOKS_ID" Type="number" Precision="15" />
+    <Property Name="BALANCING_SEGMENT_VALUE" Type="varchar2" MaxLength="25" />
+    <Property Name="MANAGEMENT_SEGMENT_VALUE" Type="varchar2" MaxLength="25" />
+    <Property Name="FUNDS_RESERVED_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="CODE_COMBINATION_ID_INTERIM" Type="number" Precision="15" />
+  </EntityType>
+  <EntityType Name="LEGAL_ENTITY">
+    <Key>
+      <PropertyRef Name="LEGAL_ENTITY_ID" />
+    </Key>
+    <Property Name="LEGAL_ENTITY_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="LEGAL_ENTITY_NAME" Type="varchar2" MaxLength="255" />
+    <Property Name="ACC" Type="varchar2" MaxLength="30" />
+    <Property Name="ADDR1" Type="varchar2" MaxLength="50" />
+    <Property Name="ADDR2" Type="varchar2" MaxLength="50" />
+    <Property Name="ADDR3" Type="varchar2" MaxLength="50" />
+    <Property Name="BANK_ID" Type="number" Precision="15" />
+    <Property Name="BRN" Type="varchar2" MaxLength="30" />
+    <Property Name="CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="LEGAL_ENTITY_REF" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="EXDT" Type="date" />
+    <Property Name="HLDR" Type="varchar2" MaxLength="50" />
+    <Property Name="PAY_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="PERSID" Type="varchar2" MaxLength="20" />
+    <Property Name="SPSID" Type="varchar2" MaxLength="20" />
+    <Property Name="TEL" Type="varchar2" MaxLength="20" />
+    <Property Name="TTL" Type="varchar2" MaxLength="10" />
+    <Property Name="LEGAL_ENTITY_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="WTEL" Type="varchar2" MaxLength="20" />
+    <Property Name="LEGAL_ENTITY_STATUS_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="CELLTEL" Type="varchar2" MaxLength="20" />
+    <Property Name="PINCODE" Type="varchar2" MaxLength="10" />
+    <Property Name="MOD_TS" Type="date" />
+    <Property Name="TASK_ID" Type="number" Precision="15" />
+    <Property Name="CHANGE_DATE" Type="date" />
+    <Property Name="RESP_OPERATOR_ID" Type="number" Precision="15" />
+    <Property Name="TITLE_ID" Type="number" Precision="15" />
+    <Property Name="INITIALS" Type="varchar2" MaxLength="50" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="30" />
+    <Property Name="FIRST_NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="CONTACT_PERSON" Type="varchar2" MaxLength="230" />
+    <Property Name="AUTHORISED_TO_SIGN" Type="varchar2" MaxLength="230" />
+    <Property Name="CONTACT_PERSON_DESIGNATION" Type="varchar2" MaxLength="50" />
+    <Property Name="POSTAL_ADDRESS_1" Type="varchar2" MaxLength="50" />
+    <Property Name="POSTAL_ADDRESS_2" Type="varchar2" MaxLength="50" />
+    <Property Name="POSTAL_ADDRESS_3" Type="varchar2" MaxLength="50" />
+    <Property Name="WORK_ADDRESS_1" Type="varchar2" MaxLength="50" />
+    <Property Name="WORK_ADDRESS_2" Type="varchar2" MaxLength="50" />
+    <Property Name="WORK_ADDRESS_3" Type="varchar2" MaxLength="50" />
+    <Property Name="COUNTRY" Type="varchar2" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="FAX" Type="varchar2" MaxLength="20" />
+    <Property Name="LANGUAGE" Type="varchar2" MaxLength="20" />
+    <Property Name="NOTES" Type="varchar2" MaxLength="260" />
+    <Property Name="CELL_PHONE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="POSTAL_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="EMPLOYER_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="VEHICLE_REG_NUMBER" Type="varchar2" MaxLength="30" />
+    <Property Name="PREVIOUS_HOME_ADDRESS" Type="varchar2" MaxLength="230" />
+    <Property Name="COMPANY_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="COMPANY_TRADING_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="COMPANY_REG_NUMBER" Type="varchar2" MaxLength="30" />
+    <Property Name="BUSINESS_TYPE" Type="varchar2" MaxLength="30" />
+    <Property Name="VAT_REG_NUMBER" Type="varchar2" MaxLength="30" />
+    <Property Name="OWNER_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="OWNER_ADDRESS" Type="varchar2" MaxLength="50" />
+    <Property Name="OWNER_TEL_NUMBER" Type="varchar2" MaxLength="20" />
+    <Property Name="PASSPORT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED" Type="date" />
+    <Property Name="DATE_OF_ISSUE" Type="date" />
+    <Property Name="PLACE_OF_ISSUE" Type="varchar2" MaxLength="50" />
+    <Property Name="QUALIFICATION_REF" Type="varchar2" MaxLength="30" />
+    <Property Name="LANGUAGE_ID" Type="number" Precision="10" />
+    <Property Name="ID_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="USE_LOC_ADDR_AS_POSTAL_ADDR" Type="number" Precision="1" />
+  </EntityType>
+  <EntityType Name="LOCATION">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="LOCATION_TYPE_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="ADDR1" Type="varchar2" MaxLength="255" />
+    <Property Name="ADDR2" Type="varchar2" MaxLength="255" />
+    <Property Name="ADDR3" Type="varchar2" MaxLength="255" />
+    <Property Name="LOCATION_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="DWSZ" Type="number" Precision="8" Scale="2" />
+    <Property Name="PLSZ" Type="number" Precision="8" Scale="2" />
+    <Property Name="GIS" Type="varchar2" MaxLength="50" />
+    <Property Name="AREA_ID" Type="number" Precision="15" />
+    <Property Name="LOCATION_STATUS_ID" Type="number" Precision="15" />
+    <Property Name="OWNER_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="FORMAL_VALUE" Type="number" Precision="19" Scale="4" />
+    <Property Name="MARKET_VALUE" Type="number" Precision="19" Scale="4" />
+    <Property Name="PLOT_NO" Type="varchar2" MaxLength="50" />
+    <Property Name="HOUSE" Type="varchar2" MaxLength="50" />
+    <Property Name="STREET" Type="varchar2" MaxLength="255" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="OTHER" Type="varchar2" MaxLength="255" />
+    <Property Name="MOD_TS" Type="date" />
+    <Property Name="TASK_ID" Type="number" Precision="15" />
+    <Property Name="CHANGE_DATE" Type="date" />
+    <Property Name="RESP_OPERATOR_ID" Type="number" Precision="15" />
+    <Property Name="PLACE_NAME" Type="varchar2" MaxLength="30" />
+    <Property Name="BUILDING_ID" Type="number" Precision="15" />
+    <Property Name="BLD_UNIT_NUMBER" Type="varchar2" MaxLength="5" />
+    <Property Name="STREET_ID" Type="number" Precision="15" />
+    <Property Name="STREET_NUMBER" Type="varchar2" MaxLength="7" />
+    <Property Name="DIRECTIVES" Type="varchar2" MaxLength="60" />
+    <Property Name="ENTRANCE_GPS_X" Type="number" Precision="15" Scale="10" />
+    <Property Name="ENTRANCE_GPS_Y" Type="number" Precision="15" Scale="10" />
+    <Property Name="DEVELOPMENT_NAME" Type="varchar2" MaxLength="30" />
+    <Property Name="NUM_PERSONS_RESIDING" Type="number" Precision="10" />
+    <Property Name="FARMING_AREA_DISTRICT" Type="varchar2" MaxLength="30" />
+    <Property Name="KM_FROM_CITY" Type="number" Precision="10" />
+    <Property Name="NATURE_OF_ACTIVITY_ID" Type="number" Precision="15" />
+    <Property Name="LOCATION_CATEGORY_ID" Type="number" Precision="15" />
+    <Property Name="ADDR_SYSTEM_ID" Type="number" Precision="15" />
+    <Property Name="REGION" Type="varchar2" MaxLength="50" />
+    <Property Name="UNIT_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="UTIL_ID" Type="number" Precision="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSTEM.METER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="METER">
+    <Key>
+      <PropertyRef Name="METER_ID" />
+    </Key>
+    <Property Name="METER_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="METER_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="MRL_ID" Type="number" Precision="15" />
+    <Property Name="METER_STATUS_ID" Type="number" Precision="15" />
+    <Property Name="MSNO" Type="varchar2" MaxLength="50" />
+    <Property Name="TKTYPE_ID" Type="number" Precision="15" />
+    <Property Name="TRF_ID" Type="number" Precision="15" />
+    <Property Name="SG_ID" Type="number" Precision="15" />
+    <Property Name="COST" Type="number" Precision="19" Scale="4" />
+    <Property Name="RES_ID" Type="number" Precision="15" />
+    <Property Name="UTIL_ID" Type="number" Precision="15" />
+    <Property Name="CREATED" Type="date" />
+    <Property Name="LOCATION_ID" Type="number" Precision="15" />
+    <Property Name="ENCRYPTION_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="MANUFACTURER_ID" Type="number" Precision="15" />
+    <Property Name="RDP_ID" Type="number" Precision="15" />
+    <Property Name="ODOMETER" Type="varchar2" MaxLength="30" />
+    <Property Name="SEAL_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="SEAL_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="INST_DATE" Type="date" />
+    <Property Name="DISCONN_DATE" Type="date" />
+    <Property Name="STATUS_DATE" Type="date" />
+    <Property Name="REMOVAL_DATE" Type="date" />
+    <Property Name="GENERAL_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="INST_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="DISCONN_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="REMOVAL_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="ISSUE_DATE" Type="date" />
+    <Property Name="ISSUE_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="RECEIPT_DATE" Type="date" />
+    <Property Name="STATUS_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="STATUS_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="MOD_TS" Type="date" />
+    <Property Name="SECURITY_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="CHANGE_DATE" Type="date" />
+    <Property Name="RESP_OPERATOR_ID" Type="number" Precision="15" />
+    <Property Name="TASK_ID" Type="number" Precision="15" />
+    <Property Name="MEASURE_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="TRF_TS" Type="date" />
+    <Property Name="SG_TS" Type="date" />
+    <Property Name="JOB_NUMBER" Type="varchar2" MaxLength="10" />
+    <Property Name="TRANSFORMER" Type="varchar2" MaxLength="50" />
+    <Property Name="PHASE" Type="varchar2" MaxLength="1" />
+    <Property Name="AMR_PROTOCOL_ID" Type="number" Precision="15" />
+    <Property Name="AMR_COMMS_METHOD_ID" Type="number" Precision="15" />
+    <Property Name="AMR_COMMS_ADDRESS" Type="varchar2" MaxLength="255" />
+    <Property Name="AMR_DEVICE_ADDRESS" Type="number" Precision="10" />
+    <Property Name="AMR_PASSWORD" Type="varchar2" MaxLength="20" />
+    <Property Name="AMR_UTILITY_ASSET_NO" Type="varchar2" MaxLength="50" />
+    <Property Name="AMR_SCALING_ID" Type="number" Precision="15" />
+    <Property Name="AMR_LAST_PROG_TS" Type="date" />
+    <Property Name="AMR_RATE_CHANNEL" Type="number" Precision="15" />
+    <Property Name="AMR_AUTH_LEVEL" Type="number" Precision="15" />
+    <Property Name="AMR_CLIENT_TYPE" Type="number" Precision="15" />
+    <Property Name="AMR_PROF_INTERVAL" Type="number" Precision="15" />
+    <Property Name="STATUS_CATEGORY_ID" Type="number" Precision="15" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="PROJECT_ID" Type="number" Precision="15" />
+    <Property Name="MANUFACTURER_BOX_NO" Type="number" Precision="15" />
+    <Property Name="CSE_AREA_CODE_ID" Type="number" Precision="15" />
+    <Property Name="METER_RDP_THRESHOLD_ID" Type="number" Precision="15" />
+    <Property Name="METER_SW_VERSION" Type="varchar2" MaxLength="30" />
+    <Property Name="METER_TAKE_ON_COMPLETE" Type="number" Precision="1" />
+    <Property Name="BATCH_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="VOTE_NO" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="RDP">
+    <Key>
+      <PropertyRef Name="RDP_ID" />
+    </Key>
+    <Property Name="RDP_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="RDP_STATUS_ID" Type="number" Precision="15" />
+    <Property Name="RES_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="UTIL_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="RDP_DISP_METHOD_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="RDP_CONS_BENCHMARK_ID" Type="number" Precision="15" />
+    <Property Name="RDP_INST_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="NODE_ID" Type="number" Precision="15" />
+    <Property Name="TRF_ID" Type="number" Precision="15" />
+    <Property Name="TAX_ID" Type="number" Precision="15" />
+    <Property Name="SG_ID" Type="number" Precision="15" />
+    <Property Name="STCONS" Type="number" Precision="15" Scale="4" />
+    <Property Name="STDATE" Type="date" />
+    <Property Name="LOCATION_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="RDP_MEASURE_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="MRL_ID" Type="number" Precision="15" />
+    <Property Name="RDP_TYPE_ID" Type="number" Nullable="false" Precision="15" />
+    <Property Name="CREATED" Type="date" />
+    <Property Name="RDP_REF" Type="varchar2" MaxLength="20" />
+    <Property Name="GPS_ELEVATION" Type="number" Precision="15" Scale="6" />
+    <Property Name="GPS_LATITUDE" Type="number" Precision="15" Scale="6" />
+    <Property Name="GPS_LONGITUDE" Type="number" Precision="15" Scale="6" />
+    <Property Name="FCDATE" Type="date" />
+    <Property Name="OFCDT" Type="date" />
+    <Property Name="RDP_ANALYSIS_METHOD_ID" Type="number" Precision="15" />
+    <Property Name="RDP_INSPECTION_TYPE" Type="number" Precision="15" />
+    <Property Name="LAST_INSPECTION_DATE" Type="date" />
+    <Property Name="RDP_DESCRIPTION" Type="varchar2" MaxLength="255" />
+    <Property Name="INST_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="GENERAL_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="INST_DATE" Type="date" />
+    <Property Name="LAST_INSPECTION_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="INST_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="LAST_INSPECTION_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="CERT_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="RDP_STATUS_DATE" Type="date" />
+    <Property Name="INST_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="LAST_INSPECT_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="RDP_STATUS_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="RDP_STATUS_NOTE" Type="varchar2" MaxLength="255" />
+    <Property Name="AGR_ID" Type="number" Precision="15" />
+    <Property Name="MOD_TS" Type="date" />
+    <Property Name="REP_STCONS" Type="number" Precision="15" Scale="4" />
+    <Property Name="REP_STDATE" Type="date" />
+    <Property Name="SEAL_TYPE_ID" Type="number" Precision="15" />
+    <Property Name="TASK_ID" Type="number" Precision="15" />
+    <Property Name="CHANGE_DATE" Type="date" />
+    <Property Name="RESP_OPERATOR_ID" Type="number" Precision="15" />
+    <Property Name="LAST_BSST_DATE" Type="date" />
+    <Property Name="ISSUE_BSST_TOKEN" Type="number" Precision="1" />
+    <Property Name="AMR_SCHEDULE_ID" Type="number" Precision="15" />
+    <Property Name="AMR_PRIORITY_ID" Type="number" Precision="15" />
+    <Property Name="CERT_DATE" Type="date" />
+    <Property Name="CERT_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="GIS_REFERENCE" Type="number" Precision="10" />
+    <Property Name="RIPPLE_REF_1" Type="varchar2" MaxLength="10" />
+    <Property Name="RIPPLE_REF_2" Type="varchar2" MaxLength="10" />
+    <Property Name="RIPPLE_CHANNEL" Type="varchar2" MaxLength="10" />
+    <Property Name="RIPPLE_MASTER" Type="varchar2" MaxLength="10" />
+    <Property Name="UOM_RESOURCE_LIMIT" Type="varchar2" MaxLength="10" />
+    <Property Name="UOM_RESOURCE_QNTY" Type="varchar2" MaxLength="10" />
+    <Property Name="UOM_RESOURCE_DEMAND" Type="varchar2" MaxLength="10" />
+    <Property Name="BP_CERT_LEGAL_ENTITY_ID" Type="number" Precision="15" />
+    <Property Name="BP_CERT_DATE" Type="date" />
+    <Property Name="BUILDING_CERT_REF" Type="varchar2" MaxLength="50" />
+    <Property Name="BLOCKED_FLAG" Type="number" Precision="1" />
+    <Property Name="BLOCKED_REASON" Type="number" Precision="10" />
+    <Property Name="METER_RDP_THRESHOLD_ID" Type="number" Precision="15" />
+    <Property Name="NEW_ENCRYPTION_DATA" Type="number" Precision="1" />
+    <Property Name="BIV_ID" Type="number" Precision="15" />
+    <Property Name="RDP_CATEGORY_ID" Type="number" Precision="15" />
+    <Property Name="POC_TAKE_ON_COMPLETE" Type="number" Precision="1" />
+    <Property Name="RDP_UPDATE_REASON_ID" Type="number" Precision="15" />
+    <Property Name="RDP_UPDATE_COMMENT" Type="varchar2" MaxLength="255" />
+    <Property Name="BLOCK_REASON_ID" Type="number" Precision="15" />
+    <Property Name="RDP_BLOCK_COMMENT" Type="varchar2" MaxLength="255" />
+  </EntityType>
+</Schema>

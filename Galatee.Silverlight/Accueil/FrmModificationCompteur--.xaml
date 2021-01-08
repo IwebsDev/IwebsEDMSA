@@ -1,0 +1,66 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Accueil.FrmModificationCompteur"
+           Width="630.323" Height="476.284" 
+           Title="Modifcation du compteur" Loaded="ChildWindow_Loaded" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Height="143" VerticalAlignment="Bottom" x:Name="gbo_typefact_Copy1"  Margin="3,0,10,220" RenderTransformOrigin="0.5,0.5"  Header="Informations de la demande" IsTabStop="False"  />
+        <Controls:GroupBox FontWeight="SemiBold" Height="215" VerticalAlignment="Bottom" x:Name="gbo_typefact_Copy"  Margin="0,0,10,0" RenderTransformOrigin="0.5,0.5"  Header="Informations du compteur"  />
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,164,0,0" x:Name="Txt_NumCompteur" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,213,0,0" x:Name="Txt_CodeDiametre" VerticalAlignment="Top" Width="38" TextChanged="Txt_CodeDiametre_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,239,0,0" x:Name="Txt_CodeMarque" VerticalAlignment="Top" Width="38" TextChanged="Txt_CodeMarque_TextChanged" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="236,264,0,0" x:Name="btn_typeCompteur" VerticalAlignment="Top" Width="34" Click="btn_typeCompteur_Click" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="236,239,0,0" x:Name="btn_Marque" VerticalAlignment="Top" Width="34" Click="btn_Marque_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,264,0,0" x:Name="Txt_CodeTypeCompteur" VerticalAlignment="Top" Width="38" TextChanged="Txt_CodeTypeCompteur_TextChanged" />
+        <Button Content="..." Height="25" HorizontalAlignment="Left" Margin="236,0,0,129" x:Name="btn_DiametreCompteur" VerticalAlignment="Bottom" Width="34" Click="btn_DiametreCompteur_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" HorizontalContentAlignment="Left" IsReadOnly="True" Margin="272,238,0,0" x:Name="Txt_LibelleMarque" VerticalAlignment="Top" Width="278" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="272,213,0,0" x:Name="Txt_LibelleDiametre" VerticalAlignment="Top" Width="278" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,288,0,0" x:Name="Txt_CodeCadran" VerticalAlignment="Top" Width="38" TextChanged="Txt_CodeCadran_TextChanged" />
+        <Button Content="..." HorizontalAlignment="Left" Margin="236,288,0,55" x:Name="btn_Cadran" Width="34" Click="btn_Cadran_Click" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,288,51,0" x:Name="Txt_LibelleDigit" VerticalAlignment="Top" Width="278" />
+        <CheckBox Content="Coefficient de multiplication" Height="16" HorizontalAlignment="Left" Margin="7,316,0,0" x:Name="Chk_CoefMultiplication" VerticalAlignment="Top" Width="181" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,313,0,0" x:Name="Txt_CoefDeMultiplication" VerticalAlignment="Top" Width="52" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="461,314,0,0" x:Name="textBox11" VerticalAlignment="Top" Width="52" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,338,0,0" x:Name="textBox12" VerticalAlignment="Top" Width="354" />
+        <sdk:Label Content="Numéro de compteur" Height="19" HorizontalAlignment="Left" Margin="37,168,0,0" x:Name="lbl_NumeroCompteur" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Année de fabrication" Height="19" HorizontalAlignment="Left" Margin="36,191,0,0" x:Name="lbl_AnneFabrication" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Type of connection" Height="19" HorizontalAlignment="Left" Margin="37,268,0,0" x:Name="lbl_type" VerticalAlignment="Top" Width="152" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="196,188,0,0" x:Name="Txt_AnneeFab" VerticalAlignment="Top" Width="126" />
+        <sdk:Label Content="Type" Height="19" HorizontalAlignment="Left" Margin="36,216,0,0" x:Name="lbl_Diametre" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Marque" Height="19" HorizontalAlignment="Left" Margin="36,241,0,0" x:Name="lbl_Marque" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Cadran" Height="19" HorizontalAlignment="Left" Margin="38,291,0,0" x:Name="lbl_cadran" VerticalAlignment="Top" Width="151" />
+        <sdk:Label Content="Localisation" Height="19" HorizontalAlignment="Left" Margin="38,338,0,0" x:Name="lbl_Localisation" VerticalAlignment="Top" Width="153" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="272,263,0,0" x:Name="Txt_LibelleTypeClient" VerticalAlignment="Top" Width="278" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="37,64,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="163" Content="Centre" IsTabStop="False" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="36,89,0,0" x:Name="lbl_produit" VerticalAlignment="Top" Width="151" Content="Produit" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,64,0,0" x:Name="Txt_CodeCentre" VerticalAlignment="Top" Width="57" Background="LightBlue" TextChanged="Txt_CodeCentre_TextChanged" TabIndex="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="298,63,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="182" IsReadOnly="True" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,89,0,0" x:Name="Txt_CodeProduit" VerticalAlignment="Top" Width="58" Background="LightBlue" TextChanged="Txt_CodeProduit_TextChanged" TabIndex="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="299,89,0,0" x:Name="Txt_LibelleProduit" VerticalAlignment="Top" Width="181" IsReadOnly="True" IsTabStop="False" />
+        <Button Content="..." Height="23" HorizontalAlignment="Right" Margin="0,89,307,0" x:Name="btn_Produit" VerticalAlignment="Top" Width="41" Click="btn_Produit_Click" />
+        <Button x:Name="btn_Rechercher" Content="Rechercher" HorizontalAlignment="Left" Margin="416,114,0,0" VerticalAlignment="Top" Width="82" Click="btn_Rechercher_Click_1" TabIndex="4"/>
+        <TextBox Height="23" HorizontalAlignment="Right" IsEnabled="True" IsReadOnly="True" Margin="0,15,283,0" x:Name="Txt_NumDemande" VerticalAlignment="Top" Width="126" />
+        <sdk:Label Content="Numéro de la demande" Height="19" HorizontalAlignment="Left" Margin="36,18,0,0" x:Name="lbl_numdemande" VerticalAlignment="Top" Width="161" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Background="LightBlue"    Margin="194,114,0,0" x:Name="Txt_Client" VerticalAlignment="Top" Width="126" LostFocus="Txt_Client_LostFocus" TabIndex="3" />
+        <sdk:Label Content="Client" Height="19" HorizontalAlignment="Left" Margin="37,116,0,0" x:Name="lbl_Client" VerticalAlignment="Top" Width="166" IsTabStop="False" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="254,63,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="42" Click="btn_Centre_Click" />
+        <HyperlinkButton Content="Motif de la modification" FontWeight="Bold" x:Name="lnkLetter" Width="192"  Margin="376,18,34,329" Click="lnkLetter_Click"  />
+        <HyperlinkButton Content="Motif du rejet" FontWeight="Bold" x:Name="lnkMotif"  Margin="36,131,415,216" Click="lnkMotif_Click"   />
+        <Button x:Name="btn_Modifier" Content="Modifier" HorizontalAlignment="Left" Margin="495,62,0,0" VerticalAlignment="Top" Width="82" Click="btn_Modifier_click" IsTabStop="False" />
+        <Button x:Name="btn_Supprime" Content="Supprimer" HorizontalAlignment="Left" Margin="495,87,0,0" VerticalAlignment="Top" Width="82" Click="btn_Supprimer_click" IsTabStop="False" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="38,39,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="150" Content="Site" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,39,0,0" x:Name="Txt_CodeSite" VerticalAlignment="Top" Width="57" Background="LightBlue"  TabIndex="0" TextChanged="Txt_CodeSite_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="298,38,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="181" IsReadOnly="True" IsTabStop="False" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="253,39,0,0" x:Name="btn_Site" VerticalAlignment="Top" Width="42" Click="btn_Site_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="True" Background="LightBlue"  Margin="369,112,0,0" x:Name="Txt_Ordre" VerticalAlignment="Top" Width="42" IsTabStop="False"  />
+        <sdk:Label Content="Ordre" Height="19" HorizontalAlignment="Left" Margin="325,116,0,0" x:Name="lbl_Ordre" VerticalAlignment="Top" Width="39" IsTabStop="False" />
+    </Grid>
+</sdk:ChildWindow>

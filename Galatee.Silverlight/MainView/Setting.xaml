@@ -1,0 +1,48 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.MainView.Setting"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="623.073" Height="403.531" 
+           Title="Setting" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="311">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:TabControl Height="269" HorizontalAlignment="Left" Margin="12,34,0,0" Name="tabControl1" VerticalAlignment="Top" Width="572">
+            <sdk:TabItem Header="Serveur Base de Données" Name="tabItem1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="351*" />
+                        <ColumnDefinition Width="61*" />
+                        <ColumnDefinition Width="148*" />
+                    </Grid.ColumnDefinitions>
+                    <sdk:Label Height="28" HorizontalAlignment="Left" Margin="19,11,0,0" Name="label1" VerticalAlignment="Top" Width="102" Content="Nom du serveur :" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="138,9,0,0" Name="txtdbServer" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" />
+                    <sdk:Label Content="Nom du catalog:" Height="28" HorizontalAlignment="Left" Margin="18,38,0,0" Name="label2" VerticalAlignment="Top" Width="123" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,38,0,0" Name="txtCatalogDb" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" />
+                    <sdk:Label Content="Nom de l'utilisateur  :" Height="28" HorizontalAlignment="Left" Margin="18,68,0,0" Name="label3" VerticalAlignment="Top" Width="123" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="138,68,0,0" Name="txtUserNmae" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" />
+                    <sdk:Label Content="Mot de passe :" Height="28" HorizontalAlignment="Left" Margin="18,102,0,0" Name="label4" VerticalAlignment="Top" Width="102" />
+                    <Button Content="Testez connexion" Height="23" HorizontalAlignment="Right" Margin="0,142,6,14" Name="btnTestConnex" Width="109" Grid.Column="2" />
+                    <sdk:Label Content="resultat test :" Height="28" HorizontalAlignment="Left" Margin="328,171,0,0" Name="lblTestDB" VerticalAlignment="Top" Width="84" Grid.ColumnSpan="2" />
+                    <sdk:Label Content="Confirm password :" Height="28" HorizontalAlignment="Left" Margin="18,131,0,0" Name="label8" VerticalAlignment="Top" Width="114" />
+                    <PasswordBox Height="23" HorizontalAlignment="Left" Margin="138,128,0,0" Name="txtpwdConf" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" />
+                    <PasswordBox Height="23" HorizontalAlignment="Left" Margin="138,98,0,0" Name="txtpwd" VerticalAlignment="Top" Width="274" Grid.ColumnSpan="2" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Serveur des services web">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <sdk:Label Content="Nom du serveur :" Height="28" HorizontalAlignment="Left" Margin="20,36,0,0" Name="label5" VerticalAlignment="Top" Width="102" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="139,34,0,0" Name="txtApplServer" VerticalAlignment="Top" Width="247" />
+                    <sdk:Label Content="Adresse de base:" Height="28" HorizontalAlignment="Left" Margin="19,63,0,0" Name="label6" VerticalAlignment="Top" Width="123" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="139,63,0,0" Name="txtAdrApplServer" VerticalAlignment="Top" Width="247" />
+                    <Button Content="Valider" Height="23" HorizontalAlignment="Right" Margin="0,135,261,74" Name="btnOk" Width="79" />
+                    <Button Content="Reset" Height="23" HorizontalAlignment="Right" Margin="0,135,176,74" Name="btnReset" Width="79" />
+                    <sdk:Label Content="Numero du port:" Height="28" HorizontalAlignment="Left" Margin="19,92,0,0" Name="label7" VerticalAlignment="Top" Width="123" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="139,92,0,0" Name="txtportAppl" VerticalAlignment="Top" Width="247" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Galatee.Silverlight.Accueil.UcDemandeDetailCompteurMT"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="448" d:DesignWidth="582" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White" Height="Auto" Width="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="302,30,0,0" Name="Txt_Ordre" VerticalAlignment="Top" Width="42" Grid.Column="1" IsEnabled="True" IsReadOnly="True" />
+        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="74,4,0,0" Name="Txt_Addresse" VerticalAlignment="Top" Width="126" IsReadOnly="True" />
+        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="74,30,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="126" IsReadOnly="True" />
+        <sdk:Label Content="Client" Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="12,34,0,0" Name="label1" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Adresse" Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="11,7,0,0" Name="label2" VerticalAlignment="Top" Width="153" />
+        <sdk:Label Content="Ordre" Grid.Column="1" Height="19" HorizontalAlignment="Left" Margin="230,34,0,0" Name="label3" VerticalAlignment="Top" Width="39" />
+        <sdk:DataGrid AutoGenerateColumns="False" Grid.Column="1" Height="201" HorizontalAlignment="Left" Margin="11,67,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="535" SelectionChanged="dataGrid1_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Type" Binding="{Binding TYPE}" Width="Auto" MaxWidth="50" MinWidth="50" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Libelle" Binding="{Binding LIBELLE}" Width="Auto" MaxWidth="170" MinWidth="170" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Point" Binding="{Binding POINT}" Width="Auto" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Width="Auto" Binding="{Binding COMPTEUR}" Header="Compteur" IsReadOnly="True" MaxWidth="110" MinWidth="110" />
+                <sdk:DataGridTextColumn CanUserReorder="False" CanUserResize="False" CanUserSort="False" Header="Saisie" Binding="{Binding SAISIE}" Width="Auto" MaxWidth="80" MinWidth="80" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <TextBox Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="118,372,0,0" Name="Txt_DateEvt" VerticalAlignment="Top" Width="141" Background="LightBlue" TextChanged="Txt_DateEvt_TextChanged" />
+        <TextBox Grid.Column="1" Height="24" HorizontalAlignment="Left" Margin="411,372,0,0" Name="Txt_PeriodeEvt" VerticalAlignment="Top" Width="131" Background="LightBlue" />
+        <sdk:Label Grid.Column="1" Height="26" HorizontalAlignment="Left" Margin="74,378,0,0" Name="label4" VerticalAlignment="Top" Width="38" Content="Date" />
+        <sdk:Label Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="337,374,0,0" Name="label5" VerticalAlignment="Top" Width="68" Content="Periode" />
+        <Button Content="Saisir" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="418,277,0,0" Name="btn_saisir" VerticalAlignment="Top" Width="124" Click="btn_saisir_Click" />
+        <TextBox Grid.Column="1" Height="40" HorizontalAlignment="Left" Margin="118,317,0,0" Name="Txt_Location" VerticalAlignment="Top" Width="424" />
+        <sdk:Label Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="29,317,0,0" Name="label6" VerticalAlignment="Top" Width="83" Content="Localisation" />
+    </Grid>
+</UserControl>

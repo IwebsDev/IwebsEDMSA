@@ -1,0 +1,76 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Recouvrement.CreationLotBTA"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+            xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library"
+            xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+    Style="{StaticResource ChildWindowGalatee}" OverlayBrush="Transparent"
+           Width="1016.985" Height="655" 
+           Title="Creation Lot BTA">
+
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox    Header="Campagne" HorizontalAlignment="Left" Height="223" Margin="10,15,0,0" VerticalAlignment="Top" Width="969">
+            <sdk:DataGrid HorizontalAlignment="Left" x:Name="dgCampagne" AutoGenerateColumns="False" Height="183" VerticalAlignment="Top" Width="326" Margin="6,0,0,0" SelectionChanged="dgCampagne_SelectionChanged" >
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" Binding="{Binding Path=CodeCentre}" />
+                    <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libelle Campagne" Width="Auto" Binding="{Binding Path=Libelle_Campagne}"/>
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </Controls:GroupBox>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <!--<Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />-->
+        <Controls:GroupBox  Header="Critère de Sélèction" Background="WhiteSmoke" HorizontalAlignment="Left" Height="184" Margin="354,38,0,0" VerticalAlignment="Top" Width="609"/>
+        <!--<StackPanel Orientation="Horizontal" Margin="304,47,20,356" DataContext="{Binding ElementName=dgCampagne, Path=SelectedItem,Mode=TwoWay}">-->
+            <!--<StackPanel Orientation="Vertical" Width="260">-->
+                <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="403,75,0,0"  Content="Libelle campagne :"/>
+                <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="403,117,0,0" Content="Centre :"/>
+                <sdk:Label Visibility="Collapsed" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="5,10,0,0" Content="Agent Création :"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtlibcamp" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="523,71,0,0" Text="{Binding LIBELLE_CAMPAGNE,Mode=TwoWay}" />
+                <TextBox x:Name="txtExploitaion" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="523,113,0,0" Text="{Binding LIBELLECENTRE,Mode=TwoWay}" />
+                <TextBox x:Name="txtagcrea" Visibility="Collapsed" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="112,-30,0,0" Text="{Binding MATRICULEAGENTCREATION,Mode=TwoWay}"/>
+            <!--</StackPanel>
+            <StackPanel Orientation="Vertical" Width="233">-->
+                <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="679,75,0,0" Content="Date Céation :"/>
+                <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="81" Margin="679,117,0,0" Content="Statut :"/>
+                
+                <TextBox x:Name="txtdateCrea" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="765,71,0,0" Text="{Binding DATECREATION,Mode=TwoWay}"/>
+                <TextBox x:Name="txtstatut" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="765,113,0,0" Text="{Binding STATUT,Mode=TwoWay}"/>
+                <TextBox x:Name="txtpopulation" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Margin="523,157,0,0" Text="{Binding NBREELEMENTS,Mode=TwoWay}"/>
+                <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="120" Margin="398,161,0,0" Content="Population :"/>
+            <!--</StackPanel>
+        </StackPanel>-->
+
+        <Controls:GroupBox  Header="Gestion lot" Background="WhiteSmoke" HorizontalAlignment="Left" Height="283" Margin="10,252,0,0" VerticalAlignment="Top" Width="953"/>
+        <!--<RadioButton GroupName="grp_bx" x:Name="rbt_LotAuto" IsChecked="true" Content="Création Automatique de lot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,276,0,0" Checked="RadioButton_Checked_2"/>
+        <RadioButton GroupName="grp_bx" x:Name="rbt_LotManu" Content="Création manuelle de lot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="251,276,0,0" Checked="RadioButton_Checked_1"/>-->
+         <!--<sdk:DataGrid Name="dg_lot"  DataContext="{Binding ElementName=dgCampagne, Path=SelectedItem,Mode=TwoWay}" ItemsSource="{Binding LISTELOT,Mode=TwoWay}" HorizontalAlignment="Left" Height="174" Margin="22,310,0,0" VerticalAlignment="Top" Width="836" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" MouseRightButtonDown="dg_lot_MouseRightButtonDown" MouseRightButtonUp="dg_lot_MouseRightButtonUp" LoadingRow="dg_lot_LoadingRow" >-->
+         <sdk:DataGrid Name="dg_lot"  DataContext="{Binding ElementName=dgCampagne, Path=SelectedItem,Mode=TwoWay}" ItemsSource="{Binding LISTELOT,Mode=TwoWay}" HorizontalAlignment="Left" Height="174" Margin="22,310,0,0" VerticalAlignment="Top" Width="921" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" >
+          <sdk:DataGrid.Columns>
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libelle" Width="Auto" Binding="{Binding Path=Libelle_Lot,Mode=TwoWay}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Matricule releveur" Width="Auto" Binding="{Binding Path=MatriculeAgentControleur,Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Population" Width="Auto" Binding="{Binding Path=NbreElementsDuLot,Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de création" Width="Auto" Binding="{Binding Path=DateCreation,Converter={StaticResource DateTimeConverter},Mode=TwoWay}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="btn_creerlot" Content="Création lot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="22,276,0,0" Click="btn_creerlot_Click"/>
+        <Button Content="Modifier lot" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="553,499,0,0" Click="Button_Click" />
+        <Button Content="Consulter lot" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="398,499,0,0" Click="Button_Click_2"/>
+        <Button Content="Suprimer lot" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="708,499,0,0"/>
+        <Button Content="Affectation de releveur" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Margin="669,276,0,0" Click="Button_Click_1"/>
+        <Button x:Name="btn_Editer_Lot" Content="Editer le lot" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="703,499,0,0" Click="btn_Editer_Lot_Click"/>
+
+    </Grid>
+</controls:ChildWindow>

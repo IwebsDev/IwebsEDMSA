@@ -1,0 +1,42 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Parametrage.UcListRues"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           Width="813.433" Height="657.09" OverlayBrush="Transparent"
+           Title="Liste des rues" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+                       AllowDrop="False" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="566" Width="782">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="566" />
+        </Grid.RowDefinitions>
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="2,725,0,-174" Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" />
+        <my:GroupBox Height="543" HorizontalAlignment="Left" Name="groupBox1" VerticalAlignment="Top" Width="778" Header="Liste des éléments dans la table" Margin="0,-14,0,0" />
+        <sdk:DataGrid AllowDrop="False" AutoGenerateColumns="False" DataContext="{Binding}" HorizontalAlignment="Left" ItemsSource="{Binding DonnesDatagrid}" Margin="10,20,0,53" Name="dtgrdParametre" ScrollViewer.HorizontalScrollBarVisibility="Visible" SelectionMode="Extended" Width="760">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding CODE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Code" IsReadOnly="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libellé" IsReadOnly="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLECENTRE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libellé centre" IsReadOnly="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEQUARTIER, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libellé quartier" IsReadOnly="True" Width="Auto" />
+            </sdk:DataGrid.Columns>
+
+            <toolkit:ContextMenuService.ContextMenu>
+                <toolkit:ContextMenu x:Name="MenuContextuel" Opened="MenuContextuel_Opened">
+                    <toolkit:MenuItem x:Name="MenuContextuelCreer" Header="Créer" Icon="" Click="Creer_Click" />
+                    <toolkit:MenuItem x:Name="MenuContextuelConsulter" Header="Consulter" Click="Consulter_Click" />
+                    <toolkit:MenuItem x:Name="MenuContextuelEditer" Header="Editer" Click="Editer_Click" />
+                    <toolkit:MenuItem x:Name="MenuContextuelModifier" Header="Modifier" Click="Modifier_Click" />
+                    <toolkit:MenuItem x:Name="MenuContextuelSupprimer" Header="Supprimer" Click="Supprimer_Click" />
+                </toolkit:ContextMenu>
+            </toolkit:ContextMenuService.ContextMenu>
+        </sdk:DataGrid>
+        <Button Content="Nouveau" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="452,534,0,0" Click="Creer_Click"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="532,534,0,0" Click="Modifier_Click"/>
+        <Button Content="Consulter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="612,534,0,0" Click="Consulter_Click"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="692,534,0,0" Click="Supprimer_Click"/>
+    </Grid>
+</controls:ChildWindow>

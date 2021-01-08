@@ -1,0 +1,49 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+          xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           x:Class="Galatee.Silverlight.Scelles.UcListAffectationCompteur"
+           Width="572" Height="541" OverlayBrush="Transparent"
+           Title="Affectation des Compteurs" AllowDrop="False" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="2" Height="866" Width="541">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="265*" />
+            <ColumnDefinition Width="274*"/>
+            <ColumnDefinition Width="2" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="427*" />
+            <RowDefinition Height="429*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="2,190,0,0" x:Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" Grid.Row="1" />
+        <!--<Button x:Name="NewButton" Content="Nouveau" Click="NewButton_Click"  Width="75" HorizontalAlignment="Right" Margin="0,9,57,401" Grid.Row="1" RenderTransformOrigin="-1.133,0.458" />
+        <Button x:Name="ViewButton" Content="Consulter" Click="ViewButton_Click"   Width="75" HorizontalAlignment="Right" Margin="0,10,171,402" Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="UpdateButton" Content="Modifier" Click="UpdateButton_Click"  Width="75" HorizontalAlignment="Right" Margin="0,9,251,401" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2" />-->
+
+        <Button Content="Imprimer" Height="23" Margin="0,8,10,403" x:Name="btnPrint" HorizontalAlignment="Right" Width="75" Grid.Row="1"  IsEnabled="True" Grid.Column="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" 
+			Margin="24,30,0,426" x:Name="dtgrdScelle" Width="517"  ItemsSource="{Binding DonnesDatagrid}"
+			ScrollViewer.HorizontalScrollBarVisibility="Visible" AllowDrop="False" DataContext="{Binding}"  SelectionMode="Extended" AreRowGroupHeadersFrozen="True"  IsEnabled="True" IsReadOnly="False" IsTabStop="False" IsHitTestVisible="True" Grid.RowSpan="2" Grid.ColumnSpan="3" SelectionChanged="dtgrdScelle_SelectionChanged"  MouseRightButtonDown="dtgrdScelle_MouseRightButtonDown">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding NUMERO, Mode=TwoWay}" Header="Numero Compteur" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ANNEEFAB, Mode=TwoWay}" Header="Annee Fabrique" Width="130" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding libelleMArque, Mode=TwoWay}" Header="libelle Marque" Width="130" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding ETAT, Mode=TwoWay}" Header="ETAT" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <!--<sdk:DataGridTextColumn Binding="{Binding DateReception, Mode=TwoWay}" Header="Date de Saisie" Width="100" CanUserSort="True" IsReadOnly="True" />-->
+            </sdk:DataGrid.Columns>
+            <i:Interaction.Behaviors>
+                <behaviors:DataGridDoubleClickBehavior DoubleClick="dtgrdScelle_DoubleClick"/>
+                <behaviors:DataGridContexMenuBehavior />
+            </i:Interaction.Behaviors>
+        </sdk:DataGrid>
+        <Button Content="Supprimer" Height="23" HorizontalAlignment="Right" IsEnabled="True" Margin="0,8,91,403" x:Name="btnDelete" TabIndex="4" Width="75" Grid.Row="1" Grid.Column="1" Click="btnDelete_Click" />
+        <Controls:GroupBox Header="Liste des éléments existant dans la table" Name="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="432" Width="537" Margin="10,3,-6,0" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <Button  x:Name="NewButton" Content="Nouveau" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" RenderTransformOrigin="-0.011,0.286" Click="NewButton_Click" Grid.Column="1"/>
+    </Grid>
+</sdk:ChildWindow>

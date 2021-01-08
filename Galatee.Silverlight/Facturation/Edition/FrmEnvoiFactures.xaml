@@ -1,0 +1,66 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.FrmEnvoiFactures"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="933" Height="512" OverlayBrush="Transparent" xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Title="Envoi Factures" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="427,10,12,336" x:Name="groupBox1_Copy" Header="Critère de recherche"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,0,319" x:Name="groupBox1_Copy1" Header="Critère de recherche"  />
+        <sdk:Label Height="17" HorizontalAlignment="Left" Margin="450,50,0,0" Name="label2" VerticalAlignment="Top" Width="65" Content="Client" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="515,47,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="450,76,0,0" Name="label3" VerticalAlignment="Top" Width="65" Content="Ordre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="515,74,0,0" Name="Txt_ordre" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="12,76,0,0" Name="label4" VerticalAlignment="Top" Width="75" Content="Période" />
+        <TextBox Background="LightBlue"  Height="23" HorizontalAlignment="Left" Margin="89,73,0,0" Name="Txt_Periode" VerticalAlignment="Top" Width="104"  />
+        <Button Content="Rechercher" Height="19" HorizontalAlignment="Left" Margin="644,76,0,0" Name="Btn_search" VerticalAlignment="Top" Width="120" Click="Btn_search_Click"   />
+        <Button Content="Effacer" Height="19" HorizontalAlignment="Left" Margin="644,49,0,0" Name="Btn_reset" VerticalAlignment="Top" Width="120"  />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="247" HorizontalAlignment="Left" Margin="0,123,0,0" Name="Dtg_factures" VerticalAlignment="Top" Width="905"  MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn>
+                     <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding IsSelect,Mode=TwoWay}" 
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="Centre" Binding="{Binding CENTRE}" />
+                <sdk:DataGridTextColumn Header="Police" Binding="{Binding CLIENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Ordre" Binding="{Binding ORDRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Identité" Binding="{Binding NOMABON}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Periode" Binding="{Binding PERIODE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Numero Facture" Binding="{Binding FACTURE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Montant" Binding="{Binding TOTFTTC,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="E-mail" Binding="{Binding EMAIL}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Header="Telephone" Binding="{Binding TELEPHONE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <!--<Button Content="Editer la facture" Height="23" HorizontalAlignment="Left" Margin="324,410,0,0" Name="Btn_edit_Fac" VerticalAlignment="Top" Width="95" Click="Btn_edit_Fac_Click"  />-->
+        <Button Content="Envoyer" Height="23" HorizontalAlignment="Left" Margin="644,410,0,0" Name="Btn_send" VerticalAlignment="Top" Width="120" Click="Btn_send_Click" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="778,410,0,0" Name="button4" VerticalAlignment="Top" Width="115" />
+        <CheckBox Content="Par SMS" x:Name="chk_sms" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="496,101,0,0" Width="120" Visibility="Collapsed" />
+        <CheckBox Content="Par Email" x:Name="chk_email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="778,101,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Format : mm/aaaa " Height="21" VerticalAlignment="Top" Width="107" Margin="89,96,0,0"/>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="12,45,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="77" Content="Centre" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="89,46,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="56" Click="btn_Centre_Click" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="12,21,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="76" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="89,0,0,392" x:Name="Txt_CodeSite" VerticalAlignment="Bottom" Width="56" Background="LightBlue" TabIndex="0" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="199,21,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="150,0,0,393" x:Name="btn_Site" VerticalAlignment="Bottom" Width="42" Click="btn_Site_Click"  />
+        <ComboBox HorizontalAlignment="Left" Name="Cbo_Centre" Margin="150,46,0,0" VerticalAlignment="Top" Width="260" Height="24"  />
+        <ComboBox HorizontalAlignment="Left" Name="cbo_Periode" Margin="199,74,0,0" VerticalAlignment="Top" Width="106" Height="22"/>
+        <Button Content="Ajouter" Height="22" HorizontalAlignment="Left" Margin="310,74,0,0" x:Name="Btn_Ajouter" VerticalAlignment="Top" Width="102" Click="btn_Periode_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="150,46,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="262" IsReadOnly="True" />
+    </Grid>
+</controls:ChildWindow>

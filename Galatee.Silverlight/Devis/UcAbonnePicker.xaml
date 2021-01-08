@@ -1,0 +1,53 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcAbonnePicker"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+                      
+           Width="511" Height="470.169" 
+           Title="Rechercher Client" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" OverlayBrush="Transparent">
+    <!--<Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>-->
+<controls:ChildWindow.Resources>
+        <!--<lang:ResourceLocaliser xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Devis"  x:Key="LocalizedStrings"/>-->
+    
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="BtnCancel" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="BtnOK" Content="Ok" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="10,8,0,0" Name="Lab_Client" VerticalAlignment="Top" Width="97" Content="Client" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="113,6,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="364" IsEnabled="True" TabIndex="0" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="10,34,0,0" Name="Lab_Nom" VerticalAlignment="Top" Width="97" Content="Nom" />
+        <TextBox Height="23" Margin="113,34,0,0" Name="Txt_Nom" VerticalAlignment="Top" IsEnabled="True" HorizontalAlignment="Left" Width="364" TabIndex="1" />
+        <sdk:Label Height="21" HorizontalAlignment="Left" Margin="10,63,0,0" Name="Lab_Centre" VerticalAlignment="Top" Width="97" Content="Centre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="114,63,0,0" Name="Txt_Centre" VerticalAlignment="Top" Width="51" IsEnabled="False"  />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="171,63,0,0" Name="Cbo_Centre" VerticalAlignment="Top" Width="306"  SelectionChanged="Cbo_Centre_SelectionChanged" TabIndex="2" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="321,92,0,0" Name="Btn_search" VerticalAlignment="Top" Width="75" Click="Btn_search_Click" TabIndex="3" />
+        <Button Content="Reinitilaiser" Height="23" HorizontalAlignment="Left" Margin="402,92,0,0" Name="Btn_reset" VerticalAlignment="Top" Width="75" Click="Btn_reset_Click" TabIndex="4" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="234" HorizontalAlignment="Left" Margin="12,121,0,0" Name="Dtg_abonne" VerticalAlignment="Top" Width="465" IsReadOnly="True" SelectionMode="Single">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Width="Auto" Binding="{Binding Path=CLIENT}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Width="Auto" Binding="{Binding Path=NOMABON}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" Binding="{Binding Path=CENTRE}" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre" Width="Auto" Binding="{Binding Path=ORDRE}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <toolkit:BusyIndicator Height="31" HorizontalAlignment="Left" Margin="113,167,0,0" Name="busyIndicator" VerticalAlignment="Top" Width="235" IsBusy="False" />
+    </Grid>
+
+</controls:ChildWindow>

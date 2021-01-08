@@ -1,0 +1,74 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NumEditCtrlSL"
+    x:Name="Root">
+    <Style TargetType="local:DisplayNumEdit">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:DisplayNumEdit">
+                    <Border Background="{TemplateBinding Background}"
+                           BorderBrush="{TemplateBinding BorderBrush}"
+                           BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <TextBlock Name="Main" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="PrefixSign" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="SuffixSign" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="PreSci" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="Scientific" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="Numerator" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="Denominator" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+                            <TextBlock Name="Slash" FontFamily="{Binding FontFamily, ElementName=Root}"
+                                               FontSize="{Binding FontSize, ElementName=Root}"
+                                               FontStretch="{Binding FontStretch, ElementName=Root}"
+                                               FontStyle="{Binding FontStyle, ElementName=Root}"
+                                               FontWeight="{Binding FontWeight, ElementName=Root}"/>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:NumericTextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:NumericTextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+ </ResourceDictionary>

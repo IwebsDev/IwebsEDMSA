@@ -1,0 +1,2888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0401D389-C168-4034-ADC4-791C4D74B02D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galatee.Silverlight.Web</RootNamespace>
+    <AssemblyName>Galatee.Silverlight.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SilverlightApplicationList>{1CF6D980-759E-4408-90D9-A51B125ECB7F}|..\Galatee.Silverlight\Galatee.Silverlight.csproj|ClientBin|False,{55102540-8183-4F9E-B579-8021AD344110}|..\Galatee.ModuleLoader\Galatee.ModuleLoader.csproj|ClientBin|False</SilverlightApplicationList>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Galatee.Dll\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DropDownCheckBoxes">
+      <HintPath>..\Galatee.Dll\DropDownCheckBoxes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 11.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 11.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 11.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Silverlight">
+      <HintPath>..\Galatee.Dll\System.Web.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clientaccesspolicy.xml" />
+    <Content Include="ClientBin\Galatee.ModuleLoader.xap" />
+    <Content Include="ClientBin\Galatee.Silverlight.Rpnt.xap" />
+    <Content Include="ClientBin\Galatee.Silverlight.xap" />
+    <Content Include="Config\ClientConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="crossdomain.xml" />
+    <Content Include="css\forms.css" />
+    <Content Include="forms.css" />
+    <Content Include="Galatee.ModuleLoaderTestPage.aspx" />
+    <Content Include="Galatee.ModuleLoaderTestPage.html" />
+    <Content Include="HandlerPrinting\PreviewPrintingReport.aspx" />
+    <Content Include="HandlerPrinting\PreviewPrintingRecouvrement.aspx" />
+    <Content Include="HandlerPrinting\PreviewPrintingAccueil.aspx" />
+    <Content Include="HandlerPrinting\PreviewPrintingCaisse.aspx" />
+    <Content Include="HandlerPrinting\PreviewPrintingDevis.aspx" />
+    <Content Include="HandlerPrinting\formb.jpg" />
+    <Content Include="HandlerPrinting\PreviewPrintingFacturation.aspx" />
+    <Content Include="HandlerPrinting\PreviewPrintingParametrage.aspx" />
+    <Content Include="HandlerPrinting\reprt.jpg" />
+    <Content Include="Images\num_1.ico" />
+    <Content Include="Images\Axialis-Icon-Workshop-icon.png" />
+    <Content Include="Images\Calendar_scheduleHS.png" />
+    <Content Include="Images\logogala.png" />
+    <Content Include="Images\logoname.png" />
+    <Content Include="Images\num_2.ico" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="HandlerPrinting\PreviewPrinting.aspx" />
+    <Content Include="Images\close.bmp" />
+    <Content Include="Images\minimize.jpg" />
+    <Content Include="jquery-1.7.2.min.js" />
+    <Content Include="HandlerPrinting\Main.aspx" />
+    <Content Include="ModifyClientConfig.ashx" />
+    <Content Include="HandlerPrinting\GenericPrintHandler2.ashx" />
+    <Content Include="HandlerPrinting\GenericPrintHandler.ashx" />
+    <Content Include="HandlerPrinting\MailFactures.ashx" />
+    <Content Include="HandlerPrinting\GenericPrintPreviewHandler.ashx" />
+    <Content Include="NotifIcation\DonneeNotification.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="galadbDataSet.xsc">
+      <DependentUpon>galadbDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="ClientBin\System.ComponentModel.DataAnnotations.zip" />
+    <Content Include="ClientBin\System.ServiceModel.DomainServices.Client.zip" />
+    <Content Include="ClientBin\System.ServiceModel.DomainServices.Client.Web.zip" />
+    <Content Include="ClientBin\System.ServiceModel.Web.Extensions.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.Input.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.DomainServices.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Input.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Navigation.zip" />
+    <Content Include="ClientBin\System.Windows.Data.zip" />
+    <Content Include="ClientBin\System.Xml.Linq.zip" />
+    <Content Include="ClientBin\System.Xml.Serialization.zip" />
+    <Content Include="ClientBin\Microsoft.CSharp.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.DataForm.Toolkit.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Data.Toolkit.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.DataVisualization.Toolkit.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Input.Toolkit.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Layout.Toolkit.zip" />
+    <Content Include="ClientBin\System.Windows.Controls.Toolkit.zip" />
+    <None Include="galadbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>galadbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="galadbDataSet.xss">
+      <DependentUpon>galadbDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="HandlerPrinting\SmsHandler.ashx" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\app.pubxml" />
+    <None Include="Service References\ServiceAccueil\AcceuilService.wsdl" />
+    <None Include="Service References\ServiceAccueil\AcceuilService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAccueil\AcceuilService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAccueil\AcceuilService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAccueil\AcceuilService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAccueil\AcceuilService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsAbon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsAg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsBrt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCadran.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCasind.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCategorieClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsClasseurClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsClientRechercher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCodeConsomateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCodeControle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCodeTaxeApplication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCommune.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCompteClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDemandeBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDenomination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDepart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDetailLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDiametreBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsEtapeDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsFermable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsForfait.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsFrequence.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsLePayeur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsLotCompteClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsMarqueCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsMaterielBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsModepaiement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsMois.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsNatgen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsNationalite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsNatureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsOrigineLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsPuissance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsQuartier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsRegCli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsRues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsSecteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsSpeSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTdem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTcompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeComptage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCAMPAGNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDetailCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeCoupure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAccueil\AcceuilService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCATEGORIECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCATEGORIECLIENT_USAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCoutDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCriteresDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsEditionDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsGroupe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsNATURECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsParametreBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsProprietaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsSortieAutreMateriel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsSortieMateriel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsStatutJuridique.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsUsage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsUSAGE_NATURECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjAPPAREILS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjPIECEIDENTITE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsPosteSource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsProgarmmation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.aBanque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsActivite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCalibreCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsControleTravaux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCouleurActivite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDetailAffectationScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDscelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsEntreprise.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsFactureBrut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsFactureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsFonction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsInfoDemandeWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsInterventionPlannifiee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsLotScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsOrganeScellable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsOrganeScelleDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsParametresGeneraux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsReglageCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjAPPAREILSDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjDEPOSIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjDEVISPIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjELEMENTDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjFOURNITURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjSUIVIDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjTACHEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjTRAVAUXDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.ObjTYPEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsContrat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsModeCommunication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTarifClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypePanne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsVehicule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsGroupeDepannageCommune.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsRubriqueDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsEcritureComptable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsMandatementGc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTbLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsCompteurBta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDemandeReclamation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsDonnesStatistiqueDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsModeReception.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsRclValidation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsReclamationRcl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsTypeReclamationRcl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAccueil\Galatee.Silverlight.Web.ServiceAccueil.CsStatistiqueTravaux_Brt_Ext.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAdministration\AdministrationService.wsdl" />
+    <None Include="Service References\ServiceAdministration\AdministrationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAdministration\AdministrationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAdministration\AdministrationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAdministration\AdministrationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reports\Report\Ancien\VisuReportElectricityServiceConnection.rdlc" />
+    <None Include="Service References\ServiceAccueil\AcceuilService.disco" />
+    <None Include="Service References\ServiceAccueil\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAccueil\configuration.svcinfo" />
+    <None Include="Service References\ServiceAccueil\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsAdmRoles.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsDataBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsHabilitationProgram.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsProgramMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsStrategieSecurite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAdministration\AdministrationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService.wsdl" />
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsFonction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsPoste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsAgent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsHistoriquePassword.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAdministration\AdministrationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.aImportFichier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.aImportFichierColonne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsAdmMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsCentreDuProfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsHabilitationMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsHabilitationMetier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsModule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsModuleAdmMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsModuleDeFonction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAdministration\Galatee.Silverlight.Web.ServiceAdministration.CsProfil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CsDesktopGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CSMenuGalatee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CsStrategieSecurite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CsUserConnecte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.EnumereWrap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.EnumProcedureStockee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceAuthenInitialize\Galatee.Silverlight.Web.ServiceAuthenInitialize.TreeNodes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceAdministration\AdministrationService.disco" />
+    <None Include="Service References\ServiceAdministration\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAdministration\configuration.svcinfo" />
+    <None Include="Service References\ServiceAdministration\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceAuthenInitialize\AuthentInitializeService.disco" />
+    <None Include="Service References\ServiceAuthenInitialize\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAuthenInitialize\configuration.svcinfo" />
+    <None Include="Service References\ServiceAuthenInitialize\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService.wsdl" />
+    <None Include="Service References\ServiceCaisse\CaisseService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsCaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsCodeRegroupement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsEncaissement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsFraisTimbre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsHabilitationCaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsModereglement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsMoratoire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsParametresGeneraux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsReglement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsReglementRecu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsBanque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsDemandeReversement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsPayeur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsRegCli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsLibelleTop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsNature.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsTypeTimbre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceCaisse\Galatee.Silverlight.Web.ServiceCaisse.CsMonnaie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\DevisService.wsdl" />
+    <None Include="Service References\ServiceDevis\DevisService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\DevisService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.aBanque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.aRepartition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.cClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsActivite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCategorieClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCATEGORIECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCATEGORIECLIENT_USAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCommune.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsControleTravaux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCouleur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCriteresDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDemandeBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDenomination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDetailAffectationScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDiacomp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCaisse\CaisseService.disco" />
+    <None Include="Service References\ServiceCaisse\configuration91.svcinfo" />
+    <None Include="Service References\ServiceCaisse\configuration.svcinfo" />
+    <None Include="Service References\ServiceCaisse\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEntreprise1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsDscelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEditionDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEtatBonDeSortie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEtatBonRemboursement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEtatBonTravaux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsEtatProcesVerbal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsFonction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsInformationsDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsInterventionPlannifiee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsLotScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsMarqueCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsNationalite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsNatureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsNATURECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsOrganeScellable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsOrganeScelleDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsParametresGeneraux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsPuissance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsProprietaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsQuartier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsRues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsSecteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTcompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsStatutJuridique.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTdem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTypeCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTypeClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsTypeDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsUsage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsUSAGE_NATURECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjAPPAREILS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjAPPAREILSDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjDEMANDEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjDEPOSIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjDEVISPIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjELEMENTDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjETAPEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjFOURNITURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjPIECEIDENTITE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjSUIVIDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjTACHEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjTRAVAUXDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceDevis\Galatee.Silverlight.Web.ServiceDevis.ObjTYPEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceEservice\EserviceService.wsdl" />
+    <None Include="Service References\ServiceEservice\EserviceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEservice\EserviceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEservice\EserviceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceEservice\EserviceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceEservice\Galatee.Silverlight.Web.ServiceEservice.CsEnvoiMail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceEservice\Galatee.Silverlight.Web.ServiceEservice.CsFactureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceFacturation\FacturationService.wsdl" />
+    <None Include="Service References\ServiceFacturation\FacturationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsAction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsCasind.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsEnregRI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsAbon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsAnnomalie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsEnteteFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsFactureBrut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsFactureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsLotri.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceEservice\EserviceService.disco" />
+    <None Include="Service References\ServiceEservice\configuration91.svcinfo" />
+    <None Include="Service References\ServiceEservice\configuration.svcinfo" />
+    <None Include="Service References\ServiceEservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsStatFacturation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsRedevance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsReleveur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsSaisiHorsLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsSaisiIndexIndividuel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsTableReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceFacturation\Galatee.Silverlight.Web.ServiceFacturation.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceIndex\AcceuilService.disco" />
+    <None Include="Service References\ServiceIndex\AcceuilService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceIndex\configuration91.svcinfo" />
+    <None Include="Service References\ServiceIndex\configuration.svcinfo" />
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.aParam.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsAbon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsAg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsBrt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCadran.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCasind.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCategorieClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsClasseurClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsClientRechercher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCodeConsomateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCodeControle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCodeTaxeApplication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCommune.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCompteClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDenomination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDetailLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDiacomp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDiametreBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsEtapeDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsFermable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsForfait.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsFrequence.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsLotCompteClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsMarqueCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsMaterielBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsMois.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsNatgen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsNationalite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsNatureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsOrigineLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsPagisol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsPoliceDispo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsPuissance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsQuartier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsRegCli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsReglement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsRexo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsSpeSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTdem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeLot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsRues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsSecteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDepart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsModepaiement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsPosteElectrique.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCAMPAGNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCATEGORIECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCATEGORIECLIENT_USAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCoutDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsCriteresDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDemandeBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsDetailCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsEditionDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsGroupe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsInformationsDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsLePayeur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsNATURECLIENT_TYPECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsParametreBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsProprietaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsSortieAutreMateriel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsSortieMateriel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsStatutJuridique.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTcompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeComptage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeCoupure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsTypeDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsUsage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.CsUSAGE_NATURECLIENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.ObjAPPAREILS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.ObjDOCUMENTSCANNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceIndex\Galatee.Silverlight.Web.ServiceIndex.ObjPIECEIDENTITE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceIndex\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceIndex\AcceuilService.wsdl" />
+    <None Include="Service References\ServiceIndex\AcceuilService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceIndex\AcceuilService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceIndex\AcceuilService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceIndex\AcceuilService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceIndex\AcceuilService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.aBanque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsAjufin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsApplicationTaxe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCasind.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCategorieClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCelluleDuSiege.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCodeDepart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCodePoste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCommune.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsConsommateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsDenomination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsDomBanc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsEntreprise.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsEtatCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsFonction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsForfait.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsLibelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsLibelleTop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsMarqueCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CSMenuGalatee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsModeCalcul.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsMois.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsMonnaie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsNationalite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsNiveauTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsNumeroInstallation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsParamAbonUtilise.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsParametreEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsParametresGeneraux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsPeriodiciteFacturation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsProprietaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsPuissance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsQuartier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRechercheTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRedevance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRegCli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRegExo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRegrou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsSecteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTdemCout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTypeCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTypeMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsUniteComptage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.EnumProcedureStockee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.ObjETAPEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.ObjPIECEIDENTITE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.ObjTACHEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.ObjTYPEDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsAffectationDemandeUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsAppareils.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCommentaireRejet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsConditionBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCopieDmdCircuit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCopieDmdConditionBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCoutCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCoutDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsEtape.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsFormulaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsGroupeValidation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsJournalDemandeWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsOperation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsOperationFormulaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRAffectationEtapeWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRHabilitationGrouveValidation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTableDeTravail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTcompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTdem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTypeComptage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTypeTaxe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsVwConfigurationWorkflowCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsVwDashboardDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsVwJournalDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsDemandeWorkflow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsRenvoiRejet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsTypeBranchement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.ObjFOURNITURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsActivite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCouleurActivite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsCouleurScelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsMarque_Modele.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsMaterielDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceParametrage\Galatee.Silverlight.Web.ServiceParametrage.CsReglageCompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceParametrage\Parametrage.wsdl" />
+    <None Include="Service References\ServiceParametrage\Parametrage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceParametrage\Parametrage1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceParametrage\Parametrage2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceParametrage\Parametrage3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceParametrage\Parametrage4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceParametrage\Parametrage.disco" />
+    <None Include="Service References\ServiceParametrage\configuration91.svcinfo" />
+    <None Include="Service References\ServiceParametrage\configuration.svcinfo" />
+    <None Include="Service References\ServiceParametrage\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCampagnesBTAAccessiblesParLUO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsDemandeBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsHabilitationCaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsHabilitationProgram.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsPrint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsReglementRecu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CustumEclairagePublic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsDetailCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsHabilitationMenu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsHabilitationMetier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsAnnomalie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsEditionDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceParametrage\Parametrage5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsOrdreTravail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsAvisDeCoupureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.ObjELEMENTDEVIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsContrat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsDetailCampagnePrecontentieux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsProduitFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsRedevanceFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsMandatementGc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsEnteteFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsMaterielDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCoutDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsRemiseScelleByAg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsProgarmmation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsDepannage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsReclamationRcl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.cStatistiqueReclamation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsBalance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsBalanceAgee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsComptabilisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsCompteurBta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsEcritureComptable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsEditionFactureFd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsFichierPersonnel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsStatFact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsStatFactRecap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsClientRechercher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsTranscaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsImageFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsComparaisonFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsClient1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsDonnesStatistiqueDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicePrintings\Galatee.Silverlight.Web.ServicePrintings.CsStatistiqueTravaux_Brt_Ext.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServicePrintings\PrintingsService.disco" />
+    <None Include="Service References\ServicePrintings\configuration91.svcinfo" />
+    <None Include="Service References\ServicePrintings\configuration.svcinfo" />
+    <None Include="Service References\ServicePrintings\PrintingsService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePrintings\PrintingsService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePrintings\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.aCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsDetailMoratoire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsRecouvrement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCAMPAGNE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCategorieClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCentre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServicePrintings\PrintingsService.wsdl" />
+    <None Include="Service References\ServicePrintings\PrintingsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePrintings\PrintingsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePrintings\PrintingsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePrintings\PrintingsService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCodeConsomateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsDetailCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsAffectationGestionnaire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCampagneGc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsRegCli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsMotifChequeImpaye.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsAvisDeCoupureClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsObservation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsDetailCampagnePrecontentieux.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsBrt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsCampagnesBTAAccessiblesParLUO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsGroupeDeFacturation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsRefMethodesDeDetectionClientsBTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsReleveur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsTcompteur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsTypeTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.CsClientRechercher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceRecouvrement\Galatee.Silverlight.Web.ServiceRecouvrement.Dico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService.wsdl" />
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsDemandeBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsDetailCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsLclient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsRedevanceFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsMandatementGc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsComptabilisation1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsRedevance1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsStatFact1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsStatFactRecap1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsTournee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReport\Galatee.Silverlight.Web.ServiceReport.CsTranscaisse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReport\ReportService.wsdl" />
+    <None Include="Service References\ServiceReport\ReportService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReport\ReportService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReport\ReportService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReport\ReportService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReport\ReportService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aBanque.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aCampagne.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aDisconnection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aGroupingCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aLClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aLibelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aMoratoire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aNature.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aParam.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aRdv.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aTa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.aTa0.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CParametre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsAbon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsAg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsBrt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsCanalisation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsCasind.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsCodeRegroupement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsCoper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsCtax.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDemCout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDesktopGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDetailMoratoire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDevis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsDiacomp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsEtapeDemande.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsEvenement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsFacture.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsForfait.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsInit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CSMenuGalatee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsModereglement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsMoratoire.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsOpenningDay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsPagisol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsPoliceDispo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsPuissance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsReglement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsRegrou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsRexo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsRue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsSite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsTa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsTarif.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsTcompt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsUserConnecte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CsZone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.CTab300.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.Enumere.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.EnumereWrap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.EnumProcedureStockee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Galatee.Silverlight.Web.ServiceWeb.TreeNodes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceWeb\Service1.disco" />
+    <None Include="Service References\ServiceWeb\configuration91.svcinfo" />
+    <None Include="Service References\ServiceWeb\configuration.svcinfo" />
+    <None Include="Service References\ServiceWeb\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReport\ReportService.disco" />
+    <None Include="Service References\ServiceReport\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReport\configuration.svcinfo" />
+    <None Include="Service References\ServiceReport\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceFacturation\FacturationService.disco" />
+    <None Include="Service References\ServiceFacturation\configuration91.svcinfo" />
+    <None Include="Service References\ServiceFacturation\configuration.svcinfo" />
+    <None Include="Service References\ServiceFacturation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Previews\UcGeneric.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="Service References\ServiceDevis\DevisService.disco" />
+    <None Include="Service References\ServiceDevis\configuration91.svcinfo" />
+    <None Include="Service References\ServiceDevis\configuration.svcinfo" />
+    <None Include="Service References\ServiceDevis\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceRecouvrement\RecouvrementService.disco" />
+    <None Include="Service References\ServiceRecouvrement\configuration91.svcinfo" />
+    <None Include="Service References\ServiceRecouvrement\configuration.svcinfo" />
+    <None Include="Service References\ServiceRecouvrement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="serviceweb\printingservice.asmx" />
+    <Content Include="Silverlight.js" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceWeb\Service1.wsdl" />
+    <None Include="Service References\ServiceWeb\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceWeb\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceWeb\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceWeb\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceWeb\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigClass.cs" />
+    <Compile Include="galadbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>galadbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingReport.aspx.cs">
+      <DependentUpon>PreviewPrintingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingReport.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingRecouvrement.aspx.cs">
+      <DependentUpon>PreviewPrintingRecouvrement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingRecouvrement.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingRecouvrement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingAccueil.aspx.cs">
+      <DependentUpon>PreviewPrintingAccueil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingAccueil.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingAccueil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingCaisse.aspx.cs">
+      <DependentUpon>PreviewPrintingCaisse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingCaisse.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingCaisse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingDevis.aspx.cs">
+      <DependentUpon>PreviewPrintingDevis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingDevis.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingDevis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\GenericPrintHandler.ashx.cs">
+      <DependentUpon>GenericPrintHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\GenericPrintHandler2.ashx.cs">
+      <DependentUpon>GenericPrintHandler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\GenericPrintPreviewHandler.ashx.cs">
+      <DependentUpon>GenericPrintPreviewHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\MailFactures.ashx.cs">
+      <DependentUpon>MailFactures.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrinting.aspx.cs">
+      <DependentUpon>PreviewPrinting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrinting.aspx.designer.cs">
+      <DependentUpon>PreviewPrinting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingFacturation.aspx.cs">
+      <DependentUpon>PreviewPrintingFacturation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingFacturation.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingFacturation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingParametrage.aspx.cs">
+      <DependentUpon>PreviewPrintingParametrage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\PreviewPrintingParametrage.aspx.designer.cs">
+      <DependentUpon>PreviewPrintingParametrage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\PrintingPrieview.cs" />
+    <Compile Include="HandlerPrinting\SmsHandler.ashx.cs">
+      <DependentUpon>SmsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyClientConfig.ashx.cs">
+      <DependentUpon>ModifyClientConfig.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Previews\UcGeneric.ascx.cs">
+      <DependentUpon>UcGeneric.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Previews\UcGeneric.ascx.designer.cs">
+      <DependentUpon>UcGeneric.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintModule\ImpressionDirect.cs" />
+    <Compile Include="PrintModule\ProcessLocalReport.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintModule\SessionObject.cs" />
+    <Compile Include="PrintModule\Utility.cs" />
+    <Compile Include="PrintModule\Utilitys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerPrinting\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandlerPrinting\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceAccueil\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceAdministration\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceAuthenInitialize\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceCaisse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceDevis\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceEservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFacturation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceIndex\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceParametrage\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicePrintings\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRecouvrement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="serviceweb\printingservice.asmx.cs">
+      <DependentUpon>printingservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PDF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="recu.rdlc" />
+    <Content Include="Reports\Accueil\AjustementCompteClient.rdlc" />
+    <Content Include="Reports\Accueil\AjustementDetailLot.rdlc" />
+    <Content Include="Reports\Accueil\AjustementTransaction1.rdlc" />
+    <Content Include="Reports\Accueil\CompteClient.rdlc" />
+    <Content Include="Reports\Accueil\ContratClient.rdlc" />
+    <Content Include="Reports\Accueil\HistoriqueCompteur.rdlc" />
+    <Content Include="Reports\Accueil\FicheDeReleve.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\AccuseRecption.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\ClientDuRegroupement.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\CompteResiliationClient.rdlc" />
+    <Content Include="Reports\Accueil\EvenementClient.rdlc" />
+    <Content Include="Reports\Accueil\PrestataireClient.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\DevisExtension.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\CreationClient.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\DevisAvanceMt.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\FicheIntDepannage.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\Facture.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\DevisMt.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\FicheIntervention.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\DevisEp.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\DevisApDp.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\Devis.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\ImpayerClient.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\ImpayeRegroupe.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\LeDEvisMt.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\LiaisonCompteur.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\OrdreTravail.rdlc" />
+    <EmbeddedResource Include="Reports\Accueil\Test.rdlc" />
+    <Content Include="Reports\Administration\ReportHabillitationMenuUser.rdlc" />
+    <Content Include="Reports\Administration\ReportHabillitationMenu.rdlc" />
+    <Content Include="Reports\Administration\ReportPasswordUser.rdlc" />
+    <Content Include="Reports\Administration\ReportConnectionUser.rdlc" />
+    <Content Include="Reports\Administration\ReportHabillitationUser.rdlc" />
+    <Content Include="Reports\Caisse\BorderoRegroupe.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\RecuDecaissement.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\Duplicat.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ReportListeEncaissements.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\recu.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ListeCaisse.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatActiviteCaisserdlc.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ReversementCaisse.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ReportListeDesTransactions.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ReportListeEncaissements----.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\ListeDesTransactions.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\Bilan.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\BonDeSortie.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\BonEntreeStock.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\BonTravaux.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\FichierJoint.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\OrdreDeTravail.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\SortieMateriel.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\Programmation.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\SortieCompteur.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\SortieCompteur1.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\ValidationMateriel.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\DevisAEncaisser.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\DevisBranchementAFinaliser.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\FicheProgrammation.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\ProcesVerbal.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\DevisEn.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\DevisSubvention.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\DevisSeparation.rdlc" />
+    <EmbeddedResource Include="Reports\Devis\RepartitionDevis.rdlc" />
+    <EmbeddedResource Include="Reports\EclairagePublic\ReportEclairagePublicFacturer.rdlc" />
+    <Content Include="Reports\Facturation\AnomalieFacturation.rdlc" />
+    <Content Include="Reports\Facturation\Eservice\FactureSimple.rdlc" />
+    <Content Include="Reports\Facturation\FactureRegroupe.rdlc" />
+    <Content Include="Reports\Facturation\FactureSimple.rdlc" />
+    <Content Include="Reports\Facturation\FactureDetail.rdlc" />
+    <Content Include="Reports\Facturation\FactureSimpleMT.rdlc" />
+    <Content Include="Reports\Facturation\FactureSimpleNaw.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\BordereauSansRuptureSimpleSGC.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\BordereauSimple.rdlc" />
+    <Content Include="Reports\Facturation\FactureSimpleMail.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\BordereauSimpleSGC.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\ControleFacturation.rdlc" />
+    <Content Include="Reports\Facturation\FactureSimpleO.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\FactureDetailMTSGC.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\FactureDetailSCG.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\MontantFacture.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\FactureDetailMT.rdlc" />
+    <EmbeddedResource Include="Reports\Facturation\QuittanceAnnulation.rdlc" />
+    <EmbeddedResource Include="Reports\Fraude\Convocation.rdlc" />
+    <EmbeddedResource Include="Reports\Fraude\Copy of Facture.rdlc" />
+    <EmbeddedResource Include="Reports\Fraude\Facture.rdlc" />
+    <EmbeddedResource Include="Reports\Fraude\FactureFD.rdlc" />
+    <EmbeddedResource Include="Reports\Index\Copy of EtatReleveIndex.rdlc" />
+    <EmbeddedResource Include="Reports\Index\Enquete.rdlc" />
+    <EmbeddedResource Include="Reports\Index\EnqueteMt.rdlc" />
+    <EmbeddedResource Include="Reports\Index\EtatDesIndexSaisis.rdlc" />
+    <EmbeddedResource Include="Reports\Index\EtatResumeCas.rdlc" />
+    <EmbeddedResource Include="Reports\Index\Index.rdlc" />
+    <EmbeddedResource Include="Reports\Index\IndexMt.rdlc" />
+    <EmbeddedResource Include="Reports\InterfaceComptable\BalanceAuxilliaire.rdlc" />
+    <EmbeddedResource Include="Reports\InterfaceComptable\Comptabilisation.rdlc" />
+    <EmbeddedResource Include="Reports\InterfaceComptable\BalanceAgee.rdlc" />
+    <EmbeddedResource Include="Reports\InterfaceComptable\MiseAJourSCGC.rdlc" />
+    <EmbeddedResource Include="Reports\InterfaceComptable\Operation.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\ApplicationTaxe.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Banque.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Casind.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Centre.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CodeDepart.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CodePoste.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CelluleDuSiege.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Commune.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\MarqueCompteur.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CoutDemande.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Materiel.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Redevance.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Monnaie.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\UniteComptage.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Forfait.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Fonction.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Quartier.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Tarif.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\TypeMessage.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\EtatCompteur.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Mois.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\NiveauTarif.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\NatureClient.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\ModeCalcul.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\RechercheTarif.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\PeriodiciteFacturation.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Rues.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\TypeDevis.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\EtapeDevis.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\RegExo.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Site.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\TacheDevis.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\TypeCentre.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\DomBanc.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\RegCli.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\LibelleTop.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\NumeroInstallation.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Nationalite.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\ParametresGeneraux.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\ParametreEvenement.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Proprietaire.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CategorieClient.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Consommateur.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\CategorieBranchement.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Denomination.rdlc" />
+    <EmbeddedResource Include="Reports\Parametrage\Produit.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatDesIndex.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatDesIndexNonSaisi.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatDesIndexNonSaisi45.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatDesIndexSaisis.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatListeDesCas.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\EtatRecapRi.rdlc" />
+    <EmbeddedResource Include="Reports\Caisse\test.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\CampagnePrecontentieux.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\AbonnementPrepayer.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\ReglementCampagne.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\RendezvousClient.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\FicheDeDecharge.rdlc" />
+    <EmbeddedResource Include="Reports\Precontentieux\LettreInvitation.rdlc" />
+    <EmbeddedResource Include="Reports\Reclamation\ListeReclamations.rdlc" />
+    <EmbeddedResource Include="Reports\Reclamation\ReclamationParAgent.rdlc" />
+    <EmbeddedResource Include="Reports\Reclamation\FicheDeTravail.rdlc" />
+    <EmbeddedResource Include="Reports\Reclamation\StatistiqueReclamations.rdlc" />
+    <EmbeddedResource Include="Reports\Reclamation\SuiviTauxTraitement.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\AvisDeCoupureDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\AvisDeCoupureDetailSGC.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\AvisDeCoupureListe.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\Campagnes.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientAPoser.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\CampagnePoser.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientIndexSaisi.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientFraisSaisi.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientFacture.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientRelancer.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientResilier.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\AvisDeCoupureAbonnement.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\EtatcampagneGC.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\EtatGrandCompte.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\LettreDeRelance.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\MiseAJourGrandCompte.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\OrdreDeCoupur.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\OrdreDeCoupurParAbon.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\PreavisDeCoupur.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\PreavisDeCoupurParAbon.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\SuivieMoratoire.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\AvisDeCoupureListeSGC.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ChequeImpaye.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\MauvaisPayeurs.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\ClientEnRendezVous.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\moratoire.rdlc" />
+    <EmbeddedResource Include="Reports\Recouvrement\VisuRdv.rdlc" />
+    <EmbeddedResource Include="Reports\Report\AbonneNonConstituer.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ConnexionsElectricite.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ConnexionsElectricitePie.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ConnexionWaterPie.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\CurrentPaymentDetails.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\CurrentPaymentsDetails.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\DeclarationTVA.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ElectricitySalesByCustomerCategory.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\EncaissementParCaissiereConnectee.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\EncaissementParCollector.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\EncaissementParCollectorSumary2.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\GeneralSalesByCategory.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ImpayesCategorie.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ImpayesCategorieDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ImpayesTournee.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ImpayesTourneeDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ManualDailyPayment.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ManualDailyPayment2.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\NewConnectionWater.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\NouvelAbonnementParPeriode.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\NouvelAbonnementParPeriodeDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\QuantitySoldByCategory.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ResiliationAbonnementParPeriode.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\ResiliationAbonnementParPeriodeDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\SalesByCustomerCategory.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\SummarySalesByCategory.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\test.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\VisuManualDailyPayment.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\VisuReportNewElectricityServiceConnection.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ancien\VisuReportYear.rdlc" />
+    <EmbeddedResource Include="Reports\Report\AvanceSurConsomation.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ClientSansAchat.rdlc" />
+    <EmbeddedResource Include="Reports\Report\AbonneNonSaisi.rdlc" />
+    <EmbeddedResource Include="Reports\Report\AbonneNonMaj.rdlc" />
+    <EmbeddedResource Include="Reports\Report\AbonneNonCalcules.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ConsoNullRecap.rdlc" />
+    <EmbeddedResource Include="Reports\Report\CompteurParProduitPeriode.rdlc" />
+    <EmbeddedResource Include="Reports\Report\DonnesStatistiqueDemande.rdlc" />
+    <EmbeddedResource Include="Reports\Report\EtatCompteur.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisRemisRecap.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisRemisDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisCoupeDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisEmisDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\FacEncaissementParMoisComptable.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieDetailXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieGCTournee.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieGCTourneeXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_ListeDestourneePIA.rdlc" />
+    <Content Include="Reports\Report\RegistreDemande.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Travaux_Branchement_Extension.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VenteCummulCategorieXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VenteCummulXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VenteCummulCategorie.rdlc" />
+    <EmbeddedResource Include="Reports\Report\CasFactureDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\CasFactures.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapStatFacturationBtFac.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieTourneeXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\NombreMoyenDeJourXls.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapFacturation.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapFacturationGroup.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapStatFacturationBtStat.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapStatFacturationMt.rdlc" />
+    <EmbeddedResource Include="Reports\Report\RecapStatFacturationMtStat.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ScelleRemis.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VenteCummul.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Ventre.rdlc" />
+    <EmbeddedResource Include="Reports\Report\EncaissementModePaiement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\EncaissementReversement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\EmissionProduitRegroupement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\TauxPaiement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\TauxRecouvrement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ListeDesMandatementGestionnaire.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ListeDesPaiementMandatGestionnaire.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ListeDesPreavisGestionnaire.rdlc" />
+    <EmbeddedResource Include="Reports\Report\MontantPaiementGestionnaire.rdlc" />
+    <EmbeddedResource Include="Reports\Report\TauxEncaissement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ResilierSuiteCampagne.rdlc" />
+    <EmbeddedResource Include="Reports\Report\CompteurParProduit.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ConsoNull.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ActionFacturation.rdlc" />
+    <EmbeddedResource Include="Reports\Report\CompteurParProduitPeriodeStat.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisEmisRecap.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Recouv_AvisCoupeRecap.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ClientReposePia.rdlc" />
+    <EmbeddedResource Include="Reports\Report\FactureAnnulation.rdlc" />
+    <EmbeddedResource Include="Reports\Report\FactureIsole.rdlc" />
+    <EmbeddedResource Include="Reports\Report\MontantRecouvrementPia.rdlc" />
+    <EmbeddedResource Include="Reports\Report\NombreMoyenDeJour.rdlc" />
+    <EmbeddedResource Include="Reports\Report\TauxMandatement.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VentreDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Report\Demande.rdlc" />
+    <EmbeddedResource Include="Reports\Report\ImpayeCategorieTournee.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VentreRecap.rdlc" />
+    <EmbeddedResource Include="Reports\Report\VentreStatDetail.rdlc" />
+    <EmbeddedResource Include="Reports\Rpnt\EtatCampagnesCentre.rdlc" />
+    <EmbeddedResource Include="Reports\Rpnt\NbrDetailAnomalieFamilles.rdlc" />
+    <EmbeddedResource Include="Reports\Rpnt\NombreAnomalieParFamille.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAccueil\" />
+    <WCFMetadataStorage Include="Service References\ServiceAdministration\" />
+    <WCFMetadataStorage Include="Service References\ServiceAuthenInitialize\" />
+    <WCFMetadataStorage Include="Service References\ServiceCaisse\" />
+    <WCFMetadataStorage Include="Service References\ServiceDevis\" />
+    <WCFMetadataStorage Include="Service References\ServiceEservice\" />
+    <WCFMetadataStorage Include="Service References\ServiceFacturation\" />
+    <WCFMetadataStorage Include="Service References\ServiceIndex\" />
+    <WCFMetadataStorage Include="Service References\ServiceParametrage\" />
+    <WCFMetadataStorage Include="Service References\ServicePrintings\" />
+    <WCFMetadataStorage Include="Service References\ServiceRecouvrement\" />
+    <WCFMetadataStorage Include="Service References\ServiceReport\" />
+    <WCFMetadataStorage Include="Service References\ServiceWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Galatee.Tools\Galatee.Tools.csproj">
+      <Project>{295205C1-E52D-482C-9E95-6C0909445646}</Project>
+      <Name>Galatee.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>17207</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17207/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://iv-srv-006:2013</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

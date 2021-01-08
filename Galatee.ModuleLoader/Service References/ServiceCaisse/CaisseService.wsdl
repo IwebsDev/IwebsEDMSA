@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CaisseService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Caisse/CaisseService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Caisse/CaisseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Caisse/CaisseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Caisse/CaisseService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Caisse/CaisseService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICaisseService_ValideOuvertureCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValideOuvertureCaisse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ValideOuvertureCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValideOuvertureCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ValideOuvertureCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ClosureOfCashRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClosureOfCashRegister" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ClosureOfCashRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClosureOfCashRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ClosureOfCashRegister_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseOuverteALaDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseOuverteALaDemande" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseOuverteALaDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseOuverteALaDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseOuverteALaDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseDejaSaisie_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseDejaSaisie" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseDejaSaisie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCaisseDejaSaisieResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieCaisseDejaSaisie_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_AnnuleEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnnuleEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_AnnuleEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnnuleEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_AnnuleEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_InsererEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_InsererEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_InsererEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumFactureNaf_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumFactureNaf" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumFactureNaf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumFactureNafResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumFactureNaf_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLigneNaf_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLigneNaf" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLigneNaf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLigneNafResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLigneNaf_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneEtatDeCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatDeCaisse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneEtatDeCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatDeCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneEtatDeCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementPourAnnulation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementPourAnnulation" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementPourAnnulation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementPourAnnulationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementPourAnnulation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneRecuDeCaisseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisseList" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneRecuDeCaisseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRecuDeCaisseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneRecuDeCaisseList_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setReglementInWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setReglementInWebPart" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setReglementInWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setReglementInWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setReglementInWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientsParBillingPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientsParBillingPeriod" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientsParBillingPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientsParBillingPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientsParBillingPeriod_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientBilling_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientBilling" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientBilling_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientBillingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneClientBilling_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReglementParameters" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReglementParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementParameters_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementFromWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReglementFromWebPart" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementFromWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReglementFromWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getReglementFromWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ChargerListeCodeRegroupement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeCodeRegroupement" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ChargerListeCodeRegroupement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeCodeRegroupementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ChargerListeCodeRegroupement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFacture" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailMoratoireInWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailMoratoireInWebPart" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailMoratoireInWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailMoratoireInWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailMoratoireInWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailDsiconnectionInWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailDsiconnectionInWebPart" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailDsiconnectionInWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailDsiconnectionInWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailDsiconnectionInWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailCampagneInWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailCampagneInWebPart" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailCampagneInWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setDetailCampagneInWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_setDetailCampagneInWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientPasEncoreCreeExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientPasEncoreCreeExist" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientPasEncoreCreeExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientPasEncoreCreeExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientPasEncoreCreeExist_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ReturnCustomerCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnCustomerCategory" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ReturnCustomerCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnCustomerCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ReturnCustomerCategory_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumCaisse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieEtatCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieEtatCaisse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieEtatCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieEtatCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_VerifieEtatCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTaxe_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTaxe" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTaxe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTaxeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTaxe_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesClientsReg_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesClientsReg" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesClientsReg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesClientsRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesClientsReg_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesCaissiere_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesCaissiere" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesCaissiere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesCaissiereResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesCaissiere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesBanques_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesBanques" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesBanques_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesBanquesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDesBanques_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourDevis_InputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourDevis" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourDevis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourDevisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourDevis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesNonCaissiere_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesNonCaissiere" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesNonCaissiere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListeDesNonCaissiereResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_getListeDesNonCaissiere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ListeCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCaisse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ListeCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_ListeCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_MiseAJourMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSite" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeSite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDemande" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDetailMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDetailMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDetailMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDetailMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneDetailMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLeDevis_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLeDevis" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLeDevis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneLeDevisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneLeDevis_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeCoperOD_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeCoperOD" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeCoperOD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeCoperODResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeDeCoperOD_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeMoratoire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeMoratoire" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeMoratoire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeMoratoireResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeMoratoire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTa58_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTa58" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTa58_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeTa58Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListeTa58_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q40:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementDuRecu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementDuRecu" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementDuRecu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListePaiementDuRecuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneListePaiementDuRecu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q41:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneModeRegDiffDeUnDeux_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneModeRegDiffDeUnDeux" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneModeRegDiffDeUnDeux_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneModeRegDiffDeUnDeuxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneModeRegDiffDeUnDeux_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q42:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumeroRecu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumeroRecu" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumeroRecu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneNumeroRecuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_RetourneNumeroRecu_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q43:Errors" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExist" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestClientExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaisseService_TestClientExist_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q44:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="ICaisseService">
+    <wsdl:operation name="ValideOuvertureCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/ValideOuvertureCaisse" message="tns:ICaisseService_ValideOuvertureCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/ValideOuvertureCaisseResponse" message="tns:ICaisseService_ValideOuvertureCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/ValideOuvertureCaisseErrorsFault" name="ErrorsFault" message="tns:ICaisseService_ValideOuvertureCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosureOfCashRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/ClosureOfCashRegister" message="tns:ICaisseService_ClosureOfCashRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/ClosureOfCashRegisterResponse" message="tns:ICaisseService_ClosureOfCashRegister_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/ClosureOfCashRegisterErrorsFault" name="ErrorsFault" message="tns:ICaisseService_ClosureOfCashRegister_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseOuverteALaDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseOuverteALaDemande" message="tns:ICaisseService_VerifieCaisseOuverteALaDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseOuverteALaDemandeResponse" message="tns:ICaisseService_VerifieCaisseOuverteALaDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseOuverteALaDemandeErrorsFault" name="ErrorsFault" message="tns:ICaisseService_VerifieCaisseOuverteALaDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseDejaSaisie">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseDejaSaisie" message="tns:ICaisseService_VerifieCaisseDejaSaisie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseDejaSaisieResponse" message="tns:ICaisseService_VerifieCaisseDejaSaisie_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/VerifieCaisseDejaSaisieErrorsFault" name="ErrorsFault" message="tns:ICaisseService_VerifieCaisseDejaSaisie_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnnuleEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/AnnuleEncaissement" message="tns:ICaisseService_AnnuleEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/AnnuleEncaissementResponse" message="tns:ICaisseService_AnnuleEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/AnnuleEncaissementErrorsFault" name="ErrorsFault" message="tns:ICaisseService_AnnuleEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/InsererEncaissement" message="tns:ICaisseService_InsererEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/InsererEncaissementResponse" message="tns:ICaisseService_InsererEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/InsererEncaissementErrorsFault" name="ErrorsFault" message="tns:ICaisseService_InsererEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumFactureNaf">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumFactureNaf" message="tns:ICaisseService_RetourneNumFactureNaf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumFactureNafResponse" message="tns:ICaisseService_RetourneNumFactureNaf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumFactureNafErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneNumFactureNaf_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLigneNaf">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneLigneNaf" message="tns:ICaisseService_RetourneLigneNaf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneLigneNafResponse" message="tns:ICaisseService_RetourneLigneNaf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneLigneNafErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneLigneNaf_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatDeCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneEtatDeCaisse" message="tns:ICaisseService_RetourneEtatDeCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneEtatDeCaisseResponse" message="tns:ICaisseService_RetourneEtatDeCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneEtatDeCaisseErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneEtatDeCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementPourAnnulation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementPourAnnulation" message="tns:ICaisseService_RetourneListePaiementPourAnnulation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementPourAnnulationResponse" message="tns:ICaisseService_RetourneListePaiementPourAnnulation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementPourAnnulationErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListePaiementPourAnnulation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneRecuDeCaisseList" message="tns:ICaisseService_RetourneRecuDeCaisseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneRecuDeCaisseListResponse" message="tns:ICaisseService_RetourneRecuDeCaisseList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneRecuDeCaisseListErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneRecuDeCaisseList_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setReglementInWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/setReglementInWebPart" message="tns:ICaisseService_setReglementInWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/setReglementInWebPartResponse" message="tns:ICaisseService_setReglementInWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/setReglementInWebPartErrorsFault" name="ErrorsFault" message="tns:ICaisseService_setReglementInWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientsParBillingPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientsParBillingPeriod" message="tns:ICaisseService_RetourneClientsParBillingPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientsParBillingPeriodResponse" message="tns:ICaisseService_RetourneClientsParBillingPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientsParBillingPeriodErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneClientsParBillingPeriod_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientBilling">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientBilling" message="tns:ICaisseService_RetourneClientBilling_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientBillingResponse" message="tns:ICaisseService_RetourneClientBilling_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneClientBillingErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneClientBilling_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReglementParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/getReglementParameters" message="tns:ICaisseService_getReglementParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/getReglementParametersResponse" message="tns:ICaisseService_getReglementParameters_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/getReglementParametersErrorsFault" name="ErrorsFault" message="tns:ICaisseService_getReglementParameters_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReglementFromWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/getReglementFromWebPart" message="tns:ICaisseService_getReglementFromWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/getReglementFromWebPartResponse" message="tns:ICaisseService_getReglementFromWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/getReglementFromWebPartErrorsFault" name="ErrorsFault" message="tns:ICaisseService_getReglementFromWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeCodeRegroupement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/ChargerListeCodeRegroupement" message="tns:ICaisseService_ChargerListeCodeRegroupement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/ChargerListeCodeRegroupementResponse" message="tns:ICaisseService_ChargerListeCodeRegroupement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/ChargerListeCodeRegroupementErrorsFault" name="ErrorsFault" message="tns:ICaisseService_ChargerListeCodeRegroupement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeFacture" message="tns:ICaisseService_RetourneListeFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeFactureResponse" message="tns:ICaisseService_RetourneListeFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeFactureErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setDetailMoratoireInWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/setDetailMoratoireInWebPart" message="tns:ICaisseService_setDetailMoratoireInWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/setDetailMoratoireInWebPartResponse" message="tns:ICaisseService_setDetailMoratoireInWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/setDetailMoratoireInWebPartErrorsFault" name="ErrorsFault" message="tns:ICaisseService_setDetailMoratoireInWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setDetailDsiconnectionInWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/setDetailDsiconnectionInWebPart" message="tns:ICaisseService_setDetailDsiconnectionInWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/setDetailDsiconnectionInWebPartResponse" message="tns:ICaisseService_setDetailDsiconnectionInWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/setDetailDsiconnectionInWebPartErrorsFault" name="ErrorsFault" message="tns:ICaisseService_setDetailDsiconnectionInWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setDetailCampagneInWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/setDetailCampagneInWebPart" message="tns:ICaisseService_setDetailCampagneInWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/setDetailCampagneInWebPartResponse" message="tns:ICaisseService_setDetailCampagneInWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/setDetailCampagneInWebPartErrorsFault" name="ErrorsFault" message="tns:ICaisseService_setDetailCampagneInWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestClientPasEncoreCreeExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/TestClientPasEncoreCreeExist" message="tns:ICaisseService_TestClientPasEncoreCreeExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/TestClientPasEncoreCreeExistResponse" message="tns:ICaisseService_TestClientPasEncoreCreeExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/TestClientPasEncoreCreeExistErrorsFault" name="ErrorsFault" message="tns:ICaisseService_TestClientPasEncoreCreeExist_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnCustomerCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/ReturnCustomerCategory" message="tns:ICaisseService_ReturnCustomerCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/ReturnCustomerCategoryResponse" message="tns:ICaisseService_ReturnCustomerCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/ReturnCustomerCategoryErrorsFault" name="ErrorsFault" message="tns:ICaisseService_ReturnCustomerCategory_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumCaisse" message="tns:ICaisseService_RetourneNumCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumCaisseResponse" message="tns:ICaisseService_RetourneNumCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumCaisseErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneNumCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieEtatCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/VerifieEtatCaisse" message="tns:ICaisseService_VerifieEtatCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/VerifieEtatCaisseResponse" message="tns:ICaisseService_VerifieEtatCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/VerifieEtatCaisseErrorsFault" name="ErrorsFault" message="tns:ICaisseService_VerifieEtatCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTaxe">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTaxe" message="tns:ICaisseService_RetourneListeTaxe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTaxeResponse" message="tns:ICaisseService_RetourneListeTaxe_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTaxeErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeTaxe_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesClientsReg">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesClientsReg" message="tns:ICaisseService_RetourneListeDesClientsReg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesClientsRegResponse" message="tns:ICaisseService_RetourneListeDesClientsReg_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesClientsRegErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeDesClientsReg_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesCaissiere">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/getListeDesCaissiere" message="tns:ICaisseService_getListeDesCaissiere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/getListeDesCaissiereResponse" message="tns:ICaisseService_getListeDesCaissiere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/getListeDesCaissiereErrorsFault" name="ErrorsFault" message="tns:ICaisseService_getListeDesCaissiere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesBanques">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesBanques" message="tns:ICaisseService_RetourneListeDesBanques_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesBanquesResponse" message="tns:ICaisseService_RetourneListeDesBanques_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDesBanquesErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeDesBanques_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourDevis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourDevis" message="tns:ICaisseService_MiseAJourDevis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourDevisResponse" message="tns:ICaisseService_MiseAJourDevis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourDevisErrorsFault" name="ErrorsFault" message="tns:ICaisseService_MiseAJourDevis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesNonCaissiere">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/getListeDesNonCaissiere" message="tns:ICaisseService_getListeDesNonCaissiere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/getListeDesNonCaissiereResponse" message="tns:ICaisseService_getListeDesNonCaissiere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/getListeDesNonCaissiereErrorsFault" name="ErrorsFault" message="tns:ICaisseService_getListeDesNonCaissiere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/ListeCaisse" message="tns:ICaisseService_ListeCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/ListeCaisseResponse" message="tns:ICaisseService_ListeCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/ListeCaisseErrorsFault" name="ErrorsFault" message="tns:ICaisseService_ListeCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourMoratoire" message="tns:ICaisseService_MiseAJourMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourMoratoireResponse" message="tns:ICaisseService_MiseAJourMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/MiseAJourMoratoireErrorsFault" name="ErrorsFault" message="tns:ICaisseService_MiseAJourMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeSite" message="tns:ICaisseService_RetourneListeDeSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeSiteResponse" message="tns:ICaisseService_RetourneListeDeSite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeSiteErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeDeSite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneDemande" message="tns:ICaisseService_RetourneDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneDemandeResponse" message="tns:ICaisseService_RetourneDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneDemandeErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDetailMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneDetailMoratoire" message="tns:ICaisseService_RetourneDetailMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneDetailMoratoireResponse" message="tns:ICaisseService_RetourneDetailMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneDetailMoratoireErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneDetailMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLeDevis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneLeDevis" message="tns:ICaisseService_RetourneLeDevis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneLeDevisResponse" message="tns:ICaisseService_RetourneLeDevis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneLeDevisErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneLeDevis_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeCoperOD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeCoperOD" message="tns:ICaisseService_RetourneListeDeCoperOD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeCoperODResponse" message="tns:ICaisseService_RetourneListeDeCoperOD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeDeCoperODErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeDeCoperOD_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeMoratoire">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeMoratoire" message="tns:ICaisseService_RetourneListeMoratoire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeMoratoireResponse" message="tns:ICaisseService_RetourneListeMoratoire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeMoratoireErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeMoratoire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTa58">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTa58" message="tns:ICaisseService_RetourneListeTa58_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTa58Response" message="tns:ICaisseService_RetourneListeTa58_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListeTa58ErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListeTa58_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementDuRecu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementDuRecu" message="tns:ICaisseService_RetourneListePaiementDuRecu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementDuRecuResponse" message="tns:ICaisseService_RetourneListePaiementDuRecu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneListePaiementDuRecuErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneListePaiementDuRecu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneModeRegDiffDeUnDeux">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneModeRegDiffDeUnDeux" message="tns:ICaisseService_RetourneModeRegDiffDeUnDeux_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneModeRegDiffDeUnDeuxResponse" message="tns:ICaisseService_RetourneModeRegDiffDeUnDeux_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneModeRegDiffDeUnDeuxErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneModeRegDiffDeUnDeux_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumeroRecu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumeroRecu" message="tns:ICaisseService_RetourneNumeroRecu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumeroRecuResponse" message="tns:ICaisseService_RetourneNumeroRecu_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/RetourneNumeroRecuErrorsFault" name="ErrorsFault" message="tns:ICaisseService_RetourneNumeroRecu_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICaisseService/TestClientExist" message="tns:ICaisseService_TestClientExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICaisseService/TestClientExistResponse" message="tns:ICaisseService_TestClientExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICaisseService/TestClientExistErrorsFault" name="ErrorsFault" message="tns:ICaisseService_TestClientExist_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICaisseService" type="tns:ICaisseService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValideOuvertureCaisse">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/ValideOuvertureCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosureOfCashRegister">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/ClosureOfCashRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseOuverteALaDemande">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/VerifieCaisseOuverteALaDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCaisseDejaSaisie">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/VerifieCaisseDejaSaisie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnnuleEncaissement">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/AnnuleEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsererEncaissement">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/InsererEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumFactureNaf">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneNumFactureNaf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLigneNaf">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneLigneNaf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatDeCaisse">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneEtatDeCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementPourAnnulation">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListePaiementPourAnnulation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRecuDeCaisseList">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneRecuDeCaisseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setReglementInWebPart">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/setReglementInWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientsParBillingPeriod">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneClientsParBillingPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientBilling">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneClientBilling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReglementParameters">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/getReglementParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReglementFromWebPart">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/getReglementFromWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeCodeRegroupement">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/ChargerListeCodeRegroupement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFacture">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setDetailMoratoireInWebPart">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/setDetailMoratoireInWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setDetailDsiconnectionInWebPart">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/setDetailDsiconnectionInWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setDetailCampagneInWebPart">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/setDetailCampagneInWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestClientPasEncoreCreeExist">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/TestClientPasEncoreCreeExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnCustomerCategory">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/ReturnCustomerCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumCaisse">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneNumCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieEtatCaisse">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/VerifieEtatCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTaxe">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeTaxe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesClientsReg">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeDesClientsReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesCaissiere">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/getListeDesCaissiere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesBanques">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeDesBanques" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourDevis">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/MiseAJourDevis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListeDesNonCaissiere">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/getListeDesNonCaissiere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeCaisse">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/ListeCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourMoratoire">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/MiseAJourMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeSite">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeDeSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDemande">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDetailMoratoire">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneDetailMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneLeDevis">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneLeDevis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDeCoperOD">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeDeCoperOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeMoratoire">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeMoratoire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeTa58">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListeTa58" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListePaiementDuRecu">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneListePaiementDuRecu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneModeRegDiffDeUnDeux">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneModeRegDiffDeUnDeux" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneNumeroRecu">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/RetourneNumeroRecu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestClientExist">
+      <soap:operation soapAction="http://tempuri.org/ICaisseService/TestClientExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CaisseService">
+    <wsdl:port name="BasicHttpBinding_ICaisseService" binding="tns:BasicHttpBinding_ICaisseService">
+      <soap:address location="http://localhost:1818/Caisse/CaisseService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

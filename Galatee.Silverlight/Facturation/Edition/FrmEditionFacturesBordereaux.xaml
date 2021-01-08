@@ -1,0 +1,73 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.FrmEditionFacturesBordereaux"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="688.731" Height="509" 
+           Title="EditionFacturesBordereaux" OverlayBrush="Transparent" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions> 
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" Header="Type d'édition" Height="48" Margin="0,199,363,0" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="                                  " Height="131" Margin="303,2,0,0" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="                         " Height="197" Margin="0,2,363,0" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="Format d'édition" Height="134" Margin="0,252,363,0" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="                                 " Height="117" Margin="303,138,0,0" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="                                  " Height="131" Margin="303,255,0,0" VerticalAlignment="Top" />
+
+        <RadioButton Content="Edition d'un lot" Height="16" HorizontalAlignment="Left" Margin="16,224,0,0" Name="Chk_edition_lot" VerticalAlignment="Top" GroupName="type" Click="Chk_edition_lot_Click" IsEnabled="True" Checked="Chk_edition_lot_Checked" IsChecked="False" />
+        <RadioButton Content="Edition clients regroupés" Visibility="Collapsed"  Height="16" HorizontalAlignment="Left" Margin="22,143,0,0" Name="Chk_client_lot" VerticalAlignment="Top" GroupName="type" IsEnabled="True" Checked="Chk_client_lot_Checked" />
+        <RadioButton Content="Edition domicilié bancaires" Visibility="Collapsed"  Height="16" HorizontalAlignment="Left" Margin="22,144,0,0" Name="Chk_domicilie_bank" VerticalAlignment="Top" GroupName="type" Checked="Chk_domicilie_bank_Checked" IsEnabled="True" />
+        <RadioButton Content="Facture" Height="16" HorizontalAlignment="Left" Margin="10,289,0,0" Name="Rdb_facture" VerticalAlignment="Top" GroupName="format" IsEnabled="True" Tag="1" IsChecked="False" />
+        <RadioButton Content="Bordereau detaillé" Height="16" HorizontalAlignment="Left" Margin="10,312,0,0" Name="Rdb_bordereau_detail" VerticalAlignment="Top" GroupName="format" IsEnabled="True" Tag="2" />
+        <RadioButton Content="Bordereau simplifié" Height="16" HorizontalAlignment="Left" Margin="10,334,0,0" Name="Rdb_bordereau_simple" VerticalAlignment="Top" GroupName="format" IsEnabled="True" Tag="3"/>
+        <RadioButton Content="Edition anomalies" Height="16" HorizontalAlignment="Left" Margin="10,359,0,0" Name="Rdb_edtion_anomalie" VerticalAlignment="Top" GroupName="format" IsEnabled="True" Tag="4" Click="Rdb_edtion_anomalie_Click" RenderTransformOrigin="0.593,0.562" />
+        <Button Content="Lot" Height="23" HorizontalAlignment="Left" Margin="11,87,0,0" Name="Btn_lot" VerticalAlignment="Top" Width="109" IsEnabled="False" Click="Btn_lot_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="125,88,0,0" Name="Txt_batch"  Background="LightBlue" VerticalAlignment="Top" Width="142" IsReadOnly="True" TextChanged="Txt_batch_TextChanged" />
+        <Button Content="Jet" Height="23" HorizontalAlignment="Left" Margin="12,118,0,0" Name="Btn_jet" VerticalAlignment="Top" Width="109" IsEnabled="False" Click="Btn_jet_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="125,118,0,0" Name="Txt_run" Background="LightBlue" VerticalAlignment="Top" Width="81" IsReadOnly="True" />
+        <Button Content="Lancer" Height="23" HorizontalAlignment="Left" Margin="422,0,0,10" Name="Btn_lancer" VerticalAlignment="Bottom" Width="127" IsEnabled="True" Click="Btn_lancer_Click" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="554,0,0,10" Name="Btn_cancel" VerticalAlignment="Bottom" Width="97" IsEnabled="True" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="22,399,0,0" VerticalAlignment="Top" Width="361" IsIndeterminate="True"/> 
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="319,157,0,0" x:Name="Lbl_centre" VerticalAlignment="Top" Width="141" Content="Centre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="460,155,0,0" x:Name="Txt_centre_reprise" VerticalAlignment="Top" Width="103" IsReadOnly="True"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="460,179,0,0" x:Name="Txt_reprise_client" VerticalAlignment="Top" Width="103" IsReadOnly="True"  />
+        <TextBox Height="23"  HorizontalAlignment="Left" Margin="460,204,0,0" x:Name="Txt_Ordre_client" VerticalAlignment="Top" Width="103" IsReadOnly="True" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="319,181,0,0" x:Name="Lbl_centre_Copy" VerticalAlignment="Top" Width="136" Content="Client" />
+        <Button  Content="..." x:Name="btn_CentreReprise" IsEnabled="False"  HorizontalAlignment="Left" Margin="568,155,0,0" VerticalAlignment="Top" Width="37" Click="btn_CentreReprise_Click" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="319,206,0,0" x:Name="Lbl_centre_Copy1" VerticalAlignment="Top" Width="133" Content="Ordre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="382,309,0,0" x:Name="Txt_centre_tournee" VerticalAlignment="Top" Width="88" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="517,334,0,0" x:Name="Txt_tournee_fin" VerticalAlignment="Top" Width="88" IsReadOnly="True" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="316,309,0,0" x:Name="Lbl_center1" VerticalAlignment="Top" Width="45" Content="Centre" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="317,339,0,0" x:Name="Lbl_zone" VerticalAlignment="Top" Width="66" Content="Tournée" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="383,335,0,0" x:Name="Txt_tournee_debut" VerticalAlignment="Top" Width="88" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="475,309,0,0" x:Name="Btn_CentreTourne" VerticalAlignment="Top" Width="29" IsEnabled="False" Click="Btn_CentreTourne_Click" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="476,334,0,0" x:Name="Btn_Tournee1" VerticalAlignment="Top" Width="29" IsEnabled="False" Click="Btn_Tournee1_Click"/>
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="610,331,0,0" x:Name="Btn_Tournee2" VerticalAlignment="Top" Width="29" IsEnabled="False" Click="Btn_Tournee2_Click"/>
+        <CheckBox Content="Edition par tournée" Height="16" HorizontalAlignment="Left" Margin="310,254,0,0" x:Name="Chk_edition_tournee" VerticalAlignment="Top" IsEnabled="True" Click="Chk_edition_tournee_Click" Checked="Chk_edition_tournee_Checked" />
+        <CheckBox Content="Reprise sur client" Height="16" HorizontalAlignment="Left" Margin="316,137,0,0" x:Name="Chk_reprise_client" VerticalAlignment="Top" Width="118" IsEnabled="True" Click="Chk_reprise_client_Click" Checked="Chk_reprise_client_Checked_1" />
+        <Button   Content="Site" Height="23" IsEnabled="False"  HorizontalAlignment="Left" Margin="337,20,0,0" x:Name="btnSite" VerticalAlignment="Top" Width="83" Click="btn_Site_Click"/>
+        <ComboBox HorizontalAlignment="Left" Margin="422,48,0,0" VerticalAlignment="Top" Width="200" Height="24" x:Name="cbo_Site"/>
+        <Button   Content="Centre" Height="23" IsEnabled="False"  HorizontalAlignment="Left" Margin="337,48,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="83"   RenderTransformOrigin="0.541,-1.13" Click="btn_Centre_Click_1" />
+        <RadioButton Content="Edition par lot" Height="16" HorizontalAlignment="Left" Margin="11,1,0,0" x:Name="Chk_edition_lot_Copy" VerticalAlignment="Top" GroupName="type" Click="Chk_edition_lot_Click" IsEnabled="True" Checked="Chk_edition_lot_Checked" IsChecked="False" Width="134" />
+        <RadioButton Content="Edition par période" Height="16" HorizontalAlignment="Left" Margin="316,1,0,0" x:Name="Chk_edition_lot_Copy1" VerticalAlignment="Top" GroupName="type" Click="Chk_edition_lot_Click" IsEnabled="True" Checked="Chk_edition_lot_Checked" IsChecked="False" Width="134" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="422,21,0,0" x:Name="Txt_Site"  VerticalAlignment="Top" Width="200" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="422,77,0,0" x:Name="Txt_run_Copy" Background="LightBlue" VerticalAlignment="Top" Width="127" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="422,103,0,0" x:Name="Txt_run_Copy1" Background="LightBlue" VerticalAlignment="Top" Width="127" IsReadOnly="True" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="337,76,0,0" x:Name="Lbl_centre_Copy2" VerticalAlignment="Top" Width="85" Content="Période debut" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="337,107,0,0" x:Name="Lbl_centre_Copy3" VerticalAlignment="Top" Width="85" Content="Période fin" />
+        <CheckBox Name="chk_Autre" Content="Autre facturation" Checked="chk_Autre_Checked" Unchecked="chk_Autre_Unchecked" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="198,58,0,0" x:Name="Btn_Recherche" VerticalAlignment="Top" Width="90" IsEnabled="False" Click="Btn_Recherche_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="125,58,0,0" x:Name="Txt_Periode" Background="LightBlue" VerticalAlignment="Top" Width="68" IsReadOnly="True" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,60,0,0" x:Name="Lbl_centre_Copy4" VerticalAlignment="Top" Width="109" Content="Période(mm/aaaa)" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="460,230,0,0" x:Name="Txt_PeriodeClient"  VerticalAlignment="Top" Width="103"   />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="319,230,0,0" x:Name="Lbl_centre_Copy5" VerticalAlignment="Top" Width="109" Content="Période(mm/aaaa)" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="125,149,0,0" x:Name="Txt_PeriodeLotIsole"  VerticalAlignment="Top" Width="103"   />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,150,0,0" x:Name="Lbl_PeriodeIsole" VerticalAlignment="Top" Width="109" Content="Période(mm/aaaa)" />
+        <CheckBox x:Name="chk_LotIsole" Content="Lot isolé" Checked="chk_LotIsole_Checked" Unchecked="chk_LotIsole_Unchecked" HorizontalAlignment="Left" Margin="153,32,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chk_LotIsoleMisAJour" Content="Déja Mise a jour" HorizontalAlignment="Left" Margin="125,177,0,0" VerticalAlignment="Top" Width="142"/>
+
+    </Grid>
+</controls:ChildWindow>

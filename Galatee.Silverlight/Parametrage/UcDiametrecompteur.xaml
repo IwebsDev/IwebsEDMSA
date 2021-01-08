@@ -1,0 +1,36 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Parametrage.UcDiametrecompteur"
+           Width="675" Height="300" 
+           Title="UcDiametrecompteur" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2,2,-8,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,12,0" Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="btnOk" Content="OK" Click="btnOk_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,91,0"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" />
+        <TextBox x:Name="Txt_Code" HorizontalAlignment="Left" Height="22" Margin="43,10,0,0" TabIndex="1" TextWrapping="Wrap" MaxLength="3" VerticalAlignment="Top" Width="144" Grid.Column="1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="12,10,0,0" VerticalAlignment="Top" Width="68" Content="Code :" Grid.ColumnSpan="2"/>
+        <TextBox   x:Name="Txt_Libelle" HorizontalAlignment="Left" Height="26" Margin="308,6,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165" Grid.Column="1"/>
+        <sdk:Label  Content="LIBELLE" HorizontalAlignment="Left" Height="28" Margin="234.684,10,0,0" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
+        <TextBox TabIndex="1" x:Name="Txt_BNI" HorizontalAlignment="Left" Height="28" Margin="40,61,0,0" TextWrapping="Wrap" MaxLength="2"  VerticalAlignment="Top" Width="147" Grid.Column="1"/>
+        <sdk:Label  Content="BNI" HorizontalAlignment="Left" Height="28" Margin="12,61,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2"/>
+        <TextBox TabIndex="1" x:Name="Txt_BNS" HorizontalAlignment="Left" Height="28" Margin="308,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Grid.Column="1"/>
+        <sdk:Label Content="BNS" HorizontalAlignment="Left" Height="28" Margin="240,66,0,0" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
+        <TextBox  TabIndex="1" x:Name="Txt_CFI" HorizontalAlignment="Left" Height="23" Margin="40,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Grid.Column="1"/>
+        <sdk:Label Content="CFI" HorizontalAlignment="Left" Height="28" Margin="7,109,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2"/>
+        <TextBox TabIndex="1" x:Name="Txt_CFS" HorizontalAlignment="Left" Height="23" Margin="308,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Grid.Column="1"/>
+        <sdk:Label Content="CFS" HorizontalAlignment="Left" Height="28" Margin="235,111,0,0" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
+
+        <sdk:Label Content="Produit" HorizontalAlignment="Left" Height="28" Margin="10,152,0,0" VerticalAlignment="Top" Width="68" Grid.ColumnSpan="2"/>
+        <ComboBox HorizontalAlignment="Left" Margin="38,147,0,0" VerticalAlignment="Top" Width="270" Height="26" x:Name="CboProduit" SelectionChanged="OnComboSelectionChanged" Grid.Column="1" />
+    </Grid>
+</sdk:ChildWindow>

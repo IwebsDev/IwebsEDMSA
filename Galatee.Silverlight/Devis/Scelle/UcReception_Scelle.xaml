@@ -1,0 +1,64 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Accueil.UcReception_Scelle"
+           Width="715.179" Height="516.97" 
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Title="Réception Scelle" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <my:GroupBox  Header="Information Demande" Height="125" HorizontalAlignment="Left" x:Name="groupBox2_Copy" VerticalAlignment="Top" Width="677" />
+        <my:GroupBox  Header="Affectation" Height="274" HorizontalAlignment="Left" x:Name="groupBox1_Copy" VerticalAlignment="Top" Width="677" Margin="0,125,0,0" />
+
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Height="23" VerticalAlignment="Top" />
+        <sdk:Label Content="Centre destinataire" HorizontalAlignment="Left" Height="28" Margin="10,26,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Agent démandeur" HorizontalAlignment="Left" Height="28" Margin="10,82,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Service destinataire" HorizontalAlignment="Left" Height="28" Margin="10,54,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Couleur demandée" HorizontalAlignment="Left" Height="28" Margin="400,22,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Nombre demandé" HorizontalAlignment="Left" Height="28" Margin="400,55,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <sdk:DataGrid Name="DgLotMag" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="225" Margin="10,149,0,0" VerticalAlignment="Top" Width="667" IsReadOnly="False" >
+            <sdk:DataGrid.Columns>
+                <!--<sdk:DataGridCheckBoxColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Est Livret" Width="72" Binding="{Binding Path=EstLivre}"/>-->
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro Scelle" Width="100" Binding="{Binding Path=Nuemro_Scelle}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Commentaire" Width="300" Binding="{Binding Path=Commentaire}"/>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <!--<Button Content=">" HorizontalAlignment="Left" Margin="420,266,0,0" VerticalAlignment="Top" Width="43" Click="Button_Click_1"/>
+        <Button Content="&lt;" HorizontalAlignment="Left" Margin="420,309,0,0" VerticalAlignment="Top" Width="43" Click="Button_Click_2"/>
+        <Button Content=">>" HorizontalAlignment="Left" Margin="420,347,0,0" VerticalAlignment="Top" Width="43" Click="Button_Click_3"/>
+        <Button  Content="&lt;&lt;" HorizontalAlignment="Left" Margin="420,385,0,0" VerticalAlignment="Top" Width="43"/>-->
+        <TextBox Name="txtnombreDem" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="536,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtCouleur" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="536,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtAgent" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="146,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <TextBox Name="txtService" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="146,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <TextBox Name="txtcentre" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="146,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224"/>
+        <!--<sdk:DataGrid HorizontalAlignment="Left" Height="216" Margin="499,227,0,0" VerticalAlignment="Top" Width="310">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="pk_id" Width="Auto" Binding="{Binding Path=PK_id}" Visibility="Collapsed"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro lot" Width="100" Binding="{Binding Path=Numero_Scelle}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Début" Width="70" Binding="{Binding Path=NUMERO}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Fin" Width="70" Binding="{Binding Path=NUMERO}"/>
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre" Width="70" Binding="{Binding Path=NUMERO}"/>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>-->
+        <TextBox Name="TxtNbScelle" Visibility="Collapsed" HorizontalAlignment="Left" Height="23" Margin="536,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="Tout Cocher" Checked="CheckBox_Checked" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"  Margin="10,149,0,0"/>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="67,10,0,0" VerticalAlignment="Top" Width="286" IsIndeterminate="True" Grid.Row="1"/>
+
+    </Grid>
+</controls:ChildWindow>

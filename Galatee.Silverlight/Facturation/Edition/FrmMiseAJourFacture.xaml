@@ -1,0 +1,55 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Facturation.FrmMiseAJourFacture"
+           Width="718.716" Height="411" 
+           Title="Mise à jours du lot" Loaded="ChildWindow_Loaded" OverlayBrush="{x:Null}">
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" x:Name="groupBox1_Copy1" Header="Liste des lots pour mise à jours"  />
+
+        <Button Content="Valider" HorizontalAlignment="Right" Margin="0,5,154,2" x:Name="OKButton" Width="131" Grid.Row="1" Click="OKButton_Click" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="261" HorizontalAlignment="Left" Margin="12,30,0,0" x:Name="dtgFactures" VerticalAlignment="Top" Width="655"  IsReadOnly="True"
+                       MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp" FontSize="13" FontWeight="Light"   >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="100" Header="Mise à jour" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding IsSelect, Mode=TwoWay}" 
+        						VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" MinWidth="90" Header="Lot"  Binding="{Binding NUMLOTRI}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  MinWidth="50" Header="Jet" Binding="{Binding JET}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  MinWidth="50" Header="Mois comptable" Binding="{Binding MOISCOMPTA}" IsReadOnly="True" />                
+                <!--<sdk:DataGridTemplateColumn Width="130" Header="Mois comptable" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox x:Name="cbo_Mois" DisplayMemberPath="LeMois"   SelectionChanged="cbo_Mois_SelectionChanged_1"
+                              MinWidth="130" MinHeight="25"
+                              ItemsSource="{Binding moisComptable, Mode=TwoWay}" />
+
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>-->
+                <!--<sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  MinWidth="50" Header="Facturier" Binding="{Binding CsLotri.NOMUSER}" IsReadOnly="True" />-->
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="25,7,0,0" VerticalAlignment="Top" Width="324" IsIndeterminate="True" Grid.Row="1"/>
+        <Button Content="Fermer" HorizontalAlignment="Right" Margin="0,5,10,0" x:Name="btn_fermer" Width="131" Grid.Row="1" Height="23" VerticalAlignment="Top" Click="btn_fermer_Click"  />
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           x:Class="Galatee.Silverlight.Report.UcVisuReportNewElectricityWaterServiceConnection"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="370" Height="295" 
+           Title="Report New Electricity Water Service Connection" OverlayBrush="Transparent"
+    Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="19,147,0,0" VerticalAlignment="Top" Width="120" Content="Produit :"/>
+        <sdk:Label HorizontalAlignment="Left"  Height="28" Margin="19,110,0,0" VerticalAlignment="Top" Width="120" Content="Année :"/>
+        <ComboBox x:Name="Cmb_Produit" HorizontalAlignment="Left" Margin="96,145,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cmb_Produit_SelectionChanged"/>
+        <TextBox x:Name="Txt_Year" HorizontalAlignment="Left" Height="23" Margin="96,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <!--<groupbox:GroupBox Header="Header goes here">-->
+        <RadioButton x:Name="Resilier" GroupName="GraphType" Content="Resilier" HorizontalAlignment="Left" Margin="197,35,0,0" VerticalAlignment="Top" Checked="Cercle_Checked"/>
+        <RadioButton x:Name="Actif" GroupName="GraphType" Content="Actif" HorizontalAlignment="Left" Margin="96,35,0,0" VerticalAlignment="Top" Checked="Cercle_Checked"  />
+        <!--</groupbox:GroupBox>-->
+        <Controls:GroupBox FontWeight="SemiBold" Height="56" Margin="10,0,10,119" VerticalAlignment="Bottom" Header="Etat d'abonnement" Canvas.ZIndex="5" />
+        <Controls:GroupBox FontWeight="SemiBold" Height="92" Margin="10,0,10,10" VerticalAlignment="Bottom" Header="Critères de filtre" />
+
+    </Grid>
+</controls:ChildWindow>

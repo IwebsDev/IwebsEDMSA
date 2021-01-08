@@ -1,0 +1,22 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Caisse.FrmSelectDateCaisse"
+           Width="400" Height="188" 
+           Title="Etat de caisse clôturée" OverlayBrush="Transparent" FontSize="13" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Height="77" Margin="4,0,0,1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Header="" />
+        <Button x:Name="Btn_Abort" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,4,9,8" Grid.Row="1" />
+        <Button x:Name="Btn_Update" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Left" Margin="208,4,0,8" Grid.Row="1" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="112,12,0,0" x:Name="dtpDate" VerticalAlignment="Top" Width="204" SelectedDateChanged="dtpDate_SelectedDateChanged" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="21,16,0,0" x:Name="label1" VerticalAlignment="Top" Width="76" Content="Date " />
+        <Button Content="Caissier" Height="23" HorizontalAlignment="Left" Margin="21,50,0,0" x:Name="btn_Caissier" VerticalAlignment="Top" Width="75" Click="btn_Caissier_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,50,0,0" x:Name="txtMatriculeCaissier" VerticalAlignment="Top" Width="61" Background="LightBlue" TextChanged="txtMatriculeCaissier_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="177,50,0,0" x:Name="txt_CashierName" VerticalAlignment="Top" Width="179" IsEnabled="False" />
+    </Grid>
+</sdk:ChildWindow>

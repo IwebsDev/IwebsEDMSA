@@ -1,0 +1,69 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Devis.UcSortieMaterielExtension"
+           Width="1208.83" Height="620.932" 
+           Title="Sortie Materiel d'extension" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Canalisations" Margin="12,89,562,0" x:Name="Gbo_InformationDevis_Copy" IsEnabled="True" />
+        <Controls:GroupBox Header="Autres Materiels" Margin="629,89,19,0" x:Name="Gbo_InformationDevis_Copy1" IsEnabled="True" />
+        <Controls:GroupBox Header="Critères de Recherche" Margin="15,0,562,422" x:Name="Gbo_InformationDevis_Copy2" IsEnabled="True" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="180" Height="23" HorizontalAlignment="Right" Margin="0,7,23,5" Grid.Row="1" />
+        <Button x:Name="btn_transmetre" Content="Transmettre" Click="OKButton_Click" Width="192" Height="23" HorizontalAlignment="Right" Margin="0,7,208,0" Grid.Row="1" VerticalAlignment="Top" />
+
+        <sdk:DataGrid x:Name="dgDemande" Margin="15,122,574,10" AutoGenerateColumns="False" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="pk_id" Width="Auto" Binding="{Binding PK_ID}" Visibility="Collapsed"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro demande" Width="120" Binding="{Binding NUMDEM}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Référence client" Width="110" Binding="{Binding CLIENT}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Width="156" Binding="{Binding NOMCLIENT}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro compteur" Width="120" Binding="{Binding NUMERO}"/>
+                <sdk:DataGridTemplateColumn Header="livré">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Checked="chk_Checked" Unchecked="CheckBox_Unchecked_1" IsThreeState="False" Tag="{Binding}" IsChecked ="{Binding IsSelect, Mode=TwoWay}"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+
+        <sdk:DataGrid x:Name="dgAutreMateriel" Margin="638,122,28,10" AutoGenerateColumns="False" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DESIGNATION}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libellé" Width="250" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre" Width="130" />
+                <sdk:DataGridTextColumn  Binding="{Binding QUANTITEALIVRET}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre livré" Width="130" />
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+
+
+
+
+        <sdk:Label Content="Equipe" HorizontalAlignment="Left" Height="28" Margin="26,56,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Date" HorizontalAlignment="Left" Height="28" Margin="26,33,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cboEquipe"  HorizontalAlignment="Left" Margin="101,56,0,0" VerticalAlignment="Top" Width="258"/>
+        <sdk:DatePicker x:Name="dtProgram" HorizontalAlignment="Left" Height="23" Margin="101,29,0,0" VerticalAlignment="Top" Width="258"/>
+        <Button x:Name="btnRecherche" Content="Rechercher" Click="btnRecherche_Click" Width="112" Height="23" HorizontalAlignment="Right" Margin="0,56,585,0" VerticalAlignment="Top" />
+        <Controls:GroupBox Header="Livraison" Margin="630,0,19,422" x:Name="Gbo_InformationDevis" IsEnabled="True" />
+        <sdk:Label Content="Agent livreur" HorizontalAlignment="Left" Height="22" Margin="669,23,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="770,23,0,0" VerticalAlignment="Top" Width="43" x:Name="btn_AgtLivreur"  Click="btn_AgtLivreur_Click" RenderTransformOrigin="0.5,0.5" />
+        <TextBox x:Name="txtAgt_Livreur" HorizontalAlignment="Left" Height="23" Margin="818,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60" Background="LightBlue" IsReadOnly="False" TextChanged="txtAgt_Livreur_TextChanged" />
+        <TextBox x:Name="txt_LibelleAgentLivreur" HorizontalAlignment="Left" Height="23" Margin="883,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196" IsReadOnly="True"/>
+        <sdk:Label Content="Agent récepteur" HorizontalAlignment="Left" Height="22" Margin="669,51,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="770,51,0,0" VerticalAlignment="Top" Width="43" x:Name="btn_AgtRecepteur"  Click="btn_AgtRecepteur_Click" RenderTransformOrigin="0.5,0.5" />
+        <TextBox x:Name="txtAgt_Recepteur" HorizontalAlignment="Left" Height="23" Margin="818,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60" Background="LightBlue" IsReadOnly="False" TextChanged="txtAgt_Recepteur_TextChanged"  />
+        <TextBox x:Name="txt_LibelleAgentRecepteur" HorizontalAlignment="Left" Height="23" Margin="883,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196" IsReadOnly="True"/>
+
+
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FraudeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Fraude/FraudeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Fraude/FraudeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Fraude/FraudeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Fraude/FraudeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFraudeService_SelectAllSourceControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllSourceControle" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllSourceControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllSourceControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllSourceControle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMoyenDenomciation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMoyenDenomciation" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMoyenDenomciation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMoyenDenomciationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMoyenDenomciation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllClient" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllClient_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClient" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClient_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraudeDenociateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFraudeDenociateur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraudeDenociateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFraudeDenociateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraudeDenociateur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertDenoncition_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDenoncition" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertDenoncition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDenoncitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertDenoncition_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertClientFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClientFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertClientFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClientFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertClientFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClientFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClientFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneClientFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllTypeFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllTypeFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllTypeFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllTypeFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllTypeFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMarqueDisjoncteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMarqueDisjoncteur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMarqueDisjoncteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMarqueDisjoncteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllMarqueDisjoncteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllActionSurCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllActionSurCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllActionSurCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllActionSurCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllActionSurCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllOrganeFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOrganeFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllOrganeFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllOrganeFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllOrganeFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllQualiteExpert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllQualiteExpert" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllQualiteExpert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllQualiteExpertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllQualiteExpert_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllPhaseCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllPhaseCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllPhaseCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllPhaseCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllPhaseCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllDecision_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllDecision" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllDecision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllDecisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllDecision_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControle" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateControle" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllControle" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleur_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControleur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControleurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControleur_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateControleur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControleur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateControleurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateControleur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControleur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllControleur" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControleur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllControleurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllControleur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertCompteurFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompteurFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertCompteurFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompteurFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertCompteurFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateCompteurFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteurFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateCompteurFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteurFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_UpdateCompteurFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllCompteurFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteurFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllCompteurFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteurFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllCompteurFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllUsage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUsage" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllUsage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_SelectAllUsage_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControleFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertControleFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertControleFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeAudite_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionFraudeAudite" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeAudite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionFraudeAuditeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeAudite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeConsommation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionFraudeConsommation" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeConsommation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionFraudeConsommationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_InsertionFraudeConsommation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeInitailisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeInitailisation" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeInitailisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeInitailisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeInitailisation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourDemandeFraude_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourDemandeFraude" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourDemandeFraude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourDemandeFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourDemandeFraude_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeControle" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeAudition_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeAudition" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeAudition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeAuditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeAudition_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeConsommation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeConsommation" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeConsommation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeConsommationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeConsommation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeEmissionFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeEmissionFacture" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeEmissionFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeEmissionFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeEmissionFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControleIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeControleIndex" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControleIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderDemandeControleIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ValiderDemandeControleIndex_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneEvenement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEvenement" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneEvenement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEvenementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_RetourneEvenement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ConsommationByPeriodeMois_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsommationByPeriodeMois" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ConsommationByPeriodeMois_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsommationByPeriodeMoisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFraudeService_ConsommationByPeriodeMois_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IFraudeService">
+    <wsdl:operation name="SelectAllSourceControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllSourceControle" message="tns:IFraudeService_SelectAllSourceControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllSourceControleResponse" message="tns:IFraudeService_SelectAllSourceControle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllSourceControleErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllSourceControle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMoyenDenomciation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMoyenDenomciation" message="tns:IFraudeService_SelectAllMoyenDenomciation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMoyenDenomciationResponse" message="tns:IFraudeService_SelectAllMoyenDenomciation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMoyenDenomciationErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllMoyenDenomciation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllClient" message="tns:IFraudeService_SelectAllClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllClientResponse" message="tns:IFraudeService_SelectAllClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllClientErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllClient_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/RetourneClient" message="tns:IFraudeService_RetourneClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/RetourneClientResponse" message="tns:IFraudeService_RetourneClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/RetourneClientErrorsFault" name="ErrorsFault" message="tns:IFraudeService_RetourneClient_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFraudeDenociateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertFraudeDenociateur" message="tns:IFraudeService_InsertFraudeDenociateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertFraudeDenociateurResponse" message="tns:IFraudeService_InsertFraudeDenociateur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertFraudeDenociateurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertFraudeDenociateur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertFraude" message="tns:IFraudeService_InsertFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertFraudeResponse" message="tns:IFraudeService_InsertFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDenoncition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertDenoncition" message="tns:IFraudeService_InsertDenoncition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertDenoncitionResponse" message="tns:IFraudeService_InsertDenoncition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertDenoncitionErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertDenoncition_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertClientFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertClientFraude" message="tns:IFraudeService_InsertClientFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertClientFraudeResponse" message="tns:IFraudeService_InsertClientFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertClientFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertClientFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/RetourneClientFraude" message="tns:IFraudeService_RetourneClientFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/RetourneClientFraudeResponse" message="tns:IFraudeService_RetourneClientFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/RetourneClientFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_RetourneClientFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllTypeFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllTypeFraude" message="tns:IFraudeService_SelectAllTypeFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllTypeFraudeResponse" message="tns:IFraudeService_SelectAllTypeFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllTypeFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllTypeFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMarqueDisjoncteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMarqueDisjoncteur" message="tns:IFraudeService_SelectAllMarqueDisjoncteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMarqueDisjoncteurResponse" message="tns:IFraudeService_SelectAllMarqueDisjoncteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllMarqueDisjoncteurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllMarqueDisjoncteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllActionSurCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllActionSurCompteur" message="tns:IFraudeService_SelectAllActionSurCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllActionSurCompteurResponse" message="tns:IFraudeService_SelectAllActionSurCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllActionSurCompteurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllActionSurCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOrganeFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllOrganeFraude" message="tns:IFraudeService_SelectAllOrganeFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllOrganeFraudeResponse" message="tns:IFraudeService_SelectAllOrganeFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllOrganeFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllOrganeFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllQualiteExpert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllQualiteExpert" message="tns:IFraudeService_SelectAllQualiteExpert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllQualiteExpertResponse" message="tns:IFraudeService_SelectAllQualiteExpert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllQualiteExpertErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllQualiteExpert_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllPhaseCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllPhaseCompteur" message="tns:IFraudeService_SelectAllPhaseCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllPhaseCompteurResponse" message="tns:IFraudeService_SelectAllPhaseCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllPhaseCompteurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllPhaseCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllDecision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllDecision" message="tns:IFraudeService_SelectAllDecision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllDecisionResponse" message="tns:IFraudeService_SelectAllDecision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllDecisionErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllDecision_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertControle" message="tns:IFraudeService_InsertControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertControleResponse" message="tns:IFraudeService_InsertControle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertControleErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertControle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/UpdateControle" message="tns:IFraudeService_UpdateControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/UpdateControleResponse" message="tns:IFraudeService_UpdateControle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/UpdateControleErrorsFault" name="ErrorsFault" message="tns:IFraudeService_UpdateControle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControle" message="tns:IFraudeService_SelectAllControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControleResponse" message="tns:IFraudeService_SelectAllControle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControleErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllControle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertControleur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertControleur" message="tns:IFraudeService_InsertControleur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertControleurResponse" message="tns:IFraudeService_InsertControleur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertControleurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertControleur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateControleur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/UpdateControleur" message="tns:IFraudeService_UpdateControleur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/UpdateControleurResponse" message="tns:IFraudeService_UpdateControleur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/UpdateControleurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_UpdateControleur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllControleur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControleur" message="tns:IFraudeService_SelectAllControleur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControleurResponse" message="tns:IFraudeService_SelectAllControleur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllControleurErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllControleur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompteurFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertCompteurFraude" message="tns:IFraudeService_InsertCompteurFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertCompteurFraudeResponse" message="tns:IFraudeService_InsertCompteurFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertCompteurFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertCompteurFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteurFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/UpdateCompteurFraude" message="tns:IFraudeService_UpdateCompteurFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/UpdateCompteurFraudeResponse" message="tns:IFraudeService_UpdateCompteurFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/UpdateCompteurFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_UpdateCompteurFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteurFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllCompteurFraude" message="tns:IFraudeService_SelectAllCompteurFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllCompteurFraudeResponse" message="tns:IFraudeService_SelectAllCompteurFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllCompteurFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllCompteurFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllUsage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/SelectAllUsage" message="tns:IFraudeService_SelectAllUsage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/SelectAllUsageResponse" message="tns:IFraudeService_SelectAllUsage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/SelectAllUsageErrorsFault" name="ErrorsFault" message="tns:IFraudeService_SelectAllUsage_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertControleFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertControleFraude" message="tns:IFraudeService_InsertControleFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertControleFraudeResponse" message="tns:IFraudeService_InsertControleFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertControleFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertControleFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionFraudeAudite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeAudite" message="tns:IFraudeService_InsertionFraudeAudite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeAuditeResponse" message="tns:IFraudeService_InsertionFraudeAudite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeAuditeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertionFraudeAudite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionFraudeConsommation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeConsommation" message="tns:IFraudeService_InsertionFraudeConsommation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeConsommationResponse" message="tns:IFraudeService_InsertionFraudeConsommation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/InsertionFraudeConsommationErrorsFault" name="ErrorsFault" message="tns:IFraudeService_InsertionFraudeConsommation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeInitailisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeInitailisation" message="tns:IFraudeService_ValiderDemandeInitailisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeInitailisationResponse" message="tns:IFraudeService_ValiderDemandeInitailisation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeInitailisationErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeInitailisation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourDemandeFraude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/RetourDemandeFraude" message="tns:IFraudeService_RetourDemandeFraude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/RetourDemandeFraudeResponse" message="tns:IFraudeService_RetourDemandeFraude_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/RetourDemandeFraudeErrorsFault" name="ErrorsFault" message="tns:IFraudeService_RetourDemandeFraude_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControle" message="tns:IFraudeService_ValiderDemandeControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControleResponse" message="tns:IFraudeService_ValiderDemandeControle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControleErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeControle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeAudition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeAudition" message="tns:IFraudeService_ValiderDemandeAudition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeAuditionResponse" message="tns:IFraudeService_ValiderDemandeAudition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeAuditionErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeAudition_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeConsommation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeConsommation" message="tns:IFraudeService_ValiderDemandeConsommation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeConsommationResponse" message="tns:IFraudeService_ValiderDemandeConsommation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeConsommationErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeConsommation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeEmissionFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeEmissionFacture" message="tns:IFraudeService_ValiderDemandeEmissionFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeEmissionFactureResponse" message="tns:IFraudeService_ValiderDemandeEmissionFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeEmissionFactureErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeEmissionFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeControleIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControleIndex" message="tns:IFraudeService_ValiderDemandeControleIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControleIndexResponse" message="tns:IFraudeService_ValiderDemandeControleIndex_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ValiderDemandeControleIndexErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ValiderDemandeControleIndex_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEvenement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/RetourneEvenement" message="tns:IFraudeService_RetourneEvenement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/RetourneEvenementResponse" message="tns:IFraudeService_RetourneEvenement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/RetourneEvenementErrorsFault" name="ErrorsFault" message="tns:IFraudeService_RetourneEvenement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsommationByPeriodeMois">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFraudeService/ConsommationByPeriodeMois" message="tns:IFraudeService_ConsommationByPeriodeMois_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFraudeService/ConsommationByPeriodeMoisResponse" message="tns:IFraudeService_ConsommationByPeriodeMois_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IFraudeService/ConsommationByPeriodeMoisErrorsFault" name="ErrorsFault" message="tns:IFraudeService_ConsommationByPeriodeMois_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFraudeService" type="tns:IFraudeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllSourceControle">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllSourceControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMoyenDenomciation">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllMoyenDenomciation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllClient">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClient">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/RetourneClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFraudeDenociateur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertFraudeDenociateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDenoncition">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertDenoncition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertClientFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertClientFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClientFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/RetourneClientFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllTypeFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllTypeFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMarqueDisjoncteur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllMarqueDisjoncteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllActionSurCompteur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllActionSurCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllOrganeFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllOrganeFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllQualiteExpert">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllQualiteExpert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllPhaseCompteur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllPhaseCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllDecision">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllDecision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertControle">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateControle">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/UpdateControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllControle">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertControleur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertControleur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateControleur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/UpdateControleur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllControleur">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllControleur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompteurFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertCompteurFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteurFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/UpdateCompteurFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteurFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllCompteurFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllUsage">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/SelectAllUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertControleFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertControleFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionFraudeAudite">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertionFraudeAudite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionFraudeConsommation">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/InsertionFraudeConsommation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeInitailisation">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeInitailisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourDemandeFraude">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/RetourDemandeFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeControle">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeAudition">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeAudition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeConsommation">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeConsommation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeEmissionFacture">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeEmissionFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderDemandeControleIndex">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ValiderDemandeControleIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEvenement">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/RetourneEvenement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsommationByPeriodeMois">
+      <soap:operation soapAction="http://tempuri.org/IFraudeService/ConsommationByPeriodeMois" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FraudeService">
+    <wsdl:port name="BasicHttpBinding_IFraudeService" binding="tns:BasicHttpBinding_IFraudeService">
+      <soap:address location="http://localhost:1818/Fraude/FraudeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReclamationsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Reclamation/ReclamationsService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReclamationsService_SelectAllTypeReclamationRcl_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllTypeReclamationRcl" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllTypeReclamationRcl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllTypeReclamationRclResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllTypeReclamationRcl_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllModeReception_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllModeReception" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllModeReception_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllModeReceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllModeReception_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllValidation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllValidation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllReclamationRcl_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllReclamationRcl" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllReclamationRcl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllReclamationRclResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SelectAllReclamationRcl_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderInitReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderInitReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderInitReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderInitReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderInitReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ValiderReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourDemandeReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourDemandeReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourDemandeReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourDemandeReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourDemandeReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourStatistiqueReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourStatistiqueReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourStatistiqueReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourStatistiqueReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourStatistiqueReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ReclamationParAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReclamationParAgent" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ReclamationParAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReclamationParAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ReclamationParAgent_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ListDesReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListDesReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ListDesReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListDesReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_ListDesReclamation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SuiviTauxTraitement_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuiviTauxTraitement" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SuiviTauxTraitement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuiviTauxTraitementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_SuiviTauxTraitement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClient" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReclamationsService_RetourneClient_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IReclamationsService">
+    <wsdl:operation name="SelectAllTypeReclamationRcl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllTypeReclamationRcl" message="tns:IReclamationsService_SelectAllTypeReclamationRcl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllTypeReclamationRclResponse" message="tns:IReclamationsService_SelectAllTypeReclamationRcl_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllTypeReclamationRclErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_SelectAllTypeReclamationRcl_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllModeReception">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllModeReception" message="tns:IReclamationsService_SelectAllModeReception_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllModeReceptionResponse" message="tns:IReclamationsService_SelectAllModeReception_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllModeReceptionErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_SelectAllModeReception_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllValidation" message="tns:IReclamationsService_SelectAllValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllValidationResponse" message="tns:IReclamationsService_SelectAllValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllValidationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_SelectAllValidation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllReclamationRcl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllReclamationRcl" message="tns:IReclamationsService_SelectAllReclamationRcl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllReclamationRclResponse" message="tns:IReclamationsService_SelectAllReclamationRcl_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/SelectAllReclamationRclErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_SelectAllReclamationRcl_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderInitReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/ValiderInitReclamation" message="tns:IReclamationsService_ValiderInitReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/ValiderInitReclamationResponse" message="tns:IReclamationsService_ValiderInitReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/ValiderInitReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_ValiderInitReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/ValiderReclamation" message="tns:IReclamationsService_ValiderReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/ValiderReclamationResponse" message="tns:IReclamationsService_ValiderReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/ValiderReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_ValiderReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/RetourneReclamation" message="tns:IReclamationsService_RetourneReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/RetourneReclamationResponse" message="tns:IReclamationsService_RetourneReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/RetourneReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_RetourneReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourDemandeReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/RetourDemandeReclamation" message="tns:IReclamationsService_RetourDemandeReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/RetourDemandeReclamationResponse" message="tns:IReclamationsService_RetourDemandeReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/RetourDemandeReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_RetourDemandeReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourStatistiqueReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/RetourStatistiqueReclamation" message="tns:IReclamationsService_RetourStatistiqueReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/RetourStatistiqueReclamationResponse" message="tns:IReclamationsService_RetourStatistiqueReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/RetourStatistiqueReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_RetourStatistiqueReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReclamationParAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/ReclamationParAgent" message="tns:IReclamationsService_ReclamationParAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/ReclamationParAgentResponse" message="tns:IReclamationsService_ReclamationParAgent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/ReclamationParAgentErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_ReclamationParAgent_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDesReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/ListDesReclamation" message="tns:IReclamationsService_ListDesReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/ListDesReclamationResponse" message="tns:IReclamationsService_ListDesReclamation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/ListDesReclamationErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_ListDesReclamation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuiviTauxTraitement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/SuiviTauxTraitement" message="tns:IReclamationsService_SuiviTauxTraitement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/SuiviTauxTraitementResponse" message="tns:IReclamationsService_SuiviTauxTraitement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/SuiviTauxTraitementErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_SuiviTauxTraitement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReclamationsService/RetourneClient" message="tns:IReclamationsService_RetourneClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReclamationsService/RetourneClientResponse" message="tns:IReclamationsService_RetourneClient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IReclamationsService/RetourneClientErrorsFault" name="ErrorsFault" message="tns:IReclamationsService_RetourneClient_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReclamationsService" type="tns:IReclamationsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllTypeReclamationRcl">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/SelectAllTypeReclamationRcl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllModeReception">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/SelectAllModeReception" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllValidation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/SelectAllValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllReclamationRcl">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/SelectAllReclamationRcl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderInitReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/ValiderInitReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/ValiderReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/RetourneReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourDemandeReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/RetourDemandeReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourStatistiqueReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/RetourStatistiqueReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReclamationParAgent">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/ReclamationParAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListDesReclamation">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/ListDesReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuiviTauxTraitement">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/SuiviTauxTraitement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneClient">
+      <soap:operation soapAction="http://tempuri.org/IReclamationsService/RetourneClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReclamationsService">
+    <wsdl:port name="BasicHttpBinding_IReclamationsService" binding="tns:BasicHttpBinding_IReclamationsService">
+      <soap:address location="http://localhost:1818/Reclamation/ReclamationsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

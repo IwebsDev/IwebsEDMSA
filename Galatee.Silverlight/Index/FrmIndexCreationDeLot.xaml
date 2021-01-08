@@ -1,0 +1,145 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.FrmIndexCreationDeLot"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+             xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+                      
+           Width="1056" Height="510.525" 
+                      
+           Title="Création de lot" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" OverlayBrush="Transparent" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <my:GroupBox FontWeight="SemiBold" x:Name="gbo_Specification" Margin="6,7,593,325" Header="Spéfication" RenderTransformOrigin="0.5,0.5" />
+        <my:GroupBox FontWeight="SemiBold" x:Name="gbo_ListLot" Margin="440,7,0,325" Header="Liste de lot" RenderTransformOrigin="0.5,0.5" />
+        <my:GroupBox FontWeight="SemiBold" x:Name="gboEdition" Margin="572,362,10,3" Header="Edition" RenderTransformOrigin="0.5,0.5" />
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox4" Margin="0,7,0,0"    />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="484" IsIndeterminate="True" Margin="30,372,0,0"/>
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="129" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="132" Height="30" HorizontalAlignment="Right" Margin="0,5,143,0" Grid.Row="1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="129,18,0,0" Name="Txt_Period" VerticalAlignment="Top" Width="120" Background="LightBlue" TextChanged="Txt_Period_TextChanged"/>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,46,778,0" Name="Txt_batch" VerticalAlignment="Top" Width="120" Background="LightBlue" TextChanged="Txt_batch_TextChanged" />
+        <sdk:Label Height="22" HorizontalAlignment="Left" Margin="30,27,0,0" Name="lbl_periode" VerticalAlignment="Top" Width="100" Content="Periode" />
+        <sdk:Label Height="22" HorizontalAlignment="Left" Margin="30,54,0,0" Name="lbl_batch" VerticalAlignment="Top" Width="100" Content="Lot" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="548,22,0,0" Name="txt_Numlotdebt" VerticalAlignment="Top" Width="119" />
+        <sdk:Label Content="De" Height="22" HorizontalAlignment="Left" Margin="495,26,0,0" Name="lbl_De" VerticalAlignment="Top" Width="48" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="753,22,0,0" Name="txt_numLotFin" VerticalAlignment="Top" Width="114" />
+        <sdk:Label Content="A" Height="22" HorizontalAlignment="Left" Margin="693,23,0,0" Name="lbl_A" VerticalAlignment="Top" Width="33" />
+        <Button Content="Afficher" Height="23" HorizontalAlignment="Left" Margin="661,50,0,0" Name="btn_AfficherLot" VerticalAlignment="Top" Width="87" Click="btn_AfficherLot_Click_1" />
+        <sdk:DataGrid AutoGenerateColumns="False" IsReadOnly="True" Height="255" HorizontalAlignment="Left" Margin="177,79,0,0" Name="dtg_Centre" VerticalAlignment="Top" Width="188" MouseLeftButtonUp="dgMyDataGridCentre_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Centre" IsChecked ="{Binding IsSelect,Mode=TwoWay}"
+                                Checked="chk_Centre_Checked_1" Unchecked="chk_Centre_Unchecked_1"      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding LIBELLE}"  Header="CENTRE" Width="Auto" MinWidth="110" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="256" IsReadOnly="True" HorizontalAlignment="Left" Margin="370,78,0,0" Name="dtg_produit" VerticalAlignment="Top" Width="144" MouseLeftButtonUp="dgMyDataGridProduit_MouseLeftButtonUp">
+            
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" IsReadOnly="True"  >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Produit" IsChecked ="{Binding IsSelect,Mode=TwoWay}"
+                                Checked ="chk_Produit_Checked_1"   Unchecked="chk_Produit_Unchecked_1"    VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding LIBELLE}" Header="PRODUIT" Width="Auto" MinWidth="100" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="256" HorizontalAlignment="Left" IsReadOnly="True" Margin="519,78,0,0" Name="dtg_Categorie" VerticalAlignment="Top" Width="179" MouseLeftButtonUp="dgMyDataGridCategorie_MouseLeftButtonUp"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" IsReadOnly="True"  >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Categorie" IsChecked ="{Binding IsSelect,Mode=TwoWay}"
+                                    Checked="chk_Categorie_Checked_1" Unchecked="chk_Categorie_Unchecked_1"   VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding LIBELLE}" Header="CATEGORIE" Width="Auto" MinWidth="115" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="255" HorizontalAlignment="Left" IsReadOnly="True" Margin="703,79,0,0" Name="dtg_frequence" VerticalAlignment="Top" Width="140" MouseLeftButtonUp="dgMyDataGridFrequence_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                 <sdk:DataGridTemplateColumn Width="35" IsReadOnly="True"  >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_frequence" IsChecked ="{Binding IsSelect,Mode=TwoWay}"
+                                 Checked="chk_Frequence_Checked_1"  Unchecked="chk_Frequence_Unchecked_1"    VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="FREQUENCE" Binding="{Binding LIBELLE}" Width="Auto" MinWidth="100" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="232" HorizontalAlignment="Left" IsReadOnly="True" Margin="848,102,0,0" Name="dtg_zone" VerticalAlignment="Top" Width="173" MouseLeftButtonUp="dgMyDataGridTournee_MouseLeftButtonUp" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" IsReadOnly="True"  >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Produit" IsChecked ="{Binding IsSelect,Mode=TwoWay}" Checked="chk_Tournee_Checked_1" Unchecked="chk_Tournee_Unchecked_1" 
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding CODE}" Width="Auto" MinWidth="40" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding CENTRE}" Width="Auto" MinWidth="40" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="24" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="441,0,0,0" IsReadOnly="True" Name="dataGrid6" VerticalAlignment="Top" Width="170" Grid.Row="1">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chkFacture" IsChecked ="{Binding IsSelect,Mode=TwoWay}"
+                                      VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="RELEVEUR" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <CheckBox Content="Tournee" Height="18" HorizontalAlignment="Left" Margin="848,78,0,0" Name="Chk_Tournee" VerticalAlignment="Top" Width="128" Click="Chk_Tournee_Click" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="848,339,0,0" Name="btn_ToutTournee" VerticalAlignment="Top" Width="82" Click="btn_ToutTournee_Click_1" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Right" Margin="0,339,10,0" Name="btn_RienTourne" VerticalAlignment="Top" Width="83" Click="btn_RienTourne_Click_1" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="178,339,0,0" Name="btn_ToutCentre" VerticalAlignment="Top" Width="90" Click="btn_ToutCentre_Click" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="273,339,0,0" Name="btn_rienCentre" VerticalAlignment="Top" Width="92" Click="btn_rienCentre_Click" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="370,339,0,0" Name="btn_ToutProduit" VerticalAlignment="Top" Width="66" Click="btn_ToutProduit_Click" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="441,339,0,0" Name="btn_rienProduit" VerticalAlignment="Top" Width="73" Click="btn_rienProduit_Click" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="519,339,0,0" Name="btn_ToutCategorie" VerticalAlignment="Top" Width="86" Click="btn_ToutCategorie_Click" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="610,339,0,0" Name="btn_rienCategorie" VerticalAlignment="Top" Width="88" Click="btn_rienCategorie_Click_1" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="706,339,0,0" Name="btn_ToutFrequence" VerticalAlignment="Top" Width="65" Click="btn_ToutFrequence_Click_1" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="776,339,0,0" Name="btn_rienFrenquence" VerticalAlignment="Top" Width="67" Click="btn_rienFrenquence_Click" />
+        <Button Content="Tout" Height="23" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="442,29,0,-17" Name="btn_ToutReleveur" VerticalAlignment="Top" Width="82" Grid.Row="1" />
+        <Button Content="Rien" Height="23" Visibility="Collapsed"  HorizontalAlignment="Right" Margin="0,29,416,-17" Name="btn_rienReleveur" VerticalAlignment="Top" Width="83" Grid.Row="1" />
+        <CheckBox Content="Edition des releves" Height="20" HorizontalAlignment="Left" Margin="661,378,0,0" Name="Chk_AvecEdition" VerticalAlignment="Top" Width="142" />
+        <sdk:Label Height="25" HorizontalAlignment="Left" Margin="262,28,0,0" Name="label5" VerticalAlignment="Top" Width="110" Content="(mm/aaaa)" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="256" HorizontalAlignment="Left" Margin="10,78,0,0" x:Name="dtg_Site" IsReadOnly="True"   VerticalAlignment="Top" Width="162" MouseLeftButtonUp="dgMyDataGridSite_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" IsReadOnly="True"   >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Site" IsChecked ="{Binding IsSelect, Mode=TwoWay}"
+        						Checked="chk_Site_Checked_1"  Unchecked="chk_Site_Unchecked_1"     VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Binding="{Binding LIBELLE}"  Header="SITE" Width="Auto" MinWidth="110" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Tout" Height="23" HorizontalAlignment="Left" Margin="13,339,0,0" x:Name="btn_ToutSite" VerticalAlignment="Top" Width="75" Click="btn_ToutSite_Click" />
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="98,339,0,0" x:Name="btn_rienSite" VerticalAlignment="Top" Width="74" Click="btn_rienSite_Click" />
+    </Grid>
+</controls:ChildWindow>

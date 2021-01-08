@@ -1,0 +1,40 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           x:Class="Galatee.Silverlight.Precontentieux.FrmListeAbonneLies"
+           Width="1032.642" Height="665.776" OverlayBrush="Transparent"
+           Title="Réedition avis de coupure">
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="0,10,0,-2">
+        <sdk:DataGrid AutoGenerateColumns="False" Height="432" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="10,96,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="989" MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="50"  MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserSort="True" Header="Client" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserSort="True" Header="Ordre" IsReadOnly="True" MinWidth="60" MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NOMABON}" CanUserReorder="True" CanUserSort="True" Header="Nom" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ADRESSE}" CanUserReorder="True" CanUserSort="True" Header="Adresse" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding RUES}" CanUserReorder="True" CanUserSort="True" Header="Rue" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding PORTE}" CanUserReorder="True" CanUserSort="True" Header="Porte" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Controls:GroupBox Header="Recherche client de la campagne" Height="91" IsEnabled="False" x:Name="groupBox1" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,26,620,0" x:Name="cmbCampagne" VerticalAlignment="Top" Width="279" SelectionChanged="cmbCampagne_SelectionChanged" />
+        <sdk:Label Content="Campagne " Height="20" HorizontalAlignment="Left" Margin="16,26,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="85" />
+        <Button Content="Reinitialiser" Height="23" HorizontalAlignment="Right" Margin="0,54,287,510" x:Name="btnreset" Width="96" Click="btnReinitialiser_Click" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="739,54,0,0" x:Name="btnsearch" Width="96" Click="btnsearch_Click" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,54,620,0" x:Name="txtCampagne" VerticalAlignment="Top" Width="279" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="131" HorizontalAlignment="Right" Margin="0,547,26,10" />
+        <Button Content="imprimer" HorizontalAlignment="Right"  Margin="0,547,174,10" x:Name="btnOk" Width="147"  Click="btnOk_Click"/>
+    </Grid>
+</sdk:ChildWindow>

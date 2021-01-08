@@ -1,0 +1,40 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Recouvrement.UserClientPicker"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                      xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           Width="476" Height="490.494" OverlayBrush="Transparent"
+           Title="Recherche client" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <controls:ChildWindow.Resources>
+        <lang:ResourceLocaliser x:Key="localisation"></lang:ResourceLocaliser>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2" Height="452">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,389,6,40" />
+        <sdk:Label Content="Centre " Height="20" HorizontalAlignment="Left" Margin="12,24,0,0" Name="lblMatFrom" VerticalAlignment="Top" Width="128" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,20,229,0" Name="txtCentre" VerticalAlignment="Top" Width="90" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="224" HorizontalAlignment="Left" ItemsSource="{Binding UpdateSourceTrigger=Explicit, Path=CurrentCode}" Margin="6,154,0,0" Name="lvwResultat" VerticalAlignment="Top" Width="438" SelectionChanged="lvwResultat_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Centre}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding Client}" CanUserReorder="True" CanUserSort="True" Header="Customers" IsReadOnly="True" MinWidth="80" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding Ordre}" CanUserReorder="True" CanUserSort="True" Header="Order" IsReadOnly="True" MinWidth="55" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding Nom}" CanUserReorder="True" CanUserSort="True" Header="Name" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,20,7,0" Name="cmbCentre" VerticalAlignment="Top" Width="208" SelectionChanged="cmbCentre_SelectionChanged" />
+        <sdk:Label Content="Client " Height="20" HorizontalAlignment="Left" Margin="12,55,0,0" Name="label1" VerticalAlignment="Top" Width="128" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="235,47,0,0" Name="txtClient" VerticalAlignment="Top" Width="208" />
+        <sdk:Label Content="Ordre " Height="20" HorizontalAlignment="Left" Margin="12,86,0,0" Name="label2" VerticalAlignment="Top" Width="128" />
+        <Button Content="Reset" Height="23" HorizontalAlignment="Right" Margin="0,124,12,305" Name="btnreset" Width="90" Click="btnreset_Click" />
+        <Button Content="Search" Height="23" HorizontalAlignment="Left" Margin="258,124,0,305" Name="btnsearch" Width="90" Click="btnsearch_Click" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,389,85,40" Name="btnOk" Width="75" Click="btnOk_Click"/>
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="234,76,0,0" Name="txtOrdre" VerticalAlignment="Top" Width="208" />
+    </Grid>
+</controls:ChildWindow>

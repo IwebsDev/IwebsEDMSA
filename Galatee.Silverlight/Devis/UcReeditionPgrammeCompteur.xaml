@@ -1,0 +1,41 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Devis.UcReeditionPgrammeCompteur"
+           Width="1048" Height="674.358" 
+           Title="Sortie compteur" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Controls:GroupBox Header="" Margin="10,91,12,10" x:Name="Gbo_InformationDevis_Copy" IsEnabled="True" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="196" Height="23" HorizontalAlignment="Right" Margin="0,7,23,5" Grid.Row="1" />
+        <Button x:Name="btn_transmetre" Content="Imprimer" Click="OKButton_Click" Width="176" Height="23" HorizontalAlignment="Right" Margin="0,7,224,0" Grid.Row="1" VerticalAlignment="Top" />
+
+        <sdk:DataGrid x:Name="dgDemande" Margin="15,108,23,20" AutoGenerateColumns="False" IsReadOnly="True"   MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro demande" MinWidth ="120" Width="60" Binding="{Binding NUMDEM}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Référence client" Width="110" Binding="{Binding CLIENT}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" MinWidth="250" Width="50" Binding="{Binding NOMCLIENT}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Marque compteur" MinWidth="160" Width="50" Binding="{Binding LIBELLEMARQUE}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro compteur" MinWidth="160" Width="50" Binding="{Binding NUMERO}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Controls:GroupBox Header="Livraison" Margin="12,0,15,473" x:Name="Gbo_InformationDevis" IsEnabled="True" />
+        <sdk:Label Name="lbl_Livreur" Content="Agent livreur" HorizontalAlignment="Left" Height="22" Margin="573,23,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_LibelleAgentLivreur" HorizontalAlignment="Left" Height="23" Margin="687,22,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="296" IsReadOnly="True"/>
+        <sdk:Label Name="lbl_Recepteur"  Content="Agent récepteur" HorizontalAlignment="Left" Height="22" Margin="575,56,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_LibelleAgentRecepteur" HorizontalAlignment="Left" Height="23" Margin="687,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="298" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_Equipe"  Margin="141,25,0,0" IsReadOnly ="True" Foreground="Green"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="377"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_DateProgramme" Margin="141,53,0,0" IsReadOnly ="True" Foreground="Green" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="377"/>
+        <sdk:Label Content="Equipe" HorizontalAlignment="Left" Height="22" Margin="41,27,0,0" VerticalAlignment="Top" Width="95"/>
+        <sdk:Label Content="Date exécution" HorizontalAlignment="Left" Height="22" Margin="41,55,0,0" VerticalAlignment="Top" Width="95"/>
+
+
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,53 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Precontentieux.FrmSaisiFicheDecharge"
+           Width="590" Height="568" 
+           Title="FrmSaisiFicheDecharge" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2,0,2,4">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <Button Content="Rechercher" HorizontalAlignment="Left"  x:Name="btn_RechercheClient" VerticalAlignment="Top" Width="120" Margin="406,96,0,0" Click="btn_RechercheClient_Click" />
+        <sdk:Label HorizontalAlignment="Left" Content="Nom" x:Name="lbl_NumerodeDemande_Copy" Height="22" VerticalAlignment="Top" Width="109" Margin="13,88,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" IsReadOnly="True"  TextWrapping="Wrap" x:Name="Txt_NomClient"  VerticalAlignment="Top" Width="243" Margin="127,88,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Adresse" x:Name="lbl_NumerodeDemande_Copy1" Height="22" VerticalAlignment="Top" Width="109" Margin="13,114,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" IsReadOnly="True"  TextWrapping="Wrap" x:Name="Txt_AdresseClient"  VerticalAlignment="Top" Width="243" Margin="127,114,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Numéro de compteur present" x:Name="lbl_NumerodeDemande_Copy2" Height="22" VerticalAlignment="Top" Width="180" Margin="9,149,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" x:Name="Txt_NumCompteur"  VerticalAlignment="Top" Width="243" Margin="194,147,0,0"/>
+        <CheckBox Content="Consommateur décédé avec ayant droit " x:Name="IsDecedeAvecAyantD" HorizontalAlignment="Left" Width="259" Margin="10,182,0,254" Checked="IsDecedeAvecAyantD_Checked" Unchecked="IsDecedeAvecAyantD_Unchecked"/>
+        <CheckBox Content="Consommateur décedé sans ayant droit" x:Name="IsDecedeSansAyantD" HorizontalAlignment="Left" Width="246" Margin="285,182,0,254" Checked="IsDecedeSansAyantD_Checked" Unchecked="IsDecedeSansAyantD_Unchecked"/>
+        <CheckBox Content="Consommateur locataire" x:Name="IsLocataire" HorizontalAlignment="Left" Width="172" Margin="10,204,0,232" Checked="IsLocataire_Checked" Unchecked="IsLocataire_Unchecked"/>
+        <CheckBox Content="Consommateur et proprietaire du point " x:Name="IsProprietaire" HorizontalAlignment="Left" Width="266" Margin="285,204,0,237"/>
+        <CheckBox Content="Consommateur parfaitement connu" x:Name="IsConnu" HorizontalAlignment="Left" Width="246" Margin="285,226,0,208"/>
+        <CheckBox Content="Consommateur absent mais contact connu" x:Name="IsAbsentAvecContact" HorizontalAlignment="Left" Width="270" Margin="10,226,0,213"/>
+        <CheckBox Content="Point de livraison introuvable" x:Name="IsIntrouvable" HorizontalAlignment="Left" Width="246" Margin="10,250,0,189"/>
+        <CheckBox Content="Consommateur absent PL mais nouvelle adresse connus" x:Name="IsAbsentAvecAdrConnu" HorizontalAlignment="Left" Width="335" Margin="216,249,0,187"/>
+        <Button Content="Autres compteurs actifs" Height="23" Margin="11,291,402,144" x:Name="Btn_ListeAppareils" Click="Btn_ListeAppareils_Click" />
+        <sdk:DataGrid AutoGenerateColumns="False" x:Name="dataGrid1"   IsReadOnly="True" Margin="11,319,97,11">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Binding="{Binding CENTRE}" Width="Auto" />
+                <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Binding="{Binding CLIENT}" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre" Binding="{Binding ORDRE}" Width="Auto" />
+                <sdk:DataGridTextColumn  CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom" Binding="{Binding NOMABON}"  Width="Auto" MinWidth="150" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label HorizontalAlignment="Left" Content="Reference client" x:Name="lbl_NumerodeDemande" Height="22" VerticalAlignment="Top" Width="112" Margin="10,64,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Background="LightBlue" TextWrapping="Wrap" x:Name="Txt_ReferenceClient"  VerticalAlignment="Top" Width="243" Margin="128,63,0,0"/>
+        <sdk:Label x:Name="lbl_Ordre" Content="Ordre" Width="33" Margin="404,63,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="24" />
+        <TextBox HorizontalAlignment="Left" Height="23" Background="LightBlue" TextWrapping="Wrap" x:Name="Txt_Ordre"  VerticalAlignment="Top" Width="65" Margin="444,63,0,0"/>
+        <sdk:Label x:Name="label16" Content="Site" Margin="13,12,445,421" />
+        <TextBox Height="23" IsTabStop="True" TabIndex="0" Background="LightBlue"  x:Name="Txt_CodeSite" Width="52" Margin="126,9,384,426" TextChanged="Txt_CodeSite_TextChanged"  />
+        <Button Content="..." x:Name="btn_Site" Margin="183,10,348,427" Click="btn_Site_Click"  />
+        <TextBox Height="23" x:Name="Txt_LibelleSite" Width="205" IsReadOnly="True" Margin="219,9,138,426" />
+        <sdk:Label x:Name="label1" Content="Centre" Margin="13,37,436,399" />
+        <TextBox Height="23" IsTabStop="True" TabIndex="1" Background="LightBlue"  x:Name="Txt_CodeCentre" Width="52" Margin="126,34,384,401" TextChanged="Txt_CodeCentre_TextChanged" />
+        <Button Content="..." x:Name="btn_Centre" Margin="183,34,348,401" Click="btn_Centre_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleCentre" IsReadOnly="True" Margin="219,35,138,400" />
+    </Grid>
+</controls:ChildWindow>

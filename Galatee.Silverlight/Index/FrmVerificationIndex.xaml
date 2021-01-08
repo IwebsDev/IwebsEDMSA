@@ -1,0 +1,53 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Facturation.FrmVerificationIndex"
+           Width="596.567" Height="514" 
+           Title="Vérification reprise d'index" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,2,62" x:Name="groupBox1_Copy3" Header="Client" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="70" HorizontalAlignment="Right" Margin="0,10,8,2" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="70" Height="23" HorizontalAlignment="Right" Margin="0,10,159,2" Grid.Row="1" />
+        <sdk:Label Content="Client" Height="21" HorizontalAlignment="Left" Margin="22,128,0,0" x:Name="label2_Copy2" VerticalAlignment="Top" Width="69" />
+        <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,125,236,0" x:Name="txtClient" VerticalAlignment="Top" Width="227" IsTabStop="True" TabIndex="3"  IsReadOnly="True" />
+        <sdk:Label Content="Ordre" Height="23" HorizontalAlignment="Left" Margin="403,132,0,0" x:Name="label2_Copy3" VerticalAlignment="Top" Width="40" />
+        <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,126,79,0" x:Name="txtOrdre" VerticalAlignment="Top" Width="42" IsReadOnly="True"   />
+        <sdk:Label Content="Compteur " Height="23" HorizontalAlignment="Left" Margin="22,213,0,0" x:Name="lbl_Compteur" VerticalAlignment="Top" Width="71" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="107,211,0,0" x:Name="txtCompteur" VerticalAlignment="Top" Width="226"  IsReadOnly="True" IsTabStop="True" TabIndex="4"  />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="107,182,0,0" x:Name="Txt_NomAbon" VerticalAlignment="Top" Width="383"  />
+        <sdk:Label Content="Nom" Height="23" HorizontalAlignment="Left" Margin="22,186,0,0" x:Name="lbl_Nom" VerticalAlignment="Top" Width="66" />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,347,2,0" x:Name="groupBox1_Copy1" Header="Index" />
+        <sdk:Label Content="Index erroné" Height="23" HorizontalAlignment="Left" Margin="21,373,0,0" x:Name="lbl_AncienneConsult" VerticalAlignment="Top" Width="86" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="107,369,0,0" x:Name="Txt_AncIndex" VerticalAlignment="Top" Width="79" IsReadOnly="True" />
+        <sdk:Label Content="Nouvel index" Height="23" HorizontalAlignment="Left" Margin="313,373,0,0" x:Name="lbl_NouvelleConsult" VerticalAlignment="Top" Width="77" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,369,79,0" x:Name="Txt_NouvIndex" VerticalAlignment="Top" Width="89" TabIndex="8"  IsReadOnly="True"/>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="22,70,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="69" Content="Centre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="106,71,0,0" x:Name="Txt_CodeCentre" VerticalAlignment="Top" Width="56" TabIndex="1" TextChanged="Txt_CodeCentre_TextChanged"  IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="167,71,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="42" Click="btn_Centre_Click" IsEnabled="False"/>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="22,46,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="69" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="106,45,0,0" x:Name="Txt_CodeSite" VerticalAlignment="Top" Width="56"  TabIndex="0" TextChanged="Txt_CodeSite_TextChanged"  IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="217,45,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="273" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="167,45,0,0" x:Name="btn_Site" VerticalAlignment="Top" Width="42" Click="btn_Site_Click"  IsEnabled="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="217,71,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="273" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" x:Name="btn_Produit" VerticalAlignment="Top" TabIndex="2" Width="40" Click="btn_Produit_Click" Margin="106,98,0,0" IsEnabled="False"/>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="23,98,0,0" x:Name="lbl_Centre_Copy2" VerticalAlignment="Top" Width="69" Content="Produit" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="151,98,0,0" x:Name="Txt_Produit" VerticalAlignment="Top" Width="339" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="106,153,0,0" x:Name="Txt_PeriodeEnCour" VerticalAlignment="Top" Width="80"  IsReadOnly="True" IsTabStop="True" TabIndex="4"  />
+        <sdk:Label Content="Période" Height="23" HorizontalAlignment="Left" Margin="22,160,0,0" x:Name="label1" VerticalAlignment="Top" Width="55" />
+        <sdk:Label Content="Motif demande" Height="21" HorizontalAlignment="Left" Margin="22,245,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="85" />
+        <TextBox Height="47" HorizontalAlignment="Right"  Margin="0,239,79,0" x:Name="txtMotifDemande" VerticalAlignment="Top" Width="384" IsTabStop="True" TabIndex="7" IsReadOnly="True" />
+        <Button x:Name="btnRejeter" Content="Rejeter" Click="btnRejeter_Click" Width="70" Height="23" HorizontalAlignment="Right" Margin="0,10,84,0" Grid.Row="1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="106,18,0,0" x:Name="Txt_Demande" VerticalAlignment="Top" Width="227"  IsReadOnly="True" IsTabStop="True" TabIndex="4"  />
+        <sdk:Label Content="Demande" Height="23" HorizontalAlignment="Left" Margin="22,22,0,0" x:Name="label1_Copy" VerticalAlignment="Top" Width="55" />
+        <sdk:Label Content="Motif rejet" Height="21" HorizontalAlignment="Left" Margin="21,291,0,0" x:Name="labMotifRejet" VerticalAlignment="Top" Width="85" Visibility="Collapsed" />
+        <TextBox Height="41" HorizontalAlignment="Right"  Margin="0,291,79,0" x:Name="txtMotifRejet" VerticalAlignment="Top" Width="384" IsTabStop="True"  IsReadOnly="True" Foreground="Red" FontStyle="Italic" FontWeight="Bold" Visibility="Collapsed" />
+
+    </Grid>
+</controls:ChildWindow>

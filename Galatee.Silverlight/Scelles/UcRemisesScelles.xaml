@@ -1,0 +1,80 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"       
+              xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    x:Class="Galatee.Silverlight.Scelles.UcRemisesScelles"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+      xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+             
+    Width="1040" Height="550" 
+           Title="UctrlListeRemisesScelles" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox Height="359" Header="Sélection des scellés à remettre" HorizontalAlignment="Left" x:Name="groupBox" VerticalAlignment="Bottom" Width="1001" Margin="0,0,0,10" />
+
+        <Button x:Name="Fermer" Content="Fermer" Click="CancelButton_Click" Width="109" HorizontalAlignment="Right" Margin="0,7,11,5" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="108" Height="23" HorizontalAlignment="Right" Margin="0,7,143,5" Grid.Row="1" />
+        <sdk:Label Content="Matricule agent d'intervention :" HorizontalAlignment="Left" Height="22" Margin="53,9,0,0" VerticalAlignment="Top" Width="185"/>
+        <ComboBox x:Name="CboMotifs" HorizontalAlignment="Left" Height="24" Margin="244,39,0,0" VerticalAlignment="Top" Width="309" Visibility="Collapsed"/>
+        <sdk:Label HorizontalAlignment="Left" Height="19" Margin="658,11,0,0" VerticalAlignment="Top" Width="120" Content="Date de remise :"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="244,9,0,0" VerticalAlignment="Top" Width="43" x:Name="btn_SearchAgt"  Click="btn_SearchAgt_Click" RenderTransformOrigin="0.5,0.5" />
+
+        <controls:DatePicker x:Name="Dateremise" HorizontalAlignment="Left" Height="23" Margin="783,7,0,0" VerticalAlignment="Top" Width="145"/>
+        <sdk:Label  Content="Motif de remise de scellés       :" HorizontalAlignment="Left" Height="23" Margin="54,43,0,0" VerticalAlignment="Top" Width="184" Visibility="Collapsed"/>
+        <TextBox x:Name="txtAgt_M" HorizontalAlignment="Left" Height="23" Margin="292,8,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60" Background="LightBlue" IsReadOnly="False" SelectionChanged="txtAgt_M_SelectionChanged" />
+        <TextBox x:Name="txt_LibelleAgentScelle" HorizontalAlignment="Left" Height="23" Margin="357,8,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196" IsReadOnly="True"/>
+        <TextBox x:Name="txtNombredeScelle" HorizontalAlignment="Left" Height="24" Margin="784,39,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" IsReadOnly="True"/>
+        <RadioButton GroupName="RemiseScelle" x:Name="Rdb_RmScelle" Content="Remise de scellés" HorizontalAlignment="Left" Margin="32,97,0,0" VerticalAlignment="Top" Checked="Rdb_RmScelle_Checked"/>
+        <RadioButton GroupName="RemiseScelle" x:Name="Rdb_RmLotScelle" Content="Remise de lot de scellés" HorizontalAlignment="Left" Margin="244,97,0,0" VerticalAlignment="Top" Checked="Rdb_RmLotScelle_Checked"/>
+        <Button x:Name="Charger" Content="&gt;" HorizontalAlignment="Left" Margin="485,242,0,0" VerticalAlignment="Top" Width="53" Click="Charger_Click" RenderTransformOrigin="1.642,1.773" Height="24"/>
+        <Button x:Name="Decharger" Content="&lt;" HorizontalAlignment="Left" Margin="485,276,0,0" VerticalAlignment="Top" Width="53" RenderTransformOrigin="0.5,0.5" Click="Decharger_Click" Height="24"/>
+
+
+        <Button Name="chargerTout" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="485,306,0,0" VerticalAlignment="Top" Width="53" Click="chargerTout_Click" Height="24"/>
+        <Button Name="DechargerTout" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="485,341,0,0" VerticalAlignment="Top" Width="53" Click="DechargerTout_Click" Height="24" RenderTransformOrigin="1.396,3.292"/>
+        <sdk:DataGrid x:Name="dgScelle" Margin="10,119,547,22" AutoGenerateColumns="False"  RowHeight="30" RenderTransformOrigin="0.5,0.5"   >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numero de Scelle" Width="Auto" Binding="{Binding Path=Numero_Scelle}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="Auto" Header="Couleur" Binding="{Binding Path=Libelle_Couleur}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dgLotScelle" Margin="10,119,547,22" AutoGenerateColumns="False"  RowHeight="30" RenderTransformOrigin="0.5,0.5"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro du lot" Width="100" Binding="{Binding Path=lot_ID}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre scellés lot" Width="100" Binding="{Binding Path=Nombre_scelles_lot}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre restant"  Width="100" Binding="{Binding Path=Nombre_scelles_reçu}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Header="Couleur"  Width="55" Binding="{Binding Path=Libelle_Couleur}" Visibility="Collapsed"/>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dgRemis" Margin="554,119,26,22" AutoGenerateColumns="False" RowHeight="30" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numero de Scelle" Width="Auto" Binding="{Binding Path=Numero_Scelle}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Couleur" Width="Auto" Binding="{Binding Path=Libelle_Couleur}"/>
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dgRemiselot" Margin="554,119,26,22" AutoGenerateColumns="False" RowHeight="30" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro du lot" Width="100" Binding="{Binding Path=lot_ID}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre scellés lot" Width="100" Binding="{Binding Path=Nombre_scelles_lot}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre restant"  Width="100" Binding="{Binding Path=Nombre_scelles_reçu}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Header="Couleur"  Width="55" Binding="{Binding Path=Libelle_Couleur}" Visibility="Collapsed"/>
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <sdk:Label Content="Nombre de scellé :" HorizontalAlignment="Left" Height="20" Margin="658,46,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox    Content="Saisir nombre de scellés souhaités" x:Name="chb_SaisiNombreScelleSouhaite" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="554,94,0,0" Checked="chb_SaisiNombreScelleSouhaite_Checked" Unchecked="chb_SaisiNombreScelleSouhaite_Unchecked"/>
+        <TextBox   HorizontalAlignment="Left" x:Name="txt_NombreScellesSouhaite" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="808,88,0,0"/>
+
+
+    </Grid>
+</controls:ChildWindow>

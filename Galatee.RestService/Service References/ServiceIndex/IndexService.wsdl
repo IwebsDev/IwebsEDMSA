@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IndexService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Index/IndexService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Index/IndexService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Index/IndexService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Index/IndexService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Index/IndexService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIndexService_ChargerTableDeReference_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerTableDeReference" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerTableDeReference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerTableDeReferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerTableDeReference_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MiseAJourEvenementTSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourEvenementTSP" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MiseAJourEvenementTSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MiseAJourEvenementTSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MiseAJourEvenementTSP_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraiteParReleveur_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotNonTraiteParReleveur" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraiteParReleveur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotNonTraiteParReleveurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraiteParReleveur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotSelonCritere_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotSelonCritere" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotSelonCritere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotSelonCritereResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotSelonCritere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneProduitService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProduitService" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneProduitService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProduitServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneProduitService_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_CreationClientIndexHorsLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreationClientIndexHorsLot" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_CreationClientIndexHorsLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreationClientIndexHorsLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_CreationClientIndexHorsLot_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneInfoClientHorsLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoClientHorsLot" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneInfoClientHorsLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneInfoClientHorsLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneInfoClientHorsLot_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesDonneesDesSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesDonneesDesSite" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesDonneesDesSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesDonneesDesSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesDonneesDesSite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesTournees_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeDesTournees" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesTournees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeDesTourneesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesTournees_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_IsBatchExistDansPagerie_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsBatchExistDansPagerie" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_IsBatchExistDansPagerie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsBatchExistDansPagerieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_IsBatchExistDansPagerie_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotNonTraite" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeLotNonTraiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeLotNonTraite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ConstruireLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConstruireLot" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ConstruireLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConstruireLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ConstruireLot_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesEvenements_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeDesEvenements" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesEvenements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerListeDesEvenementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerListeDesEvenements_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeDesCas_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesCas" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeDesCas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDesCasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeDesCas_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MisAJourEvenement_InputMessage">
+    <wsdl:part name="parameters" element="tns:MisAJourEvenement" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MisAJourEvenement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MisAJourEvenementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_MisAJourEvenement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCanalisation" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCanalisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisationbyIdEvenement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCanalisationbyIdEvenement" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisationbyIdEvenement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCanalisationbyIdEvenementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCanalisationbyIdEvenement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneEvenementNonFact_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEvenementNonFact" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneEvenementNonFact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEvenementNonFactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneEvenementNonFact_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListEvenementNonFact_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListEvenementNonFact" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListEvenementNonFact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListEvenementNonFactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListEvenementNonFact_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerLotri_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerLotri" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerLotri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerLotriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerLotri_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerDonneeIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerDonneeIndex" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerDonneeIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerDonneeIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerDonneeIndex_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerLotGenerale_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerLotGenerale" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerLotGenerale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerLotGeneraleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerLotGenerale_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesCas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesCas" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesCas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesCasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesCas_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerListeDesCas_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerListeDesCas" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerListeDesCas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerListeDesCasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_EditerListeDesCas_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUneTournee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUneTournee" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUneTournee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUneTourneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUneTournee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUneTournee_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererUneTournee" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUneTournee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererUneTourneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUneTournee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUneTournee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimerUneTournee" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUneTournee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimerUneTourneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUneTournee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeReleveur_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeReleveur" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeReleveur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeReleveurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneListeReleveur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUnReleveur_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnReleveur" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUnReleveur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUnReleveurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_UpdateUnReleveur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUnReleveur_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsererUnReleveur" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUnReleveur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsererUnReleveurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_InsererUnReleveur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUnReleveur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimerUnReleveur" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUnReleveur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimerUnReleveurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimerUnReleveur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneAllUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerTousFrequence_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerTousFrequence" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerTousFrequence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerTousFrequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ChargerTousFrequence_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCategorie_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCategorie" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCategorie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCategorieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_RetourneCategorie_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesProduit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesProduit" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesProduit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeDesProduitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_ListeDesProduit_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimeEvtNonFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimeEvtNonFacture" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimeEvtNonFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SupprimeEvtNonFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_SupprimeEvtNonFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_setListRiInWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setListRiInWebPart" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_setListRiInWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setListRiInWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_setListRiInWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_getListRiFromWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListRiFromWebPart" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_getListRiFromWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListRiFromWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_getListRiFromWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_DeleteListRiFromWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteListRiFromWebPart" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_DeleteListRiFromWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteListRiFromWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIndexService_DeleteListRiFromWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IIndexService">
+    <wsdl:operation name="ChargerTableDeReference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerTableDeReference" message="tns:IIndexService_ChargerTableDeReference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerTableDeReferenceResponse" message="tns:IIndexService_ChargerTableDeReference_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerTableDeReferenceErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerTableDeReference_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourEvenementTSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/MiseAJourEvenementTSP" message="tns:IIndexService_MiseAJourEvenementTSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/MiseAJourEvenementTSPResponse" message="tns:IIndexService_MiseAJourEvenementTSP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/MiseAJourEvenementTSPErrorsFault" name="ErrorsFault" message="tns:IIndexService_MiseAJourEvenementTSP_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotNonTraiteParReleveur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteParReleveur" message="tns:IIndexService_RetourneListeLotNonTraiteParReleveur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteParReleveurResponse" message="tns:IIndexService_RetourneListeLotNonTraiteParReleveur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteParReleveurErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListeLotNonTraiteParReleveur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotSelonCritere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotSelonCritere" message="tns:IIndexService_RetourneListeLotSelonCritere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotSelonCritereResponse" message="tns:IIndexService_RetourneListeLotSelonCritere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotSelonCritereErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListeLotSelonCritere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProduitService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneProduitService" message="tns:IIndexService_RetourneProduitService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneProduitServiceResponse" message="tns:IIndexService_RetourneProduitService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneProduitServiceErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneProduitService_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreationClientIndexHorsLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/CreationClientIndexHorsLot" message="tns:IIndexService_CreationClientIndexHorsLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/CreationClientIndexHorsLotResponse" message="tns:IIndexService_CreationClientIndexHorsLot_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/CreationClientIndexHorsLotErrorsFault" name="ErrorsFault" message="tns:IIndexService_CreationClientIndexHorsLot_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoClientHorsLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneInfoClientHorsLot" message="tns:IIndexService_RetourneInfoClientHorsLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneInfoClientHorsLotResponse" message="tns:IIndexService_RetourneInfoClientHorsLot_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneInfoClientHorsLotErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneInfoClientHorsLot_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesDonneesDesSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ListeDesDonneesDesSite" message="tns:IIndexService_ListeDesDonneesDesSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ListeDesDonneesDesSiteResponse" message="tns:IIndexService_ListeDesDonneesDesSite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ListeDesDonneesDesSiteErrorsFault" name="ErrorsFault" message="tns:IIndexService_ListeDesDonneesDesSite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeDesTournees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesTournees" message="tns:IIndexService_ChargerListeDesTournees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesTourneesResponse" message="tns:IIndexService_ChargerListeDesTournees_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesTourneesErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerListeDesTournees_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsBatchExistDansPagerie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/IsBatchExistDansPagerie" message="tns:IIndexService_IsBatchExistDansPagerie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/IsBatchExistDansPagerieResponse" message="tns:IIndexService_IsBatchExistDansPagerie_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/IsBatchExistDansPagerieErrorsFault" name="ErrorsFault" message="tns:IIndexService_IsBatchExistDansPagerie_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotNonTraite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraite" message="tns:IIndexService_RetourneListeLotNonTraite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteResponse" message="tns:IIndexService_RetourneListeLotNonTraite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListeLotNonTraite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConstruireLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ConstruireLot" message="tns:IIndexService_ConstruireLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ConstruireLotResponse" message="tns:IIndexService_ConstruireLot_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ConstruireLotErrorsFault" name="ErrorsFault" message="tns:IIndexService_ConstruireLot_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeDesEvenements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesEvenements" message="tns:IIndexService_ChargerListeDesEvenements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesEvenementsResponse" message="tns:IIndexService_ChargerListeDesEvenements_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerListeDesEvenementsErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerListeDesEvenements_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesCas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListeDesCas" message="tns:IIndexService_RetourneListeDesCas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListeDesCasResponse" message="tns:IIndexService_RetourneListeDesCas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListeDesCasErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListeDesCas_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MisAJourEvenement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/MisAJourEvenement" message="tns:IIndexService_MisAJourEvenement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/MisAJourEvenementResponse" message="tns:IIndexService_MisAJourEvenement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/MisAJourEvenementErrorsFault" name="ErrorsFault" message="tns:IIndexService_MisAJourEvenement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCanalisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisation" message="tns:IIndexService_RetourneCanalisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisationResponse" message="tns:IIndexService_RetourneCanalisation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisationErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneCanalisation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCanalisationbyIdEvenement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisationbyIdEvenement" message="tns:IIndexService_RetourneCanalisationbyIdEvenement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisationbyIdEvenementResponse" message="tns:IIndexService_RetourneCanalisationbyIdEvenement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneCanalisationbyIdEvenementErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneCanalisationbyIdEvenement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEvenementNonFact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneEvenementNonFact" message="tns:IIndexService_RetourneEvenementNonFact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneEvenementNonFactResponse" message="tns:IIndexService_RetourneEvenementNonFact_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneEvenementNonFactErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneEvenementNonFact_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListEvenementNonFact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListEvenementNonFact" message="tns:IIndexService_RetourneListEvenementNonFact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListEvenementNonFactResponse" message="tns:IIndexService_RetourneListEvenementNonFact_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListEvenementNonFactErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListEvenementNonFact_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerLotri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerLotri" message="tns:IIndexService_ChargerLotri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerLotriResponse" message="tns:IIndexService_ChargerLotri_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerLotriErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerLotri_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerDonneeIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerDonneeIndex" message="tns:IIndexService_ChargerDonneeIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerDonneeIndexResponse" message="tns:IIndexService_ChargerDonneeIndex_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerDonneeIndexErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerDonneeIndex_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerLotGenerale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/EditerLotGenerale" message="tns:IIndexService_EditerLotGenerale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/EditerLotGeneraleResponse" message="tns:IIndexService_EditerLotGenerale_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/EditerLotGeneraleErrorsFault" name="ErrorsFault" message="tns:IIndexService_EditerLotGenerale_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesCas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ListeDesCas" message="tns:IIndexService_ListeDesCas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ListeDesCasResponse" message="tns:IIndexService_ListeDesCas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ListeDesCasErrorsFault" name="ErrorsFault" message="tns:IIndexService_ListeDesCas_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerListeDesCas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/EditerListeDesCas" message="tns:IIndexService_EditerListeDesCas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/EditerListeDesCasResponse" message="tns:IIndexService_EditerListeDesCas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/EditerListeDesCasErrorsFault" name="ErrorsFault" message="tns:IIndexService_EditerListeDesCas_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUneTournee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/UpdateUneTournee" message="tns:IIndexService_UpdateUneTournee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/UpdateUneTourneeResponse" message="tns:IIndexService_UpdateUneTournee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/UpdateUneTourneeErrorsFault" name="ErrorsFault" message="tns:IIndexService_UpdateUneTournee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererUneTournee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/InsererUneTournee" message="tns:IIndexService_InsererUneTournee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/InsererUneTourneeResponse" message="tns:IIndexService_InsererUneTournee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/InsererUneTourneeErrorsFault" name="ErrorsFault" message="tns:IIndexService_InsererUneTournee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupprimerUneTournee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/SupprimerUneTournee" message="tns:IIndexService_SupprimerUneTournee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/SupprimerUneTourneeResponse" message="tns:IIndexService_SupprimerUneTournee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/SupprimerUneTourneeErrorsFault" name="ErrorsFault" message="tns:IIndexService_SupprimerUneTournee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeReleveur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneListeReleveur" message="tns:IIndexService_RetourneListeReleveur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneListeReleveurResponse" message="tns:IIndexService_RetourneListeReleveur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneListeReleveurErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneListeReleveur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnReleveur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/UpdateUnReleveur" message="tns:IIndexService_UpdateUnReleveur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/UpdateUnReleveurResponse" message="tns:IIndexService_UpdateUnReleveur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/UpdateUnReleveurErrorsFault" name="ErrorsFault" message="tns:IIndexService_UpdateUnReleveur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererUnReleveur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/InsererUnReleveur" message="tns:IIndexService_InsererUnReleveur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/InsererUnReleveurResponse" message="tns:IIndexService_InsererUnReleveur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/InsererUnReleveurErrorsFault" name="ErrorsFault" message="tns:IIndexService_InsererUnReleveur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupprimerUnReleveur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/SupprimerUnReleveur" message="tns:IIndexService_SupprimerUnReleveur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/SupprimerUnReleveurResponse" message="tns:IIndexService_SupprimerUnReleveur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/SupprimerUnReleveurErrorsFault" name="ErrorsFault" message="tns:IIndexService_SupprimerUnReleveur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneAllUser" message="tns:IIndexService_RetourneAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneAllUserResponse" message="tns:IIndexService_RetourneAllUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneAllUserErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneAllUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerTousFrequence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ChargerTousFrequence" message="tns:IIndexService_ChargerTousFrequence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ChargerTousFrequenceResponse" message="tns:IIndexService_ChargerTousFrequence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ChargerTousFrequenceErrorsFault" name="ErrorsFault" message="tns:IIndexService_ChargerTousFrequence_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCategorie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/RetourneCategorie" message="tns:IIndexService_RetourneCategorie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/RetourneCategorieResponse" message="tns:IIndexService_RetourneCategorie_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/RetourneCategorieErrorsFault" name="ErrorsFault" message="tns:IIndexService_RetourneCategorie_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesProduit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/ListeDesProduit" message="tns:IIndexService_ListeDesProduit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/ListeDesProduitResponse" message="tns:IIndexService_ListeDesProduit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/ListeDesProduitErrorsFault" name="ErrorsFault" message="tns:IIndexService_ListeDesProduit_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SupprimeEvtNonFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/SupprimeEvtNonFacture" message="tns:IIndexService_SupprimeEvtNonFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/SupprimeEvtNonFactureResponse" message="tns:IIndexService_SupprimeEvtNonFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/SupprimeEvtNonFactureErrorsFault" name="ErrorsFault" message="tns:IIndexService_SupprimeEvtNonFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setListRiInWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/setListRiInWebPart" message="tns:IIndexService_setListRiInWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/setListRiInWebPartResponse" message="tns:IIndexService_setListRiInWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/setListRiInWebPartErrorsFault" name="ErrorsFault" message="tns:IIndexService_setListRiInWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListRiFromWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/getListRiFromWebPart" message="tns:IIndexService_getListRiFromWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/getListRiFromWebPartResponse" message="tns:IIndexService_getListRiFromWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/getListRiFromWebPartErrorsFault" name="ErrorsFault" message="tns:IIndexService_getListRiFromWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteListRiFromWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIndexService/DeleteListRiFromWebPart" message="tns:IIndexService_DeleteListRiFromWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIndexService/DeleteListRiFromWebPartResponse" message="tns:IIndexService_DeleteListRiFromWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIndexService/DeleteListRiFromWebPartErrorsFault" name="ErrorsFault" message="tns:IIndexService_DeleteListRiFromWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IIndexService" type="tns:IIndexService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChargerTableDeReference">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerTableDeReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MiseAJourEvenementTSP">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/MiseAJourEvenementTSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotNonTraiteParReleveur">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListeLotNonTraiteParReleveur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotSelonCritere">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListeLotSelonCritere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProduitService">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneProduitService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreationClientIndexHorsLot">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/CreationClientIndexHorsLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneInfoClientHorsLot">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneInfoClientHorsLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesDonneesDesSite">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ListeDesDonneesDesSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeDesTournees">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerListeDesTournees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsBatchExistDansPagerie">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/IsBatchExistDansPagerie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeLotNonTraite">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListeLotNonTraite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConstruireLot">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ConstruireLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerListeDesEvenements">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerListeDesEvenements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDesCas">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListeDesCas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MisAJourEvenement">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/MisAJourEvenement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCanalisation">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneCanalisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCanalisationbyIdEvenement">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneCanalisationbyIdEvenement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEvenementNonFact">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneEvenementNonFact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListEvenementNonFact">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListEvenementNonFact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerLotri">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerLotri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerDonneeIndex">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerDonneeIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EditerLotGenerale">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/EditerLotGenerale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesCas">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ListeDesCas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EditerListeDesCas">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/EditerListeDesCas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUneTournee">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/UpdateUneTournee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsererUneTournee">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/InsererUneTournee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SupprimerUneTournee">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/SupprimerUneTournee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeReleveur">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneListeReleveur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUnReleveur">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/UpdateUnReleveur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsererUnReleveur">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/InsererUnReleveur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SupprimerUnReleveur">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/SupprimerUnReleveur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllUser">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerTousFrequence">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ChargerTousFrequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCategorie">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/RetourneCategorie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListeDesProduit">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/ListeDesProduit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SupprimeEvtNonFacture">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/SupprimeEvtNonFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setListRiInWebPart">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/setListRiInWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListRiFromWebPart">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/getListRiFromWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteListRiFromWebPart">
+      <soap:operation soapAction="http://tempuri.org/IIndexService/DeleteListRiFromWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IndexService">
+    <wsdl:port name="BasicHttpBinding_IIndexService" binding="tns:BasicHttpBinding_IIndexService">
+      <soap:address location="http://localhost:1818/Index/IndexService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

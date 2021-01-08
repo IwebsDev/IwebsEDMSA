@@ -1,0 +1,21 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Report.UcEditionDeclarationTVA"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="183" 
+           Title="Edition Declaration TVA" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*" />
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="2" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="2" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="104" Grid.RowSpan="2" Content="Mois Comptable :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Content="Année :"/>
+        <TextBox x:Name="txtYear" HorizontalAlignment="Left" Height="23" Margin="119,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+        <ComboBox x:Name="ddbMois" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</controls:ChildWindow>

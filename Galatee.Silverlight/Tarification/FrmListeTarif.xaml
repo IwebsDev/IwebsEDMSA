@@ -1,0 +1,95 @@
+﻿<sdk:ChildWindow
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Galatee.Silverlight.Tarification.FrmListeTarif"
+           Width="1120" Height="628"
+           Title="Tarifs Facturation" OverlayBrush="Transparent" Closing="ChildWindow_Closing_1" >
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,0,212" x:Name="groupBox1_Copy1" Header="Générale"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,311,0,0" x:Name="groupBox1_Copy2" Header="Details"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="10,10,11,396" x:Name="groupBox1_Copy3" Header="Critere de recherche"  />
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click"   Width="75" Height="23" HorizontalAlignment="Right" Margin="0,5,10,7" Grid.Row="1" />
+        <Button x:Name="NewButton" Content="Nouveau" Click="NewButton_Click"  Width="79" Height="23" HorizontalAlignment="Right" Margin="0,5,89,7" Grid.Row="1" />
+        <!--<Button x:Name="ViewButton" Content="Consulter" Click="ViewButton_Click"   Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,456,0" Grid.Row="1" />-->
+        <!--<Button x:Name="UpdateButton" Content="Modifier" Click="UpdateButton_Click"  Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,536,0" Grid.Row="1" />-->
+        <!--<Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />-->
+        <sdk:DataGrid x:Name="dgListeTarifFacturation"  HorizontalAlignment="Left" Height="135" Margin="10,140,0,0" VerticalAlignment="Top" Width="1072" AutoGenerateColumns="False"  SelectionMode="Single" MouseRightButtonDown="dgListeTarifFacturation_MouseRightButtonDown" MouseRightButtonUp="dgListeTarifFacturation_MouseRightButtonUp"  LoadingRow="dgListeTarifFacturation_LoadingRow" SelectionChanged="dgListeTarifFacturation_SelectionChanged" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLECENTRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CENTRE" Width="200" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEPRODUIT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PRODUIT" Width="200" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEREDEVANCE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="REDEVANCE" Width="200" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLERECHERCHETARIF}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="RECHERCHE TARIF" Width="200" />
+                <sdk:DataGridTextColumn Binding="{Binding MODEAPPLICATION}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="MODE APPLICATION" Width="200" />
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="10,280,0,0" PageSize="10" VerticalAlignment="Top" Width="1072"/>
+        <sdk:DataGrid x:Name="dg_Detail" AutoGenerateColumns="False" ColumnWidth="*" ItemsSource="{Binding SelectedItem.DETAIL, ElementName=dgListeTarifFacturation}" Margin="10,336,10,10">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="CTARCOMP" Binding="{Binding CTARCOMP}"/>
+                <sdk:DataGridTextColumn Header="CENTRE" Binding="{Binding LIBELLECENTRE}"/>
+                <sdk:DataGridTextColumn Header="PRODUIT" Binding="{Binding LIBELLEPRODUIT}"/>
+                <sdk:DataGridTextColumn Header="TAXE" Binding="{Binding LIBELLETAXE}"/>
+                <sdk:DataGridTextColumn Header="DEBUT APPLICATION" Binding="{Binding DEBUTAPPLICATION, Converter={StaticResource DateTimeConverter}}"/>
+                <sdk:DataGridTextColumn Header="FIN APPLICATION" Binding="{Binding FINAPPLICATION, Converter={StaticResource DateTimeConverter}}"/>
+                <sdk:DataGridTextColumn Header="MONTANT ANNUEL" Binding="{Binding MONTANTANNUEL}"/>
+                <sdk:DataGridTemplateColumn Width="50">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="..." Click="Button_Click" Tag="{Binding PK_ID}"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <Button x:Name="DeleteButton"  Content="Surpprimer" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="924,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="78" Click="DeleteButton_Click" Height="23"/>
+        <sdk:Label x:Name="lbl_id_centre" HorizontalAlignment="Left" Visibility="Collapsed"  Content="{Binding SelectedItem.FK_IDCENTRE, ElementName=dgListeTarifFacturation}" Height="22" Margin="182,12,0,0" Grid.Row="1" VerticalAlignment="Top" Width="57"/>
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <sdk:Label Height="17" x:Name="label3" Width="61" Content="Centre" Margin="64,54,967,447" />
+        <TextBox x:Name="Txt_CodeCentre" Margin="143,51,896,444" TextChanged="Txt_CodeCentre_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_Centre1" Margin="197,51,862,444" Click="btn_Centre_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleCentre1" IsReadOnly="True" Margin="230,51,660,444" />
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <sdk:Label Height="17" x:Name="label6" Width="62" Content="Redevance" Margin="64,84,966,417" />
+        <TextBox Height="23" x:Name="Txt_CodeRedevence" Margin="143,81,896,414" TextChanged="Txt_CodeRedevence_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_Redevence" Margin="197,81,862,414" Click="btn_Redevence_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleRedevence" IsReadOnly="True" Margin="230,81,660,414" />
+        <!--<StackPanel Height="28" x:Name="stackPanel5" Orientation="Horizontal" Margin="454.69,45.501,139.47,444.498" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <StackPanel.RenderTransform>
+                <CompositeTransform Rotation="-0.342"/>
+            </StackPanel.RenderTransform>-->
+        <sdk:Label x:Name="label16" Content="Produit" Margin="499,49,486,446" />
+        <TextBox Height="23" x:Name="Txt_CodeProduit" Margin="611,49,430,446" TextChanged="Txt_CodeProduit_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_Produit" Click="btn_Produit_Click" Margin="667,49,389,446" />
+        <TextBox Height="23" x:Name="Txt_LibelleProduit" Width="202" IsReadOnly="True" Margin="706,49,184,446" />
+        <sdk:Label x:Name="label1" Content="Code Recherche " Margin="499,82,486,414" />
+        <TextBox Height="23" x:Name="Txt_CodeRechercheTarif" Margin="611,81,429,414" TextChanged="Txt_CodeRechercheTarif_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_RechercheTarif" Margin="668,81,389,414" Click="btn_RechercheTarif_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleRechercheTarif" IsReadOnly="True" Margin="706,81,184,414" />
+        <Button Content="Rechercher" HorizontalAlignment="Left" Margin="937,80,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_1"/>
+        <sdk:Label Height="17" x:Name="label16_Copy" Content="Site" Margin="64,27,956,474" />
+        <TextBox Height="23" x:Name="Txt_CodeSite" Margin="143,24,896,471" TextChanged="Txt_CodeSite_TextChanged"  />
+        <Button Content="..." Height="23" x:Name="btn_Site" Margin="197,24,862,471" Click="btn_Site_Click"  />
+        <TextBox Height="23" x:Name="Txt_LibelleSite" IsReadOnly="True" Margin="230,24,660,471" />
+        <!--</StackPanel>-->
+    </Grid>
+</sdk:ChildWindow>

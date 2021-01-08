@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EclipseEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AGR" EntityType="Model.AGR" />
+    <EntitySet Name="LEGAL_ENTITY" EntityType="Model.LEGAL_ENTITY" />
+    <EntitySet Name="LOCATION" EntityType="Model.LOCATION" />
+    <EntitySet Name="METER" EntityType="Model.METER" />
+    <EntitySet Name="RDP" EntityType="Model.RDP" />
+    <EntitySet Name="GL_INTERFACE" EntityType="Model.GL_INTERFACE" />
+  </EntityContainer>
+  <EntityType Name="AGR">
+    <Key>
+      <PropertyRef Name="AGR_ID" />
+    </Key>
+    <Property Name="AGR_ID" Type="Int64" Nullable="false" />
+    <Property Name="AGR_TYPE_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREATED" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOC" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DOT" Type="DateTime" Precision="0" />
+    <Property Name="DEPOSIT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LEGAL_ENTITY_ID" Type="Int64" Nullable="false" />
+    <Property Name="AREF" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="AGR_STATUS_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREDIT_LIMIT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UTIL_ID" Type="Int64" Nullable="false" />
+    <Property Name="LIABILITY_TYPE_ID" Type="Int64" Nullable="false" />
+    <Property Name="MOD_TS" Type="DateTime" Precision="0" />
+    <Property Name="TASK_ID" Type="Int64" />
+    <Property Name="CHANGE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RESP_OPERATOR_ID" Type="Int64" />
+    <Property Name="SERVICE_BALANCE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GLO_MESSAGE_ID" Type="Int64" />
+    <Property Name="GLO_MESSAGE_TS" Type="DateTime" Precision="0" />
+    <Property Name="ACCEPT_CHEQUES" Type="Int16" />
+    <Property Name="CREDIT_CONTROL_VALUE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CREDIT_CONTROLLED" Type="Int16" />
+    <Property Name="CREDIT_CONTROLLED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="VENDOR_COMM_PERC" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="UTIL_DIVISION_ID" Type="Int64" />
+    <Property Name="ALERT_PERIOD" Type="Int64" />
+    <Property Name="CUSTOMER_TAKE_ON_COMPLETE" Type="Int16" />
+  </EntityType>
+  <EntityType Name="LEGAL_ENTITY">
+    <Key>
+      <PropertyRef Name="LEGAL_ENTITY_ID" />
+    </Key>
+    <Property Name="LEGAL_ENTITY_ID" Type="Int64" Nullable="false" />
+    <Property Name="LEGAL_ENTITY_NAME" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ACC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ADDR1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ADDR2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ADDR3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BANK_ID" Type="Int64" />
+    <Property Name="BRN" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CODE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LEGAL_ENTITY_REF" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="EXDT" Type="DateTime" Precision="0" />
+    <Property Name="HLDR" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PAY_TYPE_ID" Type="Int64" />
+    <Property Name="PERSID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="SPSID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TEL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TTL" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="LEGAL_ENTITY_TYPE_ID" Type="Int64" />
+    <Property Name="WTEL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LEGAL_ENTITY_STATUS_ID" Type="Int64" Nullable="false" />
+    <Property Name="CELLTEL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PINCODE" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MOD_TS" Type="DateTime" Precision="0" />
+    <Property Name="TASK_ID" Type="Int64" />
+    <Property Name="CHANGE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RESP_OPERATOR_ID" Type="Int64" />
+    <Property Name="TITLE_ID" Type="Int64" />
+    <Property Name="INITIALS" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NATIONALITY" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FIRST_NAMES" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CONTACT_PERSON" Type="String" MaxLength="230" Unicode="false" FixedLength="false" />
+    <Property Name="AUTHORISED_TO_SIGN" Type="String" MaxLength="230" Unicode="false" FixedLength="false" />
+    <Property Name="CONTACT_PERSON_DESIGNATION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="POSTAL_ADDRESS_1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="POSTAL_ADDRESS_2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="POSTAL_ADDRESS_3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="WORK_ADDRESS_1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="WORK_ADDRESS_2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="WORK_ADDRESS_3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FAX" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LANGUAGE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="NOTES" Type="String" MaxLength="260" Unicode="false" FixedLength="false" />
+    <Property Name="CELL_PHONE_NO" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="POSTAL_CODE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EMPLOYER_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="VEHICLE_REG_NUMBER" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PREVIOUS_HOME_ADDRESS" Type="String" MaxLength="230" Unicode="false" FixedLength="false" />
+    <Property Name="COMPANY_TYPE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COMPANY_TRADING_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COMPANY_REG_NUMBER" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="BUSINESS_TYPE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="VAT_REG_NUMBER" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="OWNER_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OWNER_ADDRESS" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OWNER_TEL_NUMBER" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PASSPORT_NO" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CREATED" Type="DateTime" Precision="0" />
+    <Property Name="DATE_OF_ISSUE" Type="DateTime" Precision="0" />
+    <Property Name="PLACE_OF_ISSUE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QUALIFICATION_REF" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="LANGUAGE_ID" Type="Int32" />
+    <Property Name="ID_TYPE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="USE_LOC_ADDR_AS_POSTAL_ADDR" Type="Int16" />
+  </EntityType>
+  <EntityType Name="LOCATION">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="Int64" Nullable="false" />
+    <Property Name="LOCATION_TYPE_ID" Type="Int64" Nullable="false" />
+    <Property Name="ADDR1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ADDR2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ADDR3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LOCATION_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DWSZ" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="PLSZ" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="GIS" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AREA_ID" Type="Int64" />
+    <Property Name="LOCATION_STATUS_ID" Type="Int64" />
+    <Property Name="OWNER_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="FORMAL_VALUE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MARKET_VALUE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PLOT_NO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HOUSE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="STREET" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="OTHER" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MOD_TS" Type="DateTime" Precision="0" />
+    <Property Name="TASK_ID" Type="Int64" />
+    <Property Name="CHANGE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RESP_OPERATOR_ID" Type="Int64" />
+    <Property Name="PLACE_NAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="BUILDING_ID" Type="Int64" />
+    <Property Name="BLD_UNIT_NUMBER" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="STREET_ID" Type="Int64" />
+    <Property Name="STREET_NUMBER" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECTIVES" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="ENTRANCE_GPS_X" Type="Decimal" Precision="15" Scale="10" />
+    <Property Name="ENTRANCE_GPS_Y" Type="Decimal" Precision="15" Scale="10" />
+    <Property Name="DEVELOPMENT_NAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_PERSONS_RESIDING" Type="Int32" />
+    <Property Name="FARMING_AREA_DISTRICT" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="KM_FROM_CITY" Type="Int32" />
+    <Property Name="NATURE_OF_ACTIVITY_ID" Type="Int64" />
+    <Property Name="LOCATION_CATEGORY_ID" Type="Int64" />
+    <Property Name="ADDR_SYSTEM_ID" Type="Int64" />
+    <Property Name="REGION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UNIT_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="UTIL_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="METER">
+    <Key>
+      <PropertyRef Name="METER_ID" />
+    </Key>
+    <Property Name="METER_ID" Type="Int64" Nullable="false" />
+    <Property Name="METER_TYPE_ID" Type="Int64" />
+    <Property Name="MRL_ID" Type="Int64" />
+    <Property Name="METER_STATUS_ID" Type="Int64" />
+    <Property Name="MSNO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TKTYPE_ID" Type="Int64" />
+    <Property Name="TRF_ID" Type="Int64" />
+    <Property Name="SG_ID" Type="Int64" />
+    <Property Name="COST" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RES_ID" Type="Int64" />
+    <Property Name="UTIL_ID" Type="Int64" />
+    <Property Name="CREATED" Type="DateTime" Precision="0" />
+    <Property Name="LOCATION_ID" Type="Int64" />
+    <Property Name="ENCRYPTION_TYPE_ID" Type="Int64" />
+    <Property Name="MANUFACTURER_ID" Type="Int64" />
+    <Property Name="RDP_ID" Type="Int64" />
+    <Property Name="ODOMETER" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="SEAL_TYPE_ID" Type="Int64" />
+    <Property Name="SEAL_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="INST_DATE" Type="DateTime" Precision="0" />
+    <Property Name="DISCONN_DATE" Type="DateTime" Precision="0" />
+    <Property Name="STATUS_DATE" Type="DateTime" Precision="0" />
+    <Property Name="REMOVAL_DATE" Type="DateTime" Precision="0" />
+    <Property Name="GENERAL_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="INST_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="DISCONN_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="REMOVAL_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="ISSUE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="ISSUE_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="RECEIPT_DATE" Type="DateTime" Precision="0" />
+    <Property Name="STATUS_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="STATUS_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="MOD_TS" Type="DateTime" Precision="0" />
+    <Property Name="SECURITY_CODE" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="CHANGE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RESP_OPERATOR_ID" Type="Int64" />
+    <Property Name="TASK_ID" Type="Int64" />
+    <Property Name="MEASURE_TYPE_ID" Type="Int64" />
+    <Property Name="TRF_TS" Type="DateTime" Precision="0" />
+    <Property Name="SG_TS" Type="DateTime" Precision="0" />
+    <Property Name="JOB_NUMBER" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TRANSFORMER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PHASE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="AMR_PROTOCOL_ID" Type="Int64" />
+    <Property Name="AMR_COMMS_METHOD_ID" Type="Int64" />
+    <Property Name="AMR_COMMS_ADDRESS" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AMR_DEVICE_ADDRESS" Type="Int32" />
+    <Property Name="AMR_PASSWORD" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AMR_UTILITY_ASSET_NO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AMR_SCALING_ID" Type="Int64" />
+    <Property Name="AMR_LAST_PROG_TS" Type="DateTime" Precision="0" />
+    <Property Name="AMR_RATE_CHANNEL" Type="Int64" />
+    <Property Name="AMR_AUTH_LEVEL" Type="Int64" />
+    <Property Name="AMR_CLIENT_TYPE" Type="Int64" />
+    <Property Name="AMR_PROF_INTERVAL" Type="Int64" />
+    <Property Name="STATUS_CATEGORY_ID" Type="Int64" />
+    <Property Name="AREA_CODE" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="PROJECT_ID" Type="Int64" />
+    <Property Name="MANUFACTURER_BOX_NO" Type="Int64" />
+    <Property Name="CSE_AREA_CODE_ID" Type="Int64" />
+    <Property Name="METER_RDP_THRESHOLD_ID" Type="Int64" />
+    <Property Name="METER_SW_VERSION" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="METER_TAKE_ON_COMPLETE" Type="Int16" />
+    <Property Name="BATCH_NO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="VOTE_NO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="RDP">
+    <Key>
+      <PropertyRef Name="RDP_ID" />
+    </Key>
+    <Property Name="RDP_ID" Type="Int64" Nullable="false" />
+    <Property Name="RDP_STATUS_ID" Type="Int64" />
+    <Property Name="RES_ID" Type="Int64" Nullable="false" />
+    <Property Name="UTIL_ID" Type="Int64" Nullable="false" />
+    <Property Name="RDP_DISP_METHOD_ID" Type="Int64" Nullable="false" />
+    <Property Name="RDP_CONS_BENCHMARK_ID" Type="Int64" />
+    <Property Name="RDP_INST_TYPE_ID" Type="Int64" />
+    <Property Name="NODE_ID" Type="Int64" />
+    <Property Name="TRF_ID" Type="Int64" />
+    <Property Name="TAX_ID" Type="Int64" />
+    <Property Name="SG_ID" Type="Int64" />
+    <Property Name="STCONS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="STDATE" Type="DateTime" Precision="0" />
+    <Property Name="LOCATION_ID" Type="Int64" Nullable="false" />
+    <Property Name="RDP_MEASURE_TYPE_ID" Type="Int64" />
+    <Property Name="MRL_ID" Type="Int64" />
+    <Property Name="RDP_TYPE_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREATED" Type="DateTime" Precision="0" />
+    <Property Name="RDP_REF" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="GPS_ELEVATION" Type="Decimal" Precision="15" Scale="6" />
+    <Property Name="GPS_LATITUDE" Type="Decimal" Precision="15" Scale="6" />
+    <Property Name="GPS_LONGITUDE" Type="Decimal" Precision="15" Scale="6" />
+    <Property Name="FCDATE" Type="DateTime" Precision="0" />
+    <Property Name="OFCDT" Type="DateTime" Precision="0" />
+    <Property Name="RDP_ANALYSIS_METHOD_ID" Type="Int64" />
+    <Property Name="RDP_INSPECTION_TYPE" Type="Int64" />
+    <Property Name="LAST_INSPECTION_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RDP_DESCRIPTION" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="INST_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GENERAL_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="INST_DATE" Type="DateTime" Precision="0" />
+    <Property Name="LAST_INSPECTION_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="INST_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="LAST_INSPECTION_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CERT_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RDP_STATUS_DATE" Type="DateTime" Precision="0" />
+    <Property Name="INST_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="LAST_INSPECT_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="RDP_STATUS_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="RDP_STATUS_NOTE" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="AGR_ID" Type="Int64" />
+    <Property Name="MOD_TS" Type="DateTime" Precision="0" />
+    <Property Name="REP_STCONS" Type="Decimal" Precision="15" Scale="4" />
+    <Property Name="REP_STDATE" Type="DateTime" Precision="0" />
+    <Property Name="SEAL_TYPE_ID" Type="Int64" />
+    <Property Name="TASK_ID" Type="Int64" />
+    <Property Name="CHANGE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RESP_OPERATOR_ID" Type="Int64" />
+    <Property Name="LAST_BSST_DATE" Type="DateTime" Precision="0" />
+    <Property Name="ISSUE_BSST_TOKEN" Type="Int16" />
+    <Property Name="AMR_SCHEDULE_ID" Type="Int64" />
+    <Property Name="AMR_PRIORITY_ID" Type="Int64" />
+    <Property Name="CERT_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CERT_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="GIS_REFERENCE" Type="Int32" />
+    <Property Name="RIPPLE_REF_1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RIPPLE_REF_2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RIPPLE_CHANNEL" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="RIPPLE_MASTER" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UOM_RESOURCE_LIMIT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UOM_RESOURCE_QNTY" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UOM_RESOURCE_DEMAND" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="BP_CERT_LEGAL_ENTITY_ID" Type="Int64" />
+    <Property Name="BP_CERT_DATE" Type="DateTime" Precision="0" />
+    <Property Name="BUILDING_CERT_REF" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BLOCKED_FLAG" Type="Int16" />
+    <Property Name="BLOCKED_REASON" Type="Int32" />
+    <Property Name="METER_RDP_THRESHOLD_ID" Type="Int64" />
+    <Property Name="NEW_ENCRYPTION_DATA" Type="Int16" />
+    <Property Name="BIV_ID" Type="Int64" />
+    <Property Name="RDP_CATEGORY_ID" Type="Int64" />
+    <Property Name="POC_TAKE_ON_COMPLETE" Type="Int16" />
+    <Property Name="RDP_UPDATE_REASON_ID" Type="Int64" />
+    <Property Name="RDP_UPDATE_COMMENT" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="BLOCK_REASON_ID" Type="Int64" />
+    <Property Name="RDP_BLOCK_COMMENT" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="GL_INTERFACE">
+    <Key>
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="ACCOUNTING_DATE" />
+      <PropertyRef Name="CURRENCY_CODE" />
+      <PropertyRef Name="DATE_CREATED" />
+      <PropertyRef Name="CREATED_BY" />
+      <PropertyRef Name="ACTUAL_FLAG" />
+      <PropertyRef Name="USER_JE_CATEGORY_NAME" />
+      <PropertyRef Name="USER_JE_SOURCE_NAME" />
+    </Key>
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="LEDGER_ID" />
+    <Property Type="DateTime" Name="ACCOUNTING_DATE" Nullable="false" Precision="0" />
+    <Property Type="String" Name="CURRENCY_CODE" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATE_CREATED" Nullable="false" Precision="0" />
+    <Property Type="Int64" Name="CREATED_BY" Nullable="false" />
+    <Property Type="String" Name="ACTUAL_FLAG" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_JE_CATEGORY_NAME" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_JE_SOURCE_NAME" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CURRENCY_CONVERSION_DATE" Precision="0" />
+    <Property Type="Decimal" Name="ENCUMBRANCE_TYPE_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="BUDGET_VERSION_ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="USER_CURRENCY_CONVERSION_TYPE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CURRENCY_CONVERSION_RATE" Precision="38" Scale="0" />
+    <Property Type="String" Name="AVERAGE_JOURNAL_FLAG" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ORIGINATING_BAL_SEG_VALUE" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT1" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT2" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT3" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT4" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT5" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT6" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT7" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT8" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT9" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT10" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT11" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT12" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT13" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT14" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT15" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT16" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT17" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT18" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT19" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT20" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT21" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT22" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT23" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT24" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT25" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT26" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT27" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT28" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT29" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEGMENT30" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ENTERED_DR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ENTERED_CR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ACCOUNTED_DR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ACCOUNTED_CR" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="TRANSACTION_DATE" Precision="0" />
+    <Property Type="String" Name="REFERENCE1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE2" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE4" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE5" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE6" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE7" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE8" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE9" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE10" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE11" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE12" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE13" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE14" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE15" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE16" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE17" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE18" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE19" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE20" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE21" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE22" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE23" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE24" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE25" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE26" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE27" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE28" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE29" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFERENCE30" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="JE_BATCH_ID" />
+    <Property Type="String" Name="PERIOD_NAME" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="JE_HEADER_ID" />
+    <Property Type="Int64" Name="JE_LINE_NUM" />
+    <Property Type="Int64" Name="CHART_OF_ACCOUNTS_ID" />
+    <Property Type="String" Name="FUNCTIONAL_CURRENCY_CODE" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CODE_COMBINATION_ID" />
+    <Property Type="DateTime" Name="DATE_CREATED_IN_GL" Precision="0" />
+    <Property Type="String" Name="WARNING_CODE" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_DESCRIPTION" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="STAT_AMOUNT" Precision="38" Scale="0" />
+    <Property Type="Int64" Name="GROUP_ID" />
+    <Property Type="Int64" Name="REQUEST_ID" />
+    <Property Type="Decimal" Name="SUBLEDGER_DOC_SEQUENCE_ID" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SUBLEDGER_DOC_SEQUENCE_VALUE" Precision="38" Scale="0" />
+    <Property Type="String" Name="ATTRIBUTE1" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE2" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="GL_SL_LINK_ID" Precision="38" Scale="0" />
+    <Property Type="String" Name="GL_SL_LINK_TABLE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE3" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE4" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE5" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE6" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE7" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE8" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE9" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE10" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE11" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE12" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE13" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE14" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE15" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE16" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE17" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE18" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE19" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ATTRIBUTE20" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CONTEXT" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CONTEXT2" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="INVOICE_DATE" Precision="0" />
+    <Property Type="String" Name="TAX_CODE" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INVOICE_IDENTIFIER" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INVOICE_AMOUNT" Precision="38" Scale="0" />
+    <Property Type="String" Name="CONTEXT3" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USSGL_TRANSACTION_CODE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCR_FLEX_ERROR_MESSAGE" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JGZZ_RECON_REF" MaxLength="240" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="REFERENCE_DATE" Precision="0" />
+    <Property Type="Int64" Name="SET_OF_BOOKS_ID" />
+    <Property Type="String" Name="BALANCING_SEGMENT_VALUE" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MANAGEMENT_SEGMENT_VALUE" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FUNDS_RESERVED_FLAG" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CODE_COMBINATION_ID_INTERIM" />
+  </EntityType>
+</Schema>

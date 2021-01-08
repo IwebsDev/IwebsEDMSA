@@ -1,0 +1,58 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Accueil.UcInitialisationDepannage"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="926" Height="420" OverlayBrush="Transparent" 
+           Title="Création demande" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+                      Loaded="UcInitialisation_Loaded" IsEnabled="True" Closed="ChildWindow_Closed" xmlns:my="clr-namespace:NumEditCtrlSL;assembly=Galatee.Silverlight.Library" xmlns:Library="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="10,2,-1,-4">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--344; 207-->
+        <sdk:Label Name="label1"  HorizontalAlignment="Left" Height="23" Margin="55,24,0,0" VerticalAlignment="Top" Width="118" Content="Type demande" />
+        <sc:GroupBox Margin="0,0,10,274" x:Name="Gbo_InformationDevis_Copy1" IsEnabled="True" Header="Type de demande" />
+        <sc:GroupBox Margin="0,82,410,40" x:Name="Gbo_InformationDevis_Copy" IsEnabled="True" Header="Détail de la demande" />
+        <sdk:Label x:Name="label5" Content="Type de Demande" Margin="439,43,331,530" />
+        <!--<Grid Margin="0,0,0,3">-->
+            <!--<sc:GroupBox Header="Informations adresse géographique" x:Name="Gbo_InformationAdresse" IsEnabled="True" />-->
+            <sdk:Label Content="Commune" Height="23" HorizontalAlignment="Left" Margin="510,129,0,0" x:Name="label13" VerticalAlignment="Top" Width="75" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="612,129,0,0" x:Name="Cbo_Commune" VerticalAlignment="Top" Width="243"  SelectionChanged="Cbo_Commune_SelectionChanged" />
+            <sdk:Label Content="Quartier" Height="19" HorizontalAlignment="Left" Margin="510,158,0,0" x:Name="label14" VerticalAlignment="Top" Width="85" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="612,154,0,0" x:Name="Cbo_Quartier" VerticalAlignment="Top" Width="243"  SelectionChanged="Cbo_Quartier_SelectionChanged" />
+            <sdk:Label Content="Rue" Height="19" HorizontalAlignment="Left" Margin="511,208,0,0" x:Name="label15" VerticalAlignment="Top" Width="79" />
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,204,38,0" x:Name="Cbo_Rue" VerticalAlignment="Top" Width="243"  SelectionChanged="Cbo_Rue_SelectionChanged" />
+            <sdk:Label Content="Secteur" Height="19" HorizontalAlignment="Left" Margin="511,183,0,0" x:Name="label15_Copy" VerticalAlignment="Top" Width="79"  />
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,179,38,0" x:Name="Cbo_Secteur" VerticalAlignment="Top" Width="243"  SelectionChanged="Cbo_Secteur_SelectionChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="612,229,0,0" x:Name="Txt_Porte" VerticalAlignment="Top" Width="62" />
+            <sdk:Label Content="Porte" Height="17" HorizontalAlignment="Left" Margin="512,233,0,0" x:Name="label17_Copy" VerticalAlignment="Top" Width="84" />
+            <TextBox Height="83" HorizontalAlignment="Left" Margin="156,185,0,0" x:Name="Txt_Commentaire" VerticalAlignment="Top" Width="318"  />
+            <sdk:Label Content="Description" Height="17" HorizontalAlignment="Left" Margin="20,188,0,0" x:Name="lbl_Etage_Copy" VerticalAlignment="Top" Width="116" />
+            <sdk:Label Content="Mode de recueil" Height="23" HorizontalAlignment="Left" Margin="20,109,0,0" x:Name="label13_Copy" VerticalAlignment="Top" Width="99" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="156,105,0,0" x:Name="Cbo_ModeReceuil" VerticalAlignment="Top" Width="212"  />
+            <TextBox Height="23" HorizontalAlignment="Right" Margin="0,257,43,0" x:Name="txt_Telephonne" VerticalAlignment="Top" Width="238"  TextChanged="txt_ModeRecueil_TextChanged"/>
+            <sdk:Label Content="Téléphone" Height="23" HorizontalAlignment="Left" Margin="511,262,0,0" x:Name="label13_Copy1" VerticalAlignment="Top" Width="130" />
+            <Button Content="Groupe destinataire" Name="btn_GroupeValidation" HorizontalAlignment="Left" Margin="156,274,0,0" VerticalAlignment="Top" Width="122" Click="btn_GroupeValidation_Click_1"/>
+            <TextBox Height="23" HorizontalAlignment="Right" Margin="0,273,421,0" x:Name="txt_GroupeValidation" VerticalAlignment="Top" Width="189" IsReadOnly="True" />
+            <sdk:Label Content="Type de panne" Height="19" HorizontalAlignment="Left" Margin="20,163,0,0" x:Name="label15_Copy1" VerticalAlignment="Top" Width="105" />
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,159,421,0" x:Name="Cbo_TypeDetaildePanne" VerticalAlignment="Top" Width="316" />
+            <sdk:Label Content="Type de dépannage" Height="19" HorizontalAlignment="Left" Margin="20,137,0,0" x:Name="label15_Copy2" VerticalAlignment="Top" Width="116" />
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,133,421,0" x:Name="Cbo_TypedePanne" VerticalAlignment="Top" Width="316" SelectionChanged="Cbo_TypedePanne_SelectionChanged" />
+        <!--</Grid>-->
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" TextWrapping="Wrap" Text="" x:Name="txt_tdem" VerticalAlignment="Top" Width="337" Margin="190,19,0,0"/>
+        <ProgressBar Background="Black" Foreground="Orange" Margin="511,152,337,0" x:Name="progressBar1" Visibility="Collapsed"  Height="22" VerticalAlignment="Top"  />
+        <sdk:Label HorizontalAlignment="Left" x:Name="lbl_nom_declarant" Content="Nom du déclarant" Height="28" VerticalAlignment="Top" Width="110" Margin="502,103,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_nom_declarant" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239" Margin="613,100,0,0"/>
+        <!--<CheckBox Content="Signalé par l'abonné" x:Name="chk_Est_Client" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,49,0,0" Width="165" Unchecked="CheckBox_Unchecked_1" Checked="CheckBox_Checked_1"/>-->
+        <sdk:Label HorizontalAlignment="Left" x:Name="lbl_ref_client" Visibility="Collapsed" Content="Ref du client" Height="28" VerticalAlignment="Top" Width="110" Margin="54,234,0,0"/>
+        <CheckBox Content="Client EDM" x:Name="Chk_EstClient" HorizontalAlignment="Left" Margin="190,52,0,0" VerticalAlignment="Top" Checked="Chk_EstClient_Checked" Unchecked="Chk_EstClient_Checked"/>
+        <Button  x:Name="Btn_RechercherClient" Content="Rechercher Client" HorizontalAlignment="Left" Margin="298,47,0,0" VerticalAlignment="Top" Width="229" Click="NewButton_Click"  IsEnabled="False"  />
+        <sc:GroupBox Margin="488,82,10,40" x:Name="Gbo_InformationDevis_Copy2" IsEnabled="True" Header="Information Géographique" />
+        <Button x:Name="Btn_Annuler" Content="Fermer" Click="CancelButton_Click" Width="110" Height="23" HorizontalAlignment="Right" Margin="0,318,10,10" />
+        <Button x:Name="Btn_Transmettre" Content="Transmettre" Height="23" HorizontalAlignment="Right" Margin="0,318,125,10"  Width="120" Click="Btn_Transmettre_Click"  />
+
+
+    </Grid>
+</controls:ChildWindow>

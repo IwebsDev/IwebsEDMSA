@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrintingsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd4" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1818/Printings/PrintingsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure.Rpnt" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrintingsService_Upload_InputMessage">
+    <wsdl:part name="parameters" element="tns:Upload" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_Upload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_Upload_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneStatistiqueTravaux_Brt_Ext" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneStatistiqueTravaux_Brt_ExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPart" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPart_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsDonnesStatistiqueDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsDonnesStatistiqueDemande" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsDonnesStatistiqueDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsDonnesStatistiqueDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsDonnesStatistiqueDemande_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartWithSplit_InputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPartWithSplit" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartWithSplit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPartWithSplitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartWithSplit_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartStrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPartStrint" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartStrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setFromWebPartStrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_setFromWebPartStrint_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCsPrintFromWebPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsPrintFromWebPart" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCsPrintFromWebPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsPrintFromWebPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCsPrintFromWebPartBalanceAgee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsPrintFromWebPartBalanceAgee" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCsPrintFromWebPartBalanceAgee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsPrintFromWebPartBalanceAgeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_getParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:getParameters" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_getParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_SetErrorsFromSilverlightWebPrinting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetErrorsFromSilverlightWebPrinting" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_SetErrorsFromSilverlightWebPrinting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetErrorsFromSilverlightWebPrintingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_Stat_LoadCampgne_InputMessage">
+    <wsdl:part name="parameters" element="tns:Stat_LoadCampgne" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_Stat_LoadCampgne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Stat_LoadCampgneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:EtatCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EtatCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_DemandeBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemandeBase" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_DemandeBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemandeBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_ReportListeEncaissements_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportListeEncaissements" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_ReportListeEncaissements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportListeEncaissementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_ListeCsHabilitationProgram_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCsHabilitationProgram" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_ListeCsHabilitationProgram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListeCsHabilitationProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCustumEclairagePublic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustumEclairagePublic" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetCustumEclairagePublic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustumEclairagePublicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetDetailCampagne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailCampagne" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_GetDetailCampagne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatHabilitationMetier_InputMessage">
+    <wsdl:part name="parameters" element="tns:EtatHabilitationMetier" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatHabilitationMetier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EtatHabilitationMetierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatHabilitationMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:EtatHabilitationMenu" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EtatHabilitationMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EtatHabilitationMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneAnomalie_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAnomalie" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneAnomalie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAnomalieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditionDevis_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditionDevis" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditionDevis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditionDevisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerOT_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerOT" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerOT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerOTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerEnquete_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerEnquete" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerEnquete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerEnqueteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerAvisClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerAvisClient" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerAvisClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerAvisClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerSortiMateriel_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerSortiMateriel" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerSortiMateriel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerSortiMaterielResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerContrat_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerContrat" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerContrat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerContratResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCampagnePrecontentieux_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCampagnePrecontentieux" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCampagnePrecontentieux_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCampagnePrecontentieuxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCannalisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCannalisation" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCannalisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCannalisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerImpayeCategorie_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerImpayeCategorie" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerImpayeCategorie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerImpayeCategorieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsEnteteFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsEnteteFacture" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsEnteteFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsEnteteFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsProduitFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsProduitFacture" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsProduitFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsProduitFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsRedevanceFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsRedevanceFacture" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsRedevanceFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsRedevanceFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsMandatementGc_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsMandatementGc" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsMandatementGc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsMandatementGcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsMaterielDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsMaterielDemande" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsMaterielDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsMaterielDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCtax_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCtax" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCtax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCtaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCoutDemande_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCoutDemande" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsCoutDemande_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsCoutDemandeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsRemiseScelleByAg_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsRemiseScelleByAg" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsRemiseScelleByAg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsRemiseScelleByAgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsProgarmmation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsProgarmmation" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsProgarmmation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsProgarmmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsDepannage_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsDepannage" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsDepannage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsDepannageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsReclamationRcl_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsReclamationRcl" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditerCsReclamationRcl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditerCsReclamationRclResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditercStatistiqueReclamation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditercStatistiqueReclamation" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_EditercStatistiqueReclamation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditercStatistiqueReclamationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsEditionFactureFd_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsEditionFactureFd" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsEditionFactureFd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsEditionFactureFdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsComptabilisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsComptabilisation" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsComptabilisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsComptabilisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsEcritureComptable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsEcritureComptable" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsEcritureComptable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsEcritureComptableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneStatFact_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneStatFact" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneStatFact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneStatFactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsStatFactRecap_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsStatFactRecap" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsStatFactRecap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsStatFactRecapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsFichierPersonnel_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsFichierPersonnel" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsFichierPersonnel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsFichierPersonnelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsCompteurBta_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsCompteurBta" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsCompteurBta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsCompteurBtaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsBalanceAgee_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsBalanceAgee" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsBalanceAgee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsBalanceAgeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsBalance" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsClientRechercher_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsClientRechercher" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsClientRechercher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsClientRechercherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsTranscaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsTranscaisse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsTranscaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsTranscaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsTournee_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsTournee" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsTournee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsTourneeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsComparaisonFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsComparaisonFacture" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsComparaisonFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsComparaisonFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsClient" />
+  </wsdl:message>
+  <wsdl:message name="IPrintingsService_RetourneCsClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCsClientResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrintingsService">
+    <wsdl:operation name="Upload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/Upload" message="tns:IPrintingsService_Upload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/UploadResponse" message="tns:IPrintingsService_Upload_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/UploadErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_Upload_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneStatistiqueTravaux_Brt_Ext">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneStatistiqueTravaux_Brt_Ext" message="tns:IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneStatistiqueTravaux_Brt_ExtResponse" message="tns:IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/RetourneStatistiqueTravaux_Brt_ExtErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_RetourneStatistiqueTravaux_Brt_Ext_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPart" message="tns:IPrintingsService_setFromWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartResponse" message="tns:IPrintingsService_setFromWebPart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_setFromWebPart_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsDonnesStatistiqueDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsDonnesStatistiqueDemande" message="tns:IPrintingsService_RetourneCsDonnesStatistiqueDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsDonnesStatistiqueDemandeResponse" message="tns:IPrintingsService_RetourneCsDonnesStatistiqueDemande_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsDonnesStatistiqueDemandeErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_RetourneCsDonnesStatistiqueDemande_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPartWithSplit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartWithSplit" message="tns:IPrintingsService_setFromWebPartWithSplit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartWithSplitResponse" message="tns:IPrintingsService_setFromWebPartWithSplit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartWithSplitErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_setFromWebPartWithSplit_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPartStrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartStrint" message="tns:IPrintingsService_setFromWebPartStrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartStrintResponse" message="tns:IPrintingsService_setFromWebPartStrint_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPrintingsService/setFromWebPartStrintErrorsFault" name="ErrorsFault" message="tns:IPrintingsService_setFromWebPartStrint_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCsPrintFromWebPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPart" message="tns:IPrintingsService_GetCsPrintFromWebPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPartResponse" message="tns:IPrintingsService_GetCsPrintFromWebPart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCsPrintFromWebPartBalanceAgee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPartBalanceAgee" message="tns:IPrintingsService_GetCsPrintFromWebPartBalanceAgee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPartBalanceAgeeResponse" message="tns:IPrintingsService_GetCsPrintFromWebPartBalanceAgee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/getParameters" message="tns:IPrintingsService_getParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/getParametersResponse" message="tns:IPrintingsService_getParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetErrorsFromSilverlightWebPrinting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/SetErrorsFromSilverlightWebPrinting" message="tns:IPrintingsService_SetErrorsFromSilverlightWebPrinting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/SetErrorsFromSilverlightWebPrintingResponse" message="tns:IPrintingsService_SetErrorsFromSilverlightWebPrinting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Stat_LoadCampgne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/Stat_LoadCampgne" message="tns:IPrintingsService_Stat_LoadCampgne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/Stat_LoadCampgneResponse" message="tns:IPrintingsService_Stat_LoadCampgne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EtatCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EtatCaisse" message="tns:IPrintingsService_EtatCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EtatCaisseResponse" message="tns:IPrintingsService_EtatCaisse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandeBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/DemandeBase" message="tns:IPrintingsService_DemandeBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/DemandeBaseResponse" message="tns:IPrintingsService_DemandeBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportListeEncaissements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/ReportListeEncaissements" message="tns:IPrintingsService_ReportListeEncaissements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/ReportListeEncaissementsResponse" message="tns:IPrintingsService_ReportListeEncaissements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeCsHabilitationProgram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/ListeCsHabilitationProgram" message="tns:IPrintingsService_ListeCsHabilitationProgram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/ListeCsHabilitationProgramResponse" message="tns:IPrintingsService_ListeCsHabilitationProgram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustumEclairagePublic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/GetCustumEclairagePublic" message="tns:IPrintingsService_GetCustumEclairagePublic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/GetCustumEclairagePublicResponse" message="tns:IPrintingsService_GetCustumEclairagePublic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailCampagne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/GetDetailCampagne" message="tns:IPrintingsService_GetDetailCampagne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/GetDetailCampagneResponse" message="tns:IPrintingsService_GetDetailCampagne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EtatHabilitationMetier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EtatHabilitationMetier" message="tns:IPrintingsService_EtatHabilitationMetier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EtatHabilitationMetierResponse" message="tns:IPrintingsService_EtatHabilitationMetier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EtatHabilitationMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EtatHabilitationMenu" message="tns:IPrintingsService_EtatHabilitationMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EtatHabilitationMenuResponse" message="tns:IPrintingsService_EtatHabilitationMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAnomalie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneAnomalie" message="tns:IPrintingsService_RetourneAnomalie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneAnomalieResponse" message="tns:IPrintingsService_RetourneAnomalie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditionDevis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditionDevis" message="tns:IPrintingsService_EditionDevis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditionDevisResponse" message="tns:IPrintingsService_EditionDevis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerOT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerOT" message="tns:IPrintingsService_EditerOT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerOTResponse" message="tns:IPrintingsService_EditerOT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerEnquete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerEnquete" message="tns:IPrintingsService_EditerEnquete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerEnqueteResponse" message="tns:IPrintingsService_EditerEnquete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerAvisClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerAvisClient" message="tns:IPrintingsService_EditerAvisClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerAvisClientResponse" message="tns:IPrintingsService_EditerAvisClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerSortiMateriel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerSortiMateriel" message="tns:IPrintingsService_EditerSortiMateriel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerSortiMaterielResponse" message="tns:IPrintingsService_EditerSortiMateriel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerContrat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerContrat" message="tns:IPrintingsService_EditerContrat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerContratResponse" message="tns:IPrintingsService_EditerContrat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCampagnePrecontentieux">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCampagnePrecontentieux" message="tns:IPrintingsService_EditerCampagnePrecontentieux_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCampagnePrecontentieuxResponse" message="tns:IPrintingsService_EditerCampagnePrecontentieux_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCannalisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCannalisation" message="tns:IPrintingsService_EditerCannalisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCannalisationResponse" message="tns:IPrintingsService_EditerCannalisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerImpayeCategorie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerImpayeCategorie" message="tns:IPrintingsService_EditerImpayeCategorie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerImpayeCategorieResponse" message="tns:IPrintingsService_EditerImpayeCategorie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsEnteteFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsEnteteFacture" message="tns:IPrintingsService_EditerCsEnteteFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsEnteteFactureResponse" message="tns:IPrintingsService_EditerCsEnteteFacture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsProduitFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsProduitFacture" message="tns:IPrintingsService_EditerCsProduitFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsProduitFactureResponse" message="tns:IPrintingsService_EditerCsProduitFacture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsRedevanceFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsRedevanceFacture" message="tns:IPrintingsService_EditerCsRedevanceFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsRedevanceFactureResponse" message="tns:IPrintingsService_EditerCsRedevanceFacture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsMandatementGc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsMandatementGc" message="tns:IPrintingsService_EditerCsMandatementGc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsMandatementGcResponse" message="tns:IPrintingsService_EditerCsMandatementGc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsMaterielDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsMaterielDemande" message="tns:IPrintingsService_EditerCsMaterielDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsMaterielDemandeResponse" message="tns:IPrintingsService_EditerCsMaterielDemande_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCtax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCtax" message="tns:IPrintingsService_EditerCsCtax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCtaxResponse" message="tns:IPrintingsService_EditerCsCtax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCaisse" message="tns:IPrintingsService_EditerCsCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCaisseResponse" message="tns:IPrintingsService_EditerCsCaisse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCoutDemande">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCoutDemande" message="tns:IPrintingsService_EditerCsCoutDemande_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsCoutDemandeResponse" message="tns:IPrintingsService_EditerCsCoutDemande_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsRemiseScelleByAg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsRemiseScelleByAg" message="tns:IPrintingsService_EditerCsRemiseScelleByAg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsRemiseScelleByAgResponse" message="tns:IPrintingsService_EditerCsRemiseScelleByAg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsProgarmmation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsProgarmmation" message="tns:IPrintingsService_EditerCsProgarmmation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsProgarmmationResponse" message="tns:IPrintingsService_EditerCsProgarmmation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsDepannage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsDepannage" message="tns:IPrintingsService_EditerCsDepannage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsDepannageResponse" message="tns:IPrintingsService_EditerCsDepannage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsReclamationRcl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsReclamationRcl" message="tns:IPrintingsService_EditerCsReclamationRcl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditerCsReclamationRclResponse" message="tns:IPrintingsService_EditerCsReclamationRcl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditercStatistiqueReclamation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/EditercStatistiqueReclamation" message="tns:IPrintingsService_EditercStatistiqueReclamation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/EditercStatistiqueReclamationResponse" message="tns:IPrintingsService_EditercStatistiqueReclamation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsEditionFactureFd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsEditionFactureFd" message="tns:IPrintingsService_RetourneCsEditionFactureFd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsEditionFactureFdResponse" message="tns:IPrintingsService_RetourneCsEditionFactureFd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsComptabilisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsComptabilisation" message="tns:IPrintingsService_RetourneCsComptabilisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsComptabilisationResponse" message="tns:IPrintingsService_RetourneCsComptabilisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsEcritureComptable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsEcritureComptable" message="tns:IPrintingsService_RetourneCsEcritureComptable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsEcritureComptableResponse" message="tns:IPrintingsService_RetourneCsEcritureComptable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneStatFact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneStatFact" message="tns:IPrintingsService_RetourneStatFact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneStatFactResponse" message="tns:IPrintingsService_RetourneStatFact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsStatFactRecap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsStatFactRecap" message="tns:IPrintingsService_RetourneCsStatFactRecap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsStatFactRecapResponse" message="tns:IPrintingsService_RetourneCsStatFactRecap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsFichierPersonnel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsFichierPersonnel" message="tns:IPrintingsService_RetourneCsFichierPersonnel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsFichierPersonnelResponse" message="tns:IPrintingsService_RetourneCsFichierPersonnel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsCompteurBta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsCompteurBta" message="tns:IPrintingsService_RetourneCsCompteurBta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsCompteurBtaResponse" message="tns:IPrintingsService_RetourneCsCompteurBta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsBalanceAgee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsBalanceAgee" message="tns:IPrintingsService_RetourneCsBalanceAgee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsBalanceAgeeResponse" message="tns:IPrintingsService_RetourneCsBalanceAgee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsBalance" message="tns:IPrintingsService_RetourneCsBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsBalanceResponse" message="tns:IPrintingsService_RetourneCsBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsClientRechercher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsClientRechercher" message="tns:IPrintingsService_RetourneCsClientRechercher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsClientRechercherResponse" message="tns:IPrintingsService_RetourneCsClientRechercher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsTranscaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsTranscaisse" message="tns:IPrintingsService_RetourneCsTranscaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsTranscaisseResponse" message="tns:IPrintingsService_RetourneCsTranscaisse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsTournee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsTournee" message="tns:IPrintingsService_RetourneCsTournee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsTourneeResponse" message="tns:IPrintingsService_RetourneCsTournee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsComparaisonFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsComparaisonFacture" message="tns:IPrintingsService_RetourneCsComparaisonFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsComparaisonFactureResponse" message="tns:IPrintingsService_RetourneCsComparaisonFacture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsClient" message="tns:IPrintingsService_RetourneCsClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrintingsService/RetourneCsClientResponse" message="tns:IPrintingsService_RetourneCsClient_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrintingsService" type="tns:IPrintingsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/Upload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneStatistiqueTravaux_Brt_Ext">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneStatistiqueTravaux_Brt_Ext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPart">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/setFromWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsDonnesStatistiqueDemande">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsDonnesStatistiqueDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPartWithSplit">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/setFromWebPartWithSplit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setFromWebPartStrint">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/setFromWebPartStrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCsPrintFromWebPart">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCsPrintFromWebPartBalanceAgee">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/GetCsPrintFromWebPartBalanceAgee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParameters">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/getParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetErrorsFromSilverlightWebPrinting">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/SetErrorsFromSilverlightWebPrinting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stat_LoadCampgne">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/Stat_LoadCampgne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtatCaisse">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EtatCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandeBase">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/DemandeBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportListeEncaissements">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/ReportListeEncaissements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeCsHabilitationProgram">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/ListeCsHabilitationProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustumEclairagePublic">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/GetCustumEclairagePublic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailCampagne">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/GetDetailCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtatHabilitationMetier">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EtatHabilitationMetier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtatHabilitationMenu">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EtatHabilitationMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAnomalie">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneAnomalie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditionDevis">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditionDevis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerOT">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerOT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerEnquete">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerEnquete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerAvisClient">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerAvisClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerSortiMateriel">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerSortiMateriel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerContrat">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerContrat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCampagnePrecontentieux">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCampagnePrecontentieux" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCannalisation">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCannalisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerImpayeCategorie">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerImpayeCategorie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsEnteteFacture">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsEnteteFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsProduitFacture">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsProduitFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsRedevanceFacture">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsRedevanceFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsMandatementGc">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsMandatementGc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsMaterielDemande">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsMaterielDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCtax">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsCtax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCaisse">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsCoutDemande">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsCoutDemande" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsRemiseScelleByAg">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsRemiseScelleByAg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsProgarmmation">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsProgarmmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsDepannage">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsDepannage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditerCsReclamationRcl">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditerCsReclamationRcl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditercStatistiqueReclamation">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/EditercStatistiqueReclamation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsEditionFactureFd">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsEditionFactureFd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsComptabilisation">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsComptabilisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsEcritureComptable">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsEcritureComptable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneStatFact">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneStatFact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsStatFactRecap">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsStatFactRecap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsFichierPersonnel">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsFichierPersonnel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsCompteurBta">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsCompteurBta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsBalanceAgee">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsBalanceAgee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsBalance">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsClientRechercher">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsClientRechercher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsTranscaisse">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsTranscaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsTournee">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsTournee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsComparaisonFacture">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsComparaisonFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCsClient">
+      <soap:operation soapAction="http://tempuri.org/IPrintingsService/RetourneCsClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrintingsService">
+    <wsdl:port name="BasicHttpBinding_IPrintingsService" binding="tns:BasicHttpBinding_IPrintingsService">
+      <soap:address location="http://localhost:1818/Printings/PrintingsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

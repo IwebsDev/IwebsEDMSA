@@ -1,0 +1,69 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           x:Class="Galatee.Silverlight.Recouvrement.FrmAnnulationFraisPose"
+           Width="817.716" Height="591.164" OverlayBrush="Transparent"
+           Title="Réedition avis de coupure">
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="0,10,0,-2">
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="150" Height="23" HorizontalAlignment="Right" Margin="0,479,11,10" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="229" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="0,187,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="737" SelectionChanged="lvwResultat_SelectionChanged"  MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                    <sdk:DataGridTemplateColumn Width="35" >
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="chk_Critere" IsChecked ="{Binding IsSelect, Mode=TwoWay}" 
+								    Checked="chk_Checked_1" Unchecked="chk_Unchecked_1"    VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="50"  MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserSort="True" Header="Client" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserSort="True" Header="Ordre" IsReadOnly="True" MinWidth="60" MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NOMABON}" CanUserReorder="True" CanUserSort="True" Header="Index" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding FRAIS,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserSort="True" Header="Frais de coupure" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding MOTIFANNULATION}" CanUserReorder="True" CanUserSort="True" Header="Motif d'annulation" IsReadOnly="True" MinWidth="170" Width="SizeToCells" />
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Enrégistrer" Height="23" HorizontalAlignment="Right"  Margin="0,479,177,10" x:Name="btnOk" Width="145"  Click="btnOk_Click"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_Motif" Height="53" Margin="401,417,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="317" LostFocus="txt_Motif_LostFocus"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Motif annulation" Height="28" Margin="259,421,0,0" VerticalAlignment="Top" Width="120"/>
+        <Controls:GroupBox Height="182" IsEnabled="False" x:Name="groupBox1" VerticalAlignment="Top" Margin="0,0,10,0" Header="Recherche client de la campagne" />
+        <Controls:GroupBox Height="59" IsEnabled="False" x:Name="groupBox1_Copy" VerticalAlignment="Top" Margin="10,114,426,0" Header="Client" />
+        <sdk:Label Content="Agent PIA " Height="20" HorizontalAlignment="Left" Margin="393,59,0,0" x:Name="label2" VerticalAlignment="Top" Width="84" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,58,230,0" x:Name="txtAgent" VerticalAlignment="Top" Width="85" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,58,53,0" x:Name="cmbAgent" VerticalAlignment="Top" Width="173" SelectionChanged="cmbAgent_SelectionChanged" />
+        <sdk:Label Content="Date campagne" Height="20" HorizontalAlignment="Left" Margin="15,89,0,0" x:Name="label3" VerticalAlignment="Top" Width="95" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="115,86,0,0" x:Name="dtpDate" VerticalAlignment="Top" Width="119" />
+        <Button Content="Reinitialiser" Height="23" HorizontalAlignment="Right" Margin="0,150,196,339" x:Name="btnreset" Width="106" Click="btnReinitialiser_Click" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="610,150,0,0" x:Name="btnsearch" Width="108" Click="btnsearch_Click" VerticalAlignment="Top" />
+        <sdk:Label Content="Campagne " Height="20" HorizontalAlignment="Left" Margin="15,56,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="93" />
+        <sdk:Label Content="Client" Height="20" HorizontalAlignment="Left" Margin="22,139,0,0" x:Name="label2_Copy2" VerticalAlignment="Top" Width="35" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,138,582,0" x:Name="txtReferenceClient" VerticalAlignment="Top" Width="141" />
+        <sdk:Label Content="Ordre" Height="20" HorizontalAlignment="Left" Margin="238,139,0,0" x:Name="label2_Copy3" VerticalAlignment="Top" Width="48" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,138,462,0" x:Name="txtOrdeClient" VerticalAlignment="Top" Width="41" />
+        <TextBox HorizontalAlignment="Left" x:Name="Txt_NumCampagne" Height="23" Margin="115,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262" />
+        <sdk:Label Content="Date fin campagne" Height="20" HorizontalAlignment="Left" Margin="275,92,0,0" x:Name="label3_Copy" VerticalAlignment="Top" Width="113" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="393,89,0,0" x:Name="dtpDateFin" VerticalAlignment="Top" Width="119" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="15,27,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="42" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="115,0,0,462" x:Name="Txt_CodeSite" VerticalAlignment="Bottom" Width="56" Background="LightBlue" TabIndex="0" TextChanged="Txt_CodeSite_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="223,27,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="176,0,0,462" x:Name="btn_Site" VerticalAlignment="Bottom" Width="42" Click="btn_Site_Click"  />
+        <!--<ComboBox x:Name="cbo_TypeCoupure" HorizontalAlignment="Left" Margin="166,367,0,0" VerticalAlignment="Top" Width="249" SizeChanged="cbo_TypeCoupure_SizeChanged" SelectionChanged="cbo_TypeCoupure_SelectionChanged"/>-->
+        <!--<sdk:Label Content="Type de coupure" Height="20" HorizontalAlignment="Left" Margin="10,367,0,0" x:Name="label3_Copy2" VerticalAlignment="Top" Width="140" />-->
+    </Grid>
+</sdk:ChildWindow>

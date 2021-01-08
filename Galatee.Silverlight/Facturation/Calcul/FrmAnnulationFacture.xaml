@@ -1,0 +1,68 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" 
+    xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+    x:Class="Galatee.Silverlight.Facturation.FrmAnnulationFacture"
+      xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="737.209" Height="520" 
+           Title="Annulation de facture" 
+    Style="{StaticResource ChildWindowGalatee}" OverlayBrush="{x:Null}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Client"  Margin="0,0,0,159" FontWeight="SemiBold" Height="252" VerticalAlignment="Bottom"/>
+        <!--<Controls:GroupBox Header="Critère de rechercher"  Margin="0,0,0,145" FontWeight="SemiBold" Height="48" VerticalAlignment="Bottom"/>-->
+        <Controls:GroupBox Header="Détail facture à annuler"  Margin="0,0,0,4" FontWeight="SemiBold" Height="150" VerticalAlignment="Bottom"/>
+        <sdk:DataGrid Name="dtg_DetailFacture" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="693" AutoGenerateColumns="False" Margin="6,305,0,0">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding FACTURE}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Facture" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding PERIODE}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Periode" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding TOTFHT,Converter={StaticResource DecimalConverter} }" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Montant HT" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding TOTFTAX,Converter={StaticResource DecimalConverter}}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Montant Taxe" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridTextColumn Binding="{Binding TOTFTTC,Converter={StaticResource DecimalConverter}}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" Foreground="{x:Null}" FontWeight="Normal" FontStyle="Normal" HeaderStyle="{x:Null}" Header="Montant TTC" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="66" HorizontalAlignment="Right" Margin="0,10,10,0" Grid.Row="1" Height="23" VerticalAlignment="Top" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="66" HorizontalAlignment="Right" Margin="0,10,82,2" Grid.Row="1" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,67,0,0" x:Name="label2" VerticalAlignment="Top" Width="86" Content="Client" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="102,66,0,0" x:Name="txtClient" VerticalAlignment="Top" Width="187" Background="LightBlue" TabIndex="2"  />
+        <sdk:Label Height="17" HorizontalAlignment="Left" Margin="326,69,0,0" x:Name="label3" VerticalAlignment="Top" Width="36" Content="Ordre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="367,66,0,0" x:Name="txtOrdre" VerticalAlignment="Top" Width="58" Background="LightBlue" TabIndex="3" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,280,0,0" x:Name="label4" VerticalAlignment="Top" Width="67" Content="Facture" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,94,0,0" x:Name="label5" VerticalAlignment="Top" Width="74" Content="Nom " />
+        <TextBox Height="21" HorizontalAlignment="Left" Margin="102,92,0,0" x:Name="txtNom" VerticalAlignment="Top" Width="323" IsReadOnly="True"  />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="102,276,0,0" x:Name="cmbFacture" VerticalAlignment="Top" Width="192" SelectionChanged="cmbFacture_SelectionChanged" TabIndex="6" />
+        <Button Content="Rechercher" Name="btn_Rechercher" HorizontalAlignment="Left" Margin="432,90,0,0" VerticalAlignment="Top" Width="81" Height="23"  TabIndex="4" Click="btn_Rechercher_Click"/>
+        <RadioButton Name="rdb_Periode" Content="Par période" HorizontalAlignment="Left" Margin="59,130,0,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="345,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Visibility="Collapsed"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="535,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Visibility="Collapsed"/>
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="250,130,0,0" x:Name="label4_Copy" VerticalAlignment="Top" Width="67" Content="Debut" Visibility="Collapsed" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="466,128,0,0" x:Name="label4_Copy1" VerticalAlignment="Top" Width="67" Content="Fin" Visibility="Collapsed" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="11,39,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="92" Content="Centre" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="102,40,0,0" x:Name="Txt_CodeCentre" VerticalAlignment="Top" Width="40" Background="LightBlue" TabIndex="1" TextChanged="Txt_CodeCentre_TextChanged" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="145,40,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="33" Click="btn_Centre_Click" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="11,15,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="91" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="102,14,0,0" x:Name="Txt_CodeSite" VerticalAlignment="Top" Width="40" Background="LightBlue" TabIndex="0" TextChanged="Txt_CodeSite_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="181,15,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="242" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="145,14,0,0" x:Name="btn_Site" VerticalAlignment="Top" Width="33" Click="btn_Site_Click"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="182,40,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="242" IsReadOnly="True" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="29,7,0,0" VerticalAlignment="Top" Width="361" IsIndeterminate="True" Grid.Row="1"/>
+        <CheckBox Visibility="Collapsed"  Content="Editer la quitance" Name="chk_Quitance" HorizontalAlignment="Left" Margin="521,146,0,0" VerticalAlignment="Top"/>
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,118,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="86" Content="Motif demande" />
+        <TextBox Height="52" HorizontalAlignment="Left" Margin="102,116,0,0" x:Name="txtMotifDemande" VerticalAlignment="Top" Width="411" Background="LightBlue" TabIndex="5" TextChanged="txtMotifDemande_TextChanged"  />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,201,0,0" x:Name="labMotifRejet" VerticalAlignment="Top" Width="86" Content="Motif rejet" />
+        <TextBox Height="48" HorizontalAlignment="Left" Margin="102,198,0,0" x:Name="txtMotifRejet" VerticalAlignment="Top" Width="411" IsReadOnly="True" Foreground="Red" FontStyle="Italic" FontWeight="Bold"/>
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="11,174,0,0" x:Name="labDemande" VerticalAlignment="Top" Width="86" Content="Demande" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="102,172,0,0" x:Name="txtDemande" VerticalAlignment="Top" Width="187" IsReadOnly="True" FontWeight="Bold"/>
+    </Grid>
+</sdk:ChildWindow>

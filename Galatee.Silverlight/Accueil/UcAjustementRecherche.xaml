@@ -1,0 +1,51 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Accueil.UcAjustementRecherche"
+           Width="623.343" Height="342" 
+           Title="Liste des factures" 
+           Loaded="ChildWindow_Loaded" OverlayBrush="Transparent">
+
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="355*" />
+            <ColumnDefinition Width="215*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,0,0,147" x:Name="groupBox5" Header="Choix des factures " Grid.ColumnSpan="2" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Grid.Column="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,23,0,0" x:Name="Txt_Centre" VerticalAlignment="Top" Width="61" IsReadOnly="True"  />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,23,159,0" x:Name="Txt_Client" VerticalAlignment="Top" Width="134" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="219,23,0,0" x:Name="Txt_Ordre" VerticalAlignment="Top" Width="32" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="337,23,0,0" x:Name="Txt_refem" VerticalAlignment="Top" Width="57" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="45,23,0,0" x:Name="Txt_Ndoc" VerticalAlignment="Top" Width="74" Grid.Column="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="137" HorizontalAlignment="Left" Margin="12,90,0,0" x:Name="dataGrid1" VerticalAlignment="Top" Width="569" SelectionChanged="dataGrid1_SelectionChanged" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding REFEM}"  CanUserResize="False" CanUserSort="False" Header="Reference" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding NDOC}"  CanUserResize="False" CanUserSort="False" Header="Num Facture" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding COPER}"  CanUserResize="False" CanUserSort="False" Header="Operation" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding NATURE}"  CanUserResize="False" CanUserSort="False" Header="Type" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding DENR, Converter={StaticResource DateTimeConverter}}"  CanUserResize="False" CanUserSort="False" Header="Date Encaissement" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding DC}"  CanUserResize="False" CanUserSort="False" Header="Direction" Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="False" Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}"  CanUserResize="False" CanUserSort="False" Header="Montant" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label Height="17" HorizontalAlignment="Left" Margin="258,26,0,0" x:Name="lbl_NumFacture" VerticalAlignment="Top" Width="74" Content="Facture" />
+        <Button Content="Recherche" Height="22" HorizontalAlignment="Left" Margin="130,23,0,0" x:Name="btn_Recherche" VerticalAlignment="Top" Width="80" Click="btn_Recherche_Click" Grid.Column="1" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="14,54,0,0" x:Name="Txt_NomClient" VerticalAlignment="Top" Width="431" Grid.ColumnSpan="2" IsReadOnly="True" />
+    </Grid>
+</sdk:ChildWindow>

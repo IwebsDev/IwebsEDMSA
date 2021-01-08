@@ -1,0 +1,42 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcValidationDemandeScelle"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="568" Height="358" 
+           Title="Validation Demande de scellés" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox  Header="Information Demande" Height="248" HorizontalAlignment="Left" x:Name="groupBox2_Copy" VerticalAlignment="Top" Width="521" />
+        <Controls:GroupBox  Header="Autres Informations" Height="100" HorizontalAlignment="Left" x:Name="groupBox2_Copy1" VerticalAlignment="Top" Width="500" RenderTransformOrigin="0.5,0.5" Margin="10,138,0,0" />
+
+        <TextBox  Height="23" x:Name="txtSite" Width="301" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" TextChanged="txtSite_TextChanged" Margin="191,43,0,0"  />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Height="23" VerticalAlignment="Top" />
+        <sdk:Label Content="Agent demandeur" HorizontalAlignment="Left" Height="28" Margin="26,22,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Centre demandeur" HorizontalAlignment="Left" Height="28" Margin="26,68,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Service demandeur" HorizontalAlignment="Left" Height="28" Margin="26,159,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Couleur de scellés" HorizontalAlignment="Left" Height="28" Margin="26,183,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Nombre de scellés" HorizontalAlignment="Left" Height="28" Margin="26,207,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDemandeur" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="191,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
+        <TextBox x:Name="txtNombre" IsReadOnly="True" Background="LightBlue" HorizontalAlignment="Left" Height="23" Margin="194,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <TextBox Height="23" x:Name="txtServiceDemandeur" Width="298" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="194,151,0,0"  />
+        <TextBox Height="23" x:Name="txtCouleurScelle" Width="298" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="194,176,0,0"  />
+
+        <sdk:Label Content="Numéro demande" Visibility="Collapsed"  HorizontalAlignment="Left" Height="28" Margin="26,18,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Txt_NumDemande" Visibility="Collapsed" HorizontalAlignment="Left" Height="23" Margin="151,14,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Site demandeur" HorizontalAlignment="Left" Height="28" Margin="26,45,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox  Height="23" x:Name="txtCentreDemandeur" Width="301" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" TextChanged="txtSite_TextChanged" Margin="191,66,0,0"  />
+
+        <CheckBox Content="Magasin général" IsEnabled="False" x:Name="chk_IsMagazinGeneral" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,91,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <sdk:Label Content="Centre fournisseur" x:Name="lbl_CentreFournisseur" HorizontalAlignment="Left" Height="28" Margin="151,120,0,0" VerticalAlignment="Top" Width="106"/>
+        <ComboBox x:Name="cboCentreFournisseur" Visibility="Collapsed" IsEnabled="False" HorizontalAlignment="Left" Margin="297,118,0,0" VerticalAlignment="Top" Width="195"/>
+        <TextBox Height="23" x:Name="txtSite_Fournisseur" Width="228" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" TextChanged="txtSite_TextChanged" Margin="264,91,0,0"  />
+        <ComboBox Height="22" Visibility="Collapsed"  IsEnabled="False" x:Name="Cbo_Site_Fournisseur" Width="195" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="297,93,0,0" SelectionChanged="Cbo_Site_Fournisseur_SelectionChanged" />
+        <sdk:Label Content="Site Fournisseur"  x:Name="lbl_Site_Fournisseur" HorizontalAlignment="Left" Height="28" Margin="152,93,0,0" VerticalAlignment="Top" Width="93"/>
+        <TextBox Height="23" x:Name="txtCentreFourniseur" Width="228" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" TextChanged="txtSite_TextChanged" Margin="264,120,0,0"  />
+    </Grid>
+</controls:ChildWindow>

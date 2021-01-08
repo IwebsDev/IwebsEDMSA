@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Facturation/FacturationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+  <xs:import schemaLocation="http://localhost:1818/Facturation/FacturationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:1818/Facturation/FacturationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="RetourneCanalisationbyIdEvenement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fk_IdCompteur" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCanalisationbyIdEvenementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCanalisationbyIdEvenementResult" nillable="true" type="q1:CsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementNonFact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaCanalisation" nillable="true" type="q2:CsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementNonFactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneEvenementNonFactResult" nillable="true" type="q3:CsSaisiIndexIndividuel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListEvenementNonFact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LesCanalisation" nillable="true" type="q4:ArrayOfCsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListEvenementNonFactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListEvenementNonFactResult" nillable="true" type="q5:ArrayOfCsSaisiIndexIndividuel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerLotGenerale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstLotri" nillable="true" type="q6:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="typeRequete" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerLotGeneraleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EditerLotGeneraleResult" nillable="true" type="q7:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesCas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLotri" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LesCentre" nillable="true" type="q8:ArrayOfint" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="lesTournee" nillable="true" type="q9:ArrayOfNullableOfint" />
+        <xs:element minOccurs="0" name="typeCas" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesCasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesCasResult" nillable="true" type="q10:ArrayOfCsCasind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerListeDesCas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LesCentre" nillable="true" type="q11:ArrayOfint" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Latournee" nillable="true" type="q12:ArrayOfNullableOfint" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="Cas" nillable="true" type="q13:ArrayOfCsCasind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerListeDesCasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EditerListeDesCasResult" nillable="true" type="q14:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerListeDesCasConfirmer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LesCentre" nillable="true" type="q15:ArrayOfint" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Latournee" nillable="true" type="q16:ArrayOfNullableOfint" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="Cas" nillable="true" type="q17:ArrayOfCsCasind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditerListeDesCasConfirmerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EditerListeDesCasConfirmerResult" nillable="true" type="q18:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUneTournee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaTournee" nillable="true" type="q19:CsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUneTourneeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUneTourneeResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererUneTournee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaTournee" nillable="true" type="q20:CsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererUneTourneeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsererUneTourneeResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimerUneTournee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LaTournee" nillable="true" type="q21:CsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimerUneTourneeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SupprimerUneTourneeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneReleveurCentre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Liscentre" nillable="true" type="q22:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneReleveurCentreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneReleveurCentreResult" nillable="true" type="q23:ArrayOfCsReleveur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeReleveur" nillable="true" type="q24:CsReleveur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUnReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUnReleveurResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererUnReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeReleveur" nillable="true" type="q25:CsReleveur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererUnReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsererUnReleveurResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimerUnReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeReleveur" nillable="true" type="q26:CsReleveur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimerUnReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SupprimerUnReleveurResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAllUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAllUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneAllUserResult" nillable="true" type="q27:ArrayOfCsUtilisateur" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setListRiInWebPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="objectList" nillable="true" type="q28:ArrayOfCsEnregRI" />
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parameters" nillable="true" type="q29:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setListRiInWebPartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setListRiInWebPartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListRiFromWebPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListRiFromWebPartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="getListRiFromWebPartResult" nillable="true" type="q30:ArrayOfCsEnregRI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteListRiFromWebPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteListRiFromWebPartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteListRiFromWebPartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTourneeReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fk_IdReleveur" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTourneeReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerTourneeReleveurResult" nillable="true" type="q31:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DebutLot" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Finlot" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourDeleteResult" nillable="true" type="q32:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLotri">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesLot" nillable="true" type="q33:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLotriResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteLotriResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EffacerEvtLotri">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserConnecter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EffacerEvtLotriResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EffacerEvtLotriResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificationEtatDuLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesLot" nillable="true" type="q34:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificationEtatDuLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificationEtatDuLotResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderAffectation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstTourne" nillable="true" type="q35:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderAffectationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderAffectationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneDernierEvenementDeLaCanalisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leAbonnement" nillable="true" type="q36:CsAbon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneDernierEvenementDeLaCanalisationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneDernierEvenementDeLaCanalisationResult" nillable="true" type="q37:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAbon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fk_idcentre" type="xs:int" />
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ordre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAbonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneAbonResult" nillable="true" type="q38:ArrayOfCsAbon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneLesteAnomalie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCentre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneLesteAnomalieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneLesteAnomalieResult" nillable="true" type="q39:ArrayOfCsAnnomalie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimeAnnomalie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCentre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SupprimeAnnomalieResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurgeDeLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leslotri" nillable="true" type="q40:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PurgeDeLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PurgeDeLotResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CentreClient" nillable="true" type="q41:ArrayOfint" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstPeriode" nillable="true" type="q42:ArrayOfstring" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="email" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesClientPourEnvoieMailResult" nillable="true" type="q43:ArrayOfCsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvoyerFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="facturesAEnvoyer" nillable="true" type="q44:ArrayOfCsEnteteFacture" />
+        <xs:element minOccurs="0" name="Rdlc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvoyerFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EnvoyerFacturesResult" nillable="true" type="q45:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCasFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q46:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerCasFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerCasFactureResult" nillable="true" type="q47:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailCasFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q48:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q49="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Cas" nillable="true" type="q49:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailCasFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDetailCasFactureResult" nillable="true" type="q50:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerClientNonConstituer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q51:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerClientNonConstituerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerClientNonConstituerResult" nillable="true" type="q52:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EtatStatistique">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q53:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TypeEtat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EtatStatistiqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EtatStatistiqueResult" nillable="true" type="q54:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerAllTourneeReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstIdCentre" nillable="true" type="q55:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerAllTourneeReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerAllTourneeReleveurResult" nillable="true" type="q56:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAffectationTourne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesTourneAAffecter" nillable="true" type="q57:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAffectationTourneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAffectationTourneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifieSimulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pLot" nillable="true" type="q58:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifieSimulationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verifieSimulationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifieSaisieTotal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pLot" nillable="true" type="q59:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verifieSaisieTotalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verifieSaisieTotalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotri">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentreHabil" nillable="true" type="q60:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriResult" nillable="true" type="q61:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriDejaFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentreHabil" nillable="true" type="q62:ArrayOfint" />
+        <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriDejaFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriDejaFactureResult" nillable="true" type="q63:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourDefacturation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q64:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="UserConnect" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsValidation" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourDefacturationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourDefacturationResult" nillable="true" type="q65:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourEnquete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q66:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="IsLotCourant" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourEnqueteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourEnqueteResult" nillable="true" type="q67:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourSaisie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q68:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="IsLotCourant" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourSaisieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourSaisieResult" nillable="true" type="q69:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourCalcul">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q70:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsLotCourant" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourCalculResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourCalculResult" nillable="true" type="q71:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourMiseAJour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentre" nillable="true" type="q72:ArrayOfint" />
+        <xs:element minOccurs="0" name="UserConnect" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourMiseAJourResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourMiseAJourResult" nillable="true" type="q73:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriDejaMiseAJour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentreHabil" nillable="true" type="q74:ArrayOfint" />
+        <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriDejaMiseAJourResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriDejaMiseAJourResult" nillable="true" type="q75:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourEdition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q76:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsLotCourant" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourEditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourEditionResult" nillable="true" type="q77:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourRejetClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstSiteCentre" nillable="true" type="q78:ArrayOfKeyValueOfstringArrayOfintty7Ep6D1" />
+        <xs:element minOccurs="0" name="matricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsLotCourant" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriPourRejetClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriPourRejetClientResult" nillable="true" type="q79:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetirerClientLotFact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesEvenementLot" nillable="true" type="q80:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetirerClientLotFactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetirerClientLotFactResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstLot" nillable="true" type="q81:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDesEvenementResult" nillable="true" type="q82:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenementPourRejet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstLot" nillable="true" type="q83:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenementPourRejetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDesEvenementPourRejetResult" nillable="true" type="q84:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenementClientLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leClient" nillable="true" type="q85:CsClient" />
+        <xs:element minOccurs="0" name="NumeroLot" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDesEvenementClientLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDesEvenementClientLotResult" nillable="true" type="q86:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriNonMisAJours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentre" nillable="true" type="q87:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriNonMisAJoursResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriNonMisAJoursResult" nillable="true" type="q88:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCparam">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReturnCparamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ReturnCparamResult" nillable="true" type="q89:CParametre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailLotri">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstIdCentre" nillable="true" type="q90:ArrayOfint" />
+        <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailLotriResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDetailLotriResult" nillable="true" type="q91:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailLotriPourDefacturation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstIdCentre" nillable="true" type="q92:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDetailLotriPourDefacturationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDetailLotriPourDefacturationResult" nillable="true" type="q93:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFactureDecroissance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstIdCentre" nillable="true" type="q94:ArrayOfint" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leLot" nillable="true" type="q95:CsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFactureDecroissanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneFactureDecroissanceResult" nillable="true" type="q96:ArrayOfCsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifieClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lesLot" nillable="true" type="q97:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifieClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="VerifieClientResult" nillable="true" type="q98:ArrayOfCsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifieExisteLotClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeClient" nillable="true" type="q99:CsClient" />
+        <xs:element minOccurs="0" name="Numlot" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifieExisteLotClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifieExisteLotClientResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeClient" nillable="true" type="q100:CsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneEvenementClientResult" nillable="true" type="q101:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementCorrectionIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LeClient" nillable="true" type="q102:CsClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementCorrectionIndexResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneEvenementCorrectionIndexResult" nillable="true" type="q103:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFacturePourDuplicat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCentre" type="xs:int" />
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFacturePourDuplicatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneFacturePourDuplicatResult" nillable="true" type="q104:ArrayOfCsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererLstEvenement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="pEvenement" nillable="true" type="q105:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererLstEvenementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsererLstEvenementResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDeJet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotRi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDeJetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListeDeJetResult" nillable="true" type="q106:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDePeriode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDePeriodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListeDePeriodeResult" nillable="true" type="q107:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDeFormat">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDeFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListeDeFormatResult" nillable="true" type="q108:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneClientDuneBorne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lotRi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneClientDuneBorneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneClientDuneBorneResult" nillable="true" type="q109:ArrayOfCsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFacturesRegroupement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regroupementDebut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regroupementFin" nillable="true" type="xs:string" />
+        <xs:element xmlns:q110="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstPeriode" nillable="true" type="q110:ArrayOfstring" />
+        <xs:element xmlns:q111="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Produit" nillable="true" type="q111:ArrayOfstring" />
+        <xs:element minOccurs="0" name="idcentre" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="rdlc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFacturesRegroupementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneFacturesRegroupementResult" nillable="true" type="q112:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFacturesPeriode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lstCentre" nillable="true" type="q113:ArrayOfCsCentre" />
+        <xs:element minOccurs="0" name="periodeDebut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PeriodeFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centreTournee" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tourneeDebut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tourneeFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centreReprise" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientReprise" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centreStop" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientStop" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFacturesPeriodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneFacturesPeriodeResult" nillable="true" type="q114:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leLotSelect" nillable="true" type="q115:CsLotri" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="laTournee" nillable="true" type="q116:CsTournee" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leClient" nillable="true" type="q117:CsClient" />
+        <xs:element minOccurs="0" name="DejaMiseAjour" type="xs:boolean" />
+        <xs:element minOccurs="0" name="rdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneFacturesResult" nillable="true" type="q118:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAnnomalieFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leLotSelect" nillable="true" type="q119:CsLotri" />
+        <xs:element minOccurs="0" name="centreTournee" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tourneeDebut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tourneeFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centreReprise" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientReprise" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centreStop" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientStop" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periodeSelectionne" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rdl" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneAnnomalieFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneAnnomalieFacturesResult" nillable="true" type="q120:ArrayOfCsAnnomalie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneControleFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leLotSelect" nillable="true" type="q121:CsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneControleFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneControleFacturesResult" nillable="true" type="q122:ArrayOfCsAnnomalie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExposeFactureClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExposeFactureClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ExposeFactureClientResult" nillable="true" type="q123:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneListeAMaj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyLotriNum" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneListeAMajResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneListeAMajResult" nillable="true" type="q124:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneMoisComptable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="statut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateDebut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneMoisComptableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="retourneMoisComptableResult" nillable="true" type="q125:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiseAjourLots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="lots" nillable="true" type="q126:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiseAjourLotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="MiseAjourLotsResult" nillable="true" type="q127:CsStatFacturation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneDuplicatas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneDuplicatasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneDuplicatasResult" nillable="true" type="q128:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculeDuLotGeneral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListLotSelectione" nillable="true" type="q129:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="IsSimulation" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculeDuLotGeneralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="CalculeDuLotGeneralResult" nillable="true" type="q130:ArrayOfCsFactureBrut" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefacturerLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_ListDesLots" nillable="true" type="q131:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefacturerLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="DefacturerLotResult" nillable="true" type="q132:CsStatFacturation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandeDefacturerLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_ListDesLots" nillable="true" type="q133:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandeDefacturerLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemandeDefacturerLotResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderRejetDefacturation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_ListDesLots" nillable="true" type="q134:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderRejetDefacturationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderRejetDefacturationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFactureAnnulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCentre" type="xs:int" />
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneFactureAnnulationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneFactureAnnulationResult" nillable="true" type="q135:ArrayOfCsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifierPaiementFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="laFacture" nillable="true" type="q136:CsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifierPaiementFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifierPaiementFactureResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderFacturation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="laFacturation" nillable="true" type="q137:ArrayOfCsFactureBrut" />
+        <xs:element minOccurs="0" name="IsFactureResil" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderFacturationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderFacturationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderAnnulationFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="laFacture" nillable="true" type="q138:CsEnteteFacture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderAnnulationFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderAnnulationFactureResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriFromEntfac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstCentre" nillable="true" type="q139:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerLotriFromEntfacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerLotriFromEntfacResult" nillable="true" type="q140:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneActionFact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leLot" nillable="true" type="q141:CsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retourneActionFactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="retourneActionFactResult" nillable="true" type="q142:ArrayOfCsAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllRedevance">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAllRedevanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LoadAllRedevanceResult" nillable="true" type="q143:ArrayOfCsRedevance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRedevance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeRedevanceToUpdate" nillable="true" type="q144:ArrayOfCsRedevance" />
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeRedevanceToInserte" nillable="true" type="q145:ArrayOfCsRedevance" />
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeRedevanceToDelete" nillable="true" type="q146:ArrayOfCsRedevance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRedevanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRedevanceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTableDeReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Num" type="xs:int" />
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerTableDeReferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerTableDeReferenceResult" nillable="true" type="q147:CsTableReference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiseAJourEvenementTSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CONSO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsSaisi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="STATUSPAGERIE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MATRICULE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsFromPageri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CAS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INDEXEVT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DATEEVT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MiseAJourEvenementTSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MiseAJourEvenementTSPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotNonTraiteParReleveur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumPortable" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotNonTraiteParReleveurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeLotNonTraiteParReleveurResult" nillable="true" type="q148:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotSelonCritere">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumLot" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tournee" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotSelonCritereResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeLotSelonCritereResult" nillable="true" type="q149:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneProduitService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumEntreTa" type="xs:int" />
+        <xs:element minOccurs="0" name="CodeTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneProduitServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneProduitServiceResult" nillable="true" type="q150:ArrayOfCsProduit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreationClientIndexHorsLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ev" nillable="true" type="q151:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreationClientIndexHorsLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreationClientIndexHorsLotResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererEvenement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ev" nillable="true" type="q152:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererEvenementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsererEvenementResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneInfoClientHorsLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fk_IDcentre" type="xs:int" />
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="produit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tournee" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneInfoClientHorsLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneInfoClientHorsLotResult" nillable="true" type="q153:CsSaisiHorsLot" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesDonneesDesSite">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesDonneesDesSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesDonneesDesSiteResult" nillable="true" type="q154:ArrayOfCsCentre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesTournees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesTourneesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerListeDesTourneesResult" nillable="true" type="q155:ArrayOfCsTournee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsBatchExistDansPagerie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_NumLot" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsBatchExistDansPagerieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="IsBatchExistDansPagerieResult" nillable="true" type="q156:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotNonTraite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsCentrePerimetre" nillable="true" type="q157:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeLotNonTraiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeLotNonTraiteResult" nillable="true" type="q158:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesEnquete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="loSelectionnee" nillable="true" type="q159:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesEnqueteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesEnqueteResult" nillable="true" type="q160:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesEnqueteCasOnze">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="loSelectionnee" nillable="true" type="q161:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesEnqueteCasOnzeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesEnqueteCasOnzeResult" nillable="true" type="q162:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstruireLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstCentre" nillable="true" type="q163:ArrayOfCsCentre" />
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstProduit" nillable="true" type="q164:ArrayOfCsProduit" />
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstCategorie" nillable="true" type="q165:ArrayOfCsCategorieClient" />
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstPeriodicite" nillable="true" type="q166:ArrayOfCsFrequence" />
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstTournee" nillable="true" type="q167:ArrayOfCsTournee" />
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstruireLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConstruireLotResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstruireLotAvecEdition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstCentre" nillable="true" type="q168:ArrayOfCsCentre" />
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstProduit" nillable="true" type="q169:ArrayOfCsProduit" />
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstCategorie" nillable="true" type="q170:ArrayOfCsCategorieClient" />
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstPeriodicite" nillable="true" type="q171:ArrayOfCsFrequence" />
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstTournee" nillable="true" type="q172:ArrayOfCsTournee" />
+        <xs:element minOccurs="0" name="Lotri" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstruireLotAvecEditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ConstruireLotAvecEditionResult" nillable="true" type="q173:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lstLotri" nillable="true" type="q174:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="sequence" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerListeDesEvenementsResult" nillable="true" type="q175:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenementsNonFacture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leCompteur" nillable="true" type="q176:ArrayOfCsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenementsNonFactureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerListeDesEvenementsNonFactureResult" nillable="true" type="q177:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDesCas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cas" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneListeDesCasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneListeDesCasResult" nillable="true" type="q178:ArrayOfCsCasind" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DechargementTsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q179:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DechargementTspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DechargementTspResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererTransferTsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q180:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsererTransferTspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsererTransferTspResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenementsTsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lstLotri" nillable="true" type="q181:ArrayOfCsLotri" />
+        <xs:element minOccurs="0" name="sequence" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesEvenementsTspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerListeDesEvenementsTspResult" nillable="true" type="q182:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesTransfertsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="_lstLotri" nillable="true" type="q183:CsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerListeDesTransfertspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerListeDesTransfertspResult" nillable="true" type="q184:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDistinctLotriTransfertsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="isCentre" nillable="true" type="q185:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargerDistinctLotriTransfertspResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ChargerDistinctLotriTransfertspResult" nillable="true" type="q186:ArrayOfCsLotri" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q187:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="MisAJourEvenementResult" nillable="true" type="q188:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepriseIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q189:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RepriseIndexResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RepriseIndexResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenementSynchoTSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q190:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenementSynchoTSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MisAJourEvenementSynchoTSPResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenementIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q191:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MisAJourEvenementIndexResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="MisAJourEvenementIndexResult" nillable="true" type="q192:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderEnquete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="LstEvt" nillable="true" type="q193:ArrayOfCsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValiderEnqueteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValiderEnqueteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCanalisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fk_IDcentre" type="xs:int" />
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="produit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="point" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneCanalisationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneCanalisationResult" nillable="true" type="q194:ArrayOfCsCanalisation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementPose">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="csevenement" nillable="true" type="q195:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetourneEvenementPoseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="RetourneEvenementPoseResult" nillable="true" type="q196:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificationNumeroCompteur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="leEvt" nillable="true" type="q197:CsEvenement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificationNumeroCompteurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificationNumeroCompteurResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

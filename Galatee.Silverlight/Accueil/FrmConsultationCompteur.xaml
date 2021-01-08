@@ -1,0 +1,43 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Accueil.FrmConsultationCompteur"
+           Width="704" Height="426" 
+           Title="Consultation compteur" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <Controls:GroupBox FontWeight="SemiBold" Height="49" Margin="0,0,0,267" x:Name="gbo_typefact" VerticalAlignment="Bottom" Header="Critère" />
+        <Controls:GroupBox FontWeight="SemiBold" Height="174" Margin="0,0,0,10" x:Name="gbo_typefact_Copy" VerticalAlignment="Bottom" Header="Détail compteur" >
+            <sdk:TabControl HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="666" Margin="0,0,-2,0">
+                <sdk:TabItem>
+                    <Grid/>
+                </sdk:TabItem>
+            </sdk:TabControl>
+        </Controls:GroupBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Name="Txt_NumCpt" Margin="94,17,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="284,20,0,0" Name="Cbo_Diametre" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="7,17,0,0" Content=" Nun compteur" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.465,0.478"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Content="Diamètre " Margin="219,19,0,0" VerticalAlignment="Top" Width="60"/>
+        <ComboBox HorizontalAlignment="Left" Margin="466,21,0,0" Name="Cbo_Marque" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" Content ="Marque" Margin="409,21,0,0" VerticalAlignment="Top" Width="57"/>
+        <sdk:DataGrid HorizontalAlignment="Left" Height="74" Margin="10,53,0,0" VerticalAlignment="Top" Width="656">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Compteur" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Diametre" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Type" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Marque" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Année" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Etat" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+                <sdk:DataGridCheckBoxColumn Binding="{x:Null}" CanUserSort="True" CanUserReorder="True" CellStyle="{x:Null}" CanUserResize="True" ClipboardContentBinding="{x:Null}" DisplayIndex="-1" DragIndicatorStyle="{x:Null}" EditingElementStyle="{x:Null}" ElementStyle="{x:Null}" HeaderStyle="{x:Null}" Header="Statut" IsThreeState="False" IsReadOnly="False" MaxWidth="Infinity" MinWidth="0" SortMemberPath="{x:Null}" Visibility="Visible" Width="Auto"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Rechercher" HorizontalAlignment="Left" Margin="591,19,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+    </Grid>
+</controls:ChildWindow>

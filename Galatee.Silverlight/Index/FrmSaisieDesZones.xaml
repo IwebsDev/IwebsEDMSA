@@ -1,0 +1,48 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Facturation.FrmSaisieDesZones"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="550" Height="500.731" 
+           Title="Saisie des releveurs" OverlayBrush="Transparent" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="223*"/>
+            <ColumnDefinition Width="299*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="3,0,7,253" x:Name="groupBox1_Copy1" Header="Information sur le reléveur"  Grid.ColumnSpan="2"  />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Grid.Column="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" Grid.Column="1" />
+        <Button Content="Centre" Height="22" HorizontalAlignment="Left" Margin="16,46,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="82" Click="btn_Centre_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,47,0,0" x:Name="Txt_Centre" VerticalAlignment="Top" Width="65" IsReadOnly="True" TextChanged="Txt_Centre_TextChanged" />
+        <Button Content="Creation" Height="25" HorizontalAlignment="Left" Margin="46,10,0,0" x:Name="btn_Creation" VerticalAlignment="Top" Width="88" Grid.Row="1" Click="btn_Creation_Click" />
+        <Button Content="Modification" Height="25" HorizontalAlignment="Left" Margin="140,10,0,0" x:Name="btn_modification" VerticalAlignment="Top" Width="88" Grid.Row="1" Click="btn_modification_Click" Grid.ColumnSpan="2" />
+        <Button Content="Suppression" Height="25" HorizontalAlignment="Left" Margin="11,10,0,0" x:Name="btn_suppression" VerticalAlignment="Top" Width="88" Grid.Row="1" Click="btn_suppression_Click" Grid.Column="1" />
+        <Button Content="Site" Height="22" HorizontalAlignment="Left" Margin="16,21,0,0" x:Name="btn_Site" VerticalAlignment="Top" Width="82" Click="btn_Site_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,21,0,0" x:Name="Txt_Site" VerticalAlignment="Top" Width="65" IsReadOnly="True" TextChanged="Txt_Centre_TextChanged" />
+        <TextBox x:Name="txt_LibelleSite" HorizontalAlignment="Left" Height="23" Margin="174,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" IsReadOnly="True" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txt_libellecentre" HorizontalAlignment="Left" Height="23" Margin="174,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="248" HorizontalAlignment="Left" Margin="8,143,0,0" x:Name="dataGrid1" VerticalAlignment="Top" Width="504" SelectionChanged="dataGrid1_SelectionChanged" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Tournée" Binding="{Binding CODE}"  Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Priorité" Binding="{Binding PRIORITE}"  Width="Auto" />
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date creation" Binding="{Binding DATECREATION,Converter={StaticResource DateTimeConverter}}"  Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="16,73,0,0" x:Name="label1" VerticalAlignment="Top" Width="82" Content="Tournée" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,72,0,0" x:Name="Txt_zone" VerticalAlignment="Top" Width="65" IsReadOnly="True" />
+        <sdk:Label Content="Priorité" Height="20" HorizontalAlignment="Left" Margin="31,76,0,0" x:Name="label2" VerticalAlignment="Top" Width="84" Grid.Column="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="120,75,0,0" x:Name="Txt_priorite" VerticalAlignment="Top" Width="65" IsReadOnly="True" Grid.Column="1" />
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,39 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Parametrage.UcSite"
+           Width="529" Height="349" OverlayBrush="Transparent"
+           Title="Site" AllowDrop="False" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="283" Width="489">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="440*" />
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="2,184,0,-199" x:Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" Grid.Row="2" />
+        <sdk:Label Content="Site :" Height="28" HorizontalAlignment="Left" Margin="9,28,0,0" x:Name="lab_Site" VerticalAlignment="Top" Width="57" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,29,189,0" MaxLength="3" x:Name="Txt_Site" TabIndex="1" VerticalAlignment="Top" Width="121" TextChanged="On_TextChanged" />
+        <sdk:Label Content="Libellé :" Height="28" HorizontalAlignment="Left" Margin="8,57,0,0" x:Name="lab_Libelle" VerticalAlignment="Top" Width="57" />
+        <TextBox BorderThickness="2" DataContext="{Binding}" Height="23" HorizontalAlignment="Right" Margin="0,58,12,0" MaxLength="50" x:Name="Txt_Libelle" TabIndex="2" VerticalAlignment="Top" Width="347" TextChanged="On_TextChanged" Grid.ColumnSpan="2" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="331,247,0,7" x:Name="btnOk" TabIndex="7" Width="75" Click="BtnOK_Click" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" IsEnabled="True" Margin="412,247,0,7" x:Name="Btn_Annuler" TabIndex="8" Width="75" Click="Btn_Annuler_Click" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Serveur :" Height="28" HorizontalAlignment="Left" Margin="10,87,0,0" x:Name="lab_Serveur" VerticalAlignment="Top" Width="57" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,88,10,0" MaxLength="30" x:Name="Txt_Serveur" TabIndex="3" VerticalAlignment="Top" Width="348" TextChanged="On_TextChanged" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Catalogue :" Height="28" HorizontalAlignment="Left" Margin="9,116,0,0" x:Name="lab_Catalogue" VerticalAlignment="Top" Width="57" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,117,11,0" MaxLength="20" x:Name="Txt_Catalogue" TabIndex="4" VerticalAlignment="Top" Width="347" TextChanged="On_TextChanged" Grid.ColumnSpan="2" />
+        <sdk:Label Content="Mot de passe :" Height="28" HorizontalAlignment="Left" Margin="9,172,0,0" x:Name="lab_pwd" VerticalAlignment="Top" Width="95" />
+        <PasswordBox Height="23" HorizontalAlignment="Right" Margin="0,173,12,0" MaxLength="30" x:Name="Txt_Pwd" TabIndex="5" VerticalAlignment="Top" Width="347" Grid.ColumnSpan="2"  />
+        <sdk:Label Content="Confirmation :" Height="28" HorizontalAlignment="Left" Margin="10,201,0,0" x:Name="lab_ConfirmationPwd" VerticalAlignment="Top" Width="94" />
+        <PasswordBox Height="23" HorizontalAlignment="Right" Margin="0,202,11,0" MaxLength="30" x:Name="Txt_ConfirmationPwd" TabIndex="6" VerticalAlignment="Top" Width="347" Grid.ColumnSpan="2"  />
+        <sdk:Label Content="Utilisateur :" Height="28" HorizontalAlignment="Left" Margin="9,143,0,0" x:Name="lab_Utilisateur" VerticalAlignment="Top" Width="68" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,144,11,0" MaxLength="20" x:Name="Txt_Utilisateur" TabIndex="4" VerticalAlignment="Top" Width="347" AcceptsReturn="False" Grid.ColumnSpan="2" />
+        <Controls:GroupBox Header="Informations Site" Name="GroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="242" Width="489" Grid.ColumnSpan="2"/>
+    </Grid>
+</sdk:ChildWindow>

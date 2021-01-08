@@ -1,0 +1,344 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="ExecuterActionWorkflow" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="ExecuterActionWorkflow"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:gw="clr-namespace:Galatee.WorkflowManager;assembly=Galatee.WorkflowLibrary"
+ xmlns:gw1="clr-namespace:Galatee.WorkflowManager;assembly=Galatee.WorkflowManager"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID1">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+        <x:String>Galatee.WorkflowManager</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID2">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.DataAccess</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Entity.Model</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Structure</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowLibrary</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowManager</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="x:Int32" Name="data" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CodeDemande" />
+      <p1:Variable x:TypeArguments="gw:CODEACTION" Name="m_CodeAction" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CentreID" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_MatriculeUser" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_Response" />
+      <p1:Variable x:TypeArguments="gw:RESULTACTION" Name="m_ResultatAction" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_MsgErr" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CommentaireRejet" />
+    </p1:Sequence.Variables>
+    <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="ExecuterActionWorkflow" ServiceContractName="p:IExecuterActionWorkflow">
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer>
+          <RequestReplyCorrelationInitializer.CorrelationHandle>
+            <p1:InArgument x:TypeArguments="CorrelationHandle">
+              <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+            </p1:InArgument>
+          </RequestReplyCorrelationInitializer.CorrelationHandle>
+        </RequestReplyCorrelationInitializer>
+      </Receive.CorrelationInitializers>
+      <ReceiveParametersContent>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="CodeDemande">
+          <mca:CSharpReference x:TypeArguments="x:String">m_CodeDemande</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="gw:CODEACTION" x:Key="CodeAction">
+          <mca:CSharpReference x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="MatriculeUser">
+          <mca:CSharpReference x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="CommentaireRejet">
+          <mca:CSharpReference x:TypeArguments="x:String">m_CommentaireRejet</mca:CSharpReference>
+        </p1:OutArgument>
+      </ReceiveParametersContent>
+    </Receive>
+    <p1:Switch x:TypeArguments="gw:CODEACTION" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <p1:Switch.Default>
+        <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+          <p1:Assign.To>
+            <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+              <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+            </p1:OutArgument>
+          </p1:Assign.To>
+          <p1:Assign.Value>
+            <p1:InArgument x:TypeArguments="gw:RESULTACTION">
+              <mca:CSharpValue x:TypeArguments="gw:RESULTACTION">RESULTACTION.ERREURINCONNUE</mca:CSharpValue>
+            </p1:InArgument>
+          </p1:Assign.Value>
+        </p1:Assign>
+      </p1:Switch.Default>
+      <p1:Switch.Expression>
+        <p1:InArgument x:TypeArguments="gw:CODEACTION">
+          <mca:CSharpValue x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:Switch.Expression>
+      <gw1:CodeActivityTransmettre x:Key="TRANSMETTRE" sap2010:WorkflowViewState.IdRef="CodeActivityTransmettre_1">
+        <gw1:CodeActivityTransmettre.CodeDemande>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityTransmettre.CodeDemande>
+        <gw1:CodeActivityTransmettre.MatriculeUser>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityTransmettre.MatriculeUser>
+        <gw1:CodeActivityTransmettre.MessageErreur>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityTransmettre.MessageErreur>
+        <gw1:CodeActivityTransmettre.Result>
+          <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+            <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityTransmettre.Result>
+      </gw1:CodeActivityTransmettre>
+      <gw1:CodeActivityRejeter x:Key="REJETER" sap2010:WorkflowViewState.IdRef="CodeActivityRejeter_1">
+        <gw1:CodeActivityRejeter.CodeDemande>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityRejeter.CodeDemande>
+        <gw1:CodeActivityRejeter.Commentaire>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_CommentaireRejet</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityRejeter.Commentaire>
+        <gw1:CodeActivityRejeter.MatriculeUser>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityRejeter.MatriculeUser>
+        <gw1:CodeActivityRejeter.MessageErreur>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityRejeter.MessageErreur>
+        <gw1:CodeActivityRejeter.Result>
+          <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+            <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityRejeter.Result>
+      </gw1:CodeActivityRejeter>
+      <gw1:CodeActivityAnnulerSuspendre x:Key="ANNULER" sap2010:WorkflowViewState.IdRef="CodeActivityAnnulerSuspendre_1">
+        <gw1:CodeActivityAnnulerSuspendre.CodeAction>
+          <p1:InArgument x:TypeArguments="gw:CODEACTION">
+            <mca:CSharpValue x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.CodeAction>
+        <gw1:CodeActivityAnnulerSuspendre.CodeDemande>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.CodeDemande>
+        <gw1:CodeActivityAnnulerSuspendre.MatriculeUser>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.MatriculeUser>
+        <gw1:CodeActivityAnnulerSuspendre.MessageErreur>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityAnnulerSuspendre.MessageErreur>
+        <gw1:CodeActivityAnnulerSuspendre.Result>
+          <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+            <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityAnnulerSuspendre.Result>
+      </gw1:CodeActivityAnnulerSuspendre>
+      <gw1:CodeActivityAnnulerSuspendre x:Key="SUSPENDRE" sap2010:WorkflowViewState.IdRef="CodeActivityAnnulerSuspendre_2">
+        <gw1:CodeActivityAnnulerSuspendre.CodeAction>
+          <p1:InArgument x:TypeArguments="gw:CODEACTION">
+            <mca:CSharpValue x:TypeArguments="gw:CODEACTION">m_CodeAction</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.CodeAction>
+        <gw1:CodeActivityAnnulerSuspendre.CodeDemande>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.CodeDemande>
+        <gw1:CodeActivityAnnulerSuspendre.MatriculeUser>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+          </p1:InArgument>
+        </gw1:CodeActivityAnnulerSuspendre.MatriculeUser>
+        <gw1:CodeActivityAnnulerSuspendre.MessageErreur>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityAnnulerSuspendre.MessageErreur>
+        <gw1:CodeActivityAnnulerSuspendre.Result>
+          <p1:OutArgument x:TypeArguments="gw:RESULTACTION">
+            <mca:CSharpReference x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpReference>
+          </p1:OutArgument>
+        </gw1:CodeActivityAnnulerSuspendre.Result>
+      </gw1:CodeActivityAnnulerSuspendre>
+    </p1:Switch>
+    <p1:Switch x:TypeArguments="gw:RESULTACTION" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <p1:Switch.Default>
+        <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+          <p1:Assign.To>
+            <p1:OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+            </p1:OutArgument>
+          </p1:Assign.To>
+          <p1:Assign.Value>
+            <p1:InArgument x:TypeArguments="x:String">ERR:Une erreur interne est survenue</p1:InArgument>
+          </p1:Assign.Value>
+        </p1:Assign>
+      </p1:Switch.Default>
+      <p1:Switch.Expression>
+        <p1:InArgument x:TypeArguments="gw:RESULTACTION">
+          <mca:CSharpValue x:TypeArguments="gw:RESULTACTION">m_ResultatAction</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:Switch.Expression>
+      <p1:Assign x:Key="TRANSMISE" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande a été transmise avec succès</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="REJETEE" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande a été rejetée avec succès</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="FINDECIRCUIT" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande est terminée</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="DEBUTDECIRCUIT" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande est déjà en début de circuit</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="ERREURINCONNUE" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">"ERR:" + m_MsgErr</mca:CSharpValue>
+          </p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="ANNULEE" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande a été annulée avec succès</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <p1:Assign x:Key="SUSPENDUE" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="x:String">
+            <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+          </p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="x:String">La demande a été suspendue avec succès</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+    </p1:Switch>
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
+      <SendMessageContent DeclaredMessageType="x:String">
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_Response</mca:CSharpValue>
+        </p1:InArgument>
+      </SendMessageContent>
+    </SendReply>
+    <sads:DebugSymbol.Symbol>d2REOlxQUk9KRVQgSVdFQlNcR0FMQVRFRSBXRUJfR2VuZXJpcXVlIC0yMDA4MjAxNFxHYWxhdGVlLldvcmtmbG93TWFuYWdlclxFeGVjdXRlckFjdGlvbldvcmtmbG93LnhhbWx4Pw8DugIRAQFCBVoPApoDWwXWARECogHXAQWxAhEBJLICBbgCEQECVAtUYALHA1ELUWICvANXC1djArEDTgtOXgKmA0cPR1wCmwNsC2xaAqMBbweEASUC7QKFAQefASECtQKgAQe6ASoC/QG7AQfVASoCxQFdCWgVAq4B5gEL5gFgASXpAQfyARMClQHzAQf8ARMCiAH9AQeGAhMBe4cCB5ACEwFukQIHnAITAVedAgemAhMBSqcCB7ACEwE92QEJ4gEVATC1Agu1AlMBA3cNd1oCjwN8DXxbAoQDgQENgQFqAvkCcg1yWALuApIBDZIBWgLiApcBDZcBWwLXApwBDZwBagLMAo0BDY0BXQLBAogBDYgBWAK2Aq0BDa0BWgKqAqMBDaMBXAKfArIBDbIBWwKUArcBDbcBagKJAqgBDagBWAL+AcgBDcgBWgLyAb4BDb4BXALnAc0BDc0BWwLcAdIBDdIBagLRAcMBDcMBWALGAWUPZW8CugFgD2BsAq8B8AE18AFbAqEB7AEN7AFdApYB+gE1+gFZApQB9gEN9gFdAokBhAI1hAJMAocBgAINgAJdAXyOAjWOAlwBeooCDYoCXQFvmQINmQJcAWOUAg2UAl0BWKQCNaQCWQFWoAINoAJdAUuuAjWuAlsBSaoCDaoCXQE+4AE34AFaATzcAQ/cAV8BMQ==</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="476,86" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="CodeActivityTransmettre_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CodeActivityRejeter_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CodeActivityAnnulerSuspendre_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CodeActivityAnnulerSuspendre_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="476,312" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_8" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_9" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Switch`1_2" sap:VirtualizedContainerService.HintSize="476,265" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="476,86" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="498,993">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="528,1063" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

@@ -1,0 +1,40 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcBilanEtablissementDevis"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+             xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+             xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Width="695" Height="562.881" 
+           OverlayBrush="Transparent"
+           Title="Récapitulatif du Devis" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2" Width="669" >
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBox Height="23" Margin="89,10,426,420" MaxLength="19" Name="Txt_NumDevis" IsReadOnly="True"/>
+        <sdk:Label Content="N° Devis" Margin="17,11,585,420" Name="lab_AmountOfDeposit" />
+        <TextBox Height="25" IsReadOnly="True" Margin="0,21,12,480" Name="Txt_TypeDevis" Width="310" HorizontalAlignment="Right" />
+        <sdk:Label Content="Décision" Height="19" HorizontalAlignment="Left" Margin="8,154,0,0" Name="lab_Decision" VerticalAlignment="Top" Width="71" Visibility="Collapsed" />
+        <CheckBox Content="Dossier Complet" Height="21" HorizontalAlignment="Right" Margin="0,154,556,0" Name="Chk_DossierComplet" VerticalAlignment="Top" Width="125" Visibility="Collapsed" />
+        <CheckBox Content="Dossier imcomplet" Height="21" HorizontalAlignment="Left" Margin="259,154,0,0" Name="Chk_DossierImcomplet" VerticalAlignment="Top" Width="135" Visibility="Collapsed" />
+        <sc:GroupBox Header="Informations sur le devis" Margin="6,0,5,470" Name="Gbo_InformationAccount" IsEnabled="True" />
+        <sc:GroupBox Header="Bilan du Devis" Margin="0,38,5,0" Name="Gbo_InformationDevis" IsEnabled="True" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="125" Height="23" HorizontalAlignment="Left" Margin="535,10,0,2" Grid.Row="1" />
+        <!--<Button x:Name="OKButton" Content="Enregistrer" Click="OKButton_Click" Height="23" Margin="511,12,85,0" Grid.Row="1" />-->
+        <sdk:DataGrid AutoGenerateColumns="False" Height="373" HorizontalAlignment="Left" Margin="6,61,0,0" Name="dataGridElementDevis" VerticalAlignment="Top" Width="651"  GridLinesVisibility="None" IsReadOnly="True" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DESIGNATION,Mode=TwoWay}" Header="Désignation" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding QUANTITERECAP,Mode=TwoWay}"  Header="Quantité" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MontantRecap,Mode=TwoWay}" Header="Montant Ht" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Enregistrer" Margin="385,10,139,2" Name="Btn_Transmettre" Grid.Row="1" Click="OKButton_Click" />
+        <sdk:Label Content="Type Demande" Margin="243,22,328,484" Name="lbl_TypeDevis" />
+        <Button Content="Transmettre " x:Name="EditerButton" HorizontalAlignment="Left" Margin="224,9,0,0" VerticalAlignment="Top" Width="155" Height="23"  Grid.Row="1" Click="EditerButton_Click"/>
+        <!--<Button x:Name="btn_Transmetre" Content="Transmetre"  Width="125" Height="23" HorizontalAlignment="Right" Margin="0,10,233,2" Grid.Row="1" Click="btn_Transmetre_Click" />-->
+    </Grid>
+</controls:ChildWindow>

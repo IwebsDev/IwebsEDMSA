@@ -1,0 +1,21 @@
+﻿using System;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Ink;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Shapes;
+
+namespace Galatee.Silverlight.Caisse
+{
+    public static class FormData
+    {
+        public static string GroupingCodeName=string.Empty;
+        public static string GroupingCodeLabel = string.Empty;
+        public static string MatriculeCOnnecte = "00331";
+        public static string NumCaisse = "008";
+    }
+}

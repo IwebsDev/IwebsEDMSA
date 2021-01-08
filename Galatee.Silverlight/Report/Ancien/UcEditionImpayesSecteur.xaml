@@ -1,0 +1,42 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Report.UcEditionImpayesSecteur"
+           Width="497" Height="327" OverlayBrush="Transparent"
+           Title="Edition Impayes Par Secteurs" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="94" Margin="239,32,0,0" Content="Secteurs :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,52,0,0" VerticalAlignment="Top" Width="47" Content="Jour :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="257,60,0,0" VerticalAlignment="Top" Width="51" Content="Solde :"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,97,0,0" VerticalAlignment="Top" Width="94" Content="Mois :"/>
+        <TextBox x:Name="txtMarge" HorizontalAlignment="Left" Height="23" Margin="306,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txtYear" Height="23" Margin="73,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="Cmb_categ" Margin="306,32,0,0" VerticalAlignment="Top" Width="120" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox Content="{Binding LIBELLE, Mode=TwoWay, ValidatesOnDataErrors=False}"  IsChecked="{Binding COCHER, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="ddbSolde" HorizontalAlignment="Left" Margin="306,60,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:DatePicker x:Name="Txt_DateDebut" HorizontalAlignment="Left" Height="23" Margin="73,52,0,0" VerticalAlignment="Top" Width="120"/>
+        <RadioButton Content="Recapitulatif" GroupName="rbl_impayes" x:Name="Recapitulatif" HorizontalAlignment="Left" Margin="257,141,0,0" VerticalAlignment="Top" Checked="Detail_Checked"/>
+        <RadioButton Content="Detail" GroupName="rbl_impayes" x:Name="Detail" HorizontalAlignment="Left" Margin="257,163,0,0" VerticalAlignment="Top" Checked="Detail_Checked"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="Cmb_month"   Margin="73,97,0,0" VerticalAlignment="Top" Width="120" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="5,142,0,0" VerticalAlignment="Top" Width="94" Content="Année :"/>
+        <Controls:GroupBox Header="Période" HorizontalAlignment="Left" Height="188" Margin="0,10,0,0" VerticalAlignment="Top" Width="214"/>
+        <Controls:GroupBox Header="Filtre" HorizontalAlignment="Left" Height="197" Margin="228,10,0,0" VerticalAlignment="Top" Width="231">
+            <Controls:GroupBox Header="Type d'édition" HorizontalAlignment="Left" Height="71" Margin="10,90,0,0" VerticalAlignment="Top" Width="176"/>
+        </Controls:GroupBox>
+    </Grid>
+</sdk:ChildWindow>

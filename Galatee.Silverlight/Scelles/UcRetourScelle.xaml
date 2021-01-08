@@ -1,0 +1,92 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Scelles.UcRetourScelle"
+           Width="1025.821" Height="656.761" 
+           Title="UcRetourScelle" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+        <Grid x:Name="LayoutRoot" Margin="10,7,7,-3">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Height="96" HorizontalAlignment="Left" Margin="1,-1,0,452" x:Name="groupBox_Copy" VerticalAlignment="Bottom" Width="964" Header="Sélection des scellés à remettre" />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="173" Height="23" HorizontalAlignment="Right" Margin="0,4,27,8" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="20" Margin="48,60,0,0" VerticalAlignment="Top" Width="186" Content="Date de remise :"/>
+        <sdk:DatePicker x:Name="DateRetour" HorizontalAlignment="Left" Height="24" Margin="239,56,0,0" VerticalAlignment="Top" Width="206"/>
+
+        <sdk:TabControl  x:Name="ListeScelle" HorizontalAlignment="Left"  Height="438" Margin="10,104,0,0" VerticalAlignment="Top" Width="955" SelectionChanged="TabControl_SelectionChanged">
+            <sdk:TabItem Header="Scellés non utilisés" x:Name="TbItScelleNnUtls">
+                <Grid Margin="-1,3,1,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <sdk:Label HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="105" Content="Nombre de scellés non utlisés "/>
+                    <TextBox x:Name="TxtScelleNnutiliser" HorizontalAlignment="Left" Height="23" Margin="125,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                    <sdk:DataGrid x:Name="dgScelleNnUtilise" AutoGenerateColumns="False"  DataContext="{Binding}" ItemsSource="{Binding DonnesDatagrid}" HorizontalAlignment="Left" Height="348" Margin="10,35,0,0" VerticalAlignment="Top" Width="409">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro de scellé" Width="Auto" Binding="{Binding Numero_Scelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="Auto" Header="Couleur" Binding="{Binding Couleur_libelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de remise"  Width="Auto" Binding="{Binding Date_Remise,Converter={StaticResource DateTimeConverter}}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:DataGrid x:Name="dgScelle" AutoGenerateColumns="False"  ItemsSource="{Binding DonnesDatagrid}" HorizontalAlignment="Left" Height="348" Margin="516,35,0,0" VerticalAlignment="Top" Width="417">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro de scellé" Width="Auto" Binding="{Binding Numero_Scelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="Auto" Header="Couleur" Binding="{Binding Couleur_libelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de remise"  Width="Auto" Binding="{Binding Date_Remise,Converter={StaticResource DateTimeConverter}}"/>
+
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button  x:Name="Charger" Content="&gt;" HorizontalAlignment="Left" Height="25" Margin="438,81,0,0" VerticalAlignment="Top" Width="55" RenderTransformOrigin="1,0.286" Click="Charger_Click"/>
+                    <Button  x:Name="Decharger" Content="&lt;" HorizontalAlignment="Left" Height="25" Margin="440,116,0,0" VerticalAlignment="Top" Width="55" Click="Decharger_Click"/>
+                    <Button  x:Name="chargerTout" Content="&gt;&gt;" HorizontalAlignment="Left" Height="25" Margin="440,151,0,0" VerticalAlignment="Top" Width="55" Click="chargerTout_Click"/>
+                    <Button x:Name="DechargerTout" Content="&lt;&lt;" HorizontalAlignment="Left" Height="25" Margin="440,191,0,0" VerticalAlignment="Top" Width="55" Click="DechargerTout_Click"/>
+                    <Button x:Name="OKButton1" Content="OK" Click="OKButton_Click" Width="165" HorizontalAlignment="Right" Margin="0,409,196,-42" />
+
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Scellés abimés"  x:Name="TbItScelleAbimer">
+                <Grid Margin="0,4,0,5">
+                    <sdk:Label HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="105" Content="Scellés abimés "/>
+                    <TextBox x:Name="txtNbrScelleAbimer" HorizontalAlignment="Left" Height="23" Margin="125,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                    <sdk:DataGrid x:Name="dgScelleAbimer" AutoGenerateColumns="False"  DataContext="{Binding}" ItemsSource="{Binding DonnesDatagrid}" HorizontalAlignment="Left" Height="329" Margin="18,35,0,0" VerticalAlignment="Top" Width="414">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro de Scellé" Width="Auto" Binding="{Binding Numero_Scelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="Auto" Header="Couleur" Binding="{Binding Couleur_libelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de remise"  Width="Auto" Binding="{Binding Date_Remise,Converter={StaticResource DateTimeConverter}}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:DataGrid x:Name="dgScelleAbimerLst" DataContext="{Binding}" AutoGenerateColumns="False"  ItemsSource="{Binding DonnesDatagrid}" HorizontalAlignment="Left" Height="336" Margin="538,28,0,0" VerticalAlignment="Top" Width="395">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro de scellé" Width="Auto" Binding="{Binding Numero_Scelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True"  Width="Auto" Header="Couleur" Binding="{Binding Couleur_libelle}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de remise"  Width="Auto" Binding="{Binding Date_Remise,Converter={StaticResource DateTimeConverter}}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <Button  x:Name="Charger1" Content="&gt;" HorizontalAlignment="Left" Height="25" Margin="454,93,0,0" VerticalAlignment="Top" Width="55" RenderTransformOrigin="1,0.286" Click="Charger_Click"/>
+                    <Button  x:Name="Decharger1" Content="&lt;" HorizontalAlignment="Left" Height="25" Margin="456,128,0,0" VerticalAlignment="Top" Width="55" Click="Decharger_Click"/>
+                    <Button  x:Name="chargerTout1" Content="&gt;&gt;" HorizontalAlignment="Left" Height="25" Margin="456,163,0,0" VerticalAlignment="Top" Width="55" Click="chargerTout_Click"/>
+                    <Button x:Name="DechargerTout1" Content="&lt;&lt;" HorizontalAlignment="Left" Height="25" Margin="456,203,0,0" VerticalAlignment="Top" Width="55" Click="DechargerTout_Click"/>
+                    <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="173" Height="23" HorizontalAlignment="Right" Margin="0,369,10,0" />
+
+                </Grid>
+            </sdk:TabItem>
+
+        </sdk:TabControl>
+        <sdk:Label Content="Matricule agent d'intervention :" HorizontalAlignment="Left" Height="22" Margin="48,29,0,0" VerticalAlignment="Top" Width="185"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="239,29,0,0" VerticalAlignment="Top" Width="43" x:Name="btn_SearchAgt_Copy"  Click="btn_SearchAgt_Click" RenderTransformOrigin="0.5,0.5" />
+        <TextBox x:Name="txtAgt_M" HorizontalAlignment="Left" Height="23" Margin="287,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60" Background="LightBlue" IsReadOnly="False" SelectionChanged="txtAgt_M_SelectionChanged" />
+        <TextBox x:Name="txt_LibelleAgentScelle" HorizontalAlignment="Left" Height="23" Margin="352,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196" IsReadOnly="True"/>
+    </Grid>
+</sdk:ChildWindow>

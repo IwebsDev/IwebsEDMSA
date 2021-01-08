@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MsgErrAncPwd" xml:space="preserve">
+    <value>Le mot de passe entré n'est pas valide</value>
+  </data>
+  <data name="MsgErrorInsertUser" xml:space="preserve">
+    <value>Erreur de création de l'utilisateur</value>
+  </data>
+  <data name="MsgErrorMajUser" xml:space="preserve">
+    <value>Erreur de mise à jour des données de l'utilisateur courant </value>
+  </data>
+  <data name="MsgErrPeriod" xml:space="preserve">
+    <value>Date début toujours supérieur à la date de fin</value>
+  </data>
+  <data name="RdbuttonActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="RdbuttonInActive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="RdbuttonLocked" xml:space="preserve">
+    <value>Verrrouillé</value>
+  </data>
+  <data name="Utilisateur" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Erreur </value>
+  </data>
+  <data name="confirmHabilitationMsg" xml:space="preserve">
+    <value>Voulez vous vraiment valider cette habilitation?</value>
+  </data>
+  <data name="lbl_branche" xml:space="preserve">
+    <value>Site </value>
+  </data>
+  <data name="lbl_centre" xml:space="preserve">
+    <value>Centre </value>
+  </data>
+  <data name="lbl_changement_pwd" xml:space="preserve">
+    <value>Changement de mot de passe à la prochaine ouverture de session :</value>
+  </data>
+  <data name="lbl_date_creation" xml:space="preserve">
+    <value>Date de création </value>
+  </data>
+  <data name="lbl_date_dernier_modif" xml:space="preserve">
+    <value>Date de dernière modification </value>
+  </data>
+  <data name="lbl_login" xml:space="preserve">
+    <value>Nom de connexion </value>
+  </data>
+  <data name="lbl_matricule" xml:space="preserve">
+    <value>Matricule </value>
+  </data>
+  <data name="lbl_nom_prenom" xml:space="preserve">
+    <value>Nom et Prenom(s) </value>
+  </data>
+  <data name="lbl_num_çaisse" xml:space="preserve">
+    <value>N° caisse </value>
+  </data>
+  <data name="lbl_password" xml:space="preserve">
+    <value>Mot de passe </value>
+  </data>
+  <data name="lbl_password_conf" xml:space="preserve">
+    <value>Confirmation de mot de passe</value>
+  </data>
+  <data name="lbl_period_from" xml:space="preserve">
+    <value>Du :</value>
+  </data>
+  <data name="lbl_period_to" xml:space="preserve">
+    <value>Au :</value>
+  </data>
+  <data name="lbl_period_validite" xml:space="preserve">
+    <value>Période de validité </value>
+  </data>
+  <data name="lbl_profil" xml:space="preserve">
+    <value>Role de l'utilisateur </value>
+  </data>
+  <data name="lbl_status_user" xml:space="preserve">
+    <value>Status de l'utilisateur </value>
+  </data>
+  <data name="header_profil" xml:space="preserve">
+    <value>Profil utilisateur </value>
+  </data>
+  <data name="header_reference" xml:space="preserve">
+    <value>Référence de l'utilisateur </value>
+  </data>
+  <data name="lbl_new_pwd" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="lbl_old_pwd" xml:space="preserve">
+    <value>Ancien mot de passe </value>
+  </data>
+  <data name="lbl_perimetre_action" xml:space="preserve">
+    <value>Périmètre d'action </value>
+  </data>
+  <data name="Securite" xml:space="preserve">
+    <value>Stratégie de sécurite</value>
+  </data>
+  <data name="MsgErrVerouill" xml:space="preserve">
+    <value>Les clés de vérrouillage doivent être différentes</value>
+  </data>
+  <data name="MsgErrorOnActiveSecurity" xml:space="preserve">
+    <value>Erreur survenue lors du processu d'activation de la stratégie de sécurité</value>
+  </data>
+  <data name="MsgSelectProfilBeforeCompleteTask" xml:space="preserve">
+    <value>Veuillez sélectionnez un profil pour effectuer cette opération</value>
+  </data>
+  <data name="MsgSettingProfilFailed" xml:space="preserve">
+    <value>L'habilitation du profil a échouée </value>
+  </data>
+  <data name="MsgSettingProfilSuccess" xml:space="preserve">
+    <value>L'habilitation du profil s'est effectuée avec succès !</value>
+  </data>
+  <data name="Chk_pasPasse" xml:space="preserve">
+    <value>Le mot de passe ne doit pas contenir le nom du compte ou des parties 
+du nom complet de l’utilisateur comptant plus de trois caractères successifs</value>
+  </data>
+  <data name="chk_Revers" xml:space="preserve">
+    <value>Chiffrement reversible du mot de passe</value>
+  </data>
+  <data name="lbl_CaractereMini" xml:space="preserve">
+    <value>Nombre minimal de caracteres non alphabétiques dans le mot de passe</value>
+  </data>
+  <data name="lbl_DureeDeveilleSession" xml:space="preserve">
+    <value>Durée de veille de session (minutes)</value>
+  </data>
+  <data name="lbl_DureeMaxiMotPasse" xml:space="preserve">
+    <value>Durée maximale du mot de passe (jour)</value>
+  </data>
+  <data name="lbl_DureeMiniMotPasse" xml:space="preserve">
+    <value>Durée minimale du mot de passe (jour)</value>
+  </data>
+  <data name="lbl_DureeVerouillageCompte" xml:space="preserve">
+    <value>Durée de verrouillage de compte (minutes)</value>
+  </data>
+  <data name="lbl_HistoriqueNbMotPasse" xml:space="preserve">
+    <value>Historique nombre de mot de passe</value>
+  </data>
+  <data name="lbl_LongeuPasse" xml:space="preserve">
+    <value>Longueur minimale du mot de passe</value>
+  </data>
+  <data name="lbl_NbreMiniCaractereMajusc" xml:space="preserve">
+    <value>Nombre minimal de caracteres majuscules dans le mot de passe</value>
+  </data>
+  <data name="lbl_NbreMiniCaractereMinus" xml:space="preserve">
+    <value>Nombre minimal de caracteres minuscules dans le mot de passe</value>
+  </data>
+  <data name="lbl_NbrMinuChiffre" xml:space="preserve">
+    <value>Nombre minimal chiffre dans le mot de passe (0..9)</value>
+  </data>
+  <data name="lbl_NombreEchec" xml:space="preserve">
+    <value>Nombre maximal d'échecs d'ouverture de session</value>
+  </data>
+  <data name="lbl_reinitCompteurPasse" xml:space="preserve">
+    <value>Réinitialiser le compteur de verrouillages du compte après (...minutes)</value>
+  </data>
+  <data name="lbl_Vérouillage" xml:space="preserve">
+    <value>Touches de verrouillage de session</value>
+  </data>
+  <data name="lbl_lbl_label" xml:space="preserve">
+    <value>Libellé </value>
+  </data>
+  <data name="MsgEnregisterPoste" xml:space="preserve">
+    <value>Veuillez declarer votre poste</value>
+  </data>
+  <data name="MsgLicence" xml:space="preserve">
+    <value>Votre license expire dans :</value>
+  </data>
+  <data name="MsgLicenceExpire" xml:space="preserve">
+    <value>Votre license a expirée .
+Veuillez contacter INOVA.</value>
+  </data>
+  <data name="MsgLicenceNonTrouve" xml:space="preserve">
+    <value>Veuillez charger le fichier de license</value>
+  </data>
+  <data name="MsgLicenceSuite" xml:space="preserve">
+    <value>Veuillez contacter INOVA</value>
+  </data>
+  <data name="libModule" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="msgloginExist" xml:space="preserve">
+    <value>Le login saisi existe déjà</value>
+  </data>
+  <data name="msgMatriculeExist" xml:space="preserve">
+    <value>Le matricule saisi existe déjà</value>
+  </data>
+  <data name="MsgNonPosteCaisse" xml:space="preserve">
+    <value>Ce poste n'est pas configuré pour la caisse</value>
+  </data>
+  <data name="msgConnextionAbo07Nontrove" xml:space="preserve">
+    <value>Connexion ABO07 incorrect</value>
+  </data>
+  <data name="msgConnextionGaladbNontrove" xml:space="preserve">
+    <value>Connexion GALADB incorrect</value>
+  </data>
+</root>

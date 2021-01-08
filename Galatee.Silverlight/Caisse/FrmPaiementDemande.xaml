@@ -1,0 +1,49 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Caisse.FrmPaiementDemande"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="920" Height="510.687" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           Title="Paiement demande" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" FontSize="13" Loaded="ChildWindow_Loaded" OverlayBrush="Transparent" xmlns:my="clr-namespace:Galatee.Silverlight.Library;assembly=Galatee.Silverlight.Library" xmlns:my1="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" Style="{StaticResource ChildWindowGalatee}">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my1:GroupBox FontWeight="SemiBold" Height="74" Margin="3,0,0,323" Header=" " VerticalAlignment="Bottom" />
+        <my1:GroupBox FontWeight="SemiBold" Height="245" Margin="3,0,0,78" Name="gbo1" Header=" Information de la demande" VerticalAlignment="Bottom" />
+        <my1:GroupBox FontWeight="SemiBold" Height="68" Margin="226,0,10,5" Header=" Reglement de la demande" VerticalAlignment="Bottom" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,17,6" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,100,6" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,14,550,0" Name="Txt_NumeroDemande" VerticalAlignment="Top" Width="181" Background="LightBlue" TextChanged="Txt_NumeroDemande_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="454,43,0,0" Name="Txt_NomClient" VerticalAlignment="Top" Width="323" IsEnabled="True" IsReadOnly="True" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="208" HorizontalAlignment="Left" Margin="13,98,0,0" Name="LsvFacture" VerticalAlignment="Top" Width="862">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DATECREATION,Converter={StaticResource DateTimeConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date" Width="Auto" MinWidth="90" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLECOPER}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Operation" Width="Auto" MinWidth="60" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding REFEM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Période" Width="Auto" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Facture" Width="Auto" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant HT" Width="Auto" MinWidth="90" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTTVA ,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Taxe" Width="Auto" MinWidth ="50" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding SOLDEFACTURE,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant TTC" Width="Auto" MinWidth="90" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="419,340,0,0" Name="Txt_TotalHt" VerticalAlignment="Top" Width="98" IsEnabled="True" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="522,340,0,0" Name="Txt_totalTaxe" VerticalAlignment="Top" Width="90" IsEnabled="True" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="617,340,0,0" Name="Txt_TotalTTC" VerticalAlignment="Top" Width="98" IsEnabled="True" IsReadOnly="True" />
+        <sdk:Label Height="21" HorizontalAlignment="Left" Margin="245,342,0,0" Name="lbl_total" VerticalAlignment="Top" Width="169" Content="Coût total de reference" />
+        <sdk:Label Content="Nom " Height="21" HorizontalAlignment="Left" Margin="354,43,0,0" Name="lbl_Nom" VerticalAlignment="Top" Width="95" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="161,41,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="181" IsEnabled="True" IsReadOnly="True" />
+        <sdk:Label Content="Reference client" Height="21" HorizontalAlignment="Left" Margin="29,43,0,0" Name="lbl_RefClient" VerticalAlignment="Top" Width="122" />
+        <sdk:Label Content="Numéro demande" Height="21" HorizontalAlignment="Left" Margin="30,14,0,0" Name="lbl_NumDemande" VerticalAlignment="Top" Width="126" />
+        <my:NumericTextBox Height="23" HorizontalAlignment="Left" Margin="617,366,0,0" Name="txt_MontantPayes" VerticalAlignment="Top" Width="98" />
+        <sdk:Label Height="28" HorizontalAlignment="Left" Margin="247,369,0,0" Name="label1" VerticalAlignment="Top" Width="170" Content="Montant payé" />
+        <CheckBox Content="Devis de branchement" x:Name="Chk_DevisPrestation" HorizontalAlignment="Left" Width="261" Margin="454,17,0,362" Checked="Chk_DevisPrestation_Checked" Unchecked="Chk_DevisPrestation_Unchecked"/>
+    </Grid>
+</controls:ChildWindow>

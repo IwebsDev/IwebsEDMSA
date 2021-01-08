@@ -1,0 +1,256 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="Galatee.Silverlight.Devis.UcValidationMetre"
+           Width="808.955" Height="695" OverlayBrush="Transparent"  
+           Title="Validation devis" 
+           Loaded="ChildWindow_Loaded" >
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="109" Height="23" HorizontalAlignment="Right" Margin="0,8,0,4" Grid.Row="1" />
+        <sdk:TabControl Height="514" HorizontalAlignment="Left" x:Name="tabControl_Consultation" VerticalAlignment="Top" Width="778" >
+            <sdk:TabItem Header="Demande" x:Name="tabItemDevis">
+                <Grid>
+                    <my:GroupBox Header="Informations demande" Margin="6,0,-6,1" x:Name="Gbo_InformationDevis" IsEnabled="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="119,20,0,0" MaxLength="50" x:Name="Txt_NumeroDevis" VerticalAlignment="Top" Width="278" IsReadOnly="True" />
+                    <sdk:Label Content="Demande" Height="19" HorizontalAlignment="Left" Margin="14,21,0,0" x:Name="lbl_Devis" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,53,529,0" MaxLength="50" x:Name="Txt_Ordre" VerticalAlignment="Top" Width="36" IsReadOnly="True" Visibility="Collapsed"  />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="119,49,0,0" MaxLength="50" x:Name="Txt_CodeSite" VerticalAlignment="Top" Width="46" IsReadOnly="True" />
+                    <sdk:Label Content="Site" Height="19" HorizontalAlignment="Left" Margin="14,52,0,0" x:Name="lbl_Site" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,49,369,0" MaxLength="50" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="227" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="119,78,0,0" MaxLength="50" x:Name="Txt_CodeCentre" VerticalAlignment="Top" Width="46" IsReadOnly="True" />
+                    <sdk:Label Content="Centre" Height="19" HorizontalAlignment="Left" Margin="14,82,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="108" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,78,369,0" MaxLength="50" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="227" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="170,107,0,0" MaxLength="50" x:Name="Txt_LibelleProduit" VerticalAlignment="Top" Width="227" IsReadOnly="True" />
+                    <sdk:Label Content="Produit" Height="19" HorizontalAlignment="Left" Margin="14,111,0,0" x:Name="lbl_Produit" VerticalAlignment="Top" Width="112.999" RenderTransformOrigin="0.5,0.5" />
+
+                    <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,107,601,0" MaxLength="50" x:Name="Txt_CodeProduit" VerticalAlignment="Top" Width="46" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,134,263,0" MaxLength="50" x:Name="Txt_LibelleTypeDevis" VerticalAlignment="Top" Width="384" IsReadOnly="True" />
+                    <TextBox Height="23" FontStyle="Italic" Foreground="Red" HorizontalAlignment="Right" Margin="0,162,263,0" MaxLength="50" x:Name="Txt_EtapeCourante" VerticalAlignment="Top" Width="384" IsReadOnly="True" />
+                    <TextBox Height="23" FontStyle="Italic" Foreground="Red" HorizontalAlignment="Right" Margin="0,190,263,0" MaxLength="50" x:Name="Txt_EtapeSuivante" VerticalAlignment="Top" Width="384" IsReadOnly="True" />
+                    <sdk:Label Content="Type Demande" Height="19" HorizontalAlignment="Left" Margin="14,138,0,0" x:Name="lbl_TypeDevis" VerticalAlignment="Top" Width="113" />
+                    <sdk:Label Content="Etape en cours" Height="19" HorizontalAlignment="Left" Margin="14,162,0,0" x:Name="lbl_EtapeEnCours" VerticalAlignment="Top" Width="108" />
+                    <sdk:Label Content="Etape suivante" Height="19" HorizontalAlignment="Left" Margin="14,190,0,0" x:Name="lbl_EtapeSuivante" VerticalAlignment="Top" Width="113" />
+                    <sdk:Label HorizontalAlignment="Left" Content="Type " Height="28" VerticalAlignment="Top" Width="74" Margin="35,316,0,0" Visibility="Collapsed"/>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Demandeur" x:Name="tabItemDemandeur">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <my:GroupBox Header="Informations Demande Devis"  Margin="2,1,4,23" x:Name="Gbo_InformationDemandeDevis" />
+                    <sdk:Label Content="Nom" Height="19" HorizontalAlignment="Left" Margin="18,37,0,0" x:Name="lbl_Nom" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="123,35,0,0" MaxLength="50" x:Name="Txt_NomClient"  VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <sdk:Label Content="Tournée" Height="19" HorizontalAlignment="Left" Margin="17,63,0,0" x:Name="lab_Tournee" VerticalAlignment="Top" Width="72" />
+                    <sdk:Label Content="Catégorie Client" Height="19" HorizontalAlignment="Left" Margin="17,220,0,0" x:Name="lbl_CategorieClient" VerticalAlignment="Top" Width="103" />
+                    <sdk:Label Content="Téléphone" Height="19" HorizontalAlignment="Left" Margin="18,194,0,0" x:Name="lbl_Telephone" VerticalAlignment="Top" Width="74" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="123,192,0,0" MaxLength="17" x:Name="txt_Telephone" VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <sdk:Label Content="Numéro lot" Height="22" HorizontalAlignment="Left" Margin="17,86,0,0" x:Name="lbl_NumLot" VerticalAlignment="Top" Width="72" />
+                    <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,86,363,0" MaxLength="10" x:Name="txt_NumLot" VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <sdk:Label Content="Pièce d'identité" Height="18" HorizontalAlignment="Left" Margin="18,245,0,0" x:Name="lbl_Piece" VerticalAlignment="Top" Width="95" />
+                    <sdk:Label Content="Commune" Height="23" HorizontalAlignment="Left" Margin="17,112,0,0" x:Name="lbl_Commune" VerticalAlignment="Top" Width="72" />
+                    <TextBox HorizontalAlignment="Right" IsReadOnly="True" Margin="0,114,580,343" x:Name="txt_Commune" Width="62" />
+                    <sdk:Label Content="Quartier" Height="23" HorizontalAlignment="Left" Margin="16,138,0,0" x:Name="lbl_Quartier" VerticalAlignment="Top" Width="73" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,138,580,0" x:Name="txt_Quartier" VerticalAlignment="Top" Width="62" />
+                    <sdk:Label Content="Rue" Height="19" HorizontalAlignment="Left" Margin="16,166,0,0" x:Name="lbl_Rue" VerticalAlignment="Top" Width="73" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,164,580,0" x:Name="txt_NumRue" VerticalAlignment="Top" Width="62" />
+                    <sdk:Label Content="Numéro Pièce" Height="18" HorizontalAlignment="Left" Margin="18,272,0,0" x:Name="lbl_NumPiece" VerticalAlignment="Top" Width="108" />
+                    <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,295,363,0" MaxLength="63" x:Name="txtPropriete" VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <sdk:Label Content="Adresse" Height="23" HorizontalAlignment="Left" Margin="18,321,0,0" x:Name="lbl_Adresse" VerticalAlignment="Top" Width="108" />
+                    <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,321,363,0" MaxLength="50" x:Name="txtAdresse" VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <sdk:Label Content="Propriété" Height="23" HorizontalAlignment="Left" Margin="18,295,0,0" x:Name="lbl_Proprio" VerticalAlignment="Top" Width="87" />
+                    <TextBox Height="23" HorizontalAlignment="Right"  Margin="0,269,363,0" MaxLength="20" x:Name="txtNumeroPiece"  VerticalAlignment="Top" Width="280" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,112,363,0" MaxLength="10" x:Name="Txt_LibelleCommune" VerticalAlignment="Top" Width="212" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,138,363,0" MaxLength="10" x:Name="Txt_LibelleQuartier" VerticalAlignment="Top" Width="212" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,164,363,0" MaxLength="10" x:Name="Txt_Porte" VerticalAlignment="Top" Width="103" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,218,363,0" MaxLength="10" x:Name="Txt_LibelleCategorie" VerticalAlignment="Top" Width="280" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,243,362,0" MaxLength="10" x:Name="Txt_TypePiece" VerticalAlignment="Top" Width="281" />
+                    <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,61,363,0" MaxLength="10" x:Name="Txt_LibelleTournee" VerticalAlignment="Top" Width="280" />
+                    <sdk:Label Content="Porte" Height="19" HorizontalAlignment="Left" Margin="222,166,0,0" x:Name="lbl_Rue_Copy" VerticalAlignment="Top" Width="73" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Abonnement" x:Name="tabItemAbonnement">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <my:GroupBox Header="Informations abonnement"  Margin="2,1,4,0" x:Name="Gbo_InformationAbonnement" />
+                    <sdk:Label Content="Code Tarif" Height="17" HorizontalAlignment="Left" Margin="43,22,0,0" x:Name="lbl_Tarif" VerticalAlignment="Top" Width="175" />
+                    <TextBox  Height="23" HorizontalAlignment="Left" Margin="219,44,0,0" x:Name="Txt_CodePussanceSoucrite" VerticalAlignment="Top" Width="47"  IsReadOnly="True" />
+                    <sdk:Label Content="Puissance Souscrite" Height="17" HorizontalAlignment="Left" Margin="43,47,0,0" x:Name="lbl_PuissanceSouscrite" VerticalAlignment="Top" Width="175" />
+                    <sdk:Label Content="Puissance Utiliser" Height="17" HorizontalAlignment="Left" Margin="43,72,0,0" x:Name="lbl_PuissanceUtilise" VerticalAlignment="Top" Width="176" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,92,0,0" x:Name="Txt_CodeRistoune" VerticalAlignment="Top" Width="47" IsReadOnly="True" />
+                    <sdk:Label Content="Ristourne" Height="17" HorizontalAlignment="Left" Margin="43,96,0,0" x:Name="lbl_Ristourne" VerticalAlignment="Top" Width="175" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,116,0,0" x:Name="Txt_CodeForfait" VerticalAlignment="Top" Width="47" IsReadOnly="True" />
+                    <sdk:Label Content="Forfait" Height="16" HorizontalAlignment="Left" Margin="43,120,0,0" x:Name="lbl_Forfait" VerticalAlignment="Top" Width="176" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,142,0,0" x:Name="textBox23" VerticalAlignment="Top" Width="47" IsReadOnly="True" />
+                    <sdk:Label Content="Forfait Personalisé Annuel" Height="17" HorizontalAlignment="Left" Margin="43,144,0,0" x:Name="lbl_ForfaitPersonaliseAnnuel" VerticalAlignment="Top" Width="176" />
+                    <TextBox  Height="23" HorizontalAlignment="Left" Margin="219,167,0,0" x:Name="Txt_CodeFrequence" VerticalAlignment="Top" Width="47"  IsReadOnly="True" />
+                    <sdk:Label Content="Periodicite" Height="17" HorizontalAlignment="Left" Margin="40,171,0,0" x:Name="lbl_Periodicite" VerticalAlignment="Top" Width="171" />
+                    <TextBox  Height="23" HorizontalAlignment="Left" Margin="219,194,0,0" x:Name="Txt_CodeMoisFacturation" VerticalAlignment="Top" Width="47"  IsReadOnly="True" />
+                    <sdk:Label Content="Mois Facturation" Height="17" HorizontalAlignment="Left" Margin="43,197,0,0" x:Name="lbl_MoisFact" VerticalAlignment="Top" Width="168" />
+                    <sdk:Label Content="Au" Height="17" HorizontalAlignment="Left" Margin="367,254,0,0" x:Name="lbl_MoisReleve" VerticalAlignment="Top" Width="46" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="269,116,0,0" x:Name="Txt_LibelleForfait" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+                    <sdk:Label Content="Coefficient de facturation" Height="17" HorizontalAlignment="Left" Margin="43,280,0,0" x:Name="label1" VerticalAlignment="Top" Width="172" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="269,167,0,0" x:Name="Txt_LibelleFrequence" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="269,194,0,0" x:Name="Txt_LibMoisFact" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,220,0,0" x:Name="Txt_CodeMoisIndex" VerticalAlignment="Top" Width="47"  IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="269,220,0,0" x:Name="Txt_LibelleMoisIndex" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,276,0,0" x:Name="textBox7" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,19,0,0" x:Name="Txt_CodeTarif" VerticalAlignment="Top" Width="47"  IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="269,19,0,0" x:Name="Txt_LibelleTarif" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+                    <sdk:Label Content="Date de Contract" Height="17" HorizontalAlignment="Left" Margin="345,280,0,0" x:Name="lbl_DateAbonnement" VerticalAlignment="Top" Width="103" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="448,280,0,0" x:Name="Txt_DateAbonnement" VerticalAlignment="Top" Width="110"  IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,68,0,0" x:Name="Txt_CodePuissanceUtilise" VerticalAlignment="Top" Width="47" IsReadOnly="True" />
+
+                    <CheckBox Name="Chk_IsExonneration" Content="Est exoneré de TVA" HorizontalAlignment="Left" Margin="43,250,0,0" VerticalAlignment="Top" Width="169"/>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="219,248,0,0" x:Name="textBox7_Copy" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="448,250,0,0" x:Name="textBox7_Copy1" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+                    <sdk:Label Content="Mois relève" Height="17" HorizontalAlignment="Left" Margin="43,222,0,0" x:Name="lbl_MoisFact_Copy" VerticalAlignment="Top" Width="168" />
+
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Appareils" x:Name="tabItemAppareils">
+                <Grid>
+                    <sdk:DataGrid AutoGenerateColumns="False" x:Name="dtgAppareils" Margin="3,6,6,76" IsReadOnly="True">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding CODEAPPAREIL, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Code Appareil" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding DESIGNATION, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Designation" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding NBRE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nombre" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding PUISSANCE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Puissance" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Cout de la demande"  x:Name="tabItemFournitures" Height="24" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <sdk:DataGrid AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False"  x:Name="dataGridForniture" LoadingRow="dgMyDataGrid_LoadingRow" Width="756" Margin="4,6,6,55" IsReadOnly="True">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding DESIGNATION, Mode=TwoWay}" Header="Désignation" CanUserReorder="True" CanUserResize="True" MinWidth="200" CanUserSort="True" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding QUANTITE, Mode=TwoWay}" Header="Quantité" CanUserReorder="True" CanUserResize="True" MinWidth="90" CanUserSort="True" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding PRIX_UNITAIRE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="Prix" CanUserReorder="True" MinWidth="90" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANTHT,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="Hors Taxe " CanUserReorder="True" MinWidth="120" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANTTAXE,Converter={StaticResource DecimalConverter}, Mode=TwoWay}" Header="Taxe " CanUserReorder="True" MinWidth="120" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANTTTC,Converter={StaticResource DecimalConverter}, Mode=TwoWay}"  Header="Coût TTC" CanUserReorder="True" MinWidth="120" CanUserResize="True" CanUserSort="True" Width="Auto" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:Label Content="Total HT" Height="19"   HorizontalAlignment="Left" Margin="6,429,0,0" x:Name="lbl_TotalHT" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" Foreground="Green" IsReadOnly="True" Margin="159,428,0,0" MaxLength="50" x:Name="Txt_TotalHt" VerticalAlignment="Top" Width="183" />
+                    <sdk:Label Content="Total TTC" Height="19" HorizontalAlignment="Left" Margin="6,454,0,0" x:Name="lbl_TotalTTC" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" Foreground="Green" IsReadOnly="True" Margin="159,454,0,0" MaxLength="50" x:Name="Txt_TotalTtc" VerticalAlignment="Top" Width="183" />
+                    <sdk:Label Content="Total TVA" Height="19" HorizontalAlignment="Left" Margin="416,428,0,0" x:Name="lbl_TotalTVA" VerticalAlignment="Top" Width="71" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" FontSize="12" FontWeight="Bold" Foreground="Green" Margin="569,427,0,0" MaxLength="50" x:Name="Txt_TotalTva" VerticalAlignment="Top" Width="183" />
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Annotation" x:Name="tabItemAnnotation" HorizontalAlignment="Left" Width="77">
+                <Grid>
+                    <sdk:DataGrid HorizontalAlignment="Left" Height="413" Name="dtg_Annotation" AutoGenerateColumns="False"  Margin="10,32,0,0" VerticalAlignment="Top" Width="746">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Commentaire" Width="Auto" Binding="{Binding COMMENTAIRE, Mode=TwoWay}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Agent" Width="Auto" Binding="{Binding LIBELLEAGENT, Mode=TwoWay}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date" Width="Auto" Binding="{Binding DATECREATION,Converter={StaticResource DateTimeConverter}, Mode=TwoWay}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Métré" x:Name="tabItemMetre" HorizontalAlignment="Right" Width="48" Margin="0,0,2,0" Height="24" VerticalAlignment="Top">
+                <Grid>
+                    <sdk:Label Content="Distance Branchement " Height="20" HorizontalAlignment="Left" Margin="24,45,0,0" x:Name="lDistance" VerticalAlignment="Top" Width="140" />
+                    <CheckBox Content="Branchement avec extension" IsChecked="false" IsEnabled="False"  Height="20" HorizontalAlignment="Left" Margin="17,21,0,0" x:Name="Chk_BranchementAvecExtension" VerticalAlignment="Top" Width="193"  />
+                    <CheckBox Content="Changement de compteur" IsEnabled="False"  IsChecked="false" Height="20" HorizontalAlignment="Left" Margin="220,21,0,0" x:Name="Chk_ChangementDeCompteur" VerticalAlignment="Top" Width="182" RenderTransformOrigin="0.502,-1.193"  />
+
+                    <sdk:Label Content="Calibre" Height="20" HorizontalAlignment="Left" Margin="24,98,0,0" x:Name="label3" VerticalAlignment="Top" Width="140" />
+                    <sdk:Label Content="Schema" Height="20" HorizontalAlignment="Left" Margin="10,230,0,0" x:Name="label5" VerticalAlignment="Top" Width="85" Visibility="Collapsed" />
+                    <sdk:Label Content="Branchement proche" Height="20" HorizontalAlignment="Left" Margin="24,72,0,0" x:Name="label7" VerticalAlignment="Top" Width="140" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,68,0,0" MaxLength="20" x:Name="Txt_BranchementProche" VerticalAlignment="Top" Width="182" />
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="163,42,0,0" x:Name="Txt_Distance" VerticalAlignment="Top" Width="182"  IsReadOnly="True" />
+                    <sdk:Label Content="Ordre Tournée" Height="20" HorizontalAlignment="Left" Margin="24,156,0,0" x:Name="label8" VerticalAlignment="Top" Width="140" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,153,0,0" MaxLength="50" x:Name="TxtOrdreTournee" VerticalAlignment="Top" Width="182" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,94,0,0" MaxLength="20" x:Name="Txt_Typedecompteur" VerticalAlignment="Top" Width="182" />
+                    <sdk:Label Content="Tournée " Height="20" HorizontalAlignment="Left" Margin="24,127,0,0" x:Name="label3_Copy" VerticalAlignment="Top" Width="140" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,123,0,0" MaxLength="20" x:Name="Txt_Tournee" VerticalAlignment="Top" Width="182" />
+                    <sdk:Label Content="Puissance" Height="20" HorizontalAlignment="Left" Margin="24,184,0,0" x:Name="label8_Puissance" VerticalAlignment="Top" Width="140" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsReadOnly="True" Margin="163,181,0,0" MaxLength="50" x:Name="TxtPuissance" VerticalAlignment="Top" Width="182" />
+
+                    <sdk:Label Content="Type de branchement" Height="17" HorizontalAlignment="Left" Margin="411,34,0,0" x:Name="lbl_diametre" VerticalAlignment="Top" Width="124" />
+                    <TextBox Height="23" HorizontalAlignment="Left" x:Name="Txt_LibelleTypeBrt" VerticalAlignment="Top" Width="194" IsReadOnly="True" Margin="555,31,0,0" />
+                    <sdk:Label Content="Quartier Du Poste" Height="19" HorizontalAlignment="Left" Margin="410,103,0,0" x:Name="lbl_QuartierDuPoste" VerticalAlignment="Top" Width="133" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="556,106,0,0" x:Name="Txt_LibelleQuartierPoste" VerticalAlignment="Top" Width="194" />
+                    <sdk:Label Content="Depart HTA" Height="17" HorizontalAlignment="Left" Margin="410,78,0,0" x:Name="lbl_Depart" VerticalAlignment="Top" Width="128" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="556,82,0,0" x:Name="Txt_LibelleDepartHTA" VerticalAlignment="Top" Width="193" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  IsReadOnly="True" Margin="556,0,0,245" x:Name="Txt_AdresseElectrique" VerticalAlignment="Bottom" Width="187" />
+                    <sdk:Label Content="Adresse électrique " Height="20" HorizontalAlignment="Left" Margin="410,209,0,0" x:Name="lbl_Codification" VerticalAlignment="Top" Width="129" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="163,0,0,244" x:Name="TxtLongitude" VerticalAlignment="Bottom" Width="68" IsReadOnly="True" />
+                    <sdk:Label Content="Longitude" Height="20" HorizontalAlignment="Left" Margin="24,213,0,0" x:Name="lbl_longitude" VerticalAlignment="Top" Width="119" />
+                    <TextBox Height="23" HorizontalAlignment="Left"  Margin="289,0,0,244" x:Name="TxtLatitude" VerticalAlignment="Bottom" Width="56" IsReadOnly="True" />
+                    <sdk:Label Content="Latitude" Height="20" HorizontalAlignment="Left" Margin="237,214,0,0" x:Name="lbl_latitude" VerticalAlignment="Top" Width="59" />
+                    <sdk:Label Content="Poste Source" Height="17" HorizontalAlignment="Left" Margin="410,54,0,0" x:Name="lbl_Depart_Copy" VerticalAlignment="Top" Width="133" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="556,56,0,0" x:Name="Txt_LibellePosteSource" VerticalAlignment="Top" Width="193" />
+                    <sdk:Label Content="Poste transformateur" Height="19" HorizontalAlignment="Left" Margin="410,130,0,0" x:Name="lbl_QuartierDuPoste_Copy" VerticalAlignment="Top" Width="128" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="556,132,0,0" x:Name="Txt_LibellePosteTransformateur" VerticalAlignment="Top" Width="194" />
+                    <sdk:Label Content="Depart BT" Height="19" HorizontalAlignment="Left" Margin="408,157,0,0" x:Name="lbl_QuartierDuPoste_Copy1" VerticalAlignment="Top" Width="130" />
+                    <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="556,158,0,0" x:Name="Txt_LibelleDepartBt" VerticalAlignment="Top" Width="194" />
+                    <TextBox Height="23" HorizontalAlignment="Left" MaxLength="4" Margin="556,0,0,271" x:Name="Txt_NeoudFinal" VerticalAlignment="Bottom" Width="45"  IsReadOnly="True"/>
+                    <sdk:Label Content="Noeud Final" Height="18" HorizontalAlignment="Left" Margin="410,180,0,0" x:Name="lbl_NoeudFinal" VerticalAlignment="Top" Width="129" />
+                    <my:GroupBox Height="113" HorizontalAlignment="Left" Margin="10,317,0,-1" x:Name="groupBox1" VerticalAlignment="Top" Width="746" Header="Frais de participation" />
+                    <sdk:DataGrid x:Name="dgListeFraixParicipation"  HorizontalAlignment="Left" Height="92" Margin="163,331,0,0" VerticalAlignment="Top" Width="554" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn Binding="{Binding REF_CLIENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="CLIENT" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="MONTANT" Width="Auto" />
+                            <sdk:DataGridCheckBoxColumn Binding="{Binding ESTEXONERE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="EST GRATUIT" Width="Auto" />
+                            <sdk:DataGridTemplateColumn Header="PIECE">
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <HyperlinkButton Content="Voir la pièce" FontWeight="Bold"  x:Name="hyperlinkButtonPropScannee__" Click="hyperlinkParticipation___Click" Tag="{Binding PREUVE, Mode=TwoWay}"  />
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+
+
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Rejet" x:Name="tabItemRejet" HorizontalAlignment="Left" Width="71" Margin="0,0,0,0">
+                <Grid>
+                    <sdk:DataGrid HorizontalAlignment="Left" Height="413" Name="dtg_RejetDemande" AutoGenerateColumns="False"  Margin="10,32,0,0" VerticalAlignment="Top" Width="746">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Commentaire" Width="Auto" Binding="{Binding COMMENTAIRE, Mode=TwoWay}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Agent" Width="Auto" Binding="{Binding NOMUTILISATEUR, Mode=TwoWay}"/>
+                            <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date" Width="Auto" Binding="{Binding DATECOMMENTAIRE,Converter={StaticResource DateTimeConverter}, Mode=TwoWay}"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Piece jointe" x:Name="tabPieceJointe_Copy" Margin="3,0,-3,0" >
+                <Grid Margin="0,0,0,41">
+                    <Viewbox Height="368" HorizontalAlignment="Left" Name="Vwb" VerticalAlignment="Top" Width="871" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <Button x:Name="btn_transmetre" Content="Transmettre"  Width="105" Height="23" HorizontalAlignment="Right" Margin="0,8,112,0" Grid.Row="1" VerticalAlignment="Top" Click="btn_transmetre_Click" />
+        <Button Content="Rejeter" x:Name="RejeterButton" HorizontalAlignment="Left" Margin="437,8,0,0" VerticalAlignment="Top" Width="122" Height="23" Click="RejeterButton_Click" Grid.Row="1"/>
+        <TextBox HorizontalAlignment="Left" Height="56" x:Name="txt_annotaion" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="635" Margin="121,519,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" x:Name="lbl_annotaion" VerticalAlignment="Top" Content="Annotation :" Width="120" Margin="36,519,0,0"/>
+
+    </Grid>
+</sdk:ChildWindow>

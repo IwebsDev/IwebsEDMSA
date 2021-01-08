@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Ajouter" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="Montant_due" xml:space="preserve">
+    <value>Montant dû</value>
+  </data>
+  <data name="Amount_to_pay" xml:space="preserve">
+    <value>Reste à payer</value>
+  </data>
+  <data name="Annuler" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Candidat</value>
+  </data>
+  <data name="Bill_Number" xml:space="preserve">
+    <value>Facture</value>
+  </data>
+  <data name="Btn_all" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="Btn_Nth" xml:space="preserve">
+    <value>Rien</value>
+  </data>
+  <data name="Btn_annuler" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Btn_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Btn_Payement" xml:space="preserve">
+    <value>Paiement</value>
+  </data>
+  <data name="button2" xml:space="preserve">
+    <value>Lister les clients</value>
+  </data>
+  <data name="button3" xml:space="preserve">
+    <value>Reference client</value>
+  </data>
+  <data name="button4" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Caissier" xml:space="preserve">
+    <value>Caissier</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Cash_number" xml:space="preserve">
+    <value>N° de versement</value>
+  </data>
+  <data name="Cash_register_number" xml:space="preserve">
+    <value>N° d'enregistrement cash</value>
+  </data>
+  <data name="Chb_Resil" xml:space="preserve">
+    <value>Résilié</value>
+  </data>
+  <data name="btn_verifier" xml:space="preserve">
+    <value>Verifier </value>
+  </data>
+  <data name="checkBox1" xml:space="preserve">
+    <value>Paiement multiple</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Effacer</value>
+  </data>
+  <data name="Client_sur_le_recu" xml:space="preserve">
+    <value>Client sur le reçu</value>
+  </data>
+  <data name="CodeGroup" xml:space="preserve">
+    <value>Paiement groupe</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Deposit" xml:space="preserve">
+    <value>Dépôt</value>
+  </data>
+  <data name="Due_on" xml:space="preserve">
+    <value>Exigible le</value>
+  </data>
+  <data name="Entrant" xml:space="preserve">
+    <value>Entrant</value>
+  </data>
+  <data name="Facture" xml:space="preserve">
+    <value>Facture</value>
+  </data>
+  <data name="headeredContentControl2" xml:space="preserve">
+    <value>Factures</value>
+  </data>
+  <data name="headeredContentControl3" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="headeredContentControl4" xml:space="preserve">
+    <value>Paiement</value>
+  </data>
+  <data name="hyperlinkButtonhyperlinkButton1" xml:space="preserve">
+    <value>Liste des references</value>
+  </data>
+  <data name="Id_Num_carte" xml:space="preserve">
+    <value>N° de carte ID</value>
+  </data>
+  <data name="Incl" xml:space="preserve">
+    <value>Incl</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>Clients selectionnés</value>
+  </data>
+  <data name="label2" xml:space="preserve">
+    <value>Versement</value>
+  </data>
+  <data name="label3" xml:space="preserve">
+    <value>Solde avant paiement</value>
+  </data>
+  <data name="label4" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="label5" xml:space="preserve">
+    <value>Total à regler</value>
+  </data>
+  <data name="label6" xml:space="preserve">
+    <value>Solde courant</value>
+  </data>
+  <data name="Less_tax" xml:space="preserve">
+    <value>Less tax</value>
+  </data>
+  <data name="Mode_paiement" xml:space="preserve">
+    <value>Mode de paiement</value>
+  </data>
+  <data name="Modifier" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="Montant" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="Montant_recu" xml:space="preserve">
+    <value>Montant reçu</value>
+  </data>
+  <data name="Nature" xml:space="preserve">
+    <value>Nature</value>
+  </data>
+  <data name="Nom" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Numero_requete" xml:space="preserve">
+    <value>N° de demande</value>
+  </data>
+  <data name="Obligatoire" xml:space="preserve">
+    <value>Obligatoire</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Paiement" xml:space="preserve">
+    <value>Paiement</value>
+  </data>
+  <data name="Penalties" xml:space="preserve">
+    <value>Penalités</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Période</value>
+  </data>
+  <data name="Petty_cash_float" xml:space="preserve">
+    <value>Fond de caisse</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Imprimante</value>
+  </data>
+  <data name="Montant_Devis" xml:space="preserve">
+    <value>Montant du devis</value>
+  </data>
+  <data name="Devis_numb" xml:space="preserve">
+    <value>N° de devis</value>
+  </data>
+  <data name="Raison_annulation" xml:space="preserve">
+    <value>Raison de l'annulation</value>
+  </data>
+  <data name="Raison_ouverture" xml:space="preserve">
+    <value>Raison ouverture</value>
+  </data>
+  <data name="Num_Recu" xml:space="preserve">
+    <value>N° de reçu</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="Reference_client" xml:space="preserve">
+    <value>Reference client</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="Sortant" xml:space="preserve">
+    <value>Sortant</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Taxe</value>
+  </data>
+  <data name="Total_annule" xml:space="preserve">
+    <value>Total annulé</value>
+  </data>
+  <data name="Total_collecte" xml:space="preserve">
+    <value>Total collecté</value>
+  </data>
+  <data name="Total_cost_req" xml:space="preserve">
+    <value>Coût total des requetes</value>
+  </data>
+  <data name="Transit_Payment" xml:space="preserve">
+    <value>Déja payé</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Mise à jour</value>
+  </data>
+  <data name="Utilisateur" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="amount_receive" xml:space="preserve">
+    <value>Montant reçu</value>
+  </data>
+  <data name="Btn_printer" xml:space="preserve">
+    <value>Imprimante</value>
+  </data>
+  <data name="Caisse" xml:space="preserve">
+    <value>Caisse</value>
+  </data>
+  <data name="Chk_cash" xml:space="preserve">
+    <value>Espèces</value>
+  </data>
+  <data name="Chk_checque" xml:space="preserve">
+    <value>Chèque</value>
+  </data>
+  <data name="Chk_discount_charges" xml:space="preserve">
+    <value>Charges</value>
+  </data>
+  <data name="Chk_other" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="errorTitle" xml:space="preserve">
+    <value>Erreur </value>
+  </data>
+  <data name="informationTitle" xml:space="preserve">
+    <value>Informations !</value>
+  </data>
+  <data name="Lbl_amount" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="Lbl_bank" xml:space="preserve">
+    <value>Banque</value>
+  </data>
+  <data name="Lbl_checque_number" xml:space="preserve">
+    <value>N° de chèque</value>
+  </data>
+  <data name="Lbl_collected" xml:space="preserve">
+    <value>Somme payé</value>
+  </data>
+  <data name="Lbl_due" xml:space="preserve">
+    <value>Somme à payer</value>
+  </data>
+  <data name="Lbl_receipt" xml:space="preserve">
+    <value>Reçu</value>
+  </data>
+  <data name="Lbl_stamp_duty" xml:space="preserve">
+    <value>Coût timbre</value>
+  </data>
+  <data name="Lbl_user_id" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="To_return" xml:space="preserve">
+    <value>A rendre</value>
+  </data>
+  <data name="msg_wcf_error" xml:space="preserve">
+    <value>Erreur survenue lors du traitement serveur . Réessayer svp!</value>
+  </data>
+  <data name="lbl_TotalDu" xml:space="preserve">
+    <value>Total a payer</value>
+  </data>
+  <data name="btn_update" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="LibelleModule" xml:space="preserve">
+    <value>Caisse</value>
+  </data>
+  <data name="MsgAnnulationDebut" xml:space="preserve">
+    <value>Annulé par </value>
+  </data>
+  <data name="MsgAnnulationFin" xml:space="preserve">
+    <value>le</value>
+  </data>
+  <data name="MsgCaisseNonCloture" xml:space="preserve">
+    <value>Veuillez cloturer la journée précédente</value>
+  </data>
+  <data name="MsgPasCaissier" xml:space="preserve">
+    <value>Vous n'êtes pas caissier</value>
+  </data>
+  <data name="MsgMultiPayement" xml:space="preserve">
+    <value>Vous devez payer le montant du pour les paiements multiple</value>
+  </data>
+  <data name="lbl_NumFacture" xml:space="preserve">
+    <value>N° de facture</value>
+  </data>
+  <data name="Total_HT" xml:space="preserve">
+    <value>Total Hors taxe</value>
+  </data>
+  <data name="LibelleAvance" xml:space="preserve">
+    <value>Avance</value>
+  </data>
+  <data name="MontantDevis" xml:space="preserve">
+    <value>Montant devis</value>
+  </data>
+  <data name="MsgFermetureCaisse1" xml:space="preserve">
+    <value>Ce traitement supprimera les transactions 
+depuis la dernier cloture de la caisse . 
+Cliquer ok pour confirmer</value>
+  </data>
+  <data name="MsgPasDemande" xml:space="preserve">
+    <value>Demande non trouvée</value>
+  </data>
+  <data name="MsgPasDemandeDejaEncaisse" xml:space="preserve">
+    <value>Demande déja encaissée</value>
+  </data>
+  <data name="msg_encaissement_interdit" xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à faire des encaissements</value>
+  </data>
+  <data name="msg_entrez_numero_recu" xml:space="preserve">
+    <value>Veuillez entrer le numero de reçu</value>
+  </data>
+  <data name="msg_error_dernier_numero_recu" xml:space="preserve">
+    <value>Impossible de recuperer le dernier numero de caisse, veuillez attendre quelques minutes et recommencez</value>
+  </data>
+  <data name="msg_error_mode_reglement" xml:space="preserve">
+    <value>Impossible de recuperer les modes de reglement suplementaires</value>
+  </data>
+  <data name="msg_error_no_data" xml:space="preserve">
+    <value>Pas de donnés disponibles</value>
+  </data>
+  <data name="msg_error_remote" xml:space="preserve">
+    <value>Erreur de connexion au service</value>
+  </data>
+  <data name="msg_error_server_address" xml:space="preserve">
+    <value>Impossible de recuperer l'adresse du serveur de base de donnée</value>
+  </data>
+  <data name="msg_fichier_local_inexistant" xml:space="preserve">
+    <value>Fichier d'encaissement local inexistant, et impossible de la recreer</value>
+  </data>
+  <data name="msg_mode_paiement" xml:space="preserve">
+    <value>Vous devez choisir un mode de paiement</value>
+  </data>
+  <data name="msg_numero_cheque" xml:space="preserve">
+    <value>Le numero de cheque est incorrect</value>
+  </data>
+  <data name="msg_pas_de_facture" xml:space="preserve">
+    <value>Aucune facture trouvée pour ce code de regroupement</value>
+  </data>
+  <data name="msg_test_connexion" xml:space="preserve">
+    <value>Test de connexion ...</value>
+  </data>
+  <data name="Msg_reference_client" xml:space="preserve">
+    <value>Vous devez renseigner la reference du client</value>
+  </data>
+  <data name="MsgBuzy" xml:space="preserve">
+    <value>Operation en cours.....</value>
+  </data>
+  <data name="MsgCaisseOuverteExiste" xml:space="preserve">
+    <value>Une journée est deja ouverte pour cette caisse</value>
+  </data>
+  <data name="MsgCaisseTrouvee" xml:space="preserve">
+    <value>Aucune caisse trouvée</value>
+  </data>
+  <data name="MsgFermer" xml:space="preserve">
+    <value>Veuillez fermer la caisse en cours</value>
+  </data>
+  <data name="MsgOuvertureCaisse1" xml:space="preserve">
+    <value>La date du </value>
+  </data>
+  <data name="MsgOuvertureCaisse11" xml:space="preserve">
+    <value>a été ouverte pour le caissier </value>
+  </data>
+  <data name="lbl_controle" xml:space="preserve">
+    <value>Etat de caisse</value>
+  </data>
+  <data name="MsgCaissierNonTrouve" xml:space="preserve">
+    <value>Caissier non trouvée</value>
+  </data>
+  <data name="MsgOverpayement" xml:space="preserve">
+    <value>Devez vous rendre la monnaie au client?</value>
+  </data>
+  <data name="MsgMontantEleve" xml:space="preserve">
+    <value>Le montant saisi est supérieur au montant dû.
+Confirmez vous la saisie</value>
+  </data>
+  <data name="Chb_FraisHorsPlace" xml:space="preserve">
+    <value>Frais hors place</value>
+  </data>
+  <data name="lbl_Client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="MsgCaisseDejaFerme" xml:space="preserve">
+    <value>Caisse déja cloturée.
+Impossible d'ouvrir la caisse pour cette journée.</value>
+  </data>
+  <data name="MsgCaisseOuverteAlaDemande" xml:space="preserve">
+    <value>La journée du ... a été ouverte pour l'utilisateur </value>
+  </data>
+  <data name="lbl_dont" xml:space="preserve">
+    <value>dont</value>
+  </data>
+  <data name="lbl_NbreLigneFacture" xml:space="preserve">
+    <value>Ligne(s) pour</value>
+  </data>
+  <data name="lbl_nombreExigible" xml:space="preserve">
+    <value>exigible(s) pour</value>
+  </data>
+  <data name="Msg_MontantPayeIncorecte" xml:space="preserve">
+    <value>Le montant à payer ne doit pas être inférieur à</value>
+  </data>
+  <data name="Msg_MontantPayeSuperieur" xml:space="preserve">
+    <value>Le montant payé ne dois pas ètre supérieur a</value>
+  </data>
+  <data name="lbl_FondCaisseInit" xml:space="preserve">
+    <value>Fond de caisse actuel</value>
+  </data>
+  <data name="lbl_MontantHT" xml:space="preserve">
+    <value>Montant hors frais</value>
+  </data>
+  <data name="lbl_NouveauFond" xml:space="preserve">
+    <value>Nouveau fond de caisse </value>
+  </data>
+  <data name="lbl_NumMoratoire" xml:space="preserve">
+    <value>Numéro moratoire</value>
+  </data>
+  <data name="rd_Entre" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+  <data name="rd_Sortie" xml:space="preserve">
+    <value>Sortie</value>
+  </data>
+  <data name="Data_Loading" xml:space="preserve">
+    <value>Veuillez patienter chargement de données en cours ..</value>
+  </data>
+  <data name="AucunRegClient" xml:space="preserve">
+    <value>Il n'existe aucun regroupement client </value>
+  </data>
+  <data name="msgPlusDeCaisse" xml:space="preserve">
+    <value>Plus de caisse disponible pour ce site
+Veuillez contacter l'administrateur !!</value>
+  </data>
+  <data name="msgClotureCaisse" xml:space="preserve">
+    <value>Vous allez cloturer la caisse .
+Les donneés de cette journée ne serons plus accéssibles.</value>
+  </data>
+  <data name="MontantPayer" xml:space="preserve">
+    <value>Montant payé</value>
+  </data>
+  <data name="TypePaiementAnticipe" xml:space="preserve">
+    <value>Paiement anticipé</value>
+  </data>
+  <data name="msgReversement" xml:space="preserve">
+    <value>Reversement effectué avec succès</value>
+  </data>
+  <data name="msg_PayerInferieurDu" xml:space="preserve">
+    <value>Le montant payé doit ètre supérieur au montant dû</value>
+  </data>
+  <data name="ErreurModeReglement" xml:space="preserve">
+    <value>Ce mode reglement n'existe pas dans les modes de reglement</value>
+  </data>
+  <data name="MsgDevisDejaEncaisse" xml:space="preserve">
+    <value>Devis déja encaissé</value>
+  </data>
+  <data name="MsgEtapeDevis" xml:space="preserve">
+    <value>Ce devis n'est pas encore a la caisse</value>
+  </data>
+  <data name="MsgImposibleArretCaisse" xml:space="preserve">
+    <value>Demande d'annulation en cours.
+Impossible d'arreter la caisse .</value>
+  </data>
+  <data name="Montant_Encaissé" xml:space="preserve">
+    <value>Montant encaissé</value>
+  </data>
+  <data name="lbl_Centre" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="lbl_Ordre" xml:space="preserve">
+    <value>Ordre</value>
+  </data>
+</root>

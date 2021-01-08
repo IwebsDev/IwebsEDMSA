@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Eservice/EserviceService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:1818/Eservice/EserviceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+  <xs:element name="ListeDesClientPourEnvoieMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CentreClient" nillable="true" type="q1:ArrayOfint" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstPeriode" nillable="true" type="q2:ArrayOfstring" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="email" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesClientPourEnvoieMailResult" nillable="true" type="q3:ArrayOfCsEnvoiMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailRegroupement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClient" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstPeriode" nillable="true" type="q4:ArrayOfstring" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstRegroupement" nillable="true" type="q5:ArrayOfstring" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="email" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailRegroupementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesClientPourEnvoieMailRegroupementResult" nillable="true" type="q6:ArrayOfCsEnvoiMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailDiffusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Categorie" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tourne" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sms" type="xs:boolean" />
+        <xs:element minOccurs="0" name="email" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesClientPourEnvoieMailDiffusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesClientPourEnvoieMailDiffusionResult" nillable="true" type="q7:ArrayOfCsEnvoiMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvoyerFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="facturesAEnvoyer" nillable="true" type="q8:ArrayOfCsEnvoiMail" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parametresRDLC" nillable="true" type="q9:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnvoyerFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="EnvoyerFacturesResult" nillable="true" type="q10:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesFactures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="client" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numFacture" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListeDesFacturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Galatee.Structure" minOccurs="0" name="ListeDesFacturesResult" nillable="true" type="q11:ArrayOfCsFactureClient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

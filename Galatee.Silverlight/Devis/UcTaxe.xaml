@@ -1,0 +1,20 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Devis.UcTaxe"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="410" Height="172" OverlayBrush="Transparent" 
+           Title="Choix de la taxe" xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <my:GroupBox Height="62" HorizontalAlignment="Left" Name="Gbo_Taxe" Header="Taxe" VerticalAlignment="Top" Width="378" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="12,25,0,0" Name="label1" VerticalAlignment="Top" Width="66" Content="Taux" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,24,228,0" Name="Txt_TauxTaxe" VerticalAlignment="Top" Width="72" IsReadOnly="True" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="156,24,0,0" Name="Cbo_Taxe" VerticalAlignment="Top" Width="210" SelectionChanged="Cbo_Taxe_SelectionChanged" />
+    </Grid>
+</controls:ChildWindow>

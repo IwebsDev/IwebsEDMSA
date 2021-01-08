@@ -1,0 +1,72 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+           x:Class="Galatee.Silverlight.Precontentieux.FrmModificationMoratoire"
+           Width="762" Height="564" OverlayBrush="Transparent"
+           Title="Nouveau moratoire" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="443*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" Header="Factures" Height="111" Margin="0,72,274,0" x:Name="groupBox2" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="Echéances" Height="363" Margin="465,72,0,0" x:Name="groupBox3" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="Caractéristiques de l'échelonnement" Height="238" Margin="0,193,274,0" x:Name="groupBox4" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="Périodicité" Height="91" Margin="9,241,289,0" x:Name="groupBox5" VerticalAlignment="Top" />
+        <my:GroupBox FontWeight="SemiBold" Header="" Height="39" Margin="0,2,0,0" x:Name="groupBox6" VerticalAlignment="Top" Grid.Row="1"/>
+        <my:GroupBox FontWeight="SemiBold" Header="Recherche client" Height="72" x:Name="groupBox2_Copy" VerticalAlignment="Top" />
+
+        <TextBox Height="23" Background="LightBlue" Margin="0,18,428,0" x:Name="txtReference" VerticalAlignment="Top" TextChanged="txtReference_TextChanged" IsEnabled="True" HorizontalAlignment="Right" Width="197" />
+        <sdk:Label Content="Nom " Height="21" HorizontalAlignment="Left" Margin="330,16,0,0" x:Name="label2" VerticalAlignment="Top" Width="65" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="412,16,0,0" x:Name="txtClientName" VerticalAlignment="Top" Width="298" IsReadOnly="True" />
+        <sdk:Label Content="Solde client" Height="18" HorizontalAlignment="Left" Margin="40,112,0,0" x:Name="label6" VerticalAlignment="Top" Width="149" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="194,107,0,0" x:Name="txtSoldeDue" VerticalAlignment="Top" Width="155" IsReadOnly="True" />
+        <sdk:Label Content="Nombre d'échéances" Height="21" HorizontalAlignment="Left" Margin="22,220,0,0" x:Name="label9" VerticalAlignment="Top" Width="122" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="221,216,0,0" x:Name="cboNoInstall" VerticalAlignment="Top" Width="109" SelectionChanged="cboNoInstall_SelectionChanged" />
+        <Button Content="Proposition" Height="23" HorizontalAlignment="Left" Margin="301,294,0,0" x:Name="btnPrintQuote" VerticalAlignment="Top" Width="115" Click="btnPrintQuote_Click" />
+        <Button Content="Répartition" Height="23" HorizontalAlignment="Left" Margin="301,266,0,0" x:Name="btnCalcul" VerticalAlignment="Top" Width="115" Click="btnCalcul_Click" />
+        <RadioButton GroupName="frequence" Content="Quinzaine " Height="16" HorizontalAlignment="Left" Margin="121,284,0,0" x:Name="rdbFornight" VerticalAlignment="Top" Checked="rdbFornight_Checked" />
+        <RadioButton GroupName="frequence" Content="Mois " Height="16" HorizontalAlignment="Left" Margin="121,264,0,0" x:Name="rdbMonth" VerticalAlignment="Top" Checked="rdbMonth_Checked" />
+        <RadioButton GroupName="frequence" Content="Semaine" Height="16" HorizontalAlignment="Left" Margin="121,305,0,0" x:Name="rdbWeek" VerticalAlignment="Top" Checked="rdbWeek_Checked" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,107,0,0" x:Name="txtAmount1" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount1_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,107,13,0" x:Name="txtDate1" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtDate1_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,134,0,0" x:Name="txtAmount2" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount2_LostFocus"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,134,0,0" x:Name="txtDate2" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,214,0,0" x:Name="txtAmount5" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount5_LostFocus"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,188,0,0" x:Name="txtDate4" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,187,0,0" x:Name="txtAmount4" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount4_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,161,0,0" x:Name="txtDate3" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,160,0,0" x:Name="txtAmount3" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount3_LostFocus"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,268,0,0" x:Name="txtDate7" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,267,0,0" x:Name="txtAmount7" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount7_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,242,0,0" x:Name="txtDate6" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,241,0,0" x:Name="txtAmount6" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount6_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,215,0,0" x:Name="txtDate5" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,402,0,0" x:Name="txtAmount12" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount12_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,376,0,0" x:Name="txtDate11" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,375,0,0" x:Name="txtAmount11" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount11_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,349,0,0" x:Name="txtDate10" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,348,0,0" x:Name="txtAmount10" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount10_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,322,0,0" x:Name="txtDate9" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,321,0,0" x:Name="txtAmount9" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount9_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,295,0,0" x:Name="txtDate8" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="494,294,0,0" x:Name="txtAmount8" VerticalAlignment="Top" Width="110" IsReadOnly="True" LostFocus="txtAmount8_LostFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="612,403,0,0" x:Name="txtDate12" VerticalAlignment="Top" Width="110" IsReadOnly="True" />
+        <sdk:Label Content="Montant" Height="21" HorizontalAlignment="Left" Margin="519,84,0,0" x:Name="label10" VerticalAlignment="Top" Width="65" />
+        <sdk:Label Content="Dates" Height="21" HorizontalAlignment="Right" Margin="0,83,69,0" x:Name="label11" VerticalAlignment="Top" Width="65" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Right" x:Name="btncancel" VerticalAlignment="Top" Width="135" Margin="0,13,10,0" Click="btnCancel_Click" Grid.Row="1" />
+        <Button Content="Valider" Height="23" HorizontalAlignment="Left" Margin="437,13,0,0" x:Name="btnOk" VerticalAlignment="Top" Width="147" Click="btnOk_Click" Grid.Row="1" />
+        <Button Content="Clients" Height="23" HorizontalAlignment="Left" Margin="21,18,0,0" x:Name="button3" VerticalAlignment="Top" Width="83" Click="button3_Click" />
+        <sdk:Label Content="Adresse " Height="21" HorizontalAlignment="Left" Margin="330,44,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="65" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="412,44,0,0" x:Name="txtClientAdresse" VerticalAlignment="Top" Width="298" IsReadOnly="True" />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="71,13,0,0" VerticalAlignment="Top" Width="286" IsIndeterminate="True" Grid.Row="1"/>
+
+    </Grid>
+</sdk:ChildWindow>

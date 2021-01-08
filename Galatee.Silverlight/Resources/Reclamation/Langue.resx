@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Acurate_reading" xml:space="preserve">
+    <value>Lecture appropriée</value>
+  </data>
+  <data name="Additional_infos" xml:space="preserve">
+    <value>Informations additionnelles </value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Advanced_Search" xml:space="preserve">
+    <value>Recherche avancée</value>
+  </data>
+  <data name="Bill_number" xml:space="preserve">
+    <value>Numero de facture</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branche</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Parcourir</value>
+  </data>
+  <data name="Btn_cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Btn_modify" xml:space="preserve">
+    <value>Modifier</value>
+    <comment>Modifier une reclamation</comment>
+  </data>
+  <data name="Btn_new" xml:space="preserve">
+    <value>Nouveau</value>
+    <comment>Nouvelle reclamation</comment>
+  </data>
+  <data name="Btn_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Btn_reject" xml:space="preserve">
+    <value>Rejeter</value>
+    <comment>Rejeter une reclamation</comment>
+  </data>
+  <data name="Btn_transmit" xml:space="preserve">
+    <value>Transmetre</value>
+    <comment>Transmettre une reclamation</comment>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Verifier</value>
+  </data>
+  <data name="Checking_electricity" xml:space="preserve">
+    <value>Verification electricité</value>
+  </data>
+  <data name="Checking_water" xml:space="preserve">
+    <value>Verification eau</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Col_claimType" xml:space="preserve">
+    <value>Type de reclamation</value>
+    <comment>Colonne  type de reclamation</comment>
+  </data>
+  <data name="Col_closeDate" xml:space="preserve">
+    <value>Date de fermeture</value>
+    <comment>Colonne date de fermeture</comment>
+  </data>
+  <data name="Col_name" xml:space="preserve">
+    <value>Nom</value>
+    <comment>Colonne nom abonné</comment>
+  </data>
+  <data name="Col_number" xml:space="preserve">
+    <value>Numero</value>
+    <comment>Colonne numero</comment>
+  </data>
+  <data name="Col_openDate" xml:space="preserve">
+    <value>Date d'ouverture</value>
+    <comment>Colonne date d'ouverture</comment>
+  </data>
+  <data name="Col_status" xml:space="preserve">
+    <value>Status</value>
+    <comment>Colonne status reclamation</comment>
+  </data>
+  <data name="Col_step" xml:space="preserve">
+    <value>Etape</value>
+    <comment>Colonne etape reclamation</comment>
+  </data>
+  <data name="Combined" xml:space="preserve">
+    <value>Combiné</value>
+  </data>
+  <data name="Consumer_name" xml:space="preserve">
+    <value>Nom du client</value>
+  </data>
+  <data name="Customer_infos" xml:space="preserve">
+    <value>Informations Client</value>
+  </data>
+  <data name="Customer_number" xml:space="preserve">
+    <value>Numero du client</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Department_reject_reason" xml:space="preserve">
+    <value>Raison du rejet du departement</value>
+    <comment>rejet du department</comment>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Afficher</value>
+  </data>
+  <data name="Electricity" xml:space="preserve">
+    <value>Electricité</value>
+  </data>
+  <data name="Electricity_reading" xml:space="preserve">
+    <value>Lecture du compteur electrique</value>
+  </data>
+  <data name="Electricity_type" xml:space="preserve">
+    <value>Type d'electricité</value>
+  </data>
+  <data name="e_mail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Function" xml:space="preserve">
+    <value>Fonction</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="Join_files" xml:space="preserve">
+    <value>Fichier joint</value>
+  </data>
+  <data name="Manager_reject_reason" xml:space="preserve">
+    <value>Raison du rejet du manager</value>
+    <comment>rejet du manager</comment>
+  </data>
+  <data name="Meter_number" xml:space="preserve">
+    <value>Numero du compteur</value>
+  </data>
+  <data name="Mobile_phone" xml:space="preserve">
+    <value>Telephone mobile</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Opening_date" xml:space="preserve">
+    <value>Date d'ouverture</value>
+  </data>
+  <data name="Owners_name" xml:space="preserve">
+    <value>Nom du propriétaire</value>
+  </data>
+  <data name="Prepaid" xml:space="preserve">
+    <value>Prépayé</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Avancement</value>
+  </data>
+  <data name="Reason_cons_complaint" xml:space="preserve">
+    <value>Raison de la plainte</value>
+  </data>
+  <data name="Reception_mode" xml:space="preserve">
+    <value>Mode de reception</value>
+  </data>
+  <data name="Reject_reason" xml:space="preserve">
+    <value>Raison du rejet</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarques</value>
+  </data>
+  <data name="Request_number" xml:space="preserve">
+    <value>Numero de reclamation</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reinitialiser</value>
+  </data>
+  <data name="Route_number" xml:space="preserve">
+    <value>Numero client</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Search_criterias" xml:space="preserve">
+    <value>Recherche par criteres</value>
+  </data>
+  <data name="Search_results" xml:space="preserve">
+    <value>Resultat de la recherche</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone fixe</value>
+  </data>
+  <data name="Type_of_complain" xml:space="preserve">
+    <value>Type de reclamation</value>
+  </data>
+  <data name="User_connected" xml:space="preserve">
+    <value>Utilisateur connecté</value>
+  </data>
+  <data name="Verification_comment" xml:space="preserve">
+    <value>Commentaire de vérification</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Eau</value>
+  </data>
+  <data name="Water_reading" xml:space="preserve">
+    <value>Lecture compteur eau</value>
+  </data>
+  <data name="Water_type" xml:space="preserve">
+    <value>Type Eau</value>
+  </data>
+  <data name="Wrong_reading" xml:space="preserve">
+    <value>Mauvaise Lecture</value>
+  </data>
+  <data name="Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="Btn_check" xml:space="preserve">
+    <value>Verifier</value>
+  </data>
+  <data name="Btn_close" xml:space="preserve">
+    <value>Cloturer</value>
+  </data>
+  <data name="Enquery_type" xml:space="preserve">
+    <value>Type reclamation</value>
+  </data>
+  <data name="Matricule" xml:space="preserve">
+    <value>Matricule</value>
+  </data>
+  <data name="Enquery_close" xml:space="preserve">
+    <value>Voulez-vous cloturer cette reclamation ?</value>
+  </data>
+  <data name="Enquery_reject" xml:space="preserve">
+    <value>Voulez vous rejeter cette reclamation ?</value>
+  </data>
+  <data name="Enquery_forward" xml:space="preserve">
+    <value>Voulez-vous transmettre cette reclamation ?</value>
+  </data>
+  <data name="Enquery_update_error" xml:space="preserve">
+    <value>Erreur de mise à jours de la reclamation</value>
+  </data>
+  <data name="Enquery_fill" xml:space="preserve">
+    <value>Veuillez remplir tous les champs </value>
+  </data>
+  <data name="Enquery_insert_error" xml:space="preserve">
+    <value>Une erreur est survenue, impossible d'enregistrer la reclamation</value>
+  </data>
+  <data name="Enquery_must_select_agent" xml:space="preserve">
+    <value>Vous devez selectionner un agent</value>
+  </data>
+  <data name="Enquery_no_Update_match" xml:space="preserve">
+    <value>Aucune reclamation ne repond aux critères</value>
+  </data>
+  <data name="Enquery_number_error" xml:space="preserve">
+    <value>Imposible de recuperer le numero de reclamation</value>
+  </data>
+  <data name="Enquery_select_error" xml:space="preserve">
+    <value>Imposible de recuperer les données</value>
+  </data>
+  <data name="Enquery_updated" xml:space="preserve">
+    <value>Reclamation mise à jour</value>
+  </data>
+  <data name="Enquery_wcf_error" xml:space="preserve">
+    <value>Une erreur service est survenue</value>
+  </data>
+  <data name="Enquery_must_select_abon" xml:space="preserve">
+    <value>Vous devez selectionner un abonné</value>
+  </data>
+</root>

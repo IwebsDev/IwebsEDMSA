@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Galatee.Structure" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCsUtilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsUtilisateur" nillable="true" type="tns:CsUtilisateur" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsUtilisateur" nillable="true" type="tns:ArrayOfCsUtilisateur" />
+  <xs:complexType name="CsUtilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agent_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Branche" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreation" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDebutValidite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDernierVerrouillage" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDerniereConnexion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDerniereModification" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDerniereModificationPassword" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateFinValidite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DerniereConnexionReussie" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EstMutiSociete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fonction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdStatusCompte" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="InitUserPassword" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LibelleFonction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEchecsOuvertureSession" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NumCaisse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PerimetreAction" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Prenoms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StatusCompteLibelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_Agent_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="_DateDebutValidite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DateDernierVerrouillage" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DateDerniereConnexion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DateDerniereModification" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DateDerniereModificationPassword" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DateFinValidite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_DerniereConnexionReussie" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_EstMutiSociete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_InitUserPassword" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_NombreEchecsOuvertureSession" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="dUser" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsUtilisateur" nillable="true" type="tns:CsUtilisateur" />
+  <xs:complexType name="CsStrategieSecurite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Actif" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ChiffrementReversiblePassword" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DureeMaximalePassword" type="xs:short" />
+      <xs:element minOccurs="0" name="DureeMinimalePassword" type="xs:short" />
+      <xs:element minOccurs="0" name="DureeVeilleSession" type="xs:short" />
+      <xs:element minOccurs="0" name="DureeVerrouillageCompte" type="xs:short" />
+      <xs:element minOccurs="0" name="HistoriqueNombrePassword" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="IdStrategieSecurite" type="ser:guid" />
+      <xs:element minOccurs="0" name="Libelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongueurMinimalePassword" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NePasContenirNomCompte" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NombreMaximalEchecsOuvertureSession" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NombreMinimalCaracteresChiffres" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NombreMinimalCaracteresMajuscules" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NombreMinimalCaracteresMinuscules" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="NombreMinimalCaracteresNonAlphabetiques" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ReinitialiserCompteurVerrouillagesCompteApres" type="xs:short" />
+      <xs:element minOccurs="0" name="ToucheVerrouillageSession" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsStrategieSecurite" nillable="true" type="tns:CsStrategieSecurite" />
+  <xs:complexType name="ArrayOfCsStrategieSecurite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsStrategieSecurite" nillable="true" type="tns:CsStrategieSecurite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsStrategieSecurite" nillable="true" type="tns:ArrayOfCsStrategieSecurite" />
+  <xs:complexType name="ArrayOfCsHabilitationProgram">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsHabilitationProgram" nillable="true" type="tns:CsHabilitationProgram" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsHabilitationProgram" nillable="true" type="tns:ArrayOfCsHabilitationProgram" />
+  <xs:complexType name="CsHabilitationProgram">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeFonction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdGroupProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Libelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsHabilitationProgram" nillable="true" type="tns:CsHabilitationProgram" />
+  <xs:complexType name="ArrayOfCsAdmRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsAdmRoles" nillable="true" type="tns:CsAdmRoles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsAdmRoles" nillable="true" type="tns:ArrayOfCsAdmRoles" />
+  <xs:complexType name="CsAdmRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeFonc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsAdmRoles" nillable="true" type="tns:CsAdmRoles" />
+  <xs:complexType name="ArrayOfCsProgramMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsProgramMenu" nillable="true" type="tns:CsProgramMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsProgramMenu" nillable="true" type="tns:ArrayOfCsProgramMenu" />
+  <xs:complexType name="CsProgramMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdGroupProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainMenuID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsProgramMenu" nillable="true" type="tns:CsProgramMenu" />
+  <xs:complexType name="ArrayOfCsCentre">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsCentre" nillable="true" type="tns:CsCentre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsCentre" nillable="true" type="tns:ArrayOfCsCentre" />
+  <xs:complexType name="CsCentre">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodeCentre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodeSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LIBELLESITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLETYPECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Libelle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalCodeCentre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsCentre" nillable="true" type="tns:CsCentre" />
+  <xs:complexType name="CsPrint">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="CsPrint" nillable="true" type="tns:CsPrint" />
+  <xs:complexType name="ArrayOfCsLibelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsLibelle" nillable="true" type="tns:CsLibelle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsLibelle" nillable="true" type="tns:ArrayOfCsLibelle" />
+  <xs:complexType name="CsLibelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsLibelle" nillable="true" type="tns:CsLibelle" />
+</xs:schema>

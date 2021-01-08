@@ -1,0 +1,61 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           x:Class="Galatee.Silverlight.Recouvrement.FrmSaisiRDVCoupure"
+           Width="865" Height="574" OverlayBrush="Transparent"
+           Title="Réedition avis de coupure">
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="0,10,0,-2">
+
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="103" Height="23" HorizontalAlignment="Right" Margin="0,464,12,8" />
+        <Button x:Name="OKButton" Content="Enregister" Click="OKButton_Click" Width="105" Height="23" HorizontalAlignment="Right" Margin="0,464,122,8" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="246" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="10,187,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="821" 
+                      SelectionChanged="lvwResultat_SelectionChanged" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding IDCOUPURE}" CanUserReorder="True" CanUserSort="True" Header="N° Campagne" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="50"  MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserSort="True" Header="Client" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserSort="True" Header="Ordre" IsReadOnly="True" MinWidth="60" MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NOMABON}" CanUserReorder="True" CanUserSort="True" Header="Nom" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding DATERENDEZVOUS,Converter={StaticResource DateTimeConverter}}" CanUserReorder="True" CanUserSort="True" Header="Date rendez-vous" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,416,85,13" x:Name="btnOk" Width="75"  Visibility="Collapsed" Click="btnOk_Click"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Date rendez-vous" Height="20" Margin="25,438,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="145,438,0,0" x:Name="Txt_DateEvt" VerticalAlignment="Top" Width="148" TextChanged="Txt_DateEvt_TextChanged"   />
+        <Controls:GroupBox Height="182" IsEnabled="False" x:Name="groupBox1" VerticalAlignment="Top" Header="Recherche client de la campagne" Margin="0,0,12,0" />
+        <Controls:GroupBox Height="43" IsEnabled="False" x:Name="groupBox1_Copy" VerticalAlignment="Top" Margin="10,136,354,0" Header="Client" />
+        <sdk:Label Content="Agent PIA " Height="20" HorizontalAlignment="Left" Margin="32,86,0,0" x:Name="label2" VerticalAlignment="Top" Width="73" />
+        <TextBox Height="23" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,85,641,0" x:Name="txtAgent" VerticalAlignment="Top" Width="85" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,85,329,0" x:Name="cmbAgent" VerticalAlignment="Top" Width="307" SelectionChanged="cmbAgent_SelectionChanged" />
+        <sdk:Label Content="Date campagne" Height="20" HorizontalAlignment="Left" Margin="28,116,0,0" x:Name="label3" VerticalAlignment="Top" Width="87" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="115,113,0,0" x:Name="dtpDate" VerticalAlignment="Top" Width="119" />
+        <Button Content="Reinitialiser" Height="23" HorizontalAlignment="Right" Margin="0,150,243,322" x:Name="btnreset" Width="106" Click="btnReinitialiser_Click" />
+        <Button Content="Rechercher" Height="23" HorizontalAlignment="Left" Margin="610,150,0,0" x:Name="btnsearch" Width="108" Click="btnsearch_Click" VerticalAlignment="Top" />
+        <sdk:Label Content="Campagne " Height="20" HorizontalAlignment="Left" Margin="32,56,0,0" x:Name="label2_Copy" VerticalAlignment="Top" Width="80" />
+        <sdk:Label Content="Client" Height="20" HorizontalAlignment="Left" Margin="32,153,0,0" x:Name="label2_Copy2" VerticalAlignment="Top" Width="69" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,152,585,0" x:Name="txtReferenceClient" VerticalAlignment="Top" Width="141" />
+        <sdk:Label Content="Ordre" Height="20" HorizontalAlignment="Left" Margin="282,153,0,0" x:Name="label2_Copy3" VerticalAlignment="Top" Width="48" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,152,465,0" x:Name="txtOrdeClient" VerticalAlignment="Top" Width="41" />
+        <TextBox HorizontalAlignment="Left" x:Name="Txt_NumCampagne" Height="23" Margin="115,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="397"/>
+        <sdk:Label Content="Date fin campagne" Height="20" HorizontalAlignment="Left" Margin="275,119,0,0" x:Name="label3_Copy" VerticalAlignment="Top" Width="113" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="393,116,0,0" x:Name="dtpDateFin" VerticalAlignment="Top" Width="119" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="32,27,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="36" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="115,0,0,445" x:Name="Txt_CodeSite" VerticalAlignment="Bottom" Width="56" Background="LightBlue" TabIndex="0" TextChanged="Txt_CodeSite_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="223,27,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="289" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="176,0,0,445" x:Name="btn_Site" VerticalAlignment="Bottom" Width="42" Click="btn_Site_Click"  />
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="308,438,0,0" VerticalAlignment="Top" Width="301" IsIndeterminate="True"/>
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,102 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+    
+           xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+                   xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Fraude.UcAnnalyseDeConsommation"
+                   Width="813" Height="658" 
+           Title="Analyse des consommations " Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2,2,0,2" HorizontalAlignment="Left" Width="783">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sc:GroupBox Header="Dernières Consommations" Margin="42,0,19,450" x:Name="Gbo_Controle" IsEnabled="True" Height="98" VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Height="23" Margin="0,10,36,2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="75" RenderTransformOrigin="0.52,0.957" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Left" Margin="592,10,0,2" RenderTransformOrigin="1.68,0.435" Grid.ColumnSpan="2" Grid.Row="1" />
+        <toolkit:NumericUpDown x:Name="nudNombreMois"   Maximum="45"  Increment="1" HorizontalAlignment="Left" Margin="216,27,0,0" VerticalAlignment="Top" Width="75" ValueChanged="NumericUpDown_ValueChanged"/>
+        <sdk:Label Content="Nombre de mois à facturer"  HorizontalAlignment="Left" Height="20" Margin="56,29,0,0" VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.384,0.638"/>
+        <Button Content="Evenement Compteur" x:Name="btn_Evenement" HorizontalAlignment="Left" Margin="615,24,0,0" VerticalAlignment="Top" Width="132" Height="28" RenderTransformOrigin="0.264,0.679" Grid.ColumnSpan="2" Click="btn_Evenement_Click"/>
+
+        <sdk:DataGrid x:Name="dgvDerniereConsoPart1" CellEditEnded="dgvDerniereConsoPart1_CellEditEnded"  AutoGenerateColumns="False" HorizontalAlignment="Left" Height="79" Margin="25,117,0,0" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn  Header="Mois m-1" Binding="{Binding Mois1, Mode=TwoWay}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="Mois m-2" Binding="{Binding Mois2, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Mois m-3" Binding="{Binding Mois3, Mode=TwoWay}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="Mois m-4" Binding="{Binding Mois4, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Mois m-5" Binding="{Binding Mois5, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Mois m-6" Binding="{Binding Mois6, Mode=TwoWay}" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Header="Mois m-7" Binding="{Binding Mois7, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Mois m-8" Binding="{Binding Mois8, Mode=TwoWay}" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Mois m-9" Binding="{Binding Mois9, Mode=TwoWay}" IsReadOnly="True"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dgvDerniereConsoPart2" CellEditEnded="dgvDerniereConsoPart1_CellEditEnded" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="79" Margin="25,201,0,0" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Mois m-10" Binding="{Binding Mois1, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-11" Binding="{Binding Mois2, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-12" Binding="{Binding Mois3, Mode=TwoWay}" IsReadOnly="False" />
+                <sdk:DataGridTextColumn Header="Mois m-13" Binding="{Binding Mois4, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-14" Binding="{Binding Mois5, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-15" Binding="{Binding Mois6, Mode=TwoWay}"  IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-16" Binding="{Binding Mois7, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-17" Binding="{Binding Mois8, Mode=TwoWay}" IsReadOnly="False"/>
+                <sdk:DataGridTextColumn Header="Mois m-18" Binding="{Binding Mois9, Mode=TwoWay}" IsReadOnly="False"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <sdk:DataGrid x:Name="dgvDerniereConsoPart3"  CellEditEnded="dgvDerniereConsoPart1_CellEditEnded" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="100" Margin="25,285,0,0" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Mois m-19" Binding="{Binding Mois1, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-20" Binding="{Binding Mois2, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-21" Binding="{Binding Mois3, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-22" Binding="{Binding Mois4, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-23" Binding="{Binding Mois5, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-24" Binding="{Binding Mois6, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-25" Binding="{Binding Mois7, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-26" Binding="{Binding Mois8, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-27" Binding="{Binding Mois9, Mode=TwoWay}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dgvDerniereConsoPart4" CellEditEnded="dgvDerniereConsoPart1_CellEditEnded" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="93" Margin="25,385,0,0" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Mois m-28" Binding="{Binding Mois1, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-29" Binding="{Binding Mois2, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-30" Binding="{Binding Mois3, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-31" Binding="{Binding Mois4, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-32" Binding="{Binding Mois5, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-33" Binding="{Binding Mois6, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-34" Binding="{Binding Mois7, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-35" Binding="{Binding Mois8, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-36" Binding="{Binding Mois9, Mode=TwoWay}"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <!--<sdk:DataGrid x:Name="dgvDerniereConsoPart5"  CellEditEnded="dgvDerniereConsoPart1_CellEditEnded" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="100" Margin="42,445,0,0" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="2">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Mois m-37" Binding="{Binding Mois1, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-38" Binding="{Binding Mois2, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-39" Binding="{Binding Mois3, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-40" Binding="{Binding Mois4, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-41" Binding="{Binding Mois5, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-42" Binding="{Binding Mois6, Mode=TwoWay}" />
+                <sdk:DataGridTextColumn Header="Mois m-43" Binding="{Binding Mois7, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-44" Binding="{Binding Mois8, Mode=TwoWay}"/>
+                <sdk:DataGridTextColumn Header="Mois m-45" Binding="{Binding Mois9, Mode=TwoWay}"/>
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>-->
+        <sdk:Label Content="Consommation déjà facturée" HorizontalAlignment="Left" Height="22" Margin="296,29,0,0" VerticalAlignment="Top" Width="163"/>
+        <TextBox x:Name="txtConsommationDejaFacturee"  HorizontalAlignment="Left" Height="23" Margin="464,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="135" IsReadOnly="True"/>
+        <sdk:Label  Content="Periode(MM/AAAA)" HorizontalAlignment="Left" Height="23" Margin="100,59,0,0" VerticalAlignment="Top" Width="111" RenderTransformOrigin="0.585,0.739"/>
+        <TextBox x:Name="txt_Periode" HorizontalAlignment="Left" Height="23" Margin="216,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" />
+        <Button Content="Recherche" x:Name="txt_Recherche" HorizontalAlignment="Left" Height="23" Margin="361,59,0,0" VerticalAlignment="Top" Width="98" Click="txt_Recherche_Click"/>
+
+
+
+    </Grid>
+</controls:ChildWindow>

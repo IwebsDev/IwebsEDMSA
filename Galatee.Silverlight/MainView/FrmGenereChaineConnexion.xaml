@@ -1,0 +1,29 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           x:Class="Galatee.Silverlight.MainView.FrmGenereChaineConnexion"
+           Width="367.164" Height="307.412" 
+           Title="FrmGenereChaineConnexion" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,9,7,3" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,9,88,3" Grid.Row="1" />
+       
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="10,53,0,0" VerticalAlignment="Top" Content="Base de données" Width="104"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Content="Instance de base " Width="104"/>
+        
+        <TextBox HorizontalAlignment="Left" Name="TxtMachine" Height="23" Margin="119,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+        <TextBox HorizontalAlignment="Left" Name="TxtUser" Height="23" Margin="119,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+        <TextBox HorizontalAlignment="Left" Name="TxtPassword" Height="23" Margin="119,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="10,96,0,0" VerticalAlignment="Top" Content="Cnnexion" Width="104"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,138,0,0" VerticalAlignment="Top" Content="Mot de pass" Width="104"/>
+        <ComboBox HorizontalAlignment="Left" Margin="119,53,0,0" VerticalAlignment="Top" Name="cbo_BaseDeDonne" Width="166" Height="23"/>
+        <Button Content="Tester connexion" HorizontalAlignment="Left" Margin="194,176,0,0" VerticalAlignment="Top" Width="135" Height="21" Click="Button_Click_1"/>
+    </Grid>
+</controls:ChildWindow>

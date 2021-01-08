@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Parametrage.UcWKFInitDemande"           
+           Title="Initier une demande" Style="{StaticResource ChildWindowGalatee}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Sélection du circuit" Name="GroupBox" Margin="2,0,0,0" VerticalAlignment="Top" Height="71">
+            <Grid HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="812">
+                <sdk:Label Content="Opération : " HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top" Width="78"/>
+                <ComboBox x:Name="cmbConfiguration" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Width="261"/>
+                <Button x:Name="btnCharger" Content="Charger la fenêtre" HorizontalAlignment="Left" Margin="384,9,0,0" VerticalAlignment="Top" Width="123" Click="btnCharger_Click"/>
+            </Grid>
+        </Controls:GroupBox>
+        <Controls:GroupBox Header="Fenêtre" Name="GroupBoxFrm" Margin="0,88,0,0" >
+            <ScrollViewer x:Name="scrollView" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+               
+            </ScrollViewer>
+        </Controls:GroupBox>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Inserer la demande" Click="OKButton_Click" Width="126" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

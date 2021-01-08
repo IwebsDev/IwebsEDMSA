@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Parametrage.UcWKFEtape"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           Width="471.025" Height="350.508" 
+           Title="Détail Etape - Circuit de validation" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Détails de l'étape" Name="OperationGroupBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="443" Height="231">
+            <Grid HorizontalAlignment="Left" Height="174" VerticalAlignment="Top" Width="431">
+                <sdk:Label HorizontalAlignment="Left" Content="Code : " Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="110"/>
+                <sdk:Label HorizontalAlignment="Left" Content="Nom : " Height="28" Margin="10,43,0,0" VerticalAlignment="Top" Width="110"/>
+                <sdk:Label HorizontalAlignment="Left" Content="Description : " Height="28" Margin="10,76,0,0" VerticalAlignment="Top" Width="110"/>
+                <sdk:Label HorizontalAlignment="Left" Content="Formulaire : " Height="28" Margin="10,109,0,0" VerticalAlignment="Top" Width="110"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtCode" Height="23" Margin="96,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="325" MaxLength="5"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtNom" Height="23" Margin="96,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="325" MaxLength="100"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtDescription" Height="23" Margin="96,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="325"/>
+                <ComboBox HorizontalAlignment="Left" x:Name="cmbFormulaire" Margin="96,107,0,0" VerticalAlignment="Top" Width="325"/>
+                <CheckBox x:Name="chkboxConsultationSeulement" Content="Etape de consultation seulement" HorizontalAlignment="Left" Margin="10,167,0,-10" VerticalAlignment="Top"/>
+                <CheckBox x:Name="chkTraitementParLot" Content="Traitement par lot" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Controls:GroupBox>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

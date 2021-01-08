@@ -1,0 +1,47 @@
+﻿<sdk:ChildWindow x:Class="Galatee.Silverlight.Parametrage.UcWKFSelectUtilisateur"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"    
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           Width="1024.89" Height="557.627" 
+           Title="Sélection des utilisateurs" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Header="Membres du groupe" x:Name="GroupBox_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="987" Height="367" Margin="0,81,0,0">
+            <sdk:DataGrid AutoGenerateColumns="False"
+                       Margin="0,0,-2,1" Name="lvwResultat" SelectionChanged="lvwResultat_SelectionChanged">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn Header="Centre" IsReadOnly="True" Width="130"
+                Binding="{Binding CENTREAFFICHER}" />
+                    <sdk:DataGridTextColumn Header="Agent ID"  IsReadOnly="True" Width="80"
+                Binding="{Binding MATRICULE}" />
+                    <sdk:DataGridTextColumn Header="Login " Width="120"  IsReadOnly="True"
+                Binding="{Binding LOGINNAME}" />
+                    <sdk:DataGridTextColumn Header="Nom &amp; prenom" Width="200"  IsReadOnly="True"
+                Binding="{Binding LIBELLE}" />
+                    <sdk:DataGridTextColumn Header="Status" Width="100"  IsReadOnly="True"
+                Binding="{Binding LIBELLESTATUSCOMPTE}" />
+                    <sdk:DataGridTextColumn Header="Role" Width="160"  IsReadOnly="True"
+                Binding="{Binding LIBELLEFONCTION}" />
+                    <sdk:DataGridTextColumn Header="Périmetre d'action" Width="100"  IsReadOnly="True"
+                Binding="{Binding LIBELLEPERIMETREACTION}" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </Controls:GroupBox>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" VerticalAlignment="Top" />
+        <Button Content="Afficher" x:Name="btn_Afficher" HorizontalAlignment="Left" Margin="423,41,0,0" VerticalAlignment="Top" Width="108" Click="btn_Afficher_Click" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="169,11,0,0" TextWrapping="Wrap" Text="" x:Name="txt_Matricule" VerticalAlignment="Top" TextChanged="txt_Matricule_TextChanged_1" Width="70"/>
+        <sdk:Label HorizontalAlignment="Left" Height="21" Margin="44,13,0,0" VerticalAlignment="Top" Content="Matricule" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextChanged="txt_Nom_TextChanged_1" Margin="169,39,0,0" TextWrapping="Wrap" Text="" x:Name="txt_Nom" VerticalAlignment="Top" Width="219"/>
+        <sdk:Label HorizontalAlignment="Left" Height="21" Margin="44,41,0,0" VerticalAlignment="Top" Content="Nom" Width="120"/>
+        <CheckBox Content="Utilisateur en consultation " Name="IsConsultation" HorizontalAlignment="Left" Height="24" Margin="701,43,0,0" VerticalAlignment="Top" Width="184"/>
+    </Grid>
+</sdk:ChildWindow>

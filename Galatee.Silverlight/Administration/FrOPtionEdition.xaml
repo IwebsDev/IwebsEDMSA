@@ -1,0 +1,22 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           x:Class="Galatee.Silverlight.Administration.FrOPtionEdition"
+           Width="340.496" Height="242.909" 
+           Title="Option d'édition" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox x:Name="GboCodeDepart" Header="Critère" HorizontalAlignment="Left" VerticalAlignment="Top" Height="123" Width="312"/>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" VerticalAlignment="Top" />
+        <CheckBox Content="Habilitation" HorizontalAlignment="Left" Name="chk_habilitation" Margin="59,22,0,0" VerticalAlignment="Top" Width="200" />
+        <CheckBox Content="Historique des mots de pass" HorizontalAlignment="Left" Name="chk_historiquePass" Margin="59,56,0,0" VerticalAlignment="Top" Width="220"/>
+        <CheckBox Content="Historique de connection" HorizontalAlignment="Left" Name="chk_historiqueConnect" Margin="59,96,0,0" VerticalAlignment="Top" Width="200"/>
+    </Grid>
+</controls:ChildWindow>

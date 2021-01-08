@@ -1,0 +1,30 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Facturation.FrmIndexCritereSaisiIndividuelle"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           Width="615" Height="201" 
+           Title="Critere de saisie individuelle" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" x:Name="groupBox1_Copy"  />
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,5,0,7" Grid.Row="1" TabIndex="4" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,5,79,7" Grid.Row="1" TabIndex="3" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="78,58,0,0" Name="Txt_Client" VerticalAlignment="Top" Width="168" Background="LightBlue" TextChanged="Txt_Client_TextChanged"  IsTabStop="True" TabIndex="1" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="251,58,0,0" Name="Txt_produit" VerticalAlignment="Top" Width="42" Background="LightBlue" TextChanged="Txt_produit_TextChanged"  IsTabStop="True" TabIndex="2"  />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="298,60,0,0" Name="Cbo_Compteur" VerticalAlignment="Top" Width="192" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="495,58,0,0" Name="textBox4" VerticalAlignment="Top" Width="74"  IsTabStop="True" TabIndex="3"/>
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="18,38,0,0" Name="lbl_centre" VerticalAlignment="Top" Width="55" Content="Centre" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="82,39,0,0" Name="lbl_reference" VerticalAlignment="Top" Width="151" Content="Reference" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="251,39,0,0" Name="lbl_service" VerticalAlignment="Top" Width="42" Content="Produit" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="298,39,0,0" Name="lbl_Compteur" VerticalAlignment="Top" Width="99" Content="Compteur" />
+        <sdk:Label Content="Batch" Height="20" HorizontalAlignment="Left" Margin="495,40,0,0" Name="lbl_batch" VerticalAlignment="Top" Width="71" />
+        <Button x:Name="btn_Centre"  Content=".." HorizontalAlignment="Left" Margin="82,10,0,0" VerticalAlignment="Top" Width="43" Height="25" Click="btn_Centre_Click"/>
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="17,58,0,0" x:Name="Txt_Centre" VerticalAlignment="Top" Width="56" Background="LightBlue" TextChanged="Txt_Centre_TextChanged"  IsTabStop="True" TabIndex="0"  />
+        <TextBox x:Name="txt_Site" HorizontalAlignment="Left" Height="23" Margin="130,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" IsReadOnly="True" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="17,13,0,0" x:Name="lbl_centre_Copy" VerticalAlignment="Top" Width="55" Content="Site" />
+    </Grid>
+</controls:ChildWindow>

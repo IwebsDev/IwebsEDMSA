@@ -1,0 +1,32 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+      xmlns:sc="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"       
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" x:Class="Galatee.Silverlight.Parametrage.UcMarqueModel"       
+    Width="935.91" Height="257.567" 
+           Title="Paramétrage de marque mode" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="-5,7,-14,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sc:GroupBox Header="Nombre de point de scellage par model" Margin="10,0,20,9" Name="Gbo_InformationDevis" IsEnabled="True" Height="126" VerticalAlignment="Bottom" />
+        <TextBox x:Name="txt_NombreScelleCache" HorizontalAlignment="Left" Height="23" Margin="656,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="455,75,0,0" VerticalAlignment="Top" Width="187" Content="Nombre de scellage cache borne"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="52,43,0,0" VerticalAlignment="Top" Width="123" Content="Produit"/>
+        <ComboBox x:Name="Cbo_Produit" HorizontalAlignment="Left" Margin="180,43,0,0" VerticalAlignment="Top" Width="156" Height="23" RenderTransformOrigin="0.5,-0.125"/>
+        <ComboBox x:Name="Cbo_Marque" HorizontalAlignment="Left" Margin="180,71,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.517,0.05" Height="23"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="52,74,0,0" VerticalAlignment="Top" Width="128" Content="Marque"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="52,98,0,0" VerticalAlignment="Top" Width="123" Content="Modele"/>
+        <ComboBox x:Name="Cbo_Modele" HorizontalAlignment="Left" Margin="180,99,0,0" VerticalAlignment="Top" Width="156" Height="23" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="103" Height="23" HorizontalAlignment="Right" Margin="0,7,29,5" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Valider" Click="OKButton_Click" Width="108" Height="23" HorizontalAlignment="Right" Margin="0,7,137,5" Grid.Row="1" />
+        <TextBox x:Name="txt_nbreScelleCapot" HorizontalAlignment="Left" Height="23" Margin="656,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="455,44,0,0" VerticalAlignment="Top" Width="187" Content="Nombre de scellage capot"/>
+
+    </Grid>
+</sdk:ChildWindow>

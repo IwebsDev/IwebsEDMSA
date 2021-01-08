@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accompte" xml:space="preserve">
+    <value>Accompte</value>
+  </data>
+  <data name="aCorriger" xml:space="preserve">
+    <value>à corriger</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administracion</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Payeur</value>
+  </data>
+  <data name="btnAide" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="btnAjouter" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="btnAnnuler" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="btnAvancee" xml:space="preserve">
+    <value>&gt;&gt;  Avancée</value>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="btnCloturer" xml:space="preserve">
+    <value>Clôturer</value>
+  </data>
+  <data name="btnConsulter" xml:space="preserve">
+    <value>Consulter</value>
+  </data>
+  <data name="btnCreer" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+  <data name="btnDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="btnEditer" xml:space="preserve">
+    <value>Editer</value>
+  </data>
+  <data name="btnEnregistrer" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="btnEtablir" xml:space="preserve">
+    <value>Etablir</value>
+  </data>
+  <data name="btnFermer" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="btnModifier" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="btnPrecedent" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="btnRechercher" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="btnReinitialiser" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="btnRejeter" xml:space="preserve">
+    <value>Rejeter</value>
+  </data>
+  <data name="btnSuivant" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="btnSupprimer" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="btnTransmettre" xml:space="preserve">
+    <value>Transmettre</value>
+  </data>
+  <data name="btnValider" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="centre" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="ckbIdentifiable" xml:space="preserve">
+    <value>Identifiable</value>
+  </data>
+  <data name="ckbNoDeposit" xml:space="preserve">
+    <value>Acompte non nécessaire</value>
+  </data>
+  <data name="code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="columnHeaderCentre" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="columnHeaderDateCreation" xml:space="preserve">
+    <value>Date création</value>
+  </data>
+  <data name="columnHeaderDateLimite" xml:space="preserve">
+    <value>Date limite</value>
+  </data>
+  <data name="columnHeaderEtape" xml:space="preserve">
+    <value>Etape</value>
+  </data>
+  <data name="columnHeaderEtat" xml:space="preserve">
+    <value>Etat</value>
+  </data>
+  <data name="columnHeaderFonction" xml:space="preserve">
+    <value>Fonction</value>
+  </data>
+  <data name="columnHeaderNumDevis" xml:space="preserve">
+    <value>N° devis</value>
+  </data>
+  <data name="columnHeaderOrigine" xml:space="preserve">
+    <value>Origine</value>
+  </data>
+  <data name="columnHeaderProduit" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="columnHeaderTypeDevis" xml:space="preserve">
+    <value>Type devis</value>
+  </data>
+  <data name="DateAccompte" xml:space="preserve">
+    <value>Date Accompte</value>
+  </data>
+  <data name="etatEtabli" xml:space="preserve">
+    <value>établi</value>
+  </data>
+  <data name="etatInitie" xml:space="preserve">
+    <value>initié</value>
+  </data>
+  <data name="fonction" xml:space="preserve">
+    <value>Fonction</value>
+  </data>
+  <data name="gboAppareilsFoyers" xml:space="preserve">
+    <value>Appareils et foyers lunmineux</value>
+  </data>
+  <data name="gboAutresInformations" xml:space="preserve">
+    <value>Autres Informations</value>
+  </data>
+  <data name="gboBilanDevis" xml:space="preserve">
+    <value>Bilan</value>
+  </data>
+  <data name="gboCaracteristiques" xml:space="preserve">
+    <value>Caractéristiques</value>
+  </data>
+  <data name="gboDetailsAppareil" xml:space="preserve">
+    <value>Détails appareil</value>
+  </data>
+  <data name="gboElementDevis" xml:space="preserve">
+    <value>Elément du devis : Fournitures</value>
+  </data>
+  <data name="gboInformation" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="gboInformationDemandeur" xml:space="preserve">
+    <value>Informations du demandeur</value>
+  </data>
+  <data name="gboInformationLocalisation" xml:space="preserve">
+    <value>Localisation</value>
+  </data>
+  <data name="gboRechercheAvancee" xml:space="preserve">
+    <value> Recherche avancée </value>
+  </data>
+  <data name="gboResultatRecherche" xml:space="preserve">
+    <value> Résultats de la recherche </value>
+  </data>
+  <data name="lblActeurEtape" xml:space="preserve">
+    <value>Acteur étape</value>
+  </data>
+  <data name="lblAutresInformations" xml:space="preserve">
+    <value>Autres informations</value>
+  </data>
+  <data name="lblCalibre" xml:space="preserve">
+    <value>Calibre</value>
+  </data>
+  <data name="lblCentre" xml:space="preserve">
+    <value>Centre</value>
+  </data>
+  <data name="lblChefEquipe" xml:space="preserve">
+    <value>Sélection chef d'équipe travaux</value>
+  </data>
+  <data name="lblCodeAppareil" xml:space="preserve">
+    <value>Code appareil</value>
+  </data>
+  <data name="lblCommune" xml:space="preserve">
+    <value>Commune</value>
+  </data>
+  <data name="lblConformationPwd" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="lblCoutTotal" xml:space="preserve">
+    <value>Cout Total</value>
+  </data>
+  <data name="lblDateLimite" xml:space="preserve">
+    <value>Date limite</value>
+  </data>
+  <data name="lblDesignation" xml:space="preserve">
+    <value>Désignation</value>
+  </data>
+  <data name="lblDetailsDevis" xml:space="preserve">
+    <value>Détails du devis</value>
+  </data>
+  <data name="lblEtape" xml:space="preserve">
+    <value>Etape</value>
+  </data>
+  <data name="lblEtapeRejet" xml:space="preserve">
+    <value>Etape de rejet</value>
+  </data>
+  <data name="lblGestionDeDevis" xml:space="preserve">
+    <value>Gestion de devis</value>
+  </data>
+  <data name="lblGPS" xml:space="preserve">
+    <value>Numéro GPS</value>
+  </data>
+  <data name="lblMatricule" xml:space="preserve">
+    <value>Matricule</value>
+  </data>
+  <data name="lblMontant" xml:space="preserve">
+    <value>Montant</value>
+  </data>
+  <data name="lblMontantHT" xml:space="preserve">
+    <value>Montant HT</value>
+  </data>
+  <data name="lblMontantTTC" xml:space="preserve">
+    <value>Montant TTC</value>
+  </data>
+  <data name="lblMontantTVA" xml:space="preserve">
+    <value>Montant TVA</value>
+  </data>
+  <data name="lblMotifRejet" xml:space="preserve">
+    <value>Motif du rejet</value>
+  </data>
+  <data name="lblNom" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="lblNom2" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="lblNombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="lblNomProduit" xml:space="preserve">
+    <value>Nom du produit</value>
+  </data>
+  <data name="lblNomSociete" xml:space="preserve">
+    <value>Nom de la société</value>
+  </data>
+  <data name="lblNouveauPwd" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="lblNumero" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="lblNumeroDuDevis" xml:space="preserve">
+    <value>Numéro du devis </value>
+  </data>
+  <data name="lblNumeroLot" xml:space="preserve">
+    <value>Numéro du lot</value>
+  </data>
+  <data name="lblNumeroPiece" xml:space="preserve">
+    <value>Numéro pièce</value>
+  </data>
+  <data name="lblNumeroPorte" xml:space="preserve">
+    <value>Numéro de porte</value>
+  </data>
+  <data name="lblNumeroRue" xml:space="preserve">
+    <value>Numéro de rue</value>
+  </data>
+  <data name="lblParcelle" xml:space="preserve">
+    <value>Parcelle</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="lblPoteau" xml:space="preserve">
+    <value>Poteau</value>
+  </data>
+  <data name="lblPoteauProche" xml:space="preserve">
+    <value>Poteau le plus proche</value>
+  </data>
+  <data name="lblPrenoms" xml:space="preserve">
+    <value>Prénoms</value>
+  </data>
+  <data name="lblPrixUnitaire" xml:space="preserve">
+    <value>Prix Unitaire</value>
+  </data>
+  <data name="lblProduit" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="lblProfession" xml:space="preserve">
+    <value>Profession</value>
+  </data>
+  <data name="lblPropriete" xml:space="preserve">
+    <value>Preuve propriété</value>
+  </data>
+  <data name="lblPuissance" xml:space="preserve">
+    <value>Puissance</value>
+  </data>
+  <data name="lblQuantite" xml:space="preserve">
+    <value>Quantité</value>
+  </data>
+  <data name="lblQuartier" xml:space="preserve">
+    <value>Quartier</value>
+  </data>
+  <data name="lblRepereProche" xml:space="preserve">
+    <value>Repère le plus proche</value>
+  </data>
+  <data name="lblSecteur" xml:space="preserve">
+    <value>Secteur</value>
+  </data>
+  <data name="lblSection" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="lblTelephone" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="lblTension" xml:space="preserve">
+    <value>Tension</value>
+  </data>
+  <data name="lblTotalMontant" xml:space="preserve">
+    <value>Montant total</value>
+  </data>
+  <data name="lblTournee" xml:space="preserve">
+    <value>Tournée</value>
+  </data>
+  <data name="lblTTC" xml:space="preserve">
+    <value>TTC</value>
+  </data>
+  <data name="lblType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lblTypePiece" xml:space="preserve">
+    <value>Pièce d'identité</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="lblUtilise" xml:space="preserve">
+    <value>Utilisé</value>
+  </data>
+  <data name="lnkLetter" xml:space="preserve">
+    <value>Ajouter l'autorisation scannée</value>
+  </data>
+  <data name="mnuAccueil" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="mnuAPropos" xml:space="preserve">
+    <value>A propos de</value>
+  </data>
+  <data name="mnuBonControle" xml:space="preserve">
+    <value>Bon de contrôle</value>
+  </data>
+  <data name="mnuBonDeSortie" xml:space="preserve">
+    <value>Bon de sortie matériel</value>
+  </data>
+  <data name="mnuBonRemboursement" xml:space="preserve">
+    <value>Bon de remboursement</value>
+  </data>
+  <data name="mnuBonRetourMateriel" xml:space="preserve">
+    <value>Bon retour matériel</value>
+  </data>
+  <data name="mnuBonTravaux" xml:space="preserve">
+    <value>Bon travaux</value>
+  </data>
+  <data name="mnuClotureDesDossiers" xml:space="preserve">
+    <value>Clôture des dossiers</value>
+  </data>
+  <data name="mnuConsultationDesDevis" xml:space="preserve">
+    <value>Consultation des devis</value>
+  </data>
+  <data name="mnuDevis" xml:space="preserve">
+    <value>Devis</value>
+  </data>
+  <data name="mnuDevisAEncaisser" xml:space="preserve">
+    <value>Devis à encaisser</value>
+  </data>
+  <data name="mnuDevisClotures" xml:space="preserve">
+    <value>Devis clôturés</value>
+  </data>
+  <data name="mnuDevisNonClotures" xml:space="preserve">
+    <value>Devis dans le circuit</value>
+  </data>
+  <data name="mnuEdition" xml:space="preserve">
+    <value>Editions</value>
+  </data>
+  <data name="mnuEtablissementDevis" xml:space="preserve">
+    <value>Etablissement devis</value>
+  </data>
+  <data name="mnuEtapesDevis" xml:space="preserve">
+    <value>Etapes devis</value>
+  </data>
+  <data name="mnuFermerSession" xml:space="preserve">
+    <value>Fermer la session</value>
+  </data>
+  <data name="mnuFichier" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="mnuProcesVerbal" xml:space="preserve">
+    <value>Procès verbal</value>
+  </data>
+  <data name="mnuQuitter" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="mnuRapportControle" xml:space="preserve">
+    <value>Rapport de contrôle</value>
+  </data>
+  <data name="mnuReedition" xml:space="preserve">
+    <value>Reédition</value>
+  </data>
+  <data name="mnuValidationDevis" xml:space="preserve">
+    <value>Validation devis</value>
+  </data>
+  <data name="MontantAccompte" xml:space="preserve">
+    <value>Montant Accompte</value>
+  </data>
+  <data name="msgAddFournitures" xml:space="preserve">
+    <value>Veuillez ajouter des éléments avant de poursuivre</value>
+  </data>
+  <data name="msgBadPwd" xml:space="preserve">
+    <value>Confirmation erronée</value>
+  </data>
+  <data name="msgBienvenue" xml:space="preserve">
+    <value>Bienvenue</value>
+  </data>
+  <data name="msgBonSortieNonEtabli" xml:space="preserve">
+    <value>Etape "Etablissement bon de sortie" non encore exécutée</value>
+  </data>
+  <data name="msgChoixChefEquipe" xml:space="preserve">
+    <value>Vous devez spécifier un chef d'équipe travaux pour poursuivre</value>
+  </data>
+  <data name="msgConfirmControle" xml:space="preserve">
+    <value>Validez vous les informations entrées?</value>
+  </data>
+  <data name="msgConfirmRejection" xml:space="preserve">
+    <value>confirmez-vous le rejet de ce devis?</value>
+  </data>
+  <data name="msgConfirmRemisStock" xml:space="preserve">
+    <value>Confirmez-vous le retour en stock de ce matériel?</value>
+  </data>
+  <data name="msgConfirmSuppression" xml:space="preserve">
+    <value>Confirmez-vous la suppression de cet élément?</value>
+  </data>
+  <data name="msgConfirmTransmit" xml:space="preserve">
+    <value>Voulez-vous transmettre le devis?</value>
+  </data>
+  <data name="msgConfirmValidation" xml:space="preserve">
+    <value>Confirmez-vous la validation de ce devis?</value>
+  </data>
+  <data name="msgControleNonFait" xml:space="preserve">
+    <value>Etape "Contrôle des travaux" non exécutée</value>
+  </data>
+  <data name="msgDecisionControleNonFaite" xml:space="preserve">
+    <value>Etape "Décision contrôle" non encore exécutée</value>
+  </data>
+  <data name="msgDevisNonCloturé" xml:space="preserve">
+    <value>Dossier non enocre clôturé</value>
+  </data>
+  <data name="msgEmptyChefEquipe" xml:space="preserve">
+    <value>Chef d'équipe travaux inexistant</value>
+  </data>
+  <data name="msgEmptyDevis" xml:space="preserve">
+    <value>Veuillez d'abord saisir un numéro de devis...</value>
+  </data>
+  <data name="msgEmptyFournitures" xml:space="preserve">
+    <value>Elements du devis non fournis</value>
+  </data>
+  <data name="msgEmptyListeDevis" xml:space="preserve">
+    <value>Pas de devis à traiter</value>
+  </data>
+  <data name="msgEmptyLogin" xml:space="preserve">
+    <value>Vous devez saisir un matricule et un mot de passe</value>
+  </data>
+  <data name="msgEmptyMatricule" xml:space="preserve">
+    <value>Vous devez saisir un matricule</value>
+  </data>
+  <data name="msgEmptyPassword" xml:space="preserve">
+    <value>Vous devez saisir un mot de passe</value>
+  </data>
+  <data name="msgEmptyProcess" xml:space="preserve">
+    <value>Aucun traitement en attente</value>
+  </data>
+  <data name="msgEmptyRemisStock" xml:space="preserve">
+    <value>Aucun matériel n'a été remis en stock</value>
+  </data>
+  <data name="msgEmptyUser" xml:space="preserve">
+    <value>Vous devez selectionner un agent</value>
+  </data>
+  <data name="msgFonctionAgentNonIdentifie" xml:space="preserve">
+    <value>Fonction de l'agent non identifiée</value>
+  </data>
+  <data name="msgLoginOk" xml:space="preserve">
+    <value>Utilisateur authentifié</value>
+  </data>
+  <data name="msgMauvaiseQuantiteRetour" xml:space="preserve">
+    <value>Nombre supérieur à la quantité initiale </value>
+  </data>
+  <data name="msgOrdreDuDevis" xml:space="preserve">
+    <value>Le devis {0} est à l'ordre {1}</value>
+  </data>
+  <data name="msgPasswordInconnu" xml:space="preserve">
+    <value>Mot de passe incorrect</value>
+  </data>
+  <data name="msgProcesVerbalNonEtabli" xml:space="preserve">
+    <value>Etape "Etablissement procès verbal" non encore exécutée</value>
+  </data>
+  <data name="msgQuitter" xml:space="preserve">
+    <value>Voulez-vous quitter l'application?</value>
+  </data>
+  <data name="msgRequestNotFound" xml:space="preserve">
+    <value>Devis introuvable</value>
+  </data>
+  <data name="msgRestart" xml:space="preserve">
+    <value>Voulez-vous fermer cette session?</value>
+  </data>
+  <data name="msgUserInconnu" xml:space="preserve">
+    <value>Utilisateur Inconnu</value>
+  </data>
+  <data name="msgUserValidation" xml:space="preserve">
+    <value>Validation de l'utilisateur</value>
+  </data>
+  <data name="msgValidationNonFaite" xml:space="preserve">
+    <value>Devis non encore validé</value>
+  </data>
+  <data name="Nom" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="NumeroRecu" xml:space="preserve">
+    <value>Numéro de reçu</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="origineCreation" xml:space="preserve">
+    <value>création</value>
+  </data>
+  <data name="origineRejet" xml:space="preserve">
+    <value>rejet</value>
+  </data>
+  <data name="Prenoms" xml:space="preserve">
+    <value>Prénoms</value>
+  </data>
+  <data name="recherche" xml:space="preserve">
+    <value>Recherche</value>
+  </data>
+  <data name="reinitialiser" xml:space="preserve">
+    <value>Reinitialiser</value>
+  </data>
+  <data name="tslRechercherDevis" xml:space="preserve">
+    <value>Rechercher un devis</value>
+  </data>
+  <data name="ttlAccueil" xml:space="preserve">
+    <value>Gestion de devis - [Accueil]</value>
+  </data>
+  <data name="ttlAuthentification" xml:space="preserve">
+    <value>Authentification</value>
+  </data>
+  <data name="ttlBonSortie" xml:space="preserve">
+    <value>Gestion de devis - [Etablissement bon de sortie]</value>
+  </data>
+  <data name="ttlChangementPwd" xml:space="preserve">
+    <value>Modification mot de passe</value>
+  </data>
+  <data name="ttlClotureDossier" xml:space="preserve">
+    <value>Gestion de devis - [Clôture des dossiers]</value>
+  </data>
+  <data name="ttlConsultationUnDevis" xml:space="preserve">
+    <value>Consultation d'un devis</value>
+  </data>
+  <data name="ttlControle" xml:space="preserve">
+    <value>Gestion de devis - [Liste des devis à controler]</value>
+  </data>
+  <data name="ttlCreationDevis" xml:space="preserve">
+    <value>Création du devis</value>
+  </data>
+  <data name="ttlDecision" xml:space="preserve">
+    <value>Gestion de devis - [Décision de contrôle]</value>
+  </data>
+  <data name="ttlDetailDemandeur" xml:space="preserve">
+    <value>Détails de la demande</value>
+  </data>
+  <data name="ttlDetailDevis" xml:space="preserve">
+    <value>Selection des éléments du devis</value>
+  </data>
+  <data name="ttlDevisAEncaisser" xml:space="preserve">
+    <value>Gestion de devis - [Liste des devis à encaisser]</value>
+  </data>
+  <data name="ttlDossierCloture" xml:space="preserve">
+    <value>Gestion de devis - [Liste des dossiers clôturés]</value>
+  </data>
+  <data name="ttlDossierNonCloture" xml:space="preserve">
+    <value>Gestion de devis - [Liste des dossiers non clôturés]</value>
+  </data>
+  <data name="ttlEtablissement" xml:space="preserve">
+    <value>Gestion de devis - [Etablissement devis]</value>
+  </data>
+  <data name="ttlListeAppareils" xml:space="preserve">
+    <value>Liste des Appareils et foyers lumineux installés</value>
+  </data>
+  <data name="ttlProcesVerbal" xml:space="preserve">
+    <value>Saisie du procès verbal</value>
+  </data>
+  <data name="ttlPV" xml:space="preserve">
+    <value>Gestion de devis - [Etablissement procès verbal]</value>
+  </data>
+  <data name="ttlRecapitulatifDevis" xml:space="preserve">
+    <value>Récapitulatif du devis</value>
+  </data>
+  <data name="ttlReeditionBonControle" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition bon de contrôle]</value>
+  </data>
+  <data name="ttlReeditionBonRemboursement" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition bon de remboursement]</value>
+  </data>
+  <data name="ttlReeditionBonRetourMateriel" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition bon retour matériel]</value>
+  </data>
+  <data name="ttlReeditionBonSortie" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition bon de sortie]</value>
+  </data>
+  <data name="ttlReeditionBonTravaux" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition bon travaux]</value>
+  </data>
+  <data name="ttlReeditionDevis" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition devis]</value>
+  </data>
+  <data name="ttlReeditionProcesVerbal" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition procès verbal]</value>
+  </data>
+  <data name="ttlReeditionRapportControle" xml:space="preserve">
+    <value>Gestion de devis - [Re-édition rapport de contrôle]</value>
+  </data>
+  <data name="ttlRejetDevis" xml:space="preserve">
+    <value>Motif rejet du devis</value>
+  </data>
+  <data name="ttlSaisirDevis" xml:space="preserve">
+    <value>Saisir le numéro du devis</value>
+  </data>
+  <data name="ttlValidation" xml:space="preserve">
+    <value>Gestion de devis - [Validation devis]</value>
+  </data>
+  <data name="ttlValidationcontrole" xml:space="preserve">
+    <value>Gestion de devis - [Validation du rapport de contrôle]</value>
+  </data>
+  <data name="txtAModifier" xml:space="preserve">
+    <value>A modifier à l'étape suivante</value>
+  </data>
+  <data name="txtAppareils" xml:space="preserve">
+    <value>Appareils</value>
+  </data>
+  <data name="txtDemandeur" xml:space="preserve">
+    <value>Demandeur</value>
+  </data>
+  <data name="txtDescriptionProduit" xml:space="preserve">
+    <value>Ce module permet la gestion du devis depuis sa  demande jusqu'à sa clôture en passant par son établissement, sa validation et son encaissement...</value>
+  </data>
+  <data name="txtDevis" xml:space="preserve">
+    <value>Devis</value>
+  </data>
+  <data name="AucunAccompteTrouve" xml:space="preserve">
+    <value>Aucun acompte trouvé</value>
+  </data>
+  <data name="AutorisationScannee" xml:space="preserve">
+    <value>Autorisation scannée</value>
+  </data>
+  <data name="DepositHasBeenUsed" xml:space="preserve">
+    <value>Ce reçu a déjà été utilisé par la demande {0}.</value>
+  </data>
+  <data name="DepositNotExist" xml:space="preserve">
+    <value>Ce reçu n'existe pas.</value>
+  </data>
+  <data name="btnCommenter" xml:space="preserve">
+    <value>Commenter</value>
+  </data>
+  <data name="msgErreurCreationDevis" xml:space="preserve">
+    <value>Erreur lors de la création du devis</value>
+  </data>
+  <data name="msgErreurMiseAJourDevis" xml:space="preserve">
+    <value>Erreur lors de la mise à jour du devis</value>
+  </data>
+  <data name="AucunesDonneesTrouvees" xml:space="preserve">
+    <value>Aucune donnée trouvée</value>
+  </data>
+  <data name="msgErreurChargementDonnees" xml:space="preserve">
+    <value>Erreur lors du chargement des données</value>
+  </data>
+  <data name="msgVerificationNombre" xml:space="preserve">
+    <value>Veuillez saisir un nombre s'il vous plaît !</value>
+  </data>
+  <data name="RptBonDeSortie" xml:space="preserve">
+    <value>BonDeSortie</value>
+  </data>
+  <data name="RptDevis" xml:space="preserve">
+    <value>Devis</value>
+  </data>
+  <data name="msgErreurImpression" xml:space="preserve">
+    <value>Erreur lors de l'impression !</value>
+  </data>
+  <data name="RptBonTravaux" xml:space="preserve">
+    <value>BonTravaux</value>
+  </data>
+  <data name="RptBonControl" xml:space="preserve">
+    <value>BonControle</value>
+  </data>
+  <data name="RptProcesVerbal" xml:space="preserve">
+    <value>ProcesVerbal</value>
+  </data>
+  <data name="RptRapportControle" xml:space="preserve">
+    <value>RapportControle</value>
+  </data>
+  <data name="RptRapportBilan" xml:space="preserve">
+    <value>Bilan</value>
+  </data>
+  <data name="columnHeaderDateAnnulation" xml:space="preserve">
+    <value>Date Annulation</value>
+  </data>
+  <data name="columnHeaderTempsExecution" xml:space="preserve">
+    <value>Temps Execution</value>
+  </data>
+  <data name="RptBonEntreeStock" xml:space="preserve">
+    <value>BonEntreeStock</value>
+  </data>
+  <data name="RptBonDeControle" xml:space="preserve">
+    <value>BonDeControle</value>
+  </data>
+  <data name="RptBilan" xml:space="preserve">
+    <value>Bilan</value>
+  </data>
+  <data name="RptDevisSeparation" xml:space="preserve">
+    <value>DevisSeparation</value>
+  </data>
+  <data name="RptDevisSubvention" xml:space="preserve">
+    <value>DevisSubvention</value>
+  </data>
+  <data name="msgOperationEffectueAvecSucces" xml:space="preserve">
+    <value>Operation Effectué avec succès</value>
+  </data>
+  <data name="Data_Loading" xml:space="preserve">
+    <value>Veillez patienter pendant le chargement de data ....</value>
+  </data>
+  <data name="Btn_reset" xml:space="preserve">
+    <value>Resiliation</value>
+  </data>
+  <data name="Btn_search" xml:space="preserve">
+    <value>Recherche</value>
+  </data>
+  <data name="Btn_Transmettre" xml:space="preserve">
+    <value>Transmettre</value>
+  </data>
+  <data name="Btn_Verifier" xml:space="preserve">
+    <value>Verifier</value>
+  </data>
+  <data name="lbl_Client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="lbl_MontantARembourser" xml:space="preserve">
+    <value>Montant à rembourser</value>
+  </data>
+  <data name="lbl_Motif" xml:space="preserve">
+    <value>Motif de l'annulation</value>
+  </data>
+  <data name="lbl_Sequence" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="lbl_TypeDevis" xml:space="preserve">
+    <value>Type de devis</value>
+  </data>
+  <data name="lbl_NomAgent" xml:space="preserve">
+    <value>Nom agent</value>
+  </data>
+</root>

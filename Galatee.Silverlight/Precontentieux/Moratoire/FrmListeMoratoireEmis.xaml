@@ -1,0 +1,56 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+          xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+    
+    x:Class="Galatee.Silverlight.Precontentieux.FrmListeMoratoireEmis"
+           Width="969.313" Height="574.913" 
+           Title="Liste de moratoire emis" Style="{StaticResource ChildWindowGalatee}" Loaded="ChildWindow_Loaded_1">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="113" Height="23" HorizontalAlignment="Right" Margin="0,13,20,1" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Imprimer" Click="OKButton_Click" Width="119" Height="23" HorizontalAlignment="Right" Margin="0,12,138,0" Grid.Row="1" />
+        <Controls:GroupBox Header="Informations" Margin="0,0,10,332" x:Name="Gbo_Info" IsEnabled="True" />
+        <Button Content="Centre" Height="22" HorizontalAlignment="Left" Margin="16,46,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="82" Click="btn_Centre_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,47,0,0" x:Name="Txt_Centre" VerticalAlignment="Top" Width="65" IsReadOnly="True" TextChanged="Txt_Centre_TextChanged" />
+        <Button Content="Site" Height="22" HorizontalAlignment="Left" Margin="16,21,0,0" x:Name="btn_Site" VerticalAlignment="Top" Width="82" Click="btn_Site_Click" />
+        <TextBox x:Name="txt_LibelleSite" HorizontalAlignment="Left" Height="23" Margin="174,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" IsReadOnly="True"/>
+        <TextBox x:Name="txt_libellecentre" HorizontalAlignment="Left" Height="23" Margin="174,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" IsReadOnly="True"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,21,0,0" x:Name="Txt_Site" VerticalAlignment="Top" Width="65" IsReadOnly="True" TextChanged="Txt_Centre_TextChanged" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="De" Margin="64,86,0,0" VerticalAlignment="Top" Width="23"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Content="A" Margin="242,86,0,0" VerticalAlignment="Top" Width="23"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="303" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="0,152,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="931" 
+        	>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding REFERENCE}" CanUserReorder="False"  CanUserSort="True" Header="Reférence" IsReadOnly="True" MinWidth="100"   Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NOMABON}" CanUserReorder="False"  CanUserSort="True" Header="Nom" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding REFEM}" CanUserReorder="False"  CanUserSort="True" Header="Période" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="False"  CanUserSort="True" Header="Facture" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserReorder="False"  CanUserSort="True" Header="Montant" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding EXIGIBILITE,Converter={StaticResource DateTimeConverter}}" CanUserReorder="False"  CanUserSort="True" Header="Exigibilité" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANTPAYE,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserSort="True" Header="Montant payé" IsReadOnly="True" Foreground="Green" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NATURE}" CanUserReorder="False"  CanUserSort="True" Header="Status" IsReadOnly="True" MinWidth="100" Width="SizeToCells" Foreground="Red"   />
+
+                
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Afficher" Name="btn_Rechercher" HorizontalAlignment="Left" Margin="738,92,0,0" VerticalAlignment="Top" Width="152" Click="btn_Rechercher_Click"/>
+        <Button Content="Exporter" HorizontalAlignment="Left" Margin="432,13,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Click="Button_Click_1"/>
+        <sdk:DatePicker x:Name="dtp_Debut" HorizontalAlignment="Left" Height="23" Margin="101,82,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:DatePicker x:Name="dtp_fin" HorizontalAlignment="Left" Height="23" Margin="309,82,0,0" VerticalAlignment="Top" Width="120"/>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="64,4,0,0" VerticalAlignment="Top" Width="307" IsIndeterminate="True" Grid.Row="1"/>
+        <RadioButton Content="Tout" Name ="Rdb_Tout"  HorizontalAlignment="Left" Margin="542,46,0,0" VerticalAlignment="Top" Checked="Rdb_Tout_Checked_1"/>
+        <RadioButton Content="Echu" Name ="Rdb_Echu" HorizontalAlignment="Left"  Margin="542,82,0,0" VerticalAlignment="Top" Checked="Rdb_Echu_Checked"/>
+    </Grid>
+</controls:ChildWindow>

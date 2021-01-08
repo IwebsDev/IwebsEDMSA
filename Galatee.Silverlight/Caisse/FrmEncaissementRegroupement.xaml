@@ -1,0 +1,146 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources" 
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+            xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+            xmlns:my="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Galatee.Silverlight.Caisse.FrmEncaissementRegroupement"
+           Width="1194" Height="648"
+           Title="Encaissement" Loaded="ChildWindow_Loaded" OverlayBrush="Transparent"
+            IsTabStop="False">
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2,2,3,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <my:GroupBox FontWeight="SemiBold" Height="97" Margin="0,-8,4,486" VerticalAlignment="Bottom" Header="" />
+        <my:GroupBox FontWeight="SemiBold" Header="Sélection" Height="38" Margin="0,0,780,259" VerticalAlignment="Bottom" IsTabStop="False" />
+        <my:GroupBox FontWeight="SemiBold" Header="Règlement" Height="49" Margin="565,0,4,8" VerticalAlignment="Bottom" />
+        <my:GroupBox FontWeight="SemiBold" Height="47" Margin="221,0,612,8" VerticalAlignment="Bottom" IsTabStop="False" Header="                             " />
+
+        <Button x:Name="CancelButton" Content="Fermer"  Width="133" Height="23" HorizontalAlignment="Right" Margin="0,538,11,14" IsTabStop="True" TabIndex="3" Click="CancelButton_Click" />
+        <Button x:Name="Btn_Payement" Content="Payement" Width="149" Height="23" HorizontalAlignment="Left" Margin="850,538,0,14" IsTabStop="True" TabIndex="2" Click="Btn_Payement_Click" />
+        <ComboBox Height="23"   HorizontalAlignment="Left" Margin="236,36,0,0" x:Name="Cbo_ListeClient" VerticalAlignment="Top" Width="195" SelectionChanged="Cbo_ListeClient_SelectionChanged"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="436,36,0,0" x:Name="TxtNomClient" VerticalAlignment="Top" Width="299" IsEnabled="True" IsReadOnly="True" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,36,121,0" x:Name="TxtAddress" VerticalAlignment="Top" Width="303" IsEnabled="True" IsReadOnly="True" IsTabStop="False" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="180" HorizontalAlignment="Left" Margin="2,93,0,0"  IsTabStop="True" FontSize="12" TabIndex="1"
+    		x:Name="Lsv_ListFacture" VerticalAlignment="Top" Width="1163"  LoadingRow="dataGrid1_LoadingRow" 
+    		MouseLeftButtonUp="dgMyDataGrid_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding Selectionner, Mode=TwoWay}" 
+    							VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn  Header="Centre" Binding="{Binding CENTRE}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Client" Binding="{Binding CLIENT}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Ordre" Binding="{Binding ORDRE}" MinWidth="50" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Période" Binding="{Binding REFEM}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Facture" Binding="{Binding NDOC}" MinWidth="90" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Type" Binding="{Binding LIBELLENATURE}" MinWidth="60" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Exigible le" Binding="{Binding EXIGIBILITE, Converter={StaticResource DateTimeConverter}}" MinWidth="85" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant du" Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}" MinWidth="90" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Paiement partiel" Binding="{Binding MONTANTPAYPARTIEL, Converter={StaticResource DecimalConverter}}" MinWidth="115" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant a payer" Binding="{Binding SOLDEFACTURE, Converter={StaticResource DecimalConverter}}" MinWidth="115" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant payé" Binding="{Binding MONTANTPAYE, Converter={StaticResource DecimalConverter}}" MinWidth="150" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True" FontStyle="Italic" Foreground="Red"  />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Rien" Height="23" HorizontalAlignment="Left" Margin="76,289,0,0" x:Name="BntNth" VerticalAlignment="Top" Width="116" Click="BntNth_Click" IsTabStop="False" />
+        <Button Content="Tout" Height="23" HorizontalAlignment="Right" Margin="0,289,804,0" x:Name="Bntall" VerticalAlignment="Top" Width="124" Click="Bntall_Click" IsTabStop="False" />
+        <sdk:Label Content="{Binding AppLangue.lblDate}" Height="19" HorizontalAlignment="Left" Margin="16,534,0,0" x:Name="label4" VerticalAlignment="Top" Width="46" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="68,532,0,0" x:Name="Txt_DateEncaissement" VerticalAlignment="Top" Width="122" IsReadOnly="True" IsTabStop="False" />
+        <sdk:Label Content="label" Height="19" HorizontalAlignment="Left" Margin="575,538,0,0" x:Name="label5" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Right" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="678,538,0,0" x:Name="Txt_TotalAPayer" VerticalAlignment="Top" Width="152" IsReadOnly="True" IsTabStop="False" Foreground="Red" FontSize="13" FontStyle="Italic" />
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="0,558,0,0" x:Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" />
+        <Button Content="Button" Height="16" HorizontalAlignment="Left" Margin="829,12,0,0" x:Name="button1" VerticalAlignment="Top" Width="75"  Visibility="Collapsed" />
+        <Button Content="Regroupement" Height="23" HorizontalAlignment="Left" Margin="18,5,0,0" x:Name="btn_Regroupement" VerticalAlignment="Top" Width="119" Click="btRegroupement_Click" IsTabStop="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="236,5,0,0" x:Name="txtCodeLabel" VerticalAlignment="Top" Width="275" IsEnabled="True" IsReadOnly="True" IsTabStop="False" />
+        <sdk:Label Content="Client" HorizontalAlignment="Left" Height="23" Margin="741,66,0,0" VerticalAlignment="Top" Width="113"/>
+        <sdk:Label Content="Période (mm/aaaa)" HorizontalAlignment="Left" Height="19" Margin="518,8,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="cbo_Periode" HorizontalAlignment="Left" Margin="801,5,0,0" VerticalAlignment="Top" Width="147" Height="24"/>
+        <ComboBox x:Name="cbo_PeriodeRegroupement" Visibility="Collapsed"  HorizontalAlignment="Left" Margin="631,6,0,0" VerticalAlignment="Top" Width="84" Height="24"/>
+        <Button Content="Ajouter" x:Name="btn_Periode" HorizontalAlignment="Left" Margin="720,6,0,0" VerticalAlignment="Top" Width="76" TabIndex="3" Click="btn_Periode_Click"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="631,6,0,0" x:Name="Txt_Periode" VerticalAlignment="Top" Width="84" MaxLength="7" TabIndex="1" />
+        <Button x:Name="btn_Rechercher" Content="Afficher" HorizontalAlignment="Left" Margin="910,65,0,0" VerticalAlignment="Top" IsTabStop="True" TabIndex="2" Width="134" Click="btn_Rechercher_Click"/>
+        <TextBox x:Name="txtCodeRegroupement" HorizontalAlignment="Left" Height="23" Margin="142,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" TabIndex="0" TextChanged="txtCodeRegroupement_TextChanged"/>
+        <Button Content="Ajouter client" x:Name="btn_Ajouter" HorizontalAlignment="Left" Margin="18,37,0,0" VerticalAlignment="Top" Width="207" Click="btn_Ajouter_Click"/>
+        <Button Content="Supprimer client" x:Name="btn_Supprimer" HorizontalAlignment="Left" Margin="19,64,0,0" VerticalAlignment="Top" Width="207" Click="btn_Supprimer_Click"/>
+        <CheckBox Content="Paiement partiel" x:Name="chk_PaiementPartiel" HorizontalAlignment="Left" Margin="236,520,0,0" VerticalAlignment="Top" Width="142" Checked="chk_PaiementPartiel_Checked" Unchecked="chk_PaiementPartiel_Unchecked"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_PaiementPartiel" Margin="362,537,0,0" IsReadOnly="True" Foreground="Red" FontSize="13" FontStyle="Italic"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" LostFocus="txt_PaiementPartiel_LostFocus"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="268,539,0,0" Content="Montant" VerticalAlignment="Top" Width="79"/>
+        <sdk:Label Content="Montant total " HorizontalAlignment="Left" Height="19" Margin="238,66,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="347,64,0,0" x:Name="Txt_MontantTotal" Foreground="Red" FontSize="13" FontStyle="Italic" IsReadOnly="True" Background="Transparent"    VerticalAlignment="Top" Width="185" TabIndex="1" />
+        <Button Content="Supprimer" x:Name="btn_SupprimerPeriode" HorizontalAlignment="Left" Margin="953,6,0,0" VerticalAlignment="Top" Width="91" TabIndex="3" Click="btn_SupprimerPeriode_Click"/>
+        <CheckBox Content="MT" x:Name="Chk_MT" HorizontalAlignment="Left" Margin="565,70,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="BT" x:Name="Chk_BT" HorizontalAlignment="Left" Margin="659,70,0,0" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="875,289,0,0" VerticalAlignment="Top" Width="286" IsIndeterminate="True"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="194" HorizontalAlignment="Left" Margin="1,319,0,0"  IsTabStop="True" FontSize="12" TabIndex="1"
+        	x:Name="Lsv_ListFactureFinal" VerticalAlignment="Top" Width="1153"  LoadingRow="dataGrid1_LoadingRow" 
+        	MouseLeftButtonUp="dgMyDataGrid2_MouseLeftButtonUp">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding Selectionner, Mode=TwoWay}" 
+            					VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn  Header="Centre" Binding="{Binding CENTRE}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Client" Binding="{Binding CLIENT}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Ordre" Binding="{Binding ORDRE}" MinWidth="50" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn  Header="Période" Binding="{Binding REFEM}" MinWidth="80" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Facture" Binding="{Binding NDOC}" MinWidth="90" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Type" Binding="{Binding LIBELLENATURE}" MinWidth="60" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Exigible le" Binding="{Binding EXIGIBILITE, Converter={StaticResource DateTimeConverter}}" MinWidth="85" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant du" Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}" MinWidth="90" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Paiement partiel" Binding="{Binding MONTANTPAYPARTIEL, Converter={StaticResource DecimalConverter}}" MinWidth="115" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant a payer" Binding="{Binding SOLDEFACTURE, Converter={StaticResource DecimalConverter}}" MinWidth="115" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Header="Montant payé" Binding="{Binding MONTANTPAYE, Converter={StaticResource DecimalConverter}}" MinWidth="150" Width="SizeToCells" CanUserReorder="True" CanUserSort="True" IsReadOnly="True" FontStyle="Italic" Foreground="Red"  />
+                <sdk:DataGridTemplateColumn Width="78" Header="Exonérée" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" IsChecked ="{Binding IsExonerationTaxe, Mode=TwoWay}"  Checked="chk_Exonere_Checked" Unchecked="chk_Exonere_Unchecked"
+            					VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="&gt;" Height="48.088" Name="btn_UnSeul" HorizontalAlignment="Right" Margin="0,270.953,622.886,0" VerticalAlignment="Top" Width="30.973" IsTabStop="False" RenderTransformOrigin="0.5,0.552" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btn_UnSeul_Click" >
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="90.423"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="&gt;" Height="48.088" HorizontalAlignment="Right" Margin="0,270.953,402.886,0" x:Name="Bnt_DeselectUn" VerticalAlignment="Top" Width="30.973" IsTabStop="False" RenderTransformOrigin="0.5,0.552" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Bnt_DeselectUn_Click" >
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="270.079"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="&gt;&gt;" Name="btn_ToutSelect" Height="48.088" HorizontalAlignment="Right" Margin="0,270.953,558.886,0" VerticalAlignment="Top" Width="30.973"  IsTabStop="False" RenderTransformOrigin="0.5,0.552" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="btn_ToutSelect_Click" >
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="90.423"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="&gt;&gt;" Height="48.088" HorizontalAlignment="Right" Margin="0,270.953,350.886,0" x:Name="Bnt_DeselectAll" VerticalAlignment="Top" Width="30.973"  IsTabStop="False" RenderTransformOrigin="0.5,0.552" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Bnt_DeselectAll_Click" >
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="270.035"/>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</sdk:ChildWindow>

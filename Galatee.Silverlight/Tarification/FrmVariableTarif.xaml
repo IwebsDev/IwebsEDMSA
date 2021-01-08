@@ -1,0 +1,77 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+                     xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Tarification.FrmVariableTarif"
+Width="709.339" Height="507" 
+           Title="Variable Tarif" Style="{StaticResource ChildWindowGalatee}" Margin="0,6,0,-6">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="-1,3,1,266" x:Name="groupBox1_Copy1" Header="Informations  Générales"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,136,0,151" x:Name="groupBox1_Copy2" Header="Tarifs"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,251,0,10" x:Name="groupBox1_Copy3" Header="Informations Supplementaires"  />
+
+        <!-- <Controls:GroupBox FontWeight="SemiBold" Margin="474,116,10,79" x:Name="groupBox1_Copy4" Header="Info  de redevence"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="474,116,10,79" x:Name="groupBox1_Copy5" Header="Info  de redevence"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="474,116,10,79" x:Name="groupBox1_Copy6" Header="Info  de redevence"  />-->
+        <!--<Controls:GroupBox FontWeight="SemiBold" Margin="474,116,10,79" x:Name="groupBox1_Copy7" Header="Info  de redevence"  />-->
+        <!--<Controls:GroupBox FontWeight="SemiBold" Margin="474,116,10,79" x:Name="groupBox1_Copy38" Header="Info  de redevence"  />-->
+        <!--<StackPanel Height="28" x:Name="stackPanel2" Orientation="Horizontal" Margin="10,68,261,301">-->
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <sdk:Label Height="17" x:Name="label3" Width="61" Content="Centre" Margin="2,75,618,305" />
+        <TextBox Height="23" x:Name="Txt_CodeCentre" Width="52" Margin="64,71,565,303" TextChanged="Txt_CodeCentre_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_Centre1" Margin="121,71,535,303" Click="btn_Centre_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleCentre1" IsReadOnly="True" Margin="151,72,274,302" />
+        <!--</StackPanel>-->
+        <!--<StackPanel Height="28" x:Name="stackPanel6" Orientation="Horizontal" Margin="10,101,261,268">-->
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <!--<sdk:Label Height="17" Name="label1" Width="70" Content="{Binding Path=AccueilAppLangue.lbl_center, Source={StaticResource localisation}}" />-->
+        <sdk:Label Height="17" x:Name="label6" Width="62" Content="Redevance" Margin="2,103,617,277" />
+        <TextBox Height="23" x:Name="Txt_CodeRedevence" Margin="63,100,565,274" TextChanged="Txt_CodeRedevence_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_Redevence" Margin="121,99,535,275" Click="btn_Redevence_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleRedevence" Width="256" IsReadOnly="True" Margin="151,100,274,274" />
+        <!--</StackPanel>-->
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Content="Commune " Width="120" Margin="420,77,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Content="Date d'application" Width="120" Margin="415,104,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_commune" Text="{Binding COMMUNE,Mode= TwoWay}" Height="23" Margin="519,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="143"/>
+        <!--<TextBox HorizontalAlignment="Left" x:Name="txt_DateAppli" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Margin="415,64,0,0"/>-->
+        <sdk:Label HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Content="Formule" Width="120" Margin="42,277,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Content="Compte comptable" Width="120" Margin="42,307,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_Formule" Height="23" TextWrapping="Wrap" Text="{Binding  FORMULE,Mode=TwoWay}" VerticalAlignment="Top" Width="154" Margin="199,275,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_CompteComptable" Height="23" TextWrapping="Wrap" Text="{Binding COMPTECOMPTABLE,Mode=TwoWay}" VerticalAlignment="Top" Width="154" Margin="199,303,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="361,282,0,0" VerticalAlignment="Top" Content="Ordre Edition" Width="85"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_OrdreEdition" Height="23" TextWrapping="Wrap" Text="{Binding ORDREEDITION,Mode=TwoWay}" VerticalAlignment="Top" Width="160" Margin="451,276,0,0" TextChanged="txt_OrdreEdition_TextChanged"/>
+        <CheckBox Content="Génération Anomalie" IsThreeState="False" x:Name="GenerationAnomalie" IsChecked="{Binding GENERATIONANOMALIE,Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="199,359,0,0"/>
+        <CheckBox Content="Est Analytique" IsThreeState="False" x:Name="EstAnalytique" IsChecked="{Binding ESTANALYTIQUE }" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="391,359,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Content="Libelle compte comptable" Width="153" Margin="42,332,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_LibelleComptable" Height="23" TextWrapping="Wrap" Text="{Binding LIBELLECOMPTABLE,Mode=TwoWay}" VerticalAlignment="Top" Width="154" Margin="200,329,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Content="Region" Width="120" Margin="371,306,0,0"/>
+        <TextBox HorizontalAlignment="Left" x:Name="txt_Region" Height="23" TextWrapping="Wrap" Text="{Binding REGION,Mode=TwoWay}" VerticalAlignment="Top" Width="160" Margin="451,301,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Content="SRegion" Width="120" Margin="371,329,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_SRegion" TextWrapping="Wrap" Text="{Binding SREGION,Mode=TwoWay}" VerticalAlignment="Top" Width="160" Margin="451,329,0,0"/>
+        <sdk:DatePicker x:Name="txt_DateAppli"  HorizontalAlignment="Left" Height="23" SelectedDate="{Binding DATEAPPLICATION,Mode=TwoWay}" Margin="519,100,0,0" VerticalAlignment="Top" Width="152"/>
+        <sdk:Label x:Name="label1" Content="Code Recherche " Margin="49,153,447,222" />
+        <TextBox Height="23" x:Name="Txt_CodeRechercheTarif" Margin="161,152,436,222" TextChanged="Txt_CodeRechercheTarif_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_RechercheTarif" Margin="250,152,375,222" Click="btn_RechercheTarif_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleRechercheTarif" IsReadOnly="True" Margin="311,152,47,222" />
+        <sdk:Label Height="17" x:Name="label2" Content="Mode Calcul " Margin="51,185,445,195" />
+        <TextBox Height="23" x:Name="Txt_CodeModeCalcule" Margin="161,182,436,192" TextChanged="Txt_CodeModeCalcule_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_ModeCalcule" Margin="250,182,375,192" Click="btn_ModeCalcule_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleModeCalcule" IsReadOnly="True" Margin="311,182,46,192" />
+        <sdk:Label Height="17" x:Name="label7" Content="Mode application" Margin="53,213,441,167" />
+        <TextBox Height="23" x:Name="Txt_CodeModeApp" Margin="161,210,436,164" TextChanged="Txt_CodeModeApp_TextChanged" />
+        <Button Content="..." Height="23" x:Name="btn_ModeApp" Margin="250,210,375,164" Click="btn_ModeApp_Click" />
+        <TextBox Height="23" x:Name="Txt_LibelleModeApp" IsReadOnly="True" Margin="311,210,45,164" />
+        <sdk:Label Height="17" x:Name="label16" Content="Site" Margin="2,42,599,338" />
+        <TextBox Height="23" x:Name="Txt_CodeSite" Margin="63,42,565,332" TextChanged="Txt_CodeSite_TextChanged"  />
+        <Button Content="..." Height="23" x:Name="btn_Site" Margin="121,43,535,331" Click="btn_Site_Click"  />
+        <TextBox Height="23" x:Name="Txt_LibelleSite" IsReadOnly="True" Margin="151,44,274,330" />
+    </Grid>
+</controls:ChildWindow>

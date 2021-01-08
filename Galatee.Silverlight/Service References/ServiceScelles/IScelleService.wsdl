@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IScelleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/Scelle/IScelleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/Scelle/IScelleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/Scelle/IScelleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/Scelle/IScelleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/Scelle/IScelleService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIScelleService_VerifieCompteurExisteNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCompteurExisteNew" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifieCompteurExisteNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCompteurExisteNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifieCompteurExisteNew_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeActivite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeActivite" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeActivite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeActiviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeActivite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeCouleurScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeCouleurScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeCouleurScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeCouleurScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeCouleurScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllCouleurScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllCouleurScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllCouleurScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllCouleurScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllCouleurScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDemandeScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDemandeScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDemandeScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDemandeScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDemandeScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertDemandeScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDemandeScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertDemandeScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDemandeScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertDemandeScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDetailAffectationScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDetailAffectationScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDetailAffectationScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDetailAffectationScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeDetailAffectationScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValidationReception_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationReception" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValidationReception_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationReceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValidationReception_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMargasinVirtuelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMargasinVirtuelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMargasinVirtuelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMargasinVirtuelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMargasinVirtuelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteMargasinVirtuelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMargasinVirtuelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteMargasinVirtuelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMargasinVirtuelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteMargasinVirtuelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateMargasinVirtuelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMargasinVirtuelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateMargasinVirtuelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMargasinVirtuelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateMargasinVirtuelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertMargasinVirtuelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMargasinVirtuelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertMargasinVirtuelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMargasinVirtuelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertMargasinVirtuelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeFournisseurs_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFournisseurs" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeFournisseurs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeFournisseursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeFournisseurs_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllLotMagasinGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllLotMagasinGeneral" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllLotMagasinGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllLotMagasinGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllLotMagasinGeneral_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteLotMagasinGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLotMagasinGeneral" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteLotMagasinGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLotMagasinGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteLotMagasinGeneral_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateLotMagasinGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLotMagasinGeneral" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateLotMagasinGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLotMagasinGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateLotMagasinGeneral_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertLotMagasinGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLotMagasinGeneral" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertLotMagasinGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLotMagasinGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertLotMagasinGeneral_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeOrigineScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeOrigineScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeOrigineScelleById" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeOrigineScelleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeOrigineScelleById_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValiderListeSaisieSelonDonneesEnBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderListeSaisieSelonDonneesEnBase" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValiderListeSaisieSelonDonneesEnBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValiderListeSaisieSelonDonneesEnBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_ValiderListeSaisieSelonDonneesEnBase_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneEtatCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneEtatCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneEtatCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListRechercheCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListRechercheCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListRechercheCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListRechercheCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListRechercheCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneRechercheCompteurById_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRechercheCompteurById" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneRechercheCompteurById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneRechercheCompteurByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneRechercheCompteurById_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q24:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListMarque_Modele_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListMarque_Modele" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListMarque_Modele_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListMarque_ModeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListMarque_Modele_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q25:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q26:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q27:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q28:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteurSuiteModif_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteurSuiteModif" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteurSuiteModif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompteurSuiteModifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateCompteurSuiteModif_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q29:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifierEtatCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifierEtatCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifierEtatCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifierEtatCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifierEtatCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q30:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertCompteur_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompteur" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertCompteur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompteurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertCompteur_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q31:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteurNonAffecte_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteurNonAffecte" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteurNonAffecte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllCompteurNonAffecteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllCompteurNonAffecte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q32:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifieCompteurExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCompteurExiste" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifieCompteurExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifieCompteurExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_VerifieCompteurExiste_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q33:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q34:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRemiseScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRemiseScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRemiseScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRemiseScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRemiseScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q35:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRemise_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRemise" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRemise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRemiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRemise_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q36:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRemise_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRemise" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRemise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRemiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRemise_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q37:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRemise_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRemise" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRemise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRemiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRemise_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q38:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMotisScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMotisScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMotisScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllMotisScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllMotisScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q39:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllScelles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllScelles" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllScelles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllScellesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllScelles_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q40:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneScellesListeByAgence_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneScellesListeByAgence" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneScellesListeByAgence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneScellesListeByAgenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneScellesListeByAgence_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q41:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListelot_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListelot" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListelot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListelotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListelot_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q42:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListeAllUser_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q43:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRetourScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRetourScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRetourScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllRetourScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllRetourScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q44:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRetours_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRetours" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRetours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRetoursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_DeleteRetours_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q45:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRetourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRetourse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRetourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRetourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_UpdateRetourse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q46:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRetours_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRetours" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRetours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRetoursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_InsertRetours_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q47:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllStatutsScelles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllStatutsScelles" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllStatutsScelles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllStatutsScellesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SelectAllStatutsScelles_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q48:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelleByStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelleByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByStatus_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q49:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelleByCentre" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListScelleByCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneListScelleByCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q50:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SCELLES_RETOURNE_Pour_ScellageCpt" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SCELLES_RETOURNE_Pour_ScellageCptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q51:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurBtaByNumCptNumScelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteurBtaByNumCptNumScelle" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurBtaByNumCptNumScelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteurBtaByNumCptNumScelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurBtaByNumCptNumScelle_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q52:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurAffecter_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteurAffecter" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurAffecter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteurAffecterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIScelleService_RetourneCompteurAffecter_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q53:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IIScelleService">
+    <wsdl:operation name="VerifieCompteurExisteNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExisteNew" message="tns:IIScelleService_VerifieCompteurExisteNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExisteNewResponse" message="tns:IIScelleService_VerifieCompteurExisteNew_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExisteNewErrorsFault" name="ErrorsFault" message="tns:IIScelleService_VerifieCompteurExisteNew_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeActivite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeActivite" message="tns:IIScelleService_RetourneListeActivite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeActiviteResponse" message="tns:IIScelleService_RetourneListeActivite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeActiviteErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeActivite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeCouleurScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeCouleurScelle" message="tns:IIScelleService_RetourneListeCouleurScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeCouleurScelleResponse" message="tns:IIScelleService_RetourneListeCouleurScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeCouleurScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeCouleurScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllCouleurScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllCouleurScelle" message="tns:IIScelleService_RetourneListeAllCouleurScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllCouleurScelleResponse" message="tns:IIScelleService_RetourneListeAllCouleurScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllCouleurScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeAllCouleurScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDemandeScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDemandeScelle" message="tns:IIScelleService_RetourneListeDemandeScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDemandeScelleResponse" message="tns:IIScelleService_RetourneListeDemandeScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDemandeScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeDemandeScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeScelle" message="tns:IIScelleService_RetourneListeScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeScelleResponse" message="tns:IIScelleService_RetourneListeScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDemandeScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertDemandeScelle" message="tns:IIScelleService_InsertDemandeScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertDemandeScelleResponse" message="tns:IIScelleService_InsertDemandeScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertDemandeScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertDemandeScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDetailAffectationScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDetailAffectationScelle" message="tns:IIScelleService_RetourneListeDetailAffectationScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDetailAffectationScelleResponse" message="tns:IIScelleService_RetourneListeDetailAffectationScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeDetailAffectationScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeDetailAffectationScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationReception">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/ValidationReception" message="tns:IIScelleService_ValidationReception_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/ValidationReceptionResponse" message="tns:IIScelleService_ValidationReception_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/ValidationReceptionErrorsFault" name="ErrorsFault" message="tns:IIScelleService_ValidationReception_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMargasinVirtuelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMargasinVirtuelle" message="tns:IIScelleService_SelectAllMargasinVirtuelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMargasinVirtuelleResponse" message="tns:IIScelleService_SelectAllMargasinVirtuelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMargasinVirtuelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllMargasinVirtuelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMargasinVirtuelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/DeleteMargasinVirtuelle" message="tns:IIScelleService_DeleteMargasinVirtuelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/DeleteMargasinVirtuelleResponse" message="tns:IIScelleService_DeleteMargasinVirtuelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/DeleteMargasinVirtuelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_DeleteMargasinVirtuelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMargasinVirtuelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateMargasinVirtuelle" message="tns:IIScelleService_UpdateMargasinVirtuelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateMargasinVirtuelleResponse" message="tns:IIScelleService_UpdateMargasinVirtuelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateMargasinVirtuelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateMargasinVirtuelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMargasinVirtuelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertMargasinVirtuelle" message="tns:IIScelleService_InsertMargasinVirtuelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertMargasinVirtuelleResponse" message="tns:IIScelleService_InsertMargasinVirtuelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertMargasinVirtuelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertMargasinVirtuelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFournisseurs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeFournisseurs" message="tns:IIScelleService_RetourneListeFournisseurs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeFournisseursResponse" message="tns:IIScelleService_RetourneListeFournisseurs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeFournisseursErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeFournisseurs_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllLotMagasinGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllLotMagasinGeneral" message="tns:IIScelleService_SelectAllLotMagasinGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllLotMagasinGeneralResponse" message="tns:IIScelleService_SelectAllLotMagasinGeneral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllLotMagasinGeneralErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllLotMagasinGeneral_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLotMagasinGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/DeleteLotMagasinGeneral" message="tns:IIScelleService_DeleteLotMagasinGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/DeleteLotMagasinGeneralResponse" message="tns:IIScelleService_DeleteLotMagasinGeneral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/DeleteLotMagasinGeneralErrorsFault" name="ErrorsFault" message="tns:IIScelleService_DeleteLotMagasinGeneral_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLotMagasinGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateLotMagasinGeneral" message="tns:IIScelleService_UpdateLotMagasinGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateLotMagasinGeneralResponse" message="tns:IIScelleService_UpdateLotMagasinGeneral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateLotMagasinGeneralErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateLotMagasinGeneral_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLotMagasinGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertLotMagasinGeneral" message="tns:IIScelleService_InsertLotMagasinGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertLotMagasinGeneralResponse" message="tns:IIScelleService_InsertLotMagasinGeneral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertLotMagasinGeneralErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertLotMagasinGeneral_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeOrigineScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelle" message="tns:IIScelleService_RetourneListeOrigineScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleResponse" message="tns:IIScelleService_RetourneListeOrigineScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeOrigineScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeOrigineScelleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleById" message="tns:IIScelleService_RetourneListeOrigineScelleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleByIdResponse" message="tns:IIScelleService_RetourneListeOrigineScelleById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleByIdErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeOrigineScelleById_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValiderListeSaisieSelonDonneesEnBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/ValiderListeSaisieSelonDonneesEnBase" message="tns:IIScelleService_ValiderListeSaisieSelonDonneesEnBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/ValiderListeSaisieSelonDonneesEnBaseResponse" message="tns:IIScelleService_ValiderListeSaisieSelonDonneesEnBase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/ValiderListeSaisieSelonDonneesEnBaseErrorsFault" name="ErrorsFault" message="tns:IIScelleService_ValiderListeSaisieSelonDonneesEnBase_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneEtatCompteur" message="tns:IIScelleService_RetourneEtatCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneEtatCompteurResponse" message="tns:IIScelleService_RetourneEtatCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneEtatCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneEtatCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListRechercheCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListRechercheCompteur" message="tns:IIScelleService_RetourneListRechercheCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListRechercheCompteurResponse" message="tns:IIScelleService_RetourneListRechercheCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListRechercheCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListRechercheCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRechercheCompteurById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneRechercheCompteurById" message="tns:IIScelleService_RetourneRechercheCompteurById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneRechercheCompteurByIdResponse" message="tns:IIScelleService_RetourneRechercheCompteurById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneRechercheCompteurByIdErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneRechercheCompteurById_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListMarque_Modele">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListMarque_Modele" message="tns:IIScelleService_RetourneListMarque_Modele_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListMarque_ModeleResponse" message="tns:IIScelleService_RetourneListMarque_Modele_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListMarque_ModeleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListMarque_Modele_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteur" message="tns:IIScelleService_SelectAllCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteurResponse" message="tns:IIScelleService_SelectAllCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/DeleteCompteur" message="tns:IIScelleService_DeleteCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/DeleteCompteurResponse" message="tns:IIScelleService_DeleteCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/DeleteCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_DeleteCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteur" message="tns:IIScelleService_UpdateCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteurResponse" message="tns:IIScelleService_UpdateCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteurSuiteModif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteurSuiteModif" message="tns:IIScelleService_UpdateCompteurSuiteModif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteurSuiteModifResponse" message="tns:IIScelleService_UpdateCompteurSuiteModif_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateCompteurSuiteModifErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateCompteurSuiteModif_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifierEtatCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/VerifierEtatCompteur" message="tns:IIScelleService_VerifierEtatCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/VerifierEtatCompteurResponse" message="tns:IIScelleService_VerifierEtatCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/VerifierEtatCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_VerifierEtatCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompteur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertCompteur" message="tns:IIScelleService_InsertCompteur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertCompteurResponse" message="tns:IIScelleService_InsertCompteur_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertCompteurErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertCompteur_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteurNonAffecte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteurNonAffecte" message="tns:IIScelleService_SelectAllCompteurNonAffecte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteurNonAffecteResponse" message="tns:IIScelleService_SelectAllCompteurNonAffecte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllCompteurNonAffecteErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllCompteurNonAffecte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCompteurExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExiste" message="tns:IIScelleService_VerifieCompteurExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExisteResponse" message="tns:IIScelleService_VerifieCompteurExiste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/VerifieCompteurExisteErrorsFault" name="ErrorsFault" message="tns:IIScelleService_VerifieCompteurExiste_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelle" message="tns:IIScelleService_RetourneListScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleResponse" message="tns:IIScelleService_RetourneListScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRemiseScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRemiseScelle" message="tns:IIScelleService_SelectAllRemiseScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRemiseScelleResponse" message="tns:IIScelleService_SelectAllRemiseScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRemiseScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllRemiseScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRemise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/DeleteRemise" message="tns:IIScelleService_DeleteRemise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/DeleteRemiseResponse" message="tns:IIScelleService_DeleteRemise_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/DeleteRemiseErrorsFault" name="ErrorsFault" message="tns:IIScelleService_DeleteRemise_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRemise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateRemise" message="tns:IIScelleService_UpdateRemise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateRemiseResponse" message="tns:IIScelleService_UpdateRemise_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateRemiseErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateRemise_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRemise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertRemise" message="tns:IIScelleService_InsertRemise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertRemiseResponse" message="tns:IIScelleService_InsertRemise_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertRemiseErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertRemise_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMotisScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMotisScelle" message="tns:IIScelleService_SelectAllMotisScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMotisScelleResponse" message="tns:IIScelleService_SelectAllMotisScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllMotisScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllMotisScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllScelles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllScelles" message="tns:IIScelleService_SelectAllScelles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllScellesResponse" message="tns:IIScelleService_SelectAllScelles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllScellesErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllScelles_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneScellesListeByAgence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneScellesListeByAgence" message="tns:IIScelleService_RetourneScellesListeByAgence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneScellesListeByAgenceResponse" message="tns:IIScelleService_RetourneScellesListeByAgence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneScellesListeByAgenceErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneScellesListeByAgence_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListelot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListelot" message="tns:IIScelleService_RetourneListelot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListelotResponse" message="tns:IIScelleService_RetourneListelot_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListelotErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListelot_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllUser" message="tns:IIScelleService_RetourneListeAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllUserResponse" message="tns:IIScelleService_RetourneListeAllUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListeAllUserErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListeAllUser_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRetourScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRetourScelle" message="tns:IIScelleService_SelectAllRetourScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRetourScelleResponse" message="tns:IIScelleService_SelectAllRetourScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllRetourScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllRetourScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRetours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/DeleteRetours" message="tns:IIScelleService_DeleteRetours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/DeleteRetoursResponse" message="tns:IIScelleService_DeleteRetours_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/DeleteRetoursErrorsFault" name="ErrorsFault" message="tns:IIScelleService_DeleteRetours_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRetourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/UpdateRetourse" message="tns:IIScelleService_UpdateRetourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/UpdateRetourseResponse" message="tns:IIScelleService_UpdateRetourse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/UpdateRetourseErrorsFault" name="ErrorsFault" message="tns:IIScelleService_UpdateRetourse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRetours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/InsertRetours" message="tns:IIScelleService_InsertRetours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/InsertRetoursResponse" message="tns:IIScelleService_InsertRetours_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/InsertRetoursErrorsFault" name="ErrorsFault" message="tns:IIScelleService_InsertRetours_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllStatutsScelles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SelectAllStatutsScelles" message="tns:IIScelleService_SelectAllStatutsScelles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SelectAllStatutsScellesResponse" message="tns:IIScelleService_SelectAllStatutsScelles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SelectAllStatutsScellesErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SelectAllStatutsScelles_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelleByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByStatus" message="tns:IIScelleService_RetourneListScelleByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByStatusResponse" message="tns:IIScelleService_RetourneListScelleByStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByStatusErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListScelleByStatus_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelleByCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByCentre" message="tns:IIScelleService_RetourneListScelleByCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByCentreResponse" message="tns:IIScelleService_RetourneListScelleByCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneListScelleByCentreErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneListScelleByCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SCELLES_RETOURNE_Pour_ScellageCpt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/SCELLES_RETOURNE_Pour_ScellageCpt" message="tns:IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/SCELLES_RETOURNE_Pour_ScellageCptResponse" message="tns:IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/SCELLES_RETOURNE_Pour_ScellageCptErrorsFault" name="ErrorsFault" message="tns:IIScelleService_SCELLES_RETOURNE_Pour_ScellageCpt_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteurBtaByNumCptNumScelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurBtaByNumCptNumScelle" message="tns:IIScelleService_RetourneCompteurBtaByNumCptNumScelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurBtaByNumCptNumScelleResponse" message="tns:IIScelleService_RetourneCompteurBtaByNumCptNumScelle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurBtaByNumCptNumScelleErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneCompteurBtaByNumCptNumScelle_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteurAffecter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurAffecter" message="tns:IIScelleService_RetourneCompteurAffecter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurAffecterResponse" message="tns:IIScelleService_RetourneCompteurAffecter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IIScelleService/RetourneCompteurAffecterErrorsFault" name="ErrorsFault" message="tns:IIScelleService_RetourneCompteurAffecter_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IIScelleService" type="tns:IIScelleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerifieCompteurExisteNew">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/VerifieCompteurExisteNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeActivite">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeActivite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeCouleurScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeCouleurScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllCouleurScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeAllCouleurScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDemandeScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeDemandeScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDemandeScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertDemandeScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeDetailAffectationScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeDetailAffectationScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationReception">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/ValidationReception" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMargasinVirtuelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllMargasinVirtuelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMargasinVirtuelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/DeleteMargasinVirtuelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMargasinVirtuelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateMargasinVirtuelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMargasinVirtuelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertMargasinVirtuelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeFournisseurs">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeFournisseurs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllLotMagasinGeneral">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllLotMagasinGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLotMagasinGeneral">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/DeleteLotMagasinGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLotMagasinGeneral">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateLotMagasinGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLotMagasinGeneral">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertLotMagasinGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeOrigineScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeOrigineScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeOrigineScelleById">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeOrigineScelleById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValiderListeSaisieSelonDonneesEnBase">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/ValiderListeSaisieSelonDonneesEnBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneEtatCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListRechercheCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListRechercheCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneRechercheCompteurById">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneRechercheCompteurById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListMarque_Modele">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListMarque_Modele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/DeleteCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompteurSuiteModif">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateCompteurSuiteModif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifierEtatCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/VerifierEtatCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompteur">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertCompteur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllCompteurNonAffecte">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllCompteurNonAffecte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="VerifieCompteurExiste">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/VerifieCompteurExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRemiseScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllRemiseScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRemise">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/DeleteRemise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRemise">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateRemise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRemise">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertRemise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllMotisScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllMotisScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllScelles">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllScelles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneScellesListeByAgence">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneScellesListeByAgence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListelot">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListelot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListeAllUser">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListeAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllRetourScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllRetourScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRetours">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/DeleteRetours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRetourse">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/UpdateRetourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRetours">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/InsertRetours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllStatutsScelles">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SelectAllStatutsScelles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelleByStatus">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListScelleByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneListScelleByCentre">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneListScelleByCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SCELLES_RETOURNE_Pour_ScellageCpt">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/SCELLES_RETOURNE_Pour_ScellageCpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteurBtaByNumCptNumScelle">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneCompteurBtaByNumCptNumScelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteurAffecter">
+      <soap:operation soapAction="http://tempuri.org/IIScelleService/RetourneCompteurAffecter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IScelleService">
+    <wsdl:port name="BasicHttpBinding_IIScelleService" binding="tns:BasicHttpBinding_IIScelleService">
+      <soap:address location="http://localhost:1818/Scelle/IScelleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,85 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" x:Class="Galatee.Silverlight.Recouvrement.FrmSaisePaiementCampagneGC"
+           Width="985" Height="572" 
+           Title="Paiement" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:DataGrid x:Name="dg_Campagne"     HorizontalAlignment="Left" Height="59" Margin="677,103,0,0" VerticalAlignment="Top" Width="270" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding NUMEROMANDATEMENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Mandatement" Width="150" />
+                <!--<sdk:DataGridTextColumn Binding="{Binding REGROUPEMENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Code" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLEREGROUPEMENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libelle" Width="Auto" />-->
+                <!--<sdk:DataGridTextColumn Binding="{Binding PERIODE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />-->
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="115" />
+                <!--<sdk:DataGridTextColumn Binding="{Binding REFEM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Facture" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="Auto" />-->
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataGrid x:Name="dg_facture"  ItemsSource="{Binding SelectedItem.DETAILCAMPAGNEGC_, ElementName=dg_Paiement}"  HorizontalAlignment="Left" Height="178" Margin="15,229,0,0" VerticalAlignment="Top" Width="886" AutoGenerateColumns="False"  SelectionMode="Extended" CellEditEnding="dg_facture_CellEditEnding" CellEditEnded="dg_facture_CellEditEnded"  >
+            <sdk:DataGrid.Columns>
+                <!--<sdk:DataGridTemplateColumn Header="Totalement Versé">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <CheckBox IsChecked="{Binding IsMontantValide}" IsEnabled="False"  Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>-->
+                <!--<sdk:DataGridTemplateColumn Header="Non Valider">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate >
+                            <CheckBox IsChecked="{Binding IsMontantNonValide}"  Checked="CheckBox_Checked_" Unchecked="CheckBox_Unchecked_" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>-->
+
+                <sdk:DataGridTextColumn Binding="{Binding NOM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom client" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding PERIODE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Facture" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant Facture" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT_REGLER}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant Réglé" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT_RESTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant Restant" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT_VERSER, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant Versé" Width="Auto" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Ajouter facture hors campagne" Visibility="Collapsed" HorizontalAlignment="Left" Margin="82,439,0,0" VerticalAlignment="Top" Width="324" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Visibility="Collapsed" Height="23" Margin="155,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" x:Name="txt_Numdeataire"/>
+        <sdk:Label Content="Numero mandatement" Visibility="Collapsed"  HorizontalAlignment="Left" Height="23" Margin="25,31,0,0" VerticalAlignment="Top" Width="125"/>
+        <Controls:GroupBox FontWeight="SemiBold" Visibility="Collapsed"  Margin="0,0,644,393" x:Name="groupBox1_Copy2" Header="Saisi des informations du mandatement" RenderTransformOrigin="0.5,0.5"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="15,0,326,287" x:Name="groupBox1_Copy" Header="Paiements" RenderTransformOrigin="0.5,0.5"  />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="0,180,10,10" x:Name="groupBox1_Copy1" Header="Factures de la campagne " RenderTransformOrigin="0.5,0.5"  />
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="726,410,0,0" TextWrapping="Wrap" x:Name="txt_Montant_Mandatement" Text="" VerticalAlignment="Top" Width="175"/>
+        <sdk:Label Content="Totale "  HorizontalAlignment="Left" Height="23" Margin="596,409,0,0" VerticalAlignment="Top" Width="115"/>
+        <sdk:DataPager x:Name="datapager" HorizontalAlignment="Left" Height="26" Margin="15,406,0,0" PageSize="10" VerticalAlignment="Top" Width="576" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="155,59,0,0" Visibility="Collapsed" TextWrapping="Wrap"  VerticalAlignment="Top" Width="122" x:Name="txt_MontantMandatement" TextChanged="txt_MontantMandatement_TextChanged"/>
+        <sdk:Label Content="Montant mandatement" Visibility="Collapsed"  HorizontalAlignment="Left" Height="23" Margin="25,59,0,0" VerticalAlignment="Top" Width="130"/>
+        <CheckBox Content="Valider toute les facture" Visibility="Collapsed" x:Name="chbx_ToutValider" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,180,0,0" Width="158" Unchecked="chbx_ToutValider_Unchecked" Checked="chbx_ToutValider_Checked"/>
+        <Controls:GroupBox FontWeight="SemiBold" Margin="646,0,0,287" x:Name="groupBox1_Copy3" Header="Informations Campagne" RenderTransformOrigin="0.5,0.5"  />
+        <sdk:Label HorizontalAlignment="Left" Content="Campage :" Height="28" VerticalAlignment="Top" Width="65" Margin="675,24,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_Campagne" IsReadOnly="True" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189" Margin="758,20,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Regroupement :" Height="28" VerticalAlignment="Top" Width="65" Margin="675,52,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_regroupement" IsReadOnly="True" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189" Margin="758,48,0,0"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Periode :" Height="28" VerticalAlignment="Top" Width="65" Margin="675,80,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" x:Name="txt_periode" IsReadOnly="True" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189" Margin="758,76,0,0"/>
+        <sdk:DataGrid x:Name="dg_Paiement" ItemsSource="{Binding SelectedItem.PAIEMENTGC_, ElementName=dg_Campagne}"  HorizontalAlignment="Left" Height="142" Margin="25,20,0,0" VerticalAlignment="Top" Width="592" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended" SelectionChanged="dg_Paiement_SelectionChanged"  >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding DATECREATION}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Date de Paiement" Width="Auto" />
+                <sdk:DataGridTextColumn Binding="{Binding MONTANT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="115" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="btn_Actualiser" Content="Afficher facture à payer" Click="btn_Actualiser_Click" Width="176" Height="23" HorizontalAlignment="Right" Margin="0,201,766,238" />
+        <Button x:Name="btn_trasmettre" Content="Transmettre" Click="btn_trasmettre_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,867,2" Grid.Row="1" />
+        <TextBox HorizontalAlignment="Left"  Height="23" Margin="339,202,0,0" TextWrapping="Wrap" x:Name="txt_Montant_Paiement" Text="" VerticalAlignment="Top" Width="209"/>
+        <sdk:Label Content="Totale Paiement" x:Name="lbl_TotalePaiement"  HorizontalAlignment="Left" Height="23" Margin="245,205,0,0" VerticalAlignment="Top" Width="115"/>
+    </Grid>
+</sdk:ChildWindow>

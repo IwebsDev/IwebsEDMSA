@@ -1,0 +1,74 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes" 
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+           x:Class="Galatee.Silverlight.Scelles.UcReceptionLotScellesMagasinGeneral" 
+           Width="891" Height="557" 
+           Title="Caractéristiques des lots de scellés">
+    <sdk:ChildWindow.Resources>
+        <behaviors:DateTimeConverter x:Key="DateTimeConverter"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="684*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="611" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" Height="215" VerticalAlignment="Bottom" x:Name="gbo_typefact_Copy"  Margin="0,0,3,168" RenderTransformOrigin="0.5,0.5"  Header="Liste des scellés saisis" Grid.ColumnSpan="2"  />
+        <Controls:GroupBox FontWeight="SemiBold" Height="217" VerticalAlignment="Bottom" x:Name="gbo_typefact_Copy1"  Margin="0,0,3,384" RenderTransformOrigin="0.5,0.5"  Header="Saisie de scellé" Grid.ColumnSpan="2"  />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="84" Height="23" HorizontalAlignment="Right" Margin="0,455,10,133" Grid.Column="1" />
+        <Button x:Name="OKButton" Content="Enregistrer" Click="OKButton_Click" Width="97" Height="23" HorizontalAlignment="Right" Margin="0,455,99,133" Grid.ColumnSpan="2" />
+        <sdk:DataGrid  x:Name="dtgrdlReceptionScelle" HorizontalAlignment="Left" Height="76" Margin="10,147,0,0" VerticalAlignment="Top" Width="650" AutoGenerateColumns="False" IsReadOnly="False" SelectionMode="Extended"   >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Numero_depart, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro départ" Width="Auto"   />
+                <sdk:DataGridTextColumn Binding="{Binding Numero_fin, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro fin" Width="Auto"  />
+            </sdk:DataGrid.Columns>
+            <i:Interaction.Behaviors>
+                <behaviors:DataGridDoubleClickBehavior />
+                <behaviors:DataGridContexMenuBehavior />
+            </i:Interaction.Behaviors>
+        </sdk:DataGrid>
+        <Button x:Name="btn_ajout" Content="Ajouter" HorizontalAlignment="Left" Height="21" Margin="357,121,0,0" VerticalAlignment="Top" Width="95" Click="btn_ajout_Click"/>
+        <sdk:Label Content="Origine des scellés :" FontWeight="Bold" Margin="51,30,490,553"/>
+        <sdk:Label Content="Fournisseurs :" FontWeight="Bold" Margin="51,63,492,526"/>
+        <sdk:Label Content="Activités :" FontWeight="Bold" Margin="496,34,99,549"/>
+        <sdk:Label Content="Couleur :" FontWeight="Bold" Margin="496,66,99,523"/>
+        <ComboBox  x:Name="Cbo_OrigneScelle"  Margin="199,34,261,554"/>
+        <ComboBox x:Name="Cbo_frs"  Margin="197,65,261,523"/>
+        <ComboBox x:Name="Cbo_Activite"  SelectionChanged="Cbo_Activite_SelectionChanged" Margin="590,34,40,554" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="Cbo_Couleurs"  Margin="590,65,41,523" Grid.ColumnSpan="2"  />
+        <sdk:DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" 
+			Margin="14,253,0,218" x:Name="dtgrdScelle" Width="836"  ItemsSource="{Binding DonnesDatagrid}"
+			ScrollViewer.HorizontalScrollBarVisibility="Visible" AllowDrop="False" DataContext="{Binding}"  SelectionMode="Extended" AreRowGroupHeadersFrozen="True"  IsEnabled="True" IsReadOnly="False" IsTabStop="False" IsHitTestVisible="True" Grid.ColumnSpan="2" >
+           
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding Numero_depart, Mode=TwoWay}" Header="Numéro  de départ" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Numero_fin, Mode=TwoWay}" Header="Numéro de fin" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Nbre_Scelles, Mode=TwoWay}" Header="Nombre de scellés" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Couleur_libelle, Mode=TwoWay}" Header="Couleur" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Libelle_Fournisseur, Mode=TwoWay}" Header="Fournisseur" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding Libelle_Origine, Mode=TwoWay}" Header="Origine" Width="100" CanUserSort="True" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Binding="{Binding DateReception, Converter={StaticResource DateTimeConverter}, Mode=TwoWay}" Header="Date de Saisie" Width="100" CanUserSort="True" IsReadOnly="True" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="btn_Modifier" Content="Modifier"  Width="97" Height="23" HorizontalAlignment="Right" Margin="0,411,44,177" Click="btn_Modifier_Click_1" />
+        <Button x:Name="btn_Supprimer" Content="Supprimer"  Width="97" Height="23" HorizontalAlignment="Right" Margin="0,411,121,177" Click="btn_Supprimer_Click_1" Grid.ColumnSpan="2" />
+        <Button x:Name="btn_Imprimer" Content="Imprimer"  Width="97" Height="23" HorizontalAlignment="Right" Margin="0,411,19,177" Grid.Column="1" />
+        <TextBox x:Name="txt_NumeroDepart" HorizontalAlignment="Left" Height="23" Margin="197,95,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_NumeroFin" HorizontalAlignment="Left" Height="23" Margin="197,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Numéro de départ" FontWeight="Bold" Margin="51,95,492,494"/>
+        <sdk:Label Content="Numéro de fin" FontWeight="Bold" Margin="51,124,508,465"/>
+    </Grid>
+</sdk:ChildWindow>

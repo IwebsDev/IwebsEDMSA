@@ -1,0 +1,31 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Parametrage.UcWKFOperation"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           Width="449.823" Height="393.594" 
+           Title="Operation - Circuit de Validation" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:Label Content="Code : " Margin="10,0,358,240"></sdk:Label>
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <TextBox x:Name="txtCode" HorizontalAlignment="Left" Height="23" Margin="90,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" MaxLength="5"/>
+        <sdk:Label Content="Description : " Margin="10,72,331,161"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="72" Margin="90,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322"/>
+        <sdk:Label Content="Nom : " Margin="10,37,358,196"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="23" Margin="90,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322" MaxLength="50"/>
+        <sdk:Label Content="Parent : " Margin="219,0,149,240"/>
+        <ComboBox x:Name="cmbOperationParent" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="134" Height="26"/>
+        <sdk:Label Content="Produit Rataché : " Margin="10,158,306,80"/>
+        <ComboBox x:Name="cmbProduit" HorizontalAlignment="Left" Margin="139,170,0,0" VerticalAlignment="Top" Width="273" Height="26"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Formulaire Création :" Height="28" Margin="10,211,0,0" VerticalAlignment="Top" Width="124"/>
+        <ComboBox x:Name="cmbFormulaire" HorizontalAlignment="Left" Margin="139,211,0,0" VerticalAlignment="Top" Width="273" Height="26"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Type de demande :" Height="28" Margin="10,250,0,0" VerticalAlignment="Top" Width="124"/>
+        <ComboBox x:Name="cmbTDem" HorizontalAlignment="Left" Margin="139,250,0,0" VerticalAlignment="Top" Width="273" Height="26"/>
+    </Grid>
+</controls:ChildWindow>

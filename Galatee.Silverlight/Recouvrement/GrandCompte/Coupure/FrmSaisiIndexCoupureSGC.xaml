@@ -1,0 +1,54 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources.Recouvrement"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+           x:Class="Galatee.Silverlight.Recouvrement.FrmSaisiIndexCoupureSGC"
+           Width="774.224" Height="629.224" OverlayBrush="Transparent"
+           Title="Réedition avis de coupure">
+    <sdk:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+        <lang:ResourceLocaliser x:Key="localisation"/>
+    </sdk:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" >
+        <Controls:GroupBox Header="Mode de sélection client" Height="114" IsEnabled="False" Margin="2.731,-5,19.269,0" x:Name="groupBox1" VerticalAlignment="Top"  />
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="273" Height="24" x:Name="Cbo_Regcli" Margin="202,13,0,0" SelectionChanged="Cbo_Regcli_SelectionChanged"/>
+        <Button x:Name="btn_Regroupement" IsEnabled="False"  Content="Regroupement" HorizontalAlignment="Left" Height="24" Margin="24,13,0,0" VerticalAlignment="Top" Width="168" Click="btn_Regroupement_Click"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="308" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="10,122,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="728" SelectionChanged="lvwResultat_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding IDCOUPURE}" CanUserReorder="True" CanUserSort="True" Header="N° Campagne" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="50"  MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserSort="True" Header="Client" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserSort="True" Header="Ordre" IsReadOnly="True" MinWidth="60" MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding INDEX}" CanUserReorder="True" CanUserSort="True" Header="Index" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding DATERDVCLIENT}" CanUserReorder="True" CanUserSort="True" Header="Date coupure" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding FRAIS, Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserSort="True" Header="Frais de coupure" IsReadOnly="True" MinWidth="120" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Content="Enregistrer" x:Name="btn_Valider" HorizontalAlignment="Left" Margin="555,492,0,0" VerticalAlignment="Top" Width="155" Click="btn_Valider_Click"/>
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="152,461,0,0" x:Name="txt_index"   VerticalAlignment="Top" Width="168" LostFocus="txt_index_LostFocus"  />
+        <ComboBox HorizontalAlignment="Left" x:Name="cbo_TypeCoupure" VerticalAlignment="Top" 
+			DisplayMemberPath="LIBELLE" 
+			SelectedValuePath="Code" Margin="152,436,0,0" Width="168" SelectionChanged="cbo_TypeCoupure_SelectionChanged"/>
+        <sdk:Label Content="Index" HorizontalAlignment="Left" Height="22" Margin="24,464,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Date relève" HorizontalAlignment="Left" Height="23" Margin="24,491,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Content="Type de coupure" HorizontalAlignment="Left" Height="19" Margin="19,437,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,492,0,0" x:Name="txt_DateReleve" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="cbo_Observation" VerticalAlignment="Top" 
+			DisplayMemberPath="LIBELLE" 
+			SelectedValuePath="Code" Margin="464,435,0,0" Width="168" SelectionChanged="cbo_Observation_SelectionChanged"/>
+        <sdk:Label Content="Observation" HorizontalAlignment="Left" Height="19" Margin="331,436,0,0" VerticalAlignment="Top" Width="120"/>
+        <ProgressBar x:Name="prgBar" HorizontalAlignment="Left" Height="23" Margin="43,524,0,0" VerticalAlignment="Top" Width="356" IsIndeterminate="True"/>
+        <ComboBox HorizontalAlignment="Left" Margin="201,42,0,0" x:Name="Cbo_Campagne" VerticalAlignment="Top" Width="272" Height="24" SelectionChanged="Cbo_Campagne_SelectionChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Campagne" Height="20" Margin="28,46,0,0" VerticalAlignment="Top" Width="168"/>
+           
+    </Grid>
+</sdk:ChildWindow>

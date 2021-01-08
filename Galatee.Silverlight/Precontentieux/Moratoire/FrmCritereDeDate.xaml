@@ -1,0 +1,33 @@
+﻿<controls:ChildWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                      xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+                      xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+                      xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+                      x:Class="Galatee.Silverlight.Recouvrement.FrmCritereDeDate"
+           Width="527" Height="258.299" 
+           Title="FrmCritereDeDate" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox FontWeight="SemiBold" x:Name="groupBox1_Copy" Header="Critère de recherche"  />
+
+        <Button x:Name="CancelButton" Content="Annuler" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <controls:DatePicker HorizontalAlignment="Left" Height="23" Margin="332,102,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.599,0.515"/>
+        <controls:DatePicker HorizontalAlignment="Left" Height="23" Margin="117,102,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="38,104,0,0" x:Name="lbl_datedebut" VerticalAlignment="Top" Width="74" Content="Date debut" />
+        <sdk:Label Height="19" HorizontalAlignment="Left" Margin="273,104,0,0" x:Name="lbl_dateFin" VerticalAlignment="Top" Width="66" Content="Date fin" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="38,23,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="76" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="115,0,0,101" x:Name="Txt_CodeSite" VerticalAlignment="Bottom" Width="56" Background="LightBlue" TabIndex="0" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="225,23,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="176,0,0,102" x:Name="btn_Site" VerticalAlignment="Bottom" Width="42" Click="btn_Site_Click"  />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="38,61,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="77" Content="Centre" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="115,62,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="56" Click="btn_Centre_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="176,62,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="262" IsReadOnly="True" />
+        <ComboBox HorizontalAlignment="Left" x:Name="Cbo_Centre" Margin="176,62,0,0" VerticalAlignment="Top" Width="262" Height="24"  />
+
+
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,53 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" mc:Ignorable="d" x:Class="Galatee.Silverlight.Devis.UcProgrammation"
+           Width="1196" Height="616.433" 
+           Title="Programmation des travaux" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2,2,-2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Margin="10,-3,10,413" x:Name="Gbo_InformationDevis" IsEnabled="True" Height="96" VerticalAlignment="Bottom" Header="Critères de recherche" />
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="148" Height="23" HorizontalAlignment="Right" Margin="0,8,10,4" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Transmettre" Click="OKButton_Click" Width="161" Height="23" HorizontalAlignment="Right" Margin="0,8,163,4" Grid.Row="1" />
+        <sdk:Label Content="Equipe" HorizontalAlignment="Left" Height="21" Margin="24,20,0,0" VerticalAlignment="Top" Width="70"/>
+        <sdk:Label Content="Date" HorizontalAlignment="Left" Height="19" Margin="24,49,0,0" VerticalAlignment="Top" Width="70"/>
+        <ComboBox x:Name="cboEquipe"  HorizontalAlignment="Left" Margin="99,20,0,0" VerticalAlignment="Top" Width="258"/>
+        <sdk:DataGrid x:Name="dgDemande" Margin="10,100,639,7" AutoGenerateColumns="False"  RowHeight="30" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro demande" Width="Auto" Binding="{Binding NUMDEM}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Référence client" Width="Auto" Binding="{Binding CLIENT}"/>
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom client" Width="280" Binding="{Binding NOMCLIENT}"/>
+
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <sdk:DatePicker x:Name="dtProgram" HorizontalAlignment="Left" Height="23" Margin="99,45,0,0" VerticalAlignment="Top" Width="293"/>
+        <sdk:DataGrid x:Name="dgDemandeAffecte" Margin="633,98,25,9" AutoGenerateColumns="False" RowHeight="30" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Numéro demande" Width="Auto" Binding="{Binding NUMDEM}"/>
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Référence client" Width="Auto" Binding="{Binding CLIENT}"/>
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom client" Width="280" Binding="{Binding NOMCLIENT}"/>
+
+
+            </sdk:DataGrid.Columns>
+
+        </sdk:DataGrid>
+        <Button x:Name="Charger" Content="&gt;" HorizontalAlignment="Left" Margin="552,172,0,0" VerticalAlignment="Top" Width="53" Click="Charger_Click"/>
+        <Button x:Name="Decharger" Content="&lt;" HorizontalAlignment="Left" Margin="552,197,0,0" VerticalAlignment="Top" Width="53" Click="Decharger_Click" Height="22"/>
+             
+        
+        <Button x:Name="chargerTout" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="552,243,0,0" VerticalAlignment="Top" Width="53" Click="chargerTout_Click" Height="22"/>
+        <Button x:Name="DechargerTout" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="552,270,0,0" VerticalAlignment="Top" Width="53" Click="DechargerTout_Click"/>
+        <sdk:Label HorizontalAlignment="Left" Content="Nombre" Height="28" Margin="535,48,0,0" VerticalAlignment="Top" Width="62" Visibility="Collapsed"/>
+        <TextBox HorizontalAlignment="Left" Name="txt_Nombre" Height="23" Margin="633,45,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+        <Button Content="Attribuer" Name="btn_Attribuer" HorizontalAlignment="Left" Margin="814,49,0,0" VerticalAlignment="Top" Width="132" Click="btn_Attribuer_Click" Visibility="Collapsed" />
+    </Grid>
+</sdk:ChildWindow>

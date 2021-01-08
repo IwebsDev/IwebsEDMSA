@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Galatee.Structure" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1818/Administration/AdministrationService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="CsLibelle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODESITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Matricule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_CODESITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROLENAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsLibelle" nillable="true" type="tns:CsLibelle" />
+  <xs:complexType name="CsProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODEFONCTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDEBUT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEFIN" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_IDADMUTILISATEUR" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDFONCTION" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDPROFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LESCENTRESPROFIL" nillable="true" type="tns:ArrayOfCsCentreProfil" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsProfil" nillable="true" type="tns:CsProfil" />
+  <xs:complexType name="ArrayOfCsCentreProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsCentreProfil" nillable="true" type="tns:CsCentreProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsCentreProfil" nillable="true" type="tns:ArrayOfCsCentreProfil" />
+  <xs:complexType name="CsCentreProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATEDEBUTVALIDITE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEFINVALIDITE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_IDADMUTILISATEUR" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDCENTRE" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDPROFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDSITE" type="xs:int" />
+      <xs:element minOccurs="0" name="LIBELLECENTRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsCentreProfil" nillable="true" type="tns:CsCentreProfil" />
+  <xs:complexType name="ArrayOfCsHabilitationProgram">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsHabilitationProgram" nillable="true" type="tns:CsHabilitationProgram" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsHabilitationProgram" nillable="true" type="tns:ArrayOfCsHabilitationProgram" />
+  <xs:complexType name="CsHabilitationProgram">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CODEFONCTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodeProgram" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FK_IDFONCTION" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDGROUPPROGRAM" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDMENU" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDMODULE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDPROFIL" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LIBELLEFONCTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Libelle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsHabilitationProgram" nillable="true" type="tns:CsHabilitationProgram" />
+  <xs:complexType name="CsPrint">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="CsPrint" nillable="true" type="tns:CsPrint" />
+  <xs:complexType name="CsUtilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BRANCHE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CENTRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CENTREAFFICHER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CFONCT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODEHIER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COMPTEWINDOW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDEBUTVALIDITE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDERNIERECONNEXION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDERNIEREMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDERNIEREMODIFICATIONPASSWORD" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEDERNIERVERROUILLAGE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEFINVALIDITE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DERNIERECONNEXIONREUSSIE" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DMAJ" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ESTCONSULTATION" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ESTSUPPRIMER" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="E_MAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsADMIN" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FK_CENTREAFFECTATION" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDANCIENCENTRE" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDCENTRE" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDFONCTION" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDSTATUS" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="FONCTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INITUSERPASSWORD" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSELECT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LESCENTRESDESPROFILSUSER" nillable="true" type="tns:ArrayOfCsCentreDuProfil" />
+      <xs:element minOccurs="0" name="LESPROFILSUTILISATEUR" nillable="true" type="tns:ArrayOfCsProfil" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLECENTRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLEFONCTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLEPERIMETREACTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIBELLESTATUSCOMPTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOGINNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MATRICULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBREECHECSOUVERTURESESSION" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PASSE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERIMETREACTION" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="STATUSCOMPTE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TELEPHONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRANS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsUtilisateur" nillable="true" type="tns:CsUtilisateur" />
+  <xs:complexType name="ArrayOfCsCentreDuProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsCentreDuProfil" nillable="true" type="tns:CsCentreDuProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsCentreDuProfil" nillable="true" type="tns:ArrayOfCsCentreDuProfil" />
+  <xs:complexType name="CsCentreDuProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATEDEBUTVALIDITE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEFINVALIDITE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="lescentres" nillable="true" type="tns:ArrayOfCsCentre" />
+      <xs:element minOccurs="0" name="unprofil" nillable="true" type="tns:CsProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsCentreDuProfil" nillable="true" type="tns:CsCentreDuProfil" />
+  <xs:complexType name="ArrayOfCsCentre">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsCentre" nillable="true" type="tns:CsCentre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsCentre" nillable="true" type="tns:ArrayOfCsCentre" />
+  <xs:complexType name="CsCentre">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ADRESSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODENIVEAUTARIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODESITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODESOUSCOMPTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="COMPTEECLAIRAGEPUBLIC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEFIN" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FK_IDCODESITE" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDNIVEAUTARIF" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDTYPECENTRE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GESTIONAUTOAVANCECONSO" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="GESTIONAUTOFRAIS" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LESPRODUITSDUSITE" nillable="true" type="tns:ArrayOfCsProduit" />
+          <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLENIVEAUTARIF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLESITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLETYPECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMDEM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMEROAUTOCLIENT" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NUMERODEMANDE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NUMEROFACTURE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NUMEROFACTUREPARCLIENT" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="TELDEPANNAGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TELRENSEIGNEMENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TYPECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsCentre" nillable="true" type="tns:CsCentre" />
+  <xs:complexType name="ArrayOfCsProduit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsProduit" nillable="true" type="tns:CsProduit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsProduit" nillable="true" type="tns:ArrayOfCsProduit" />
+  <xs:complexType name="CsProduit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEFIN" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FK_IDCENTRE" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDPRODUIT" type="xs:int" />
+          <xs:element minOccurs="0" name="GESTIONTRANSFO" type="xs:int" />
+          <xs:element minOccurs="0" name="IsNewRow" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MODESAISIE" type="xs:int" />
+          <xs:element minOccurs="0" name="NBREDEPOINT" type="xs:int" />
+          <xs:element minOccurs="0" name="OriginalCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsProduit" nillable="true" type="tns:CsProduit" />
+  <xs:complexType name="ArrayOfCsProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsProfil" nillable="true" type="tns:CsProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsProfil" nillable="true" type="tns:ArrayOfCsProfil" />
+  <xs:complexType name="ArrayOfCsUtilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsUtilisateur" nillable="true" type="tns:CsUtilisateur" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsUtilisateur" nillable="true" type="tns:ArrayOfCsUtilisateur" />
+  <xs:complexType name="ArrayOfCsModuleAdmMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsModuleAdmMenu" nillable="true" type="tns:CsModuleAdmMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsModuleAdmMenu" nillable="true" type="tns:ArrayOfCsModuleAdmMenu" />
+  <xs:complexType name="CsModuleAdmMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_IDMODULE" type="xs:int" />
+      <xs:element minOccurs="0" name="MAINMENUID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MENUTEXT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsModuleAdmMenu" nillable="true" type="tns:CsModuleAdmMenu" />
+  <xs:complexType name="ArrayOfCsModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsModule" nillable="true" type="tns:CsModule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsModule" nillable="true" type="tns:ArrayOfCsModule" />
+  <xs:complexType name="CsModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_IDGROUPPROGRAM" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lstFonction" nillable="true" type="tns:ArrayOfCsModuleDeFonction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsModule" nillable="true" type="tns:CsModule" />
+  <xs:complexType name="ArrayOfCsModuleDeFonction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsModuleDeFonction" nillable="true" type="tns:CsModuleDeFonction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsModuleDeFonction" nillable="true" type="tns:ArrayOfCsModuleDeFonction" />
+  <xs:complexType name="CsModuleDeFonction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FK_IDFONCTION" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDMODULE" type="xs:int" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsModuleDeFonction" nillable="true" type="tns:CsModuleDeFonction" />
+  <xs:complexType name="ArrayOfCsAdmMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsAdmMenu" nillable="true" type="tns:CsAdmMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsAdmMenu" nillable="true" type="tns:ArrayOfCsAdmMenu" />
+  <xs:complexType name="CsAdmMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_IDMODULE" type="xs:int" />
+      <xs:element minOccurs="0" name="FORMENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICONNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISACTIVE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISCONTROLE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISDOCK" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MAINMENUID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MENUORDER" type="xs:int" />
+      <xs:element minOccurs="0" name="MENUTEXT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODULE1" nillable="true" type="tns:MODULE" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TYPEREEDITION" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lstMenuProfil" nillable="true" type="tns:ArrayOfCsMenuDuProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsAdmMenu" nillable="true" type="tns:CsAdmMenu" />
+  <xs:complexType name="MODULE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IDPARENT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RELEVEUR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MODULE" nillable="true" type="tns:MODULE" />
+  <xs:complexType name="ArrayOfCsMenuDuProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsMenuDuProfil" nillable="true" type="tns:CsMenuDuProfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsMenuDuProfil" nillable="true" type="tns:ArrayOfCsMenuDuProfil" />
+  <xs:complexType name="CsMenuDuProfil">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FK_IDMENU" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDPROFIL" type="xs:int" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsMenuDuProfil" nillable="true" type="tns:CsMenuDuProfil" />
+  <xs:complexType name="ArrayOfCsDataBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsDataBase" nillable="true" type="tns:CsDataBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsDataBase" nillable="true" type="tns:ArrayOfCsDataBase" />
+  <xs:complexType name="CsDataBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Catalog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsDataBase" nillable="true" type="tns:CsDataBase" />
+  <xs:complexType name="CParametre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CParametre" nillable="true" type="tns:CParametre" />
+  <xs:complexType name="CsStrategieSecurite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACTIF" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CHIFFREMENTREVERSIBLEPASSWORD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DUREEMAXIMALEPASSWORD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DUREEMINIMALEPASSWORD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DUREEVERROUILLAGECOMPTE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DUREEVEUILLESESSION" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HISTORIQUENOMBREPASSWORD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LONGUEURMINIMALEPASSWORD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NEPASCONTENIRNOMCOMPTE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOMBREMAXIMALECHECSOUVERTURESESSION" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBREMINIMALCARACTERENONALPHABETIQUES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBREMINIMALCARACTERESCHIFFRES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBREMINIMALCARACTERESMAJUSCULES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBREMINIMALCARACTERESMINISCULES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PK_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PK_IDSTRATEGIESECURITE" type="ser:guid" />
+      <xs:element minOccurs="0" name="REINITIALISERCOMPTEURVERROUILLAGECOMPTEAPRES" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TOUCHEVERROUILLAGESESSION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsStrategieSecurite" nillable="true" type="tns:CsStrategieSecurite" />
+  <xs:complexType name="ArrayOfCsStrategieSecurite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsStrategieSecurite" nillable="true" type="tns:CsStrategieSecurite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsStrategieSecurite" nillable="true" type="tns:ArrayOfCsStrategieSecurite" />
+  <xs:complexType name="ArrayOfCsAdmRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsAdmRoles" nillable="true" type="tns:CsAdmRoles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsAdmRoles" nillable="true" type="tns:ArrayOfCsAdmRoles" />
+  <xs:complexType name="CsAdmRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Centre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeFonc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsAdmRoles" nillable="true" type="tns:CsAdmRoles" />
+  <xs:complexType name="ArrayOfCsProgramMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsProgramMenu" nillable="true" type="tns:CsProgramMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsProgramMenu" nillable="true" type="tns:ArrayOfCsProgramMenu" />
+  <xs:complexType name="CsProgramMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FK_CODEFONCTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FK_IDGROUPPROGRAM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FK_IDPROGRAM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAINMENUID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MENUTEXT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_MENUID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsProgramMenu" nillable="true" type="tns:CsProgramMenu" />
+  <xs:complexType name="ArrayOfCsSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsSite" nillable="true" type="tns:CsSite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsSite" nillable="true" type="tns:ArrayOfCsSite" />
+  <xs:complexType name="CsSite">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CATALOGUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMERODEMANDE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMEROFACTURE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="PWD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVEUR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsSite" nillable="true" type="tns:CsSite" />
+  <xs:complexType name="ArrayOfCsFonction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsFonction" nillable="true" type="tns:CsFonction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsFonction" nillable="true" type="tns:ArrayOfCsFonction" />
+  <xs:complexType name="CsFonction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATECREATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ESTADMIN" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="ROLEDISPLAYNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLENAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsFonction" nillable="true" type="tns:CsFonction" />
+  <xs:complexType name="ArrayOfCsPoste">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsPoste" nillable="true" type="tns:CsPoste" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsPoste" nillable="true" type="tns:ArrayOfCsPoste" />
+  <xs:complexType name="CsPoste">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CODECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FK_IDCAISSE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FK_IDCENTRE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IPADRESSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSelect" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MATRICULE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMPOSTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NUMCAISSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsPoste" nillable="true" type="tns:CsPoste" />
+  <xs:complexType name="ArrayOfCsHistoriquePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsHistoriquePassword" nillable="true" type="tns:CsHistoriquePassword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsHistoriquePassword" nillable="true" type="tns:ArrayOfCsHistoriquePassword" />
+  <xs:complexType name="CsHistoriquePassword">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DATECREATION" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEENREGISTREMENT" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEMODIFICATION" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FK_IDUSER" type="xs:int" />
+          <xs:element minOccurs="0" name="IDUSER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMUSER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PASSWORD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="POSTE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERCREATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERMODIFICATION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsHistoriquePassword" nillable="true" type="tns:CsHistoriquePassword" />
+  <xs:complexType name="ArrayOfCsAgent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsAgent" nillable="true" type="tns:CsAgent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsAgent" nillable="true" type="tns:ArrayOfCsAgent" />
+  <xs:complexType name="CsAgent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACTIF" type="xs:boolean" />
+      <xs:element minOccurs="0" name="COMPTEWINDOWS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDENTITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MATRICULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_IDAGENT" type="xs:int" />
+      <xs:element minOccurs="0" name="PRENOM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CsAgent" nillable="true" type="tns:CsAgent" />
+  <xs:complexType name="aImportFichier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BASEDEDONNE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE" type="xs:int" />
+      <xs:element minOccurs="0" name="COMMANDE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FICHIER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISPROCEDURE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LIBELLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MOTDEPASSE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NBPARAMETRE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PROVIDER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REPERTOIRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REQUTETTEBASEDISTANTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UTILISATEUR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="aImportFichier" nillable="true" type="tns:aImportFichier" />
+  <xs:complexType name="aImportFichierColonne">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_COLONNE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PARAMETRAGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LONGUEUR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="aImportFichierColonne" nillable="true" type="tns:aImportFichierColonne" />
+  <xs:complexType name="ArrayOfaImportFichierColonne">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aImportFichierColonne" nillable="true" type="tns:aImportFichierColonne" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaImportFichierColonne" nillable="true" type="tns:ArrayOfaImportFichierColonne" />
+  <xs:complexType name="ArrayOfaImportFichier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aImportFichier" nillable="true" type="tns:aImportFichier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfaImportFichier" nillable="true" type="tns:ArrayOfaImportFichier" />
+  <xs:complexType name="ArrayOfCsHabilitationMetier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsHabilitationMetier" nillable="true" type="tns:CsHabilitationMetier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsHabilitationMetier" nillable="true" type="tns:ArrayOfCsHabilitationMetier" />
+  <xs:complexType name="CsHabilitationMetier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DATEDEBUTVALIDITE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEFINVALIDITE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IDFONCTION" type="xs:int" />
+          <xs:element minOccurs="0" name="IDPROFIL" type="xs:int" />
+          <xs:element minOccurs="0" name="LIBELLECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEFONCTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEPROFIL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsHabilitationMetier" nillable="true" type="tns:CsHabilitationMetier" />
+  <xs:complexType name="ArrayOfCsHabilitationMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CsHabilitationMenu" nillable="true" type="tns:CsHabilitationMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCsHabilitationMenu" nillable="true" type="tns:ArrayOfCsHabilitationMenu" />
+  <xs:complexType name="CsHabilitationMenu">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CsPrint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DATEDEBUTVALIDITE" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DATEFINVALIDITE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DDEBUTVALIDITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DFINVALIDITE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDFONCTION" type="xs:int" />
+          <xs:element minOccurs="0" name="IDMENU" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDPROFIL" type="xs:int" />
+          <xs:element minOccurs="0" name="LIBELLECENTRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEFONCTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEFROMULAIRE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEMENU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIBELLEPROFIL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MATRICULE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMUTILISATEUR" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CsHabilitationMenu" nillable="true" type="tns:CsHabilitationMenu" />
+</xs:schema>

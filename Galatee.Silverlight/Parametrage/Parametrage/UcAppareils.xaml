@@ -1,0 +1,29 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+      xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    x:Class="Galatee.Silverlight.Parametrage.UcAppareils"
+           Width="630" Height="225" 
+           Title="UcAppareils" Style="{StaticResource ChildWindowGalatee}" >
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Name="GboApprariels" Header="Apprariels" HorizontalAlignment="Left" VerticalAlignment="Top" Height="122" Width="560" Margin="6,-3,0,0" Grid.RowSpan="2"/>
+
+        <sdk:Label Content="Code" HorizontalAlignment="Left" Height="28" Margin="26,24,0,0" VerticalAlignment="Top" Width="55"/>
+        <TextBox  Height="30" HorizontalAlignment="Right" Margin="0,12,341,0" x:Name="Txt_CodeAppareil" VerticalAlignment="Top" Width="141"  TabIndex="2"  />
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="16,64,0,0" VerticalAlignment="Top" Width="85" Content="DESIGNATION" RenderTransformOrigin="0.042,0.179"/>
+        <TextBox Height="30" HorizontalAlignment="Right" Margin="0,52,341,0" MaxLength="100" x:Name="Txt_Designation" VerticalAlignment="Top" Width="140" BorderThickness="2" TabIndex="2" DataContext="{Binding}"  />
+
+        <Button x:Name="Btn_Annuler" Content="Fermer" Click="Btn_Annuler_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="BtnOK" Content="OK" Click="BtnOK_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="286,15,0,0" VerticalAlignment="Top" Width="65" Content="DETAILS"/>
+        <TextBox TabIndex="1" HorizontalAlignment="Left" Height="28" Margin="398,12,0,0" x:Name="Txt_DETAILS" TextWrapping="Wrap"  VerticalAlignment="Top" Width="143"  BorderThickness="2"  DataContext="{Binding}" RenderTransformOrigin="0.93,0.259" />
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="266,57,0,0" VerticalAlignment="Top" Width="120" Content="TEMPSUTILISATION"/>
+        <TextBox TabIndex="1" x:Name="txt_TpsUtil" HorizontalAlignment="Left" Height="28" Margin="401,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
+    </Grid>
+</sdk:ChildWindow>

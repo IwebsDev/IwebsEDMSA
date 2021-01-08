@@ -1,0 +1,152 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IParametrage" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IReportService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IAdministrationService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IEserviceService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISigService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IInterfaceComptableService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IDevisService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFacturationService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IPrintingsService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IParametrage1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ICaisseService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IAuthentInitializeService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ITarificationService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IWorkflow" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IRecouvrementService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IIScelleService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IReclamationsService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFraudeService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IAcceuilService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFraudeService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1818/Parametrage/Parametrage.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IParametrage"
+                contract="ServiceParametrage.IParametrage" name="BasicHttpBinding_IParametrage" />
+            <endpoint address="http://localhost:1818/Report/ReportService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReportService"
+                contract="ServiceReport.IReportService" name="BasicHttpBinding_IReportService" />
+            <endpoint address="http://localhost:1818/Administration/AdministrationService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAdministrationService"
+                contract="ServiceAdministration.IAdministrationService" name="BasicHttpBinding_IAdministrationService" />
+            <endpoint address="http://localhost:1818/Eservice/EserviceService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IEserviceService"
+                contract="ServiceEservice.IEserviceService" name="BasicHttpBinding_IEserviceService" />
+            <endpoint address="http://localhost:1818/SIG/SigService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISigService"
+                contract="ServiceSig.ISigService" name="BasicHttpBinding_ISigService" />
+            <endpoint address="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IInterfaceComptableService"
+                contract="ServiceInterfaceComptable.IInterfaceComptableService"
+                name="BasicHttpBinding_IInterfaceComptableService" />
+            <endpoint address="http://localhost:1818/Devis/DevisService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IDevisService"
+                contract="ServiceDevis.IDevisService" name="BasicHttpBinding_IDevisService" />
+            <endpoint address="http://localhost:1818/Facturation/FacturationService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IFacturationService"
+                contract="ServiceFacturation.IFacturationService" name="BasicHttpBinding_IFacturationService" />
+            <endpoint address="http://localhost:1818/Printings/PrintingsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IPrintingsService"
+                contract="ServicePrintings.IPrintingsService" name="BasicHttpBinding_IPrintingsService" />
+            <endpoint address="http://localhost:1818/Caisse/CaisseService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICaisseService"
+                contract="ServiceCaisse.ICaisseService" name="BasicHttpBinding_ICaisseService" />
+            <endpoint address="http://localhost:1818/AuthentInitialize/AuthentInitializeService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAuthentInitializeService"
+                contract="ServiceAuthenInitialize.IAuthentInitializeService"
+                name="BasicHttpBinding_IAuthentInitializeService" />
+            <endpoint address="http://localhost:1818/Tarification/TarificationService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITarificationService"
+                contract="ServiceTarification.ITarificationService" name="BasicHttpBinding_ITarificationService" />
+            <endpoint address="http://localhost:1818/Workflow/Workflow.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IWorkflow"
+                contract="ServiceWorkflow.IWorkflow" name="BasicHttpBinding_IWorkflow" />
+            <endpoint address="http://localhost:1818/Recouvrement/RecouvrementService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IRecouvrementService"
+                contract="ServiceRecouvrement.IRecouvrementService" name="BasicHttpBinding_IRecouvrementService" />
+            <endpoint address="http://localhost:1818/Scelle/IScelleService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IIScelleService"
+                contract="ServiceScelles.IIScelleService" name="BasicHttpBinding_IIScelleService" />
+            <endpoint address="http://localhost:1818/Reclamation/ReclamationsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReclamationsService"
+                contract="ServiceReclamation.IReclamationsService" name="BasicHttpBinding_IReclamationsService" />
+            <endpoint address="http://localhost:1818/Fraudes/FraudeService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IFraudeService"
+                contract="ServiceFraude.IFraudeService" name="BasicHttpBinding_IFraudeService" />
+            <endpoint address="http://localhost:1818/Fraude/FraudeService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IFraudeService1"
+                contract="ServiceFraude.IFraudeService" name="BasicHttpBinding_IFraudeService1" />
+            <endpoint address="http://localhost:1819/Parametrage/Parametrage.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IParametrage1"
+                contract="ServiceParametrage.IParametrage" name="BasicHttpBinding_IParametrage1" />
+            <endpoint address="http://localhost:1819/Acceuil/AcceuilService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAcceuilService"
+                contract="ServiceAccueil.IAcceuilService" name="BasicHttpBinding_IAcceuilService" />
+        </client>
+    </system.serviceModel>
+</configuration>

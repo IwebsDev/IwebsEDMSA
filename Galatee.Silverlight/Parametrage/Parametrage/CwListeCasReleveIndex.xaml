@@ -1,0 +1,47 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Parametrage.CwListeCasReleveIndex"
+           Width="924.1" Height="600" OverlayBrush="Transparent"
+           Title="Cas de relève d'index">
+    <controls:ChildWindow.Resources>
+        <behaviors:CheckboxConverterInteger x:Key="CheckConverters"/>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+ 
+        <Button Content="Nouveau" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="567,493,0,0" Click="Creer_Click"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="647,493,0,0" Click="Modifier_Click"/>
+        <Button Content="Consulter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="727,493,0,0" Click="Consulter_Click"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="807,493,0,0" Click="Supprimer_Click"/>
+        <Controls:GroupBox Header="Liste des élements existant dans la table" HorizontalAlignment="Left" VerticalAlignment="Top" Height="479" Width="896">
+            <sdk:DataGrid HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="876" Name="dtgrdParametre" AutoGenerateColumns="False" IsReadOnly="True" Margin="10,0,-2,0">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn Binding="{Binding CODE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Cas" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding LIBELLE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Libélle" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding SAISIEINDEX, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Saisie index" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding SAISIECOMPTEUR, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Saisie conso" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding SAISIECONSO, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Saisie compteur" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding APRESENQUETE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Type de facturation sans enquète" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn Binding="{Binding SANSENQUETE, Mode=TwoWay}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Type de facturation après enquète" IsReadOnly="True" Width="Auto" />
+                </sdk:DataGrid.Columns>
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu x:Name="MenuContextuel" Opened="MenuContextuel_Opened">
+                        <toolkit:MenuItem x:Name="MenuContextuelCreer" Header="Créer" Icon="" Click="Creer_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelConsulter" Header="Consulter" Click="Consulter_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelEditer" Header="Editer" Click="Editer_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelModifier" Header="Modifier" Click="Modifier_Click" />
+                        <toolkit:MenuItem x:Name="MenuContextuelSupprimer" Header="Supprimer" Click="Supprimer_Click" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+            </sdk:DataGrid>
+        </Controls:GroupBox>
+        <Button Content="Imprimer" x:Name="btn_Imprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="487,493,0,0" Click="Editer_Click" />
+
+    </Grid>
+</controls:ChildWindow>

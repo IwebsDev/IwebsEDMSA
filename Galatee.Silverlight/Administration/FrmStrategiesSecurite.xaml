@@ -1,0 +1,54 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Administration.FrmStrategiesSecurite"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:lang="clr-namespace:Galatee.Silverlight.Resources"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:behaviors="clr-namespace:Galatee.Silverlight.Classes"
+           Width="1041.194" Height="464.761" 
+           Title="Stratégie de sécurité" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" OverlayBrush="Transparent">
+    <controls:ChildWindow.Resources>
+        <Style TargetType="sdk:DataGridCell" x:Key="DataGridCellStyle">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#FF0059C0"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+        
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2,2,2,3">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="366" HorizontalAlignment="Left"
+                       Margin="6,12,0,0" Name="lvwResultat" VerticalAlignment="Top" Width="997"
+                      RowEditEnded="lvwResultat_RowEditEnded" SelectionChanged="lvwResultat_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="Libelle" IsReadOnly="True" Width="90"
+                Binding="{Binding LIBELLE}" />
+                <sdk:DataGridTextColumn Header="Actif"  IsReadOnly="True" Width="90"
+                Binding="{Binding ACTIF}" />
+                <sdk:DataGridTextColumn Header="Historique nombre" Width="130"  IsReadOnly="True"
+                Binding="{Binding HISTORIQUENOMBREPASSWORD}" />
+                <sdk:DataGridTextColumn Header="Duree minimale" Width="200"  IsReadOnly="True"
+                Binding="{Binding DUREEMINIMALEPASSWORD}" />
+                <sdk:DataGridTextColumn Header="Duree maximale" Width="90"  IsReadOnly="True"
+                Binding="{Binding DUREEMAXIMALEPASSWORD}" />
+                <sdk:DataGridTextColumn Header="Longueur minimale" Width="190"  IsReadOnly="True"
+                Binding="{Binding LONGUEURMINIMALEPASSWORD}" />
+                <sdk:DataGridTextColumn Header="Chiffrement reversible" Width="190"  IsReadOnly="True"
+                Binding="{Binding CHIFFREMENTREVERSIBLEPASSWORD}" />
+            </sdk:DataGrid.Columns>
+            <i:Interaction.Behaviors>
+                <behaviors:DataGridDoubleClickBehavior DoubleClick="myDataGrid_DoubleClick"/>
+                <behaviors:DataGridContexMenuBehavior />
+            </i:Interaction.Behaviors>
+        </sdk:DataGrid>
+        <ProgressBar Background="Black" Foreground="Orange" Height="15" HorizontalAlignment="Left" Margin="2,541,0,0" Name="progressBar1" VerticalAlignment="Top" Visibility="Collapsed" Width="214" />
+    </Grid>
+</controls:ChildWindow>

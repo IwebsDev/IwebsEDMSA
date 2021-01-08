@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InterfaceComptableService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Galatee.Structure" />
+      <xsd:import schemaLocation="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInterfaceComptableService_RetourneListeDeSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSite" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneListeDeSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneListeDeSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneListeDeSite_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCaisse_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCaisse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCaisse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCaisseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCaisse_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCodeOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCodeOperation" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCodeOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCodeOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCodeOperation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneFichierComptable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFichierComptable" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneFichierComptable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneFichierComptableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneFichierComptable_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAgee_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBalanceAgee" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAgee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBalanceAgeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAgee_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAuxilliaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBalanceAuxilliaire" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAuxilliaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBalanceAuxilliaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBalanceAuxilliaire_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAllOperationByCritere_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllOperationByCritere" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAllOperationByCritere_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAllOperationByCritereResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAllOperationByCritere_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_Retournefacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:Retournefacture" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_Retournefacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetournefactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_Retournefacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneMiseAJourGrandCompte_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneMiseAJourGrandCompte" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneMiseAJourGrandCompte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneMiseAJourGrandCompteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneMiseAJourGrandCompte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatMiseAJourGrandCompte" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneEtatMiseAJourGrandCompteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneDEncaissement_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDEncaissement" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneDEncaissement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneDEncaissementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneDEncaissement_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_PurgeComptabilisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeComptabilisation" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_PurgeComptabilisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeComptabilisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_PurgeComptabilisation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAvanceSurConsomation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAvanceSurConsomation" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAvanceSurConsomation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneAvanceSurConsomationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneAvanceSurConsomation_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneProvision_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProvision" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneProvision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneProvisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneProvision_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeFacture_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTypeFacture" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeFacture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTypeFactureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeFacture_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCompteSpecifique_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteSpecifique" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCompteSpecifique_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneCompteSpecifiqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneCompteSpecifique_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q17:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeCompte_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTypeCompte" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeCompte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneTypeCompteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneTypeCompte_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q18:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneOperationComptable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneOperationComptable" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneOperationComptable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneOperationComptableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneOperationComptable_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q19:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_IsOperationExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperationExiste" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_IsOperationExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperationExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_IsOperationExiste_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q20:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_InsertionLigneComptableGenerer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionLigneComptableGenerer" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_InsertionLigneComptableGenerer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertionLigneComptableGenererResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_InsertionLigneComptableGenerer_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q21:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBanqueCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBanqueCentre" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBanqueCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneBanqueCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneBanqueCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q22:Errors" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneParamCentre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneParamCentre" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneParamCentre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetourneParamCentreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInterfaceComptableService_RetourneParamCentre_ErrorsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q23:Errors" />
+  </wsdl:message>
+  <wsdl:portType name="IInterfaceComptableService">
+    <wsdl:operation name="RetourneListeDeSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneListeDeSite" message="tns:IInterfaceComptableService_RetourneListeDeSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneListeDeSiteResponse" message="tns:IInterfaceComptableService_RetourneListeDeSite_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneListeDeSiteErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneListeDeSite_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCaisse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCaisse" message="tns:IInterfaceComptableService_RetourneCaisse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCaisseResponse" message="tns:IInterfaceComptableService_RetourneCaisse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCaisseErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneCaisse_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCodeOperation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCodeOperation" message="tns:IInterfaceComptableService_RetourneCodeOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCodeOperationResponse" message="tns:IInterfaceComptableService_RetourneCodeOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCodeOperationErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneCodeOperation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFichierComptable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneFichierComptable" message="tns:IInterfaceComptableService_RetourneFichierComptable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneFichierComptableResponse" message="tns:IInterfaceComptableService_RetourneFichierComptable_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneFichierComptableErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneFichierComptable_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBalanceAgee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAgee" message="tns:IInterfaceComptableService_RetourneBalanceAgee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAgeeResponse" message="tns:IInterfaceComptableService_RetourneBalanceAgee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAgeeErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneBalanceAgee_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBalanceAuxilliaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAuxilliaire" message="tns:IInterfaceComptableService_RetourneBalanceAuxilliaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAuxilliaireResponse" message="tns:IInterfaceComptableService_RetourneBalanceAuxilliaire_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAuxilliaireErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneBalanceAuxilliaire_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllOperationByCritere">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAllOperationByCritere" message="tns:IInterfaceComptableService_RetourneAllOperationByCritere_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAllOperationByCritereResponse" message="tns:IInterfaceComptableService_RetourneAllOperationByCritere_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAllOperationByCritereErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneAllOperationByCritere_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Retournefacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/Retournefacture" message="tns:IInterfaceComptableService_Retournefacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetournefactureResponse" message="tns:IInterfaceComptableService_Retournefacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetournefactureErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_Retournefacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEncaissement" message="tns:IInterfaceComptableService_RetourneEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEncaissementResponse" message="tns:IInterfaceComptableService_RetourneEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEncaissementErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneMiseAJourGrandCompte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneMiseAJourGrandCompte" message="tns:IInterfaceComptableService_RetourneMiseAJourGrandCompte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneMiseAJourGrandCompteResponse" message="tns:IInterfaceComptableService_RetourneMiseAJourGrandCompte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneMiseAJourGrandCompteErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneMiseAJourGrandCompte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatMiseAJourGrandCompte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEtatMiseAJourGrandCompte" message="tns:IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEtatMiseAJourGrandCompteResponse" message="tns:IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneEtatMiseAJourGrandCompteErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneEtatMiseAJourGrandCompte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDEncaissement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneDEncaissement" message="tns:IInterfaceComptableService_RetourneDEncaissement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneDEncaissementResponse" message="tns:IInterfaceComptableService_RetourneDEncaissement_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneDEncaissementErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneDEncaissement_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeComptabilisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/PurgeComptabilisation" message="tns:IInterfaceComptableService_PurgeComptabilisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/PurgeComptabilisationResponse" message="tns:IInterfaceComptableService_PurgeComptabilisation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/PurgeComptabilisationErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_PurgeComptabilisation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAvanceSurConsomation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAvanceSurConsomation" message="tns:IInterfaceComptableService_RetourneAvanceSurConsomation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAvanceSurConsomationResponse" message="tns:IInterfaceComptableService_RetourneAvanceSurConsomation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneAvanceSurConsomationErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneAvanceSurConsomation_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProvision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneProvision" message="tns:IInterfaceComptableService_RetourneProvision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneProvisionResponse" message="tns:IInterfaceComptableService_RetourneProvision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneProvisionErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneProvision_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTypeFacture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeFacture" message="tns:IInterfaceComptableService_RetourneTypeFacture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeFactureResponse" message="tns:IInterfaceComptableService_RetourneTypeFacture_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeFactureErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneTypeFacture_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteSpecifique">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCompteSpecifique" message="tns:IInterfaceComptableService_RetourneCompteSpecifique_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCompteSpecifiqueResponse" message="tns:IInterfaceComptableService_RetourneCompteSpecifique_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneCompteSpecifiqueErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneCompteSpecifique_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTypeCompte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeCompte" message="tns:IInterfaceComptableService_RetourneTypeCompte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeCompteResponse" message="tns:IInterfaceComptableService_RetourneTypeCompte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneTypeCompteErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneTypeCompte_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneOperationComptable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneOperationComptable" message="tns:IInterfaceComptableService_RetourneOperationComptable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneOperationComptableResponse" message="tns:IInterfaceComptableService_RetourneOperationComptable_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneOperationComptableErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneOperationComptable_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOperationExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/IsOperationExiste" message="tns:IInterfaceComptableService_IsOperationExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/IsOperationExisteResponse" message="tns:IInterfaceComptableService_IsOperationExiste_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/IsOperationExisteErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_IsOperationExiste_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertionLigneComptableGenerer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/InsertionLigneComptableGenerer" message="tns:IInterfaceComptableService_InsertionLigneComptableGenerer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/InsertionLigneComptableGenererResponse" message="tns:IInterfaceComptableService_InsertionLigneComptableGenerer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/InsertionLigneComptableGenererErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_InsertionLigneComptableGenerer_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBanqueCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBanqueCentre" message="tns:IInterfaceComptableService_RetourneBanqueCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBanqueCentreResponse" message="tns:IInterfaceComptableService_RetourneBanqueCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneBanqueCentreErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneBanqueCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetourneParamCentre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneParamCentre" message="tns:IInterfaceComptableService_RetourneParamCentre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneParamCentreResponse" message="tns:IInterfaceComptableService_RetourneParamCentre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IInterfaceComptableService/RetourneParamCentreErrorsFault" name="ErrorsFault" message="tns:IInterfaceComptableService_RetourneParamCentre_ErrorsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInterfaceComptableService" type="tns:IInterfaceComptableService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetourneListeDeSite">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneListeDeSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCaisse">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneCaisse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCodeOperation">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneCodeOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneFichierComptable">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneFichierComptable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBalanceAgee">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAgee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBalanceAuxilliaire">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneBalanceAuxilliaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAllOperationByCritere">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneAllOperationByCritere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Retournefacture">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/Retournefacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEncaissement">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneMiseAJourGrandCompte">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneMiseAJourGrandCompte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneEtatMiseAJourGrandCompte">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneEtatMiseAJourGrandCompte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneDEncaissement">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneDEncaissement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeComptabilisation">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/PurgeComptabilisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneAvanceSurConsomation">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneAvanceSurConsomation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneProvision">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneProvision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTypeFacture">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneTypeFacture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneCompteSpecifique">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneCompteSpecifique" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneTypeCompte">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneTypeCompte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneOperationComptable">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneOperationComptable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsOperationExiste">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/IsOperationExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertionLigneComptableGenerer">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/InsertionLigneComptableGenerer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneBanqueCentre">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneBanqueCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetourneParamCentre">
+      <soap:operation soapAction="http://tempuri.org/IInterfaceComptableService/RetourneParamCentre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorsFault">
+        <soap:fault use="literal" name="ErrorsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InterfaceComptableService">
+    <wsdl:port name="BasicHttpBinding_IInterfaceComptableService" binding="tns:BasicHttpBinding_IInterfaceComptableService">
+      <soap:address location="http://localhost:1818/InterfaceComptable/InterfaceComptableService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

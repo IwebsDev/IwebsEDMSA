@@ -1,0 +1,338 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID1}" p1:TextExpression.References="{x:Reference __ReferenceID2}" ConfigurationName="InitWorkflowDemande" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="InitWorkflowDemande"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:gw="clr-namespace:Galatee.WorkflowManager;assembly=Galatee.WorkflowManager"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID1">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID2">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.DataAccess</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Entity.Model</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.Structure</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowLibrary</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>Galatee.WorkflowManager</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="x:Int32" Name="m_FKIDCentre" />
+      <p1:Variable x:TypeArguments="s:Guid" Name="m_FKIDWorkflow" />
+      <p1:Variable x:TypeArguments="s:Guid" Name="m_FKIDOperation" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CodeDemande" />
+      <p1:Variable x:TypeArguments="x:Boolean" Name="m_boolCreationDemandeOk" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_Response" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_MsgErr" />
+      <p1:Variable x:TypeArguments="x:Boolean" Name="m_boolCreationCopieCircuitDemande" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_MatriculeUser" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_PKIDLineTableTraval" />
+      <p1:Variable x:TypeArguments="s:Guid" Name="m_PKIDDemande" />
+      <p1:Variable x:TypeArguments="s:Guid" Name="m_PKIDRWorkflowCentre" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_ListeEmail" />
+      <p1:Variable x:TypeArguments="x:String" Name="m_CodeDemandeTravail" />
+    </p1:Sequence.Variables>
+    <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_2" OperationName="InitWorkflowDemande" SerializerOption="XmlSerializer" ServiceContractName="p:IInitWorkflowDemande">
+      <Receive.CorrelationInitializers>
+        <RequestReplyCorrelationInitializer>
+          <RequestReplyCorrelationInitializer.CorrelationHandle>
+            <p1:InArgument x:TypeArguments="CorrelationHandle">
+              <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+            </p1:InArgument>
+          </RequestReplyCorrelationInitializer.CorrelationHandle>
+        </RequestReplyCorrelationInitializer>
+      </Receive.CorrelationInitializers>
+      <ReceiveParametersContent>
+        <p1:OutArgument x:TypeArguments="x:Int32" x:Key="centreId">
+          <mca:CSharpReference x:TypeArguments="x:Int32">m_FKIDCentre</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="s:Guid" x:Key="wkfId">
+          <mca:CSharpReference x:TypeArguments="s:Guid">m_FKIDWorkflow</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="s:Guid" x:Key="opId">
+          <mca:CSharpReference x:TypeArguments="s:Guid">m_FKIDOperation</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="matriculeUser">
+          <mca:CSharpReference x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="LineID">
+          <mca:CSharpReference x:TypeArguments="x:String">m_PKIDLineTableTraval</mca:CSharpReference>
+        </p1:OutArgument>
+        <p1:OutArgument x:TypeArguments="x:String" x:Key="CodeDemandeTravail">
+          <mca:CSharpReference x:TypeArguments="x:String">m_CodeDemandeTravail</mca:CSharpReference>
+        </p1:OutArgument>
+      </ReceiveParametersContent>
+    </Receive>
+    <gw:CodeActivitySetDemande sap2010:WorkflowViewState.IdRef="CodeActivitySetDemande_1">
+      <gw:CodeActivitySetDemande.CentreId>
+        <p1:InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32">m_FKIDCentre</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.CentreId>
+      <gw:CodeActivitySetDemande.CodeDemande>
+        <p1:OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">m_CodeDemande</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw:CodeActivitySetDemande.CodeDemande>
+      <gw:CodeActivitySetDemande.CodeDemandeTravail>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemandeTravail</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.CodeDemandeTravail>
+      <gw:CodeActivitySetDemande.Emails>
+        <p1:OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">m_ListeEmail</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw:CodeActivitySetDemande.Emails>
+      <gw:CodeActivitySetDemande.MatriculeUser>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_MatriculeUser</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.MatriculeUser>
+      <gw:CodeActivitySetDemande.OpId>
+        <p1:InArgument x:TypeArguments="s:Guid">
+          <mca:CSharpValue x:TypeArguments="s:Guid">m_FKIDOperation</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.OpId>
+      <gw:CodeActivitySetDemande.PKIDDemande>
+        <p1:OutArgument x:TypeArguments="s:Guid">
+          <mca:CSharpReference x:TypeArguments="s:Guid">m_PKIDDemande</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw:CodeActivitySetDemande.PKIDDemande>
+      <gw:CodeActivitySetDemande.PKIDLine>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_PKIDLineTableTraval</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.PKIDLine>
+      <gw:CodeActivitySetDemande.PKRWKF>
+        <p1:OutArgument x:TypeArguments="s:Guid">
+          <mca:CSharpReference x:TypeArguments="s:Guid">m_PKIDRWorkflowCentre</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw:CodeActivitySetDemande.PKRWKF>
+      <gw:CodeActivitySetDemande.Result>
+        <p1:OutArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpReference x:TypeArguments="x:Boolean">m_boolCreationDemandeOk</mca:CSharpReference>
+        </p1:OutArgument>
+      </gw:CodeActivitySetDemande.Result>
+      <gw:CodeActivitySetDemande.WKFId>
+        <p1:InArgument x:TypeArguments="s:Guid">
+          <mca:CSharpValue x:TypeArguments="s:Guid">m_FKIDWorkflow</mca:CSharpValue>
+        </p1:InArgument>
+      </gw:CodeActivitySetDemande.WKFId>
+    </gw:CodeActivitySetDemande>
+    <p1:If sap2010:WorkflowViewState.IdRef="If_2">
+      <p1:If.Condition>
+        <p1:InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean">m_boolCreationDemandeOk == true</mca:CSharpValue>
+        </p1:InArgument>
+      </p1:If.Condition>
+      <p1:If.Then>
+        <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <gw:CodeActivityCreateCopieWorkflow sap2010:WorkflowViewState.IdRef="CodeActivityCreateCopieWorkflow_1">
+            <gw:CodeActivityCreateCopieWorkflow.CodeDemande>
+              <p1:InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+              </p1:InArgument>
+            </gw:CodeActivityCreateCopieWorkflow.CodeDemande>
+            <gw:CodeActivityCreateCopieWorkflow.MessageErreur>
+              <p1:OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+              </p1:OutArgument>
+            </gw:CodeActivityCreateCopieWorkflow.MessageErreur>
+            <gw:CodeActivityCreateCopieWorkflow.PKIDDmd>
+              <p1:InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">m_PKIDDemande</mca:CSharpValue>
+              </p1:InArgument>
+            </gw:CodeActivityCreateCopieWorkflow.PKIDDmd>
+            <gw:CodeActivityCreateCopieWorkflow.PkRWK>
+              <p1:InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">m_PKIDRWorkflowCentre</mca:CSharpValue>
+              </p1:InArgument>
+            </gw:CodeActivityCreateCopieWorkflow.PkRWK>
+            <gw:CodeActivityCreateCopieWorkflow.Result>
+              <p1:OutArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpReference x:TypeArguments="x:Boolean">m_boolCreationCopieCircuitDemande</mca:CSharpReference>
+              </p1:OutArgument>
+            </gw:CodeActivityCreateCopieWorkflow.Result>
+          </gw:CodeActivityCreateCopieWorkflow>
+          <p1:If sap2010:WorkflowViewState.IdRef="If_1">
+            <p1:If.Condition>
+              <p1:InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean">m_boolCreationCopieCircuitDemande == true</mca:CSharpValue>
+              </p1:InArgument>
+            </p1:If.Condition>
+            <p1:If.Then>
+              <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <gw:CodeEnvoyerEmail Body="Création de la demande" sap2010:WorkflowViewState.IdRef="CodeEnvoyerEmail_1" Subject="Création de demande">
+                  <gw:CodeEnvoyerEmail.Emails>
+                    <p1:InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">m_ListeEmail</mca:CSharpValue>
+                    </p1:InArgument>
+                  </gw:CodeEnvoyerEmail.Emails>
+                  <gw:CodeEnvoyerEmail.Result>
+                    <p1:OutArgument x:TypeArguments="x:Boolean">
+                      <mca:CSharpReference x:TypeArguments="x:Boolean">m_boolCreationCopieCircuitDemande</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </gw:CodeEnvoyerEmail.Result>
+                  <gw:CodeEnvoyerEmail.result>
+                    <p1:OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">m_MsgErr</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </gw:CodeEnvoyerEmail.result>
+                </gw:CodeEnvoyerEmail>
+                <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <p1:Assign.To>
+                    <p1:OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </p1:Assign.To>
+                  <p1:Assign.Value>
+                    <p1:InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+                    </p1:InArgument>
+                  </p1:Assign.Value>
+                </p1:Assign>
+              </p1:Sequence>
+            </p1:If.Then>
+            <p1:If.Else>
+              <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <gw:CodeActivityCancelCreationDemande sap2010:WorkflowViewState.IdRef="CodeActivityCancelCreationDemande_1">
+                  <gw:CodeActivityCancelCreationDemande.CodeDemande>
+                    <p1:InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">m_CodeDemande</mca:CSharpValue>
+                    </p1:InArgument>
+                  </gw:CodeActivityCancelCreationDemande.CodeDemande>
+                  <gw:CodeActivityCancelCreationDemande.PKIDDemande>
+                    <p1:InArgument x:TypeArguments="s:Guid">
+                      <mca:CSharpValue x:TypeArguments="s:Guid">m_PKIDDemande</mca:CSharpValue>
+                    </p1:InArgument>
+                  </gw:CodeActivityCancelCreationDemande.PKIDDemande>
+                </gw:CodeActivityCancelCreationDemande>
+                <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <p1:Assign.To>
+                    <p1:OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </p1:Assign.To>
+                  <p1:Assign.Value>
+                    <p1:InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">"ERREUR : " + m_MsgErr</mca:CSharpValue>
+                    </p1:InArgument>
+                  </p1:Assign.Value>
+                </p1:Assign>
+              </p1:Sequence>
+            </p1:If.Else>
+          </p1:If>
+        </p1:Sequence>
+      </p1:If.Then>
+      <p1:If.Else>
+        <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+          <p1:Assign.To>
+            <p1:OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">m_Response</mca:CSharpReference>
+            </p1:OutArgument>
+          </p1:Assign.To>
+          <p1:Assign.Value>
+            <p1:InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">"ERREUR : " + m_CodeDemande.ToString()</mca:CSharpValue>
+            </p1:InArgument>
+          </p1:Assign.Value>
+        </p1:Assign>
+      </p1:If.Else>
+    </p1:If>
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_2">
+      <SendMessageContent DeclaredMessageType="x:String">
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">m_Response</mca:CSharpValue>
+        </p1:InArgument>
+      </SendMessageContent>
+    </SendReply>
+    <sads:DebugSymbol.Symbol>d2FEOlxQUk9KRVQgSVdFQlNcR0FMQVRFRSBXRUJfR2VuZXJpcXVlIC0yMDA4MjAxNFxHYWxhdGVlLldvcmtmbG93TWFuYWdlclxJbml0V29ya2Zsb3dEZW1hbmRlLnhhbWx4Ng8DngIRAQFGBWQPApEEZQWdASEC4AKeAQWVAg0BM5YCBZwCEQECYQthZQLyBFULVV0C4gRYC1heAtIEWwtbYALCBFILUlwCsgReC15mAqIESw9LXAKSBHwLfFgCgQRyC3JdAvEDdwt3XQLhA4EBC4EBVgLRA4sBC4sBXgLBA5oBC5oBVQKxA2gLaFQCoQOQAQuQAWQCkQOVAQuVAWkCgQOGAQuGAVwC8QJtC21eAuECoQELoQFpATSlAQmFAhcBZYgCCZMCFQFEmQILmQJTAQOmAQvAATACjwLBAQuEAhMBZpACD5ACcwFViwIPiwJfAUWzARGzAVoC0AKuARGuAV8CwAK9ARG9AXkCsAK4ARG4AWICoAKpARGpAVwCkALEARHEAXkBZ8gBD+YBHQK6AekBD4ICHQF3yQER2QEnAtwB2gER5QEdArsB6gER9QE4ApkB9gERgQIdAXjMARfMAWEC/wHJASvJAUMC/gHJAYEByQGWAQL9AdYBF9YBZQLtAdEBF9EBfwLdAeIBF+IBYgLMAd0BF90BZwK8AfIBF/IBYAKqAe0BF+0BYgKaAf4BF/4BawKJAfkBF/kBZwF5</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_2" sap:VirtualizedContainerService.HintSize="842,86" />
+      <sap2010:ViewStateData Id="CodeActivitySetDemande_1" sap:VirtualizedContainerService.HintSize="842,22" />
+      <sap2010:ViewStateData Id="CodeActivityCreateCopieWorkflow_1" sap:VirtualizedContainerService.HintSize="553,22" />
+      <sap2010:ViewStateData Id="CodeEnvoyerEmail_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CodeActivityCancelCreationDemande_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="553,398" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="575,584">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="842,734">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SendReply_2" sap:VirtualizedContainerService.HintSize="842,86" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="864,1172">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="894,1242" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

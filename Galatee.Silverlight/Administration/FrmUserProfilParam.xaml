@@ -1,0 +1,128 @@
+﻿<sdk:ChildWindow x:Class="Galatee.Silverlight.Administration.FrmUserProfilParam" Title="Paramétrage des profils"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:HierarchicalOptions_Models="clr-namespace:Galatee.Silverlight.Library.Models;assembly=Galatee.Silverlight.Library" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+           Width="803" Height="622.5" 
+           OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}" >
+    <sdk:ChildWindow.Resources>
+        <!--<HierarchicalOptions_Models:DesignTimeData x:Key="DesignTimeDataSource"/>-->
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate10">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate9" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate10}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate8" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate9}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate7" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate8}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate6" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate7}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate5" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate6}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate4" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate5}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate3" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate4}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate2" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate3}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+        <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate2}">
+            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+        </sdk:HierarchicalDataTemplate>
+    </sdk:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2,2,2,9">
+        <Grid.Resources>
+            <DataTemplate x:Key="headerTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox IsChecked="{Binding Check, Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding Name}"/>
+                </StackPanel>
+            </DataTemplate>
+            <!--<HierarchicalOptions_Models:DesignTimeData x:Key="DesignTimeDataSource"/>-->
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate10">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate9" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate10}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate8" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate9}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate7" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate8}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate6" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate7}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate5" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate6}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate4" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate5}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate3" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate4}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate2" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate3}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+            <sdk:HierarchicalDataTemplate x:Key="OptionItemTemplate" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource OptionItemTemplate2}">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Name}" IsThreeState="False"/>
+            </sdk:HierarchicalDataTemplate>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="368*"/>
+            <ColumnDefinition Width="397*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" MinHeight="33" />
+        </Grid.RowDefinitions>
+        <Controls:GroupBox Height="145" HorizontalAlignment="Left" x:Name="Gb_user_Copy4" VerticalAlignment="Bottom" Width="742" Margin="10,0,0,5" Header="Périmètre" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Controls:GroupBox FontWeight="SemiBold" Margin="10,10,10,180" x:Name="groupBox_profil"  Header="Choix des Profils" Grid.Column="1" Grid.ColumnSpan="2"  >
+            <Controls:GroupBox Height="83" HorizontalAlignment="Left" x:Name="Gb_user_Copy1" VerticalAlignment="Bottom" Width="383" Margin="352,-13,-2,220" Header="Périmètre" />
+        </Controls:GroupBox>
+        <Controls:GroupBox Height="160" HorizontalAlignment="Left" x:Name="Gb_user_Copy3" VerticalAlignment="Bottom" Width="384" Margin="0,0,0,245" Header="Entité Périmètre" Grid.Column="2" />
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,7,13,0" Grid.Row="1" Grid.Column="2" Height="22" VerticalAlignment="Top" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" HorizontalAlignment="Right" Margin="0,7,92,4" Grid.Row="1" Grid.Column="2" IsEnabled="False" />
+        <RadioButton Content="Centre" GroupName="perimetre" Height="16" HorizontalAlignment="Left" Margin="34,36,0,0" x:Name="rdbCentre" VerticalAlignment="Top" Width="57" Grid.Column="2" Checked="rdbCentre_Checked" RenderTransformOrigin="0.596,0.125" />
+        <RadioButton Content="Global" GroupName="perimetre" Height="16" HorizontalAlignment="Left" Margin="34,78,0,0" x:Name="rdbGlobal" VerticalAlignment="Top" Width="72" Grid.Column="2" Checked="rdbGlobal_Checked" />
+        <RadioButton Content="Direction de rattachement" GroupName="perimetre" Height="16" HorizontalAlignment="Left" Margin="34,57,0,0" x:Name="rdbSite" VerticalAlignment="Top" Width="165" Grid.Column="2" Checked="rdbSite_Checked" />
+        <Controls:GroupBox Height="51" HorizontalAlignment="Left" x:Name="Gb_user_Copy" VerticalAlignment="Bottom" Width="374" Margin="4,0,0,189" Grid.Column="2" Header="Période de validité" />
+        <sdk:TreeView Margin="10,119,32,257" x:Name="Main" ItemsSource="{Binding Children, Mode=OneWay}" ItemTemplate="{StaticResource OptionItemTemplate}" Grid.Column="2"/>
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="72,291,0,0" x:Name="dtpkFromValid" VerticalAlignment="Top" Width="120" Grid.Column="2" CalendarClosed="dtpkFromValid_CalendarClosed" />
+        <sdk:DatePicker Height="23" HorizontalAlignment="Left" Margin="238,290,0,0" x:Name="dtpkToValid" VerticalAlignment="Top" Width="122" Grid.Column="2" />
+        <sdk:Label Content="Début :" Height="20" HorizontalAlignment="Left" Margin="18,291,0,0" x:Name="lbl_from" VerticalAlignment="Top" Width="49" Grid.Column="2" />
+        <sdk:Label Content="Fin :" Height="20" HorizontalAlignment="Left" Margin="197,292,0,0" x:Name="lbl_to" VerticalAlignment="Top" Width="37" Grid.Column="2" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="124" HorizontalAlignment="Left" Margin="31,374,0,0" x:Name="dataGrid_ParamProfil" VerticalAlignment="Top" Width="571" IsReadOnly="True" SelectionChanged="dataGrid_ParamProfil_SelectionChanged" GridLinesVisibility="None" RowBackground="{x:Null}" Grid.Column="1" Grid.ColumnSpan="2">
+
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Width="35" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="chk_Critere" Checked="chk_Critere_Checked_1" Tag="{Binding PK_ID,Mode= TwoWay}" Unchecked="chk_Critere_Unchecked_1" IsChecked ="{Binding IsSelect, Mode=TwoWay}" 
+            					VerticalAlignment="Center"  HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+
+                <sdk:DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Profil" Binding="{Binding LIBELLE}" Width="300" MaxWidth="290" MinWidth="50" FontWeight="Normal" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name="Btn_Ajouter_Param_" Content="Ajouter" Click="Btn_Ajouter_Param" Width="95" HorizontalAlignment="Left" TabIndex="20" Margin="270,333,0,151" Grid.Column="2" RenderTransformOrigin="0.089,0.364" />
+        <Button x:Name="Btn_Supprimer_Param_" Content="Retirer" Click="Btn_Supprimer_Param" Width="90" HorizontalAlignment="Left" TabIndex="20" Margin="270,469,0,10" Grid.Column="2" RenderTransformOrigin="0.5,0.667" />
+        <sdk:TreeView Margin="31,36,24,197" x:Name="Main_Copy" ItemsSource="{Binding Children, Mode=OneWay}" ItemTemplate="{StaticResource OptionItemTemplate}" Grid.Column="1"/>
+    </Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,22 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.MainView.UcListeTa"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="274.111" Height="465.446" 
+           Title="UcListeDesCentres" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="ChildWindow_Loaded" OverlayBrush="Transparent" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="66" Height="23" HorizontalAlignment="Right" Margin="0,8,0,4" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="61" Height="23" HorizontalAlignment="Right" Margin="0,9,72,3" Grid.Row="1" />
+        <sdk:DataGrid AutoGenerateColumns="False" Height="337" HorizontalAlignment="Left" ItemsSource="{Binding UpdateSourceTrigger=Explicit, Path=CurrentCode}" Margin="0,10,0,0" Name="dtg_Elts" VerticalAlignment="Top" Width="241">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding VALEUR}" CanUserReorder="True" CanUserSort="True"  MinWidth="50" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding LIBELLE}" CanUserReorder="True" CanUserSort="True"  MinWidth="140" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

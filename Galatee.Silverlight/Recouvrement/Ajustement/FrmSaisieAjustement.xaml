@@ -1,0 +1,69 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:Converters="clr-namespace:Galatee.Silverlight.Classes"
+           xmlns:Controls="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Galatee.Silverlight.Recouvrement.FrmSaisieAjustement"
+           Width="710" Height="625" 
+           Title="Ajustement">
+    <controls:ChildWindow.Resources>
+        <Converters:DateTimeConverter x:Key="DateTimeConverter"/>
+        <Converters:DecimalConverter x:Key="DecimalConverter"/>
+    </controls:ChildWindow.Resources>
+    <sdk:ChildWindow.Style>
+        <StaticResource ResourceKey="ChildWindowGalatee"/>
+    </sdk:ChildWindow.Style>
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:TabControl HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="672" Margin="0,9,0,0">
+            <sdk:TabItem Header="Formulaire d'ajustement">
+                <Grid>
+                    <Controls:GroupBox FontWeight="SemiBold" Margin="8,104,10,0" x:Name="groupBox1_Copy" RenderTransformOrigin="0.5,0.5"  Header="Liste des factures sélectionnées"  />
+                    <Button Content="Ajouters facture " x:Name="btn_ajouterFactureHorReg"  HorizontalAlignment="Left" Margin="20,136,0,0" VerticalAlignment="Top" Width="245" Click="Button_Click_1" Height="20"/>
+                    <sdk:DataGrid x:Name="dg_facture_Copy"    HorizontalAlignment="Left" Height="233" Margin="21,165,0,0" VerticalAlignment="Top" Width="614" AutoGenerateColumns="False"  RowEditEnded="dg_facture_Copy_RowEditEnded"  >
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTemplateColumn Width="25">
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox  Checked="CheckBox1_Checked" Unchecked="CheckBox1_Unchecked" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+                            <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Centre" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Client" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Ordre" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding NOM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Nom client" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding REFEM}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Periode" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding NDOC}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Facture" Width="Auto" />
+                            <!--<sdk:DataGridTextColumn Binding="{Binding MONTANT, Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="Auto" />-->
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANT,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant" Width="Auto" />
+                            <sdk:DataGridTextColumn Binding="{Binding MONTANT_AJUSTEMENT,Converter={StaticResource DecimalConverter}}" CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Montant d'justement" Width="Auto" />
+
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:DataPager x:Name="datapager_Copy" HorizontalAlignment="Left" Height="25" Margin="21,429,0,0" PageSize="50" VerticalAlignment="Top" Width="613" />
+                    <TextBox HorizontalAlignment="Left"  Height="22" Margin="351,400,0,0" x:Name="txt_TotalFactureEnvoie" TextWrapping="Wrap"   VerticalAlignment="Top" Width="283"/>
+                    <sdk:Label HorizontalAlignment="Left" Content=" Montant total" Height="22" Margin="256,400,0,0" VerticalAlignment="Top" Width="178"/>
+                    <Controls:GroupBox FontWeight="SemiBold" Margin="10,10,10,370" x:Name="groupBox1_Copy1" RenderTransformOrigin="0.5,0.5"  Header="Générale"  />
+                    <TextBox Background="LightBlue"  Text="{Binding NUMEROLOT, Mode=TwoWay}" HorizontalAlignment="Left" Height="22" Margin="150,72,0,0" x:Name="txt_TotalFactureEnvoie_Copy1" TextWrapping="Wrap"   VerticalAlignment="Top" Width="283" TextChanged="txt_TotalFactureEnvoie_Copy1_TextChanged"/>
+                    <sdk:Label HorizontalAlignment="Left" Content="Préfixe Numéro de lot" Height="22" Margin="20,72,0,0" VerticalAlignment="Top" Width="125"/>
+                    <RadioButton Content="Débit" x:Name="rb_Debit" GroupName="SensComptable" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,45,0,0" Checked="RadioButton_Checked_1"/>
+                    <RadioButton Content="Crédit" x:Name="rb_Credit"  GroupName="SensComptable" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="233,45,0,0" Checked="RadioButton_Checked_2"/>
+                    <Controls:GroupBox FontWeight="SemiBold" Margin="21,30,226,405" x:Name="groupBox1_Copy2" RenderTransformOrigin="0.5,0.5"  Header="Sens Comptable"  />
+                    <Button Content="Supprimer factures " x:Name="btn_ajouterFactureHorReg_Copy"  HorizontalAlignment="Left" Margin="270,136,0,0" VerticalAlignment="Top" Width="245" Click="btn_ajouterFactureHorReg_Copy_Click_1" Height="20"/>
+                    <Button Content="Tous" x:Name="btn_ajouterFactureHorReg_Copy1"  HorizontalAlignment="Left" Margin="21,401,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click_1" Height="20"/>
+                    <Button Content="Rien" x:Name="btn_ajouterFactureHorReg_Copy2"  HorizontalAlignment="Left" Margin="76,401,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click_1" Height="20"/>
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <Button Content="Mise à jour des comptes client " x:Name="bnt_maj_compt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Margin="31,10,0,0" Grid.Row="1" Click="bnt_maj_compt_Click"/>
+
+    </Grid>
+</controls:ChildWindow>

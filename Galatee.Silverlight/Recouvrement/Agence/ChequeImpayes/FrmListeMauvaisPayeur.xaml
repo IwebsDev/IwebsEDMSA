@@ -1,0 +1,41 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+           x:Class="Galatee.Silverlight.Recouvrement.FrmListeMauvaisPayeur"
+           Width="632.759" Height="442.017" 
+           Title="FrmListeMauvaisPayer" Style="{StaticResource ChildWindowGalatee}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="106" Height="23" HorizontalAlignment="Right" Margin="0,10,7,2" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Imprimer" Click="OKButton_Click" Width="120" Height="23" HorizontalAlignment="Right" Margin="0,10,122,2" Grid.Row="1" />
+        <controls:DatePicker x:Name="dtp_Debut" HorizontalAlignment="Left" Height="23" Margin="104,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <controls:DatePicker x:Name="dtp_fin" HorizontalAlignment="Left" Height="23" Margin="312,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="12,71,0,0" VerticalAlignment="Top" Content="Date début" Width="87"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="246,72,0,0" VerticalAlignment="Top" Content="Date fin" Width="66"/>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="211" HorizontalAlignment="Left" ItemsSource="{Binding CurrentCode, UpdateSourceTrigger=Explicit}" Margin="12,121,0,0" x:Name="lvwResultat" VerticalAlignment="Top" Width="583" 
+        	>
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding CENTRE}" CanUserReorder="True" CanUserSort="True" Header="Centre" IsReadOnly="True" MinWidth="50"  MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding CLIENT}" CanUserReorder="True" CanUserSort="True" Header="Client" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding ORDRE}" CanUserReorder="True" CanUserSort="True" Header="Ordre" IsReadOnly="True" MinWidth="60" MaxWidth="60" Width="SizeToCells" />
+                <sdk:DataGridTextColumn Binding="{Binding NOMABON}" CanUserReorder="True" CanUserSort="True" Header="Nom" IsReadOnly="True" MinWidth="100" Width="SizeToCells" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="12,43,0,0" x:Name="lbl_Centre" VerticalAlignment="Top" Width="92" Content="Centre" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="104,44,0,0" x:Name="btn_Centre" VerticalAlignment="Top" Width="56" Click="btn_Centre_Click" />
+        <sdk:Label Height="23" HorizontalAlignment="Left" Margin="12,19,0,0" x:Name="lbl_Centre_Copy" VerticalAlignment="Top" Width="91" Content="Site" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="104,0,0,289" x:Name="Txt_CodeSite" VerticalAlignment="Bottom" Width="56" Background="LightBlue" TabIndex="0" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="214,19,0,0" x:Name="Txt_LibelleSite" VerticalAlignment="Top" Width="213" IsReadOnly="True" />
+        <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="165,0,0,290" x:Name="btn_Site" VerticalAlignment="Bottom" Width="42" Click="btn_Site_Click"  />
+        <ComboBox HorizontalAlignment="Left" x:Name="Cbo_Centre" Margin="167,43,0,0" VerticalAlignment="Top" Width="260" Height="24"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="165,44,0,0" x:Name="Txt_LibelleCentre" VerticalAlignment="Top" Width="262" IsReadOnly="True" />
+        <Button Content="Rechercher" Height="29" HorizontalAlignment="Left" Margin="459,70,0,0" x:Name="Btn_search" VerticalAlignment="Top" Width="120" Click="Btn_search_Click"   />
+        <Button Content="Exporter" HorizontalAlignment="Left" Margin="237,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" Click="Button_Click_1"/>
+    </Grid>
+</controls:ChildWindow>

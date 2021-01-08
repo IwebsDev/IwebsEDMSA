@@ -1,0 +1,17 @@
+﻿<controls:ChildWindow x:Class="Galatee.Silverlight.Accueil.FrAnotation"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="404" Height="217" 
+           Title="Annotation demande" Style="{StaticResource ChildWindowGalatee}" OverlayBrush="{x:Null}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Fermer" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        <TextBox HorizontalAlignment="Left" Name="txtAnnotation" Height="95" Margin="19,6,0,0" TextWrapping="Wrap" IsTabStop="True" TabIndex="0" VerticalAlignment="Top" Width="335"/>
+    </Grid>
+</controls:ChildWindow>
