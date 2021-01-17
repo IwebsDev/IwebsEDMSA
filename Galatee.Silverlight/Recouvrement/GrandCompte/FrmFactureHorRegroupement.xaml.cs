@@ -159,7 +159,10 @@ namespace Galatee.Silverlight.Recouvrement
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            ListFacture_Selectionner.Add((CsLclient)dg_facture.SelectedItem);
+            if (((CsLclient)dg_facture.SelectedItem).IsPAIEMENTANTICIPE)
+                Message.ShowInformation("Cette facture existe déja dans la campagne " + ((CsLclient)dg_facture.SelectedItem).NUMDEM, "Doublon de facture ");
+            else 
+               ListFacture_Selectionner.Add((CsLclient)dg_facture.SelectedItem);
         }
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {

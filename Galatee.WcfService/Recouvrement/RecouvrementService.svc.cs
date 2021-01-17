@@ -1435,7 +1435,7 @@ namespace WcfService
         {
             try
             {
-                DBEncaissement db = new DBEncaissement();
+                DBMoratoires db = new DBMoratoires();
                 List<CsLclient> lstFactureClient = new List<CsLclient>();
                 List<CsClient> lstClientReference = TestClientExist(leClient.CENTRE, leClient.REFCLIENT, leClient.ORDRE);
 
@@ -1503,38 +1503,60 @@ namespace WcfService
             }
         }
 
-        public List<CsLclient> RemplirfactureAvecProduit(CsRegCli csRegCli, List<string> listperiode,List<int> idProduit)
+        //public List<CsLclient> RemplirfactureAvecProduit(CsRegCli csRegCli, List<string> listperiode,List<int> idProduit)
+        //{
+        //    try
+        //    {
+        //        List<CsLclient> ListeFacture = new List<CsLclient>();
+        //        List<CsCampagneGc> camp = new List<CsCampagneGc>();
+        //        foreach (var item in listperiode)
+        //        {
+        //            camp.Add(VerifierCampagneExiste(csRegCli, item));
+        //            if (camp != null && camp.Count() > 0 && camp[0] != null)
+        //            {
+        //                foreach (int itemIdProduit in idProduit)
+        //                {
+        //                    foreach (var item_ in new DBEncaissement().RetourneListeFactureNonSoldeByRegroupementProduitspx(csRegCli.PK_ID, item, itemIdProduit))
+        //                    {
+        //                        //if (!camp[0].DETAILCAMPAGNEGC_.Select(d => d.NDOC).Contains(item_.NDOC))
+        //                        var FactureCorrespondanteDansCampagneExistante = camp[0].DETAILCAMPAGNEGC_.FirstOrDefault(d => d.FK_IDCLIENT == item_.FK_IDCLIENT && d.NDOC == item_.NDOC && d.PERIODE == item_.REFEM);
+        //                        if (FactureCorrespondanteDansCampagneExistante == null)
+        //                        {
+        //                            ListeFacture.Add(item_);
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            else
+        //            {
+        //                foreach (var itemIdProduit in idProduit)
+        //                    ListeFacture.AddRange(new DBEncaissement().RetourneListeFactureNonSoldeByRegroupementProduitspx(csRegCli.PK_ID, item, itemIdProduit));
+
+        //            }
+        //        }
+
+        //        return ListeFacture;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ErrorManager.LogException(this, ex);
+        //        return null;
+        //    }
+        //}
+
+       /* LKO 13/01/2021 */
+        public List<CsLclient> RemplirfactureAvecProduit(CsRegCli csRegCli, List<string> listperiode, List<int> idProduit)
         {
             try
             {
                 List<CsLclient> ListeFacture = new List<CsLclient>();
                 List<CsCampagneGc> camp = new List<CsCampagneGc>();
+                DBMoratoires DbM = new DBMoratoires();
                 foreach (var item in listperiode)
                 {
-                    camp.Add(VerifierCampagneExiste(csRegCli, item));
-                    if (camp != null && camp.Count() > 0 && camp[0] != null)
-                    {
                         foreach (int itemIdProduit in idProduit)
-                        {
-                            foreach (var item_ in new DBEncaissement().RetourneListeFactureNonSoldeByRegroupementProduitspx(csRegCli.PK_ID, item, itemIdProduit))
-                            {
-                                //if (!camp[0].DETAILCAMPAGNEGC_.Select(d => d.NDOC).Contains(item_.NDOC))
-                                var FactureCorrespondanteDansCampagneExistante = camp[0].DETAILCAMPAGNEGC_.FirstOrDefault(d => d.FK_IDCLIENT == item_.FK_IDCLIENT && d.NDOC == item_.NDOC && d.PERIODE == item_.REFEM);
-                                if (FactureCorrespondanteDansCampagneExistante == null)
-                                {
-                                    ListeFacture.Add(item_);
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        foreach (var itemIdProduit in idProduit)
-                            ListeFacture.AddRange(new DBEncaissement().RetourneListeFactureNonSoldeByRegroupementProduitspx(csRegCli.PK_ID, item, itemIdProduit));
-
-                    }
+                            ListeFacture.AddRange(DbM.RetourneListeFactureNonSoldeByRegroupementProduitspx(csRegCli.PK_ID, item, itemIdProduit));
                 }
-
                 return ListeFacture;
             }
             catch (Exception ex)
@@ -1543,7 +1565,7 @@ namespace WcfService
                 return null;
             }
         }
-
+       /**/
 
 
         public List<Dico> SaveCampane(List<CsLclient> ListFacturation, CsRegCli csRegCli, int? ID_USER)

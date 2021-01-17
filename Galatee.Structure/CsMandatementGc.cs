@@ -24,6 +24,10 @@ namespace Galatee.Structure
         [DataMember] public Nullable<decimal> MONTANTTTC { get; set; }
         [DataMember] public Nullable<decimal> TAUXRECOUVREMENT { get; set; }
         [DataMember] public string PERIODE { get; set; }
+
+
+        [DataMember] public string NUMEROCAMPAGNE { get; set; }   /* LKO 08/01/2021 */
+
         [DataMember] public virtual ICollection<CsDetailMandatementGc> DETAILMANDATEMENTGC_ { get; set; }
         [DataMember]  public virtual List<CsPaiementGc> PAIEMENTGC_ { get; set; }
     }

@@ -2736,13 +2736,277 @@ namespace Galatee.DataAccess
         {
             try
             {
-                return SaveMandatementGc(ListMandatementGc, IsAvisCerdit);
+                //return SaveMandatementGc(ListMandatementGc, IsAvisCerdit);
+                return SaveMandatementGcOpti(ListMandatementGc, IsAvisCerdit);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+        /* LKO optimisation de recouvrement GC */
+        public void InsertEntfacteBulk(List<CsMapperMandatement> _LeMandatement, List<CsMapperDetailMandatement> LeDetailMandatement, SqlCommand pContext)
+        {
+            try
+            {
+              
+                    pContext.CommandTimeout = 18000;
+                    Dictionary<string, DataTable> TableFille = new Dictionary<string, DataTable>();
+
+                    DataTable TablePere = Galatee.Tools.Utility.ListToDataTable(_LeMandatement);
+                    DataTable TableFille1 = Galatee.Tools.Utility.ListToDataTable(LeDetailMandatement);
+                    TableFille.Add("DETAILMANDATEMENTGC", TableFille1);
+                    Galatee.Tools.Utility.BulkInsertManyToManyRelationship(TablePere, "MANDATEMENTGC", TableFille, "FK_IDMANDATEMENT", pContext);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public CsMandatementGc RetourneDonneCampagneGC(string numeroCampagne,int idCampagne)
+        {
+            cn = new SqlConnection(ConnectionString);
+
+            cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandTimeout = 18000;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPX_RECOUVGC_DONNEECAMPAGNE";
+            cmd.Parameters.Add("@NumMandatement", SqlDbType.VarChar, 30).Value = numeroCampagne;
+            cmd.Parameters.Add("@IdCampagne", SqlDbType.Int).Value = idCampagne;
+
+            DBBase.SetDBNullParametre(cmd.Parameters);
+            try
+            {
+                if (cn.State == ConnectionState.Closed)
+                    cn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                return Entities.GetEntityFromQuery<CsMandatementGc>(dt);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(cmd.CommandText + ":" + ex.Message);
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close(); // Fermeture de la connection 
+                cmd.Dispose();
+            }
+        }
+
+       public CsLclient   RetourneLaFactureCampagneGC(int IdFacture)
+        {
+            cn = new SqlConnection(ConnectionString);
+
+            cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandTimeout = 18000;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPX_RECOUVGC_RETOURNEFACTURE";
+            cmd.Parameters.Add("@FK_IDLCLIENT", SqlDbType.Int).Value = IdFacture;
+
+            DBBase.SetDBNullParametre(cmd.Parameters);
+            try
+            {
+                if (cn.State == ConnectionState.Closed)
+                    cn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                return Entities.GetEntityFromQuery<CsLclient>(dt);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(cmd.CommandText + ":" + ex.Message);
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close(); // Fermeture de la connection 
+                cmd.Dispose();
+            }
+        }
+        public bool? SaveMandatementGcOpti(List<CsDetailCampagneGc> ListMandatementGc, bool IsAvisCerdit)
+        {
+            try
+            {
+                 var numero = IsAvisCerdit != true ? ListMandatementGc.First().NUMEROMANDATEMENT : "0000000000000";
+                 int idCampagne = ListMandatementGc.FirstOrDefault().IDCAMPAGNEGC;
+                 string Matricule = ListMandatementGc.FirstOrDefault().USERCREATION;
+
+                 CsMandatementGc leMandatement = RetourneDonneCampagneGC(numero, idCampagne);
+                 if (leMandatement == null || leMandatement.FK_IDCAMPAGNA == null)
+                 {
+                     CsMapperMandatement Mand = new CsMapperMandatement();
+                     Mand.DATECREATION = System.DateTime.Now;
+                     Mand.DATEMODIFICATION = System.DateTime.Now;
+                     Mand.FK_IDCAMPAGNA = ListMandatementGc.First().IDCAMPAGNEGC;
+                     Mand.NUMEROMANDATEMENT = numero;
+                     Mand.USERCREATION = ListMandatementGc.First().USERCREATION;
+                     Mand.USERMODIFICATION = ListMandatementGc.First().USERMODIFICATION;
+
+                     List<CsMapperMandatement> LstMandatementGc = new List<CsMapperMandatement>();
+                     List<CsMapperDetailMandatement> ListDetailMandatementGc = new List<CsMapperDetailMandatement>();
+                     foreach (CsDetailCampagneGc item_ in ListMandatementGc)
+                     {
+                         CsMapperDetailMandatement DetailMand = new CsMapperDetailMandatement();
+
+                         DetailMand.CENTRE = item_.CENTRE;
+                         DetailMand.CLIENT = item_.CLIENT;
+                         DetailMand.DATECREATION = item_.DATECREATION;
+                         DetailMand.DATEMODIFICATION = item_.DATEMODIFICATION;
+                         DetailMand.MONTANT = item_.MONTANT;
+                         DetailMand.MONTANTTVA = RetourneLaFactureCampagneGC(item_.FK_IDLCLIENT).MONTANTTVA;
+                         DetailMand.NDOC = item_.NDOC;
+                         DetailMand.ORDRE = item_.ORDRE;
+                         DetailMand.PERIODE = item_.PERIODE;
+                         DetailMand.PK_ID = item_.PK_ID;
+                         DetailMand.FK_IDCLIENT = item_.FK_IDCLIENT;
+                         DetailMand.FK_IDLCLIENT = item_.FK_IDLCLIENT;
+                         DetailMand.STATUS = item_.STATUS;
+                         DetailMand.USERCREATION = item_.USERCREATION;
+                         DetailMand.USERMODIFICATION = item_.USERMODIFICATION;
+
+                         ListDetailMandatementGc.Add(DetailMand);
+                     }
+                     Mand.MONTANT = ListDetailMandatementGc.Sum(t => t.MONTANT);
+                     LstMandatementGc.Add(Mand);
+
+                     int res = -1;
+                     SqlCommand cmd = DBBase.InitTransaction(ConnectionString);
+                     InsertEntfacteBulk(LstMandatementGc, ListDetailMandatementGc, cmd);
+
+                     galadbEntities context = new galadbEntities();
+                     new DbWorkFlow().ExecuterActionSurDemandeTransction(leMandatement.NUMEROCAMPAGNE , Enumere.TRANSMETTRE, Matricule, string.Empty, context);
+                     cmd.Transaction.Commit();
+                     return true;
+
+                 }
+                 else return false;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+       public DataTable RetourneListeFactureNonSoldeRegrouperProduitSpx(int idreg, string periode,int idProduit)
+        {
+            cn = new SqlConnection(ConnectionString);
+
+            cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandTimeout = 3000;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SPX_IMPAYES_REGROUPEMENT_PRODUIT_GC";
+            cmd.Parameters.Add("@idRegroupement", SqlDbType.Int).Value = idreg;
+            cmd.Parameters.Add("@periode", SqlDbType.VarChar, 6).Value = periode;
+            cmd.Parameters.Add("@idProduit", SqlDbType.Int).Value = idProduit;
+
+            DBBase.SetDBNullParametre(cmd.Parameters);
+            try
+            {
+                if (cn.State == ConnectionState.Closed)
+                    cn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(cmd.CommandText + ":" + ex.Message);
+            }
+            finally
+            {
+                if (cn.State == ConnectionState.Open)
+                    cn.Close(); // Fermeture de la connection 
+                cmd.Dispose();
+            }
+        }
+       public List<CsLclient> RetourneListeFactureNonSoldeByRegroupementProduitspx(int IdReg, string Periode, int IdProduit)
+       {
+           try
+           {
+               DataTable dt = RetourneListeFactureNonSoldeRegrouperProduitSpx(IdReg, Periode, IdProduit);
+               return Tools.Utility.GetEntityListFromQuery<CsLclient>(dt);
+           }
+           catch (Exception ex)
+           {
+               throw ex;
+           }
+       }
+
+       public List<CsLclient> RetourneFactureClientNonSolde(int id, string centre, string client, string ordre)
+       {
+
+           try
+           {
+               cn = new SqlConnection(ConnectionString);
+
+               cmd = new SqlCommand();
+               cmd.Connection = cn;
+               cmd.CommandTimeout = 3000;
+               cmd.CommandType = CommandType.StoredProcedure;
+               cmd.CommandText = "SPX_CAIS_RETOURNE_FACTURE_CLIENT_GC";
+               cmd.Parameters.Add("@FK_IDCLENT", SqlDbType.Int).Value = id;
+               DBBase.SetDBNullParametre(cmd.Parameters);
+               try
+               {
+                   if (cn.State == ConnectionState.Closed)
+                       cn.Open();
+                   SqlDataReader reader = cmd.ExecuteReader();
+                   DataTable dt = new DataTable();
+                   dt.Load(reader);
+                   return Entities.GetEntityListFromQuery<CsLclient>(dt); ;
+               }
+               catch (Exception ex)
+               {
+                   return null;
+               }
+               finally
+               {
+                   if (cn.State == ConnectionState.Open)
+                       cn.Close(); // Fermeture de la connection 
+                   cmd.Dispose();
+               }
+           }
+           catch (Exception ex)
+           {
+               return null;
+           }
+       }
+       public List<CsLclient> RetourneListeFactureNonSolde(CsClient leClient)
+       {
+           try
+           {
+               List<CsLclient> ListeFacture = new List<CsLclient>();
+               ListeFacture = RetourneFactureClientNonSolde(leClient.PK_ID, leClient.CENTRE, leClient.REFCLIENT, leClient.ORDRE);
+               if (ListeFacture != null && ListeFacture.Count != 0)
+                   leClient.SOLDE = ListeFacture.First().SOLDECLIENT;
+               else
+                   if (ListeFacture != null && ListeFacture.Count == 0) return null;
+               return ListeFacture;
+           }
+           catch (Exception ex)
+           {
+               throw ex;
+           }
+       }
+
+        /* LKO 08/01/2021 */
+
+
+
         public  bool? SaveMandatementGc(List<CsDetailCampagneGc> ListMandatementGc, bool IsAvisCerdit)
         {
             try

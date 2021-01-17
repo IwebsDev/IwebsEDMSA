@@ -492,7 +492,6 @@ namespace Galatee.Silverlight.Recouvrement
             lbl_Periode_Fin.Visibility = Visibility.Visible;
             txt_periode_Debut.Visibility = Visibility.Visible;
             txt_periode_Fin.Visibility = Visibility.Visible;
-
         }
 
         private void CheckBox_Unchecked_1(object sender, RoutedEventArgs e)
@@ -610,39 +609,102 @@ namespace Galatee.Silverlight.Recouvrement
             {
                 if (args != null && args.Cancelled)
                     return;
-                Lstfacture = args.Result;
-                if (this.Anciennecamp != null)
+                List<CsLclient> lstFactureGeneral = new List<CsLclient>();
+                List<CsLclient> lstFactureExist = new List<CsLclient>();
+                lstFactureGeneral = args.Result;
+
+                if (lstFactureGeneral != null && lstFactureGeneral.Count != 0)
                 {
-                    foreach (var item_ in this.Anciennecamp)
+                    lstFactureExist = lstFactureGeneral.Where(t => t.IsPAIEMENTANTICIPE).ToList();
+                    Lstfacture = lstFactureGeneral.Where(t => !t.IsPAIEMENTANTICIPE).ToList();
+                }
+                if (lstFactureExist != null && lstFactureExist.Count != 0)
+                {
+                    List<object> _LstObj = new List<object>();
+                    _LstObj = ClasseMEthodeGenerique.RetourneListeObjet(lstFactureExist);
+                    Dictionary<string, string> _LstColonneAffich = new Dictionary<string, string>();
+                    _LstColonneAffich.Add("NUMDEM", "CAMPAGNE");
+                    _LstColonneAffich.Add("CENTRE", "CENTRE");
+                    _LstColonneAffich.Add("CLIENT", "CLIENT");
+                    _LstColonneAffich.Add("ORDRE", "ORDRE");
+                    _LstColonneAffich.Add("NDOC", "NUM FACTURE");
+                    _LstColonneAffich.Add("REFEM", "PERIODE");
+
+                    List<object> obj = Shared.ClasseMEthodeGenerique.RetourneListeObjet(_LstObj);
+                    MainView.UcListeClientMultiple ctrl = new MainView.UcListeClientMultiple(obj, _LstColonneAffich, false, "Liste des factures deja dans une campagne");
+                    ctrl.Closed += new EventHandler(galatee_OkClickedChoixClient);
+                    ctrl.Show();
+                    return;
+
+                }
+                else
+                {
+                    if (this.Anciennecamp != null)
                     {
-                        foreach (var item in item_.DETAILCAMPAGNEGC_)
+                        foreach (var item_ in this.Anciennecamp)
                         {
-                            CsLclient facture = new CsLclient();
-                            facture.CENTRE = item.CENTRE;
-                            facture.CLIENT = item.CLIENT;
-                            facture.ORDRE = item.ORDRE;
-                            facture.NOM = item.NOM;
-                            facture.REFEM = item.PERIODE;
-                            facture.SOLDEFACTURE = item.MONTANT;
-                            facture.NDOC = item.NDOC;
-                            Lstfacture.Add(facture);
+                            foreach (var item in item_.DETAILCAMPAGNEGC_)
+                            {
+                                CsLclient facture = new CsLclient();
+                                facture.CENTRE = item.CENTRE;
+                                facture.CLIENT = item.CLIENT;
+                                facture.ORDRE = item.ORDRE;
+                                facture.NOM = item.NOM;
+                                facture.REFEM = item.PERIODE;
+                                facture.SOLDEFACTURE = item.MONTANT;
+                                facture.NDOC = item.NDOC;
+                                Lstfacture.Add(facture);
+                            }
                         }
                     }
+
+                    System.Windows.Data.PagedCollectionView view = new System.Windows.Data.PagedCollectionView(Lstfacture);
+                    LoadDataPager<CsLclient>(Lstfacture, datapager, dg_facture);
+                    if (dg_facture.ItemsSource != null)
+                        this.txt_TotalFacture.Text = Lstfacture.Sum(c => (c.SOLDEFACTURE != null ? c.SOLDEFACTURE : 0)).Value.ToString(SessionObject.FormatMontant);
+
+                    btn_Rech.IsEnabled = true;
+                    desableProgressBar();
+                    ActiverElement(true);
+
+                    return;
                 }
-
-                System.Windows.Data.PagedCollectionView view = new System.Windows.Data.PagedCollectionView(Lstfacture);
-                LoadDataPager<CsLclient>(Lstfacture, datapager, dg_facture);
-                if (dg_facture.ItemsSource != null)
-                    this.txt_TotalFacture.Text = Lstfacture.Sum(c => (c.SOLDEFACTURE != null ? c.SOLDEFACTURE : 0)).Value.ToString(SessionObject.FormatMontant);
-
-                btn_Rech.IsEnabled = true;
-                desableProgressBar();
-                ActiverElement(true);
-
-                return;
             };
             service.RemplirfactureAvecProduitAsync(csRegCli, listperiode,lstIdProduit );
         }
+        private void galatee_OkClickedChoixClient(object sender, EventArgs e)
+        {
+
+            if (this.Anciennecamp != null)
+            {
+                foreach (var item_ in this.Anciennecamp)
+                {
+                    foreach (var item in item_.DETAILCAMPAGNEGC_)
+                    {
+                        CsLclient facture = new CsLclient();
+                        facture.CENTRE = item.CENTRE;
+                        facture.CLIENT = item.CLIENT;
+                        facture.ORDRE = item.ORDRE;
+                        facture.NOM = item.NOM;
+                        facture.REFEM = item.PERIODE;
+                        facture.SOLDEFACTURE = item.MONTANT;
+                        facture.NDOC = item.NDOC;
+                        Lstfacture.Add(facture);
+                    }
+                }
+            }
+
+            System.Windows.Data.PagedCollectionView view = new System.Windows.Data.PagedCollectionView(Lstfacture);
+            LoadDataPager<CsLclient>(Lstfacture, datapager, dg_facture);
+            if (dg_facture.ItemsSource != null)
+                this.txt_TotalFacture.Text = Lstfacture.Sum(c => (c.SOLDEFACTURE != null ? c.SOLDEFACTURE : 0)).Value.ToString(SessionObject.FormatMontant);
+
+            btn_Rech.IsEnabled = true;
+            desableProgressBar();
+            ActiverElement(true);
+            Message.ShowInformation("Les factures déja en campagne ne seront pas dans cette campagne", "Information");
+        }
+    
 
         private void SaveCampane(List<CsLclient> ListFacturation,CsRegCli csRegCli, int? ID_USER)
         {
